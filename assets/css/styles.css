@@ -108,6 +108,9 @@ p {
 .sidebar-wrapper .container-block {
   padding: 30px;
 }
+.sidebar-wrapper .container-block p {
+  text-align: justify;
+}
 .sidebar-wrapper .container-block-title {
   text-transform: uppercase;
   font-size: 16px;
@@ -162,6 +165,9 @@ p {
   background: #fff;
   padding: 60px;
   padding-right: 440px;
+}
+.main-wrapper .summary {
+  text-align: justify;
 }
 .main-wrapper .section-title {
   text-transform: uppercase;
