@@ -166,7 +166,7 @@ p {
   padding: 60px;
   padding-right: 440px;
 }
-.main-wrapper .summary {
+.main-wrapper .summary, .main-wrapper .experiences-section .details p {
   text-align: justify;
 }
 .main-wrapper .section-title {
