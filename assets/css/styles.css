@@ -279,7 +279,7 @@ p {
   color: #fb866a;
 }
 /* Extra small devices (phones, less than 768px) */
-@media no print {
+@media not print {
   @media (max-width: 767px) {
     .sidebar-wrapper {
       position: static;
@@ -339,10 +339,10 @@ p {
       page-break-inside: avoid;
     }
     .skillset .level-bar {
-      background-color: #f5f5f5!important;
+      background-color: #f5f5f5 !important;
     }
     .skillset .level-bar-inner {
-      background-color: #7bc2d3!important;
+      background-color: #7bc2d3 !important;
     }
   }
 }
