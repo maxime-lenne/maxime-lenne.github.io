@@ -316,32 +316,34 @@ p {
   }
 }
 @media print {
-  body {
-    padding: 0px;
-  }
-  a[href]:after {
-    content: none;
-  }
-  .sidebar-wrapper {
-    width: 240px;
-    min-height: 0px;
-    height: auto;
-  }
-  .main-wrapper {
-    padding: 0;
-    padding-right: 280px;
-  }
-  .profile-container {
-    padding-top: 0;
-  }
-  .section .item {
-    page-break-inside: avoid;
-  }
-  .skillset .level-bar {
-    background-color: #f5f5f5 !important;
-  }
-  .skillset .level-bar-inner {
-    background-color: #7bc2d3 !important;
+  @media (max-width: 767px) {
+    body {
+      padding: 0px;
+    }
+    a[href]:after {
+      content: none;
+    }
+    .sidebar-wrapper {
+      width: 240px;
+      min-height: 0px;
+      height: auto;
+    }
+    .main-wrapper {
+      padding: 0;
+      padding-right: 280px;
+    }
+    .profile-container {
+      padding-top: 0;
+    }
+    .section .item {
+      page-break-inside: avoid;
+    }
+    .skillset .level-bar {
+      background-color: #f5f5f5 !important;
+    }
+    .skillset .level-bar-inner {
+      background-color: #7bc2d3 !important;
+    }
   }
 }
 /* Large devices (large desktops, 1200px and up) */
