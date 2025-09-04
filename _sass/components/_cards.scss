@@ -1,0 +1,51 @@
+// Card Components - BEM Methodology
+@import '../variables';
+@import '../mixins';
+
+.card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+  
+  &__header {
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--color-neutral-200);
+  }
+  
+  &__body {
+    padding: var(--space-lg);
+  }
+  
+  &__footer {
+    padding: var(--space-lg);
+    border-top: 1px solid var(--color-neutral-200);
+    background-color: var(--color-neutral-50);
+  }
+  
+  &__title {
+    @include heading-3;
+    margin-bottom: var(--space-sm);
+  }
+  
+  &__subtitle {
+    @include caption;
+    color: var(--color-neutral-600);
+  }
+  
+  &__content {
+    @include body-text;
+  }
+  
+  &__actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: flex-end;
+  }
+}

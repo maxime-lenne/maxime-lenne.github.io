@@ -1,0 +1,210 @@
+# Multi-language translations for the website
+# Following the conventions from docs/conventions.md
+
+fr:
+  site:
+    title: "Maxime Lenne - CTO & Leader Produit Tech"
+    description: "Expert en entrepreneuriat tech et innovation"
+    bio: "CTO & Leader Produit Tech passionné par l'innovation et l'entrepreneuriat"
+  
+  nav:
+    home: "Accueil"
+    about: "À propos"
+    experience: "Expérience"
+    experiences: "Expériences"
+    projects: "Projets"
+    blog: "Blog"
+    contact: "Contact"
+  
+  common:
+    read_more: "Lire la suite"
+    view_project: "Voir le projet"
+    view_experience: "Voir l'expérience"
+    contact_me: "Me contacter"
+    download_cv: "Télécharger CV"
+    back_to_top: "Retour en haut"
+    loading: "Chargement..."
+    error: "Erreur"
+    success: "Succès"
+  
+  home:
+    hero_title: "Maxime Lenne"
+    hero_subtitle: "CTO & Leader Produit Tech"
+    hero_description: "Expert en entrepreneuriat tech, innovation et développement produit. Je transforme les idées en solutions technologiques performantes."
+    cta_primary: "Découvrir mes projets"
+    cta_secondary: "En savoir plus"
+    latest_posts: "Derniers articles"
+    featured_projects: "Projets en vedette"
+    recent_experiences: "Expériences récentes"
+  
+  about:
+    title: "À propos de moi"
+    subtitle: "Passionné par la technologie et l'innovation"
+    introduction: "Je suis Maxime Lenne, CTO et Leader Produit Tech avec plus de 10 ans d'expérience dans le développement de produits technologiques innovants."
+    skills_title: "Compétences"
+    experience_title: "Expérience"
+    education_title: "Formation"
+    interests_title: "Centres d'intérêt"
+    contact_title: "Contact"
+  
+  projects:
+    title: "Mes Projets"
+    subtitle: "Découvrez mes réalisations technologiques"
+    filter_all: "Tous"
+    filter_web: "Web"
+    filter_mobile: "Mobile"
+    filter_ai: "IA/ML"
+    filter_other: "Autres"
+    no_projects: "Aucun projet trouvé"
+    view_live: "Voir en ligne"
+    view_code: "Voir le code"
+    technologies: "Technologies"
+    duration: "Durée"
+    status: "Statut"
+  
+  experiences:
+    title: "Expériences Professionnelles"
+    subtitle: "Mon parcours dans la tech"
+    current: "Actuel"
+    previous: "Précédent"
+    duration: "Durée"
+    location: "Lieu"
+    company: "Entreprise"
+    role: "Rôle"
+    achievements: "Réalisations"
+    technologies: "Technologies utilisées"
+  
+  blog:
+    title: "Blog"
+    subtitle: "Partage de connaissances et d'expériences"
+    read_time: "min de lecture"
+    published_on: "Publié le"
+    author: "Auteur"
+    categories: "Catégories"
+    tags: "Tags"
+    related_posts: "Articles similaires"
+    no_posts: "Aucun article trouvé"
+    search_placeholder: "Rechercher un article..."
+  
+  contact:
+    title: "Contact"
+    subtitle: "Discutons de vos projets"
+    description: "Vous avez un projet en tête ? Une question ? N'hésitez pas à me contacter, je serai ravi d'échanger avec vous."
+    form:
+      name: "Nom"
+      email: "Email"
+      subject: "Sujet"
+      message: "Message"
+      send: "Envoyer"
+      sending: "Envoi en cours..."
+      success: "Message envoyé avec succès !"
+      error: "Erreur lors de l'envoi"
+    info:
+      email: "Email"
+      location: "Localisation"
+      availability: "Disponibilité"
+      response_time: "Temps de réponse"
+
+en:
+  site:
+    title: "Maxime Lenne - CTO & Tech Product Leader"
+    description: "Expert in tech entrepreneurship and innovation"
+    bio: "CTO & Tech Product Leader passionate about innovation and entrepreneurship"
+  
+  nav:
+    home: "Home"
+    about: "About"
+    experience: "Experience"
+    experiences: "Experiences"
+    projects: "Projects"
+    blog: "Blog"
+    contact: "Contact"
+  
+  common:
+    read_more: "Read more"
+    view_project: "View project"
+    view_experience: "View experience"
+    contact_me: "Contact me"
+    download_cv: "Download CV"
+    back_to_top: "Back to top"
+    loading: "Loading..."
+    error: "Error"
+    success: "Success"
+  
+  home:
+    hero_title: "Maxime Lenne"
+    hero_subtitle: "CTO & Tech Product Leader"
+    hero_description: "Expert in tech entrepreneurship, innovation and product development. I transform ideas into high-performance technological solutions."
+    cta_primary: "Discover my projects"
+    cta_secondary: "Learn more"
+    latest_posts: "Latest posts"
+    featured_projects: "Featured projects"
+    recent_experiences: "Recent experiences"
+  
+  about:
+    title: "About Me"
+    subtitle: "Passionate about technology and innovation"
+    introduction: "I am Maxime Lenne, CTO and Tech Product Leader with over 10 years of experience in developing innovative technological products."
+    skills_title: "Skills"
+    experience_title: "Experience"
+    education_title: "Education"
+    interests_title: "Interests"
+    contact_title: "Contact"
+  
+  projects:
+    title: "My Projects"
+    subtitle: "Discover my technological achievements"
+    filter_all: "All"
+    filter_web: "Web"
+    filter_mobile: "Mobile"
+    filter_ai: "AI/ML"
+    filter_other: "Others"
+    no_projects: "No projects found"
+    view_live: "View live"
+    view_code: "View code"
+    technologies: "Technologies"
+    duration: "Duration"
+    status: "Status"
+  
+  experiences:
+    title: "Professional Experience"
+    subtitle: "My journey in tech"
+    current: "Current"
+    previous: "Previous"
+    duration: "Duration"
+    location: "Location"
+    company: "Company"
+    role: "Role"
+    achievements: "Achievements"
+    technologies: "Technologies used"
+  
+  blog:
+    title: "Blog"
+    subtitle: "Sharing knowledge and experiences"
+    read_time: "min read"
+    published_on: "Published on"
+    author: "Author"
+    categories: "Categories"
+    tags: "Tags"
+    related_posts: "Related posts"
+    no_posts: "No posts found"
+    search_placeholder: "Search for a post..."
+  
+  contact:
+    title: "Contact"
+    subtitle: "Let's discuss your projects"
+    description: "Have a project in mind? A question? Don't hesitate to contact me, I'd be happy to discuss with you."
+    form:
+      name: "Name"
+      email: "Email"
+      subject: "Subject"
+      message: "Message"
+      send: "Send"
+      sending: "Sending..."
+      success: "Message sent successfully!"
+      error: "Error sending message"
+    info:
+      email: "Email"
+      location: "Location"
+      availability: "Availability"
+      response_time: "Response time"

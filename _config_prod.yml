@@ -1,0 +1,41 @@
+# Production configuration overrides
+# Use with: bundle exec jekyll build --config _config.yml,_config_prod.yml
+
+# Environment
+JEKYLL_ENV: production
+
+# Performance optimizations
+minify: true
+compress: true
+incremental: false
+
+# Asset optimization
+assets:
+  compress: true
+  gzip: true
+  cache: true
+
+# Image optimization
+compress_images:
+  quality: 85
+  webp: true
+  progressive: true
+
+# SEO optimization
+seo:
+  image: "/assets/images/og-image.jpg"
+  twitter:
+    card: "summary_large_image"
+    creator: "@MaximeLenne"
+
+# Analytics and monitoring
+google_analytics: "G-XXXXXXXXXX" # Replace with your GA4 ID
+hotjar: "XXXXXXXXXX" # Replace with your Hotjar ID
+
+# Security headers
+security:
+  headers:
+    - "X-Frame-Options: DENY"
+    - "X-Content-Type-Options: nosniff"
+    - "Referrer-Policy: strict-origin-when-cross-origin"
+    - "Permissions-Policy: camera=(), microphone=(), geolocation=()"

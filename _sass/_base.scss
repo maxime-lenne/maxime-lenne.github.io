@@ -1,0 +1,263 @@
+// Base Styles - Reset and Foundation
+@import 'variables';
+@import 'mixins';
+
+// CSS Reset and Base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-sans;
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-neutral-700);
+  background-color: var(--color-neutral-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  @include heading-1;
+  margin-bottom: var(--space-md);
+  
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4, h5, h6 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  color: var(--color-neutral-800);
+}
+
+p {
+  @include body-text;
+  margin-bottom: var(--space-md);
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+  
+  &:focus-visible {
+    @include focus-visible;
+  }
+}
+
+// Lists
+ul, ol {
+  @include body-text;
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+li {
+  margin-bottom: var(--space-xs);
+}
+
+// Code
+code {
+  font-family: $font-mono;
+  font-size: 0.875em;
+  background-color: var(--color-neutral-100);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  color: var(--color-neutral-800);
+}
+
+pre {
+  font-family: $font-mono;
+  background-color: var(--color-neutral-100);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+  
+  code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: var(--space-md);
+  margin: var(--space-lg) 0;
+  font-style: italic;
+  color: var(--color-neutral-600);
+  
+  p {
+    margin-bottom: var(--space-sm);
+  }
+  
+  cite {
+    @include caption;
+    font-style: normal;
+    
+    &::before {
+      content: "— ";
+    }
+  }
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-lg);
+  
+  th, td {
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    border-bottom: 1px solid var(--color-neutral-200);
+  }
+  
+  th {
+    font-weight: 600;
+    color: var(--color-neutral-800);
+    background-color: var(--color-neutral-50);
+  }
+  
+  tr:hover {
+    background-color: var(--color-neutral-50);
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+// Horizontal Rule
+hr {
+  border: none;
+  border-top: 1px solid var(--color-neutral-200);
+  margin: var(--space-xl) 0;
+}
+
+// Form Elements
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  
+  &:focus-visible {
+    @include focus-visible;
+  }
+}
+
+// Accessibility
+.sr-only {
+  @include sr-only;
+}
+
+// Focus Management
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+// Skip Links
+.skip-link {
+  @include sr-only;
+  
+  &:focus {
+    position: fixed;
+    top: var(--space-md);
+    left: var(--space-md);
+    z-index: var(--z-tooltip);
+    background: var(--color-primary);
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+  }
+}
+
+// Print Styles
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a, a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  
+  thead {
+    display: table-header-group;
+  }
+  
+  tr, img {
+    page-break-inside: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

@@ -1,0 +1,49 @@
+// Main SCSS File - Jekyll Portfolio Website
+// Following BEM methodology and atomic design principles
+
+// 1. Foundation Layer
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+// 2. Layout Layer
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/navigation';
+@import 'layouts/grid';
+@import 'layouts/container';
+
+// 3. Component Layer
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/hero';
+@import 'components/section';
+@import 'components/project-card';
+@import 'components/experience-item';
+@import 'components/blog-post';
+@import 'components/pagination';
+@import 'components/social-links';
+@import 'components/language-switcher';
+
+// 4. Page Layer
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/projects';
+@import 'pages/experiences';
+@import 'pages/blog';
+@import 'pages/contact';
+
+// 5. Utility Layer
+@import 'utilities/spacing';
+@import 'utilities/typography';
+@import 'utilities/colors';
+@import 'utilities/animations';
+@import 'utilities/accessibility';
+
+// 6. Print and High Contrast
+@import 'utilities/print';
+@import 'utilities/high-contrast';
+
+// 7. Third-party Overrides
+@import 'utilities/third-party';

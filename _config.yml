@@ -1,0 +1,116 @@
+# Site settings
+title: "Maxime Lenne - CTO & Tech Product Leader"
+email: "your-email@example.com"
+description: "Expert en entrepreneuriat tech, innovation et développement produit"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://maxime-lenne.github.io" # the base hostname & protocol for your site
+
+# Multi-language support
+languages: ["fr", "en"]
+default_lang: "fr"
+exclude_from_localizations: ["javascript", "images", "css", "assets"]
+
+# Author information
+author:
+  name: "Maxime Lenne"
+  bio: "CTO & Tech Product Leader"
+  location: "France"
+  email: "your-email@example.com"
+  twitter: "MaximeLenne"
+  github: "maxime-lenne"
+  linkedin: "maximelenne"
+
+# Social media
+social:
+  name: "Maxime Lenne"
+  links:
+    - "https://twitter.com/MaximeLenne"
+    - "https://linkedin.com/in/maximelenne"
+    - "https://github.com/maxime-lenne"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+relative_links:
+  enabled: true
+  collections: true
+
+# Plugins configuration
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-compress-images
+  - jekyll-minifier
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# SEO configuration
+seo:
+  title: "Maxime Lenne - CTO & Tech Product Leader"
+  description: "Expert en entrepreneuriat tech, innovation et développement produit"
+  image: "/assets/images/og-image.jpg"
+  type: "website"
+  twitter:
+    card: "summary_large_image"
+    creator: "@MaximeLenne"
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+  experiences:
+    output: true
+    permalink: /experiences/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Maxime Lenne"
+      comments: false
+      share: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      author: "Maxime Lenne"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      author: "Maxime Lenne"
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: "experience"
+      author: "Maxime Lenne"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .jekyll-cache/
+  - .sass-cache/
+  - _site/
+  - lighthouse-report.html
+  - .env
+  - .env.local
