@@ -12,6 +12,7 @@
 @import 'layouts/navigation';
 @import 'layouts/grid';
 @import 'layouts/container';
+@import 'layouts/figma';
 
 // 3. Component Layer
 @import 'components/header';
@@ -35,6 +36,7 @@
 @import 'pages/experiences';
 @import 'pages/blog';
 @import 'pages/contact';
+@import 'pages/figma-demo';
 
 // 5. Utility Layer
 @import 'utilities/spacing';
