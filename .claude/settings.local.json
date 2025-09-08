@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(make:*)"
+      "Bash(make:*)",
+      "WebFetch(domain:screen-said-15347397.figma.site)",
+      "Bash(open http://localhost:4001)"
     ],
     "deny": [],
     "ask": []
