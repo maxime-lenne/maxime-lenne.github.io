@@ -1,17 +1,42 @@
-// Design System Variables
+// Design System Variables - Light Theme (Default)
 :root {
-  // Color System
+  // Color System - Blue to Green Gradient
   --color-primary: #2563eb;
   --color-primary-light: #3b82f6;
   --color-primary-dark: #1d4ed8;
+  --color-secondary: #10b981;
+  --color-secondary-light: #34d399;
+  --color-secondary-dark: #059669;
   
-  --color-secondary: #64748b;
-  --color-secondary-light: #94a3b8;
-  --color-secondary-dark: #475569;
+  --color-accent: #64748b;
+  --color-accent-light: #94a3b8;
+  --color-accent-dark: #475569;
   
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
+  
+  // Gradients
+  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #1d4ed8 0%, #059669 100%);
+  --gradient-text: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  --gradient-border: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+  
+  // Theme Colors - Light Mode
+  --color-background: #ffffff;
+  --color-background-alt: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8fafc;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-tertiary: #94a3b8;
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
+  
+  // Code/Terminal Colors (inspired by hacker theme)
+  --color-code-bg: #0f172a;
+  --color-code-text: #22c55e;
+  --color-code-accent: #3b82f6;
   
   --color-neutral-50: #f8fafc;
   --color-neutral-100: #f1f5f9;
@@ -23,7 +48,46 @@
   --color-neutral-700: #334155;
   --color-neutral-800: #1e293b;
   --color-neutral-900: #0f172a;
+}
+
+// Dark Theme
+:root[data-theme="dark"] {
+  // Gradients (adjusted for dark theme)
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #2563eb 0%, #16a34a 100%);
+  --gradient-text: linear-gradient(135deg, #60a5fa 0%, #4ade80 100%);
+  --gradient-border: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
   
+  // Theme Colors - Dark Mode
+  --color-background: #0f172a;
+  --color-background-alt: #1e293b;
+  --color-surface: #1e293b;
+  --color-surface-hover: #334155;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #94a3b8;
+  --color-border: #334155;
+  --color-border-hover: #475569;
+  
+  // Code/Terminal Colors (brighter in dark mode)
+  --color-code-bg: #000000;
+  --color-code-text: #00ff41;
+  --color-code-accent: #00d4ff;
+
+  --color-neutral-50: #0f172a;
+  --color-neutral-100: #1e293b;
+  --color-neutral-200: #334155;
+  --color-neutral-300: #475569;
+  --color-neutral-400: #64748b;
+  --color-neutral-500: #94a3b8;
+  --color-neutral-600: #cbd5e1;
+  --color-neutral-700: #e2e8f0;
+  --color-neutral-800: #f1f5f9;
+  --color-neutral-900: #f8fafc;
+}
+
+// Common variables (outside theme blocks)
+:root {
   // Typography
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
@@ -96,6 +160,7 @@
 // SCSS Variables for use in mixins and functions
 $color-primary: var(--color-primary);
 $color-secondary: var(--color-secondary);
+$color-accent: var(--color-accent);
 $color-success: var(--color-success);
 $color-warning: var(--color-warning);
 $color-error: var(--color-error);
