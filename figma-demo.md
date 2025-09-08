@@ -26,9 +26,9 @@ lang: fr
            class="figma-btn figma-btn--primary figma-btn--large"
            target="_blank" 
            rel="noopener">
-          Réserver un appel gratuit
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
+          Faisons connaissance
+          <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
         </a>
         
@@ -97,15 +97,18 @@ lang: fr
         </div>
         
         <h2 class="figma-about__title">
-          Passionné par la <span class="figma-about__title-highlight">technologie</span>
+          Passionné par <span class="figma-about__title-highlight">le produit, l'innovation et la technique</span>
         </h2>
         
         <div class="figma-about__description">
           <p>
-            Développeur full-stack basé à Paris, je me spécialise dans la création d'applications web modernes et performantes. Mon objectif est de transformer vos idées en solutions digitales qui font la différence.
+            Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques.
           </p>
           <p>
-            Autodidacte passionné, j'ai commencé ma carrière il y a plus de 5 ans et depuis, j'ai eu la chance de travailler avec des startups innovantes et des entreprises établies. J'aime relever des défis techniques complexes et créer des expériences utilisateur exceptionnelles.
+            J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon.
+          </p>
+          <p>
+            Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes.
           </p>
         </div>
         
@@ -123,37 +126,37 @@ lang: fr
               <svg class="figma-about__skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
               </svg>
-              <span>React & Next.js</span>
+              <span>Fullstack web et mobile</span>
             </div>
             <div class="figma-about__skill">
               <svg class="figma-about__skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
               </svg>
-              <span>Node.js & Express</span>
+              <span>Nocode</span>
             </div>
             <div class="figma-about__skill">
               <svg class="figma-about__skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
               </svg>
-              <span>TypeScript</span>
+              <span>IA</span>
             </div>
             <div class="figma-about__skill">
               <svg class="figma-about__skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
               </svg>
-              <span>PostgreSQL & MongoDB</span>
+              <span>Cloud & devops</span>
             </div>
             <div class="figma-about__skill">
               <svg class="figma-about__skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
               </svg>
-              <span>Tailwind CSS</span>
+              <span>Management</span>
             </div>
             <div class="figma-about__skill">
               <svg class="figma-about__skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
               </svg>
-              <span>AWS & Docker</span>
+              <span>Conception produit & Agilité</span>
             </div>
           </div>
         </div>
@@ -222,127 +225,47 @@ lang: fr
       </p>
     </div>
     
-    <div class="figma-services__grid">
-      <div class="figma-service-card">
-        <div class="figma-service-card__icon figma-service-card__icon--blue">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M4 7s0-2 8-2 8 2 8 2v11c0 0 0 2-8 2s-8-2-8-2zM12 22V7"/>
-          </svg>
-        </div>
-        <div class="figma-service-card__content">
-          <h3 class="figma-service-card__title">Développement Frontend</h3>
-          <p class="figma-service-card__description">
-            Création d'interfaces utilisateur modernes et responsives avec React, Vue.js et les dernières technologies frontend.
-          </p>
-          <ul class="figma-service-card__features">
-            <li>Applications React/Vue</li>
-            <li>Design responsive</li>
-            <li>Performance optimisée</li>
-            <li>Tests automatisés</li>
-          </ul>
+    <div class="services__grid">
+      <div class="service-card">
+        <div class="service-card__icon">🎯</div>
+        <h3 class="service-card__title">Stratégie Produit</h3>
+        <p class="service-card__description">
+          Définissez une roadmap produit claire et alignée avec vos objectifs business. 
+          De l'idée à la mise sur le marché.
+        </p>
+        <ul class="figma-service-card__features">
+          <li>Go-to-market</li>
+          <li>MVP</li>
+          <li>Roadmap produit/Vue</li>
+          <li>Nocode / IA</li>
+        </ul>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-card__icon">⚡</div>
+        <h3 class="service-card__title">Accélération Tech</h3>
+        <p class="service-card__description">
+          Optimisez votre stack technique et accélérez votre développement produit. 
+          Dette technique, refonte...
+        </p>
+        <div class="service-card__features">
+          <span class="service-card__feature">Architecture</span>
+          <span class="service-card__feature">Cloud & Devops</span>
+          <span class="service-card__feature">Développement full stack</span>
         </div>
       </div>
       
-      <div class="figma-service-card">
-        <div class="figma-service-card__icon figma-service-card__icon--purple">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <rect x="2" y="3" width="6" height="6"/>
-            <rect x="16" y="3" width="6" height="6"/>
-            <rect x="9" y="9" width="6" height="6"/>
-          </svg>
-        </div>
-        <div class="figma-service-card__content">
-          <h3 class="figma-service-card__title">Développement Backend</h3>
-          <p class="figma-service-card__description">
-            Conception d'APIs robustes et évolutives avec Node.js, bases de données et architecture cloud moderne.
-          </p>
-          <ul class="figma-service-card__features">
-            <li>APIs REST/GraphQL</li>
-            <li>Bases de données</li>
-            <li>Architecture cloud</li>
-            <li>Sécurité avancée</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="figma-service-card">
-        <div class="figma-service-card__icon figma-service-card__icon--green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-        </div>
-        <div class="figma-service-card__content">
-          <h3 class="figma-service-card__title">Applications Full-Stack</h3>
-          <p class="figma-service-card__description">
-            Développement d'applications complètes de A à Z, incluant frontend, backend et déploiement.
-          </p>
-          <ul class="figma-service-card__features">
-            <li>Stack MERN/MEAN</li>
-            <li>Déploiement automatisé</li>
-            <li>Monitoring</li>
-            <li>Maintenance</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="figma-service-card">
-        <div class="figma-service-card__icon figma-service-card__icon--orange">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M7 7c0-1.1.9-2 2-2s2 .9 2 2-2 5-2 5-2-3.9-2-5zM12 7c0-1.1.9-2 2-2s2 .9 2 2-2 5-2 5-2-3.9-2-5zM17 7c0-1.1.9-2 2-2s2 .9 2 2-2 5-2 5-2-3.9-2-5zM3 17c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2H3v2z"/>
-          </svg>
-        </div>
-        <div class="figma-service-card__content">
-          <h3 class="figma-service-card__title">Optimisation Performance</h3>
-          <p class="figma-service-card__description">
-            Audit et amélioration des performances de vos applications existantes pour une meilleure expérience utilisateur.
-          </p>
-          <ul class="figma-service-card__features">
-            <li>Audit technique</li>
-            <li>Optimisation SEO</li>
-            <li>Temps de chargement</li>
-            <li>Core Web Vitals</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="figma-service-card">
-        <div class="figma-service-card__icon figma-service-card__icon--cyan">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M12 1v6m0 6v6M5.6 5.6l4.2 4.2m2.4 2.4l4.2 4.2M1 12h6m6 0h6m-1.4-6.4l-4.2 4.2m-2.4 2.4l-4.2 4.2"/>
-          </svg>
-        </div>
-        <div class="figma-service-card__content">
-          <h3 class="figma-service-card__title">DevOps & Déploiement</h3>
-          <p class="figma-service-card__description">
-            Mise en place d'une infrastructure moderne avec CI/CD, monitoring et déploiement automatisé sur AWS/GCP.
-          </p>
-          <ul class="figma-service-card__features">
-            <li>CI/CD pipelines</li>
-            <li>Containerisation</li>
-            <li>Cloud AWS/GCP</li>
-            <li>Monitoring</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="figma-service-card">
-        <div class="figma-service-card__icon figma-service-card__icon--indigo">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-        </div>
-        <div class="figma-service-card__content">
-          <h3 class="figma-service-card__title">Consulting Technique</h3>
-          <p class="figma-service-card__description">
-            Conseil en architecture logicielle, choix technologiques et accompagnement d'équipes de développement.
-          </p>
-          <ul class="figma-service-card__features">
-            <li>Architecture review</li>
-            <li>Choix technologiques</li>
-            <li>Formation équipes</li>
-            <li>Code review</li>
-          </ul>
+      <div class="service-card">
+        <div class="service-card__icon">🚀</div>
+        <h3 class="service-card__title">Formation & Coaching</h3>
+        <p class="service-card__description">
+          Formez vos équipes aux meilleures pratiques tech et product. 
+          Accompagnement personnalisé et formation sur mesure.
+        </p>
+        <div class="service-card__features">
+          <span class="service-card__feature">Formation équipes</span>
+          <span class="service-card__feature">Coaching CTO</span>
+          <span class="service-card__feature">Best practices</span>
         </div>
       </div>
     </div>

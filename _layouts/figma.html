@@ -45,42 +45,39 @@
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Figma Header -->
-    <header class="figma-header" role="banner">
-        <div class="figma-header__container">
-            <!-- Logo -->
-            <div class="figma-header__logo">
-                <a href="{{ '/' | relative_url }}" class="figma-logo" aria-label="{{ site.title }}">
-                    <div class="figma-logo__icon">
-                        <div class="figma-logo__shape figma-logo__shape--1"></div>
-                        <div class="figma-logo__shape figma-logo__shape--2"></div>
-                        <div class="figma-logo__shape figma-logo__shape--3"></div>
-                    </div>
-                    <span class="figma-logo__text">{{ site.title }}</span>
-                </a>
-            </div>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="{{ '/' | relative_url }}" class="header__logo" aria-label="{{ site.title }}">
+                <svg class="header__logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="header__logo-text">Maxime Lenne</span>
+            </a>
             
-            <!-- Navigation -->
-            <nav class="figma-nav" role="navigation" aria-label="Main navigation">
-                <div class="figma-nav__links">
-                    <a href="{{ '/' | relative_url }}" class="figma-nav__link{% if page.url == '/' %} figma-nav__link--active{% endif %}">
-                        Accueil
-                    </a>
-                    <a href="{{ '/about/' | relative_url }}" class="figma-nav__link{% if page.url contains '/about/' %} figma-nav__link--active{% endif %}">
-                        À propos
-                    </a>
-                    <a href="{{ '/projects/' | relative_url }}" class="figma-nav__link{% if page.url contains '/projects/' %} figma-nav__link--active{% endif %}">
-                        Projets
-                    </a>
-                    <a href="{{ '/experiences/' | relative_url }}" class="figma-nav__link{% if page.url contains '/experiences/' %} figma-nav__link--active{% endif %}">
-                        Expériences
-                    </a>
-                    <a href="{{ '/contact/' | relative_url }}" class="figma-nav__link{% if page.url contains '/contact/' %} figma-nav__link--active{% endif %}">
-                        Contact
-                    </a>
-                </div>
+            <nav class="header__nav" role="navigation" aria-label="Main navigation">
+                <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} nav-link--active{% endif %}">
+                    Accueil
+                </a>
+                <a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url contains '/about/' %} nav-link--active{% endif %}">
+                    À propos
+                </a>
+                <a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url contains '/projects/' %} nav-link--active{% endif %}">
+                    Projets
+                </a>
+                <a href="{{ '/experiences/' | relative_url }}" class="nav-link{% if page.url contains '/experiences/' %} nav-link--active{% endif %}">
+                    Expériences
+                </a>
+                <a href="{{ '/blog/' | relative_url }}" class="nav-link{% if page.url contains '/blog/' %} nav-link--active{% endif %}">
+                    Blog
+                </a>
+                <a href="{{ '/contact/' | relative_url }}" class="nav-link{% if page.url contains '/contact/' %} nav-link--active{% endif %}">
+                    Contact
+                </a>
             </nav>
             
+
             <!-- Header Actions -->
             <div class="figma-header__actions">
                 <!-- Language Switcher -->
@@ -128,58 +125,36 @@
                    class="figma-cta-btn" 
                    target="_blank" 
                    rel="noopener">
-                    Réserver un appel
+                    Faisons connaissance !
                     <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path d="M7 17L17 7M17 7H7M17 7V17"/>
                     </svg>
                 </a>
                 
                 <!-- Mobile Menu Toggle -->
-                <button class="figma-mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                    <span class="figma-mobile-toggle__line"></span>
-                    <span class="figma-mobile-toggle__line"></span>
-                    <span class="figma-mobile-toggle__line"></span>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="mobile-menu-toggle__line"></span>
+                    <span class="mobile-menu-toggle__line"></span>
+                    <span class="mobile-menu-toggle__line"></span>
                 </button>
             </div>
         </div>
     </header>
     
     <!-- Mobile Navigation -->
-    <nav class="figma-mobile-nav" role="navigation" aria-label="Mobile navigation">
-        <div class="figma-mobile-nav__content">
-            <div class="figma-mobile-nav__header">
-                <div class="figma-logo figma-logo--mobile">
-                    <div class="figma-logo__icon">
-                        <div class="figma-logo__shape figma-logo__shape--1"></div>
-                        <div class="figma-logo__shape figma-logo__shape--2"></div>
-                        <div class="figma-logo__shape figma-logo__shape--3"></div>
-                    </div>
-                    <span class="figma-logo__text">{{ site.title }}</span>
-                </div>
-                <button class="figma-mobile-nav__close" aria-label="Close mobile menu">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M18 6L6 18M6 6l12 12"/>
-                    </svg>
-                </button>
+    <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+        <div class="mobile-nav__content">
+            <div class="mobile-nav__header">
+                <h2>Menu</h2>
+                <button class="mobile-nav__close" aria-label="Close mobile menu">✕</button>
             </div>
-            
-            <div class="figma-mobile-nav__links">
-                <a href="{{ '/' | relative_url }}" class="figma-mobile-nav__link">Accueil</a>
-                <a href="{{ '/about/' | relative_url }}" class="figma-mobile-nav__link">À propos</a>
-                <a href="{{ '/projects/' | relative_url }}" class="figma-mobile-nav__link">Projets</a>
-                <a href="{{ '/experiences/' | relative_url }}" class="figma-mobile-nav__link">Expériences</a>
-                <a href="{{ '/contact/' | relative_url }}" class="figma-mobile-nav__link">Contact</a>
-            </div>
-            
-            <div class="figma-mobile-nav__footer">
-                <div class="figma-mobile-nav__cta">
-                    <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm" 
-                       class="figma-cta-btn figma-cta-btn--mobile" 
-                       target="_blank" 
-                       rel="noopener">
-                        Réserver un appel gratuit
-                    </a>
-                </div>
+            <div class="mobile-nav__links">
+                <a href="{{ '/' | relative_url }}" class="mobile-nav__link">Accueil</a>
+                <a href="{{ '/about/' | relative_url }}" class="mobile-nav__link">À propos</a>
+                <a href="{{ '/projects/' | relative_url }}" class="mobile-nav__link">Projets</a>
+                <a href="{{ '/experiences/' | relative_url }}" class="mobile-nav__link">Expériences</a>
+                <a href="{{ '/blog/' | relative_url }}" class="mobile-nav__link">Blog</a>
+                <a href="{{ '/contact/' | relative_url }}" class="mobile-nav__link">Contact</a>
             </div>
         </div>
     </nav>
