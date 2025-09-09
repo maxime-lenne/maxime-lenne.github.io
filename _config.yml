@@ -65,8 +65,15 @@ collections:
     output: true
     permalink: /projects/:title/
   experiences:
-    output: true
-    permalink: /experiences/:title/
+    output: false  # Ne génère pas de pages individuelles
+  skills:
+    output: false  # Collection de données seulement
+  education:
+    output: false  # Collection de données seulement
+  awards:
+    output: false  # Collection de données seulement
+  contributions:
+    output: false  # Collection de données seulement
 
 # Defaults
 defaults:

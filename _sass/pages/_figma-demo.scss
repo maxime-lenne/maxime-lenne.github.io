@@ -1322,3 +1322,854 @@
     }
   }
 }
+
+// ===========================
+// CV Page Styles
+// ===========================
+
+// CV Hero Section
+.figma-cv-hero {
+  padding: 120px 0 80px;
+  background: var(--figma-bg-primary);
+  position: relative;
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+  }
+  
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    
+    &-text {
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  &__title {
+    margin-bottom: 24px;
+    
+    &-main {
+      display: block;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      color: var(--figma-text-primary);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    
+    &-subtitle {
+      display: block;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      font-weight: 600;
+      color: var(--figma-primary);
+      line-height: 1.3;
+    }
+  }
+  
+  &__description {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+    color: var(--figma-text-secondary);
+    margin-bottom: 32px;
+    max-width: 600px;
+  }
+  
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+    
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+      color: var(--figma-text-secondary);
+      
+      svg {
+        width: 20px;
+        height: 20px;
+        color: var(--figma-primary);
+      }
+    }
+  }
+  
+  &__languages {
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--figma-text-primary);
+      margin-bottom: 12px;
+    }
+    
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    &-language {
+      font-size: 15px;
+      color: var(--figma-text-secondary);
+    }
+  }
+  
+  &__visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(34, 197, 94, 0.1));
+      z-index: 1;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    @media (max-width: 968px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+// CV Experience Section
+.figma-cv-experience {
+  padding: 80px 0;
+  background: var(--figma-bg-secondary);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    margin-bottom: 16px;
+    
+    &-highlight {
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  &__timeline {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 80px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      
+      @media (max-width: 768px) {
+        left: 24px;
+      }
+    }
+  }
+  
+  &__item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+    
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 74px;
+      top: 8px;
+      width: 14px;
+      height: 14px;
+      background: var(--figma-primary);
+      border-radius: 50%;
+      border: 3px solid var(--figma-bg-secondary);
+      
+      @media (max-width: 768px) {
+        left: 18px;
+      }
+    }
+  }
+  
+  &__date {
+    min-width: 120px;
+    text-align: right;
+    
+    @media (max-width: 768px) {
+      min-width: 60px;
+      font-size: 14px;
+    }
+  }
+  
+  &__year {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--figma-primary);
+  }
+  
+  &__duration {
+    display: block;
+    font-size: 14px;
+    color: var(--figma-text-tertiary);
+  }
+  
+  &__content {
+    flex: 1;
+    padding-left: 2rem;
+    
+    @media (max-width: 768px) {
+      padding-left: 1rem;
+    }
+  }
+  
+  &__company {
+    margin-bottom: 12px;
+  }
+  
+  &__role {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    margin-bottom: 4px;
+  }
+  
+  &__company-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--figma-primary);
+  }
+  
+  &__description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--figma-text-secondary);
+    margin-bottom: 16px;
+  }
+  
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  &__skill {
+    padding: 6px 12px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--figma-primary);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+}
+
+// CV Skills Section
+.figma-cv-skills {
+  padding: 80px 0;
+  background: var(--figma-bg-primary);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    
+    &-highlight {
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  &__category {
+    background: var(--figma-bg-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    [data-theme="light"] & {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &__category-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    margin-bottom: 20px;
+    
+    svg {
+      width: 24px;
+      height: 24px;
+      color: var(--figma-primary);
+    }
+  }
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  &__item {
+    padding: 8px 16px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--figma-primary);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+}
+
+// CV Education Section
+.figma-cv-education {
+  padding: 80px 0;
+  background: var(--figma-bg-secondary);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    
+    &-highlight {
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--figma-bg-primary);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    [data-theme="light"] & {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &__icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    svg {
+      width: 24px;
+      height: 24px;
+      color: white;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__degree {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    margin-bottom: 8px;
+  }
+  
+  &__school {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--figma-text-secondary);
+  }
+}
+
+// CV Awards Section
+.figma-cv-awards {
+  padding: 80px 0;
+  background: var(--figma-bg-secondary);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    
+    &-highlight {
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    background: var(--figma-bg-primary);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    [data-theme="light"] & {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &__icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    svg {
+      width: 24px;
+      height: 24px;
+      color: white;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+  }
+  
+  &__title-item {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    margin-bottom: 8px;
+  }
+  
+  &__organization {
+    font-size: 16px;
+    color: var(--figma-primary);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  &__description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--figma-text-secondary);
+    margin-bottom: 8px;
+  }
+  
+  &__impact {
+    font-size: 15px;
+    color: var(--figma-text-secondary);
+    font-style: italic;
+  }
+}
+
+// CV Contributions Section
+.figma-cv-contributions {
+  padding: 80px 0;
+  background: var(--figma-bg-primary);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    
+    &-highlight {
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__item {
+    background: var(--figma-bg-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    [data-theme="light"] & {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &__header-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 1rem;
+  }
+  
+  &__title-item {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    margin: 0;
+  }
+  
+  &__type {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    &--startup {
+      background: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+    }
+    
+    &--product {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--figma-primary);
+    }
+    
+    &--education {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+    }
+  }
+  
+  &__role {
+    font-size: 16px;
+    color: var(--figma-primary);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  &__description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--figma-text-secondary);
+    margin-bottom: 16px;
+  }
+  
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  &__tech {
+    padding: 4px 10px;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--figma-primary);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  
+  &__achievements {
+    margin-bottom: 16px;
+    
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--figma-text-primary);
+      margin-bottom: 8px;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        font-size: 14px;
+        color: var(--figma-text-secondary);
+        position: relative;
+        padding-left: 16px;
+        margin-bottom: 4px;
+        
+        &::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: var(--figma-primary);
+          font-weight: 900;
+        }
+      }
+    }
+  }
+  
+  &__impact {
+    font-size: 15px;
+    color: var(--figma-text-secondary);
+    font-style: italic;
+  }
+}
+
+// CV Interests Section
+.figma-cv-interests {
+  padding: 80px 0;
+  background: var(--figma-bg-secondary);
+  
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    
+    &-highlight {
+      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  &__category {
+    background: var(--figma-bg-primary);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    [data-theme="light"] & {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &__category-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--figma-text-primary);
+    margin-bottom: 16px;
+  }
+  
+  &__category-description {
+    font-size: 16px;
+    color: var(--figma-text-secondary);
+    line-height: 1.5;
+  }
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    
+    span {
+      padding: 6px 12px;
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--figma-primary);
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
+    }
+  }
+}
+
+// Additional styles for certifications in education
+.figma-cv-education {
+  &__certifications {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    [data-theme="light"] & {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &__certification {
+    font-size: 14px;
+    color: var(--figma-text-secondary);
+    margin-bottom: 6px;
+    
+    strong {
+      color: var(--figma-text-primary);
+    }
+  }
+}
+
+// Additional styles for experience achievements
+.figma-cv-experience {
+  &__achievements {
+    margin-bottom: 16px;
+    
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__achievement {
+    font-size: 14px;
+    color: var(--figma-text-secondary);
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 4px;
+    
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--figma-secondary);
+      font-weight: 900;
+    }
+  }
+}
