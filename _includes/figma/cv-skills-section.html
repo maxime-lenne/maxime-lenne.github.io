@@ -1,0 +1,31 @@
+<!-- Skills Section -->
+<section class="figma-cv-skills">
+  <div class="figma-cv-skills__container">
+    <div class="figma-cv-skills__header">
+      <h2 class="figma-cv-skills__title">
+        Compétences <span class="figma-cv-skills__title-highlight">Techniques</span>
+      </h2>
+    </div>
+    
+    <div class="figma-cv-skills__grid">
+      {% assign sorted_skills = site.skills | sort: 'order' %}
+      {% for skill_category in sorted_skills %}
+      <div class="figma-cv-skills__category">
+        <h3 class="figma-cv-skills__category-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <{{ skill_category.icon }}/>
+          </svg>
+          {{ skill_category.title }}
+        </h3>
+        <div class="figma-cv-skills__list">
+          {% for skill in skill_category.skills %}
+          <span class="figma-cv-skills__item" data-level="{{ skill.level }}" title="{{ skill.name }} - {{ skill.years }} ans d'expérience">
+            {{ skill.name }}
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

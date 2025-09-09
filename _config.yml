@@ -76,6 +76,10 @@ collections:
     output: false  # Collection de données seulement
   contributions:
     output: false  # Collection de données seulement
+  services:
+    output: false  # Collection de données seulement
+  testimonials:
+    output: false  # Collection de données seulement
 
 # Defaults
 defaults:

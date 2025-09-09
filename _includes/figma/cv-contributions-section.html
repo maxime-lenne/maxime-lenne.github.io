@@ -1,0 +1,47 @@
+<!-- Contributions Section -->
+<section class="figma-cv-contributions">
+  <div class="figma-cv-contributions__container">
+    <div class="figma-cv-contributions__header">
+      <h2 class="figma-cv-contributions__title">
+        Projets & <span class="figma-cv-contributions__title-highlight">Contributions</span>
+      </h2>
+    </div>
+    
+    <div class="figma-cv-contributions__grid">
+      {% assign sorted_contributions = site.contributions | sort: 'order' %}
+      {% for contribution in sorted_contributions %}
+      <div class="figma-cv-contributions__item">
+        <div class="figma-cv-contributions__header-item">
+          <h3 class="figma-cv-contributions__title-item">{{ contribution.title }}</h3>
+          <span class="figma-cv-contributions__type figma-cv-contributions__type--{{ contribution.type }}">{{ contribution.type }}</span>
+        </div>
+        <p class="figma-cv-contributions__role">{{ contribution.role }}</p>
+        <p class="figma-cv-contributions__description">{{ contribution.description }}</p>
+        
+        {% if contribution.technologies %}
+        <div class="figma-cv-contributions__technologies">
+          {% for tech in contribution.technologies %}
+          <span class="figma-cv-contributions__tech">{{ tech }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if contribution.achievements %}
+        <div class="figma-cv-contributions__achievements">
+          <h4>Réalisations :</h4>
+          <ul>
+            {% for achievement in contribution.achievements %}
+            <li>{{ achievement }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        
+        {% if contribution.impact %}
+        <p class="figma-cv-contributions__impact"><strong>Impact:</strong> {{ contribution.impact }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

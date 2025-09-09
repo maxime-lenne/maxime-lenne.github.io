@@ -1,0 +1,49 @@
+<!-- Education Section -->
+<section class="figma-cv-education">
+  <div class="figma-cv-education__container">
+    <div class="figma-cv-education__header">
+      <h2 class="figma-cv-education__title">
+        Formation & <span class="figma-cv-education__title-highlight">Certifications</span>
+      </h2>
+    </div>
+    
+    <div class="figma-cv-education__grid">
+      {% assign sorted_education = site.education | sort: 'order' %}
+      {% for education in sorted_education %}
+      <div class="figma-cv-education__item">
+        <div class="figma-cv-education__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            {% if education.degree_type == 'DUT' %}
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 9 0v-5"/>
+            {% else %}
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+            {% endif %}
+          </svg>
+        </div>
+        <div class="figma-cv-education__content">
+          <h3 class="figma-cv-education__degree">{{ education.title }}</h3>
+          {% if education.institution != 'Diverses' %}
+          <p class="figma-cv-education__school">{{ education.institution }} - {{ education.description }}</p>
+          {% else %}
+          <p class="figma-cv-education__school">{{ education.description }}</p>
+          {% endif %}
+          {% if education.certifications %}
+          <div class="figma-cv-education__certifications">
+            {% for cert in education.certifications %}
+            <div class="figma-cv-education__certification">
+              <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date | date: "%Y" }})
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
