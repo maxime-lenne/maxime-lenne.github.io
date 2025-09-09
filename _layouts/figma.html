@@ -60,20 +60,14 @@
                 <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} nav-link--active{% endif %}">
                     Accueil
                 </a>
-                <a href="{{ '/about/' | relative_url }}" class="nav-link{% if page.url contains '/about/' %} nav-link--active{% endif %}">
+                <a href="{{ '/resume/' | relative_url }}" class="nav-link{% if page.url contains '/resume/' %} nav-link--active{% endif %}">
                     À propos
                 </a>
                 <a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url contains '/projects/' %} nav-link--active{% endif %}">
                     Projets
                 </a>
-                <a href="{{ '/experiences/' | relative_url }}" class="nav-link{% if page.url contains '/experiences/' %} nav-link--active{% endif %}">
-                    Expériences
-                </a>
                 <a href="{{ '/blog/' | relative_url }}" class="nav-link{% if page.url contains '/blog/' %} nav-link--active{% endif %}">
                     Blog
-                </a>
-                <a href="{{ '/contact/' | relative_url }}" class="nav-link{% if page.url contains '/contact/' %} nav-link--active{% endif %}">
-                    Contact
                 </a>
             </nav>
             
@@ -150,11 +144,9 @@
             </div>
             <div class="mobile-nav__links">
                 <a href="{{ '/' | relative_url }}" class="mobile-nav__link">Accueil</a>
-                <a href="{{ '/about/' | relative_url }}" class="mobile-nav__link">À propos</a>
+                <a href="{{ '/resume/' | relative_url }}" class="mobile-nav__link">À propos</a>
                 <a href="{{ '/projects/' | relative_url }}" class="mobile-nav__link">Projets</a>
-                <a href="{{ '/experiences/' | relative_url }}" class="mobile-nav__link">Expériences</a>
                 <a href="{{ '/blog/' | relative_url }}" class="mobile-nav__link">Blog</a>
-                <a href="{{ '/contact/' | relative_url }}" class="mobile-nav__link">Contact</a>
             </div>
         </div>
     </nav>
