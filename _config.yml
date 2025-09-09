@@ -1,6 +1,6 @@
 # Site settings
 title: "Maxime Lenne - CTO & Tech Product Leader"
-email: "your-email@example.com"
+email: "hello@maxime-lenne.fr"
 description: "Expert en entrepreneuriat tech, innovation et développement produit"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://maxime-lenne.github.io" # the base hostname & protocol for your site
@@ -15,7 +15,7 @@ author:
   name: "Maxime Lenne"
   bio: "CTO & Tech Product Leader"
   location: "France"
-  email: "your-email@example.com"
+  email: "hello@maxime-lenne.fr"
   twitter: "MaximeLenne"
   github: "maxime-lenne"
   linkedin: "maximelenne"
