@@ -2,29 +2,26 @@
 <section class="figma-hero">
   <div class="figma-hero__container">
     <div class="figma-hero__content">
-      <div class="figma-hero__badge">
-        <span class="figma-hero__badge-text">✨ CTO as a Service</span>
-      </div>
+      {% include figma/badge.html text="✨ Freelance" %}
       
       <h1 class="figma-hero__title">
-        <span class="figma-hero__title-main">Créons ensemble</span>
-        <span class="figma-hero__title-main">votre <span class="figma-hero__title-highlight">projet digital</span></span>
+        <span class="figma-hero__title-main">Salut, moi c'est Maxime 👋</span>
+        <span class="figma-hero__title-secondary"><span class="figma-hero__title-highlight">CTO, Tech advisor, sparing partner</span></span>
       </h1>
       
       <p class="figma-hero__description">
-        Développeur passionné avec plus de 5 ans d'expérience, je transforme vos idées en solutions digitales innovantes et performantes. Spécialisé en React, Node.js et technologies modernes.
+        <strong>CTO passionné, engagé et créateur d'impact.</strong> Avec une appétence forte pour <strong>l'entrepreneuriat et les startups, le produit, l'innovation, le management et la tech</strong>.
+      </p>
+      <p class="figma-hero__description">
+        Ce site est à la fois une <strong>vitrine de mes services et compétences</strong>, et également une <strong>base de connaissances</strong> dédiée aux sujets qui me passionnent.  
+        J’y partage régulièrement des idées, des outils et des méthodes qui nourrissent ma productivité et stimulent ma créativité au quotidien.  
+      </p>
+      <p class="figma-hero__description">
+        Explorez ces contenus, laissez-vous inspirer, et n’hésitez pas à partager vos impressions et réflexions !
       </p>
       
       <div class="figma-hero__actions">
-        <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm" 
-           class="figma-btn figma-btn--primary figma-btn--large"
-           target="_blank" 
-           rel="noopener">
-          Faisons connaissance
-          <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M7 17L17 7M17 7H7M17 7V17"/>
-          </svg>
-        </a>
+        {% include figma/cta-button.html text="Faisons connaissance" icon="arrow" %}
         
         <div class="figma-hero__info">
           <span class="figma-hero__info-item">
@@ -34,12 +31,12 @@
           <span class="figma-hero__info-separator">•</span>
           <span class="figma-hero__info-item">
             <span class="figma-hero__info-icon">💬</span>
-            <span>Gratuit</span>
+            <span>Personnalisé</span>
           </span>
           <span class="figma-hero__info-separator">•</span>
           <span class="figma-hero__info-item">
             <span class="figma-hero__info-icon">🎯</span>
-            <span>Personnalisé</span>
+            <span>Impactant</span>
           </span>
         </div>
       </div>
@@ -58,7 +55,7 @@
         </div>
         <div class="figma-hero__status">
           <div class="figma-hero__status-dot"></div>
-          <span class="figma-hero__status-text">Disponible pour nouveaux projets</span>
+          <span class="figma-hero__status-text">Disponible pour de nouveaux projets</span>
         </div>
       </div>
     </div>

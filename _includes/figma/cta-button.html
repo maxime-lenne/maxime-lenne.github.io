@@ -1,0 +1,26 @@
+<!-- CTA Button Component -->
+{% if include.style == "secondary" %}
+  <a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}"
+    class="figma-btn figma-btn--secondary figma-btn--large">
+    {{ include.text | default: "Voir mes réalisations" }}
+  </a>
+{% elsif include.style == "large" %}
+  <a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}" 
+     class="figma-btn figma-btn--primary figma-btn--large"
+     target="_blank" 
+     rel="noopener">
+    {{ include.text | default: "Réserver un appel gratuit" }}
+  </a>
+{% else %}
+  <a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}" 
+     class="figma-btn figma-btn--primary figma-btn--large"
+     target="_blank" 
+     rel="noopener">
+    {{ include.text | default: "Faisons connaissance" }}
+    {% if include.icon == "arrow" %}
+      <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+      </svg>
+    {% endif %}
+  </a>
+{% endif %}

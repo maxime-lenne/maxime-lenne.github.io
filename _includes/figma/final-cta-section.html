@@ -9,15 +9,8 @@
         Transformons ensemble votre vision en réalité digitale. Planifiez dès aujourd'hui votre appel de découverte gratuit.
       </p>
       <div class="figma-final-cta__actions">
-        <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm" 
-           class="figma-btn figma-btn--primary figma-btn--large"
-           target="_blank" 
-           rel="noopener">
-          Réserver un appel gratuit
-        </a>
-        <button class="figma-btn figma-btn--secondary figma-btn--large">
-          Voir mes réalisations
-        </button>
+        {% include figma/cta-button.html text="Faisons connaissance" icon="arrow" %}
+        {% include figma/cta-button.html style="secondary" text="Voir mes réalisations" url="projects/" %}
       </div>
     </div>
   </div>

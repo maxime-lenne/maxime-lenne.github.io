@@ -9,12 +9,7 @@
         {{ include.description | default: "Discutons de votre projet et voyons comment je peux vous aider." }}
       </p>
       <div class="figma-cta__actions">
-        <a href="{{ include.cta_link | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}" 
-           class="figma-btn figma-btn--primary figma-btn--large"
-           target="_blank" 
-           rel="noopener">
-          {{ include.cta_text | default: "Réserver un appel gratuit" }}
-        </a>
+        {% include figma/cta-button.html text="Faisons connaissance" icon="arrow" %}
       </div>
     </div>
   </div>

@@ -2,10 +2,7 @@
 <section class="figma-services">
   <div class="figma-services__container">
     <div class="figma-services__header">
-      <div class="figma-services__badge">
-        <span class="figma-services__badge-icon">🚀</span>
-        <span class="figma-services__badge-text">Mes services</span>
-      </div>
+      {% include figma/badge.html style="services" icon="🚀" text="Mes services" %}
       <h2 class="figma-services__title">
         Comment puis-je <span class="figma-services__title-highlight">vous aider ?</span>
       </h2>
@@ -15,48 +12,29 @@
     </div>
     
     <div class="services__grid">
-      <div class="service-card">
-        <div class="service-card__icon">🎯</div>
-        <h3 class="service-card__title">Stratégie Produit</h3>
-        <p class="service-card__description">
-          Définissez une roadmap produit claire et alignée avec vos objectifs business. 
-          De l'idée à la mise sur le marché.
-        </p>
-        <ul class="figma-service-card__features">
-          <li>Go-to-market</li>
-          <li>MVP</li>
-          <li>Roadmap produit/Vue</li>
-          <li>Nocode / IA</li>
-        </ul>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-card__icon">⚡</div>
-        <h3 class="service-card__title">Accélération Tech</h3>
-        <p class="service-card__description">
-          Optimisez votre stack technique et accélérez votre développement produit. 
-          Dette technique, refonte...
-        </p>
-        <div class="service-card__features">
-          <span class="service-card__feature">Architecture</span>
-          <span class="service-card__feature">Cloud & Devops</span>
-          <span class="service-card__feature">Développement full stack</span>
+      {% assign services = site.services | sort: 'order' %}
+      {% for service in services %}
+        <div class="service-card">
+          <div class="service-card__icon">{{ service.icon }}</div>
+          <h3 class="service-card__title">{{ service.title }}</h3>
+          <p class="service-card__description">
+            {{ service.description }}
+          </p>
+          {% if service.feature_type == "list" %}
+            <ul class="figma-service-card__features">
+              {% for feature in service.features %}
+                <li>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <div class="service-card__features">
+              {% for feature in service.features %}
+                <span class="service-card__feature">{{ feature }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-card__icon">🚀</div>
-        <h3 class="service-card__title">Formation & Coaching</h3>
-        <p class="service-card__description">
-          Formez vos équipes aux meilleures pratiques tech et product. 
-          Accompagnement personnalisé et formation sur mesure.
-        </p>
-        <div class="service-card__features">
-          <span class="service-card__feature">Formation équipes</span>
-          <span class="service-card__feature">Coaching CTO</span>
-          <span class="service-card__feature">Best practices</span>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

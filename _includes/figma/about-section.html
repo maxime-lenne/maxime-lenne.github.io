@@ -6,22 +6,19 @@
         <div class="figma-about__image-wrapper">
           <div class="figma-about__image-bg"></div>
           <div class="figma-about__image-container">
-            <img src="https://images.unsplash.com/photo-1668368961546-e3a06f1cd0f1?auto=format&fit=crop&w=600&q=80" 
+            <img src="{{site.baseurl}}/assets/images/{% if site.pic %}{{ site.pic }}{% else %}avatar.jpeg{% endif %}" 
                  alt="Portrait développeur" 
                  class="figma-about__image">
           </div>
           <div class="figma-about__badge">
-            <div class="figma-about__badge-number">5+</div>
+            <div class="figma-about__badge-number">20+</div>
             <div class="figma-about__badge-text">ans<br>d'expérience</div>
           </div>
         </div>
       </div>
       
       <div class="figma-about__text">
-        <div class="figma-about__badge-tag">
-          <span class="figma-about__badge-icon">👋</span>
-          <span class="figma-about__badge-label">À propos de moi</span>
-        </div>
+        {% include figma/badge.html style="tag" icon="👋" text="À propos de moi" %}
         
         <h2 class="figma-about__title">
           Passionné par <span class="figma-about__title-highlight">le produit, l'innovation et la technique</span>
@@ -39,12 +36,7 @@
           </p>
         </div>
         
-        <button class="figma-btn figma-btn--secondary figma-about__cv-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M12 15V3M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5"/>
-          </svg>
-          Mon CV
-        </button>
+        {% include figma/cv-button.html %}
         
         <div class="figma-about__skills">
           <h3 class="figma-about__skills-title">Mes compétences principales</h3>
