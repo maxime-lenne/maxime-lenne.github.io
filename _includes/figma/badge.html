@@ -1,12 +1,12 @@
 <!-- Badge Component -->
 {% if include.style == "tag" %}
   <div class="figma-about__badge-tag">
-    <span class="figma-about__badge-icon">{{ include.icon | default: "👋" }}</span>
+    <span class="figma-about__badge-icon">{{ include.icon | default: "" }}</span>
     <span class="figma-about__badge-label">{{ include.text | default: "À propos de moi" }}</span>
   </div>
 {% elsif include.style == "services" %}
   <div class="figma-services__badge">
-    <span class="figma-services__badge-icon">{{ include.icon | default: "🚀" }}</span>
+    <span class="figma-services__badge-icon">{{ include.icon | default: "" }}</span>
     <span class="figma-services__badge-text">{{ include.text | default: "Mes services" }}</span>
   </div>
 {% else %}

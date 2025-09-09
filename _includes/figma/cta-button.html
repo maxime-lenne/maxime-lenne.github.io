@@ -1,7 +1,12 @@
 <!-- CTA Button Component -->
 {% if include.style == "secondary" %}
   <a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}"
-    class="figma-btn figma-btn--secondary figma-btn--large">
+    class="figma-btn figma-btn--secondary{% if include.size == 'large' %} figma-btn--large{% endif %}{% if include.class %} {{ include.class }}{% endif %}">
+    {% if include.icon == "download" %}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 15V3M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5"/>
+      </svg>
+    {% endif %}
     {{ include.text | default: "Voir mes réalisations" }}
   </a>
 {% elsif include.style == "large" %}

@@ -2,12 +2,12 @@
 <section class="figma-services">
   <div class="figma-services__container">
     <div class="figma-services__header">
-      {% include figma/badge.html style="services" icon="🚀" text="Mes services" %}
+      {% include figma/badge.html style="tag" icon="🚀" text="Mes services" %}
       <h2 class="figma-services__title">
         Comment puis-je <span class="figma-services__title-highlight">vous aider ?</span>
       </h2>
       <p class="figma-services__subtitle">
-        Je propose une gamme complète de services de développement pour transformer vos idées en solutions digitales performantes et évolutives.
+        Je propose une gamme complète de services pour transformer vos idées en solutions digitales performantes et évolutives.
       </p>
     </div>
     
@@ -17,6 +17,11 @@
         <div class="service-card">
           <div class="service-card__icon">{{ service.icon }}</div>
           <h3 class="service-card__title">{{ service.title }}</h3>
+          {% if service.keywords %}
+            <div class="service-card__keywords">
+              {{ service.keywords | join: ", " }}
+            </div>
+          {% endif %}
           <p class="service-card__description">
             {{ service.description }}
           </p>
@@ -29,7 +34,7 @@
           {% else %}
             <div class="service-card__features">
               {% for feature in service.features %}
-                <span class="service-card__feature">{{ feature }}</span>
+                {% include figma/badge.html style="services" text=feature %}
               {% endfor %}
             </div>
           {% endif %}
