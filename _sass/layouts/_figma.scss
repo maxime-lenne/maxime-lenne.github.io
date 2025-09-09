@@ -64,6 +64,10 @@
     display: flex;
     align-items: center;
     gap: clamp(8px, 2vw, 16px);
+    
+    @media (max-width: 768px) {
+      gap: 8px;
+    }
   }
 }
 
@@ -220,6 +224,10 @@
 .figma-language-switcher {
   position: relative;
   
+  @media (max-width: 768px) {
+    display: none;
+  }
+  
   &__trigger {
     display: flex;
     align-items: center;
@@ -334,6 +342,10 @@
   position: relative;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    display: none;
+  }
+  
   &:hover {
     background: var(--color-surface-hover);
     border-color: var(--color-border-hover);
@@ -390,6 +402,10 @@
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
   white-space: nowrap;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
   
   &:hover {
     transform: translateY(-2px);
