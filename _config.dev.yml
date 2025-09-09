@@ -11,3 +11,15 @@ watch: true
 # Désactiver certaines optimisations en développement
 minify: false
 compress: false
+
+# Configuration Sass pour supprimer les warnings de dépréciation
+sass:
+  quiet_deps: true
+
+# Désactiver jekyll-compress-images en développement pour éviter les boucles de hotreload
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-minifier

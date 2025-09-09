@@ -60,6 +60,8 @@ seo:
     creator: "@MaximeLenne"
 
 # Collections
+collections_dir: _collections
+
 collections:
   projects:
     output: true
@@ -97,12 +99,6 @@ defaults:
     values:
       layout: "project"
       author: "Maxime Lenne"
-  - scope:
-      path: ""
-      type: "experiences"
-    values:
-      layout: "experience"
-      author: "Maxime Lenne"
 
 # Exclude from processing
 exclude:
@@ -121,3 +117,4 @@ exclude:
   - lighthouse-report.html
   - .env
   - .env.local
+  - _compress_images_cache.yml
