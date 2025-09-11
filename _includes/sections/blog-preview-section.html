@@ -1,0 +1,25 @@
+<!-- Blog Preview Section -->
+<section class="figma-blog-preview">
+  <div class="figma-blog-preview__container">
+    <div class="figma-blog-preview__header">
+      <h2 class="figma-blog-preview__title">Derniers articles</h2>
+      <a href="/blog/" class="figma-blog-preview__link">Voir tous les articles →</a>
+    </div>
+    
+    <div class="figma-blog-preview__grid">
+      {% for post in site.posts limit:3 %}
+      <article class="figma-blog-card">
+        <div class="figma-blog-card__meta">
+          <span class="figma-blog-card__category">{{ post.categories | first }}</span>
+          <span class="figma-blog-card__date">{{ post.date | date: "%d %b, %Y" }}</span>
+        </div>
+        <h3 class="figma-blog-card__title">
+          <a href="{{ post.url }}" class="figma-blog-card__title-link">{{ post.title }}</a>
+        </h3>
+        <p class="figma-blog-card__excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <a href="{{ post.url }}" class="figma-blog-card__read-more">Lire la suite →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
