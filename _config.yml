@@ -3,7 +3,7 @@ title: "Maxime Lenne - CTO & Tech Product Leader"
 email: "hello@maxime-lenne.fr"
 description: "Expert en entrepreneuriat tech, innovation et développement produit"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://maxime-lenne.github.io" # the base hostname & protocol for your site
+url: "https://maxime-lenne.fr" # the base hostname & protocol for your site
 
 # Multi-language support
 languages: ["fr", "en"]
