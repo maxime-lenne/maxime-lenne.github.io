@@ -9,20 +9,9 @@
 // 2. Layout Layer
 @import 'layouts/header';
 @import 'layouts/footer';
-@import 'layouts/navigation';
-@import 'layouts/grid';
-@import 'layouts/container';
 @import 'layouts/figma';
 
 // 3. Component Layer
-@import 'components/header';
-@import 'components/footer';
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/hero';
-@import 'components/section';
-@import 'components/social-links';
-@import 'components/language-switcher';
 @import 'components/badge';
 @import 'components/cta-button';
 @import 'components/blog-preview';
