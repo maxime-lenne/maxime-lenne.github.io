@@ -2,7 +2,7 @@
 <section class="figma-services">
   <div class="figma-services__container">
     <div class="figma-services__header">
-      {% include figma/badge.html style="tag" icon="🚀" text="Mes services" %}
+      {% include components/badge.html style="tag" icon="🚀" text="Mes services" %}
       <h2 class="figma-services__title">
         Comment puis-je <span class="figma-services__title-highlight">vous aider ?</span>
       </h2>
@@ -34,7 +34,7 @@
           {% else %}
             <div class="service-card__features">
               {% for feature in service.features %}
-                {% include figma/badge.html style="services" text=feature %}
+                {% include components/badge.html style="services" text=feature %}
               {% endfor %}
             </div>
           {% endif %}

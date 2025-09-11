@@ -5,18 +5,18 @@ description: "CV complet de Maxime Lenne - CTO, Product Owner et Tech Lead avec 
 lang: fr
 ---
 
-{% include figma/hero-cv.html %}
+{% include sections/hero-cv.html %}
 
-{% include figma/cv-experience-section.html %}
+{% include sections/cv-experience-section.html %}
 
-{% include figma/cv-skills-section.html %}
+{% include sections/cv-skills-section.html %}
 
-{% include figma/cv-education-section.html %}
+{% include sections/cv-education-section.html %}
 
-{% include figma/cv-awards-section.html %}
+{% include sections/cv-awards-section.html %}
 
-{% include figma/cv-contributions-section.html %}
+{% include sections/cv-contributions-section.html %}
 
-{% include figma/cv-interests-section.html %}
+{% include sections/cv-interests-section.html %}
 
-{% include figma/cta-section.html title="Intéressé par mon profil ?" description="Discutons ensemble de vos projets et de la façon dont je peux contribuer à leur succès." cta_text="Planifier un entretien" %}
+{% include sections/cta-section.html title="Intéressé par mon profil ?" description="Discutons ensemble de vos projets et de la façon dont je peux contribuer à leur succès." cta_text="Planifier un entretien" %}
