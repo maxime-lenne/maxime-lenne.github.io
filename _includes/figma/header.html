@@ -1,33 +1,29 @@
-<!-- Figma Header -->
-<header class="figma-header" role="banner">
-    <div class="figma-header__container">
-        <a href="{{ '/' | relative_url }}" class="figma-logo" aria-label="{{ site.title }}">
-            <div class="figma-logo__icon">
-                <div class="figma-logo__shape figma-logo__shape--1"></div>
-                <div class="figma-logo__shape figma-logo__shape--2"></div>
-                <div class="figma-logo__shape figma-logo__shape--3"></div>
-            </div>
-            <span class="figma-logo__text">Maxime Lenne</span>
+<!-- Header -->
+<header class="header" role="banner">
+    <div class="header__container">
+        <a href="{{ '/' | relative_url }}" class="header__logo" aria-label="{{ site.title }}">
+            <svg class="header__logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <span class="header__logo-text">Maxime Lenne</span>
         </a>
         
-        <!-- Desktop Navigation -->
-        <nav class="figma-nav" role="navigation" aria-label="Main navigation">
-            <div class="figma-nav__links">
-                <a href="{{ '/' | relative_url }}" class="figma-nav__link{% if page.url == '/' %} figma-nav__link--active{% endif %}">
-                    Accueil
-                </a>
-                <a href="{{ '/resume/' | relative_url }}" class="figma-nav__link{% if page.url contains '/resume/' %} figma-nav__link--active{% endif %}">
-                    À propos
-                </a>
-                <a href="#services" class="figma-nav__link">
-                    Services
-                </a>
-                <a href="#testimonials" class="figma-nav__link">
-                    Témoignages
-                </a>
-            </div>
-        </nav>
+        <!--nav class="header__nav" role="navigation" aria-label="Main navigation">
+            <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} nav-link--active{% endif %}">
+                Accueil
+            </a>
+            <a href="{{ '/resume/' | relative_url }}" class="nav-link{% if page.url contains '/resume/' %} nav-link--active{% endif %}">
+                À propos
+            </a>
+            <a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url contains '/projects/' %} nav-link--active{% endif %}">
+                Projets
+            </a>
+            <a href="{{ '/blog/' | relative_url }}" class="nav-link{% if page.url contains '/blog/' %} nav-link--active{% endif %}">
+                Blog
+            </a>
+        </nav-->
         
+
         <!-- Header Actions -->
         <div class="figma-header__actions">
             <!-- Language Switcher -->

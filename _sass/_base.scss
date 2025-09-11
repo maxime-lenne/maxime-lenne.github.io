@@ -68,7 +68,7 @@ a {
   transition: color var(--transition-fast);
   
   &:hover {
-    color: var(--color-primary-dark);
+    color: var(--color-text-primary);
   }
   
   &:focus-visible {
