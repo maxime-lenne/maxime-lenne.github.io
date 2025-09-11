@@ -1,0 +1,38 @@
+<!-- Mobile Navigation -->
+<nav class="figma-mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <div class="figma-mobile-nav__content">
+        <div class="figma-mobile-nav__header">
+            <div class="figma-logo figma-logo--mobile">
+                <div class="figma-logo__icon">
+                    <div class="figma-logo__shape figma-logo__shape--1"></div>
+                    <div class="figma-logo__shape figma-logo__shape--2"></div>
+                    <div class="figma-logo__shape figma-logo__shape--3"></div>
+                </div>
+                <span class="figma-logo__text">Menu</span>
+            </div>
+            <button class="figma-mobile-nav__close" aria-label="Close mobile menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="figma-mobile-nav__links">
+            <a href="{{ '/' | relative_url }}" class="figma-mobile-nav__link">Accueil</a>
+            <a href="{{ '/resume/' | relative_url }}" class="figma-mobile-nav__link">À propos</a>
+            <a href="#services" class="figma-mobile-nav__link">Services</a>
+            <a href="#testimonials" class="figma-mobile-nav__link">Témoignages</a>
+        </div>
+        <div class="figma-mobile-nav__footer">
+            <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm" 
+               class="figma-cta-btn figma-cta-btn--mobile" 
+               target="_blank" 
+               rel="noopener">
+                Faisons connaissance
+                <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</nav>

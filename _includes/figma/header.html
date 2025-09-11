@@ -1,0 +1,92 @@
+<!-- Figma Header -->
+<header class="figma-header" role="banner">
+    <div class="figma-header__container">
+        <a href="{{ '/' | relative_url }}" class="figma-logo" aria-label="{{ site.title }}">
+            <div class="figma-logo__icon">
+                <div class="figma-logo__shape figma-logo__shape--1"></div>
+                <div class="figma-logo__shape figma-logo__shape--2"></div>
+                <div class="figma-logo__shape figma-logo__shape--3"></div>
+            </div>
+            <span class="figma-logo__text">Maxime Lenne</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="figma-nav" role="navigation" aria-label="Main navigation">
+            <div class="figma-nav__links">
+                <a href="{{ '/' | relative_url }}" class="figma-nav__link{% if page.url == '/' %} figma-nav__link--active{% endif %}">
+                    Accueil
+                </a>
+                <a href="{{ '/resume/' | relative_url }}" class="figma-nav__link{% if page.url contains '/resume/' %} figma-nav__link--active{% endif %}">
+                    À propos
+                </a>
+                <a href="#services" class="figma-nav__link">
+                    Services
+                </a>
+                <a href="#testimonials" class="figma-nav__link">
+                    Témoignages
+                </a>
+            </div>
+        </nav>
+        
+        <!-- Header Actions -->
+        <div class="figma-header__actions">
+            <!-- Language Switcher -->
+            <div class="figma-language-switcher">
+                <button class="figma-language-switcher__trigger" aria-label="Change language">
+                    <span class="figma-language-switcher__current">{{ page.lang | default: 'FR' | upcase }}</span>
+                    <svg class="figma-language-switcher__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </button>
+                <div class="figma-language-switcher__dropdown">
+                    <a href="{{ page.url | replace: '/en/', '/' | replace: page.lang, 'fr' }}" 
+                       class="figma-language-switcher__option{% if page.lang == 'fr' or page.lang == nil %} figma-language-switcher__option--active{% endif %}"
+                       hreflang="fr">
+                        🇫🇷 Français
+                    </a>
+                    <a href="{{ page.url | replace: page.lang, 'en' | prepend: '/en' }}" 
+                       class="figma-language-switcher__option{% if page.lang == 'en' %} figma-language-switcher__option--active{% endif %}"
+                       hreflang="en">
+                        🇬🇧 English
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Theme Toggle -->
+            <button class="figma-theme-toggle" aria-label="Toggle theme" id="figma-theme-toggle">
+                <svg class="figma-theme-toggle__icon figma-theme-toggle__icon--light" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="figma-theme-toggle__icon figma-theme-toggle__icon--dark" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            
+            <!-- CTA Button -->
+            <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm" 
+               class="figma-cta-btn" 
+               target="_blank" 
+               rel="noopener">
+                Faisons connaissance
+                <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="figma-mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="figma-mobile-toggle__line"></span>
+                <span class="figma-mobile-toggle__line"></span>
+                <span class="figma-mobile-toggle__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
