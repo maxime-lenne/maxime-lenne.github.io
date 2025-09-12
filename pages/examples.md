@@ -35,6 +35,24 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### HERO INFO
+
+{% include components/examples/hero-info-examples.html %}
+
+---
+
+### CHECKED LIST
+
+{% include components/examples/checked-list-examples.html %}
+
+---
+
+### STAT NUMBER
+
+{% include components/examples/stat-number-examples.html %}
+
+---
+
 ### Header
 
 {% include components/examples/header-examples.html %}

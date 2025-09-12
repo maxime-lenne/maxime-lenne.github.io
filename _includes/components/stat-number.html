@@ -1,0 +1,9 @@
+<!-- Stat Number Component -->
+<div class="stat-number">
+  {% if include.number %}
+    <div class="stat-number__number">{{ include.number }}</div>
+  {% endif %}
+  {% if include.label %}
+    <div class="stat-number__label">{{ include.label }}</div>
+  {% endif %}
+</div>

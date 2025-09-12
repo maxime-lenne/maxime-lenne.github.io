@@ -1,0 +1,39 @@
+<!-- Hero Info Component -->
+<div class="figma-hero__info">
+  {% if include.item1_icon and include.item1_text %}
+    <span class="figma-hero__info-item">
+      <span class="figma-hero__info-icon">{{ include.item1_icon }}</span>
+      <span>{{ include.item1_text }}</span>
+    </span>
+    {% if include.item2_icon and include.item2_text %}
+      <span class="figma-hero__info-separator">•</span>
+    {% endif %}
+  {% endif %}
+  
+  {% if include.item2_icon and include.item2_text %}
+    <span class="figma-hero__info-item">
+      <span class="figma-hero__info-icon">{{ include.item2_icon }}</span>
+      <span>{{ include.item2_text }}</span>
+    </span>
+    {% if include.item3_icon and include.item3_text %}
+      <span class="figma-hero__info-separator">•</span>
+    {% endif %}
+  {% endif %}
+  
+  {% if include.item3_icon and include.item3_text %}
+    <span class="figma-hero__info-item">
+      <span class="figma-hero__info-icon">{{ include.item3_icon }}</span>
+      <span>{{ include.item3_text }}</span>
+    </span>
+    {% if include.item4_icon and include.item4_text %}
+      <span class="figma-hero__info-separator">•</span>
+    {% endif %}
+  {% endif %}
+  
+  {% if include.item4_icon and include.item4_text %}
+    <span class="figma-hero__info-item">
+      <span class="figma-hero__info-icon">{{ include.item4_icon }}</span>
+      <span>{{ include.item4_text }}</span>
+    </span>
+  {% endif %}
+</div>

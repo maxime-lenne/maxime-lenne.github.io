@@ -730,32 +730,6 @@ body.nav-open {
     }
   }
   
-  &__info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    color: var(--color-text-tertiary);
-    font-size: 14px;
-    font-weight: 500;
-    
-    @media (min-width: 968px) {
-      justify-content: center;
-    }
-    
-    &-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    
-    &-separator {
-      opacity: 0.8;
-      font-size: 18px;
-    }
-  }
   
 }
 
@@ -890,43 +864,6 @@ body.nav-open {
     }
   }
   
-  &__skills {
-    margin-bottom: 40px;
-    
-    &-title {
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: 16px;
-    }
-    
-    &-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      
-      @media (min-width: 640px) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-  
-  &__skill {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--color-text-secondary);
-    
-    &-icon {
-      width: 16px;
-      height: 16px;
-      color: #22c55e;
-      stroke-width: 2.5;
-      flex-shrink: 0;
-    }
-  }
   
   &__features {
     display: flex;
@@ -1446,31 +1383,6 @@ body.nav-open {
     
     @media (min-width: 768px) {
       grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  &__stat {
-    text-align: center;
-    
-    &-number {
-      font-size: clamp(2rem, 6vw, 3rem);
-      font-weight: 800;
-      color: var(--color-primary);
-      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
-    }
-    
-    &-label {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--color-text-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
   }
 }

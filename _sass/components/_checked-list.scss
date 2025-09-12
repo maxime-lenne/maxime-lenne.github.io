@@ -1,0 +1,38 @@
+// Checked List Component
+.checked-list {
+  margin-bottom: 40px;
+  
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+  
+  &__icon {
+    width: 16px;
+    height: 16px;
+    color: #22c55e;
+    stroke-width: 2.5;
+    flex-shrink: 0;
+  }
+}

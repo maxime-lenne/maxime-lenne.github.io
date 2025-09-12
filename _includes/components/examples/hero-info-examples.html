@@ -1,0 +1,63 @@
+<!-- Hero Info Component Examples -->
+
+<div class="component-examples">
+  <h3>Hero Info par défaut</h3>
+  <div class="example-preview">
+    {% include components/hero-info.html 
+       item1_icon="⏱️" item1_text="30 minutes"
+       item2_icon="💬" item2_text="Personnalisé"
+       item3_icon="🎯" item3_text="Impactant" %}
+  </div>
+  
+  <h3>Hero Info avec 2 éléments</h3>
+  <div class="example-preview">
+    {% include components/hero-info.html 
+       item1_icon="🚀" item1_text="Rapide"
+       item2_icon="💡" item2_text="Innovant" %}
+  </div>
+  
+  <h3>Hero Info avec 4 éléments</h3>
+  <div class="example-preview">
+    {% include components/hero-info.html 
+       item1_icon="⚡" item1_text="Express"
+       item2_icon="🎨" item2_text="Créatif"
+       item3_icon="🔧" item3_text="Technique"
+       item4_icon="📈" item4_text="Résultats" %}
+  </div>
+  
+  <h3>Hero Info avec icônes personnalisées</h3>
+  <div class="example-preview">
+    {% include components/hero-info.html 
+       item1_icon="🔥" item1_text="Hot"
+       item2_icon="⭐" item2_text="Premium"
+       item3_icon="💎" item3_text="Exclusif" %}
+  </div>
+  
+  <h3>Hero Info avec un seul élément</h3>
+  <div class="example-preview">
+    {% include components/hero-info.html 
+       item1_icon="✨" item1_text="Unique" %}
+  </div>
+</div>
+
+<style>
+.component-examples {
+  margin: var(--space-xl) 0;
+}
+
+.component-examples h3 {
+  margin: var(--space-lg) 0 var(--space-md) 0;
+  color: var(--color-text-primary);
+  font-size: var(--text-lg);
+}
+
+.example-preview {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  background: var(--color-background);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+</style>

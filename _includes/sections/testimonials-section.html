@@ -35,22 +35,10 @@
     </div>
     
     <div class="figma-testimonials__stats">
-      <div class="figma-testimonials__stat">
-        <div class="figma-testimonials__stat-number">98%</div>
-        <div class="figma-testimonials__stat-label">Satisfaction client</div>
-      </div>
-      <div class="figma-testimonials__stat">
-        <div class="figma-testimonials__stat-number">50+</div>
-        <div class="figma-testimonials__stat-label">Projets réalisés</div>
-      </div>
-      <div class="figma-testimonials__stat">
-        <div class="figma-testimonials__stat-number">5.0</div>
-        <div class="figma-testimonials__stat-label">Note moyenne</div>
-      </div>
-      <div class="figma-testimonials__stat">
-        <div class="figma-testimonials__stat-number">48h</div>
-        <div class="figma-testimonials__stat-label">Temps de réponse</div>
-      </div>
+      {% include components/stat-number.html number="98%" label="Satisfaction client" %}
+      {% include components/stat-number.html number="50+" label="Projets réalisés" %}
+      {% include components/stat-number.html number="5.0" label="Note moyenne" %}
+      {% include components/stat-number.html number="48h" label="Temps de réponse" %}
     </div>
   </div>
 </section>

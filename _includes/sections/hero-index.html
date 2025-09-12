@@ -23,22 +23,10 @@
       <div class="figma-hero__actions">
         {% include components/cta-button.html text="Faisons connaissance" icon="arrow" %}
         
-        <div class="figma-hero__info">
-          <span class="figma-hero__info-item">
-            <span class="figma-hero__info-icon">⏱️</span>
-            <span>30 minutes</span>
-          </span>
-          <span class="figma-hero__info-separator">•</span>
-          <span class="figma-hero__info-item">
-            <span class="figma-hero__info-icon">💬</span>
-            <span>Personnalisé</span>
-          </span>
-          <span class="figma-hero__info-separator">•</span>
-          <span class="figma-hero__info-item">
-            <span class="figma-hero__info-icon">🎯</span>
-            <span>Impactant</span>
-          </span>
-        </div>
+        {% include components/hero-info.html 
+           item1_icon="⏱️" item1_text="30 minutes"
+           item2_icon="💬" item2_text="Personnalisé"
+           item3_icon="🎯" item3_text="Impactant" %}
       </div>
     </div>
     
