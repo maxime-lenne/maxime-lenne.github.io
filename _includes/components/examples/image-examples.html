@@ -1,0 +1,23 @@
+<!-- Image Component Examples -->
+
+<!-- Exemple 1: Utilisation par défaut -->
+{% include components/image.html %}
+
+<!-- Exemple 2: Avec image personnalisée -->
+{% include components/image.html 
+   image_url="/assets/images/custom-image.jpg" 
+   image_alt="Image personnalisée" %}
+
+<!-- Exemple 3: Sans status -->
+{% include components/image.html 
+   show_status=false %}
+
+<!-- Exemple 4: Avec status personnalisé -->
+{% include components/image.html 
+   status_text="En mission actuellement" %}
+
+<!-- Exemple 5: Image et status personnalisés -->
+{% include components/image.html 
+   image_url="/assets/images/workspace.jpg" 
+   image_alt="Mon espace de travail" 
+   status_text="Disponible pour consultation" %}

@@ -1,0 +1,20 @@
+<!-- Image Component -->
+<div class="image__visual">
+  <div class="image__image-wrapper">
+    <div class="image__decorations">
+      <div class="image__decoration image__decoration--1"></div>
+      <div class="image__decoration image__decoration--2"></div>
+    </div>
+    <div class="image__image-container">
+      <img src="{{ include.image_url | default: site.baseurl | append: '/assets/images/desk.jpeg' }}" 
+           alt="{{ include.image_alt | default: 'Workspace développeur' }}" 
+           class="image__image">
+    </div>
+    {% if include.show_status != false %}
+    <div class="image__status">
+      <div class="image__status-dot"></div>
+      <span class="image__status-text">{{ include.status_text | default: 'Disponible pour de nouveaux projets' }}</span>
+    </div>
+    {% endif %}
+  </div>
+</div>

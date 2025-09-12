@@ -1,6 +1,7 @@
 ---
 layout: figma
-title: MonSite
+title: "Maxime Lenne | CTO, Tech advisor, sparing partner, Tech Product Leader, Product Builder"
+description: "CV complet de Maxime Lenne - CTO, Product Owner et Tech Lead avec plus de 10 ans d'expérience dans le développement et la direction technique."
 lang: fr
 ---
 
