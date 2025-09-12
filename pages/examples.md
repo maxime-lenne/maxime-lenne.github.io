@@ -53,6 +53,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### Terminal Animé
+
+{% include components/animated-terminal.html %}
+
+---
+
 ## Sections
 
 

@@ -69,6 +69,10 @@
             const mobileNav = document.querySelector('.figma-mobile-nav');
             const mobileClose = document.querySelector('.figma-mobile-nav__close');
             
+            // Initialize theme from localStorage or default to light
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
             // Theme toggle functionality
             if (themeToggle) {
                 themeToggle.addEventListener('click', function() {
