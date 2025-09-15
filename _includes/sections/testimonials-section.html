@@ -2,7 +2,7 @@
 <section class="figma-testimonials">
   <div class="figma-testimonials__container">
     <div class="figma-testimonials__header">
-      {% include components/badge.html style="services" icon="💬" text="Mes recommendations" %}
+      {% include components/badge.html style="tag" icon="💬" text="Mes recommendations" %}
       <h2 class="figma-testimonials__title">Ils me font <span class="figma-testimonials__title-highlight">confiance</span></h2>
       <p class="figma-testimonials__subtitle">
         Grâce à mon <strong>engagement et ma culture de l'impact</strong>, je suis un partenaire de confiance pour vos projets.
@@ -12,25 +12,13 @@
     <div class="figma-testimonials__grid">
       {% assign testimonials = site.testimonials | sort: 'order' %}
       {% for testimonial in testimonials %}
-        <div class="figma-testimonial-card">
-          <div class="figma-testimonial-card__stars">
-            <span>
-              {% for i in (1..testimonial.rating) %}⭐{% endfor %}
-            </span>
-          </div>
-          <p class="figma-testimonial-card__text">
-            "{{ testimonial.quote }}"
-          </p>
-          <div class="figma-testimonial-card__author">
-            <div class="figma-testimonial-card__avatar">
-              <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}">
-            </div>
-            <div class="figma-testimonial-card__info">
-              <h4>{{ testimonial.name }}</h4>
-              <p>{{ testimonial.role }}</p>
-            </div>
-          </div>
-        </div>
+        {% include components/card-quote.html 
+           quote=testimonial.quote
+           author_name=testimonial.name
+           author_role=testimonial.role
+           avatar_url=testimonial.image
+           show_stars="true"
+           rating=testimonial.rating %}
       {% endfor %}
     </div>
     

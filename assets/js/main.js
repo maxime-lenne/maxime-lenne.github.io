@@ -389,7 +389,6 @@
     initializeComponents() {
       // Initialize all components
       new ThemeManager();
-      new MobileMenu();
       new TerminalAnimation();
       new ScrollEffects();
       new AnimationObserver();

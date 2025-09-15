@@ -1,0 +1,26 @@
+<!-- Card Quote Component -->
+<div class="card-quote">
+  {% if include.show_stars | default: true %}
+    <div class="card-quote__stars">
+      <span>
+        {% assign rating = include.rating | default: 5 %}
+        {% for i in (1..rating) %}⭐{% endfor %}
+      </span>
+    </div>
+  {% endif %}
+  
+  <p class="card-quote__text">
+    "{{ include.quote | default: 'Citation par défaut' }}"
+  </p>
+  
+  <div class="card-quote__author">
+    <div class="card-quote__avatar">
+      <img src="{{ include.avatar_url | default: '/assets/images/avatar.jpeg' }}" 
+           alt="{{ include.author_name | default: 'Auteur' }}">
+    </div>
+    <div class="card-quote__info">
+      <h4>{{ include.author_name | default: 'Nom de l\'auteur' }}</h4>
+      <p>{{ include.author_role | default: 'Rôle de l\'auteur' }}</p>
+    </div>
+  </div>
+</div>

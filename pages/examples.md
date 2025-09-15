@@ -71,6 +71,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### CARD QUOTE
+
+{% include components/examples/card-quote-examples.html %}
+
+---
+
 ### Header
 
 {% include components/examples/header-examples.html %}
