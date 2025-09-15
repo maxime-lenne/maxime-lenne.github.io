@@ -61,28 +61,12 @@
     
     <!-- Figma Layout Specific JS -->
     <script>
-        // Theme toggle for Figma layout
+        // Language switcher and mobile navigation for Figma layout
         document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('figma-theme-toggle');
             const languageSwitcher = document.querySelector('.figma-language-switcher');
             const mobileToggle = document.querySelector('.figma-mobile-toggle');
             const mobileNav = document.querySelector('.figma-mobile-nav');
             const mobileClose = document.querySelector('.figma-mobile-nav__close');
-            
-            // Initialize theme from localStorage or default to light
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            
-            // Theme toggle functionality
-            if (themeToggle) {
-                themeToggle.addEventListener('click', function() {
-                    const html = document.documentElement;
-                    const currentTheme = html.getAttribute('data-theme');
-                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                    html.setAttribute('data-theme', newTheme);
-                    localStorage.setItem('theme', newTheme);
-                });
-            }
             
             // Language switcher dropdown
             if (languageSwitcher) {

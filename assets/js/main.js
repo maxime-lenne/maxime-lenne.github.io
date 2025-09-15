@@ -7,7 +7,7 @@
   // ===== THEME MANAGEMENT =====
   class ThemeManager {
     constructor() {
-      this.themeToggle = document.getElementById('theme-toggle');
+      this.themeToggle = document.getElementById('figma-theme-toggle');
       this.currentTheme = this.getStoredTheme() || this.getPreferredTheme();
       
       this.init();

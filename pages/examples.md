@@ -89,12 +89,6 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
-### Header
-
-{% include components/examples/header-examples.html %}
-
----
-
 ### Footer
 
 {% include components/examples/footer-examples.html %}
