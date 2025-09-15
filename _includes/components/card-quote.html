@@ -1,6 +1,7 @@
 <!-- Card Quote Component -->
 <div class="card-quote">
-  {% if include.show_stars | default: true %}
+  {% assign show_stars = include.show_stars | default: true %}
+  {% if show_stars %}
     <div class="card-quote__stars">
       <span>
         {% assign rating = include.rating | default: 5 %}

@@ -1,0 +1,20 @@
+<!-- Section Header Component -->
+<div class="section-header">
+  {% assign show_badge = include.show_badge | default: true %}
+  {% if show_badge %}
+    {% include components/badge.html style="tag" icon=include.badge_icon text=include.badge_text %}
+  {% endif %}
+  
+  <h2 class="section-header__title">
+    {{ include.title | default: 'Titre de section' }}
+    {% if include.title_highlight %}
+      <span class="section-header__title-highlight">{{ include.title_highlight }}</span>
+    {% endif %}
+  </h2>
+  
+  {% if include.subtitle %}
+    <p class="section-header__subtitle">
+      {{ include.subtitle }}
+    </p>
+  {% endif %}
+</div>

@@ -1,0 +1,56 @@
+<!-- Section Header Component Examples -->
+
+<div class="component-examples">
+  <h3>Section Header par défaut</h3>
+  <div class="example-preview">
+    {% include components/section-header.html %}
+  </div>
+  
+  <h3>Section Header complète</h3>
+  <div class="example-preview">
+    {% include components/section-header.html 
+       badge_icon="🚀"
+       badge_text="Mes services"
+       title="Comment puis-je"
+       title_highlight="vous aider ?"
+       subtitle="Je propose une gamme complète de services pour transformer vos idées en solutions digitales performantes et évolutives." %}
+  </div>
+  
+  <h3>Section Header avec highlight</h3>
+  <div class="example-preview">
+    {% include components/section-header.html 
+       badge_icon="💬"
+       badge_text="Mes recommendations"
+       title="Ils me font"
+       title_highlight="confiance"
+       subtitle="Grâce à mon engagement et ma culture de l'impact, je suis un partenaire de confiance pour vos projets." %}
+  </div>
+  
+  <h3>Section Header sans badge</h3>
+  <div class="example-preview">
+    {% include components/section-header.html 
+       show_badge="false"
+       title="À propos de moi"
+       title_highlight="développeur passionné"
+       subtitle="Découvrez mon parcours et mes compétences dans le développement web et mobile." %}
+  </div>
+  
+  <h3>Section Header simple</h3>
+  <div class="example-preview">
+    {% include components/section-header.html 
+       badge_icon="📝"
+       badge_text="Blog"
+       title="Mes derniers articles"
+       subtitle="Retrouvez mes réflexions sur le développement, l'entrepreneuriat et les nouvelles technologies." %}
+  </div>
+  
+  <h3>Section Header avec titre long</h3>
+  <div class="example-preview">
+    {% include components/section-header.html 
+       badge_icon="🎯"
+       badge_text="Portfolio"
+       title="Découvrez mes réalisations"
+       title_highlight="et projets"
+       subtitle="Une sélection de mes projets les plus marquants, allant du développement web aux applications mobiles." %}
+  </div>
+</div>

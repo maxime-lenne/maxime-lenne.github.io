@@ -77,6 +77,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### SECTION HEADER
+
+{% include components/examples/section-header-examples.html %}
+
+---
+
 ### Header
 
 {% include components/examples/header-examples.html %}

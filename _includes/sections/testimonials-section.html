@@ -1,13 +1,12 @@
 <!-- Testimonials Section -->
 <section class="figma-testimonials">
   <div class="figma-testimonials__container">
-    <div class="figma-testimonials__header">
-      {% include components/badge.html style="tag" icon="💬" text="Mes recommendations" %}
-      <h2 class="figma-testimonials__title">Ils me font <span class="figma-testimonials__title-highlight">confiance</span></h2>
-      <p class="figma-testimonials__subtitle">
-        Grâce à mon <strong>engagement et ma culture de l'impact</strong>, je suis un partenaire de confiance pour vos projets.
-      </p>
-    </div>
+    {% include components/section-header.html 
+       badge_icon="💬"
+       badge_text="Mes recommendations"
+       title="Ils me font"
+       title_highlight="confiance"
+       subtitle="Grâce à mon engagement et ma culture de l'impact, je suis un partenaire de confiance pour vos projets." %}
     
     <div class="figma-testimonials__grid">
       {% assign testimonials = site.testimonials | sort: 'order' %}

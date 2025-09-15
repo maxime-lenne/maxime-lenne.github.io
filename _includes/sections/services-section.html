@@ -1,15 +1,12 @@
 <!-- Services Section -->
 <section class="figma-services">
   <div class="figma-services__container">
-    <div class="figma-services__header">
-      {% include components/badge.html style="tag" icon="🚀" text="Mes services" %}
-      <h2 class="figma-services__title">
-        Comment puis-je <span class="figma-services__title-highlight">vous aider ?</span>
-      </h2>
-      <p class="figma-services__subtitle">
-        Je propose une gamme complète de services pour transformer vos idées en solutions digitales performantes et évolutives.
-      </p>
-    </div>
+    {% include components/section-header.html 
+       badge_icon="🚀"
+       badge_text="Mes services"
+       title="Comment puis-je"
+       title_highlight="vous aider ?"
+       subtitle="Je propose une gamme complète de services pour transformer vos idées en solutions digitales performantes et évolutives." %}
     
     <div class="services__grid">
       {% assign services = site.services | sort: 'order' %}
