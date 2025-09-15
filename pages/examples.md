@@ -65,6 +65,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### LIST HORIZONTAL ICON
+
+{% include components/examples/list-horizontal-icon-examples.html %}
+
+---
+
 ### Header
 
 {% include components/examples/header-examples.html %}

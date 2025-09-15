@@ -5,6 +5,7 @@
       {% include components/image-secondary.html 
          image_url="/assets/images/avatar.jpeg"
          image_alt="Portrait développeur"
+         show_badge="true"
          badge_number="20+"
          badge_text="ans<br>d'expérience" %}
       
@@ -38,49 +39,13 @@
    item5_text="Cloud & devops"
    item6_text="Nocode" %}
         
-        <!--div class="figma-about__features">
-          <div class="figma-about__feature">
-            <div class="figma-about__feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>
-              </svg>
-            </div>
-            <div class="figma-about__feature-content">
-              <h4 class="figma-about__feature-title">Code de qualité</h4>
-              <p class="figma-about__feature-text">Je privilégie la maintenabilité et les bonnes pratiques dans chaque ligne de code.</p>
-            </div>
-          </div>
-          
-          <div class="figma-about__feature">
-            <div class="figma-about__feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M12 22a1 1 0 010-20 10 9 0 0110 9 5 5 0 01-5 5h-2.25a1.75 1.75 0 00-1.4 2.8l.3.4a1.75 1.75 0 01-1.4 2.8z"/>
-                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
-                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
-                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
-                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
-              </svg>
-            </div>
-            <div class="figma-about__feature-content">
-              <h4 class="figma-about__feature-title">Design thinking</h4>
-              <p class="figma-about__feature-text">Une approche centrée utilisateur pour créer des expériences intuitives.</p>
-            </div>
-          </div>
-          
-          <div class="figma-about__feature">
-            <div class="figma-about__feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/>
-                <path d="m12 15-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/>
-                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
-              </svg>
-            </div>
-            <div class="figma-about__feature-content">
-              <h4 class="figma-about__feature-title">Performance</h4>
-              <p class="figma-about__feature-text">Des applications rapides et optimisées pour tous les appareils.</p>
-            </div>
-          </div>
-        </div-->
+        {% include components/list-horizontal-icon.html 
+           item1_title="Code de qualité"
+           item1_text="Je privilégie la maintenabilité et les bonnes pratiques dans chaque ligne de code."
+           item2_title="Design thinking"
+           item2_text="Une approche centrée utilisateur pour créer des expériences intuitives."
+           item3_title="Performance"
+           item3_text="Des applications rapides et optimisées pour tous les appareils." %}
       </div>
     </div>
   </div>
