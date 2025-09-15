@@ -35,9 +35,9 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
-### HERO INFO
+### CTA INFO
 
-{% include components/examples/hero-info-examples.html %}
+{% include components/examples/cta-info-examples.html %}
 
 ---
 
