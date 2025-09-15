@@ -175,7 +175,7 @@
 
         // Observe elements with animation classes
         const animatedElements = document.querySelectorAll(
-          '.service-card, .blog-card, .stat, .hero__content, .hero__visual'
+          '.card-highlight, .blog-card, .stat, .hero__content, .hero__visual'
         );
 
         animatedElements.forEach(el => {

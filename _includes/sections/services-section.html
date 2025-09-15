@@ -11,31 +11,13 @@
     <div class="services__grid">
       {% assign services = site.services | sort: 'order' %}
       {% for service in services %}
-        <div class="service-card">
-          <div class="service-card__icon">{{ service.icon }}</div>
-          <h3 class="service-card__title">{{ service.title }}</h3>
-          {% if service.keywords %}
-            <div class="service-card__keywords">
-              {{ service.keywords | join: ", " }}
-            </div>
-          {% endif %}
-          <p class="service-card__description">
-            {{ service.description }}
-          </p>
-          {% if service.feature_type == "list" %}
-            <ul class="figma-service-card__features">
-              {% for feature in service.features %}
-                <li>{{ feature }}</li>
-              {% endfor %}
-            </ul>
-          {% else %}
-            <div class="service-card__features">
-              {% for feature in service.features %}
-                {% include components/badge.html style="services" text=feature %}
-              {% endfor %}
-            </div>
-          {% endif %}
-        </div>
+        {% include components/card-highlight.html 
+           icon=service.icon
+           title=service.title
+           keywords=service.keywords
+           description=service.description
+           features=service.features
+           feature_type=service.feature_type %}
       {% endfor %}
     </div>
   </div>

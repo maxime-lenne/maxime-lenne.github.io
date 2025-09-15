@@ -83,6 +83,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### CARD HIGHLIGHT
+
+{% include components/examples/card-highlight-examples.html %}
+
+---
+
 ### Header
 
 {% include components/examples/header-examples.html %}

@@ -1,0 +1,37 @@
+<!-- Card Highlight Component -->
+<div class="card-highlight">
+  {% if include.icon %}
+    <div class="card-highlight__icon">{{ include.icon }}</div>
+  {% endif %}
+  
+  <h3 class="card-highlight__title">{{ include.title | default: 'Titre de la carte' }}</h3>
+  
+  {% if include.keywords %}
+    <div class="card-highlight__keywords">
+      {{ include.keywords }}
+    </div>
+  {% endif %}
+  
+  {% if include.description %}
+    <p class="card-highlight__description">
+      {{ include.description }}
+    </p>
+  {% endif %}
+  
+  {% if include.features %}
+    {% assign feature_type = include.feature_type | default: 'badges' %}
+    {% if feature_type == 'list' %}
+      <ul class="card-highlight__features-list">
+        {% for feature in include.features %}
+          <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="card-highlight__features">
+        {% for feature in include.features %}
+          {% include components/badge.html style="services" text=feature %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
