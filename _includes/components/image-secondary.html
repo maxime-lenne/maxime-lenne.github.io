@@ -7,11 +7,11 @@
            alt="{{ include.image_alt | default: 'Portrait développeur' }}" 
            class="image-secondary__image">
     </div>
-    {% assign show_badge = include.show_badge | default: true %}
-    {% if show_badge %}
+    {% assign show_status = include.show_status | default: "true" %}
+    {% if show_status == "true" %}
     <div class="image-secondary__badge">
       <div class="image-secondary__badge-number">{{ include.badge_number | default: '20+' }}</div>
-      <div class="image-secondary__badge-text">{{ include.badge_text | default: 'ans<br>d\'expérience' }}</div>
+      <div class="image-secondary__badge-text">{{ include.badge_text | default: "ans<br>d'expérience" }}</div>
     </div>
     {% endif %}
   </div>

@@ -1,23 +1,41 @@
 <!-- Image Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid-2-columns">
+    <!-- Exemple 1: Utilisation par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">Image par défaut</h4>
+      {% include components/image.html %}
+    </div>
 
-<!-- Exemple 1: Utilisation par défaut -->
-{% include components/image.html %}
+    <!-- Exemple 2: Avec image personnalisée -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec image personnalisée</h4>
+      {% include components/image.html 
+         image_url="/assets/images/avatar.jpeg" 
+         image_alt="Image personnalisée" %}
+    </div>
 
-<!-- Exemple 2: Avec image personnalisée -->
-{% include components/image.html 
-   image_url="/assets/images/custom-image.jpg" 
-   image_alt="Image personnalisée" %}
+    <!-- Exemple 3: Sans status -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans status</h4>
+      {% include components/image.html 
+         show_status="false" %}
+    </div>
 
-<!-- Exemple 3: Sans status -->
-{% include components/image.html 
-   show_status=false %}
+    <!-- Exemple 4: Avec status personnalisé -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec status personnalisé</h4>
+      {% include components/image.html 
+         status_text="En mission actuellement" %}
+    </div>
 
-<!-- Exemple 4: Avec status personnalisé -->
-{% include components/image.html 
-   status_text="En mission actuellement" %}
-
-<!-- Exemple 5: Image et status personnalisés -->
-{% include components/image.html 
-   image_url="/assets/images/workspace.jpg" 
-   image_alt="Mon espace de travail" 
-   status_text="Disponible pour consultation" %}
+    <!-- Exemple 5: Image et status personnalisés -->
+    <div class="example-item">
+      <h4 class="example-item__title">Image et status personnalisés</h4>
+      {% include components/image.html 
+         image_url="/assets/images/avatar.jpeg" 
+         image_alt="Mon espace de travail" 
+         status_text="Disponible pour consultation" %}
+    </div>
+  </div>
+</div>

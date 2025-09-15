@@ -1,29 +1,52 @@
 <!-- Exemples d'utilisation du partial badge -->
-<p>
-<!-- Badge Hero (style par défaut) -->
-{% include components/badge.html text="✨ Freelance" %}
+<div class="examples-container">
+  <div class="examples-grid">
+    <!-- Badge Hero (style par défaut) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Hero par défaut</h4>
+      {% include components/badge.html text="✨ Freelance" %}
+    </div>
 
-<!-- Badge Hero avec texte personnalisé -->
-{% include components/badge.html text="🚀 Disponible" %}
-</p>
-<p>
-<!-- Badge Tag (style about) -->
-{% include components/badge.html style="tag" icon="👋" text="À propos de moi" %}
+    <!-- Badge Hero avec texte personnalisé -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Hero personnalisé</h4>
+      {% include components/badge.html text="🚀 Disponible" %}
+    </div>
 
-<!-- Badge Tag avec icône et texte personnalisés -->
-{% include components/badge.html style="tag" icon="💼" text="Mes services" %}
-</p>
-<p>
-<!-- Badge Services (style services) -->
-{% include components/badge.html style="services" icon="🚀" text="Mes services" %}
+    <!-- Badge Tag (style about) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Tag avec icône</h4>
+      {% include components/badge.html style="tag" icon="👋" text="À propos de moi" %}
+    </div>
 
-<!-- Badge Services avec icône et texte personnalisés -->
-{% include components/badge.html style="services" icon="⚡" text="Accélération tech" %}
-</p>
+    <!-- Badge Tag avec icône et texte personnalisés -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Tag personnalisé</h4>
+      {% include components/badge.html style="tag" icon="💼" text="Mes services" %}
+    </div>
 
-<p>Badge avec seulement le texte</p>
-<!-- Badge Tag avec seulement le texte (icône par défaut) -->
-{% include components/badge.html style="tag" text="Contact" %}
+    <!-- Badge Services (style services) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Services avec icône</h4>
+      {% include components/badge.html style="services" icon="🚀" text="Mes services" %}
+    </div>
 
-<!-- Badge Services avec seulement le texte (icône par défaut) -->
-{% include components/badge.html style="services" text="Formation" %}
+    <!-- Badge Services avec icône et texte personnalisés -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Services personnalisé</h4>
+      {% include components/badge.html style="services" icon="⚡" text="Accélération tech" %}
+    </div>
+
+    <!-- Badge Tag avec seulement le texte (icône par défaut) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Tag sans icône</h4>
+      {% include components/badge.html style="tag" text="Contact" %}
+    </div>
+
+    <!-- Badge Services avec seulement le texte (icône par défaut) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Badge Services sans icône</h4>
+      {% include components/badge.html style="services" text="Formation" %}
+    </div>
+  </div>
+</div>

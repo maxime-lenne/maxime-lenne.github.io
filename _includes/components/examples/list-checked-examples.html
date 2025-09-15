@@ -1,74 +1,58 @@
 <!-- List Checked Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid-3-columns">
+    <!-- List Checked par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">List Checked par défaut</h4>
+      {% include components/list-checked.html 
+         title="Mes compétences principales"
+         item1_text="Management"
+         item2_text="Conception produit & Agilité"
+         item3_text="IA"
+         item4_text="Fullstack web et mobile"
+         item5_text="Cloud & devops"
+         item6_text="Nocode" %}
+    </div>
 
-<div class="component-examples">
-  <h3>List Checked par défaut</h3>
-  <div class="example-preview">
-    {% include components/list-checked.html 
-       title="Mes compétences principales"
-       item1_text="Management"
-       item2_text="Conception produit & Agilité"
-       item3_text="IA"
-       item4_text="Fullstack web et mobile"
-       item5_text="Cloud & devops"
-       item6_text="Nocode" %}
-  </div>
-  
-  <h3>List Checked avec 3 éléments</h3>
-  <div class="example-preview">
-    {% include components/list-checked.html 
-       title="Technologies"
-       item1_text="React"
-       item2_text="Node.js"
-       item3_text="Python" %}
-  </div>
-  
-  <h3>List Checked avec icônes personnalisées</h3>
-  <div class="example-preview">
-    {% include components/list-checked.html 
-       title="Services"
-       item1_text="Développement"
-       item1_icon='<svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'
-       item2_text="Conseil"
-       item2_icon='<svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/></svg>'
-       item3_text="Formation"
-       item3_icon='<svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>' %}
-  </div>
-  
-  <h3>List Checked sans titre</h3>
-  <div class="example-preview">
-    {% include components/list-checked.html 
-       item1_text="Frontend"
-       item2_text="Backend"
-       item3_text="DevOps"
-       item4_text="Mobile" %}
-  </div>
-  
-  <h3>List Checked avec un seul élément</h3>
-  <div class="example-preview">
-    {% include components/list-checked.html 
-       title="Spécialité"
-       item1_text="Architecture logicielle" %}
+    <!-- List Checked avec 3 éléments -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec 3 éléments</h4>
+      {% include components/list-checked.html 
+         title="Technologies"
+         item1_text="React"
+         item2_text="Node.js"
+         item3_text="Python" %}
+    </div>
+
+    <!-- List Checked avec icônes personnalisées -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec icônes personnalisées</h4>
+      {% include components/list-checked.html 
+         title="Services"
+         item1_text="Développement"
+         item1_icon='<svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'
+         item2_text="Conseil"
+         item2_icon='<svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/></svg>'
+         item3_text="Formation"
+         item3_icon='<svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>' %}
+    </div>
+
+    <!-- List Checked sans titre -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans titre</h4>
+      {% include components/list-checked.html 
+         item1_text="Frontend"
+         item2_text="Backend"
+         item3_text="DevOps"
+         item4_text="Mobile" %}
+    </div>
+
+    <!-- List Checked avec un seul élément -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec un seul élément</h4>
+      {% include components/list-checked.html 
+         title="Spécialité"
+         item1_text="Architecture logicielle" %}
+    </div>
   </div>
 </div>
-
-<style>
-.component-examples {
-  margin: var(--space-xl) 0;
-}
-
-.component-examples h3 {
-  margin: var(--space-lg) 0 var(--space-md) 0;
-  color: var(--color-text-primary);
-  font-size: var(--text-lg);
-}
-
-.example-preview {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  background: var(--color-background);
-  margin-bottom: var(--space-lg);
-  position: relative;
-  overflow: hidden;
-}
-</style>

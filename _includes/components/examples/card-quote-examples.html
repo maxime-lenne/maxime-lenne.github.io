@@ -1,55 +1,62 @@
 <!-- Card Quote Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid">
+    <!-- Card Quote par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">Card Quote par défaut</h4>
+      {% include components/card-quote.html %}
+    </div>
 
-<div class="component-examples">
-  <h3>Card Quote par défaut</h3>
-  <div class="example-preview">
-    {% include components/card-quote.html %}
-  </div>
-  
-  <h3>Card Quote personnalisée</h3>
-  <div class="example-preview">
-    {% include components/card-quote.html 
-       quote="Un développeur exceptionnel qui a su transformer notre vision en réalité technique."
-       author_name="Marie Dubois"
-       author_role="CEO, TechStart"
-       avatar_url="/assets/images/avatar.jpeg"
-       rating="5" %}
-  </div>
-  
-  <h3>Card Quote avec 4 étoiles</h3>
-  <div class="example-preview">
-    {% include components/card-quote.html 
-       quote="Collaboration fluide et résultats dépassant nos attentes."
-       author_name="Pierre Martin"
-       author_role="CTO, InnovCorp"
-       rating="4" %}
-  </div>
-  
-  <h3>Card Quote sans étoiles</h3>
-  <div class="example-preview">
-    {% include components/card-quote.html 
-       quote="Une expertise technique remarquable et une approche très professionnelle."
-       author_name="Sarah Chen"
-       author_role="Product Manager, DigitalFlow"
-       show_stars="false" %}
-  </div>
-  
-  <h3>Card Quote avec avatar personnalisé</h3>
-  <div class="example-preview">
-    {% include components/card-quote.html 
-       quote="Le projet a été livré en avance avec une qualité exceptionnelle."
-       author_name="Thomas Laurent"
-       author_role="Directeur Technique, WebAgency"
-       avatar_url="/assets/images/workspace.jpg"
-       rating="5" %}
-  </div>
-  
-  <h3>Card Quote courte</h3>
-  <div class="example-preview">
-    {% include components/card-quote.html 
-       quote="Excellent travail !"
-       author_name="Julie Moreau"
-       author_role="Chef de projet"
-       rating="5" %}
+    <!-- Card Quote personnalisée -->
+    <div class="example-item">
+      <h4 class="example-item__title">Card Quote personnalisée</h4>
+      {% include components/card-quote.html 
+         quote="Un développeur exceptionnel qui a su transformer notre vision en réalité technique."
+         author_name="Marie Dubois"
+         author_role="CEO, TechStart"
+         avatar_url="/assets/images/avatar.jpeg"
+         rating="5" %}
+    </div>
+
+    <!-- Card Quote avec 4 étoiles -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec 4 étoiles</h4>
+      {% include components/card-quote.html 
+         quote="Collaboration fluide et résultats dépassant nos attentes."
+         author_name="Pierre Martin"
+         author_role="CTO, InnovCorp"
+         rating="4" %}
+    </div>
+
+    <!-- Card Quote sans étoiles -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans étoiles</h4>
+      {% include components/card-quote.html 
+         quote="Une expertise technique remarquable et une approche très professionnelle."
+         author_name="Sarah Chen"
+         author_role="Product Manager, DigitalFlow"
+         show_stars="false" %}
+    </div>
+
+    <!-- Card Quote avec avatar personnalisé -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec avatar personnalisé</h4>
+      {% include components/card-quote.html 
+         quote="Le projet a été livré en avance avec une qualité exceptionnelle."
+         author_name="Thomas Laurent"
+         author_role="Directeur Technique, WebAgency"
+         avatar_url="/assets/images/avatar.jpeg"
+         rating="5" %}
+    </div>
+
+    <!-- Card Quote courte -->
+    <div class="example-item">
+      <h4 class="example-item__title">Card Quote courte</h4>
+      {% include components/card-quote.html 
+         quote="Excellent travail !"
+         author_name="Julie Moreau"
+         author_role="Chef de projet"
+         rating="5" %}
+    </div>
   </div>
 </div>

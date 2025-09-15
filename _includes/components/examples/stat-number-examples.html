@@ -1,67 +1,51 @@
 <!-- Stat Number Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid-2-columns">
+    <!-- Stat Number par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">Stat Number par défaut</h4>
+      <div class="stat-number">
+        <div class="stat-number__number">98%</div>
+        <div class="stat-number__label">Satisfaction client</div>
+      </div>
+    </div>
 
-<div class="component-examples">
-  <h3>Stat Number par défaut</h3>
-  <div class="example-preview">
-    <div class="stat-number">
-      <div class="stat-number__number">98%</div>
-      <div class="stat-number__label">Satisfaction client</div>
+    <!-- Stat Number avec différents formats -->
+    <div class="example-item">
+      <h4 class="example-item__title">Différents formats</h4>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+        {% include components/stat-number.html number="50+" label="Projets réalisés" %}
+        {% include components/stat-number.html number="5.0" label="Note moyenne" %}
+        {% include components/stat-number.html number="48h" label="Temps de réponse" %}
+        {% include components/stat-number.html number="100%" label="Taux de réussite" %}
+      </div>
     </div>
-  </div>
-  
-  <h3>Stat Number avec différents formats</h3>
-  <div class="example-preview">
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
-      {% include components/stat-number.html number="50+" label="Projets réalisés" %}
-      {% include components/stat-number.html number="5.0" label="Note moyenne" %}
-      {% include components/stat-number.html number="48h" label="Temps de réponse" %}
-      {% include components/stat-number.html number="100%" label="Taux de réussite" %}
+
+    <!-- Stat Number avec grands nombres -->
+    <div class="example-item">
+      <h4 class="example-item__title">Grands nombres</h4>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+        {% include components/stat-number.html number="1M+" label="Utilisateurs" %}
+        {% include components/stat-number.html number="99.9%" label="Uptime" %}
+      </div>
     </div>
-  </div>
-  
-  <h3>Stat Number avec grands nombres</h3>
-  <div class="example-preview">
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
-      {% include components/stat-number.html number="1M+" label="Utilisateurs" %}
-      {% include components/stat-number.html number="99.9%" label="Uptime" %}
+
+    <!-- Stat Number avec nombres décimaux -->
+    <div class="example-item">
+      <h4 class="example-item__title">Nombres décimaux</h4>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+        {% include components/stat-number.html number="4.8" label="Note moyenne" %}
+        {% include components/stat-number.html number="2.5x" label="Amélioration" %}
+      </div>
     </div>
-  </div>
-  
-  <h3>Stat Number avec nombres décimaux</h3>
-  <div class="example-preview">
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
-      {% include components/stat-number.html number="4.8" label="Note moyenne" %}
-      {% include components/stat-number.html number="2.5x" label="Amélioration" %}
-    </div>
-  </div>
-  
-  <h3>Stat Number avec durée</h3>
-  <div class="example-preview">
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;">
-      {% include components/stat-number.html number="24h" label="Support" %}
-      {% include components/stat-number.html number="7j/7" label="Disponibilité" %}
+
+    <!-- Stat Number avec durée -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec durée</h4>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+        {% include components/stat-number.html number="24h" label="Support" %}
+        {% include components/stat-number.html number="7j/7" label="Disponibilité" %}
+      </div>
     </div>
   </div>
 </div>
-
-<style>
-.component-examples {
-  margin: var(--space-xl) 0;
-}
-
-.component-examples h3 {
-  margin: var(--space-lg) 0 var(--space-md) 0;
-  color: var(--color-text-primary);
-  font-size: var(--text-lg);
-}
-
-.example-preview {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  background: var(--color-background);
-  margin-bottom: var(--space-lg);
-  position: relative;
-  overflow: hidden;
-}
-</style>

@@ -1,71 +1,55 @@
 <!-- List Footer Link Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid-3-columns">
+    <!-- List Footer Link par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">List Footer Link par défaut</h4>
+      {% include components/list-footer-link.html 
+         title="Navigation"
+         item1_text="À propos" item1_url="#about"
+         item2_text="Services" item2_url="#services"
+         item3_text="Témoignages" item3_url="#testimonials"
+         item4_text="Réserver un rendez-vous" item4_url="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
+         item5_text="Email" item5_url="mailto:hello@example.com" %}
+    </div>
 
-<div class="component-examples">
-  <h3>List Footer Link par défaut</h3>
-  <div class="example-preview">
-    {% include components/list-footer-link.html 
-       title="Navigation"
-       item1_text="À propos" item1_url="#about"
-       item2_text="Services" item2_url="#services"
-       item3_text="Témoignages" item3_url="#testimonials"
-       item4_text="Réserver un rendez-vous" item4_url="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
-       item5_text="Email" item5_url="mailto:hello@example.com" %}
-  </div>
-  
-  <h3>List Footer Link avec liens externes</h3>
-  <div class="example-preview">
-    {% include components/list-footer-link.html 
-       title="Services"
-       item1_text="CTO as a Service" item1_url="#services"
-       item2_text="Tech advisor" item2_url="#services"
-       item3_text="Product Builder" item3_url="#services" %}
-  </div>
-  
-  <h3>List Footer Link sans liens (texte simple)</h3>
-  <div class="example-preview">
-    {% include components/list-footer-link.html 
-       title="Technologies"
-       item1_text="Typescript / NodeJS / NestJS"
-       item2_text="Python / Flask / FastAPI"
-       item3_text="Ruby / Ruby on Rails"
-       item4_text="VueJS / NuxtJS"
-       item5_text="Docker / Kubernetes / Terraform" %}
-  </div>
-  
-  <h3>List Footer Link sans titre</h3>
-  <div class="example-preview">
-    {% include components/list-footer-link.html 
-       item1_text="Accueil" item1_url="/"
-       item2_text="Blog" item2_url="/blog"
-       item3_text="Contact" item3_url="/contact" %}
-  </div>
-  
-  <h3>List Footer Link avec un seul élément</h3>
-  <div class="example-preview">
-    {% include components/list-footer-link.html 
-       title="Support"
-       item1_text="Centre d'aide" item1_url="/help" %}
+    <!-- List Footer Link avec liens externes -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec liens externes</h4>
+      {% include components/list-footer-link.html 
+         title="Services"
+         item1_text="CTO as a Service" item1_url="#services"
+         item2_text="Tech advisor" item2_url="#services"
+         item3_text="Product Builder" item3_url="#services" %}
+    </div>
+
+    <!-- List Footer Link sans liens (texte simple) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans liens (texte simple)</h4>
+      {% include components/list-footer-link.html 
+         title="Technologies"
+         item1_text="Typescript / NodeJS / NestJS"
+         item2_text="Python / Flask / FastAPI"
+         item3_text="Ruby / Ruby on Rails"
+         item4_text="VueJS / NuxtJS"
+         item5_text="Docker / Kubernetes / Terraform" %}
+    </div>
+
+    <!-- List Footer Link sans titre -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans titre</h4>
+      {% include components/list-footer-link.html 
+         item1_text="Accueil" item1_url="/"
+         item2_text="Blog" item2_url="/blog"
+         item3_text="Contact" item3_url="/contact" %}
+    </div>
+
+    <!-- List Footer Link avec un seul élément -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec un seul élément</h4>
+      {% include components/list-footer-link.html 
+         title="Support"
+         item1_text="Centre d'aide" item1_url="/help" %}
+    </div>
   </div>
 </div>
-
-<style>
-.component-examples {
-  margin: var(--space-xl) 0;
-}
-
-.component-examples h3 {
-  margin: var(--space-lg) 0 var(--space-md) 0;
-  color: var(--color-text-primary);
-  font-size: var(--text-lg);
-}
-
-.example-preview {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  background: #1a1a1a;
-  margin-bottom: var(--space-lg);
-  position: relative;
-  overflow: hidden;
-}
-</style>

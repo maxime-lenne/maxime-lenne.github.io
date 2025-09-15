@@ -1,77 +1,61 @@
 <!-- List Horizontal Icon Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid-3-columns">
+    <!-- List Horizontal Icon par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">List Horizontal Icon par défaut</h4>
+      {% include components/list-horizontal-icon.html 
+         item1_title="Code de qualité"
+         item1_text="Je privilégie la maintenabilité et les bonnes pratiques dans chaque ligne de code."
+         item2_title="Design thinking"
+         item2_text="Une approche centrée utilisateur pour créer des expériences intuitives."
+         item3_title="Performance"
+         item3_text="Des applications rapides et optimisées pour tous les appareils." %}
+    </div>
 
-<div class="component-examples">
-  <h3>List Horizontal Icon par défaut</h3>
-  <div class="example-preview">
-    {% include components/list-horizontal-icon.html 
-       item1_title="Code de qualité"
-       item1_text="Je privilégie la maintenabilité et les bonnes pratiques dans chaque ligne de code."
-       item2_title="Design thinking"
-       item2_text="Une approche centrée utilisateur pour créer des expériences intuitives."
-       item3_title="Performance"
-       item3_text="Des applications rapides et optimisées pour tous les appareils." %}
-  </div>
-  
-  <h3>List Horizontal Icon avec 2 éléments</h3>
-  <div class="example-preview">
-    {% include components/list-horizontal-icon.html 
-       item1_title="Innovation"
-       item1_text="Toujours à la pointe des dernières technologies et tendances."
-       item2_title="Collaboration"
-       item2_text="Travail en équipe efficace avec une communication claire." %}
-  </div>
-  
-  <h3>List Horizontal Icon avec icônes personnalisées</h3>
-  <div class="example-preview">
-    {% include components/list-horizontal-icon.html 
-       item1_title="Sécurité"
-       item1_text="Protection des données et respect de la vie privée."
-       item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
-       item2_title="Accessibilité"
-       item2_text="Applications inclusives pour tous les utilisateurs."
-       item2_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/></svg>'
-       item3_title="Évolutivité"
-       item3_text="Architectures robustes qui grandissent avec votre entreprise."
-       item3_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>' %}
-  </div>
-  
-  <h3>List Horizontal Icon avec un seul élément</h3>
-  <div class="example-preview">
-    {% include components/list-horizontal-icon.html 
-       item1_title="Excellence technique"
-       item1_text="Maîtrise approfondie des technologies modernes et des meilleures pratiques de développement." %}
-  </div>
-  
-  <h3>List Horizontal Icon avec emojis</h3>
-  <div class="example-preview">
-    {% include components/list-horizontal-icon.html 
-       item1_title="🚀 Innovation"
-       item1_text="Développement de solutions créatives et innovantes."
-       item2_title="💡 Créativité"
-       item2_text="Approche créative pour résoudre les défis complexes."
-       item3_title="🎯 Précision"
-       item3_text="Attention aux détails et livraison de qualité." %}
+    <!-- List Horizontal Icon avec 2 éléments -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec 2 éléments</h4>
+      {% include components/list-horizontal-icon.html 
+         item1_title="Innovation"
+         item1_text="Toujours à la pointe des dernières technologies et tendances."
+         item2_title="Collaboration"
+         item2_text="Travail en équipe efficace avec une communication claire." %}
+    </div>
+
+    <!-- List Horizontal Icon avec icônes personnalisées -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec icônes personnalisées</h4>
+      {% include components/list-horizontal-icon.html 
+         item1_title="Sécurité"
+         item1_text="Protection des données et respect de la vie privée."
+         item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>'
+         item2_title="Accessibilité"
+         item2_text="Applications inclusives pour tous les utilisateurs."
+         item2_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/></svg>'
+         item3_title="Évolutivité"
+         item3_text="Architectures robustes qui grandissent avec votre entreprise."
+         item3_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>' %}
+    </div>
+
+    <!-- List Horizontal Icon avec un seul élément -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec un seul élément</h4>
+      {% include components/list-horizontal-icon.html 
+         item1_title="Excellence technique"
+         item1_text="Maîtrise approfondie des technologies modernes et des meilleures pratiques de développement." %}
+    </div>
+
+    <!-- List Horizontal Icon avec emojis -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec emojis</h4>
+      {% include components/list-horizontal-icon.html 
+         item1_title="🚀 Innovation"
+         item1_text="Développement de solutions créatives et innovantes."
+         item2_title="💡 Créativité"
+         item2_text="Approche créative pour résoudre les défis complexes."
+         item3_title="🎯 Précision"
+         item3_text="Attention aux détails et livraison de qualité." %}
+    </div>
   </div>
 </div>
-
-<style>
-.component-examples {
-  margin: var(--space-xl) 0;
-}
-
-.component-examples h3 {
-  margin: var(--space-lg) 0 var(--space-md) 0;
-  color: var(--color-text-primary);
-  font-size: var(--text-lg);
-}
-
-.example-preview {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  background: var(--color-background);
-  margin-bottom: var(--space-lg);
-  position: relative;
-  overflow: hidden;
-}
-</style>

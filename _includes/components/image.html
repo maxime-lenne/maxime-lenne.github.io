@@ -10,8 +10,8 @@
            alt="{{ include.image_alt | default: 'Workspace développeur' }}" 
            class="image__image">
     </div>
-    {% assign show_status = include.show_status | default: true %}
-    {% if show_status %}
+    {% assign show_status = include.show_status | default: "true" %}
+    {% if show_status == "true" %}
     <div class="image__status">
       <div class="image__status-dot"></div>
       <span class="image__status-text">{{ include.status_text | default: 'Disponible pour de nouveaux projets' }}</span>

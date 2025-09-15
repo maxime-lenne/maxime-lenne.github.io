@@ -1,19 +1,64 @@
 <!-- Exemples d'utilisation du partial CTA Button -->
+<div class="examples-container">
+  <div class="examples-grid">
+    <!-- Bouton CTA par défaut (style primary) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton par défaut (primary)</h4>
+      {% include components/cta-button.html text="Faisons connaissance" icon="arrow" %}
+    </div>
 
-<!-- Bouton CTA par défaut (avec icône flèche) -->
-{% include components/cta-button.html text="Faisons connaissance" icon="arrow" %}
+    <!-- Bouton CTA primary explicite -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton primary explicite</h4>
+      {% include components/cta-button.html style="primary" text="Bouton primary" %}
+    </div>
 
-<!-- Bouton CTA large (sans icône) -->
-{% include components/cta-button.html style="large" text="Réserver un appel gratuit" %}
+    <!-- Bouton CTA secondary -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton secondary</h4>
+      {% include components/cta-button.html style="secondary" text="Bouton secondary" %}
+    </div>
 
-<!-- Bouton CTA avec URL personnalisée -->
-{% include components/cta-button.html style="large" url="https://example.com" text="Visiter le site" %}
+    <!-- Bouton CTA large -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton large</h4>
+      {% include components/cta-button.html size="large" text="Bouton large" %}
+    </div>
 
-<!-- Bouton secondaire -->
-{% include components/cta-button.html style="secondary" text="Voir mes réalisations" %}
+    <!-- Bouton CTA avec URL personnalisée -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton avec URL personnalisée</h4>
+      {% include components/cta-button.html size="large" url="https://example.com" text="Visiter le site" %}
+    </div>
 
-<!-- Bouton CV avec classe spécifique -->
-{% include components/cta-button.html style="secondary" text="Mon CV" url="/resume/" class="figma-about__cv-btn" %}
+    <!-- Bouton secondaire -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton secondaire</h4>
+      {% include components/cta-button.html style="secondary" text="Voir mes réalisations" %}
+    </div>
 
-<!-- Bouton avec texte par défaut -->
-{% include components/cta-button.html %}
+    <!-- Bouton CV avec classe spécifique -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton avec classe personnalisée</h4>
+      {% include components/cta-button.html style="secondary" icon="download" text="Mon CV" url="/resume/" class="figma-about__cv-btn" %}
+    </div>
+
+    <!-- Bouton avec texte par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton par défaut</h4>
+      {% include components/cta-button.html %}
+    </div>
+
+    <!-- Bouton avec lien externe -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton avec lien externe</h4>
+      {% include components/cta-button.html text="Visiter GitHub" url="https://github.com" extern="true" %}
+    </div>
+
+    <!-- Bouton secondaire avec lien externe -->
+    <div class="example-item">
+      <h4 class="example-item__title">Bouton secondaire externe</h4>
+      {% include components/cta-button.html style="secondary" text="LinkedIn" url="https://linkedin.com" extern="true" %}
+    </div>
+  </div>
+</div>

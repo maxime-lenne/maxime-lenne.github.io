@@ -1,73 +1,54 @@
 <!-- Image Secondary Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid">
+    <!-- Image Secondary par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">Image Secondary par défaut</h4>
+      {% include components/image-secondary.html %}
+    </div>
 
-<div class="component-examples">
-  <h3>Image Secondary par défaut</h3>
-  <div class="example-preview">
-    {% include components/image-secondary.html %}
-  </div>
-  
-  <h3>Image Secondary avec image personnalisée</h3>
-  <div class="example-preview">
-    {% include components/image-secondary.html 
-       image_url="/assets/images/custom-avatar.jpg" 
-       image_alt="Portrait personnalisé" %}
-  </div>
-  
-  <h3>Image Secondary avec badge personnalisé</h3>
-  <div class="example-preview">
-    {% include components/image-secondary.html 
-       show_badge="true"
-       badge_number="5+" 
-       badge_text="années<br>d'expérience" %}
-  </div>
-  
-  <h3>Image Secondary sans badge</h3>
-  <div class="example-preview">
-    {% include components/image-secondary.html 
-       show_badge=false %}
-  </div>
-  
-  <h3>Image Secondary complètement personnalisée</h3>
-  <div class="example-preview">
-    {% include components/image-secondary.html 
-       image_url="/assets/images/team-member.jpg" 
-       image_alt="Membre de l'équipe"
-       show_badge="true"
-       badge_number="10+" 
-       badge_text="projets<br>réalisés" %}
-  </div>
-  
-  <h3>Image Secondary avec badge différent</h3>
-  <div class="example-preview">
-    {% include components/image-secondary.html 
-       show_badge="true"
-       badge_number="100%" 
-       badge_text="satisfaction<br>client" %}
+    <!-- Image Secondary avec image personnalisée -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec image personnalisée</h4>
+      {% include components/image-secondary.html 
+         image_url="/assets/images/avatar.jpeg" 
+         image_alt="Portrait personnalisé" %}
+    </div>
+
+    <!-- Image Secondary avec badge personnalisé -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec badge personnalisé</h4>
+      {% include components/image-secondary.html 
+         show_status="true"
+         badge_number="5+" 
+         badge_text="années<br>d'expérience" %}
+    </div>
+
+    <!-- Image Secondary sans badge -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans badge</h4>
+      {% include components/image-secondary.html 
+         show_status="false" %}
+    </div>
+
+    <!-- Image Secondary complètement personnalisée -->
+    <div class="example-item">
+      <h4 class="example-item__title">Complètement personnalisée</h4>
+      {% include components/image-secondary.html 
+         image_url="/assets/images/avatar.jpeg" 
+         image_alt="Membre de l'équipe"
+         show_status="true"
+         badge_number="10+" 
+         badge_text="projets<br>réalisés" %}
+    </div>
+
+    <!-- Image Secondary avec badge différent -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec badge différent</h4>
+      {% include components/image-secondary.html 
+         show_status="true"
+         badge_number="100%" 
+         badge_text="satisfaction<br>client" %}
+    </div>
   </div>
 </div>
-
-<style>
-.component-examples {
-  margin: var(--space-xl) 0;
-}
-
-.component-examples h3 {
-  margin: var(--space-lg) 0 var(--space-md) 0;
-  color: var(--color-text-primary);
-  font-size: var(--text-lg);
-}
-
-.example-preview {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  background: var(--color-background);
-  margin-bottom: var(--space-lg);
-  position: relative;
-  overflow: hidden;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-</style>

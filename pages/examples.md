@@ -89,18 +89,6 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
-### Footer
-
-{% include components/examples/footer-examples.html %}
-
----
-
-### Navigation Mobile
-
-{% include components/examples/mobile-nav-examples.html %}
-
----
-
 ### Terminal Animé
 
 {% include components/animated-terminal.html %}

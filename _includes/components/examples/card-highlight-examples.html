@@ -1,61 +1,68 @@
 <!-- Card Highlight Component Examples -->
+<div class="examples-container">
+  <div class="examples-grid">
+    <!-- Card Highlight par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">Card Highlight par défaut</h4>
+      {% include components/card-highlight.html %}
+    </div>
 
-<div class="component-examples">
-  <h3>Card Highlight par défaut</h3>
-  <div class="example-preview">
-    {% include components/card-highlight.html %}
-  </div>
-  
-  <h3>Card Highlight complète avec badges</h3>
-  <div class="example-preview">
-    {% include components/card-highlight.html 
-       icon="🚀"
-       title="Développement Web"
-       keywords="React, Node.js, TypeScript"
-       description="Création d'applications web modernes et performantes avec les dernières technologies."
-       features="Frontend, Backend, API, Base de données"
-       feature_type="badges" %}
-  </div>
-  
-  <h3>Card Highlight avec liste</h3>
-  <div class="example-preview">
-    {% include components/card-highlight.html 
-       icon="📱"
-       title="Applications Mobiles"
-       keywords="React Native, Flutter, Swift"
-       description="Développement d'applications mobiles cross-platform et natives."
-       features="Interface utilisateur, Performance, Tests, Déploiement"
-       feature_type="list" %}
-  </div>
-  
-  <h3>Card Highlight sans icône</h3>
-  <div class="example-preview">
-    {% include components/card-highlight.html 
-       title="Consulting Tech"
-       keywords="Architecture, DevOps, Sécurité"
-       description="Accompagnement dans vos choix technologiques et l'optimisation de vos processus."
-       features="Audit, Formation, Migration, Optimisation"
-       feature_type="badges" %}
-  </div>
-  
-  <h3>Card Highlight simple</h3>
-  <div class="example-preview">
-    {% include components/card-highlight.html 
-       icon="🎨"
-       title="Design UI/UX"
-       description="Conception d'interfaces utilisateur intuitives et esthétiques."
-       features="Wireframes, Prototypes, Tests utilisateurs"
-       feature_type="list" %}
-  </div>
-  
-  <h3>Card Highlight avec mots-clés longs</h3>
-  <div class="example-preview">
-    {% include components/card-highlight.html 
-       icon="☁️"
-       title="Cloud & DevOps"
-       keywords="AWS, Docker, Kubernetes, CI/CD, Monitoring"
-       description="Mise en place d'infrastructures cloud scalables et automatisées."
-       features="Infrastructure as Code, Monitoring, Backup, Sécurité"
-       feature_type="badges" %}
+    <!-- Card Highlight complète avec badges -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec badges</h4>
+      {% include components/card-highlight.html 
+         icon="🚀"
+         title="Développement Web"
+         keywords="React, Node.js, TypeScript"
+         description="Création d'applications web modernes et performantes avec les dernières technologies."
+         features="Frontend, Backend, API, Base de données"
+         feature_type="badges" %}
+    </div>
+
+    <!-- Card Highlight avec liste -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec liste</h4>
+      {% include components/card-highlight.html 
+         icon="📱"
+         title="Applications Mobiles"
+         keywords="React Native, Flutter, Swift"
+         description="Développement d'applications mobiles cross-platform et natives."
+         features="Interface utilisateur, Performance, Tests, Déploiement"
+         feature_type="list" %}
+    </div>
+
+    <!-- Card Highlight sans icône -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans icône</h4>
+      {% include components/card-highlight.html 
+         title="Consulting Tech"
+         keywords="Architecture, DevOps, Sécurité"
+         description="Accompagnement dans vos choix technologiques et l'optimisation de vos processus."
+         features="Audit, Formation, Migration, Optimisation"
+         feature_type="badges" %}
+    </div>
+
+    <!-- Card Highlight simple -->
+    <div class="example-item">
+      <h4 class="example-item__title">Card Highlight simple</h4>
+      {% include components/card-highlight.html 
+         icon="🎨"
+         title="Design UI/UX"
+         description="Conception d'interfaces utilisateur intuitives et esthétiques."
+         features="Wireframes, Prototypes, Tests utilisateurs"
+         feature_type="list" %}
+    </div>
+
+    <!-- Card Highlight avec mots-clés longs -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec mots-clés longs</h4>
+      {% include components/card-highlight.html 
+         icon="☁️"
+         title="Cloud & DevOps"
+         keywords="AWS, Docker, Kubernetes, CI/CD, Monitoring"
+         description="Mise en place d'infrastructures cloud scalables et automatisées."
+         features="Infrastructure as Code, Monitoring, Backup, Sécurité"
+         feature_type="badges" %}
+    </div>
   </div>
 </div>

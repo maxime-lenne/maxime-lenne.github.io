@@ -1,31 +1,17 @@
 <!-- CTA Button Component -->
-{% if include.style == "secondary" %}
-  <a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}"
-    class="figma-btn figma-btn--secondary{% if include.size == 'large' %} figma-btn--large{% endif %}{% if include.class %} {{ include.class }}{% endif %}">
-    {% if include.icon == "download" %}
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M12 15V3M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5"/>
-      </svg>
-    {% endif %}
-    {{ include.text | default: "Voir mes réalisations" }}
-  </a>
-{% elsif include.style == "large" %}
-  <a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}" 
-     class="figma-btn figma-btn--primary figma-btn--large"
-     target="_blank" 
-     rel="noopener">
-    {{ include.text | default: "Réserver un appel gratuit" }}
-  </a>
-{% else %}
-  <a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}" 
-     class="figma-btn figma-btn--primary figma-btn--large"
-     target="_blank" 
-     rel="noopener">
-    {{ include.text | default: "Faisons connaissance" }}
-    {% if include.icon == "arrow" %}
-      <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path d="M7 17L17 7M17 7H7M17 7V17"/>
-      </svg>
-    {% endif %}
-  </a>
-{% endif %}
+{% assign button_style = include.style | default: "primary" %}
+<a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}"
+  class="figma-btn{% if button_style == 'primary' %} figma-btn--primary{% endif %}{% if button_style == 'secondary' %} figma-btn--secondary{% endif %}{% if include.size == 'large' %} figma-btn--large{% endif %}{% if include.class %} {{ include.class }}{% endif %}"
+  {% if include.extern %}target="_blank" rel="noopener"{% endif %}>
+  {% if include.icon == "download" %}
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M12 15V3M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5"/>
+    </svg>
+  {% endif %}
+  {{ include.text | default: "Faisons connaissance" }}
+  {% if include.icon == "arrow" %}
+    <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M7 17L17 7M17 7H7M17 7V17"/>
+    </svg>
+  {% endif %}
+</a>
