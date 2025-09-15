@@ -35,6 +35,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### IMAGE SECONDARY
+
+{% include components/examples/image-secondary-examples.html %}
+
+---
+
 ### CTA INFO
 
 {% include components/examples/cta-info-examples.html %}

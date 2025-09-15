@@ -1,0 +1,217 @@
+// Image Secondary Component
+.image-secondary__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+  
+  @media (max-width: 967px) {
+    order: -1;
+  }
+}
+
+.image-secondary__image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-secondary__image-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(34, 197, 94, 0.1) 100%
+  );
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.image-secondary__image-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(34, 197, 94, 0.1) 100%
+  );
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 20px 40px rgba(59, 130, 246, 0.15),
+    inset 0 2px 10px rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-slow);
+  z-index: 2;
+  
+  [data-theme="dark"] & {
+    background: linear-gradient(135deg, 
+      rgba(59, 130, 246, 0.2) 0%, 
+      rgba(34, 197, 94, 0.15) 100%
+    );
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      inset 0 2px 10px rgba(255, 255, 255, 0.05);
+  }
+  
+  &:hover {
+    transform: scale(1.05) rotate(-2deg);
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 
+      0 30px 60px rgba(59, 130, 246, 0.25),
+      inset 0 2px 15px rgba(255, 255, 255, 0.15);
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(59, 130, 246, 0.4) 0deg,
+      rgba(34, 197, 94, 0.4) 120deg,
+      rgba(99, 102, 241, 0.4) 240deg,
+      rgba(59, 130, 246, 0.4) 360deg
+    );
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate 8s linear infinite;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.image-secondary__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.image-secondary__badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+  transition: all var(--transition-normal);
+  z-index: 3;
+  
+  [data-theme="dark"] & {
+    background: rgba(30, 41, 59, 0.95);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  &:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 48px rgba(59, 130, 246, 0.25);
+  }
+}
+
+.image-secondary__badge-number {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-primary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.image-secondary__badge-text {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-align: center;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Animations
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(1deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .image-secondary__image-container {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .image-secondary__badge {
+    width: 60px;
+    height: 60px;
+    top: 15px;
+    right: 15px;
+    
+    &-number {
+      font-size: 14px;
+    }
+    
+    &-text {
+      font-size: 8px;
+    }
+  }
+}

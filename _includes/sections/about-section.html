@@ -2,20 +2,11 @@
 <section class="figma-about">
   <div class="figma-about__container">
     <div class="figma-about__content">
-      <div class="figma-about__visual">
-        <div class="figma-about__image-wrapper">
-          <div class="figma-about__image-bg"></div>
-          <div class="figma-about__image-container">
-            <img src="{{site.baseurl}}/assets/images/{% if site.pic %}{{ site.pic }}{% else %}avatar.jpeg{% endif %}" 
-                 alt="Portrait développeur" 
-                 class="figma-about__image">
-          </div>
-          <div class="figma-about__badge">
-            <div class="figma-about__badge-number">20+</div>
-            <div class="figma-about__badge-text">ans<br>d'expérience</div>
-          </div>
-        </div>
-      </div>
+      {% include components/image-secondary.html 
+         image_url="/assets/images/avatar.jpeg"
+         image_alt="Portrait développeur"
+         badge_number="20+"
+         badge_text="ans<br>d'expérience" %}
       
       <div class="figma-about__text">
         {% include components/badge.html style="tag" icon="👋" text="À propos de moi" %}

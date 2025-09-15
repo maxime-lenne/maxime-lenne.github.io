@@ -1,0 +1,17 @@
+<!-- Image Secondary Component -->
+<div class="image-secondary__visual">
+  <div class="image-secondary__image-wrapper">
+    <div class="image-secondary__image-bg"></div>
+    <div class="image-secondary__image-container">
+      <img src="{{ include.image_url | default: site.baseurl | append: '/assets/images/avatar.jpeg' }}" 
+           alt="{{ include.image_alt | default: 'Portrait développeur' }}" 
+           class="image-secondary__image">
+    </div>
+    {% if include.show_badge | default: true %}
+    <div class="image-secondary__badge">
+      <div class="image-secondary__badge-number">{{ include.badge_number | default: '20+' }}</div>
+      <div class="image-secondary__badge-text">{{ include.badge_text | default: 'ans<br>d\'expérience' }}</div>
+    </div>
+    {% endif %}
+  </div>
+</div>
