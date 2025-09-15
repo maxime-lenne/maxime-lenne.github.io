@@ -29,9 +29,9 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
-### CIRCLE IMAGE
+### IMAGE CIRCLE
 
-{% include components/examples/circle-image-examples.html %}
+{% include components/examples/image-circle-examples.html %}
 
 ---
 

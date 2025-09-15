@@ -1,0 +1,20 @@
+<!-- Image Circle Component -->
+<div class="image-circle__visual">
+  <div class="image-circle__image-wrapper">
+    <div class="image-circle__decorations">
+      <div class="image-circle__decoration image-circle__decoration--1"></div>
+      <div class="image-circle__decoration image-circle__decoration--2"></div>
+    </div>
+    <div class="image-circle__image-container">
+      <img src="{{ include.image_url | default: site.baseurl | append: '/assets/images/desk.jpeg' }}" 
+           alt="{{ include.image_alt | default: 'Workspace développeur' }}" 
+           class="image-circle__image">
+    </div>
+    {% if include.show_status != false %}
+    <div class="image-circle__status">
+      <div class="image-circle__status-dot"></div>
+      <span class="image-circle__status-text">{{ include.status_text | default: 'Disponible pour de nouveaux projets' }}</span>
+    </div>
+    {% endif %}
+  </div>
+</div>
