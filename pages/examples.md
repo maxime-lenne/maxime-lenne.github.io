@@ -41,9 +41,9 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
-### CHECKED LIST
+### LIST CHECKED
 
-{% include components/examples/checked-list-examples.html %}
+{% include components/examples/list-checked-examples.html %}
 
 ---
 
