@@ -1,0 +1,68 @@
+<!-- List Footer Link Component -->
+<div class="list-footer-link">
+  {% if include.title %}
+    <h4 class="list-footer-link__title">{{ include.title }}</h4>
+  {% endif %}
+  
+  <ul class="list-footer-link__list">
+    {% if include.item1_text %}
+      <li>
+        {% if include.item1_url %}
+          <a href="{{ include.item1_url }}">{{ include.item1_text }}</a>
+        {% else %}
+          {{ include.item1_text }}
+        {% endif %}
+      </li>
+    {% endif %}
+    
+    {% if include.item2_text %}
+      <li>
+        {% if include.item2_url %}
+          <a href="{{ include.item2_url }}">{{ include.item2_text }}</a>
+        {% else %}
+          {{ include.item2_text }}
+        {% endif %}
+      </li>
+    {% endif %}
+    
+    {% if include.item3_text %}
+      <li>
+        {% if include.item3_url %}
+          <a href="{{ include.item3_url }}">{{ include.item3_text }}</a>
+        {% else %}
+          {{ include.item3_text }}
+        {% endif %}
+      </li>
+    {% endif %}
+    
+    {% if include.item4_text %}
+      <li>
+        {% if include.item4_url %}
+          <a href="{{ include.item4_url }}">{{ include.item4_text }}</a>
+        {% else %}
+          {{ include.item4_text }}
+        {% endif %}
+      </li>
+    {% endif %}
+    
+    {% if include.item5_text %}
+      <li>
+        {% if include.item5_url %}
+          <a href="{{ include.item5_url }}">{{ include.item5_text }}</a>
+        {% else %}
+          {{ include.item5_text }}
+        {% endif %}
+      </li>
+    {% endif %}
+    
+    {% if include.item6_text %}
+      <li>
+        {% if include.item6_url %}
+          <a href="{{ include.item6_url }}">{{ include.item6_text }}</a>
+        {% else %}
+          {{ include.item6_text }}
+        {% endif %}
+      </li>
+    {% endif %}
+  </ul>
+</div>

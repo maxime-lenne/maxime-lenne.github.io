@@ -53,6 +53,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### LIST FOOTER LINK
+
+{% include components/examples/list-footer-link-examples.html %}
+
+---
+
 ### Header
 
 {% include components/examples/header-examples.html %}

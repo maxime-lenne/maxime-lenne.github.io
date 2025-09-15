@@ -34,37 +34,28 @@
             </div>
             
             <div class="figma-footer__links">
-                <div class="figma-footer__column">
-                    <h4 class="figma-footer__column-title">Navigation</h4>
-                    <ul class="figma-footer__column-list">
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#testimonials">Témoignages</a></li>
-                        <li><a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm">Réserver un rendez-vous</a></li>
-                        <li><a href="{{ site.author.email | prepend: 'mailto:' }}">Email</a></li>
-                    </ul>
-                </div>
+                {% include components/list-footer-link.html 
+                   title="Navigation"
+                   item1_text="À propos" item1_url="#about"
+                   item2_text="Services" item2_url="#services"
+                   item3_text="Témoignages" item3_url="#testimonials"
+                   item4_text="Réserver un rendez-vous" item4_url="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
+                   item5_text="Email" item5_url="mailto:hello@example.com" %}
 
-                <div class="figma-footer__column">
-                    <h4 class="figma-footer__column-title">Services</h4>
-                    <ul class="figma-footer__column-list">
-                        <li><a href="#services">CTO as a Service</a></li>
-                        <li><a href="#services">Tech advisor, sparing partner</a></li>
-                        <li><a href="#services">Tech Product Leader</a></li>
-                        <li><a href="#services">Product Builder</a></li>
-                    </ul>
-                </div>
+                {% include components/list-footer-link.html 
+                   title="Services"
+                   item1_text="CTO as a Service" item1_url="#services"
+                   item2_text="Tech advisor, sparing partner" item2_url="#services"
+                   item3_text="Tech Product Leader" item3_url="#services"
+                   item4_text="Product Builder" item4_url="#services" %}
                 
-                <div class="figma-footer__column">
-                    <h4 class="figma-footer__column-title">Technologies</h4>
-                    <ul class="figma-footer__column-list">
-                        <li>Typescript / NodeJS / NestJS</li>
-                        <li>Python / Flask / FastAPI</li>
-                        <li>Ruby / Ruby on Rails</li>
-                        <li>VueJS / NuxtJS</li>
-                        <li>Docker / Kubernetes / Terraform / Ansible</li>
-                    </ul>
-                </div>
+                {% include components/list-footer-link.html 
+                   title="Technologies"
+                   item1_text="Typescript / NodeJS / NestJS"
+                   item2_text="Python / Flask / FastAPI"
+                   item3_text="Ruby / Ruby on Rails"
+                   item4_text="VueJS / NuxtJS"
+                   item5_text="Docker / Kubernetes / Terraform / Ansible" %}
             </div>
         </div>
         
