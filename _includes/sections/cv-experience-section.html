@@ -1,48 +1,27 @@
 <!-- Experience Section -->
 <section class="figma-cv-experience">
   <div class="figma-cv-experience__container">
-    <div class="figma-cv-experience__header">
-      <h2 class="figma-cv-experience__title">
-        Expérience <span class="figma-cv-experience__title-highlight">Professionnelle</span>
-      </h2>
-    </div>
+    {% include components/section-header.html 
+       badge_icon="💼"
+       badge_text="Mon parcours"
+       title="Expérience"
+       title_highlight="Professionnelle" %}
     
-    <div class="figma-cv-experience__timeline">
+    <div class="figma-cv-experience__grid">
       {% assign sorted_experiences = site.experiences | sort: 'order' %}
       {% for experience in sorted_experiences %}
-      <div class="figma-cv-experience__item">
-        <div class="figma-cv-experience__date">
-          <span class="figma-cv-experience__year">{{ experience.start_date | date: "%Y" }}</span>
-          {% if experience.current %}
-            <span class="figma-cv-experience__duration">Présent</span>
-          {% else %}
-            <span class="figma-cv-experience__duration">{{ experience.end_date | date: "%Y" }}</span>
-          {% endif %}
-        </div>
-        <div class="figma-cv-experience__content">
-          <div class="figma-cv-experience__company">
-            <h3 class="figma-cv-experience__role">{{ experience.role }}</h3>
-            <span class="figma-cv-experience__company-name">{{ experience.company }}</span>
-          </div>
-          <p class="figma-cv-experience__description">
-            {{ experience.description }}
-          </p>
-          {% if experience.achievements %}
-          <div class="figma-cv-experience__achievements">
-            {% for achievement in experience.achievements %}
-            <div class="figma-cv-experience__achievement">{{ achievement }}</div>
-            {% endfor %}
-          </div>
-          {% endif %}
-          {% if experience.skills %}
-          <div class="figma-cv-experience__skills">
-            {% for skill in experience.skills %}
-            <span class="figma-cv-experience__skill">{{ skill }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-      </div>
+        {% include components/card-experience.html 
+           id=forloop.index
+           role=experience.role
+           company=experience.company
+           start_date=experience.start_date
+           end_date=experience.end_date
+           current=experience.current
+           description=experience.description
+           skills=experience.skills
+           achievements=experience.achievements
+           logo_url=experience.logo_url
+           details=experience.details %}
       {% endfor %}
     </div>
   </div>

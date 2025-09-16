@@ -1,0 +1,87 @@
+<!-- Exemples d'utilisation du partial Card Experience -->
+<div class="examples-container">
+  <div class="examples-grid">
+    <!-- Card Experience par défaut -->
+    <div class="example-item">
+      <h4 class="example-item__title">Card Experience par défaut</h4>
+      {% include components/card-experience.html 
+         role="Lead Developer"
+         company="TechCorp"
+         start_date="2020-01-01"
+         end_date="2023-12-31"
+         description="Direction d'une équipe de 5 développeurs sur des projets innovants utilisant React, Node.js et AWS."
+         skills="React,Node.js,AWS,Team Leadership,Agile"
+         achievements="Augmentation de 40% de la productivité de l'équipe,Implémentation d'une architecture microservices,Réduction des bugs de 60% grâce aux tests automatisés"
+         logo_url="/assets/images/avatar.jpeg" %}
+    </div>
+
+    <!-- Card Experience avec poste actuel -->
+    <div class="example-item">
+      <h4 class="example-item__title">Poste actuel</h4>
+      {% include components/card-experience.html 
+         role="CTO & Co-founder"
+         company="StartupInnovante"
+         start_date="2024-01-01"
+         end_date="2024-12-31"
+         current=true
+         description="Cofondation et direction technique d'une startup spécialisée dans l'IA générative."
+         skills="AI,Python,Strategic Planning,Fundraising,Product Management"
+         achievements="Levée de fonds de 2M€,Recrutement d'une équipe de 8 personnes,Lancement du MVP en 6 mois"
+         logo_url="/assets/images/avatar.jpeg" %}
+    </div>
+
+    <!-- Card Experience avec plus de 3 achievements -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec expansion (plus de 3 achievements)</h4>
+      {% include components/card-experience.html 
+         role="Senior Full-Stack Developer"
+         company="DigitalAgency"
+         start_date="2018-06-01"
+         end_date="2019-12-31"
+         description="Développement d'applications web complexes pour des clients internationaux."
+         skills="Vue.js,Laravel,PostgreSQL,Docker,Kubernetes"
+         achievements="Migration réussie de 50+ applications legacy,Formation de 15 développeurs juniors,Optimisation des performances de 70%,Mise en place de la CI/CD,Création d'une librairie de composants réutilisables,Amélioration de l'accessibilité web"
+         logo_url="/assets/images/avatar.jpeg" %}
+    </div>
+
+    <!-- Card Experience sans logo (placeholder) -->
+    <div class="example-item">
+      <h4 class="example-item__title">Sans logo (placeholder)</h4>
+      {% include components/card-experience.html 
+         role="Frontend Developer"
+         company="WebStudio"
+         start_date="2017-01-01"
+         end_date="2018-05-31"
+         description="Développement d'interfaces utilisateur modernes et responsives."
+         skills="HTML5,CSS3,JavaScript,jQuery,Bootstrap"
+         achievements="Création de 20+ sites web,Amélioration de l'UX de 50%,Optimisation SEO"
+         details="Travail en étroite collaboration avec les designers pour créer des expériences utilisateur exceptionnelles. Participation active aux réunions client et présentation des maquettes." %}
+    </div>
+
+    <!-- Card Experience avec détails supplémentaires -->
+    <div class="example-item">
+      <h4 class="example-item__title">Avec détails supplémentaires</h4>
+      {% include components/card-experience.html 
+         role="Freelance Developer"
+         company="Indépendant"
+         start_date="2016-01-01"
+         end_date="2016-12-31"
+         description="Développement de solutions web sur mesure pour des PME."
+         skills="PHP,MySQL,WordPress,JavaScript"
+         achievements="Livraison de 15 projets,100% de satisfaction client,Création d'un système de gestion de contenu"
+         details="Spécialisation dans le développement de sites e-commerce et de systèmes de gestion. Collaboration avec des agences de communication et des consultants marketing pour offrir des solutions complètes aux clients." %}
+    </div>
+
+    <!-- Card Experience courte -->
+    <div class="example-item">
+      <h4 class="example-item__title">Card Experience courte</h4>
+      {% include components/card-experience.html 
+         role="Junior Developer"
+         company="TechStart"
+         start_date="2015-06-01"
+         end_date="2015-12-31"
+         description="Première expérience professionnelle dans le développement web."
+         skills="HTML,CSS,JavaScript,PHP" %}
+    </div>
+  </div>
+</div>

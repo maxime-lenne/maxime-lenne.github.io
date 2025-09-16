@@ -1,0 +1,89 @@
+- id: 1
+  role: "CTO & Co-founder"
+  company: "StartupInnovante"
+  start_date: "2024-01-01"
+  end_date: "2024-12-31"
+  current: true
+  description: "Cofondation et direction technique d'une startup spécialisée dans l'IA générative et les solutions SaaS innovantes."
+  skills: ["AI/ML", "Python", "Strategic Planning", "Fundraising", "Product Management", "Team Leadership"]
+  achievements: 
+    - "Levée de fonds de 2M€ en série A"
+    - "Recrutement et management d'une équipe de 8 personnes"
+    - "Lancement du MVP en 6 mois avec 1000+ utilisateurs"
+    - "Développement d'une architecture microservices scalable"
+    - "Partenariats stratégiques avec 3 grandes entreprises"
+    - "Croissance de 300% du chiffre d'affaires en 12 mois"
+  logo_url: "/assets/images/avatar.jpeg"
+  details: "En tant que CTO et cofondateur, j'ai la responsabilité de définir la vision technique de l'entreprise, de recruter et manager l'équipe de développement, et de superviser l'architecture des produits. Je travaille en étroite collaboration avec le CEO sur la stratégie business et participe activement aux levées de fonds."
+  order: 1
+
+- id: 2
+  role: "Lead Developer"
+  company: "TechCorp"
+  start_date: "2020-01-01"
+  end_date: "2023-12-31"
+  current: false
+  description: "Direction d'une équipe de 5 développeurs sur des projets innovants utilisant React, Node.js et AWS."
+  skills: ["React", "Node.js", "AWS", "Team Leadership", "Agile", "Microservices"]
+  achievements:
+    - "Augmentation de 40% de la productivité de l'équipe"
+    - "Implémentation d'une architecture microservices"
+    - "Réduction des bugs de 60% grâce aux tests automatisés"
+    - "Formation et mentorat de 3 développeurs juniors"
+    - "Migration réussie de 15 applications legacy"
+  logo_url: "/assets/images/avatar.jpeg"
+  details: "En tant que Lead Developer, j'étais responsable de l'architecture technique des projets, du management de l'équipe de développement et de la collaboration avec les product managers. J'ai mis en place des processus de développement agile et des outils de CI/CD qui ont considérablement amélioré la qualité et la vélocité de l'équipe."
+  order: 2
+
+- id: 3
+  role: "Senior Full-Stack Developer"
+  company: "DigitalAgency"
+  start_date: "2018-06-01"
+  end_date: "2019-12-31"
+  current: false
+  description: "Développement d'applications web complexes pour des clients internationaux dans le secteur e-commerce."
+  skills: ["Vue.js", "Laravel", "PostgreSQL", "Docker", "Kubernetes", "Redis"]
+  achievements:
+    - "Migration réussie de 50+ applications legacy"
+    - "Formation de 15 développeurs juniors"
+    - "Optimisation des performances de 70%"
+    - "Mise en place de la CI/CD"
+    - "Création d'une librairie de composants réutilisables"
+    - "Amélioration de l'accessibilité web (WCAG 2.1)"
+  logo_url: "/assets/images/avatar.jpeg"
+  details: "Spécialisé dans le développement d'applications e-commerce complexes, j'ai travaillé sur des projets pour des clients internationaux. J'ai été responsable de la migration de nombreuses applications legacy vers des technologies modernes, et j'ai formé de nombreux développeurs juniors aux bonnes pratiques de développement."
+  order: 3
+
+- id: 4
+  role: "Frontend Developer"
+  company: "WebStudio"
+  start_date: "2017-01-01"
+  end_date: "2018-05-31"
+  current: false
+  description: "Développement d'interfaces utilisateur modernes et responsives pour des sites web et applications."
+  skills: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "SASS"]
+  achievements:
+    - "Création de 20+ sites web responsives"
+    - "Amélioration de l'UX de 50%"
+    - "Optimisation SEO et performance"
+    - "Collaboration avec les designers UX/UI"
+  logo_url: "/assets/images/avatar.jpeg"
+  details: "En tant que Frontend Developer, j'ai développé de nombreuses interfaces utilisateur modernes en collaboration étroite avec les designers. J'ai acquis une expertise solide en responsive design, en optimisation des performances et en accessibilité web."
+  order: 4
+
+- id: 5
+  role: "Freelance Developer"
+  company: "Indépendant"
+  start_date: "2016-01-01"
+  end_date: "2016-12-31"
+  current: false
+  description: "Développement de solutions web sur mesure pour des PME et startups."
+  skills: ["PHP", "MySQL", "WordPress", "JavaScript", "HTML/CSS"]
+  achievements:
+    - "Livraison de 15 projets clients"
+    - "100% de satisfaction client"
+    - "Création d'un système de gestion de contenu"
+    - "Développement de sites e-commerce"
+  logo_url: "/assets/images/avatar.jpeg"
+  details: "Pendant cette période de freelance, j'ai développé des solutions web sur mesure pour des PME et startups. J'ai acquis une expérience précieuse en gestion de projet, en relation client et en développement de solutions e-commerce personnalisées."
+  order: 5
