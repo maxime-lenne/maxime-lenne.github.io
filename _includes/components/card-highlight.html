@@ -8,7 +8,7 @@
   
   {% if include.keywords %}
     <div class="card-highlight__keywords">
-      {{ include.keywords }}
+      {{ service.keywords | join: ", " }}
     </div>
   {% endif %}
   
