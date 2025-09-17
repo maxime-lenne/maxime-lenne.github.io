@@ -1,0 +1,34 @@
+<!-- Title Hero Examples -->
+<div class="examples-container">
+  <h3 class="examples-title">TITLE HERO</h3>
+  
+  <div class="examples-grid">
+    <div class="example-item">
+      <h4 class="example-item__title">Titre Hero Standard</h4>
+      {% include components/title-hero.html 
+         main_text="Salut, moi c'est Maxime 👋"
+         highlight_text="CTO, Tech advisor, sparing partner" %}
+    </div>
+    
+    <div class="example-item">
+      <h4 class="example-item__title">Titre Hero Personnalisé</h4>
+      {% include components/title-hero.html 
+         main_text="Bienvenue sur mon site"
+         highlight_text="Développeur Full Stack" %}
+    </div>
+    
+    <div class="example-item">
+      <h4 class="example-item__title">Titre Hero avec Emoji</h4>
+      {% include components/title-hero.html 
+         main_text="Hello World! 🌍"
+         highlight_text="Passionné de technologie" %}
+    </div>
+    
+    <div class="example-item">
+      <h4 class="example-item__title">Titre Hero Minimal</h4>
+      {% include components/title-hero.html 
+         main_text="Mon Portfolio"
+         highlight_text="Créateur digital" %}
+    </div>
+  </div>
+</div>

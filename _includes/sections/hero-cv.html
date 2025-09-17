@@ -2,59 +2,61 @@
 <section class="figma-cv-hero">
   <div class="figma-cv-hero__container">
     <div class="figma-cv-hero__content">
-      <div class="figma-cv-hero__badge">
-        <span class="figma-cv-hero__badge-text">💼 Mon parcours</span>
+      <div class="figma-cv-hero__side">
+        {% include components/badge.html text="💼 Mon parcours" %}
+        
+        {% include components/image-circle.html 
+          image_url="/assets/images/avatar.jpeg" 
+          image_alt="Mon portrait"
+          show_status="false"
+          status_text="Disponible pour consultation" %}
+        
+        {% include components/title-hero.html 
+          main_text="Maxime Lenne 👋"
+          highlight_text="CTO, Tech advisor, sparing partner" %}
+
+        
       </div>
       
-      <h1 class="figma-cv-hero__title">
-        <span class="figma-cv-hero__title-main">Maxime Lenne</span>
-        <span class="figma-cv-hero__title-subtitle">CTO, Product Owner, Tech Lead</span>
-      </h1>
-      
-      <p class="figma-cv-hero__description">
-        Plus de 10 ans d'expérience dans le développement, la direction technique et la stratégie produit. 
-        Spécialisé dans l'innovation, l'entrepreneuriat et le management d'équipes techniques.
-      </p>
-      
-      <div class="figma-cv-hero__contact">
-        <div class="figma-cv-hero__contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          <span>hello@maxime-lenne.fr</span>
+      <div class="figma-cv-hero__info">
+        <p class="figma-cv-hero__description">
+          Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques.
+        </p>
+        <p class="figma-cv-hero__description">
+          J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon.
+        </p>
+        <p class="figma-cv-hero__description">
+          Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes.
+        </p>
+        
+        <div class="figma-cv-hero__contact">
+          <div class="figma-cv-hero__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>hello@maxime-lenne.fr</span>
+          </div>
+          
+          <div class="figma-cv-hero__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <span>+33 6 29 45 38 14</span>
+          </div>
+          
+          <div class="figma-cv-hero__contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Lille, France</span>
+          </div>
         </div>
         
-        <div class="figma-cv-hero__contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-          <span>+33 6 29 45 38 14</span>
-        </div>
-        
-        <div class="figma-cv-hero__contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          <span>Lille, France</span>
-        </div>
-      </div>
-      
-      <div class="figma-cv-hero__languages">
-        <h3>Langues</h3>
-        <div class="figma-cv-hero__languages-list">
-          <span class="figma-cv-hero__language">🇫🇷 Français (Natif)</span>
-          <span class="figma-cv-hero__language">🇬🇧 Anglais (Professionnel)</span>
-          <span class="figma-cv-hero__language">🇪🇸 Espagnol (Professionnel)</span>
-        </div>
       </div>
     </div>
     
-    <div class="figma-cv-hero__visual">
-      <div class="figma-cv-hero__avatar">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Maxime Lenne" loading="lazy">
-      </div>
-    </div>
+    
   </div>
 </section>

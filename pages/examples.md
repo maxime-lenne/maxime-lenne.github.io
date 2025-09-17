@@ -17,6 +17,12 @@ Cette page présente tous les composants et sections disponibles dans le design 
 
 ---
 
+### TITLE HERO
+
+{% include components/examples/title-hero-examples.html %}
+
+---
+
 ### Bouton CTA
 
 {% include components/examples/cta-button-examples.html %}

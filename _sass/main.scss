@@ -10,6 +10,7 @@
 @import 'layouts/header';
 @import 'layouts/footer';
 @import 'layouts/figma';
+@import 'layouts/sections';
 
 // 3. Component Layer
 @import 'components/badge';
@@ -28,6 +29,7 @@
 @import 'components/section-header';
 @import 'components/card-highlight';
 @import 'components/card-experience';
+@import 'components/title-hero';
 
 // 4. Page Layer
 @import 'pages/resume';

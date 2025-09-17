@@ -1,14 +1,16 @@
 <!-- Services Section -->
-<section class="figma-services" id="services">
-  <div class="figma-services__container">
-    {% include components/section-header.html 
-       badge_icon="🚀"
-       badge_text="Mes services"
-       title="Comment puis-je"
-       title_highlight="vous aider ?"
-       subtitle="Je propose une gamme complète de services pour transformer vos idées en solutions digitales performantes et évolutives." %}
+<section class="section section--light" id="services">
+  <div class="section__container">
+    <div class="section__header">
+      {% include components/section-header.html 
+         badge_icon="🚀"
+         badge_text="Mes services"
+         title="Comment puis-je"
+         title_highlight="vous aider ?"
+         subtitle="Je propose une gamme complète de services pour transformer vos idées en solutions digitales performantes et évolutives." %}
+    </div>
     
-    <div class="services__grid">
+    <div class="section__grid section__grid--3-col">
       {% assign services = site.services | sort: 'order' %}
       {% for service in services %}
         {% include components/card-highlight.html 

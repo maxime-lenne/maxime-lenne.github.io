@@ -1,0 +1,31 @@
+// Title Hero Component
+.title-hero {
+  margin-bottom: 24px;
+  
+  &__main {
+    display: block;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  
+  &__secondary {
+    display: block;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  
+  &__highlight {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

@@ -1,14 +1,16 @@
 <!-- Testimonials Section -->
-<section class="figma-testimonials" id="testimonials">
-  <div class="figma-testimonials__container">
-    {% include components/section-header.html 
-       badge_icon="💬"
-       badge_text="Mes recommendations"
-       title="Ils me font"
-       title_highlight="confiance"
-       subtitle="Grâce à mon engagement et ma culture de l'impact, je suis un partenaire de confiance pour vos projets." %}
+<section class="section section--dark" id="testimonials">
+  <div class="section__container">
+    <div class="section__header">
+      {% include components/section-header.html 
+         badge_icon="💬"
+         badge_text="Mes recommendations"
+         title="Ils me font"
+         title_highlight="confiance"
+         subtitle="Grâce à mon engagement et ma culture de l'impact, je suis un partenaire de confiance pour vos projets." %}
+    </div>
     
-    <div class="figma-testimonials__grid">
+    <div class="section__grid section__grid--3-col">
       {% assign testimonials = site.testimonials | sort: 'order' %}
       {% for testimonial in testimonials %}
         {% include components/card-quote.html 
@@ -21,7 +23,7 @@
       {% endfor %}
     </div>
     
-    <div class="figma-testimonials__stats">
+    <div class="section__stats">
       {% include components/stat-number.html number="98%" label="Satisfaction client" %}
       {% include components/stat-number.html number="50+" label="Projets réalisés" %}
       {% include components/stat-number.html number="5.0" label="Note moyenne" %}

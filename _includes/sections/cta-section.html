@@ -1,14 +1,14 @@
 <!-- CTA Section -->
-<section class="figma-cta">
-  <div class="figma-cta__container">
-    <div class="figma-cta__content">
-      <h2 class="figma-cta__title">
+<section class="section section--gradient-light">
+  <div class="section__container">
+    <div class="section__content">
+      <h2 class="section__title">
         {{ include.title | default: "Vous avez un projet ?" }}
       </h2>
-      <p class="figma-cta__description">
+      <p class="section__description">
         {{ include.description | default: "Discutons de votre projet et voyons comment je peux vous aider." }}
       </p>
-      <div class="figma-cta__actions">
+      <div class="section__actions">
         {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
       </div>
     </div>
