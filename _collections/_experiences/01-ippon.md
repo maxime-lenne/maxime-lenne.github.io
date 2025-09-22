@@ -4,8 +4,8 @@ company: "Ippon"
 role: "CTO"
 start_date: "2024-01-01"
 end_date: ""
-current: true
-location: "France"
+current: false
+location: "Lille, France"
 type: "full-time"
 order: 1
 skills:

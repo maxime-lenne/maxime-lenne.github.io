@@ -1,7 +1,7 @@
 <!-- Section Header Component -->
 <div class="section-header">
-  {% assign show_badge = include.show_badge | default: true %}
-  {% if show_badge %}
+  {% assign show_badge = include.show_badge | default: "true" %}
+  {% if show_badge == "true" %}
     {% include components/badge.html style="tag" icon=include.badge_icon text=include.badge_text %}
   {% endif %}
   

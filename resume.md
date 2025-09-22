@@ -7,7 +7,7 @@ lang: fr
 
 <!-- CTA Section -->
 <section class="section section--gradient-light section--secondary">
-  <div class="section__container section__container--medium section__container--dark-background section__grid--2-col">
+  <div class="section__container section__container--dark-background section__grid--2-col">
     <div class="section__side">
         {% include components/badge.html text="💼 Profil de carrière" %}
         
@@ -20,29 +20,7 @@ lang: fr
         {% include components/title-hero.html 
           main_text="Maxime Lenne"
           highlight_text="CTO, Tech advisor, sparing partner" %}
-
-        
-    </div>
-    <div class="section__content">
-        <p class="section__description">
-          Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques.
-        </p>
-        <p class="section__description">
-          J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon.
-        </p>
-        <p class="section__description">
-          Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes.
-        </p>
-        
-        <div class="section__actions">
-        {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
-        
-        {% include components/cta-info.html 
-          item1_icon="📞" item1_text="hello@maxime-lenne.fr"
-          item2_icon="✉️" item2_text="+33 6 29 45 38 14"
-          item3_icon="📍" item3_text="Lille, France" %}
-      </div>
-
+          
         <div class="figma-cv-hero__contact">
           <div class="figma-cv-hero__contact-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -67,18 +45,33 @@ lang: fr
             <span>Lille, France</span>
           </div>
         </div>
+
+        vélotafeur 🚴
+    </div>
+    <div class="section__content">
+        <p class="section__description">
+          Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques.
+        </p>
+        <p class="section__description">
+          J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon.
+        </p>
+        <p class="section__description">
+          Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes.
+        </p>
+          
     </div>
   </div>
 </section>
 
-<section class="section section--dark">
+<section class="section section--light" id="experience">
   <div class="section__container">
-  <div class="section__header">
+    <div class="section__header">
       {% include components/section-header.html 
-       badge_icon="💼"
-       badge_text="Mon parcours"
-       title="Expériences "
-       title_highlight="Expériences" %}
+         badge_icon="💼"
+         badge_text="Mon parcours"
+         title="Expérience"
+         title_highlight="professionnelle"
+         subtitle="Plus de 10 ans d'expérience dans le développement et la direction technique, avec un focus sur l'entrepreneuriat et l'innovation." %}
     </div>
     <div class="section__grid section__grid--2-col">
       {% assign sorted_experiences = site.experiences | sort: 'order' %}
@@ -101,7 +94,7 @@ lang: fr
 </section>
 
 <!-- Skills Section -->
-<section class="section section--light">
+<section class="section section--dark" id="skills">
   <div class="section__container">
     <div class="section__header">
       {% include components/section-header.html 
@@ -164,8 +157,10 @@ lang: fr
   </div>
 </section>
 
+{% include sections/final-cta-section.html %}
+
 <!-- Skills Section -->
-<section class="section section--gradient-dark">
+<section class="section section--light">
   <div class="section__container">
     <div class="section__header">
       {% include components/section-header.html 
@@ -174,72 +169,271 @@ lang: fr
        title="Contributions & Projects" 
        subtitle="Je participe à la vie des communautés techniques et entrepreneuriales, soit en faisant partie de l'équipe organisatrice, en étant speaker ou simple participant (No-Code Summit, APIdays, dotRB, Startup Weekend, JPDS, TakeOff conf, ParisWeb...)." %}
     </div>
-    <div class="section__grid section__grid--3-col">
-    {% assign sorted_contributions = site.contributions | sort: 'order' %}
-      {% for contribution in sorted_contributions %}
-        <div class="card-dark">
-            <div class="card-dark__header">
-                <h3 class="card-dark__title">{{ contribution.title }}</h3>
-                <span class="card-dark__type">{{ contribution.type }}</span>
-            </div>
-            <p class="card-dark__description">{{ contribution.description }}</p>
+    
+    <div class="section__grid section__grid--3-col" id="contributions-grid">
+      {% assign sorted_contributions = site.contributions | sort: 'order' %}
+      {% assign total_contributions = sorted_contributions.size %}
+      {% assign initial_display = 6 %}
+      
+      {% for contribution in sorted_contributions limit: initial_display %}
+        <div class="card-dark contribution-item" data-index="{{ forloop.index0 }}">
+          <div class="card-dark__header">
+            <h3 class="card-dark__title">{{ contribution.title }}</h3>
+            <span class="card-dark__type">{{ contribution.type }}</span>
+          </div>
+          <p class="card-dark__description">{{ contribution.description }}</p>
 
-            {% if contribution.achievements %}
-                <div class="card-dark__list">
-                    <ul>
-                        {% for achievement in contribution.achievements %}
-                        <li>{{ achievement }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% endif %}
-
-            {% if contribution.labels %}
-                <div class="card-dark__labels">
-                {% for label in contribution.labels %}
-                    {% include components/badge.html style="services" text=label %}
+          {% if contribution.achievements %}
+            <div class="card-dark__list">
+              <ul>
+                {% for achievement in contribution.achievements %}
+                <li>{{ achievement }}</li>
                 {% endfor %}
-                </div>
-            {% endif %}
+              </ul>
+            </div>
+          {% endif %}
+
+          {% if contribution.labels %}
+            <div class="card-dark__labels">
+            {% for label in contribution.labels %}
+              {% include components/badge.html style="services" text=label %}
+            {% endfor %}
+            </div>
+          {% endif %}
         </div>
       {% endfor %}
     </div>
+    
+    {% if total_contributions > initial_display %}
+      <div class="section__actions" id="load-more-container">
+        <button class="figma-btn figma-btn--secondary" id="load-more-btn" data-initial="{{ initial_display }}" data-total="{{ total_contributions }}">
+          En voir plus
+        </button>
+      </div>
+    {% endif %}
   </div>
 </section>
 
-{% include sections/cv-education-section.html %}
-
-{% include sections/cv-awards-section.html %}
-
-<section class="section section--dark">
+<!-- CTA Section -->
+<section class="section section--dark section--secondary" id="education-awards">
     <div class="section__container">
-        <div class="section__header">
-            {% include components/section-header.html 
-                badge_icon="🧗‍♂️"
-                badge_text="Hobbies"
-                title="Centres d'"
-                title_highlight="Intérêts" %}
-        </div>
-        <div class="section__content">
-            <h3 class="section__title">
-                🎵 Musique
-            </h3>
-            <p class="section__description">
-                🎹 pratique le piano et déjà joué en groupe
-            </p>
-            <h3 class="section__title">
-                🧗‍♂️ Sports
-            </h3>
-            <p class="section__description">
-                <span>🧗‍♂️ Escalade et plus spécifiquement le bloc</span>
-                <span>🏃🏻‍♂️ Course à pied</span>
-                <span>🏒 Roller Hockey</span>
-                <span>⛵️ Voile</span>
-                <span>🏂 Snowboard & ski</span>
-                <span>Slackline</span>
-            </p>
+        <div class="section__grid section__grid--2-col">
+            <div class="section__content">
+                    {% include components/section-header.html 
+                        badge_icon="🎓"
+                        badge_text="Reconnaissance"
+                        show_badge="false"
+                        title="Formation & "
+                        title_highlight="Certifications" %}
+                <div class="figma-cv-education__grid">
+                {% assign sorted_education = site.education | sort: 'order' %}
+                {% for education in sorted_education %}
+                <div class="figma-cv-education__item">
+                    <div class="figma-cv-education__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        {% if education.degree_type == 'DUT' %}
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 9 0v-5"/>
+                        {% else %}
+                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                        {% endif %}
+                    </svg>
+                    </div>
+                    <div class="figma-cv-education__content">
+                    <h3 class="figma-cv-education__degree">{{ education.title }}</h3>
+                    {% if education.institution != 'Diverses' %}
+                    <p class="figma-cv-education__school">{{ education.institution }} - {{ education.description }}</p>
+                    {% else %}
+                    <p class="figma-cv-education__school">{{ education.description }}</p>
+                    {% endif %}
+                    {% if education.certifications %}
+                    <div class="figma-cv-education__certifications">
+                        {% for cert in education.certifications %}
+                        <div class="figma-cv-education__certification">
+                        <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date | date: "%Y" }})
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                </div>
+                {% include components/section-header.html 
+                    badge_icon="🏆"
+                    badge_text="Reconnaissance"
+                    show_badge="false"
+                    title="Prix &"
+                    title_highlight="distinctions" %}
+                
+                {% assign sorted_awards = site.awards | sort: 'order' %}
+                {% for award in sorted_awards %}
+                <div class="figma-cv-awards__item">
+                    <div class="figma-cv-awards__icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                        <path d="M4 22h16"/>
+                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+                    </svg>
+                    </div>
+                    <div class="figma-cv-awards__content">
+                    <h3 class="figma-cv-awards__title-item">{{ award.title }}</h3>
+                    <p class="figma-cv-awards__organization">{{ award.organization }} - {{ award.date | date: "%Y" }}</p>
+                    <p class="figma-cv-awards__description">{{ award.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="section__side">
+            <div class="figma-cv-hero__languages">
+                <h3>Langues</h3>
+                <div class="figma-cv-hero__languages-list">
+                    <span class="figma-cv-hero__language">🇫🇷 Français (Natif)</span>
+                    <span class="figma-cv-hero__language">🇬🇧 Anglais (Professionnel)</span>
+                </div>
+                {% include components/section-header.html 
+                                        badge_icon="🧗‍♂️"
+                                        badge_text="Hobbies"
+                                        show_badge="false"
+                                        title="Centres d'"
+                                        title_highlight="Intérêts" %}
+                <h3 class="section__title">
+                    Musique
+                </h3>
+                <div class="figma-cv-hero__languages-list">
+                    🎹 pratique le piano et déjà joué en groupe
+                </div>
+                <h3 class="section__title">
+                    Sports
+                </h3>
+                <div class="figma-cv-hero__languages-list">
+                    <span class="figma-cv-hero__language">🧗‍♂️ Escalade et plus spécifiquement le bloc</span>
+                    <span class="figma-cv-hero__language">🏃🏻‍♂️ Course à pied</span>
+                    <span class="figma-cv-hero__language">🏒 Roller Hockey</span>
+                    <span class="figma-cv-hero__language">⛵️ Voile</span>
+                    <span class="figma-cv-hero__language">🏂 Snowboard & ski</span>
+                    <span class="figma-cv-hero__language">Slackline</span>
+                </div>
+            </div>
+            
+                    
+            </div>
         </div>
     </div>
 </section>
 
-{% include sections/cta-section.html title="Intéressé par mon profil ?" description="Discutons ensemble de vos projets et de la façon dont je peux contribuer à leur succès." cta_text="Planifier un entretien" %}
+<!-- Final CTA Section -->
+{% include sections/cta-section.html title="Intéressé par mon profil ?" 
+description="Discutons ensemble de vos projets et de la façon dont je peux 
+contribuer à leur succès." cta_text="Planifier un entretien" %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const contributionsGrid = document.getElementById('contributions-grid');
+  const loadMoreContainer = document.getElementById('load-more-container');
+  
+  if (loadMoreBtn) {
+    const initialDisplay = parseInt(loadMoreBtn.dataset.initial);
+    const totalContributions = parseInt(loadMoreBtn.dataset.total);
+    let currentDisplay = initialDisplay;
+    const loadStep = 3;
+    
+    // Store all contributions data
+    const allContributions = [
+      {% for contribution in sorted_contributions %}
+      {
+        title: "{{ contribution.title | escape }}",
+        type: "{{ contribution.type | escape }}",
+        description: "{{ contribution.description | escape }}",
+        achievements: [
+          {% if contribution.achievements %}
+            {% for achievement in contribution.achievements %}
+              "{{ achievement | escape }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        ],
+        labels: [
+          {% if contribution.labels %}
+            {% for label in contribution.labels %}
+              "{{ label | escape }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        ]
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+    
+    loadMoreBtn.addEventListener('click', function() {
+      const nextDisplay = Math.min(currentDisplay + loadStep, totalContributions);
+      
+      // Add new contributions
+      for (let i = currentDisplay; i < nextDisplay; i++) {
+        if (i < allContributions.length) {
+          const contribution = allContributions[i];
+          const contributionElement = createContributionElement(contribution, i);
+          contributionsGrid.appendChild(contributionElement);
+        }
+      }
+      
+      currentDisplay = nextDisplay;
+      
+      // Hide button if all contributions are loaded
+      if (currentDisplay >= totalContributions) {
+        loadMoreContainer.style.display = 'none';
+      } else {
+        const remaining = totalContributions - currentDisplay;
+        loadMoreBtn.textContent = `En voir ${Math.min(loadStep, remaining)} de plus`;
+      }
+    });
+    
+    function createContributionElement(contribution, index) {
+      const div = document.createElement('div');
+      div.className = 'card-dark contribution-item';
+      div.setAttribute('data-index', index);
+      
+      let achievementsHtml = '';
+      if (contribution.achievements && contribution.achievements.length > 0) {
+        achievementsHtml = `
+          <div class="card-dark__list">
+            <ul>
+              ${contribution.achievements.map(achievement => `<li>${achievement}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      }
+      
+      let labelsHtml = '';
+      if (contribution.labels && contribution.labels.length > 0) {
+        labelsHtml = `
+          <div class="card-dark__labels">
+            ${contribution.labels.map(label => `<div class="figma-services__badge">
+                <span class="figma-services__badge-icon"></span>
+                <span class="figma-services__badge-text">${label}</span>
+                </div>`).join(' ')}
+          </div>
+        `;
+      }
+      
+      div.innerHTML = `
+        <div class="card-dark__header">
+          <h3 class="card-dark__title">${contribution.title}</h3>
+          <span class="card-dark__type">${contribution.type}</span>
+        </div>
+        <p class="card-dark__description">${contribution.description}</p>
+        ${achievementsHtml}
+        ${labelsHtml}
+      `;
+      
+      return div;
+    }
+  }
+});
+</script>

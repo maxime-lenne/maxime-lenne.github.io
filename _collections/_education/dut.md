@@ -1,6 +1,6 @@
 ---
 title: "DUT Génie Électrique et Informatique Industrielle"
-institution: "IUT"
+institution: "IUT Lille 1"
 degree_type: "DUT"
 field: "Génie Électrique et Informatique Industrielle"
 start_date: "2008-09-01"

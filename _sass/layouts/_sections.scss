@@ -89,6 +89,22 @@
     color: var(--color-text-secondary);
     margin-bottom: 32px;
   }
+
+  &__side {
+    .section-header{
+      margin: 40px 0 20px 0;
+      &__title {
+          font-size: clamp(2rem, 5vw, 2rem);
+          font-weight: 700;
+          color: var(--color-text-primary);
+          margin-bottom: 16px;
+          letter-spacing: -0.01em;
+      }
+    }
+    h3 {
+      margin: 40px 0 20px 0;
+    }
+  }
   
 }
 
@@ -207,12 +223,13 @@
     align-items: center;
     
     @media (min-width: 968px) {
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 2fr;
       gap: 80px;
     }
   }
-  
-  
+  .image-circle__image-wrapper {
+    max-width: 300px;
+  }
   .section__cv-btn {
     margin-bottom: 32px;
   }
