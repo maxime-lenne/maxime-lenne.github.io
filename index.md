@@ -41,7 +41,7 @@ lang: fr
 </section>
 
 <!-- About Section -->
-<section class="section section--dark" id="about">
+<section class="section section--dark section--secondary" id="about">
   <div class="section__container">
     <div class="section__grid section__grid--2-col">
       {% include components/image-secondary.html 

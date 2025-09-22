@@ -19,10 +19,23 @@
   &__container--small {
     max-width: 800px;
   }
+
+  &__container--medium {
+    max-width: 1200px;
+  }
+
+  &__container--dark-background {
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
   
   &__content {
     // Base content styles
   }
+
   
   &__header {
     text-align: center;
@@ -186,6 +199,26 @@
   
 }
 
+.section--secondary {
+  .section__grid--2-col {
+    display: grid; 
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+    
+    @media (min-width: 968px) {
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+    }
+  }
+  
+  
+  .section__cv-btn {
+    margin-bottom: 32px;
+  }
+}
+
+
 .section--gradient-dark {
   text-align: center;
   background: var(--color-neutral-100);
@@ -275,13 +308,16 @@
     letter-spacing: -0.01em;
   }
   
-  .section__description {
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 40px;
+  .section__container--dark-background {
+    .section__description {
+      text-align: left;
+      font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+      margin-bottom: 20px;
+    }
   }
-  
+
   .section__actions {
     display: flex;
     flex-direction: column;

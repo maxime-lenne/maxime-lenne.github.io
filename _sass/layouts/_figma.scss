@@ -97,27 +97,62 @@ body.nav-open {
   }
 }
 
-
-
-
-#about {
-  .section__grid--2-col {
-    grid-template-columns: 1fr;
-    gap: 48px;
-    align-items: center;
+.card-dark {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  text-align: left;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
     
-    @media (min-width: 968px) {
-      grid-template-columns: 1fr 1.2fr;
-      gap: 80px;
+    [data-theme="dark"] & {
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
     }
   }
   
+  &__title {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  &__labels {
+    text-align: center;
+    .figma-services__badge {
+      margin-bottom: 10px;
+    }
+  }
   
-  .section__cv-btn {
-    margin-bottom: 32px;
+  &__list {
+    
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      margin-bottom: 2px;
+    }
+    
+    p {
+      font-size: 13px;
+      color: var(--color-text-tertiary);
+      margin: 0;
+    }
   }
 }
-
 
 
 

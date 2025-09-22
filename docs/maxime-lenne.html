@@ -1,63 +1,1351 @@
 <!DOCTYPE html>
 <!-- saved from url=(0040)https://screen-said-15347397.figma.site/ -->
-<html lang="en" class="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <noscript>
-      <style>
-        #container {
-          display: none;
+<html lang="en" class="dark">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <noscript>
+    <style>
+      #container {
+        display: none;
+      }
+    </style>
+  </noscript>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload"
+    href="https://screen-said-15347397.figma.site/_runtimes/sites-runtime.c72f13398428c0ed80f09467979ad9b84ddf7ff6be124f7b594cb4f820fc7f32.js"
+    as="script" crossorigin="">
+  <link rel="preload"
+    href="https://screen-said-15347397.figma.site/_components/v1/76f86981252618f3ef98c694e35634ec753e41d2.js"
+    as="script" crossorigin="">
+  <link rel="preload"
+    href="https://screen-said-15347397.figma.site/_json/c5d777ad-ac85-47b5-8547-7b7d29798c99/_index.json" as="fetch">
+  <style id="reset-css">
+    @layer figreset, figoverridable, reset, theme, base, figutils, components, utilities;
+
+    @layer figreset {
+      :root {
+        --100dvw: 100vw;
+        --100dvh: 100vh;
+        --banner-height: 48px;
+        --full-height-with-banner: calc(100dvh - var(--banner-height));
+        font-synthesis: none;
+        text-align: left;
+
+        button {
+          text-align: left
         }
-      </style>
-    </noscript>
+      }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="preload" href="https://screen-said-15347397.figma.site/_runtimes/sites-runtime.c72f13398428c0ed80f09467979ad9b84ddf7ff6be124f7b594cb4f820fc7f32.js" as="script" crossorigin="">
-    <link rel="preload" href="https://screen-said-15347397.figma.site/_components/v1/76f86981252618f3ef98c694e35634ec753e41d2.js" as="script" crossorigin="">
-    <link rel="preload" href="https://screen-said-15347397.figma.site/_json/c5d777ad-ac85-47b5-8547-7b7d29798c99/_index.json" as="fetch">
-        <style id="reset-css"> @layer figreset,figoverridable,reset,theme,base,figutils,components,utilities;@layer figreset{:root{--100dvw:100vw;--100dvh:100vh;--banner-height:48px;--full-height-with-banner:calc(100dvh - var(--banner-height));font-synthesis:none;text-align:left;button{text-align:left}}@supports (width:100dvw){:root{--100dvw:100dvw;--100dvh:100dvh}}}.wrapper-with-banner .min-h-screen{min-height:var(--full-height-with-banner)}.wrapper-with-banner .h-screen{height:var(--full-height-with-banner)}</style><style id="font-faces-0"></style><style id="body-background-color">body:has([data-breakpoint-id="node-0_4"]) { background-color: #FFF }</style><style id="ssr-css">#container .css-md8qju {transition-property: transform; transition-duration: 0.2s; transition-timing-function: ease-in-out;}#container .css-r91w0a {transform: translateY(var(--banner-height));}#container .css-vu19p2 {height: var(--full-height-with-banner);}#container .css-7tvcgb {position: fixed;}#container .css-324jje {inset: 0; overflow: auto;}#container .css-vh2lqg {width: var(--viewport-width-scaled); min-height: var(--viewport-height-scaled); height: 100%; top: 0px;}#container .css-tzn6qh {display: block; position: absolute;}#container .css-6gkcj1 {transform-origin: top left; --max-layout-width: 2048px; --min-layout-width: 320px; --max-font-size: 288px; --min-font-size: 6px; --viewport-width-scaled: calc(var(--100dvw) / var(--viewport-scale)); --viewport-height-scaled: calc(var(--100dvh) / var(--viewport-scale)); --content-width-scaled: calc(var(--content-width-unscaled) / var(--viewport-scale)); --content-margin-x-scaled: max(calc((var(--viewport-width) - var(--max-layout-width)) / var(--viewport-scale) / 2), 0px);}#container .css-myl2ny {position: relative; flex-shrink: 0; flex: 1 0 0; display: block;}#container .css-exq74d {min-width: 1px; min-height: 1px; width: 100%; height: 100dvh;}#container .css-gs60ek {overflow: visible;}#container .css-j9f0op {width: 100%; height: 100%;}</style><script>window.__serverRenderedCSSClassNames = {"css-md8qju":"{\"transitionProperty\":\"transform\",\"transitionDuration\":\"0.2s\",\"transitionTimingFunction\":\"ease-in-out\"}","css-r91w0a":"{\"transform\":\"translateY(var(--banner-height))\"}","css-vu19p2":"{\"height\":\"var(--full-height-with-banner)\"}","css-7tvcgb":"{\"position\":\"fixed\"}","css-324jje":"{\"inset\":\"0\",\"overflow\":\"auto\"}","css-vh2lqg":"{\"width\":\"var(--viewport-width-scaled)\",\"minHeight\":\"var(--viewport-height-scaled)\",\"height\":\"100%\",\"top\":\"0px\"}","css-tzn6qh":"{\"display\":\"block\",\"position\":\"absolute\"}","css-6gkcj1":"{\"transformOrigin\":\"top left\",\"--max-layout-width\":\"2048px\",\"--min-layout-width\":\"320px\",\"--max-font-size\":\"288px\",\"--min-font-size\":\"6px\",\"--viewport-width-scaled\":\"calc(var(--100dvw) / var(--viewport-scale))\",\"--viewport-height-scaled\":\"calc(var(--100dvh) / var(--viewport-scale))\",\"--content-width-scaled\":\"calc(var(--content-width-unscaled) / var(--viewport-scale))\",\"--content-margin-x-scaled\":\"max(calc((var(--viewport-width) - var(--max-layout-width)) / var(--viewport-scale) / 2), 0px)\"}","css-myl2ny":"{\"position\":\"relative\",\"flexShrink\":0,\"flex\":\"1 0 0\",\"display\":\"block\"}","css-exq74d":"{\"minWidth\":1,\"minHeight\":1,\"width\":\"100%\",\"height\":\"100dvh\"}","css-gs60ek":"{\"overflow\":\"visible\"}","css-j9f0op":"{\"width\":\"100%\",\"height\":\"100%\"}"}</script><meta id="meta-bkauwd" name="description" content="Created with Figma"><meta id="meta-yw3oin" name="robots" content="noindex"><title id="title-2aeoha">maxime-lenne</title>
-    <link rel="stylesheet" href="./maxime-lenne_files/76f86981252618f3ef98c694e35634ec753e41d2.css">
-  </head>
-  <body>
-    
-    
-    <script data-template-id="country-code">window.__cf_country = "FR"</script>
-    <script type="module">
-      import {SitesRuntime} from '/_runtimes/sites-runtime.c72f13398428c0ed80f09467979ad9b84ddf7ff6be124f7b594cb4f820fc7f32.js';
-      const sitesRuntime = new SitesRuntime({
-        container: document.getElementById('container'),
-        env: 'published',
-        bundleId: 'c5d777ad-ac85-47b5-8547-7b7d29798c99',
-        
-        loadComponentsOverNetwork: true,
-        assetsVersion: 'v11',
-        fontsVersion: 'v1',
-        videosVersion: 'v1',
-        codeComponentsVersion: 'v1',
-        wasServerRendered: true,
-        withBaseStyles: false,
-        reportingDomain: "https://www.figma.com",
-        bundleCreationDate: '2025-09-08 08:11:25 UTC',
-        isFigmake: true,
-      });
-    </script>
-    
-    <div id="container"><div class="css-r91w0a css-vu19p2 wrapper-with-banner"><div class="css-o9yrzp css-xm5fw9 css-serq4v"><a class="css-yg5ud7" href="https://www.figma.com/community/make"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#191919" fill-rule="evenodd" d="M7 7c0 1.043.533 1.963 1.341 2.5A3 3 0 0 0 7 12c0 1.043.533 1.963 1.341 2.5A3 3 0 1 0 13 17v-2.764A3 3 0 1 0 16.659 9.5 3 3 0 0 0 15 4h-5a3 3 0 0 0-3 3m8 2a2 2 0 1 0 0-4h-2v4zm-2 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0m-1 2h-2a2 2 0 1 1 0-4h2zm-2 1h2v2a2 2 0 1 1-2-2m2-6h-2a2 2 0 1 1 0-4h2z" clip-rule="evenodd"></path></svg></a><div class="css-x07v8e"><a target="_blank" class="css-v7lfco" href="https://www.figma.com/report-abuse?reported_content=screen-said-15347397.figma.site" rel="noreferrer" title="Report" aria-label="Report"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#191919" fill-rule="evenodd" d="M6.5 6a.5.5 0 0 1 .5.5V7h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7v2.5a.5.5 0 0 1-1 0v-12a.5.5 0 0 1 .5-.5M7 8v7h10V8zm6.854 1.446a.5.5 0 0 1 0 .707L12.707 11.3l1.147 1.146a.5.5 0 0 1-.708.707L12 12.007l-1.146 1.146a.5.5 0 0 1-.708-.707l1.147-1.146-1.147-1.147a.5.5 0 0 1 .708-.707L12 10.593l1.146-1.147a.5.5 0 0 1 .708 0" clip-rule="evenodd"></path></svg></a><a target="_blank" class="css-knn4h7 css-sm6gpm css-t0emtz css-1w6h6p" href="https://www.figma.com/community/file/1546795125162442367" rel="noreferrer"><svg width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#FFFFFF" d="M13.992 12a.5.5 0 0 1 .5.507l-.002.172c-.049 1.564-.265 2.983-.598 4.064-.189.615-.425 1.149-.71 1.54-.276.38-.67.717-1.182.717-.513 0-.906-.337-1.183-.717-.284-.391-.52-.925-.71-1.54l-.055-.185c-.09-.322.175-.626.508-.605a.52.52 0 0 1 .467.375l.036.121c.173.561.369.98.563 1.246.2.276.333.305.374.305s.172-.028.374-.305c.194-.266.39-.685.562-1.246.3-.977.507-2.304.554-3.799l.002-.158a.5.5 0 0 1 .5-.492M7.44 10.054c.322-.091.625.173.606.506a.52.52 0 0 1-.374.467l-.122.037c-.56.172-.98.368-1.246.562-.277.202-.304.335-.304.374 0 .04.027.172.304.374.267.194.685.39 1.246.563.977.3 2.304.506 3.8.553l.157.002a.5.5 0 0 1-.015 1l-.171-.003c-1.564-.049-2.983-.264-4.065-.596-.614-.19-1.148-.426-1.54-.71C5.336 12.906 5 12.513 5 12s.336-.906.716-1.183c.392-.284.926-.52 1.54-.71zm5.238-.543c1.564.048 2.983.264 4.065.596.615.19 1.149.426 1.54.71.38.277.717.67.717 1.183s-.337.906-.717 1.183c-.391.284-.925.52-1.54.71q-.09.027-.185.053c-.322.09-.625-.174-.605-.508a.52.52 0 0 1 .374-.465l.122-.037c.561-.172.98-.368 1.246-.562.277-.202.305-.335.305-.374 0-.04-.028-.172-.305-.374-.267-.194-.685-.39-1.246-.562-.977-.301-2.304-.508-3.799-.554l-.158-.002a.5.5 0 0 1 .015-1zM12 5c.512 0 .906.337 1.182.717.285.391.521.925.71 1.54q.028.09.054.183a.484.484 0 0 1-.508.606.52.52 0 0 1-.467-.375l-.035-.12c-.172-.561-.368-.98-.562-1.246C12.172 6.028 12.039 6 12 6c-.04 0-.174.029-.374.305-.194.266-.39.685-.563 1.246-.31 1.01-.52 2.393-.558 3.949A.51.51 0 0 1 10 12a.49.49 0 0 1-.495-.5c.038-1.634.257-3.12.602-4.243.19-.615.426-1.149.71-1.54.277-.38.67-.717 1.183-.717"></path></svg>Remix with Figma Make</a></div></div><div class="css-vu19p2 css-7tvcgb css-324jje"><div class="tailwind css-myl2ny css-10v5rb css-gs60ek"><div class="min-h-screen bg-background text-foreground"><header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"><div class="container flex h-16 items-center justify-between px-4 mx-auto max-w-7xl"><div class="flex items-center space-x-2"><div class="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500 to-green-500"></div><span class="text-xl font-semibold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">MonSite</span></div><nav class="hidden md:flex items-center space-x-8"><button class="text-sm hover:text-primary transition-colors">Accueil</button><button class="text-sm hover:text-primary transition-colors">À propos</button><button class="text-sm hover:text-primary transition-colors">Services</button><button class="text-sm hover:text-primary transition-colors">Témoignages</button><button class="text-sm hover:text-primary transition-colors">Contact</button></nav><div class="flex items-center space-x-4"><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 rounded-md w-9 h-9"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun h-4 w-4" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 rounded-md md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-4 w-4" aria-hidden="true"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg></button></div></div></header><section id="hero" class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"><div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-green-600/10"></div><div class="absolute top-0 left-0 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div><div class="absolute bottom-0 right-0 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div><div class="relative container mx-auto px-4 py-24 lg:py-32 max-w-7xl"><div class="grid lg:grid-cols-2 gap-12 items-center"><div class="space-y-8"><div class="space-y-4"><div class="inline-block"><span class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-800 dark:to-green-800 text-sm font-medium bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">✨ Développeur Full-Stack</span></div><h1 class="text-4xl lg:text-6xl font-bold leading-tight">Créons ensemble votre <span class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">projet digital</span></h1><p class="text-lg text-muted-foreground max-w-xl">Développeur passionné avec plus de 5 ans d'expérience, je transforme vos idées en solutions digitales innovantes et performantes. Spécialisé en React, Node.js et technologies modernes.</p></div><div class="flex flex-col gap-6"><div class="flex flex-col gap-4"><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-primary/90 h-10 has-[&gt;svg]:px-4 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white border-0 text-lg py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-fit">Réserver un appel gratuit<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 h-5 w-5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button><div class="flex items-center justify-center gap-3 text-sm text-muted-foreground"><div class="flex items-center gap-1"><span>⏱️ 30 minutes</span></div><div class="w-1.5 h-1.5 bg-muted-foreground rounded-full"></div><div class="flex items-center gap-1"><span>💬 Gratuit</span></div><div class="w-1.5 h-1.5 bg-muted-foreground rounded-full"></div><div class="flex items-center gap-1"><span>🎯 Personnalisé</span></div></div></div></div></div><div class="relative lg:order-last"><div class="relative w-full max-w-lg mx-auto"><div class="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-r from-blue-400 to-green-400 rounded-lg rotate-12 opacity-20"></div><div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-r from-green-400 to-blue-400 rounded-lg -rotate-12 opacity-20"></div><div class="relative bg-gradient-to-r from-blue-500 to-green-500 p-1 rounded-2xl"><img src="./maxime-lenne_files/photo-1618410325698-018bb3eb2318" alt="Workspace développeur" class="w-full h-auto rounded-xl object-cover shadow-2xl"></div><div class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border"><div class="flex items-center space-x-3"><div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div><span class="text-sm font-medium">Disponible pour nouveaux projets</span></div></div></div></div></div></div></section><section id="about" class="py-24 bg-white dark:bg-gray-900"><div class="container mx-auto px-4 max-w-7xl"><div class="grid lg:grid-cols-2 gap-16 items-center"><div class="relative"><div class="relative w-full max-w-md mx-auto"><div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl transform rotate-3"></div><div class="relative bg-white dark:bg-gray-800 p-2 rounded-2xl shadow-xl"><img src="./maxime-lenne_files/photo-1668368961546-e3a06f1cd0f1" alt="Portrait développeur" class="w-full h-auto rounded-xl object-cover"></div><div class="absolute -top-6 -right-6 bg-gradient-to-r from-blue-500 to-green-500 text-white p-4 rounded-xl shadow-lg"><div class="text-sm font-medium">5+ ans</div><div class="text-xs opacity-90">d'expérience</div></div></div></div><div class="space-y-8"><div class="space-y-4"><div class="inline-block"><span class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30 text-sm font-medium">👋 À propos de moi</span></div><h2 class="text-3xl lg:text-4xl font-bold">Passionné par la <span class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">technologie</span></h2><p class="text-lg text-muted-foreground">Développeur full-stack basé à Paris, je me spécialise dans la création d'applications web modernes et performantes. Mon objectif est de transformer vos idées en solutions digitales qui font la différence.</p><p class="text-muted-foreground">Autodidacte passionné, j'ai commencé ma carrière il y a plus de 5 ans et depuis, j'ai eu la chance de travailler avec des startups innovantes et des entreprises établies. J'aime relever des défis techniques complexes et créer des expériences utilisateur exceptionnelles.</p></div><div class="flex flex-col sm:flex-row gap-4"><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[&gt;svg]:px-4 border-2 border-gradient-to-r from-blue-600 to-green-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download mr-2 h-4 w-4" aria-hidden="true"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>Mon CV</button></div><div class="space-y-4"><h3 class="text-xl font-semibold">Mes compétences principales</h3><div class="grid grid-cols-2 gap-3"><div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-sm">React &amp; Next.js</span></div><div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-sm">Node.js &amp; Express</span></div><div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-sm">TypeScript</span></div><div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-sm">PostgreSQL &amp; MongoDB</span></div><div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-sm">Tailwind CSS</span></div><div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-sm">AWS &amp; Docker</span></div></div></div><div class="grid gap-6"><div class="flex space-x-4"><div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center text-white"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code h-6 w-6" aria-hidden="true"><path d="m16 18 6-6-6-6"></path><path d="m8 6-6 6 6 6"></path></svg></div><div><h4 class="font-semibold">Code de qualité</h4><p class="text-sm text-muted-foreground">Je privilégie la maintenabilité et les bonnes pratiques dans chaque ligne de code.</p></div></div><div class="flex space-x-4"><div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center text-white"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette h-6 w-6" aria-hidden="true"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"></path><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle></svg></div><div><h4 class="font-semibold">Design thinking</h4><p class="text-sm text-muted-foreground">Une approche centrée utilisateur pour créer des expériences intuitives.</p></div></div><div class="flex space-x-4"><div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center text-white"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket h-6 w-6" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div><div><h4 class="font-semibold">Performance</h4><p class="text-sm text-muted-foreground">Des applications rapides et optimisées pour tous les appareils.</p></div></div></div></div></div></div></section><section id="services" class="py-24 bg-gray-50 dark:bg-gray-800/50"><div class="container mx-auto px-4 max-w-7xl"><div class="text-center space-y-4 mb-16"><div class="inline-block"><span class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30 text-sm font-medium">🚀 Mes services</span></div><h2 class="text-3xl lg:text-4xl font-bold">Comment puis-je <span class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">vous aider ?</span></h2><p class="text-lg text-muted-foreground max-w-3xl mx-auto">Je propose une gamme complète de services de développement pour transformer vos idées en solutions digitales performantes et évolutives.</p></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4"><div class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor h-8 w-8" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></div><div><h4 data-slot="card-title" class="text-xl mb-2">Développement Web</h4><p data-slot="card-description" class="text-muted-foreground text-base">Applications web modernes avec React, Next.js et les dernières technologies.</p></div></div><div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6"><ul class="space-y-2"><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Applications SPA</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Sites vitrine</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>E-commerce</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>PWA</span></li></ul></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4"><div class="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone h-8 w-8" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></div><div><h4 data-slot="card-title" class="text-xl mb-2">Applications Mobiles</h4><p data-slot="card-description" class="text-muted-foreground text-base">Développement d'applications mobiles cross-platform avec React Native.</p></div></div><div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6"><ul class="space-y-2"><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>iOS &amp; Android</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Performance native</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>UI/UX optimisée</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>App Store</span></li></ul></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4"><div class="w-16 h-16 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database h-8 w-8" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg></div><div><h4 data-slot="card-title" class="text-xl mb-2">Backend &amp; API</h4><p data-slot="card-description" class="text-muted-foreground text-base">Architecture backend robuste avec Node.js, bases de données et APIs RESTful.</p></div></div><div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6"><ul class="space-y-2"><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>APIs REST</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Bases de données</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Authentification</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Microservices</span></li></ul></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4"><div class="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap h-8 w-8" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div><div><h4 data-slot="card-title" class="text-xl mb-2">Optimisation Performance</h4><p data-slot="card-description" class="text-muted-foreground text-base">Amélioration des performances et de la vitesse de vos applications existantes.</p></div></div><div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6"><ul class="space-y-2"><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Core Web Vitals</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>SEO technique</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Lazy loading</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Caching</span></li></ul></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4"><div class="w-16 h-16 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield h-8 w-8" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div><div><h4 data-slot="card-title" class="text-xl mb-2">Sécurité &amp; DevOps</h4><p data-slot="card-description" class="text-muted-foreground text-base">Mise en place de bonnes pratiques de sécurité et déploiement automatisé.</p></div></div><div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6"><ul class="space-y-2"><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>CI/CD</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Docker</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Monitoring</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Sécurité</span></li></ul></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm"><div data-slot="card-header" class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4"><div class="w-16 h-16 rounded-xl bg-gradient-to-r from-teal-500 to-green-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones h-8 w-8" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg></div><div><h4 data-slot="card-title" class="text-xl mb-2">Conseil &amp; Formation</h4><p data-slot="card-description" class="text-muted-foreground text-base">Accompagnement technique et formation de vos équipes sur les technologies modernes.</p></div></div><div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6"><ul class="space-y-2"><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Audit technique</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Formations</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Code review</span></li><li class="flex items-center space-x-2 text-sm"><div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Mentoring</span></li></ul></div></div></div><div class="mt-20 text-center"><div class="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8 md:p-12 text-white"><h3 class="text-2xl md:text-3xl font-bold mb-4">Prêt à démarrer votre projet ?</h3><p class="text-lg mb-8 opacity-90">Discutons de vos besoins et trouvons ensemble la meilleure solution pour votre entreprise.</p><div class="flex flex-col sm:flex-row gap-4 justify-center"><button class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Démarrer un projet</button><button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">Planifier un appel</button></div></div></div></div></section><section id="testimonials" class="py-24 bg-white dark:bg-gray-900"><div class="container mx-auto px-4 max-w-7xl"><div class="text-center space-y-4 mb-16"><div class="inline-block"><span class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30 text-sm font-medium">💬 Témoignages</span></div><h2 class="text-3xl lg:text-4xl font-bold">Ils me font <span class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">confiance</span></h2><p class="text-lg text-muted-foreground max-w-3xl mx-auto">Découvrez ce que mes clients disent de notre collaboration et des résultats obtenus ensemble.</p></div><div class="mb-16"><p class="text-center text-sm text-muted-foreground mb-8">Ils ont fait confiance à mon expertise</p><div class="flex flex-wrap justify-center items-center gap-8 md:gap-12"><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">🚀</span><span class="font-medium">TechStart</span></div><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">💡</span><span class="font-medium">InnovCorp</span></div><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">🎨</span><span class="font-medium">CreativeLab</span></div><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">⚡</span><span class="font-medium">DigitalBoost</span></div><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">🧠</span><span class="font-medium">SmartSolutions</span></div><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">🏭</span><span class="font-medium">WebFactory</span></div><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">🔮</span><span class="font-medium">NextGen</span></div><div class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"><span class="text-2xl">☁️</span><span class="font-medium">CloudTech</span></div></div></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"><div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6"><div class="space-y-4"><div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg><div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div></div><p class="text-sm leading-relaxed italic">"Un développeur exceptionnel ! Il a transformé notre idée en une application web performante qui a révolutionné notre business. Sa réactivité et son expertise technique sont remarquables."</p><div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar" class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><span data-slot="avatar-fallback" class="flex size-full items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-green-500 text-white">MD</span></span><div><div class="font-semibold text-sm">Marie Dubois</div><div class="text-xs text-muted-foreground">CEO, TechStart</div></div></div></div></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"><div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6"><div class="space-y-4"><div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg><div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div></div><p class="text-sm leading-relaxed italic">"Collaboration parfaite du début à la fin. Code de qualité, respect des délais et excellent conseil technique. Je recommande vivement pour tout projet de développement."</p><div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar" class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img data-slot="avatar-image" class="aspect-square size-full" alt="Pierre Martin" src="./maxime-lenne_files/photo-1472099645785-5658abf4ff4e"></span><div><div class="font-semibold text-sm">Pierre Martin</div><div class="text-xs text-muted-foreground">CTO, InnovCorp</div></div></div></div></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"><div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6"><div class="space-y-4"><div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg><div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div></div><p class="text-sm leading-relaxed italic">"Grâce à son travail, notre site web a gagné en performance et en conversions. Son approche centrée utilisateur et son attention aux détails font la différence."</p><div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar" class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img data-slot="avatar-image" class="aspect-square size-full" alt="Sophie Leroy" src="./maxime-lenne_files/photo-1438761681033-6461ffad8d80"></span><div><div class="font-semibold text-sm">Sophie Leroy</div><div class="text-xs text-muted-foreground">Directrice Marketing, CreativeLab</div></div></div></div></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"><div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6"><div class="space-y-4"><div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg><div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div></div><p class="text-sm leading-relaxed italic">"Un vrai partenaire technique ! Il a su comprendre nos besoins spécifiques et proposer des solutions innovantes. Résultat : une application qui dépasse nos attentes."</p><div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar" class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img data-slot="avatar-image" class="aspect-square size-full" alt="Thomas Bernard" src="./maxime-lenne_files/photo-1507003211169-0a1dd7228f2d"></span><div><div class="font-semibold text-sm">Thomas Bernard</div><div class="text-xs text-muted-foreground">Fondateur, DigitalBoost</div></div></div></div></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"><div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6"><div class="space-y-4"><div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg><div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div></div><p class="text-sm leading-relaxed italic">"Expertise technique impressionnante et communication fluide. Notre plateforme e-commerce fonctionne parfaitement grâce à son travail rigoureux et professionnel."</p><div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar" class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img data-slot="avatar-image" class="aspect-square size-full" alt="Julie Rousseau" src="./maxime-lenne_files/photo-1544005313-94ddf0286df2"></span><div><div class="font-semibold text-sm">Julie Rousseau</div><div class="text-xs text-muted-foreground">COO, SmartSolutions</div></div></div></div></div></div><div data-slot="card" class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900"><div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6"><div class="space-y-4"><div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg><div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></div></div><p class="text-sm leading-relaxed italic">"Sa maîtrise des technologies modernes et sa capacité à livrer dans les temps en font un développeur de choix. Nous avons gagné 6 mois sur notre roadmap !"</p><div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar" class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img data-slot="avatar-image" class="aspect-square size-full" alt="Alexandre Petit" src="./maxime-lenne_files/photo-1519244703995-f4e0f30006d5"></span><div><div class="font-semibold text-sm">Alexandre Petit</div><div class="text-xs text-muted-foreground">Directeur Technique, WebFactory</div></div></div></div></div></div></div><div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"><div class="space-y-2"><div class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">50+</div><div class="text-sm text-muted-foreground">Clients satisfaits</div></div><div class="space-y-2"><div class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">98%</div><div class="text-sm text-muted-foreground">Taux de satisfaction</div></div><div class="space-y-2"><div class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">85%</div><div class="text-sm text-muted-foreground">Clients récurrents</div></div><div class="space-y-2"><div class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">48h</div><div class="text-sm text-muted-foreground">Temps de réponse moyen</div></div></div></div></section><footer class="bg-gray-900 text-white"><div class="container mx-auto px-4 max-w-7xl"><div id="contact" class="py-16 border-b border-gray-800"><div class="text-center space-y-6"><h2 class="text-3xl lg:text-4xl font-bold">Prêt à démarrer votre <span class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">projet ?</span></h2><p class="text-lg text-gray-300 max-w-2xl mx-auto">Discutons de vos besoins et transformons ensemble vos idées en solutions digitales performantes.</p><div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto" data-dashlane-rid="095a09b64fd63283" data-dashlane-classification="other"><input data-slot="input" class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 flex h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-gray-800 border-gray-700 text-white placeholder-gray-400" placeholder="Votre email" data-dashlane-rid="1fbd692563297bbc" data-dashlane-classification="email" data-kwimpalastatus="dead"><button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white border-0" data-dashlane-label="true" data-dashlane-rid="6af3501624b6f458" data-dashlane-classification="action">Contactez-moi</button></div><div class="flex flex-col md:flex-row justify-center items-center gap-8 mt-8"><div class="flex items-center space-x-2 text-gray-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-5 w-5 text-blue-400" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg><span>contact@monsite.fr</span></div><div class="flex items-center space-x-2 text-gray-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-5 w-5 text-green-400" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span>+33 6 12 34 56 78</span></div><div class="flex items-center space-x-2 text-gray-300"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-5 w-5 text-purple-400" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Paris, France</span></div></div></div></div><div class="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="space-y-6"><div class="flex items-center space-x-2"><div class="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500 to-green-500"></div><span class="text-xl font-semibold">MonSite</span></div><p class="text-gray-300 text-sm leading-relaxed">Développeur full-stack passionné, je transforme vos idées en solutions digitales innovantes et performantes. Plus de 5 ans d'expérience au service de votre réussite.</p><div class="flex space-x-4"><button class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github h-5 w-5" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></button><button class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></button><button class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-400 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter h-5 w-5" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></button></div></div><div class="space-y-6"><h3 class="text-lg font-semibold">Navigation</h3><ul class="space-y-3"><li><button class="text-gray-300 hover:text-white transition-colors text-sm">Accueil</button></li><li><button class="text-gray-300 hover:text-white transition-colors text-sm">À propos</button></li><li><button class="text-gray-300 hover:text-white transition-colors text-sm">Services</button></li><li><button class="text-gray-300 hover:text-white transition-colors text-sm">Témoignages</button></li><li><button class="text-gray-300 hover:text-white transition-colors text-sm">Contact</button></li></ul></div><div class="space-y-6"><h3 class="text-lg font-semibold">Services</h3><ul class="space-y-3"><li><span class="text-gray-300 text-sm">Développement Web</span></li><li><span class="text-gray-300 text-sm">Applications Mobiles</span></li><li><span class="text-gray-300 text-sm">Backend &amp; API</span></li><li><span class="text-gray-300 text-sm">Optimisation Performance</span></li><li><span class="text-gray-300 text-sm">Sécurité &amp; DevOps</span></li><li><span class="text-gray-300 text-sm">Conseil &amp; Formation</span></li></ul></div><div class="space-y-6"><h3 class="text-lg font-semibold">Technologies</h3><ul class="space-y-3"><li><span class="text-gray-300 text-sm">React &amp; Next.js</span></li><li><span class="text-gray-300 text-sm">Node.js</span></li><li><span class="text-gray-300 text-sm">TypeScript</span></li><li><span class="text-gray-300 text-sm">PostgreSQL</span></li><li><span class="text-gray-300 text-sm">Tailwind CSS</span></li><li><span class="text-gray-300 text-sm">AWS &amp; Docker</span></li></ul></div></div><div class="py-6 border-t border-gray-800"><div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><div class="flex items-center space-x-2 text-sm text-gray-400"><span>© 2025 MonSite. Tous droits réservés.</span></div><div class="flex items-center space-x-2 text-sm text-gray-400"><span>Fait avec</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart h-4 w-4 text-red-500 fill-current" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg><span>à Paris</span></div><div class="flex space-x-6 text-sm text-gray-400"><button class="hover:text-white transition-colors">Mentions légales</button><button class="hover:text-white transition-colors">Politique de confidentialité</button></div></div></div></div></footer></div></div></div></div></div>
-    
+      @supports (width:100dvw) {
+        :root {
+          --100dvw: 100dvw;
+          --100dvh: 100dvh
+        }
+      }
+    }
 
-     <noscript data-nosnippet="">
-      <main style="height: 100vh; width: 100vw; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-        <h1 style="font-size: 24px; padding: 8px; color: black">
+    .wrapper-with-banner .min-h-screen {
+      min-height: var(--full-height-with-banner)
+    }
+
+    .wrapper-with-banner .h-screen {
+      height: var(--full-height-with-banner)
+    }
+  </style>
+  <style id="font-faces-0"></style>
+  <style id="body-background-color">
+    body:has([data-breakpoint-id="node-0_4"]) {
+      background-color: #FFF
+    }
+  </style>
+  <style id="ssr-css">
+    #container .css-md8qju {
+      transition-property: transform;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+    }
+
+    #container .css-r91w0a {
+      transform: translateY(var(--banner-height));
+    }
+
+    #container .css-vu19p2 {
+      height: var(--full-height-with-banner);
+    }
+
+    #container .css-7tvcgb {
+      position: fixed;
+    }
+
+    #container .css-324jje {
+      inset: 0;
+      overflow: auto;
+    }
+
+    #container .css-vh2lqg {
+      width: var(--viewport-width-scaled);
+      min-height: var(--viewport-height-scaled);
+      height: 100%;
+      top: 0px;
+    }
+
+    #container .css-tzn6qh {
+      display: block;
+      position: absolute;
+    }
+
+    #container .css-6gkcj1 {
+      transform-origin: top left;
+      --max-layout-width: 2048px;
+      --min-layout-width: 320px;
+      --max-font-size: 288px;
+      --min-font-size: 6px;
+      --viewport-width-scaled: calc(var(--100dvw) / var(--viewport-scale));
+      --viewport-height-scaled: calc(var(--100dvh) / var(--viewport-scale));
+      --content-width-scaled: calc(var(--content-width-unscaled) / var(--viewport-scale));
+      --content-margin-x-scaled: max(calc((var(--viewport-width) - var(--max-layout-width)) / var(--viewport-scale) / 2), 0px);
+    }
+
+    #container .css-myl2ny {
+      position: relative;
+      flex-shrink: 0;
+      flex: 1 0 0;
+      display: block;
+    }
+
+    #container .css-exq74d {
+      min-width: 1px;
+      min-height: 1px;
+      width: 100%;
+      height: 100dvh;
+    }
+
+    #container .css-gs60ek {
+      overflow: visible;
+    }
+
+    #container .css-j9f0op {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script>window.__serverRenderedCSSClassNames = { "css-md8qju": "{\"transitionProperty\":\"transform\",\"transitionDuration\":\"0.2s\",\"transitionTimingFunction\":\"ease-in-out\"}", "css-r91w0a": "{\"transform\":\"translateY(var(--banner-height))\"}", "css-vu19p2": "{\"height\":\"var(--full-height-with-banner)\"}", "css-7tvcgb": "{\"position\":\"fixed\"}", "css-324jje": "{\"inset\":\"0\",\"overflow\":\"auto\"}", "css-vh2lqg": "{\"width\":\"var(--viewport-width-scaled)\",\"minHeight\":\"var(--viewport-height-scaled)\",\"height\":\"100%\",\"top\":\"0px\"}", "css-tzn6qh": "{\"display\":\"block\",\"position\":\"absolute\"}", "css-6gkcj1": "{\"transformOrigin\":\"top left\",\"--max-layout-width\":\"2048px\",\"--min-layout-width\":\"320px\",\"--max-font-size\":\"288px\",\"--min-font-size\":\"6px\",\"--viewport-width-scaled\":\"calc(var(--100dvw) / var(--viewport-scale))\",\"--viewport-height-scaled\":\"calc(var(--100dvh) / var(--viewport-scale))\",\"--content-width-scaled\":\"calc(var(--content-width-unscaled) / var(--viewport-scale))\",\"--content-margin-x-scaled\":\"max(calc((var(--viewport-width) - var(--max-layout-width)) / var(--viewport-scale) / 2), 0px)\"}", "css-myl2ny": "{\"position\":\"relative\",\"flexShrink\":0,\"flex\":\"1 0 0\",\"display\":\"block\"}", "css-exq74d": "{\"minWidth\":1,\"minHeight\":1,\"width\":\"100%\",\"height\":\"100dvh\"}", "css-gs60ek": "{\"overflow\":\"visible\"}", "css-j9f0op": "{\"width\":\"100%\",\"height\":\"100%\"}" }</script>
+  <meta id="meta-bkauwd" name="description" content="Created with Figma">
+  <meta id="meta-yw3oin" name="robots" content="noindex">
+  <title id="title-2aeoha">maxime-lenne</title>
+  <link rel="stylesheet" href="./maxime-lenne_files/76f86981252618f3ef98c694e35634ec753e41d2.css">
+</head>
+
+<body>
+
+
+  <script data-template-id="country-code">window.__cf_country = "FR"</script>
+  <script type="module">
+    import { SitesRuntime } from '/_runtimes/sites-runtime.c72f13398428c0ed80f09467979ad9b84ddf7ff6be124f7b594cb4f820fc7f32.js';
+    const sitesRuntime = new SitesRuntime({
+      container: document.getElementById('container'),
+      env: 'published',
+      bundleId: 'c5d777ad-ac85-47b5-8547-7b7d29798c99',
+
+      loadComponentsOverNetwork: true,
+      assetsVersion: 'v11',
+      fontsVersion: 'v1',
+      videosVersion: 'v1',
+      codeComponentsVersion: 'v1',
+      wasServerRendered: true,
+      withBaseStyles: false,
+      reportingDomain: "https://www.figma.com",
+      bundleCreationDate: '2025-09-08 08:11:25 UTC',
+      isFigmake: true,
+    });
+  </script>
+
+  <div id="container">
+    <div class="css-r91w0a css-vu19p2 wrapper-with-banner">
+      <div class="css-o9yrzp css-xm5fw9 css-serq4v"><a class="css-yg5ud7"
+          href="https://www.figma.com/community/make"><svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path fill="#191919" fill-rule="evenodd"
+              d="M7 7c0 1.043.533 1.963 1.341 2.5A3 3 0 0 0 7 12c0 1.043.533 1.963 1.341 2.5A3 3 0 1 0 13 17v-2.764A3 3 0 1 0 16.659 9.5 3 3 0 0 0 15 4h-5a3 3 0 0 0-3 3m8 2a2 2 0 1 0 0-4h-2v4zm-2 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0m-1 2h-2a2 2 0 1 1 0-4h2zm-2 1h2v2a2 2 0 1 1-2-2m2-6h-2a2 2 0 1 1 0-4h2z"
+              clip-rule="evenodd"></path>
+          </svg></a>
+        <div class="css-x07v8e"><a target="_blank" class="css-v7lfco"
+            href="https://www.figma.com/report-abuse?reported_content=screen-said-15347397.figma.site" rel="noreferrer"
+            title="Report" aria-label="Report"><svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path fill="#191919" fill-rule="evenodd"
+                d="M6.5 6a.5.5 0 0 1 .5.5V7h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7v2.5a.5.5 0 0 1-1 0v-12a.5.5 0 0 1 .5-.5M7 8v7h10V8zm6.854 1.446a.5.5 0 0 1 0 .707L12.707 11.3l1.147 1.146a.5.5 0 0 1-.708.707L12 12.007l-1.146 1.146a.5.5 0 0 1-.708-.707l1.147-1.146-1.147-1.147a.5.5 0 0 1 .708-.707L12 10.593l1.146-1.147a.5.5 0 0 1 .708 0"
+                clip-rule="evenodd"></path>
+            </svg></a><a target="_blank" class="css-knn4h7 css-sm6gpm css-t0emtz css-1w6h6p"
+            href="https://www.figma.com/community/file/1546795125162442367" rel="noreferrer"><svg width="24" height="24"
+              fill="none" viewBox="0 0 24 24">
+              <path fill="#FFFFFF"
+                d="M13.992 12a.5.5 0 0 1 .5.507l-.002.172c-.049 1.564-.265 2.983-.598 4.064-.189.615-.425 1.149-.71 1.54-.276.38-.67.717-1.182.717-.513 0-.906-.337-1.183-.717-.284-.391-.52-.925-.71-1.54l-.055-.185c-.09-.322.175-.626.508-.605a.52.52 0 0 1 .467.375l.036.121c.173.561.369.98.563 1.246.2.276.333.305.374.305s.172-.028.374-.305c.194-.266.39-.685.562-1.246.3-.977.507-2.304.554-3.799l.002-.158a.5.5 0 0 1 .5-.492M7.44 10.054c.322-.091.625.173.606.506a.52.52 0 0 1-.374.467l-.122.037c-.56.172-.98.368-1.246.562-.277.202-.304.335-.304.374 0 .04.027.172.304.374.267.194.685.39 1.246.563.977.3 2.304.506 3.8.553l.157.002a.5.5 0 0 1-.015 1l-.171-.003c-1.564-.049-2.983-.264-4.065-.596-.614-.19-1.148-.426-1.54-.71C5.336 12.906 5 12.513 5 12s.336-.906.716-1.183c.392-.284.926-.52 1.54-.71zm5.238-.543c1.564.048 2.983.264 4.065.596.615.19 1.149.426 1.54.71.38.277.717.67.717 1.183s-.337.906-.717 1.183c-.391.284-.925.52-1.54.71q-.09.027-.185.053c-.322.09-.625-.174-.605-.508a.52.52 0 0 1 .374-.465l.122-.037c.561-.172.98-.368 1.246-.562.277-.202.305-.335.305-.374 0-.04-.028-.172-.305-.374-.267-.194-.685-.39-1.246-.562-.977-.301-2.304-.508-3.799-.554l-.158-.002a.5.5 0 0 1 .015-1zM12 5c.512 0 .906.337 1.182.717.285.391.521.925.71 1.54q.028.09.054.183a.484.484 0 0 1-.508.606.52.52 0 0 1-.467-.375l-.035-.12c-.172-.561-.368-.98-.562-1.246C12.172 6.028 12.039 6 12 6c-.04 0-.174.029-.374.305-.194.266-.39.685-.563 1.246-.31 1.01-.52 2.393-.558 3.949A.51.51 0 0 1 10 12a.49.49 0 0 1-.495-.5c.038-1.634.257-3.12.602-4.243.19-.615.426-1.149.71-1.54.277-.38.67-.717 1.183-.717">
+              </path>
+            </svg>Remix with Figma Make</a></div>
+      </div>
+      <div class="css-vu19p2 css-7tvcgb css-324jje">
+        <div class="tailwind css-myl2ny css-10v5rb css-gs60ek">
+          <div class="min-h-screen bg-background text-foreground">
+            <header
+              class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              <div class="container flex h-16 items-center justify-between px-4 mx-auto max-w-7xl">
+                <div class="flex items-center space-x-2">
+                  <div class="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500 to-green-500"></div><span
+                    class="text-xl font-semibold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">MonSite</span>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8"><button
+                    class="text-sm hover:text-primary transition-colors">Accueil</button><button
+                    class="text-sm hover:text-primary transition-colors">À propos</button><button
+                    class="text-sm hover:text-primary transition-colors">Services</button><button
+                    class="text-sm hover:text-primary transition-colors">Témoignages</button><button
+                    class="text-sm hover:text-primary transition-colors">Contact</button></nav>
+                <div class="flex items-center space-x-4"><button data-slot="button"
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 rounded-md w-9 h-9"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-sun h-4 w-4" aria-hidden="true">
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <path d="M12 2v2"></path>
+                      <path d="M12 20v2"></path>
+                      <path d="m4.93 4.93 1.41 1.41"></path>
+                      <path d="m17.66 17.66 1.41 1.41"></path>
+                      <path d="M2 12h2"></path>
+                      <path d="M20 12h2"></path>
+                      <path d="m6.34 17.66-1.41 1.41"></path>
+                      <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg></button><button data-slot="button"
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 rounded-md md:hidden"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-menu h-4 w-4" aria-hidden="true">
+                      <path d="M4 12h16"></path>
+                      <path d="M4 18h16"></path>
+                      <path d="M4 6h16"></path>
+                    </svg></button></div>
+              </div>
+            </header>
+            <section id="hero"
+              class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+              <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-green-600/10"></div>
+              <div
+                class="absolute top-0 left-0 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+              </div>
+              <div
+                class="absolute bottom-0 right-0 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+              </div>
+              <div class="relative container mx-auto px-4 py-24 lg:py-32 max-w-7xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                  <div class="space-y-8">
+                    <div class="space-y-4">
+                      <div class="inline-block"><span
+                          class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-800 dark:to-green-800 text-sm font-medium bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">✨
+                          Développeur Full-Stack</span></div>
+                      <h1 class="text-4xl lg:text-6xl font-bold leading-tight">Créons ensemble votre <span
+                          class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">projet
+                          digital</span></h1>
+                      <p class="text-lg text-muted-foreground max-w-xl">Développeur passionné avec plus de 5 ans
+                        d'expérience, je transforme vos idées en solutions digitales innovantes et performantes.
+                        Spécialisé en React, Node.js et technologies modernes.</p>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                      <div class="flex flex-col gap-4"><button data-slot="button"
+                          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-primary/90 h-10 has-[&gt;svg]:px-4 bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white border-0 text-lg py-6 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 w-fit">Réserver
+                          un appel gratuit<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-right ml-2 h-5 w-5" aria-hidden="true">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                          </svg></button>
+                        <div class="flex items-center justify-center gap-3 text-sm text-muted-foreground">
+                          <div class="flex items-center gap-1"><span>⏱️ 30 minutes</span></div>
+                          <div class="w-1.5 h-1.5 bg-muted-foreground rounded-full"></div>
+                          <div class="flex items-center gap-1"><span>💬 Gratuit</span></div>
+                          <div class="w-1.5 h-1.5 bg-muted-foreground rounded-full"></div>
+                          <div class="flex items-center gap-1"><span>🎯 Personnalisé</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="relative lg:order-last">
+                    <div class="relative w-full max-w-lg mx-auto">
+                      <div
+                        class="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-r from-blue-400 to-green-400 rounded-lg rotate-12 opacity-20">
+                      </div>
+                      <div
+                        class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-r from-green-400 to-blue-400 rounded-lg -rotate-12 opacity-20">
+                      </div>
+                      <div class="relative bg-gradient-to-r from-blue-500 to-green-500 p-1 rounded-2xl"><img
+                          src="./maxime-lenne_files/photo-1618410325698-018bb3eb2318" alt="Workspace développeur"
+                          class="w-full h-auto rounded-xl object-cover shadow-2xl"></div>
+                      <div class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg border">
+                        <div class="flex items-center space-x-3">
+                          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div><span
+                            class="text-sm font-medium">Disponible pour nouveaux projets</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="about" class="py-24 bg-white dark:bg-gray-900">
+              <div class="container mx-auto px-4 max-w-7xl">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                  <div class="relative">
+                    <div class="relative w-full max-w-md mx-auto">
+                      <div
+                        class="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl transform rotate-3">
+                      </div>
+                      <div class="relative bg-white dark:bg-gray-800 p-2 rounded-2xl shadow-xl"><img
+                          src="./maxime-lenne_files/photo-1668368961546-e3a06f1cd0f1" alt="Portrait développeur"
+                          class="w-full h-auto rounded-xl object-cover"></div>
+                      <div
+                        class="absolute -top-6 -right-6 bg-gradient-to-r from-blue-500 to-green-500 text-white p-4 rounded-xl shadow-lg">
+                        <div class="text-sm font-medium">5+ ans</div>
+                        <div class="text-xs opacity-90">d'expérience</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-8">
+                    <div class="space-y-4">
+                      <div class="inline-block"><span
+                          class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30 text-sm font-medium">👋
+                          À propos de moi</span></div>
+                      <h2 class="text-3xl lg:text-4xl font-bold">Passionné par la <span
+                          class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">technologie</span>
+                      </h2>
+                      <p class="text-lg text-muted-foreground">Développeur full-stack basé à Paris, je me spécialise
+                        dans la création d'applications web modernes et performantes. Mon objectif est de transformer
+                        vos idées en solutions digitales qui font la différence.</p>
+                      <p class="text-muted-foreground">Autodidacte passionné, j'ai commencé ma carrière il y a plus de 5
+                        ans et depuis, j'ai eu la chance de travailler avec des startups innovantes et des entreprises
+                        établies. J'aime relever des défis techniques complexes et créer des expériences utilisateur
+                        exceptionnelles.</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4"><button data-slot="button"
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[&gt;svg]:px-4 border-2 border-gradient-to-r from-blue-600 to-green-600"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-download mr-2 h-4 w-4" aria-hidden="true">
+                          <path d="M12 15V3"></path>
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                          <path d="m7 10 5 5 5-5"></path>
+                        </svg>Mon CV</button></div>
+                    <div class="space-y-4">
+                      <h3 class="text-xl font-semibold">Mes compétences principales</h3>
+                      <div class="grid grid-cols-2 gap-3">
+                        <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                          </svg><span class="text-sm">React &amp; Next.js</span></div>
+                        <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                          </svg><span class="text-sm">Node.js &amp; Express</span></div>
+                        <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                          </svg><span class="text-sm">TypeScript</span></div>
+                        <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                          </svg><span class="text-sm">PostgreSQL &amp; MongoDB</span></div>
+                        <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                          </svg><span class="text-sm">Tailwind CSS</span></div>
+                        <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-circle-check-big h-4 w-4 text-green-500" aria-hidden="true">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                          </svg><span class="text-sm">AWS &amp; Docker</span></div>
+                      </div>
+                    </div>
+                    <div class="grid gap-6">
+                      <div class="flex space-x-4">
+                        <div
+                          class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-code h-6 w-6" aria-hidden="true">
+                            <path d="m16 18 6-6-6-6"></path>
+                            <path d="m8 6-6 6 6 6"></path>
+                          </svg></div>
+                        <div>
+                          <h4 class="font-semibold">Code de qualité</h4>
+                          <p class="text-sm text-muted-foreground">Je privilégie la maintenabilité et les bonnes
+                            pratiques dans chaque ligne de code.</p>
+                        </div>
+                      </div>
+                      <div class="flex space-x-4">
+                        <div
+                          class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-palette h-6 w-6" aria-hidden="true">
+                            <path
+                              d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z">
+                            </path>
+                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                          </svg></div>
+                        <div>
+                          <h4 class="font-semibold">Design thinking</h4>
+                          <p class="text-sm text-muted-foreground">Une approche centrée utilisateur pour créer des
+                            expériences intuitives.</p>
+                        </div>
+                      </div>
+                      <div class="flex space-x-4">
+                        <div
+                          class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-rocket h-6 w-6" aria-hidden="true">
+                            <path
+                              d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
+                            </path>
+                            <path
+                              d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+                            </path>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                          </svg></div>
+                        <div>
+                          <h4 class="font-semibold">Performance</h4>
+                          <p class="text-sm text-muted-foreground">Des applications rapides et optimisées pour tous les
+                            appareils.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="services" class="py-24 bg-gray-50 dark:bg-gray-800/50">
+              <div class="container mx-auto px-4 max-w-7xl">
+                <div class="text-center space-y-4 mb-16">
+                  <div class="inline-block"><span
+                      class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30 text-sm font-medium">🚀
+                      Mes services</span></div>
+                  <h2 class="text-3xl lg:text-4xl font-bold">Comment puis-je <span
+                      class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">vous aider
+                      ?</span></h2>
+                  <p class="text-lg text-muted-foreground max-w-3xl mx-auto">Je propose une gamme complète de services
+                    de développement pour transformer vos idées en solutions digitales performantes et évolutives.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                    <div data-slot="card-header"
+                      class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4">
+                      <div
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-monitor h-8 w-8" aria-hidden="true">
+                          <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                          <line x1="8" x2="16" y1="21" y2="21"></line>
+                          <line x1="12" x2="12" y1="17" y2="21"></line>
+                        </svg></div>
+                      <div>
+                        <h4 data-slot="card-title" class="text-xl mb-2">Développement Web</h4>
+                        <p data-slot="card-description" class="text-muted-foreground text-base">Applications web
+                          modernes avec React, Next.js et les dernières technologies.</p>
+                      </div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+                      <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Applications SPA</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Sites vitrine</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>E-commerce</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>PWA</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                    <div data-slot="card-header"
+                      class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4">
+                      <div
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-smartphone h-8 w-8" aria-hidden="true">
+                          <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+                          <path d="M12 18h.01"></path>
+                        </svg></div>
+                      <div>
+                        <h4 data-slot="card-title" class="text-xl mb-2">Applications Mobiles</h4>
+                        <p data-slot="card-description" class="text-muted-foreground text-base">Développement
+                          d'applications mobiles cross-platform avec React Native.</p>
+                      </div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+                      <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>iOS
+                            &amp; Android</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Performance native</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>UI/UX optimisée</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>App
+                            Store</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                    <div data-slot="card-header"
+                      class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4">
+                      <div
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-database h-8 w-8" aria-hidden="true">
+                          <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                          <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                          <path d="M3 12A9 3 0 0 0 21 12"></path>
+                        </svg></div>
+                      <div>
+                        <h4 data-slot="card-title" class="text-xl mb-2">Backend &amp; API</h4>
+                        <p data-slot="card-description" class="text-muted-foreground text-base">Architecture backend
+                          robuste avec Node.js, bases de données et APIs RESTful.</p>
+                      </div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+                      <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>APIs
+                            REST</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Bases de données</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Authentification</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Microservices</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                    <div data-slot="card-header"
+                      class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4">
+                      <div
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-zap h-8 w-8" aria-hidden="true">
+                          <path
+                            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
+                          </path>
+                        </svg></div>
+                      <div>
+                        <h4 data-slot="card-title" class="text-xl mb-2">Optimisation Performance</h4>
+                        <p data-slot="card-description" class="text-muted-foreground text-base">Amélioration des
+                          performances et de la vitesse de vos applications existantes.</p>
+                      </div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+                      <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Core
+                            Web Vitals</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>SEO
+                            technique</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Lazy
+                            loading</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Caching</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                    <div data-slot="card-header"
+                      class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4">
+                      <div
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-shield h-8 w-8" aria-hidden="true">
+                          <path
+                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                          </path>
+                        </svg></div>
+                      <div>
+                        <h4 data-slot="card-title" class="text-xl mb-2">Sécurité &amp; DevOps</h4>
+                        <p data-slot="card-description" class="text-muted-foreground text-base">Mise en place de bonnes
+                          pratiques de sécurité et déploiement automatisé.</p>
+                      </div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+                      <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>CI/CD</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Docker</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Monitoring</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Sécurité</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-white dark:bg-gray-900/50 backdrop-blur-sm">
+                    <div data-slot="card-header"
+                      class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 pt-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 space-y-4">
+                      <div
+                        class="w-16 h-16 rounded-xl bg-gradient-to-r from-teal-500 to-green-500 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-headphones h-8 w-8" aria-hidden="true">
+                          <path
+                            d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3">
+                          </path>
+                        </svg></div>
+                      <div>
+                        <h4 data-slot="card-title" class="text-xl mb-2">Conseil &amp; Formation</h4>
+                        <p data-slot="card-description" class="text-muted-foreground text-base">Accompagnement technique
+                          et formation de vos équipes sur les technologies modernes.</p>
+                      </div>
+                    </div>
+                    <div data-slot="card-content" class="px-6 [&amp;:last-child]:pb-6">
+                      <ul class="space-y-2">
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Audit technique</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Formations</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div><span>Code
+                            review</span>
+                        </li>
+                        <li class="flex items-center space-x-2 text-sm">
+                          <div class="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-green-500"></div>
+                          <span>Mentoring</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-20 text-center">
+                  <div class="bg-gradient-to-r from-blue-500 to-green-500 rounded-2xl p-8 md:p-12 text-white">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Prêt à démarrer votre projet ?</h3>
+                    <p class="text-lg mb-8 opacity-90">Discutons de vos besoins et trouvons ensemble la meilleure
+                      solution pour votre entreprise.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center"><button
+                        class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Démarrer
+                        un projet</button><button
+                        class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">Planifier
+                        un appel</button></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="testimonials" class="py-24 bg-white dark:bg-gray-900">
+              <div class="container mx-auto px-4 max-w-7xl">
+                <div class="text-center space-y-4 mb-16">
+                  <div class="inline-block"><span
+                      class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900/30 dark:to-green-900/30 text-sm font-medium">💬
+                      Témoignages</span></div>
+                  <h2 class="text-3xl lg:text-4xl font-bold">Ils me font <span
+                      class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">confiance</span>
+                  </h2>
+                  <p class="text-lg text-muted-foreground max-w-3xl mx-auto">Découvrez ce que mes clients disent de
+                    notre collaboration et des résultats obtenus ensemble.</p>
+                </div>
+                <div class="mb-16">
+                  <p class="text-center text-sm text-muted-foreground mb-8">Ils ont fait confiance à mon expertise</p>
+                  <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">🚀</span><span class="font-medium">TechStart</span></div>
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">💡</span><span class="font-medium">InnovCorp</span></div>
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">🎨</span><span class="font-medium">CreativeLab</span></div>
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">⚡</span><span class="font-medium">DigitalBoost</span></div>
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">🧠</span><span class="font-medium">SmartSolutions</span></div>
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">🏭</span><span class="font-medium">WebFactory</span></div>
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">🔮</span><span class="font-medium">NextGen</span></div>
+                    <div
+                      class="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
+                      <span class="text-2xl">☁️</span><span class="font-medium">CloudTech</span></div>
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                    <div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6">
+                      <div class="space-y-4">
+                        <div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true">
+                            <path
+                              d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                            <path
+                              d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                          </svg>
+                          <div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg></div>
+                        </div>
+                        <p class="text-sm leading-relaxed italic">"Un développeur exceptionnel ! Il a transformé notre
+                          idée en une application web performante qui a révolutionné notre business. Sa réactivité et
+                          son expertise technique sont remarquables."</p>
+                        <div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar"
+                            class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><span
+                              data-slot="avatar-fallback"
+                              class="flex size-full items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-green-500 text-white">MD</span></span>
+                          <div>
+                            <div class="font-semibold text-sm">Marie Dubois</div>
+                            <div class="text-xs text-muted-foreground">CEO, TechStart</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                    <div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6">
+                      <div class="space-y-4">
+                        <div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true">
+                            <path
+                              d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                            <path
+                              d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                          </svg>
+                          <div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg></div>
+                        </div>
+                        <p class="text-sm leading-relaxed italic">"Collaboration parfaite du début à la fin. Code de
+                          qualité, respect des délais et excellent conseil technique. Je recommande vivement pour tout
+                          projet de développement."</p>
+                        <div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar"
+                            class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img
+                              data-slot="avatar-image" class="aspect-square size-full" alt="Pierre Martin"
+                              src="./maxime-lenne_files/photo-1472099645785-5658abf4ff4e"></span>
+                          <div>
+                            <div class="font-semibold text-sm">Pierre Martin</div>
+                            <div class="text-xs text-muted-foreground">CTO, InnovCorp</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                    <div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6">
+                      <div class="space-y-4">
+                        <div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true">
+                            <path
+                              d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                            <path
+                              d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                          </svg>
+                          <div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg></div>
+                        </div>
+                        <p class="text-sm leading-relaxed italic">"Grâce à son travail, notre site web a gagné en
+                          performance et en conversions. Son approche centrée utilisateur et son attention aux détails
+                          font la différence."</p>
+                        <div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar"
+                            class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img
+                              data-slot="avatar-image" class="aspect-square size-full" alt="Sophie Leroy"
+                              src="./maxime-lenne_files/photo-1438761681033-6461ffad8d80"></span>
+                          <div>
+                            <div class="font-semibold text-sm">Sophie Leroy</div>
+                            <div class="text-xs text-muted-foreground">Directrice Marketing, CreativeLab</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                    <div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6">
+                      <div class="space-y-4">
+                        <div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true">
+                            <path
+                              d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                            <path
+                              d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                          </svg>
+                          <div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg></div>
+                        </div>
+                        <p class="text-sm leading-relaxed italic">"Un vrai partenaire technique ! Il a su comprendre nos
+                          besoins spécifiques et proposer des solutions innovantes. Résultat : une application qui
+                          dépasse nos attentes."</p>
+                        <div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar"
+                            class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img
+                              data-slot="avatar-image" class="aspect-square size-full" alt="Thomas Bernard"
+                              src="./maxime-lenne_files/photo-1507003211169-0a1dd7228f2d"></span>
+                          <div>
+                            <div class="font-semibold text-sm">Thomas Bernard</div>
+                            <div class="text-xs text-muted-foreground">Fondateur, DigitalBoost</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                    <div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6">
+                      <div class="space-y-4">
+                        <div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true">
+                            <path
+                              d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                            <path
+                              d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                          </svg>
+                          <div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg></div>
+                        </div>
+                        <p class="text-sm leading-relaxed italic">"Expertise technique impressionnante et communication
+                          fluide. Notre plateforme e-commerce fonctionne parfaitement grâce à son travail rigoureux et
+                          professionnel."</p>
+                        <div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar"
+                            class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img
+                              data-slot="avatar-image" class="aspect-square size-full" alt="Julie Rousseau"
+                              src="./maxime-lenne_files/photo-1544005313-94ddf0286df2"></span>
+                          <div>
+                            <div class="font-semibold text-sm">Julie Rousseau</div>
+                            <div class="text-xs text-muted-foreground">COO, SmartSolutions</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-slot="card"
+                    class="text-card-foreground flex flex-col gap-6 rounded-xl border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                    <div data-slot="card-content" class="[&amp;:last-child]:pb-6 p-6">
+                      <div class="space-y-4">
+                        <div class="flex justify-between items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-quote h-8 w-8 text-blue-500 opacity-50" aria-hidden="true">
+                            <path
+                              d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                            <path
+                              d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z">
+                            </path>
+                          </svg>
+                          <div class="flex space-x-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round"
+                              class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400" aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="lucide lucide-star h-4 w-4 fill-yellow-400 text-yellow-400"
+                              aria-hidden="true">
+                              <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                              </path>
+                            </svg></div>
+                        </div>
+                        <p class="text-sm leading-relaxed italic">"Sa maîtrise des technologies modernes et sa capacité
+                          à livrer dans les temps en font un développeur de choix. Nous avons gagné 6 mois sur notre
+                          roadmap !"</p>
+                        <div class="flex items-center space-x-3 pt-4 border-t"><span data-slot="avatar"
+                            class="relative flex size-10 shrink-0 overflow-hidden rounded-full h-10 w-10"><img
+                              data-slot="avatar-image" class="aspect-square size-full" alt="Alexandre Petit"
+                              src="./maxime-lenne_files/photo-1519244703995-f4e0f30006d5"></span>
+                          <div>
+                            <div class="font-semibold text-sm">Alexandre Petit</div>
+                            <div class="text-xs text-muted-foreground">Directeur Technique, WebFactory</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                  <div class="space-y-2">
+                    <div
+                      class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                      50+</div>
+                    <div class="text-sm text-muted-foreground">Clients satisfaits</div>
+                  </div>
+                  <div class="space-y-2">
+                    <div
+                      class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                      98%</div>
+                    <div class="text-sm text-muted-foreground">Taux de satisfaction</div>
+                  </div>
+                  <div class="space-y-2">
+                    <div
+                      class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                      85%</div>
+                    <div class="text-sm text-muted-foreground">Clients récurrents</div>
+                  </div>
+                  <div class="space-y-2">
+                    <div
+                      class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                      48h</div>
+                    <div class="text-sm text-muted-foreground">Temps de réponse moyen</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <footer class="bg-gray-900 text-white">
+              <div class="container mx-auto px-4 max-w-7xl">
+                <div id="contact" class="py-16 border-b border-gray-800">
+                  <div class="text-center space-y-6">
+                    <h2 class="text-3xl lg:text-4xl font-bold">Prêt à démarrer votre <span
+                        class="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">projet
+                        ?</span></h2>
+                    <p class="text-lg text-gray-300 max-w-2xl mx-auto">Discutons de vos besoins et transformons ensemble
+                      vos idées en solutions digitales performantes.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
+                      data-dashlane-rid="095a09b64fd63283" data-dashlane-classification="other"><input data-slot="input"
+                        class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 flex h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-gray-800 border-gray-700 text-white placeholder-gray-400"
+                        placeholder="Votre email" data-dashlane-rid="1fbd692563297bbc"
+                        data-dashlane-classification="email" data-kwimpalastatus="dead"><button data-slot="button"
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white border-0"
+                        data-dashlane-label="true" data-dashlane-rid="6af3501624b6f458"
+                        data-dashlane-classification="action">Contactez-moi</button></div>
+                    <div class="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
+                      <div class="flex items-center space-x-2 text-gray-300"><svg xmlns="http://www.w3.org/2000/svg"
+                          width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-mail h-5 w-5 text-blue-400" aria-hidden="true">
+                          <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                          <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        </svg><span>contact@monsite.fr</span></div>
+                      <div class="flex items-center space-x-2 text-gray-300"><svg xmlns="http://www.w3.org/2000/svg"
+                          width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-phone h-5 w-5 text-green-400" aria-hidden="true">
+                          <path
+                            d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                          </path>
+                        </svg><span>+33 6 12 34 56 78</span></div>
+                      <div class="flex items-center space-x-2 text-gray-300"><svg xmlns="http://www.w3.org/2000/svg"
+                          width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-map-pin h-5 w-5 text-purple-400" aria-hidden="true">
+                          <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                          </path>
+                          <circle cx="12" cy="10" r="3"></circle>
+                        </svg><span>Paris, France</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div class="space-y-6">
+                    <div class="flex items-center space-x-2">
+                      <div class="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-500 to-green-500"></div><span
+                        class="text-xl font-semibold">MonSite</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">Développeur full-stack passionné, je transforme vos
+                      idées en solutions digitales innovantes et performantes. Plus de 5 ans d'expérience au service de
+                      votre réussite.</p>
+                    <div class="flex space-x-4"><button
+                        class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-github h-5 w-5" aria-hidden="true">
+                          <path
+                            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                          </path>
+                          <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg></button><button
+                        class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-linkedin h-5 w-5" aria-hidden="true">
+                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                          </path>
+                          <rect width="4" height="12" x="2" y="9"></rect>
+                          <circle cx="4" cy="4" r="2"></circle>
+                        </svg></button><button
+                        class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-400 transition-colors"><svg
+                          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-twitter h-5 w-5" aria-hidden="true">
+                          <path
+                            d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                          </path>
+                        </svg></button></div>
+                  </div>
+                  <div class="space-y-6">
+                    <h3 class="text-lg font-semibold">Navigation</h3>
+                    <ul class="space-y-3">
+                      <li><button class="text-gray-300 hover:text-white transition-colors text-sm">Accueil</button></li>
+                      <li><button class="text-gray-300 hover:text-white transition-colors text-sm">À propos</button>
+                      </li>
+                      <li><button class="text-gray-300 hover:text-white transition-colors text-sm">Services</button>
+                      </li>
+                      <li><button class="text-gray-300 hover:text-white transition-colors text-sm">Témoignages</button>
+                      </li>
+                      <li><button class="text-gray-300 hover:text-white transition-colors text-sm">Contact</button></li>
+                    </ul>
+                  </div>
+                  <div class="space-y-6">
+                    <h3 class="text-lg font-semibold">Services</h3>
+                    <ul class="space-y-3">
+                      <li><span class="text-gray-300 text-sm">Développement Web</span></li>
+                      <li><span class="text-gray-300 text-sm">Applications Mobiles</span></li>
+                      <li><span class="text-gray-300 text-sm">Backend &amp; API</span></li>
+                      <li><span class="text-gray-300 text-sm">Optimisation Performance</span></li>
+                      <li><span class="text-gray-300 text-sm">Sécurité &amp; DevOps</span></li>
+                      <li><span class="text-gray-300 text-sm">Conseil &amp; Formation</span></li>
+                    </ul>
+                  </div>
+                  <div class="space-y-6">
+                    <h3 class="text-lg font-semibold">Technologies</h3>
+                    <ul class="space-y-3">
+                      <li><span class="text-gray-300 text-sm">React &amp; Next.js</span></li>
+                      <li><span class="text-gray-300 text-sm">Node.js</span></li>
+                      <li><span class="text-gray-300 text-sm">TypeScript</span></li>
+                      <li><span class="text-gray-300 text-sm">PostgreSQL</span></li>
+                      <li><span class="text-gray-300 text-sm">Tailwind CSS</span></li>
+                      <li><span class="text-gray-300 text-sm">AWS &amp; Docker</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="py-6 border-t border-gray-800">
+                  <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="flex items-center space-x-2 text-sm text-gray-400"><span>© 2025 MonSite. Tous droits
+                        réservés.</span></div>
+                    <div class="flex items-center space-x-2 text-sm text-gray-400"><span>Fait avec</span><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-heart h-4 w-4 text-red-500 fill-current" aria-hidden="true">
+                        <path
+                          d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                        </path>
+                      </svg><span>à Paris</span></div>
+                    <div class="flex space-x-6 text-sm text-gray-400"><button
+                        class="hover:text-white transition-colors">Mentions légales</button><button
+                        class="hover:text-white transition-colors">Politique de confidentialité</button></div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <noscript data-nosnippet="">
+    <main
+      style="height: 100vh; width: 100vw; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <h1 style="font-size: 24px; padding: 8px; color: black">
         This site requires JavaScript
-        </h1>
-        <p style="font-size: 16px; padding: 8px; color: #00000080">To view this website, enable JavaScript in your browser settings and reload the page.</p>
-        <form style="margin-top: 12px;" action="">
-          <button type="submit" style="font-size: 14px; color: black; border: 1px solid #0000001a; border-radius: 5px; width: 256px; height: 32px;">
+      </h1>
+      <p style="font-size: 16px; padding: 8px; color: #00000080">To view this website, enable JavaScript in your browser
+        settings and reload the page.</p>
+      <form style="margin-top: 12px;" action="">
+        <button type="submit"
+          style="font-size: 14px; color: black; border: 1px solid #0000001a; border-radius: 5px; width: 256px; height: 32px;">
           Reload page
-          </button>
-        </form>
-      </main>
-    </noscript>
-  
+        </button>
+      </form>
+    </main>
+  </noscript>
 
-</body></html>
+
+</body>
+
+</html>
