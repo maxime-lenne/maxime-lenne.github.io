@@ -67,29 +67,43 @@ lang: fr
   <div class="section__container">
     <div class="section__header">
       {% include components/section-header.html 
-         badge_icon="💼"
-         badge_text="Mon parcours"
-         title="Expérience"
-         title_highlight="professionnelle"
-         subtitle="Plus de 10 ans d'expérience dans le développement et la direction technique, avec un focus sur l'entrepreneuriat et l'innovation." %}
+        badge_icon="💼"
+        badge_text="Mon parcours"
+        title="Expérience"
+        title_highlight="professionnelle"
+        subtitle="Plus de 10 ans d'expérience dans le développement et la direction technique, avec un focus sur l'entrepreneuriat et l'innovation." %}
     </div>
-    <div class="section__grid section__grid--2-col">
+    
+    <div class="section__grid section__grid--2-col" id="experiences-grid">
       {% assign sorted_experiences = site.experiences | sort: 'order' %}
-      {% for experience in sorted_experiences %}
-        {% include components/card-experience.html 
-           id=forloop.index
-           role=experience.role
-           company=experience.company
-           start_date=experience.start_date
-           end_date=experience.end_date
-           current=experience.current
-           description=experience.description
-           skills=experience.skills
-           achievements=experience.achievements
-           logo_url=experience.logo_url
-           details=experience.details %}
+      {% assign total_experiences = sorted_experiences.size %}
+      {% assign initial_display = 4 %}
+      
+      {% for experience in sorted_experiences limit: initial_display %}
+        <div class="experience-item" data-index="{{ forloop.index0 }}">
+          {% include components/card-experience.html 
+             id=forloop.index
+             role=experience.role
+             company=experience.company
+             start_date=experience.start_date
+             end_date=experience.end_date
+             current=experience.current
+             description=experience.description
+             skills=experience.skills
+             achievements=experience.achievements
+             logo_url=experience.logo_url
+             details=experience.details %}
+        </div>
       {% endfor %}
     </div>
+    
+    {% if total_experiences > initial_display %}
+      <div class="section__actions" id="load-more-experiences-container">
+        <button class="figma-btn figma-btn--secondary" id="load-more-experiences-btn" data-initial="{{ initial_display }}" data-total="{{ total_experiences }}">
+          En voir plus
+        </button>
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -98,10 +112,10 @@ lang: fr
   <div class="section__container">
     <div class="section__header">
       {% include components/section-header.html 
-       badge_icon="✅"
-       badge_text="Mes compétences"
-       title="Soft & Hard "
-       title_highlight="Skills" %}
+        badge_icon="✅"
+        badge_text="Mes compétences"
+        title="Soft & Hard "
+        title_highlight="Skills" %}
     </div>
     <div class="section__grid section__grid--2-col">
       {% assign sorted_skills = site.skills | sort: 'order' %}
@@ -159,7 +173,7 @@ lang: fr
 
 {% include sections/final-cta-section.html %}
 
-<!-- Skills Section -->
+<!-- Contributions & Projects Section -->
 <section class="section section--light">
   <div class="section__container">
     <div class="section__header">
@@ -336,6 +350,7 @@ contribuer à leur succès." cta_text="Planifier un entretien" %}
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Contributions Load More
   const loadMoreBtn = document.getElementById('load-more-btn');
   const contributionsGrid = document.getElementById('contributions-grid');
   const loadMoreContainer = document.getElementById('load-more-container');
@@ -430,6 +445,114 @@ document.addEventListener('DOMContentLoaded', function() {
         <p class="card-dark__description">${contribution.description}</p>
         ${achievementsHtml}
         ${labelsHtml}
+      `;
+      
+      return div;
+    }
+  }
+  
+  // Experiences Load More
+  const loadMoreExperiencesBtn = document.getElementById('load-more-experiences-btn');
+  const experiencesGrid = document.getElementById('experiences-grid');
+  const loadMoreExperiencesContainer = document.getElementById('load-more-experiences-container');
+  
+  if (loadMoreExperiencesBtn) {
+    const initialDisplay = parseInt(loadMoreExperiencesBtn.dataset.initial);
+    const totalExperiences = parseInt(loadMoreExperiencesBtn.dataset.total);
+    let currentDisplay = initialDisplay;
+    const loadStep = 2;
+    
+    // Store all experiences data
+    const allExperiences = [
+      {% for experience in sorted_experiences %}
+      {
+        role: "{{ experience.role | escape }}",
+        company: "{{ experience.company | escape }}",
+        start_date: "{{ experience.start_date | escape }}",
+        end_date: "{{ experience.end_date | escape }}",
+        current: {{ experience.current | default: false }},
+        description: "{{ experience.description | escape }}",
+        skills: [
+          {% if experience.skills %}
+            {% for skill in experience.skills %}
+              "{{ skill | escape }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        ],
+        achievements: [
+          {% if experience.achievements %}
+            {% for achievement in experience.achievements %}
+              "{{ achievement | escape }}"{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        ],
+        logo_url: "{{ experience.logo_url | escape }}",
+        details: "{{ experience.details | escape }}"
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+    
+    loadMoreExperiencesBtn.addEventListener('click', function() {
+      const nextDisplay = Math.min(currentDisplay + loadStep, totalExperiences);
+      
+      // Add new experiences
+      for (let i = currentDisplay; i < nextDisplay; i++) {
+        if (i < allExperiences.length) {
+          const experience = allExperiences[i];
+          const experienceElement = createExperienceElement(experience, i);
+          experiencesGrid.appendChild(experienceElement);
+        }
+      }
+      
+      currentDisplay = nextDisplay;
+      
+      // Hide button if all experiences are loaded
+      if (currentDisplay >= totalExperiences) {
+        loadMoreExperiencesContainer.style.display = 'none';
+      } else {
+        const remaining = totalExperiences - currentDisplay;
+        loadMoreExperiencesBtn.textContent = `En voir ${Math.min(loadStep, remaining)} de plus`;
+      }
+    });
+    
+    function createExperienceElement(experience, index) {
+      const div = document.createElement('div');
+      div.className = 'experience-item';
+      div.setAttribute('data-index', index);
+      
+      // Create the experience card HTML structure
+      div.innerHTML = `
+        <div class="card-experience">
+          <div class="card-experience__logo">
+            <img src="${experience.logo_url}" alt="${experience.company}" class="card-experience__logo-img">
+          </div>
+          <div class="card-experience__content">
+            <div class="card-experience__header">
+              <h3 class="card-experience__title">${experience.role}</h3>
+              <span class="card-experience__company">${experience.company}</span>
+              <span class="card-experience__period">${experience.start_date} - ${experience.current ? 'Présent' : experience.end_date}</span>
+            </div>
+            <p class="card-experience__description">${experience.description}</p>
+            ${experience.achievements && experience.achievements.length > 0 ? `
+              <div class="card-experience__achievements">
+                <h4>Principales réalisations :</h4>
+                <ul>
+                  ${experience.achievements.map(achievement => `<li>${achievement}</li>`).join('')}
+                </ul>
+              </div>
+            ` : ''}
+            ${experience.skills && experience.skills.length > 0 ? `
+              <div class="card-experience__skills">
+                ${experience.skills.map(skill => `<span class="badge badge--skill">${skill}</span>`).join('')}
+              </div>
+            ` : ''}
+            ${experience.details ? `
+              <div class="card-experience__details">
+                <a href="#" class="card-experience__more-link">En savoir plus</a>
+              </div>
+            ` : ''}
+          </div>
+        </div>
       `;
       
       return div;
