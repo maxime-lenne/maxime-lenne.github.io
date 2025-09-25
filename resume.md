@@ -9,56 +9,72 @@ lang: fr
 <section class="section section--gradient-light section--secondary">
   <div class="section__container section__container--dark-background section__grid--2-col">
     <div class="section__side">
-        {% include components/badge.html text="💼 Profil de carrière" %}
+      {% include components/badge.html text="💼 Profil de carrière" %}
+      
+      {% include components/image-circle.html 
+        image_url="/assets/images/avatar.jpeg" 
+        image_alt="Mon portrait"
+        show_status="false"
+        status_text="Disponible pour consultation" %}
+      
+      {% include components/title-hero.html 
+        main_text="Maxime Lenne"
+        highlight_text="CTO, Tech advisor, sparing partner" %}
         
-        {% include components/image-circle.html 
-          image_url="/assets/images/avatar.jpeg" 
-          image_alt="Mon portrait"
-          show_status="false"
-          status_text="Disponible pour consultation" %}
-        
-        {% include components/title-hero.html 
-          main_text="Maxime Lenne"
-          highlight_text="CTO, Tech advisor, sparing partner" %}
-          
-        <div class="figma-cv-hero__contact">
-          <div class="figma-cv-hero__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            <span>hello@maxime-lenne.fr</span>
-          </div>
-          
-          <div class="figma-cv-hero__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-            </svg>
-            <span>+33 6 29 45 38 14</span>
-          </div>
-          
-          <div class="figma-cv-hero__contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <span>Lille, France</span>
-          </div>
+      <div class="figma-cv-hero__contact">
+        <div class="figma-cv-hero__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>hello@maxime-lenne.fr</span>
         </div>
-
-        vélotafeur 🚴
+        
+        <div class="figma-cv-hero__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>+33 6 29 45 38 14</span>
+        </div>
+        
+        <div class="figma-cv-hero__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Lille, France</span>
+        </div>
+      </div>
     </div>
     <div class="section__content">
-        <p class="section__description">
-          Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques.
-        </p>
-        <p class="section__description">
-          J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon.
-        </p>
-        <p class="section__description">
-          Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes.
-        </p>
-          
+      <p class="section__description">
+        Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de <strong>l'entrepreneuriat</strong>, de <strong>l'innovation</strong>, du <strong>management</strong> et du <strong>produit</strong>, tout en continuant à perfectionner mes compétences techniques.
+      </p>
+      <p class="section__description">
+        J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon.
+      </p>
+      <p class="section__description">
+        Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes.
+      </p>
+      <div class="grid-2-columns">
+        {% include components/list-horizontal-icon.html 
+          item1_title="+ 10 ans sur des poste de C(P)TO"
+          item1_text="Management de + 40 profils (devs, PM / PO, UX / UI)."
+          item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
+          item2_title="+ 20 ans d'expertise Tech"
+          item2_text="Une expertise tech 360° : web, mobile, cloud, devops, IA, no-code..."
+          item2_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>
+          </svg>'
+          item3_title="Culture de l'impact et engagement"
+          item3_text=" la tech au service de résultats concrets pour les utilisateurs, les équipes et le business" %}
+        {% include components/list-horizontal-icon.html 
+          item1_title="Partenaire du business"
+          item1_text="Sparring partner sur la vision, roadmaps, et stratégie. Challenger, prioriser, anticiper les impacts techniques dans la stratégie de l'entreprise..."
+          item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>'
+          item2_title="Mindset et culture produit"
+          item2_text="Fan de tests, de discovery, d’itérations rapides et d’équipes autonomes" %}
+      </div>
     </div>
   </div>
 </section>
@@ -71,7 +87,7 @@ lang: fr
         badge_text="Mon parcours"
         title="Expérience"
         title_highlight="professionnelle"
-        subtitle="Plus de 10 ans d'expérience dans le développement et la direction technique, avec un focus sur l'entrepreneuriat et l'innovation." %}
+        subtitle="Plus de 10 ans d'expérience dans la direction technique et plus de 20 dans la tech. Dans des contextes multi-projets, en mouvement : startup, scale-up, refonte, pivot, startup studio, agence..." %}
     </div>
     
     <div class="section__grid section__grid--2-col" id="experiences-grid">
@@ -80,8 +96,8 @@ lang: fr
       {% assign initial_display = 4 %}
       
       {% for experience in sorted_experiences limit: initial_display %}
-        <div class="experience-item" data-index="{{ forloop.index0 }}">
           {% include components/card-experience.html 
+             data-index=forloop.index0
              id=forloop.index
              role=experience.role
              company=experience.company
@@ -90,10 +106,10 @@ lang: fr
              current=experience.current
              description=experience.description
              skills=experience.skills
+             tags=experience.tags
              achievements=experience.achievements
              logo_url=experience.logo_url
              details=experience.details %}
-        </div>
       {% endfor %}
     </div>
     
@@ -318,6 +334,7 @@ lang: fr
                                         show_badge="false"
                                         title="Centres d'"
                                         title_highlight="Intérêts" %}
+                🚴 vélotafeur
                 <h3 class="section__title">
                     Musique
                 </h3>

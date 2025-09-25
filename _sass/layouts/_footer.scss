@@ -19,11 +19,19 @@
     margin-bottom: var(--space-xl);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: var(--space-xl);
+
     .cta-info {
       font-size: 1rem;
       font-weight: 600;
       color: white;
+      &__separator {
+        display: none;
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
     }
+
     @include mobile-first(md) {
       grid-template-columns: repeat(3, 1fr);
     }

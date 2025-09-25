@@ -162,11 +162,22 @@ body.nav-open {
 
 #education-awards {
   .section__grid--2-col {
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 1fr;
     @media (min-width: 968px) {
       grid-template-columns: 2.5fr 1fr;
       gap: 80px;
     }
+  }
+}
+
+.grid-2-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+    margin: 2rem 0;
+  @media (min-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+    
   }
 }
 

@@ -221,15 +221,17 @@
     grid-template-columns: 1fr;
     gap: 48px;
     align-items: center;
-    
+    margin: 0 clamp(24px, 5vw, auto);
     @media (min-width: 968px) {
       grid-template-columns: 1fr 2fr;
       gap: 80px;
     }
   }
-  .image-circle__image-wrapper {
-    max-width: 300px;
+  
+  .list-checked, .list-horizontal-icon {
+    text-align: left;
   }
+
   .section__cv-btn {
     margin-bottom: 32px;
   }

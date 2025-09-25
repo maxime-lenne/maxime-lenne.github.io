@@ -48,6 +48,10 @@
       transform: scale(1.05);
     }
   }
+
+  .figma-hero__badge, .figma-about__badge-tag, .figma-services__badge {
+    margin-bottom: 0;
+  }
 }
 
 .card-experience__logo {
@@ -61,6 +65,10 @@
   background: var(--color-background-alt);
   border: 1px solid var(--color-border);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-experience__logo--img {
+  border: none;
 }
 
 .card-experience__logo-img {
@@ -150,13 +158,15 @@
   margin: 0;
 }
 
-.card-experience__skills {
+.card-experience__skills, .card-experience__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-experience__skill {
+.card-experience__skill, .card-experience__tag {
   background: var(--color-background-alt);
   color: var(--color-text-secondary);
   padding: 6px 12px;
@@ -174,21 +184,13 @@
 
 .card-experience__achievement {
   display: flex;
-  align-items: flex-start;
+  align-items: anchor-center;
   gap: 0.75rem;
-  font-size: 13px;
+  font-size: var(--text-base);
   color: var(--color-text-secondary);
   line-height: 1.5;
   position: relative;
   padding-left: 16px;
-  
-  &::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--color-primary);
-    font-weight: bold;
-  }
 }
 
 .card-experience__achievement-icon {

@@ -8,6 +8,11 @@ current: false
 location: "France"
 type: "full-time"
 order: 2
+logo_url: "/assets/images/companies/thetribe.png"
+tags:
+  - "Startup"
+  - "Product"
+  - "Studio"
 skills:
   - "Product Strategy"
   - "Team Development"
