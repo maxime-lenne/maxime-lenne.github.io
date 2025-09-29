@@ -1,164 +1,129 @@
-# Structure du Projet Jekyll
+# Structure du Projet
 
 ## 📁 Organisation des dossiers
 
 ```
 maxime-lenne-website/
 ├── .github/                    # Configuration GitHub Actions
-│   └── workflows/
-│       └── deploy.yml         # Workflow de déploiement automatique
-├── _layouts/                   # Templates de mise en page
-│   ├── default.html           # Layout principal
-│   ├── page.html              # Layout pour les pages
-│   └── post.html              # Layout pour les articles
-├── _posts/                     # Articles de blog
-│   └── 2024-01-01-premier-article.md
-├── _site/                      # Site généré (ignoré par Git)
-├── assets/                     # Ressources statiques
-│   └── css/
-│       └── main.css           # Styles CSS personnalisés
-├── docs/                       # Documentation existante
-├── .git/                       # Repository Git
-├── .jekyll-cache/              # Cache Jekyll (ignoré par Git)
-├── .tool-versions              # Version Ruby (asdf)
-├── .gitignore                  # Fichiers ignorés par Git
-├── Gemfile                     # Dépendances Ruby
-├── Gemfile.lock                # Versions exactes des gems
-├── Makefile                    # Commandes Make pour Jekyll
-├── PROJECT_STRUCTURE.md        # Ce fichier
-├── README.md                   # Documentation principale
+│   └── workflows/             # Workflows CI/CD
+├── _data/                      # Données statiques
+│   ├── translations.yml        # Traductions FR/EN
+│   └── experiences.yml         # Données Notion
+├── _includes/                  # Composants réutilisables
+│   ├── components/            # Composants UI
+│   └── sections/              # Sections de page
+├── _layouts/                   # Templates de pages
+│   ├── default.html           # Layout de base
+│   ├── page.html              # Pages statiques
+│   └── post.html              # Articles de blog
+├── _sass/                      # Styles SCSS
+│   ├── _variables.scss         # Design tokens
+│   ├── _mixins.scss            # Utilitaires Sass
+│   ├── _base.scss              # Styles de base
+│   ├── components/             # Styles composants
+│   └── utilities/               # Classes utilitaires
+├── _plugins/                   # Plugins personnalisés
+│   ├── notion_fetcher.rb       # Intégration Notion API
+│   └── image_optimizer.rb      # Traitement d'images
+├── assets/                     # Assets statiques
+│   ├── css/                    # CSS compilé
+│   ├── js/                     # Fichiers JavaScript
+│   ├── images/                 # Images optimisées
+│   └── fonts/                  # Polices web
+├── _collections/               # Collections de contenu
+│   ├── _posts/                 # Articles de blog
+│   ├── _experiences/           # Expériences professionnelles
+│   ├── _skills/                # Compétences
+│   └── _testimonials/          # Témoignages
+├── pages/                      # Pages statiques
+├── docs/                       # Documentation
+│   ├── AGENTS.md          # Conventions de développement
+│   ├── PROJECT_STRUCTURE.md    # Ce fichier
+│   ├── TECHNICAL_GUIDE.md      # Guide technique avancé
+│   ├── DESIGN_SYSTEM.md        # Système de design
+│   └── CONFORMITY_REPORT.md    # Rapport de conformité
 ├── _config.yml                 # Configuration Jekyll
-├── _config.dev.yml             # Configuration de développement
-├── about.md                    # Page À propos
-├── index.md                    # Page d'accueil
-└── start_server.sh             # Script de démarrage du serveur
+├── _config.dev.yml             # Configuration développement
+├── _config_prod.yml            # Configuration production
+├── Gemfile                     # Dépendances Ruby
+├── package.json                # Dépendances Node.js
+├── Makefile                    # Commandes automatisées
+├── CLAUDE.md                   # Guide pour assistants IA
+└── README.md                   # Documentation principale
 ```
 
 ## 🔧 Fichiers de configuration
 
-### `_config.yml`
-Configuration principale de Jekyll avec :
-- Paramètres du site (titre, description, URL)
-- Configuration des plugins
-- Exclusions de fichiers
+### Configuration Jekyll
+- **`_config.yml`** - Configuration principale
+- **`_config.dev.yml`** - Configuration développement
+- **`_config_prod.yml`** - Configuration production
 
-### `_config.dev.yml`
-Configuration spécifique au développement :
-- Port et host du serveur
-- Activation du live reload
-- Mode watch et incrémental
+### Dépendances
+- **`Gemfile`** - Dépendances Ruby (Jekyll, plugins)
+- **`package.json`** - Dépendances Node.js (assets)
+- **`.tool-versions`** - Versions asdf (Ruby, Node.js)
 
-### `Gemfile`
-Dépendances Ruby nécessaires :
-- Jekyll 4.3.4
-- Plugins (jekyll-feed)
-- Gems système (logger, csv, etc.)
+## 🎨 Architecture
 
-## 🎨 Layouts et Templates
+### Layouts
+- **`_layouts/default.html`** - Template de base
+- **`_layouts/page.html`** - Pages statiques
+- **`_layouts/post.html`** - Articles de blog
 
-### `_layouts/default.html`
-Template principal utilisé par toutes les pages :
-- Structure HTML de base
-- Navigation
-- Header et footer
+### Composants
+- **`_includes/components/`** - Composants UI réutilisables
+- **`_includes/sections/`** - Sections de page
 
-### `_layouts/page.html`
-Template pour les pages statiques :
-- Titre de page
-- Contenu formaté
-
-### `_layouts/post.html`
-Template pour les articles de blog :
-- Métadonnées (date, catégories)
-- Contenu de l'article
+### Styles
+- **`_sass/_variables.scss`** - Design tokens
+- **`_sass/components/`** - Styles composants
+- **`_sass/utilities/`** - Classes utilitaires
 
 ## 📝 Contenu
 
-### `index.md`
-Page d'accueil avec :
-- Introduction
-- Liste des derniers articles
-- Navigation vers les sections
+### Collections
+- **`_collections/_posts/`** - Articles de blog
+- **`_collections/_experiences/`** - Expériences professionnelles
+- **`_collections/_skills/`** - Compétences
+- **`_collections/_testimonials/`** - Témoignages
 
-### `about.md`
-Page À propos avec :
-- Informations personnelles
-- Compétences
-- Contact
+### Pages statiques
+- **`pages/`** - Pages avec support multi-langue
+- **`index.md`** - Page d'accueil
+- **`resume.md`** - Page CV
 
-### `_posts/`
-Articles de blog au format :
-- Nommage : `YYYY-MM-DD-titre.md`
-- Front matter avec métadonnées
-- Contenu en Markdown
-
-## 🚀 Scripts et outils
-
-### `start_server.sh`
-Script de démarrage du serveur :
-- Activation d'asdf et Ruby
-- Construction du site
-- Démarrage du serveur de développement
-
-### `Makefile`
-Commandes Make pour :
-- Installation des dépendances
-- Construction et nettoyage
-- Démarrage du serveur
-- Build de production
-
-## 🌐 Déploiement
+## 🚀 Déploiement
 
 ### GitHub Actions
-Workflow automatique dans `.github/workflows/deploy.yml` :
-- Déclenché sur push vers main
-- Build automatique avec Ruby 3.3.5
-- Déploiement sur GitHub Pages
-
-### Configuration de production
-Variables d'environnement :
-- `JEKYLL_ENV=production`
-- Optimisations activées
-- Minification et compression
-
-## 📱 Responsive Design
-
-### CSS personnalisé
-Fichier `assets/css/main.css` avec :
-- Design responsive
-- Système de grille
-- Typographie moderne
-- Navigation mobile-friendly
-
-## 🔍 Fonctionnalités
-
-### Plugins Jekyll
-- **jekyll-feed** : Flux RSS automatique
-- **kramdown** : Processeur Markdown
-- **liquid** : Moteur de templates
-
-### Fonctionnalités du site
-- Navigation responsive
-- Blog avec articles
-- Pages statiques
-- Flux RSS
-- Design moderne et accessible
-
-## 🛠️ Maintenance
+- **Build automatique** sur push vers main
+- **Sync Notion** quotidien via cron
+- **Déploiement** automatique sur GitHub Pages
 
 ### Commandes utiles
 ```bash
 # Développement
-make serve          # Démarrer le serveur
-make build          # Construire le site
-make clean          # Nettoyer les fichiers
+make serve          # Serveur de développement
+make build          # Build de développement
+make test           # Tests de qualité
 
 # Production
 make production     # Build de production
-./start_server.sh   # Script de démarrage
+make clean          # Nettoyer les fichiers
 ```
 
-### Surveillance des changements
-- Mode watch automatique en développement
-- Live reload pour les modifications CSS/HTML
-- Rebuild automatique des articles
+## 📚 Documentation
+
+### Guides principaux
+- **`CLAUDE.md`** - Guide pour assistants IA
+- **`docs/AGENTS.md`** - Conventions de développement
+- **`docs/TECHNICAL_GUIDE.md`** - Guide technique avancé
+- **`docs/DESIGN_SYSTEM.md`** - Système de design
+- **`docs/CONFORMITY_REPORT.md`** - Rapport de conformité
+
+### Fonctionnalités clés
+- **Multi-langue** : Français (défaut) + Anglais
+- **CMS** : Intégration Notion API
+- **Performance** : < 3s chargement, Lighthouse 95+
+- **Accessibilité** : WCAG 2.1 AA
+- **Responsive** : Mobile-first design

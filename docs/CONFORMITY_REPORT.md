@@ -2,7 +2,7 @@
 
 ## 🎯 Vue d'ensemble
 
-Ce rapport détaille la conformité du projet par rapport aux conventions définies dans `docs/conventions.md`. Le projet a été entièrement restructuré pour respecter les standards de qualité et d'architecture établis.
+Ce rapport détaille la conformité du projet par rapport aux conventions définies dans `docs/AGENTS.md`. Le projet a été entièrement restructuré pour respecter les standards de qualité et d'architecture établis.
 
 ## ✅ **CONFORMITÉ GLOBALE : 95%**
 
@@ -85,7 +85,6 @@ _sass/
 | **Configuration prod** | ✅ | _config_prod.yml |
 | **GitHub Actions** | ✅ | Workflow complet |
 | **Makefile** | ✅ | Commandes automatisées |
-| **Scripts** | ✅ | start_server.sh |
 
 **Workflows GitHub Actions :**
 - ✅ Build et déploiement automatique
@@ -154,7 +153,7 @@ make security
 
 ## 🎉 **Conclusion**
 
-Le projet est maintenant **95% conforme** aux conventions définies dans `docs/conventions.md`. L'architecture a été entièrement restructurée selon les meilleures pratiques :
+Le projet est maintenant **95% conforme** aux conventions définies dans `docs/AGENTS.md`. L'architecture a été entièrement restructurée selon les meilleures pratiques :
 
 - ✅ **Architecture modulaire** avec SCSS et composants BEM
 - ✅ **Support multi-langue** complet

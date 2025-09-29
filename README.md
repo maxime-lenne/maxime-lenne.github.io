@@ -1,8 +1,8 @@
 # Site Personnel - Maxime Lenne
 
-Ce repository contient mon site personnel créé avec [Jekyll](https://jekyllrb.com/), un générateur de sites statiques.
+Site portfolio statique construit avec Jekyll SSG, backend Notion CMS, et architecture JAMstack.
 
-## 🚀 Installation et démarrage
+## 🚀 Démarrage rapide
 
 ### Prérequis
 - Ruby 3.3.5 (géré par asdf)
@@ -10,81 +10,138 @@ Ce repository contient mon site personnel créé avec [Jekyll](https://jekyllrb.
 
 ### Installation des dépendances
 ```bash
-# Activer Ruby via asdf
-asdf current ruby
+# Installer toutes les dépendances
+make install
 
-# Installer les dépendances
-bundle install
+# Configuration rapide de développement
+make dev-setup
 ```
 
-### Démarrage du serveur local
+### Serveur de développement
 ```bash
-# Option 1: Utiliser le script de démarrage
-./start_server.sh
+# Démarrer le serveur (recommandé)
+make serve                    # http://localhost:4001 avec live reload
 
-# Option 2: Commande manuelle
-export PATH="$HOME/.asdf/bin:$PATH"
-export PATH="$HOME/.asdf/shims:$PATH"
-bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload
+# Alternative rapide
+make quick-serve             # Démarrage sans build initial
 ```
 
-Le site sera accessible sur [http://localhost:4000](http://localhost:4000)
-
-## 📁 Structure du projet
-
-```
-├── _layouts/          # Templates de mise en page
-├── _posts/            # Articles de blog
-├── assets/            # CSS, JS, images
-├── _config.yml        # Configuration Jekyll
-├── Gemfile           # Dépendances Ruby
-└── start_server.sh   # Script de démarrage
-```
-
-## 🛠️ Commandes utiles
-
+### Build et déploiement
 ```bash
-# Construire le site
-bundle exec jekyll build
-
-# Construire et surveiller les changements
-bundle exec jekyll build --watch
-
-# Nettoyer le cache
-bundle exec jekyll clean
+make build                   # Build de développement
+make production             # Build de production avec optimisations
+make test                   # Tests de qualité
+make clean                  # Nettoyer les fichiers générés
 ```
+
+## 📚 Documentation
+
+### Guides principaux
+- **`CLAUDE.md`** - Guide pour les assistants IA
+- **`docs/AGENTS.md`** - Conventions de développement complètes
+- **`docs/PROJECT_STRUCTURE.md`** - Structure détaillée du projet
+- **`docs/CONFORMITY_REPORT.md`** - Rapport de conformité actuel
+
+### Points clés du projet
+- **Multi-langue** : Français (défaut) + Anglais
+- **CMS** : Intégration Notion API pour le contenu
+- **Performance** : < 3s chargement, score Lighthouse 95+
+- **Architecture** : BEM + SCSS, mobile-first, accessibilité WCAG 2.1 AA
+
+## 🛠️ Stack Technique
+
+### Technologies principales
+- **Jekyll 4.3.x** - Générateur de site statique
+- **Ruby 3.3.5** - Runtime (géré par asdf)
+- **Node.js 22.11.0 LTS** - Pipeline d'assets
+- **Notion API** - Gestion de contenu
+- **GitHub Pages** - Hébergement
+- **GitHub Actions** - CI/CD
+
+### Plugins Jekyll
+- `jekyll-feed` - Flux RSS/Atom
+- `jekyll-sitemap` - Sitemap XML
+- `jekyll-seo-tag` - Optimisation SEO
+- `jekyll-compress-images` - Optimisation images
+- `jekyll-minifier` - Compression HTML/CSS/JS
 
 ## 📝 Ajouter du contenu
 
-### Nouvel article
-Créez un fichier dans `_posts/` avec le format :
-```
+### Articles de blog
+Créez un fichier dans `_collections/_posts/` :
+```markdown
 ---
 layout: post
 title: "Titre de l'article"
 date: YYYY-MM-DD
 categories: blog
+lang: fr
 ---
 ```
 
-### Nouvelle page
+### Pages statiques
 Créez un fichier Markdown avec le front matter :
-```
+```markdown
 ---
 layout: page
 title: "Titre de la page"
 permalink: /url-de-la-page/
+lang: fr
 ---
 ```
 
+### Support multi-langue
+- **Français** : `page.md` ou `page/index.md`
+- **Anglais** : `page.en.md` ou `page/index.en.md`
+- **Traductions** : Stockées dans `_data/translations.yml`
+
 ## 🎨 Personnalisation
 
-- Modifiez `_config.yml` pour changer les paramètres du site
-- Éditez `assets/css/main.css` pour personnaliser le style
-- Créez de nouveaux layouts dans `_layouts/`
+### Styles CSS/SCSS
+- **Variables** : `_sass/_variables.scss`
+- **Composants** : `_sass/components/`
+- **Méthodologie** : BEM (`.block__element--modifier`)
 
-## 📚 Ressources
+### Configuration
+- **Jekyll** : `_config.yml`
+- **Développement** : `_config.dev.yml`
+- **Production** : `_config_prod.yml`
+
+## 🔧 Commandes utiles
+
+### Développement
+```bash
+make serve            # Serveur de développement
+make build            # Build de développement
+make production       # Build de production
+make test             # Tests de qualité
+make clean            # Nettoyer les fichiers
+```
+
+### Optimisation
+```bash
+npm run optimize:images      # Optimiser les images
+npm run minify:assets       # Minifier les assets
+npm run generate:favicons   # Générer les favicons
+```
+
+## 📋 Checklist de développement
+
+- [ ] Code suit les guidelines BEM et SCSS
+- [ ] Les deux langues testées (FR/EN)
+- [ ] Aucun lien cassé
+- [ ] Images optimisées et responsives
+- [ ] Score Lighthouse > 95
+- [ ] Documentation mise à jour
+- [ ] Message de commit suit la convention
+
+## 🔗 Ressources
 
 - [Documentation Jekyll](https://jekyllrb.com/docs/)
-- [Liquid Template Language](https://shopify.github.io/liquid/)
-- [Markdown](https://www.markdownguide.org/)
+- [API Notion](https://developers.notion.com/reference)
+- [GitHub Actions](https://docs.github.com/en/actions)
+- [Web.dev Performance](https://web.dev/performance/)
+
+---
+
+*Pour plus de détails, consultez la documentation dans le dossier `docs/`*
