@@ -9,7 +9,8 @@
         {{ include.description | default: "Discutons de votre projet et voyons comment je peux vous aider." }}
       </p>
       <div class="section__actions">
-        {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
+        {% assign cta_text = include.cta_text | default: "Faisons connaissance" %}
+        {% include components/cta-button.html size="large" text=cta_text icon="arrow" %}
       </div>
     </div>
   </div>

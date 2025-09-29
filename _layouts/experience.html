@@ -1,0 +1,170 @@
+---
+layout: figma
+---
+<section class="section section--light" id="experience">
+    <div class="section__container">
+      <div class="section__header">
+        <div class="card-experience">
+            
+            {% if page.logo_url %}
+                <div class="card-experience__logo card-experience__logo--img">
+                    <img src="{{ page.logo_url }}" alt="{{ page.company }} logo" class="card-experience__logo-img">
+                </div>
+            {% else %}
+                <div class="card-experience__logo">
+                    <div class="card-experience__logo-placeholder">
+                    {{ page.company | slice: 0, 2 | upcase }}
+                    </div>
+                </div>
+            {% endif %}
+            
+            <div class="card-experience__content">
+                <div class="card-experience__header">
+                <div class="card-experience__title-section">
+                    <h3 class="card-experience__role">{{ page.role }}</h3>
+                    <span class="card-experience__company">{{ page.company }}</span>
+                </div>
+                <div class="card-experience__date">
+                    <span class="card-experience__duration">{{ page.start_date | date: "%Y" }} - {{ page.end_date | date: "%Y" }}</span>
+                    {% if page.current %}
+                    <span class="card-experience__current">Présent</span>
+                    {% endif %}
+                </div>
+                </div>
+
+                <p class="card-experience__description">{{ page.description }}</p>
+                
+                
+                {% if page.tags %}
+                    <div class="card-experience__tags">
+                        {% for tag in page.tags %}
+                        {% include components/badge.html text=tag %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                
+                {% if page.achievements %}
+                    <div class="card-experience__achievements">
+                    {% for achievement in page.achievements %}
+                        <div class="card-experience__achievement">
+                        <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
+                        </svg>
+                        <span>{{ achievement }}</span>
+                        </div>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% if page.skills %}
+                    <div class="card-experience__skills">
+                    {% for skill in page.skills %}
+                        {% include components/badge.html text=skill %}
+                    {% endfor %}
+                    </div>
+                {% endif %}
+                
+                <div class="card-experience__actions">
+                {% include components/cta-button.html style="secondary" text="En savoir plus" url=page.url %}
+                </div>
+            </div>
+        </div>
+
+        <article class="experience-detail">
+
+            <header class="experience-detail__header">
+                <h1 class="experience-detail__title">{{ page.role }}</h1>
+                <p class="experience-detail__period">
+                {{ page.start_date }} - {{ page.current | default: page.end_date }}
+                </p>
+            </header>
+
+            <aside class="experience-detail__aside">
+                {% if page.logo_url %}
+                    <div class="card-experience__logo card-experience__logo--img">
+                        <img src="{{ page.logo_url }}" alt="{{ page.company }} logo" class="card-experience__logo-img">
+                    </div>
+                {% else %}
+                    <div class="card-experience__logo">
+                        <div class="card-experience__logo-placeholder">
+                        {{ page.company | slice: 0, 2 | upcase }}
+                        </div>
+                    </div>
+                {% endif %}
+                <h2 class="experience-detail__company">{{ page.company }}</h2>
+                <p class="experience-detail__location">{{ page.location }}</p>
+                <p class="experience-detail__type">{{ page.type }}</p>
+                <p class="experience-detail__about">{{ page.about }}</p>
+            </aside>
+
+            <div class="experience-detail__content">
+                <p class="experience-detail__description">{{ page.description }}</p>
+                
+                {% if page.sub-roles %}
+                <section class="experience-detail__sub-roles">
+                    <h3>Sub-roles</h3>
+                    {% if page.sub-roles %}
+                        <div class="card-experience__sub-roles">
+                            {% for sub-role in page.sub-roles %}
+                                <div class="card-experience__sub-role">
+                                    <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
+                                    </svg>
+                                    <span>{{ sub-role }}</span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </section>
+                {% endif %}
+                
+                {% if page.achievements %}
+                <section class="experience-detail__achievements">
+                    <h3>Principales réalisations</h3>
+                    {% if page.achievements %}
+                        <div class="card-experience__achievements">
+                        {% for achievement in page.achievements %}
+                            <div class="card-experience__achievement">
+                            <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
+                            </svg>
+                            <span>{{ achievement }}</span>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+
+                </section>
+                {% endif %}
+
+                {% if page.missions %}
+                <section class="experience-detail__missions">
+                    <h3>Principales missions</h3>
+                    {% if page.missions %}
+                        <div class="card-experience__missions">
+                            <ul>
+                        {% for mission in page.missions %}
+                            <li>{{ mission }}</li>
+                        {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                </section>
+                {% endif %}
+                
+                {% if page.skills %}
+                <section class="experience-detail__skills">
+                    <h3>Compétences utilisées</h3>
+                    <div class="skills-list">
+                    {% for skill in page.skills %}
+                        <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                    </div>
+                </section>
+                {% endif %}
+            </div>
+        </article>
+    </div>
+  </div>
+</section>

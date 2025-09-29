@@ -3,10 +3,10 @@
   <div class="section__container section__container--small">
     <div class="section__content">
       <h2 class="section__title">
-        Prêt à découvrir votre projet ?
+        {{ include.title | default: "Prêt à découvrir votre projet ?" }}
       </h2>
       <p class="section__description">
-        Transformons ensemble votre vision en réalité digitale. Planifiez dès aujourd'hui un rendez-vous.
+        {{ include.description | default: "Transformons ensemble votre vision en réalité digitale. Planifiez dès aujourd'hui un rendez-vous." }}
       </p>
       <div class="section__actions">
         {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}

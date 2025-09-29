@@ -67,7 +67,8 @@ collections:
     output: true
     permalink: /projects/:title/
   experiences:
-    output: false  # Ne génère pas de pages individuelles
+    output: true  # ✅ Active les pages individuelles
+    permalink: /experiences/:slug/
   skills:
     output: false  # Collection de données seulement
   education:
@@ -96,6 +97,12 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      author: "Maxime Lenne"
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: "experience"
       author: "Maxime Lenne"
   - scope:
       path: ""

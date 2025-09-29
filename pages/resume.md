@@ -70,11 +70,14 @@ lang: fr
           item3_text=" la tech au service de résultats concrets pour les utilisateurs, les équipes et le business" %}
         {% include components/list-horizontal-icon.html 
           item1_title="Partenaire du business"
-          item1_text="Sparring partner sur la vision, roadmaps, et stratégie. Challenger, prioriser, anticiper les impacts techniques dans la stratégie de l'entreprise..."
+          item1_text="Sparring partner ! Challenger, prioriser, anticiper les impacts techniques dans la stratégie de l'entreprise..."
           item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>'
           item2_title="Mindset et culture produit"
           item2_text="Fan de tests, de discovery, d’itérations rapides et d’équipes autonomes" %}
       </div>
+      
+      {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
+      
     </div>
   </div>
 </section>
@@ -109,7 +112,8 @@ lang: fr
              tags=experience.tags
              achievements=experience.achievements
              logo_url=experience.logo_url
-             details=experience.details %}
+             details=experience.details
+             url=experience.url %}
       {% endfor %}
     </div>
     
@@ -187,7 +191,8 @@ lang: fr
   </div>
 </section>
 
-{% include sections/final-cta-section.html %}
+{% include sections/final-cta-section.html title="Pret à me partager la vision de votre entreprise ?" %}
+<!-- , roadmaps, et stratégie  -->
 
 <!-- Contributions & Projects Section -->
 <section class="section section--light">
@@ -245,125 +250,120 @@ lang: fr
 </section>
 
 <!-- CTA Section -->
-<section class="section section--dark section--secondary" id="education-awards">
-    <div class="section__container">
-        <div class="section__grid section__grid--2-col">
-            <div class="section__content">
-                    {% include components/section-header.html 
-                        badge_icon="🎓"
-                        badge_text="Reconnaissance"
-                        show_badge="false"
-                        title="Formation & "
-                        title_highlight="Certifications" %}
-                <div class="figma-cv-education__grid">
-                {% assign sorted_education = site.education | sort: 'order' %}
-                {% for education in sorted_education %}
-                <div class="figma-cv-education__item">
-                    <div class="figma-cv-education__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        {% if education.degree_type == 'DUT' %}
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                        <path d="M6 12v5c3 3 9 3 9 0v-5"/>
-                        {% else %}
-                        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
-                        <polyline points="14 2 14 8 20 8"/>
-                        <line x1="16" y1="13" x2="8" y2="13"/>
-                        <line x1="16" y1="17" x2="8" y2="17"/>
-                        <polyline points="10 9 9 9 8 9"/>
-                        {% endif %}
-                    </svg>
-                    </div>
-                    <div class="figma-cv-education__content">
-                    <h3 class="figma-cv-education__degree">{{ education.title }}</h3>
-                    {% if education.institution != 'Diverses' %}
-                    <p class="figma-cv-education__school">{{ education.institution }} - {{ education.description }}</p>
-                    {% else %}
-                    <p class="figma-cv-education__school">{{ education.description }}</p>
-                    {% endif %}
-                    {% if education.certifications %}
-                    <div class="figma-cv-education__certifications">
-                        {% for cert in education.certifications %}
-                        <div class="figma-cv-education__certification">
-                        <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date | date: "%Y" }})
-                        </div>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                    </div>
-                </div>
-                {% endfor %}
-                </div>
-                {% include components/section-header.html 
-                    badge_icon="🏆"
-                    badge_text="Reconnaissance"
-                    show_badge="false"
-                    title="Prix &"
-                    title_highlight="distinctions" %}
-                
-                {% assign sorted_awards = site.awards | sort: 'order' %}
-                {% for award in sorted_awards %}
-                <div class="figma-cv-awards__item">
-                    <div class="figma-cv-awards__icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                        <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                        <path d="M4 22h16"/>
-                        <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-                        <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-                        <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
-                    </svg>
-                    </div>
-                    <div class="figma-cv-awards__content">
-                    <h3 class="figma-cv-awards__title-item">{{ award.title }}</h3>
-                    <p class="figma-cv-awards__organization">{{ award.organization }} - {{ award.date | date: "%Y" }}</p>
-                    <p class="figma-cv-awards__description">{{ award.description }}</p>
-                    </div>
-                </div>
-                {% endfor %}
+<section class="section section--dark" id="education-awards">
+  <div class="section__container">
+    <div class="section__grid section__grid--2-col">
+      <div class="section__content">
+        {% include components/section-header.html 
+            badge_icon="🎓"
+            badge_text="Formation"
+            title="Formation & "
+            title_highlight="Certifications"
+            subtitle="🇫🇷 Français (Natif) - 🇬🇧 Anglais (Professionnel)" %}
+        <div class="figma-cv-education__grid">
+          {% assign sorted_education = site.education | sort: 'order' %}
+          {% for education in sorted_education %}
+          <div class="figma-cv-education__item">
+            <div class="figma-cv-education__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                {% if education.degree_type == 'DUT' %}
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 9 0v-5"/>
+                {% else %}
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                {% endif %}
+              </svg>
             </div>
-            <div class="section__side">
-            <div class="figma-cv-hero__languages">
-                <h3>Langues</h3>
-                <div class="figma-cv-hero__languages-list">
-                    <span class="figma-cv-hero__language">🇫🇷 Français (Natif)</span>
-                    <span class="figma-cv-hero__language">🇬🇧 Anglais (Professionnel)</span>
-                </div>
-                {% include components/section-header.html 
-                                        badge_icon="🧗‍♂️"
-                                        badge_text="Hobbies"
-                                        show_badge="false"
-                                        title="Centres d'"
-                                        title_highlight="Intérêts" %}
-                🚴 vélotafeur
-                <h3 class="section__title">
-                    Musique
-                </h3>
-                <div class="figma-cv-hero__languages-list">
-                    🎹 pratique le piano et déjà joué en groupe
-                </div>
-                <h3 class="section__title">
-                    Sports
-                </h3>
-                <div class="figma-cv-hero__languages-list">
-                    <span class="figma-cv-hero__language">🧗‍♂️ Escalade et plus spécifiquement le bloc</span>
-                    <span class="figma-cv-hero__language">🏃🏻‍♂️ Course à pied</span>
-                    <span class="figma-cv-hero__language">🏒 Roller Hockey</span>
-                    <span class="figma-cv-hero__language">⛵️ Voile</span>
-                    <span class="figma-cv-hero__language">🏂 Snowboard & ski</span>
-                    <span class="figma-cv-hero__language">Slackline</span>
-                </div>
+            <div class="figma-cv-education__content">
+              <h3 class="figma-cv-education__degree">{{ education.title }}</h3>
+              <p class="figma-cv-education__school">{{ education.institution }} - {{ education.start_date | date: "%Y" }}</p>
+              {% if education.certifications %}
+              <div class="figma-cv-education__certifications">
+                  {% for cert in education.certifications %}
+                  <div class="figma-cv-education__certification">
+                  <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date | date: "%Y" }})
+                  </div>
+                  {% endfor %}
+              </div>
+              {% endif %}
             </div>
-            
-                    
-            </div>
+          </div>
+          {% endfor %}
         </div>
+      </div>
+      <div class="section__content">
+        {% include components/section-header.html 
+              badge_icon="🏆"
+              badge_text="Reconnaissance"
+              title="Prix &"
+              title_highlight="distinctions" %}
+          
+        {% assign sorted_awards = site.awards | sort: 'order' %}
+        {% for award in sorted_awards %}
+          <div class="figma-cv-awards__item">
+              <div class="figma-cv-awards__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                    <path d="M4 22h16"/>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+                </svg>
+              </div>
+              <div class="figma-cv-awards__content">
+                <h3 class="figma-cv-awards__title-item">{{ award.title }}</h3>
+                <p class="figma-cv-awards__organization">{{ award.organization }} - {{ award.date | date: "%Y" }}</p>
+              </div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="section section--light" id="interests">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="figma-cv-hero__languages">
+        
+        {% include components/section-header.html 
+                                badge_icon="🧗‍♂️"
+                                badge_text="Hobbies"
+                                show_badge="false"
+                                title="Centres d'"
+                                title_highlight="Intérêts" %}
+        {% include components/cta-info.html 
+         item1_icon="🚴" item1_text="vélotafeur"
+         item2_icon="🌱" item2_text="Ecoconception et green IT"
+         item3_icon="🍎" item3_text="Apple" %}
+         
+        <h3 class="section__title">
+            Musique
+        </h3>
+        {% include components/cta-info.html 
+         item1_icon="🎧" item1_text="Ecoute, concerts"
+         item2_icon="🎹" item2_text="Piano & synthé" %}
+        <h3 class="section__title">
+            Sports
+        </h3>
+        {% include components/cta-info.html 
+         item1_icon="🧗‍♂️" item1_text="Escalade, surtout bloc"
+         item2_icon="🏂" item2_text="Snowboard & ski"
+         item3_icon="🏒" item3_text="Roller Hockey"
+         item4_icon="⛵️" item4_text="Voile" %}
+      </div>
+    </div>
+  </div> 
 </section>
 
 <!-- Final CTA Section -->
 {% include sections/cta-section.html title="Intéressé par mon profil ?" 
-description="Discutons ensemble de vos projets et de la façon dont je peux 
-contribuer à leur succès." cta_text="Planifier un entretien" %}
+description="Présentez moi vos projets, problématiques, objectifs et discutons ensemble de la façon dont je peux contribuer à leur succès." cta_text="Planifier un entretien" %}
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

@@ -371,76 +371,6 @@
     }
   }
 
-  // ===== EXPERIENCE MODAL MANAGER =====
-  class ExperienceModalManager {
-    constructor() {
-      this.init();
-    }
-
-    init() {
-      // Handle expand buttons
-      document.addEventListener('click', (e) => {
-        const expandBtn = e.target.closest('.card-experience__expand-btn');
-        if (expandBtn) {
-          e.preventDefault();
-          const modalId = expandBtn.getAttribute('data-expand');
-          this.openModal(modalId);
-        }
-
-        // Handle modal close
-        const closeBtn = e.target.closest('.card-experience__modal-close');
-        if (closeBtn) {
-          e.preventDefault();
-          this.closeModal(closeBtn.closest('.card-experience__modal'));
-        }
-
-        // Handle backdrop click
-        const modal = e.target.closest('.card-experience__modal');
-        if (modal && e.target === modal) {
-          this.closeModal(modal);
-        }
-      });
-
-      // Handle escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          const openModal = document.querySelector('.card-experience__modal[style*="block"]');
-          if (openModal) {
-            this.closeModal(openModal);
-          }
-        }
-      });
-    }
-
-    openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-        
-        // Update expand button state
-        const expandBtn = document.querySelector(`[data-expand="${modalId}"]`);
-        if (expandBtn) {
-          expandBtn.setAttribute('aria-expanded', 'true');
-        }
-      }
-    }
-
-    closeModal(modal) {
-      if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-        
-        // Update expand button state
-        const modalId = modal.id;
-        const expandBtn = document.querySelector(`[data-expand="${modalId}"]`);
-        if (expandBtn) {
-          expandBtn.setAttribute('aria-expanded', 'false');
-        }
-      }
-    }
-  }
-
   // ===== INITIALIZATION =====
   class App {
     constructor() {
@@ -465,7 +395,6 @@
       new SmoothScroll();
       new FormEnhancer();
       new PerformanceOptimizer();
-      new ExperienceModalManager();
 
       // Add loaded class to body for CSS transitions
       document.body.classList.add('loaded');

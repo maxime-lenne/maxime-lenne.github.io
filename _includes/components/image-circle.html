@@ -6,7 +6,7 @@
       <div class="image-circle__decoration image-circle__decoration--2"></div>
     </div>
     <div class="image-circle__image-container">
-      <img src="{{ include.image_url | default: site.baseurl | append: '/assets/images/desk.jpeg' }}" 
+      <img src="{{ include.image_url | default: '/assets/images/desk.jpeg' }}" 
            alt="{{ include.image_alt | default: 'Workspace développeur' }}" 
            class="image-circle__image">
     </div>

@@ -3,7 +3,7 @@
   <div class="image-secondary__image-wrapper">
     <div class="image-secondary__image-bg"></div>
     <div class="image-secondary__image-container">
-      <img src="{{ include.image_url | default: site.baseurl | append: '/assets/images/avatar.jpeg' }}" 
+      <img src="{{ include.image_url | default: '/assets/images/avatar.jpeg' }}" 
            alt="{{ include.image_alt | default: 'Portrait développeur' }}" 
            class="image-secondary__image">
     </div>

@@ -33,7 +33,7 @@
     {% if include.tags %}
       <div class="card-experience__tags">
         {% for tag in include.tags limit: 3 %}
-          {% include components/badge.html style="services" text=tag %}
+          {% include components/badge.html text=tag %}
         {% endfor %}
       </div>
     {% endif %}
@@ -59,22 +59,13 @@
     </div>
     {% endif %}
     
-    {% if include.achievements.size > 3 or include.details %}
     <div class="card-experience__actions">
-      <button class="card-experience__expand-btn" data-expand="experience-{{ include.id | default: forloop.index }}">
-        <span class="card-experience__expand-text">En savoir plus</span>
-        <svg class="card-experience__expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path d="M7 13l3 3 7-7"/>
-          <path d="M7 6l3 3 7-7"/>
-        </svg>
-      </button>
+      {% include components/cta-button.html style="secondary" text="En savoir plus" url=include.url %}
     </div>
-    {% endif %}
   </div>
 </div>
 
 <!-- Modal pour les détails supplémentaires -->
-{% if include.achievements.size > 3 or include.details %}
 <div class="card-experience__modal" id="experience-{{ include.id | default: forloop.index }}" style="display: none;">
   <div class="card-experience__modal-content">
     <div class="card-experience__modal-header">
@@ -108,4 +99,3 @@
     </div>
   </div>
 </div>
-{% endif %}

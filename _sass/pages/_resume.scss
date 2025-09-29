@@ -217,13 +217,16 @@
   }
   
   &__category {
-    background: var(--figma-bg-secondary);
+    background: linear-gradient(135deg, #1e40af 0%, #16a34a 100%);
     border-radius: 16px;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     
     [data-theme="light"] & {
       border-color: rgba(0, 0, 0, 0.1);
+      .figma-cv-skills__category-title, .figma-cv-skills__list {
+        color: white;
+      }
     }
   }
   
@@ -235,7 +238,9 @@
     font-weight: 700;
     color: var(--figma-text-primary);
     margin-bottom: 20px;
-    
+    [data-theme="light"] & {
+        color: var(white);
+    }
     svg {
       width: 24px;
       height: 24px;
@@ -373,7 +378,7 @@
   &__icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    //background: linear-gradient(135deg, #fbbf24, #f59e0b);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -699,5 +704,12 @@
       color: var(--figma-secondary);
       font-weight: 900;
     }
+  }
+}
+
+#interests {
+  .cta-info {
+    font-size: var(--text-lg);
+    margin-bottom: 1.5rem;
   }
 }

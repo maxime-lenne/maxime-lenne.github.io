@@ -327,6 +327,12 @@
     letter-spacing: -0.01em;
   }
   
+  .section__description {
+    color: white;
+    [data-theme="dark"] & {
+      color: var(--color-text-secondary);
+    }
+  }
   .section__container--dark-background {
     .section__description {
       text-align: left;

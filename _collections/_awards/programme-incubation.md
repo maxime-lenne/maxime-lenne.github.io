@@ -1,10 +1,10 @@
 ---
-title: "Programme d'accélération Euratechnologies"
+title: "Programme d'incubation Euratechnologies"
 organization: "Euratechnologies"
-date: "2015-06-01"
-order: 1
+date: "2012-06-01"
+order: 3
 project: "EcoTa.co"
-description: "Sélection pour le programme d'accélération d'Euratechnologies avec EcoTa.co. Programme d'accompagnement pour startups tech."
+description: "Sélection pour le programme d'incubation d'Euratechnologies avec EcoTa.co. Programme d'accompagnement pour startups tech."
 achievements:
   - "Sélection parmi 200+ candidatures"
   - "Accompagnement business et technique"

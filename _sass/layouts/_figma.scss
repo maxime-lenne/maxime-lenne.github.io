@@ -162,9 +162,7 @@ body.nav-open {
 
 #education-awards {
   .section__grid--2-col {
-    grid-template-columns: 1fr;
     @media (min-width: 968px) {
-      grid-template-columns: 2.5fr 1fr;
       gap: 80px;
     }
   }
