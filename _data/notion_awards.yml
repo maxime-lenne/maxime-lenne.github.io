@@ -1,0 +1,61 @@
+# Données des awards importées depuis Notion
+# Généré automatiquement - Ne pas modifier manuellement
+# Last updated: 2025-09-30 23:25:24
+
+---
+- title: Programme d'accélération Euratechnologies
+  organization: Euratechnologies
+  date:
+  order: 1
+  project: EcoTa.co
+  description: Sélection pour le programme d'accélération d'Euratechnologies avec
+    EcoTa.co. Programme d'accompagnement pour startups tech.
+  achievements:
+  - Sélection parmi 200+ candidatures
+  - Accompagnement business et technique
+  - Mentorat par des experts
+  - Accès à un réseau d'entrepreneurs
+  impact: Développement accéléré de la startup et structuration de l'équipe technique
+  id: collection_3
+- title: Lauréat LMI
+  organization: LMI
+  date:
+  order: 2
+  project: EcoTa.co
+  description: Multiples reconnaissances dans l'écosystème startup et innovation.
+    Participations à des concours et événements tech.
+  achievements:
+  - Finaliste concours innovation régional
+  - Speaker dans des événements tech
+  - Mentor pour jeunes entrepreneurs
+  - Jury dans des hackathons
+  impact: Contribution à l'écosystème entrepreneurial local
+  id: collection_2
+- title: Programme d'incubation Euratechnologies
+  organization: Euratechnologies
+  date:
+  order: 3
+  project: EcoTa.co
+  description: Sélection pour le programme d'incubation d'Euratechnologies avec EcoTa.co.
+    Programme d'accompagnement pour startups tech.
+  achievements:
+  - Sélection parmi 200+ candidatures
+  - Accompagnement business et technique
+  - Mentorat par des experts
+  - Accès à un réseau d'entrepreneurs
+  impact: Développement accéléré de la startup et structuration de l'équipe technique
+  id: collection_0
+- title: Lauréat Startup Weekend
+  organization: Startup Weekend
+  date:
+  order: 4
+  project: Projet innovation
+  description: Victoire lors d'un Startup Weekend avec un projet d'innovation technologique.
+    Compétition de 54h pour créer une startup.
+  achievements:
+  - 1ère place sur 15 projets
+  - Développement d'un MVP en 54h
+  - Présentation devant jury d'experts
+  - Prix du public
+  impact: Validation des compétences entrepreneuriales et techniques
+  id: collection_1

@@ -1,0 +1,72 @@
+# Données des education importées depuis Notion
+# Généré automatiquement - Ne pas modifier manuellement
+# Last updated: 2025-09-30 23:27:15
+
+---
+- title: Spring 3 et Tapestry 5
+  institution: Atos Origin
+  degree_type:
+  location: Lyon
+  field: Spring 3 et Tapestry 5
+  start_date:
+  end_date:
+  completed: false
+  order: 1
+  description: Spring 3 et Tapestry 5
+  skills:
+  - Spring 3
+  - Tapestry 5
+  id: collection_3
+- title: 'Java et Architectures JEE complexes : Spring Hibernate JSF'
+  institution: Diverses
+  degree_type:
+  location: Paris
+  field: 'Java et Architectures JEE complexes : Spring Hibernate JSF'
+  start_date:
+  end_date:
+  completed: false
+  order: 2
+  description: 'Java et Architectures JEE complexes : Spring Hibernate JSF'
+  skills:
+  - Java
+  - JEE
+  - Spring
+  - Hibernate
+  - JSF
+  id: collection_1
+- title: Mainframe IBM CICS/MVS
+  institution: Diverses
+  degree_type:
+  location: Paris
+  field: Mainframe IBM CICS/MVS
+  start_date:
+  end_date:
+  completed: false
+  order: 3
+  description: Mainframe IBM CICS/MVS – JCL – TSO/ISPF – COBOL II TP et BATCH – PACBASE
+    - DB2
+  skills:
+  - Mainframe IBM CICS/MVS
+  - JCL
+  - TSO/ISPF
+  - COBOL II TP et BATCH
+  - PACBASE - DB2
+  id: collection_2
+- title: DUT Génie Électrique et Informatique Industrielle
+  institution: IUTA Lille 1
+  degree_type:
+  location: Lille
+  field: Génie Électrique et Informatique Industrielle
+  start_date:
+  end_date:
+  completed: true
+  order: 4
+  description: Formation technique en électronique et informatique industrielle. Acquisition
+    des bases solides en programmation, électronique et systèmes industriels.
+  skills:
+  - Programmation C/C++
+  - Électronique
+  - Systèmes embarqués
+  - Automatisme
+  - Réseaux industriels
+  id: collection_0

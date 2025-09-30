@@ -1,0 +1,52 @@
+# Données des services importées depuis Notion
+# Généré automatiquement - Ne pas modifier manuellement
+# Last updated: 2025-09-30 23:25:24
+
+---
+- title: Stratégie Produit
+  icon: "\U0001F3AF"
+  order: 1
+  description: Définissez une roadmap produit claire et alignée avec vos objectifs
+    business. De l'idée à la mise sur le marché.
+  features:
+  - Tech advisor
+  - 'Tech Product Leader '
+  - Product Builder
+  feature_type:
+  keywords:
+  - Go-to-market
+  - MVP
+  - Nocode / IA
+  id: collection_0
+- title: Accélération Tech
+  icon: "⚡"
+  order: 2
+  description: Optimisez votre stack technique et accélérez votre développement produit.
+    Dette technique, refonte...
+  features:
+  - CTO as a Service
+  - CTO de transition
+  - Tech Leader
+  - Architect
+  feature_type:
+  keywords:
+  - Architecture
+  - Cloud & Devops
+  - Développement full stack
+  id: collection_1
+- title: Conseil & Coaching
+  icon: "\U0001F680"
+  order: 3
+  description: Prenez de la hauteur avec un regard extérieur sur votre organisation,
+    pratiques tech et product. Accompagnement personnalisé et formation sur mesure.
+  features:
+  - Tech advisor
+  - Sparing partner
+  - Formation équipes
+  feature_type:
+  keywords:
+  - Craftmanship
+  - Agilité
+  - Orga
+  - Productivité
+  id: collection_2

@@ -13,6 +13,11 @@ Créez un fichier `.env` à la racine du projet (non commité) :
 NOTION_TOKEN=secret_xxx
 NOTION_SKILLS_DB=xxx
 NOTION_EXPERIENCES_DB=xxx
+NOTION_AWARDS_DB=xxx
+NOTION_CONTRIBUTIONS_DB=xxx
+NOTION_EDUCATIONS_DB=xxx
+NOTION_SERVICES_DB=xxx
+NOTION_TESTIMONIALS_DB=xxx
 ```
 
 ### 2. Obtenir le token Notion
@@ -82,6 +87,79 @@ Votre base de données Experiences doit contenir les propriétés suivantes :
 | **Achievements** | Rich Text | Réalisations | "Croissance de 20% du CA..." |
 | **Missions** | Rich Text | Missions | "Direction d'une équipe de 35+ consultants..." |
 | **Sub Roles** | Rich Text | Rôles secondaires | "Auditeur", "Tech leader" |
+
+### Base de Données Awards
+
+Votre base de données Awards doit contenir les propriétés suivantes :
+
+| Propriété | Type | Description | Exemple |
+|-----------|------|-------------|---------|
+| **Title** | Title | Titre de la récompense | "Programme d'accélération Euratechnologies" |
+| **Organization** | Text | Organisation | "Euratechnologies" |
+| **Date** | Date | Date de la récompense | "2015-06-01" |
+| **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
+| **Project** | Text | Projet associé | "EcoTa.co" |
+| **Description** | Rich Text | Description | "Sélection pour le programme d'accélération..." |
+| **Achievements** | Multi-select | Réalisations | "Sélection parmi 200+ candidatures", "Accompagnement business" |
+| **Impact** | Rich Text | Impact | "Développement accéléré de la startup..." |
+
+### Base de Données Contributions
+
+Votre base de données Contributions doit contenir les propriétés suivantes :
+
+| Propriété | Type | Description | Exemple |
+|-----------|------|-------------|---------|
+| **Title** | Title | Titre de la contribution | "CTO bénévole en 2025 pour la Fédération National des Samu Sociaux" |
+| **Description** | Rich Text | Description | "Accompagnement de l'association..." |
+| **Links** | Text | Liens | "https://example.com" |
+| **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
+| **Achievements** | Multi-select | Réalisations | "Choix et migration nouvel hébergeur", "Mise en place Google workspace" |
+| **Labels** | Multi-select | Labels | "Cloud", "Scaleway", "Google workspace" |
+
+### Base de Données Educations
+
+Votre base de données Educations doit contenir les propriétés suivantes :
+
+| Propriété | Type | Description | Exemple |
+|-----------|------|-------------|---------|
+| **Title** | Title | Titre de la formation | "DUT Génie Électrique et Informatique Industrielle" |
+| **Institution** | Text | Établissement | "IUTA Lille 1" |
+| **Degree Type** | Text | Type de diplôme | "DUT" |
+| **Location** | Text | Localisation | "Lille" |
+| **Field** | Text | Domaine d'étude | "Génie Électrique et Informatique Industrielle" |
+| **Start Date** | Date | Date de début | "2001-09-01" |
+| **End Date** | Date | Date de fin | "2003-07-01" |
+| **Completed** | Checkbox | Formation terminée | ✓ (coché si oui) |
+| **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
+| **Description** | Rich Text | Description | "Formation technique en électronique..." |
+| **Skills** | Multi-select | Compétences acquises | "Programmation C/C++", "Électronique", "Systèmes embarqués" |
+
+### Base de Données Services
+
+Votre base de données Services doit contenir les propriétés suivantes :
+
+| Propriété | Type | Description | Exemple |
+|-----------|------|-------------|---------|
+| **Title** | Title | Titre du service | "Stratégie Produit" |
+| **Icon** | Text | Icône | "🎯" |
+| **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
+| **Description** | Rich Text | Description | "Définissez une roadmap produit claire..." |
+| **Features** | Multi-select | Fonctionnalités | "Tech advisor", "Tech Product Leader", "Product Builder" |
+| **Feature Type** | Text | Type de fonctionnalité | "tags" |
+| **Keywords** | Multi-select | Mots-clés | "Go-to-market", "MVP", "Nocode / IA" |
+
+### Base de Données Testimonials
+
+Votre base de données Testimonials doit contenir les propriétés suivantes :
+
+| Propriété | Type | Description | Exemple |
+|-----------|------|-------------|---------|
+| **Name** | Title | Nom du client | "David Prilliez" |
+| **Role** | Text | Rôle du client | "Chef du SNDIL, Insee" |
+| **Image** | Text | URL de l'image | "https://media.licdn.com/..." |
+| **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
+| **Quote** | Rich Text | Témoignage | "Un grand merci pour ton travail..." |
+| **Rating** | Number | Note (1-5) | 5 |
 
 ### Exemple de données
 
@@ -153,6 +231,11 @@ Ajoutez les secrets dans GitHub :
    - `NOTION_TOKEN` : Votre token Notion
    - `NOTION_SKILLS_DB` : L'ID de votre base de données Skills
    - `NOTION_EXPERIENCES_DB` : L'ID de votre base de données Experiences
+   - `NOTION_AWARDS_DB` : L'ID de votre base de données Awards
+   - `NOTION_CONTRIBUTIONS_DB` : L'ID de votre base de données Contributions
+   - `NOTION_EDUCATIONS_DB` : L'ID de votre base de données Educations
+   - `NOTION_SERVICES_DB` : L'ID de votre base de données Services
+   - `NOTION_TESTIMONIALS_DB` : L'ID de votre base de données Testimonials
 
 ## 📁 Fichiers Générés
 
@@ -160,8 +243,12 @@ Le plugin génère automatiquement :
 
 - **`_data/notion_skills.yml`** - Données des skills importées depuis Notion
 - **`_data/notion_experiences.yml`** - Données des expériences importées depuis Notion
-- **`site.data.notion_skills`** - Données accessibles dans Jekyll
-- **`site.data.notion_experiences`** - Données accessibles dans Jekyll
+- **`_data/notion_awards.yml`** - Données des récompenses importées depuis Notion
+- **`_data/notion_contributions.yml`** - Données des contributions importées depuis Notion
+- **`_data/notion_educations.yml`** - Données des formations importées depuis Notion
+- **`_data/notion_services.yml`** - Données des services importées depuis Notion
+- **`_data/notion_testimonials.yml`** - Données des témoignages importées depuis Notion
+- **`site.data.notion_*`** - Données accessibles dans Jekyll pour chaque collection
 
 ### Structure des données générées
 
@@ -277,6 +364,139 @@ Frontend:
 {% endfor %}
 ```
 
+### Dans resume.md - Awards
+
+```liquid
+{% assign notion_awards = site.data.notion_awards %}
+{% for award in notion_awards %}
+  <div class="award">
+    <h3>{{ award.title }}</h3>
+    <p class="organization">{{ award.organization }}</p>
+    <p class="date">{{ award.date | date: "%B %Y" }}</p>
+    <p class="description">{{ award.description }}</p>
+    
+    {% if award.achievements %}
+      <ul class="achievements">
+        {% for achievement in award.achievements %}
+          <li>{{ achievement }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endfor %}
+```
+
+### Dans resume.md - Contributions
+
+```liquid
+{% assign notion_contributions = site.data.notion_contributions %}
+{% for contribution in notion_contributions %}
+  <div class="contribution">
+    <h3>{{ contribution.title }}</h3>
+    <p class="description">{{ contribution.description }}</p>
+    
+    {% if contribution.achievements %}
+      <ul class="achievements">
+        {% for achievement in contribution.achievements %}
+          <li>{{ achievement }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    
+    {% if contribution.labels %}
+      <div class="labels">
+        {% for label in contribution.labels %}
+          <span class="label">{{ label }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endfor %}
+```
+
+### Dans resume.md - Educations
+
+```liquid
+{% assign notion_educations = site.data.notion_educations %}
+{% for education in notion_educations %}
+  <div class="education">
+    <h3>{{ education.title }}</h3>
+    <p class="institution">{{ education.institution }} - {{ education.location }}</p>
+    <p class="degree">{{ education.degree_type }} en {{ education.field }}</p>
+    <p class="period">
+      {{ education.start_date | date: "%B %Y" }}
+      {% if education.completed %}
+        - {{ education.end_date | date: "%B %Y" }}
+      {% else %}
+        - En cours
+      {% endif %}
+    </p>
+    <p class="description">{{ education.description }}</p>
+    
+    {% if education.skills %}
+      <div class="skills">
+        {% for skill in education.skills %}
+          <span class="skill">{{ skill }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endfor %}
+```
+
+### Dans resume.md - Services
+
+```liquid
+{% assign notion_services = site.data.notion_services %}
+{% for service in notion_services %}
+  <div class="service">
+    <h3>{% if service.icon %}{{ service.icon }} {% endif %}{{ service.title }}</h3>
+    <p class="description">{{ service.description }}</p>
+    
+    {% if service.features %}
+      <div class="features">
+        {% for feature in service.features %}
+          <span class="feature">{{ feature }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {% if service.keywords %}
+      <div class="keywords">
+        {% for keyword in service.keywords %}
+          <span class="keyword">{{ keyword }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endfor %}
+```
+
+### Dans resume.md - Testimonials
+
+```liquid
+{% assign notion_testimonials = site.data.notion_testimonials %}
+{% for testimonial in notion_testimonials %}
+  <div class="testimonial">
+    {% if testimonial.image %}
+      <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}" class="avatar">
+    {% endif %}
+    <blockquote>{{ testimonial.quote }}</blockquote>
+    <cite>
+      <strong>{{ testimonial.name }}</strong>
+      <span class="role">{{ testimonial.role }}</span>
+    </cite>
+    {% if testimonial.rating %}
+      <div class="rating">
+        {% for i in (1..testimonial.rating) %}
+          ⭐
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endfor %}
+```
+
 ### Accès aux données
 
 ```liquid
@@ -294,6 +514,35 @@ Frontend:
 {% for experience in site.data.notion_experiences %}
   {% if experience.current %}
     {{ experience.title }} chez {{ experience.company }}
+  {% endif %}
+{% endfor %}
+
+<!-- Toutes les récompenses -->
+{{ site.data.notion_awards }}
+
+<!-- Toutes les contributions -->
+{{ site.data.notion_contributions }}
+
+<!-- Toutes les formations -->
+{{ site.data.notion_educations }}
+
+<!-- Formations terminées -->
+{% for education in site.data.notion_educations %}
+  {% if education.completed %}
+    {{ education.title }} - {{ education.institution }}
+  {% endif %}
+{% endfor %}
+
+<!-- Tous les services -->
+{{ site.data.notion_services }}
+
+<!-- Tous les témoignages -->
+{{ site.data.notion_testimonials }}
+
+<!-- Témoignages avec 5 étoiles -->
+{% for testimonial in site.data.notion_testimonials %}
+  {% if testimonial.rating == 5 %}
+    {{ testimonial.name }} - {{ testimonial.quote }}
   {% endif %}
 {% endfor %}
 
@@ -320,6 +569,11 @@ Le plugin utilise automatiquement les collections Jekyll si :
 
 - **Skills** : `_collections/_skills/` → `site.data.notion_skills`
 - **Experiences** : `_collections/_experiences/` → `site.data.notion_experiences`
+- **Awards** : `_collections/_awards/` → `site.data.notion_awards`
+- **Contributions** : `_collections/_contributions/` → `site.data.notion_contributions`
+- **Educations** : `_collections/_educations/` → `site.data.notion_educations`
+- **Services** : `_collections/_services/` → `site.data.notion_services`
+- **Testimonials** : `_collections/_testimonials/` → `site.data.notion_testimonials`
 
 Cela garantit que le site fonctionne toujours, même sans connexion à Notion !
 
@@ -375,6 +629,11 @@ Le plugin est configuré pour se synchroniser automatiquement :
     NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
     NOTION_SKILLS_DB: ${{ secrets.NOTION_SKILLS_DB }}
     NOTION_EXPERIENCES_DB: ${{ secrets.NOTION_EXPERIENCES_DB }}
+    NOTION_AWARDS_DB: ${{ secrets.NOTION_AWARDS_DB }}
+    NOTION_CONTRIBUTIONS_DB: ${{ secrets.NOTION_CONTRIBUTIONS_DB }}
+    NOTION_EDUCATIONS_DB: ${{ secrets.NOTION_EDUCATIONS_DB }}
+    NOTION_SERVICES_DB: ${{ secrets.NOTION_SERVICES_DB }}
+    NOTION_TESTIMONIALS_DB: ${{ secrets.NOTION_TESTIMONIALS_DB }}
   run: bundle exec jekyll build --config _config.yml,_config_prod.yml
 ```
 

@@ -1,18 +1,18 @@
-# Données des expériences importées depuis Notion
+# Données des experiences importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2025-09-30 23:14:12
+# Last updated: 2025-09-30 23:26:33
 
 ---
 - title: CTO - Ippon
   company: Ippon
   role: CTO agence lille
-  start_date: '2024-01-01'
-  end_date: ''
+  start_date:
+  end_date:
   current: true
   location: Lille, France
   type: full-time
   order: 1
-  logo_url: "/assets/images/companies/ippon.jpg"
+  logo_url:
   description: Direction technique d'une agence de plus de 35 consultants réalisant
     des mission principalements en régis dans des grand groupe (Retail, banque...)
     et prestations de conseil pour l'INSEE et Décathlon
@@ -57,13 +57,13 @@
 - title: CTO - theTribe
   company: theTribe
   role: CTO agence Lille
-  start_date: '2022-01-01'
-  end_date: '2024-01-01'
+  start_date:
+  end_date:
   current: false
   location: Lille, France
   type: full-time
   order: 2
-  logo_url: "/assets/images/companies/thetribe.png"
+  logo_url:
   description: Management d'agence et stratégie produit. Développement d'équipe et
     direction technique. Leadership dans les partenariats technologiques et l'offre
     de services.
@@ -113,13 +113,13 @@
 - title: CPTO - Frizbiz
   company: Frizbiz / Homelife
   role: CPTO
-  start_date: '2019-01-01'
-  end_date: '2022-01-01'
+  start_date:
+  end_date:
   current: false
   location: Lille, France
   type: full-time
   order: 3
-  logo_url: "/assets/images/companies/frizbiz.jpeg"
+  logo_url:
   description: J'ai rejoint Frizbiz 6 ans après son lancement, lors de la création
     du poste de CTO. Je suis arrivé pour la conception d'un nouveau produit sur le
     modèle BtoB et BtoBtoC à destination des partenaires et avec pour objectif transverse
@@ -178,8 +178,8 @@
 - title: Formateur - Le Wagon
   company: Le Wagon
   role: Formateur
-  start_date: '2018-01-01'
-  end_date: '2019-01-01'
+  start_date:
+  end_date:
   current: false
   location: Lille, France
   type: freelance
@@ -204,8 +204,8 @@
 - title: Product Owner - Norauto
   company: Norauto
   role: Product Owner
-  start_date: '2017-01-01'
-  end_date: '2018-01-01'
+  start_date:
+  end_date:
   current: false
   location: France
   type: freelance
@@ -230,8 +230,8 @@
 - title: Co-fondateur - EcoTa.co
   company: EcoTa.co
   role: Co-fondateur
-  start_date: '2012-01-01'
-  end_date: '2017-01-01'
+  start_date:
+  end_date:
   current: false
   location: Lille, France
   type: startup

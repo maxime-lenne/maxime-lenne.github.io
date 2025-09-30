@@ -1,0 +1,98 @@
+# Données des contributions importées depuis Notion
+# Généré automatiquement - Ne pas modifier manuellement
+# Last updated: 2025-09-30 23:25:24
+
+---
+- title: CTO bénévole en 2025 pour la Fédération National des Samu Sociaux
+  description: Accompagnement de l'association dans leurs problématiques tech, rationalisation
+    des outils et couts, choix et migration nouvel hébergeur.
+  links: ''
+  order: 1
+  achievements:
+  - Choix et migration nouvel hébergeur.
+  - Mise en place Google workspace
+  labels:
+  - Cloud
+  - Scaleway
+  - Google workspace
+  id: collection_0
+- title: Dev Lille
+  description: Deux journées de conférences tech enrichies d'une dimension humaine
+    et environnementale, en harmonie avec les enjeux du monde actuel.
+  links: https://devlille.fr/
+  order: 2
+  achievements:
+  - Organisation et animation d'un stand 2024
+  - Relecture et séléction de plus de 400 propositions de conférences pour l'édition
+    2023.
+  - 2 années de sponsoring 2023 et 2024
+  labels:
+  - Review
+  - Conf & Talks
+  id: collection_5
+- title: Meetup / Table Ronde sur le Craftmanship
+  description: Pourquoi et comment déployer le craft à l'échelle dans un grand groupe
+    ?
+  links: https://lnkd.in/e8wC6JxD
+  order: 3
+  achievements:
+  - Animation de la table ronde avec 2 speakers
+  labels:
+  - Craftmanship
+  - Speaker
+  - Meetup
+  id: collection_2
+- title: Meetup No-Code France
+  description: Speaker sur le meetup pour un retours d'expériences sur la création
+    d'une offre NoCode chez theTribe
+  links: https://lnkd.in/e8wC6JxD
+  order: 4
+  achievements:
+  - Speaker sur le meetup pour un retours d'expériences sur la création d'une offre
+    NoCode chez theTribe
+  labels:
+  - no-code
+  - Speaker
+  - Meetup
+  id: collection_3
+- title: Speaker sur une table Ronde avec Strapi
+  description: retours d'expériences sur la création de MVP en moins de 3 mois, grâce
+    à l'utilisation du low-code et open-source
+  links: https://lnkd.in/e8wC6JxD
+  order: 5
+  achievements:
+  - Speaker avec le fondateur de Strapi sur la table ronde
+  labels:
+  - headless cms
+  - Speaker
+  - Strapi
+  id: collection_4
+- title: Meetup et événements auquel je participe et soutients
+  description: Meetup et événements auquel je participe et soutients
+  links: https://lnkd.in/e8wC6JxD
+  order: 6
+  achievements:
+  - 'Conférences et salons nationaux: Vivatecj, TechRocks summit, No-Code Summit,
+    Web 2 day, dot conférences, APIdays...'
+  - 'Meetup lillois : AI lille, craftmanship, front & beers, ch''ti js...'
+  - 'Conférences lilloises: DevLille, AgiLille, Cloud Nord...'
+  labels:
+  - Events
+  - Communautés
+  - Meetup
+  id: collection_1
+- title: TakeOff conference 2016
+  description: La conférence Take Off est un événement communautaire exclusif, destiné
+    aux développeurs et aux designers qui apprécient leurs métiers. Pendant deux jours,
+    plus de 250 personnes profiteront d'une seule liste de sujets chauds. Comment
+    notre plate-forme technologique - à savoir le Web - changera-t-elle dans les mois
+    à venir ? Apprenez tout à partir des meilleures sources de l'industrie - les membres
+    de la communauté qui font toute la magie.
+  links: ''
+  order: 7
+  achievements:
+  - Equipe organisatrice de la TakeOff conference 2016
+  labels:
+  - Tech
+  - Conf & Talks
+  id: collection_6
