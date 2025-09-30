@@ -10,7 +10,12 @@ module Jekyll
     priority :highest
 
     def generate(site)
-      return unless ENV['NOTION_TOKEN']
+      # Si pas de token Notion, utiliser directement les collections
+      unless ENV['NOTION_TOKEN']
+        Jekyll.logger.info "Notion:", "No NOTION_TOKEN found, using collections fallback"
+        use_collections_fallback(site)
+        return
+      end
       
       Jekyll.logger.info "Notion:", "Fetching data from Notion API..."
       
@@ -19,6 +24,9 @@ module Jekyll
         Jekyll.logger.info "Notion:", "Skills data fetched successfully"
       rescue => e
         Jekyll.logger.error "Notion:", "Error fetching data: #{e.message}"
+
+        Jekyll.logger.warn "Notion:", "Falling back to collections"
+        use_collections_fallback(site)
       end
     end
 
@@ -33,11 +41,20 @@ module Jekyll
       # Organiser les skills par catégorie (utilise les rollups directement)
       organized_skills = organize_skills_by_category(skills_data)
       
-      # Stocker dans site.data
-      site.data['notion_skills'] = organized_skills
-      
-      # Créer aussi un fichier de données pour le développement
-      create_skills_data_file(site, organized_skills)
+      # Vérifier s'il y a des données
+      if organized_skills && organized_skills.size > 0
+        # Stocker dans site.data
+        site.data['notion_skills'] = organized_skills
+        
+        # Créer aussi un fichier de données pour le développement
+        create_skills_data_file(site, organized_skills)
+        
+        Jekyll.logger.info "Notion:", "Skills data fetched successfully (#{organized_skills.size} categories)"
+      else
+        Jekyll.logger.warn "Notion:", "No skills data found, using fallback to collections"
+        # Utiliser les collections en fallback
+        use_collections_fallback(site)
+      end
     end
 
     def query_notion_database(database_id)
@@ -212,6 +229,21 @@ module Jekyll
       
       skills_file = File.join(data_dir, 'notion_skills.yml')
       
+      # Vérifier si le contenu a vraiment changé pour éviter les boucles
+      new_content = skills_data.to_yaml
+      if File.exist?(skills_file)
+        existing_content = File.read(skills_file)
+        # Extraire seulement le YAML (ignorer les commentaires)
+        yaml_start = existing_content.index("---\n")
+        if yaml_start
+          existing_yaml = existing_content[yaml_start..-1]
+          if existing_yaml.strip == new_content.strip
+            Jekyll.logger.info "Notion:", "Skills data unchanged, skipping file update"
+            return
+          end
+        end
+      end
+      
       File.open(skills_file, 'w') do |file|
         file.write("# Données des skills importées depuis Notion\n")
         file.write("# Généré automatiquement - Ne pas modifier manuellement\n")
@@ -219,10 +251,68 @@ module Jekyll
         
         # Convertir en YAML
         require 'yaml'
-        file.write(skills_data.to_yaml)
+        file.write(new_content)
       end
       
       Jekyll.logger.info "Notion:", "Skills data written to _data/notion_skills.yml"
+    end
+
+    def use_collections_fallback(site)
+      Jekyll.logger.info "Notion:", "Using collections fallback for skills"
+      
+      # Convertir les collections en format compatible avec Notion
+      organized_skills = {}
+      
+      # Parcourir les collections de skills
+      site.collections['skills'].docs.each_with_index do |skill_doc, doc_index|
+        data = skill_doc.data
+        
+        # Utiliser le titre comme clé de catégorie
+        category_key = data['title'] || 'Other'
+        
+        # Initialiser la catégorie si elle n'existe pas
+        organized_skills[category_key] ||= {
+          'title' => data['title'],
+          'category' => data['category'],
+          'subcategory' => nil,
+          'icon' => data['icon'],
+          'order' => data['order'] || 999,
+          'skills' => []
+        }
+        
+        # Ajouter chaque skill de la catégorie
+        if data['skills']
+          data['skills'].each_with_index do |skill, skill_index|
+            organized_skills[category_key]['skills'] << {
+              'name' => skill['name'],
+              'level' => skill['level'],
+              'years' => skill['years'],
+              'description' => nil,
+              'icon' => nil,
+              'color' => nil,
+              'featured' => false,
+              'order' => 999,
+              'id' => "collection_#{doc_index}_#{skill_index}"
+            }
+          end
+        end
+      end
+      
+      # Trier les catégories par order
+      organized_skills = organized_skills.sort_by { |_, data| data['order'] }.to_h
+      
+      # Trier les skills dans chaque catégorie par level (décroissant)
+      organized_skills.each do |_, data|
+        data['skills'].sort_by! { |skill| -(skill['level'] || 0) }
+      end
+      
+      # Stocker dans site.data
+      site.data['notion_skills'] = organized_skills
+      
+      # Créer le fichier de données
+      create_skills_data_file(site, organized_skills)
+      
+      Jekyll.logger.info "Notion:", "Collections fallback applied (#{organized_skills.size} categories)"
     end
   end
 end

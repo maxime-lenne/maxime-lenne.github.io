@@ -20,7 +20,7 @@ build: ## Construire le site en mode développement
 serve: ## Démarrer le serveur de développement avec live reload
 	@echo "🌐 Démarrage du serveur sur http://localhost:4001"
 	@echo "Appuyez sur Ctrl+C pour arrêter le serveur"
-	bundle exec jekyll serve --config _config.yml,_config.dev.yml
+	NOTION_TOKEN=$(shell cat .env | grep NOTION_TOKEN | cut -d '=' -f2) NOTION_SKILLS_DB=$(shell cat .env | grep NOTION_SKILLS_DB | cut -d '=' -f2) bundle exec jekyll serve --config _config.yml,_config.dev.yml
 
 clean: ## Nettoyer tous les fichiers générés
 	@echo "🧹 Nettoyage des fichiers..."

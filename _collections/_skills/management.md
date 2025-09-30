@@ -1,5 +1,5 @@
 ---
-title: "Management & Leadership"
+title: "Management & Leadership 2"
 category: "management"
 icon: "management"
 order: 1
