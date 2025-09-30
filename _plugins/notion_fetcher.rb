@@ -21,10 +21,10 @@ module Jekyll
       
       begin
         fetch_skills(site)
-        Jekyll.logger.info "Notion:", "Skills data fetched successfully"
+        fetch_experiences(site)
+        Jekyll.logger.info "Notion:", "All data fetched successfully"
       rescue => e
         Jekyll.logger.error "Notion:", "Error fetching data: #{e.message}"
-
         Jekyll.logger.warn "Notion:", "Falling back to collections"
         use_collections_fallback(site)
       end
@@ -53,7 +53,36 @@ module Jekyll
       else
         Jekyll.logger.warn "Notion:", "No skills data found, using fallback to collections"
         # Utiliser les collections en fallback
-        use_collections_fallback(site)
+        use_skills_collections_fallback(site)
+      end
+    end
+
+    def fetch_experiences(site)
+      if !ENV['NOTION_EXPERIENCES_DB'] || ENV['NOTION_EXPERIENCES_DB'] == 'example_experiences_db_id'
+      Jekyll.logger.info "Notion:", "No NOTION_EXPERIENCES_DB found or is example, using collections fallback"
+      use_experiences_collections_fallback(site)
+      return
+    end
+      
+      database_id = ENV['NOTION_EXPERIENCES_DB']
+      experiences_data = query_notion_database(database_id)
+      
+      # Organiser les expériences
+      organized_experiences = organize_experiences(experiences_data)
+      
+      # Vérifier s'il y a des données
+      if organized_experiences && organized_experiences.size > 0
+        # Stocker dans site.data
+        site.data['notion_experiences'] = organized_experiences
+        
+        # Créer aussi un fichier de données pour le développement
+        create_experiences_data_file(site, organized_experiences)
+        
+        Jekyll.logger.info "Notion:", "Experiences data fetched successfully (#{organized_experiences.size} experiences)"
+      else
+        Jekyll.logger.warn "Notion:", "No experiences data found, using fallback to collections"
+        # Utiliser les collections en fallback
+        use_experiences_collections_fallback(site)
       end
     end
 
@@ -70,15 +99,7 @@ module Jekyll
         page_size: 100,
         sorts: [
           {
-            property: 'Category Order',
-            direction: 'ascending'
-          },
-          {
             property: 'Order',
-            direction: 'ascending'
-          },
-          {
-            property: 'Name',
             direction: 'ascending'
           }
         ]
@@ -94,7 +115,6 @@ module Jekyll
       
       JSON.parse(response.body)
     end
-
 
     def organize_skills_by_category(notion_data)
       skills_by_category = {}
@@ -154,6 +174,62 @@ module Jekyll
       skills_by_category
     end
 
+    def organize_experiences(notion_data)
+      experiences = []
+      
+      notion_data['results'].each do |page|
+        properties = page['properties']
+        
+        # Extraire les propriétés de base
+        title = extract_text_property(properties, 'Title')
+        company = extract_text_property(properties, 'Company')
+        role = extract_text_property(properties, 'Role')
+        start_date = extract_date_property(properties, 'Start Date')
+        end_date = extract_date_property(properties, 'End Date')
+        current = extract_checkbox_property(properties, 'Current')
+        location = extract_text_property(properties, 'Location')
+        type = extract_text_property(properties, 'Type')
+        order = extract_number_property(properties, 'Order')
+        logo_url = extract_text_property(properties, 'Logo URL')
+        description = extract_text_property(properties, 'Description')
+        about = extract_text_property(properties, 'About')
+        
+        next if title.nil? || title.empty?
+        
+        # Extraire les tags et skills
+        tags = extract_multi_select_property(properties, 'Tags')
+        skills = extract_multi_select_property(properties, 'Skills')
+        
+        # Extraire les listes
+        achievements = extract_multi_text_property(properties, 'Achievements')
+        missions = extract_multi_text_property(properties, 'Missions')
+        sub_roles = extract_multi_text_property(properties, 'Sub Roles')
+        
+        experiences << {
+          'title' => title,
+          'company' => company,
+          'role' => role,
+          'start_date' => start_date,
+          'end_date' => end_date,
+          'current' => current,
+          'location' => location,
+          'type' => type,
+          'order' => order || 999,
+          'logo_url' => logo_url,
+          'description' => description,
+          'about' => about,
+          'tags' => tags || [],
+          'skills' => skills || [],
+          'achievements' => achievements || [],
+          'missions' => missions || [],
+          'sub_roles' => sub_roles || [],
+          'id' => page['id']
+        }
+      end
+      
+      # Trier par order
+      experiences.sort_by { |exp| exp['order'] || 999 }
+    end
 
     def extract_text_property(properties, property_name)
       property = properties[property_name]
@@ -189,6 +265,30 @@ module Jekyll
       else
         nil
       end
+    end
+
+    def extract_date_property(properties, property_name)
+      property = properties[property_name]
+      return nil unless property
+      
+      return nil unless property['type'] == 'date'
+      property['date']&.dig('start')
+    end
+
+    def extract_multi_select_property(properties, property_name)
+      property = properties[property_name]
+      return [] unless property
+      
+      return [] unless property['type'] == 'multi_select'
+      property['multi_select'].map { |item| item['name'] }
+    end
+
+    def extract_multi_text_property(properties, property_name)
+      property = properties[property_name]
+      return [] unless property
+      
+      return [] unless property['type'] == 'rich_text'
+      property['rich_text'].map { |text| text['plain_text'] }.compact
     end
 
     def extract_checkbox_property(properties, property_name)
@@ -257,7 +357,48 @@ module Jekyll
       Jekyll.logger.info "Notion:", "Skills data written to _data/notion_skills.yml"
     end
 
+    def create_experiences_data_file(site, experiences_data)
+      # Créer le fichier de données pour le développement
+      data_dir = File.join(site.source, '_data')
+      FileUtils.mkdir_p(data_dir) unless Dir.exist?(data_dir)
+      
+      experiences_file = File.join(data_dir, 'notion_experiences.yml')
+      
+      # Vérifier si le contenu a vraiment changé pour éviter les boucles
+      new_content = experiences_data.to_yaml
+      if File.exist?(experiences_file)
+        existing_content = File.read(experiences_file)
+        # Extraire seulement le YAML (ignorer les commentaires)
+        yaml_start = existing_content.index("---\n")
+        if yaml_start
+          existing_yaml = existing_content[yaml_start..-1]
+          if existing_yaml.strip == new_content.strip
+            Jekyll.logger.info "Notion:", "Experiences data unchanged, skipping file update"
+            return
+          end
+        end
+      end
+      
+      File.open(experiences_file, 'w') do |file|
+        file.write("# Données des expériences importées depuis Notion\n")
+        file.write("# Généré automatiquement - Ne pas modifier manuellement\n")
+        file.write("# Last updated: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        
+        # Convertir en YAML
+        require 'yaml'
+        file.write(new_content)
+      end
+      
+      Jekyll.logger.info "Notion:", "Experiences data written to _data/notion_experiences.yml"
+    end
+
     def use_collections_fallback(site)
+      Jekyll.logger.info "Notion:", "Using collections fallback for all data"
+      use_skills_collections_fallback(site)
+      use_experiences_collections_fallback(site)
+    end
+
+    def use_skills_collections_fallback(site)
       Jekyll.logger.info "Notion:", "Using collections fallback for skills"
       
       # Convertir les collections en format compatible avec Notion
@@ -312,7 +453,51 @@ module Jekyll
       # Créer le fichier de données
       create_skills_data_file(site, organized_skills)
       
-      Jekyll.logger.info "Notion:", "Collections fallback applied (#{organized_skills.size} categories)"
+      Jekyll.logger.info "Notion:", "Skills collections fallback applied (#{organized_skills.size} categories)"
+    end
+
+    def use_experiences_collections_fallback(site)
+      Jekyll.logger.info "Notion:", "Using collections fallback for experiences"
+      
+      # Convertir les collections en format compatible avec Notion
+      experiences = []
+      
+      # Parcourir les collections d'expériences
+      site.collections['experiences'].docs.each_with_index do |exp_doc, doc_index|
+        data = exp_doc.data
+        
+        experiences << {
+          'title' => data['title'],
+          'company' => data['company'],
+          'role' => data['role'],
+          'start_date' => data['start_date'],
+          'end_date' => data['end_date'],
+          'current' => data['current'] || false,
+          'location' => data['location'],
+          'type' => data['type'],
+          'order' => data['order'] || 999,
+          'logo_url' => data['logo_url'],
+          'description' => data['description'],
+          'about' => data['about'],
+          'tags' => data['tags'] || [],
+          'skills' => data['skills'] || [],
+          'achievements' => data['achievements'] || [],
+          'missions' => data['missions'] || [],
+          'sub_roles' => data['sub_roles'] || [],
+          'id' => "collection_#{doc_index}"
+        }
+      end
+      
+      # Trier par order
+      experiences.sort_by! { |exp| exp['order'] || 999 }
+      
+      # Stocker dans site.data
+      site.data['notion_experiences'] = experiences
+      
+      # Créer le fichier de données
+      create_experiences_data_file(site, experiences)
+      
+      Jekyll.logger.info "Notion:", "Experiences collections fallback applied (#{experiences.size} experiences)"
     end
   end
 end

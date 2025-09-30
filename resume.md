@@ -94,7 +94,7 @@ lang: fr
     </div>
     
     <div class="section__grid section__grid--2-col" id="experiences-grid">
-      {% assign sorted_experiences = site.experiences | sort: 'order' %}
+      {% assign sorted_experiences = site.data.notion_experiences %}
       {% assign total_experiences = sorted_experiences.size %}
       {% assign initial_display = 4 %}
       

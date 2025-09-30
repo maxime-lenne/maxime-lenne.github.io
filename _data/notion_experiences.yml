@@ -1,0 +1,256 @@
+# Données des expériences importées depuis Notion
+# Généré automatiquement - Ne pas modifier manuellement
+# Last updated: 2025-09-30 23:14:12
+
+---
+- title: CTO - Ippon
+  company: Ippon
+  role: CTO agence lille
+  start_date: '2024-01-01'
+  end_date: ''
+  current: true
+  location: Lille, France
+  type: full-time
+  order: 1
+  logo_url: "/assets/images/companies/ippon.jpg"
+  description: Direction technique d'une agence de plus de 35 consultants réalisant
+    des mission principalements en régis dans des grand groupe (Retail, banque...)
+    et prestations de conseil pour l'INSEE et Décathlon
+  about: 'Ippon est un cabinet de conseil et d’expertises en technologie, international
+    et indépendant. Ippon accompagne la transformation numérique des entreprises,
+    en les aidant à concevoir leur stratégie et à déployer leur roadmap à l''échelle,
+    afin de délivrer rapidement la valeur attendue. Ippon évolue sur plusieurs métiers
+    à travers les practices suivantes : Software Engineering, Cloud & Devops, Data
+    & IA, Modern Architecture, Mobile, Produit Agilité & Design'
+  tags:
+  - ESN
+  - Retail
+  skills:
+  - Leadership
+  - Management
+  - Craftmanship
+  - Craftmanship
+  - Python
+  - Flask
+  achievements:
+  - Direction d'une équipe de 5 managers et 35+ consultants
+  - Croissance de 20% du chiffre d'affaires malgrés un context économique tendu
+  - Assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie, codebase, architecture,
+    devops, communauté) dans 3 équipes lilloise de l'INSEE
+  missions:
+  - Accompagnement de l'équipe lilloise, recrutement, formation, coaching.
+  - Management des managers de l'équipe lilloise, entretiens individuels toutes les
+    deux semaines, ateliers d'équipe / co-construction, suivi des objectifs, entretiens
+    annuels
+  - 'Participer au développement de la visibilité et de la notoriété locale et nationale
+    d''Ippon : Stand au DevFest lille, animation d''une table ronde sur le craftmanship,
+    organisation et hébergement de meetup locaux, interview promotionnelle WeLoveDev'
+  - 'Missions clients à forte valeur ajoutée : Assessment Craft, audit, architecture,
+    tech lead'
+  - Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients,
+    rédaction et soutenance des offres
+  - Animation de l'agence, rituels, réunion all-hands mensuelle, présentations internes...
+  - Construction du budget 2025 de l'agence.
+  - Suivi des clients en cours et identification de nouvelles opportunités
+  sub_roles: []
+  id: collection_0
+- title: CTO - theTribe
+  company: theTribe
+  role: CTO agence Lille
+  start_date: '2022-01-01'
+  end_date: '2024-01-01'
+  current: false
+  location: Lille, France
+  type: full-time
+  order: 2
+  logo_url: "/assets/images/companies/thetribe.png"
+  description: Management d'agence et stratégie produit. Développement d'équipe et
+    direction technique. Leadership dans les partenariats technologiques et l'offre
+    de services.
+  about: theTribe est un Tech&Product Studio qui accompagne les entrepreneurs et les
+    décideurs tech à innover et réussir leurs produits en ayant un impact fort sur
+    leurs utilisateurs finaux.
+  tags:
+  - Startup
+  - Product
+  - Studio
+  skills:
+  - Team Development
+  - Culture Produit
+  - Design Sprint
+  - No-code
+  - Strapi
+  - Ansible / terraform
+  achievements:
+  - Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients,
+    rédaction et soutenance des offres
+  - Participation à la refonte d'un "career framework" au niveau national, permettant
+    d'évaluer et d'accompagner la montée en compétences des équipes
+  - Création d'une offre de service no-code (embauche du 1er product builder), structuration
+    de l'offre de run
+  - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
+  missions:
+  - Management et accompagnement de l'équipe lilloise, recrutement, formation, coaching,
+    définition des objectifs.
+  - Co-construction avec l'équipe lilloise de la roadmap de l'agence en accord avec
+    la stratégie de l’entreprise.
+  - Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients,
+    rédaction et soutenance des offres
+  - Construction du prévisionnel financier.
+  - Participation à la refonte d'un "career framework" au niveau national, permettant
+    d'évaluer et d'accompagner la montée en compétences des équipes
+  - Animation de l'agence, rituels, weekly d'agence, séminaires, talks internes...
+  - Suivi des projets clients en cours, soutien technique, COPIL
+  - 'Construire ou faire évoluer l''offre de service : création d''une offre de solution
+    no-code (embauche d''un product builder), structuration d''une offre de run'
+  - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
+  - 'Participer au développement de la visibilité et de la notoriété locale et nationale
+    de the Tribe : participation à des salons, Meetup'
+  - 'Missions clients à forte valeur ajoutée : Audit, architecture'
+  - Directeur d'agence intérim 5 mois
+  sub_roles: []
+  id: collection_1
+- title: CPTO - Frizbiz
+  company: Frizbiz / Homelife
+  role: CPTO
+  start_date: '2019-01-01'
+  end_date: '2022-01-01'
+  current: false
+  location: Lille, France
+  type: full-time
+  order: 3
+  logo_url: "/assets/images/companies/frizbiz.jpeg"
+  description: J'ai rejoint Frizbiz 6 ans après son lancement, lors de la création
+    du poste de CTO. Je suis arrivé pour la conception d'un nouveau produit sur le
+    modèle BtoB et BtoBtoC à destination des partenaires et avec pour objectif transverse
+    une refonte technique de l'existant.
+  about: Connecter des personnes ayant besoin d’un coup de main pour aménager leur
+    habitat avec des personnes disponibles qui savent le faire. Frizbiz est LA plateforme
+    des services de l’aménagement et du bien-être chez soi.
+  tags:
+  - Startup
+  - Scale-up
+  - B2B
+  - B2B2C
+  - C2C
+  - Market Place
+  skills:
+  - Product Leadership
+  - B2B Platform
+  - Innovation
+  achievements:
+  - Développement d'un nouveau produit B2B2C, qui devient le produit principal de
+    l'entreprise 2 an après.
+  - Organisation de la refonte technique complète en fil rouge de la marketplace d'origine
+    Frizbiz, qui sera ensuite revendu
+  - Mise en place d'un partenariat avec ManoMano
+  - Croissance de 200% des utilisateurs
+  - Mise en place d'une nouvelle stack avec architecture microservices (NestJs, TypeScript,
+    Docker, Kubernetes...) avec client web et mobile (Vue.js, Nuxt, Swift, Kotlin...)
+  missions:
+  - Management et accompagnement de l'équipe IT et produit, recrutement, formation,
+    coaching, définition des objectifs.
+  - Définition de la roadmap technique et fonctionnel en accord avec la stratégie
+    de l’entreprise.
+  - Pilotage des développements internes, externes, des fournisseurs et partenaires
+    clés.
+  - Gestion de projets en mode Agile Scrum / Kanban, priorisation et arbitrage des
+    besoins
+  - Gestion budget IT, immobilisation, charges salariales, externes, fournisseurs...
+  - mise en place de rapports, tableau de bord, analytiques, KPIs et outils de surveillance
+    de l'infrastructure et de l'applicatif.
+  - Définition de l’architecture technique et applicative, infrastructure, découpage,
+    conception générique et abstraite des micro-services jusqu’au modèle de données,
+    échanges entre les micro-services, choix des technologies utilisées.
+  - Gestion de la qualité et mise en place des outils et méthodes d’industrialisation,
+    Test Driven Development, tests coverage, code review, peer programming, intégration
+    et déploiement continus (Gitlab).
+  - Design des APIs publiques et privées. Gestion des partenaires qui intègrent l’API
+    et mise à disposition d’un environnement de test pour leurs intégrations.
+  - Choix des outils SaaS et APIs externes utilisés par l’entreprise (Stripe, zendesk
+    support et sell, slack, Aircall, twilio, sendgrid, google APIs, mapbox, firebase,
+    zapier...)
+  - Organisation de la veille concurrentielle, métier et technique, de l’innovation,
+    R&D, POC, contribution open source, ateliers et démo à destination de l'ensemble
+    des collaborateurs de l'entreprise
+  sub_roles: []
+  id: collection_2
+- title: Formateur - Le Wagon
+  company: Le Wagon
+  role: Formateur
+  start_date: '2018-01-01'
+  end_date: '2019-01-01'
+  current: false
+  location: Lille, France
+  type: freelance
+  order: 4
+  logo_url:
+  description: Formation intensive en développement web. Encadrement d'étudiants dans
+    l'apprentissage du développement full-stack.
+  about:
+  tags: []
+  skills:
+  - Formation
+  - Full-Stack Development
+  - Mentoring
+  achievements:
+  - Formation de 100+ étudiants
+  - Développement de modules pédagogiques
+  - Mentorat technique et professionnel
+  - Taux de réussite de 95%
+  missions: []
+  sub_roles: []
+  id: collection_3
+- title: Product Owner - Norauto
+  company: Norauto
+  role: Product Owner
+  start_date: '2017-01-01'
+  end_date: '2018-01-01'
+  current: false
+  location: France
+  type: freelance
+  order: 5
+  logo_url:
+  description: Gestion produit et développement d'applications. Coordination entre
+    équipes techniques et métier.
+  about:
+  tags: []
+  skills:
+  - Product Management
+  - Agile
+  - Stakeholder Management
+  achievements:
+  - Refonte de l'application mobile
+  - Mise en place de processus agiles
+  - Amélioration de 40% du taux de conversion
+  - Coordination de 3 équipes de développement
+  missions: []
+  sub_roles: []
+  id: collection_4
+- title: Co-fondateur - EcoTa.co
+  company: EcoTa.co
+  role: Co-fondateur
+  start_date: '2012-01-01'
+  end_date: '2017-01-01'
+  current: false
+  location: Lille, France
+  type: startup
+  order: 7
+  logo_url:
+  description: Création et développement d'une startup. Leadership technique et produit,
+    développement de l'équipe.
+  about:
+  tags: []
+  skills:
+  - Entrepreneurship
+  - Startup
+  - Co-founding
+  - Full-Stack Development
+  achievements:
+  - Levée de fonds de 500k€
+  - Développement d'une plateforme de covoiturage
+  - Équipe de 8 personnes
+  - Programme d'accélération Euratechnologies
+  missions: []
+  sub_roles: []
+  id: collection_5
