@@ -224,11 +224,15 @@ bundle exec jekyll serve
 
 ### Production (GitHub Actions)
 
-Ajoutez les secrets dans GitHub :
+#### Configuration des Secrets GitHub
 
-1. Allez dans Settings > Secrets and variables > Actions
-2. Ajoutez les secrets :
-   - `NOTION_TOKEN` : Votre token Notion
+1. **Accédez aux paramètres du repository** :
+   - Allez sur votre repository GitHub
+   - Cliquez sur **Settings** (en haut à droite)
+   - Dans le menu de gauche, cliquez sur **Secrets and variables** > **Actions**
+
+2. **Ajoutez les secrets suivants** :
+   - `NOTION_TOKEN` : Votre token Notion (obligatoire)
    - `NOTION_SKILLS_DB` : L'ID de votre base de données Skills
    - `NOTION_EXPERIENCES_DB` : L'ID de votre base de données Experiences
    - `NOTION_AWARDS_DB` : L'ID de votre base de données Awards
@@ -236,6 +240,36 @@ Ajoutez les secrets dans GitHub :
    - `NOTION_EDUCATIONS_DB` : L'ID de votre base de données Educations
    - `NOTION_SERVICES_DB` : L'ID de votre base de données Services
    - `NOTION_TESTIMONIALS_DB` : L'ID de votre base de données Testimonials
+
+3. **Pour ajouter un secret** :
+   - Cliquez sur **New repository secret**
+   - Saisissez le nom du secret (ex: `NOTION_TOKEN`)
+   - Saisissez la valeur du secret
+   - Cliquez sur **Add secret**
+
+#### Comportement du Plugin
+
+- **Si `NOTION_TOKEN` est défini** : Le plugin tentera de récupérer les données depuis Notion
+- **Si une base de données n'est pas configurée** : Le plugin utilisera automatiquement les collections Jekyll en fallback
+- **Si `NOTION_TOKEN` n'est pas défini** : Toutes les collections utiliseront le fallback
+
+#### Vérification du Build
+
+Après avoir configuré les secrets, vous pouvez vérifier que tout fonctionne :
+
+1. **Déclenchez un build** :
+   - Allez dans l'onglet **Actions** de votre repository
+   - Cliquez sur **Deploy Jekyll site to Pages**
+   - Cliquez sur **Run workflow**
+
+2. **Vérifiez les logs** :
+   - Dans les logs du build, vous devriez voir :
+     ```
+     Notion: Fetching data from Notion API...
+     Notion: Skills data fetched successfully (X categories)
+     Notion: Experiences data fetched successfully (X experiences)
+     ```
+   - Si vous voyez `Notion: No NOTION_TOKEN found, using collections fallback`, cela signifie que le secret n'est pas configuré
 
 ## 📁 Fichiers Générés
 

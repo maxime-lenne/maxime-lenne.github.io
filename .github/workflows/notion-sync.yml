@@ -76,6 +76,14 @@ jobs:
         run: make production
         env:
           JEKYLL_ENV: production
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_SKILLS_DB: ${{ secrets.NOTION_SKILLS_DB }}
+          NOTION_EXPERIENCES_DB: ${{ secrets.NOTION_EXPERIENCES_DB }}
+          NOTION_AWARDS_DB: ${{ secrets.NOTION_AWARDS_DB }}
+          NOTION_CONTRIBUTIONS_DB: ${{ secrets.NOTION_CONTRIBUTIONS_DB }}
+          NOTION_EDUCATIONS_DB: ${{ secrets.NOTION_EDUCATIONS_DB }}
+          NOTION_SERVICES_DB: ${{ secrets.NOTION_SERVICES_DB }}
+          NOTION_TESTIMONIALS_DB: ${{ secrets.NOTION_TESTIMONIALS_DB }}
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
