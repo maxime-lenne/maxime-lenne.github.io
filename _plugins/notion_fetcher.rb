@@ -30,7 +30,7 @@ module Jekyll
       database_id = ENV['NOTION_SKILLS_DB']
       skills_data = query_notion_database(database_id)
       
-      # Organiser les skills par catégorie
+      # Organiser les skills par catégorie (utilise les rollups directement)
       organized_skills = organize_skills_by_category(skills_data)
       
       # Stocker dans site.data
@@ -53,7 +53,11 @@ module Jekyll
         page_size: 100,
         sorts: [
           {
-            property: 'Category',
+            property: 'Category Order',
+            direction: 'ascending'
+          },
+          {
+            property: 'Order',
             direction: 'ascending'
           },
           {
@@ -74,32 +78,38 @@ module Jekyll
       JSON.parse(response.body)
     end
 
+
     def organize_skills_by_category(notion_data)
       skills_by_category = {}
       
       notion_data['results'].each do |page|
         properties = page['properties']
         
-        # Extraire les propriétés
+        # Extraire les propriétés de base
         name = extract_text_property(properties, 'Name')
-        category = extract_text_property(properties, 'Category')
         level = extract_number_property(properties, 'Level')
         years = extract_number_property(properties, 'Years')
-        description = extract_text_property(properties, 'Description')
-        icon = extract_text_property(properties, 'Icon')
-        color = extract_text_property(properties, 'Color')
         featured = extract_checkbox_property(properties, 'Featured')
         order = extract_number_property(properties, 'Order')
         
         next if name.nil? || name.empty?
         
-        # Utiliser la catégorie comme clé principale
-        category_key = category || 'Other'
+        # Extraire les informations de catégorie depuis les rollups
+        category_name = extract_text_property(properties, 'Category')
+        category_icon = extract_text_property(properties, 'Icon')
+        category_color = extract_text_property(properties, 'Color')
+        category_order = extract_text_property(properties, 'Category Order')
+        Jekyll.logger.info "Category Order: #{properties}"
+        # Utiliser le nom de catégorie comme clé
+        category_key = category_name || 'Other'
+        
+        # Initialiser la catégorie si elle n'existe pas
         skills_by_category[category_key] ||= {
           'title' => category_key,
-          'category' => category,
-          'icon' => icon,
-          'order' => order || 999,
+          'category' => category_key,
+          'subcategory' => nil, # Pas de sous-catégorie dans la nouvelle structure
+          'icon' => category_icon,
+          'order' => category_order || 999,
           'skills' => []
         }
         
@@ -108,16 +118,17 @@ module Jekyll
           'name' => name,
           'level' => level,
           'years' => years,
-          'description' => description,
-          'icon' => icon,
-          'color' => color,
+          'description' => nil, # Pas de description dans la nouvelle structure
+          'icon' => nil, # Pas d'icône individuelle
+          'color' => category_color,
           'featured' => featured,
+          'order' => order || 999,
           'id' => page['id']
         }
       end
       
       # Trier les catégories par order
-      skills_by_category = skills_by_category.sort_by { |_, data| data['order'] }.to_h
+      skills_by_category = skills_by_category.sort_by { |_, data| data['category_order'] }.to_h
       
       # Trier les skills dans chaque catégorie par level (décroissant)
       skills_by_category.each do |_, data|
@@ -126,6 +137,7 @@ module Jekyll
       
       skills_by_category
     end
+
 
     def extract_text_property(properties, property_name)
       property = properties[property_name]
@@ -138,6 +150,24 @@ module Jekyll
         property['rich_text'].map { |text| text['plain_text'] }.join('')
       when 'select'
         property['select']&.dig('name')
+      when 'rollup'
+        # Gérer les propriétés rollup (icônes et couleurs depuis la catégorie)
+        if property['rollup'] && property['rollup']['type'] == 'array'
+          property['rollup']['array'].map { |item| 
+            case item['type']
+            when 'title'
+              item['title'].map { |text| text['plain_text'] }.join('')
+            when 'rich_text'
+              item['rich_text'].map { |text| text['plain_text'] }.join('')
+            when 'select'
+              item['select']&.dig('name')
+            else
+              nil
+            end
+          }.compact.first
+        else
+          nil
+        end
       else
         nil
       end

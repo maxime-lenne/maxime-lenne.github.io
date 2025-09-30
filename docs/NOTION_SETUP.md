@@ -27,36 +27,60 @@ NOTION_SKILLS_DB=xxx
 2. L'ID se trouve dans l'URL : `https://notion.so/[workspace]/[database_id]?v=[view_id]`
 3. Copiez l'ID de la base de données
 
-## 📊 Structure de la Base de Données Skills
+## 📊 Structure des Bases de Données Notion
 
-### Propriétés requises
+### Base de Données Skills
 
-Votre base de données Notion doit contenir les propriétés suivantes :
+Votre base de données Skills doit contenir les propriétés suivantes :
 
 | Propriété | Type | Description | Exemple |
 |-----------|------|-------------|---------|
 | **Name** | Title | Nom de la compétence | "Ruby on Rails" |
-| **Category** | Relation | Catégorie principale | "Backend", "Frontend", "Cloud", "AI", "Management", "Methodologies" |
 | **Level** | Number | Niveau de maîtrise (0-100) | 95, 85, 70, 50 |
 | **Years** | Number | Années d'expérience | 10, 8, 5, 3 |
-| **Icon** | Rollup | Icône de la catégorie | "languages", "cloud", "ai", "management", "methodologies" |
-| **Color** | Rollup | Couleur de la catégorie | "blue", "green", "red", "purple" |
 | **Featured** | Checkbox | Compétence mise en avant | ✓ (coché si oui) |
-| **Order** | Number | Ordre d'affichage de la catégorie | 1, 2, 3, 4, 5, 6 |
+| **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
+| **Skills Categories** | Relation | Relation vers la table Categories | Lien vers plusieurs catégories |
+| **Category** | Rollup | Nom de la catégorie (depuis Categories) | Nom des catégories |
+| **Icon** | Rollup | Icône de la catégorie (depuis Categories) | "languages", "cloud", "ai" |
+| **Color** | Rollup | Couleur de la catégorie (depuis Categories) | "blue", "green", "red" |
+
+
+### Base de Données Categories
+
+Votre base de données Categories doit contenir les propriétés suivantes :
+
+| Propriété | Type | Description | Exemple |
+|-----------|------|-------------|---------|
+| **Name** | Title | Nom de la catégorie | "Backend", "Frontend", "Cloud", "AI", "Management", "Methodologies" |
+| **Child Categories** | Relation | Relation vers la table Categories | Lien vers les catégories enfants |
+| **Child Categories** | Relation | Relation vers la table Categories | Lien vers les catégories parents |
+| **Icon** | Rich Text | Icône de la catégorie | "languages", "cloud", "ai", "management", "methodologies" |
+| **Color** | Select | Couleur de la catégorie | "blue", "green", "red", "purple" |
+| **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
 
 ### Exemple de données
 
+#### Table Skills
 ```
 Name: Ruby on Rails
-Title: Backend
-Category: Backend
-Subcategory: Langages & Frameworks
 Level: 95
 Years: 10
-Description: Framework web Ruby pour le développement d'applications
+Featured: ✓
+Order: 1
+Skills Categories: [Relation vers "Backend"]
+Category: Backend (rollup)
+Icon: languages (rollup)
+Color: red (rollup)
+```
+
+#### Table Categories
+```
+Name: Backend
+Child Categories: [Relation vers catégories enfants]
+Parent Categories: [Relation vers catégories parents]
 Icon: languages
 Color: red
-Featured: ✓
 Order: 3
 ```
 
@@ -96,30 +120,30 @@ Le plugin génère automatiquement :
 Backend:
   title: "Backend"
   category: "Backend"
-  subcategory: "Langages & Frameworks"
+  subcategory: null
   icon: "languages"
   order: 3
   skills:
     - name: "Ruby on Rails"
       level: 95
       years: 10
-      description: "Framework web Ruby"
-      icon: "🚀"
+      description: null
+      icon: null
       color: "red"
       featured: true
       id: "page_id_from_notion"
 Frontend:
-  title: "Frontend & mobile"
+  title: "Frontend"
   category: "Frontend"
-  subcategory: "programming"
+  subcategory: null
   icon: "languages"
   order: 4
   skills:
     - name: "React"
       level: 90
       years: 6
-      description: "Bibliothèque JavaScript"
-      icon: "⚛️"
+      description: null
+      icon: null
       color: "blue"
       featured: true
       id: "page_id_from_notion"

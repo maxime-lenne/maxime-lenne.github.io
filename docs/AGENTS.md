@@ -101,17 +101,21 @@ Le plugin `_plugins/notion_fetcher.rb` permet d'importer automatiquement les don
 
 ### Types de contenu
 1. **Base de données Skills** (implémenté)
-   - Nom, Titre, Catégorie, Sous-catégorie, Niveau, Années, Description, Icône, Couleur
-   - Statut : Featured/Non-featured, Ordre d'affichage
-   - Structure hiérarchique : Catégorie > Skills
+   - Nom, Niveau, Années, Ordre, Featured
+   - Relation vers Categories, Rollups (Category, Icon, Color)
    - Utilisé dans `resume.md`
 
-2. **Base de données Expériences** (à implémenter)
+2. **Base de données Categories** (implémenté)
+   - Nom, Relations parent/enfant, Icône, Couleur, Ordre
+   - Géré automatiquement via les rollups
+   - Utilisé pour organiser les skills
+
+3. **Base de données Expériences** (à implémenter)
    - Entreprise, Rôle, Période, Description, Technologies
    - Statut : Publié/Brouillon
    - Langue : FR/EN
 
-3. **Base de données Articles** (optionnel)
+4. **Base de données Articles** (optionnel)
    - Titre, Contenu, Date de publication, Tags
    - SEO Meta, Image mise en avant
 
@@ -122,6 +126,7 @@ NOTION_TOKEN=secret_xxx
 NOTION_SKILLS_DB=xxx
 NOTION_EXPERIENCES_DB=xxx
 NOTION_POSTS_DB=xxx
+# Note: Les catégories sont récupérées automatiquement via les rollups
 ```
 
 ### Utilisation des données
