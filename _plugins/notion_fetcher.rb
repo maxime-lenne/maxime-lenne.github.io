@@ -99,7 +99,6 @@ module Jekyll
         category_icon = extract_text_property(properties, 'Icon')
         category_color = extract_text_property(properties, 'Color')
         category_order = extract_text_property(properties, 'Category Order')
-        Jekyll.logger.info "Category Order: #{properties}"
         # Utiliser le nom de catégorie comme clé
         category_key = category_name || 'Other'
         
@@ -128,11 +127,11 @@ module Jekyll
       end
       
       # Trier les catégories par order
-      skills_by_category = skills_by_category.sort_by { |_, data| data['category_order'] }.to_h
+      skills_by_category = skills_by_category.sort_by { |_, data| data['order'] }.to_h
       
-      # Trier les skills dans chaque catégorie par level (décroissant)
+      # Trier les skills dans chaque catégorie par order (croissant)
       skills_by_category.each do |_, data|
-        data['skills'].sort_by! { |skill| -(skill['level'] || 0) }
+        data['skills'].sort_by! { |skill| skill['order'] || 999 }
       end
       
       skills_by_category
@@ -151,7 +150,7 @@ module Jekyll
       when 'select'
         property['select']&.dig('name')
       when 'rollup'
-        # Gérer les propriétés rollup (icônes et couleurs depuis la catégorie)
+        # Gérer les propriétés rollup (icônes, couleurs et ordre depuis la catégorie)
         if property['rollup'] && property['rollup']['type'] == 'array'
           property['rollup']['array'].map { |item| 
             case item['type']
@@ -161,6 +160,8 @@ module Jekyll
               item['rich_text'].map { |text| text['plain_text'] }.join('')
             when 'select'
               item['select']&.dig('name')
+            when 'number'
+              item['number']
             else
               nil
             end

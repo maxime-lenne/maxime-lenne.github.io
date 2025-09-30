@@ -1,6 +1,6 @@
 # Données des skills importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2025-09-30 10:59:38
+# Last updated: 2025-09-30 11:02:54
 
 ---
 Management & Leadership:
@@ -8,7 +8,7 @@ Management & Leadership:
   category: Management & Leadership
   subcategory:
   icon: management
-  order: 999
+  order: 1
   skills:
   - name: Mentoring
     level: 90
@@ -19,6 +19,15 @@ Management & Leadership:
     featured: false
     order: 999
     id: 85ee46bb-d46a-48b7-9828-48cfc53ecc1c
+  - name: Recruitment
+    level: 80
+    years: 5
+    description:
+    icon:
+    color: Red
+    featured: false
+    order: 999
+    id: 207ae380-3eb5-4506-970f-db8ed8950193
   - name: Strategic Planning
     level: 85
     years: 5
@@ -37,21 +46,12 @@ Management & Leadership:
     featured: false
     order: 999
     id: b0bc2088-8bfc-499f-b996-99fd9b00315a
-  - name: Recruitment
-    level: 80
-    years: 5
-    description:
-    icon:
-    color: Red
-    featured: false
-    order: 999
-    id: 207ae380-3eb5-4506-970f-db8ed8950193
 Methodologies:
   title: Methodologies
   category: Methodologies
   subcategory:
   icon: methodologies
-  order: 999
+  order: 2
   skills:
   - name: Agile
     level: 95
@@ -62,42 +62,6 @@ Methodologies:
     featured: false
     order: 2
     id: 868b0209-6097-42b4-b172-ec3ac15f2e51
-  - name: Lean Startup
-    level: 90
-    years: 8
-    description:
-    icon:
-    color: Orange
-    featured: false
-    order: 2
-    id: 238d66cc-0c3f-43f2-850e-fbee47878e53
-  - name: Scrum
-    level: 90
-    years: 10
-    description:
-    icon:
-    color: Orange
-    featured: false
-    order: 2
-    id: 66169755-e460-4527-a913-6c7b35ac3371
-  - name: Kanban
-    level: 85
-    years: 8
-    description:
-    icon:
-    color: Orange
-    featured: false
-    order: 2
-    id: fe6fdfe9-97dd-4bbf-95fe-521cde928fcf
-  - name: OKR
-    level: 85
-    years: 5
-    description:
-    icon:
-    color: Orange
-    featured: false
-    order: 2
-    id: 2ff239af-b541-4c06-acdb-df5b5bca0958
   - name: Design Thinking
     level: 80
     years: 6
@@ -107,6 +71,33 @@ Methodologies:
     featured: false
     order: 2
     id: 8f759342-9457-4024-aed5-ccfb91ba7833
+  - name: Kanban
+    level: 85
+    years: 8
+    description:
+    icon:
+    color: Orange
+    featured: false
+    order: 2
+    id: fe6fdfe9-97dd-4bbf-95fe-521cde928fcf
+  - name: Lean Startup
+    level: 90
+    years: 8
+    description:
+    icon:
+    color: Orange
+    featured: false
+    order: 2
+    id: 238d66cc-0c3f-43f2-850e-fbee47878e53
+  - name: OKR
+    level: 85
+    years: 5
+    description:
+    icon:
+    color: Orange
+    featured: false
+    order: 2
+    id: 2ff239af-b541-4c06-acdb-df5b5bca0958
   - name: Product Management
     level: 80
     years: 6
@@ -116,6 +107,15 @@ Methodologies:
     featured: false
     order: 2
     id: 21530973-a95e-41e4-9711-9b217febbe69
+  - name: Scrum
+    level: 90
+    years: 10
+    description:
+    icon:
+    color: Orange
+    featured: false
+    order: 2
+    id: 66169755-e460-4527-a913-6c7b35ac3371
   - name: Discovery
     level: 80
     years: 6
@@ -130,53 +130,17 @@ Backend:
   category: Backend
   subcategory:
   icon: languages
-  order: 999
+  order: 3
   skills:
-  - name: Ruby
-    level: 95
-    years: 10
+  - name: Django / Flask / FastAPI
+    level: 70
+    years: 4
     description:
     icon:
     color: Purple
     featured: false
     order: 999
-    id: 4f78ac01-9849-41c5-a250-3715336dd018
-  - name: Ruby on Rails
-    level: 95
-    years: 10
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: b0c05d31-8ef7-4b12-b5a9-5c142128158d
-  - name: JavaScript
-    level: 90
-    years: 8
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 5473372f-6e3f-4188-abd7-b4b0992a72dc
-  - name: Node.js, NestJs
-    level: 88
-    years: 7
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: d62398db-da7b-4dc3-990d-84c5230579f9
-  - name: TypeScript
-    level: 85
-    years: 5
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 23075efa-e4e8-4048-8875-acb9fcf60605
+    id: 3bba0666-792d-4678-afdf-4ae22e6d9253
   - name: Java
     level: 75
     years: 12
@@ -186,6 +150,15 @@ Backend:
     featured: false
     order: 999
     id: 8e321eb0-2119-4c48-bb05-30f95cc2f949
+  - name: JavaScript
+    level: 90
+    years: 8
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 5473372f-6e3f-4188-abd7-b4b0992a72dc
   - name: Laravel
     level: 75
     years: 12
@@ -204,6 +177,15 @@ Backend:
     featured: false
     order: 999
     id: 2de5e984-8cbe-4d06-8909-954c9b4fb992
+  - name: Node.js, NestJs
+    level: 88
+    years: 7
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: d62398db-da7b-4dc3-990d-84c5230579f9
   - name: PHP
     level: 75
     years: 12
@@ -213,24 +195,6 @@ Backend:
     featured: false
     order: 999
     id: de1f3b0e-11cb-4dac-ab8d-568307a3c5ff
-  - name: Spring
-    level: 75
-    years: 8
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 822bb077-d4fa-4756-820e-473bf14345c6
-  - name: Django / Flask / FastAPI
-    level: 70
-    years: 4
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 3bba0666-792d-4678-afdf-4ae22e6d9253
   - name: Python
     level: 70
     years: 4
@@ -240,40 +204,49 @@ Backend:
     featured: false
     order: 999
     id: 4399ff48-b7c6-4869-a2b5-9d5b27a12799
+  - name: Ruby
+    level: 95
+    years: 10
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 4f78ac01-9849-41c5-a250-3715336dd018
+  - name: Ruby on Rails
+    level: 95
+    years: 10
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: b0c05d31-8ef7-4b12-b5a9-5c142128158d
+  - name: Spring
+    level: 75
+    years: 8
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 822bb077-d4fa-4756-820e-473bf14345c6
+  - name: TypeScript
+    level: 85
+    years: 5
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 23075efa-e4e8-4048-8875-acb9fcf60605
 Frontend & mobile:
   title: Frontend & mobile
   category: Frontend & mobile
   subcategory:
   icon: languages
-  order: 999
+  order: 4
   skills:
-  - name: CSS3, SAAS, PostCSS
-    level: 90
-    years: 8
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 51568974-f817-4875-b870-924b1cedd01d
-  - name: HTML5
-    level: 90
-    years: 8
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 8aeefd80-0e55-407d-8b79-06ef17d13ccd
-  - name: React
-    level: 90
-    years: 6
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 1d2a573d-6b7d-4a8f-be85-9955f39af212
   - name: 'Android : Java'
     level: 80
     years: 5
@@ -292,6 +265,24 @@ Frontend & mobile:
     featured: false
     order: 999
     id: badcd831-8b4b-4a23-b808-0a04ba2f24d5
+  - name: CSS3, SAAS, PostCSS
+    level: 90
+    years: 8
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 51568974-f817-4875-b870-924b1cedd01d
+  - name: HTML5
+    level: 90
+    years: 8
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 8aeefd80-0e55-407d-8b79-06ef17d13ccd
   - name: 'iOS : Swift'
     level: 80
     years: 5
@@ -310,6 +301,15 @@ Frontend & mobile:
     featured: false
     order: 999
     id: 3f487e2a-700e-43ca-b580-83929a234115
+  - name: React
+    level: 90
+    years: 6
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 1d2a573d-6b7d-4a8f-be85-9955f39af212
   - name: VueJs
     level: 80
     years: 3
@@ -324,8 +324,26 @@ Infra, Cloud & DevOps:
   category: Infra, Cloud & DevOps
   subcategory:
   icon: cloud
-  order: 999
+  order: 5
   skills:
+  - name: Ansible
+    level: 88
+    years: 7
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: 238bbd5b-a448-49f8-871a-1c19bed7f4f7
+  - name: AWS
+    level: 85
+    years: 6
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: 6d2a1f38-8138-438a-8e20-56a5a5120628
   - name: CaaS
     level: 90
     years: 8
@@ -335,6 +353,33 @@ Infra, Cloud & DevOps:
     featured: false
     order: 999
     id: e6baf323-ec22-4cec-87cf-9eb500a9832e
+  - name: CI/CD
+    level: 88
+    years: 7
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: d050f23c-78b3-484d-bfd8-06cb09fd705b
+  - name: Digital Ocean
+    level: 80
+    years: 5
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: c7761dab-103e-4e2f-9334-1b05e259b3a5
+  - name: Docker
+    level: 85
+    years: 5
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: 3544dabb-05fe-41fc-9371-f9a3cda29237
   - name: FaaS
     level: 90
     years: 8
@@ -344,6 +389,15 @@ Infra, Cloud & DevOps:
     featured: false
     order: 999
     id: fb0c0bf4-85cf-4dac-8f28-1dfb064c7cf2
+  - name: Google Cloud
+    level: 85
+    years: 6
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: 9e805ab6-d304-449a-8b64-1461501361e2
   - name: IaaS
     level: 90
     years: 8
@@ -371,87 +425,6 @@ Infra, Cloud & DevOps:
     featured: false
     order: 999
     id: badae550-2264-4384-b1cb-0a614805f34e
-  - name: PaaS (Heroku)
-    level: 90
-    years: 8
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: 84addaa6-1f4b-49de-902c-bb5bc974b2ca
-  - name: Ansible
-    level: 88
-    years: 7
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: 238bbd5b-a448-49f8-871a-1c19bed7f4f7
-  - name: CI/CD
-    level: 88
-    years: 7
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: d050f23c-78b3-484d-bfd8-06cb09fd705b
-  - name: Terraform
-    level: 88
-    years: 7
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: cb755481-d5cb-4a4a-9f09-6b526c1667a4
-  - name: AWS
-    level: 85
-    years: 6
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: 6d2a1f38-8138-438a-8e20-56a5a5120628
-  - name: Docker
-    level: 85
-    years: 5
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: 3544dabb-05fe-41fc-9371-f9a3cda29237
-  - name: Google Cloud
-    level: 85
-    years: 6
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: 9e805ab6-d304-449a-8b64-1461501361e2
-  - name: Scaleway
-    level: 85
-    years: 6
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: 7138cbcf-30ae-4c40-8a39-fbc42d3963ce
-  - name: Digital Ocean
-    level: 80
-    years: 5
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: c7761dab-103e-4e2f-9334-1b05e259b3a5
   - name: Kubernetes
     level: 70
     years: 3
@@ -461,31 +434,58 @@ Infra, Cloud & DevOps:
     featured: false
     order: 999
     id: 99536b79-e8a2-4da0-af34-0691ee381f63
+  - name: PaaS (Heroku)
+    level: 90
+    years: 8
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: 84addaa6-1f4b-49de-902c-bb5bc974b2ca
+  - name: Scaleway
+    level: 85
+    years: 6
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: 7138cbcf-30ae-4c40-8a39-fbc42d3963ce
+  - name: Terraform
+    level: 88
+    years: 7
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: cb755481-d5cb-4a4a-9f09-6b526c1667a4
 AI / ML / Data Science:
   title: AI / ML / Data Science
   category: AI / ML / Data Science
   subcategory:
   icon: ai
-  order: 999
+  order: 6
   skills:
-  - name: Prompt engineering et optimisation
-    level: 90
-    years: 8
+  - name: Agent (IDE, Cli, Nocode n8n / Make) et orchestration
+    level: 70
+    years: 3
+    description:
+    icon:
+    color: Green
+    featured: false
+    order: 1
+    id: fc8fa1a0-200a-489c-9b8d-30d6bce47de4
+  - name: Deep search
+    level: 80
+    years: 5
     description:
     icon:
     color: Green
     featured: false
     order: 6
-    id: 1a365bee-2c5d-4bfa-897a-e804eb985155
-  - name: RAG et MCP
-    level: 88
-    years: 7
-    description:
-    icon:
-    color: Green
-    featured: false
-    order: 6
-    id: 69a59a79-df73-4a0a-b44b-60cd6f688120
+    id: ea1e61e2-fd24-4e76-afe9-dc9756b4ed00
   - name: Inférence locale
     level: 85
     years: 5
@@ -504,24 +504,15 @@ AI / ML / Data Science:
     featured: false
     order: 6
     id: 428ab3dd-4f98-400a-8bb3-69780b8f5af0
-  - name: Deep search
-    level: 80
-    years: 5
+  - name: Prompt engineering et optimisation
+    level: 90
+    years: 8
     description:
     icon:
     color: Green
     featured: false
     order: 6
-    id: ea1e61e2-fd24-4e76-afe9-dc9756b4ed00
-  - name: Agent (IDE, Cli, Nocode n8n / Make) et orchestration
-    level: 70
-    years: 3
-    description:
-    icon:
-    color: Green
-    featured: false
-    order: 1
-    id: fc8fa1a0-200a-489c-9b8d-30d6bce47de4
+    id: 1a365bee-2c5d-4bfa-897a-e804eb985155
   - name: Python et Node.js
     level: 70
     years: 3
@@ -531,3 +522,12 @@ AI / ML / Data Science:
     featured: false
     order: 6
     id: fc90797e-8caa-4435-8567-af388d4e2fcd
+  - name: RAG et MCP
+    level: 88
+    years: 7
+    description:
+    icon:
+    color: Green
+    featured: false
+    order: 6
+    id: 69a59a79-df73-4a0a-b44b-60cd6f688120
