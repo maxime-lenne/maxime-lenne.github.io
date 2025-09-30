@@ -96,13 +96,22 @@ exclude_from_localizations: ["javascript", "images", "css", "assets"]
 
 ## 🔌 Intégration Notion CMS
 
+### Plugin Notion
+Le plugin `_plugins/notion_fetcher.rb` permet d'importer automatiquement les données depuis Notion.
+
 ### Types de contenu
-1. **Base de données Expériences**
+1. **Base de données Skills** (implémenté)
+   - Nom, Titre, Catégorie, Sous-catégorie, Niveau, Années, Description, Icône, Couleur
+   - Statut : Featured/Non-featured, Ordre d'affichage
+   - Structure hiérarchique : Catégorie > Skills
+   - Utilisé dans `resume.md`
+
+2. **Base de données Expériences** (à implémenter)
    - Entreprise, Rôle, Période, Description, Technologies
    - Statut : Publié/Brouillon
    - Langue : FR/EN
 
-2. **Base de données Articles** (optionnel)
+3. **Base de données Articles** (optionnel)
    - Titre, Contenu, Date de publication, Tags
    - SEO Meta, Image mise en avant
 
@@ -110,8 +119,24 @@ exclude_from_localizations: ["javascript", "images", "css", "assets"]
 ```bash
 # .env (non commité)
 NOTION_TOKEN=secret_xxx
+NOTION_SKILLS_DB=xxx
 NOTION_EXPERIENCES_DB=xxx
 NOTION_POSTS_DB=xxx
+```
+
+### Utilisation des données
+```liquid
+<!-- Skills depuis Notion -->
+{% assign notion_skills = site.data.notion_skills %}
+{% for skill_category in notion_skills %}
+  <h3>{{ skill_category[1].title }}</h3>
+  {% for skill in skill_category[1].skills %}
+    <span data-level="{{ skill.level }}" 
+          title="{{ skill.name }}{% if skill.years %} - {{ skill.years }} ans d'expérience{% endif %}">
+      {% if skill.icon %}{{ skill.icon }} {% endif %}{{ skill.name }}
+    </span>
+  {% endfor %}
+{% endfor %}
 ```
 
 ## 🚀 Workflow de Développement

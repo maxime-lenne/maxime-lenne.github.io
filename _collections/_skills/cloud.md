@@ -4,7 +4,6 @@ category: "cloud"
 icon: "cloud"
 order: 5
 skills:
-  
   - name: "AWS"
     level: 85
     years: 6

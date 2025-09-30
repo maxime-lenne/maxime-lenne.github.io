@@ -90,7 +90,7 @@ dev-setup: ## Configuration complète pour le développement
 
 notion-sync: ## Synchroniser le contenu depuis Notion
 	@echo "🔄 Synchronisation depuis Notion..."
-	NOTION_TOKEN=$(shell cat .env | grep NOTION_TOKEN | cut -d '=' -f2) bundle exec jekyll build --config _config.yml,_config_prod.yml
+	NOTION_TOKEN=$(shell cat .env | grep NOTION_TOKEN | cut -d '=' -f2) NOTION_SKILLS_DB=$(shell cat .env | grep NOTION_SKILLS_DB | cut -d '=' -f2) bundle exec jekyll build --config _config.yml,_config_prod.yml
 	@echo "✅ Synchronisation terminée!"
 
 # Commandes de maintenance

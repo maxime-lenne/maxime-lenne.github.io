@@ -1,0 +1,131 @@
+# Données des skills importées depuis Notion
+# Généré automatiquement - Ne pas modifier manuellement
+# Last updated: 2025-09-30 10:17:16
+
+---
+Other:
+  title: Other
+  category:
+  icon:
+  order: 1
+  skills:
+  - name: Agile
+    level: 95
+    years: 12
+    description:
+    icon:
+    color:
+    featured: false
+    id: 868b0209-6097-42b4-b172-ec3ac15f2e51
+  - name: Prompt engineering et optimisation
+    level: 90
+    years: 8
+    description:
+    icon:
+    color:
+    featured: false
+    id: 1a365bee-2c5d-4bfa-897a-e804eb985155
+  - name: Lean Startup
+    level: 90
+    years: 8
+    description:
+    icon:
+    color:
+    featured: false
+    id: 238d66cc-0c3f-43f2-850e-fbee47878e53
+  - name: Scrum
+    level: 90
+    years: 10
+    description:
+    icon:
+    color:
+    featured: false
+    id: 66169755-e460-4527-a913-6c7b35ac3371
+  - name: RAG et MCP
+    level: 88
+    years: 7
+    description:
+    icon:
+    color:
+    featured: false
+    id: 69a59a79-df73-4a0a-b44b-60cd6f688120
+  - name: Inférence locale
+    level: 85
+    years: 5
+    description:
+    icon:
+    color:
+    featured: false
+    id: 8afc4c96-1574-4599-94c8-0c77cd678bf9
+  - name: 'LLM : ChatGPT, Claude, Mistral'
+    level: 85
+    years: 6
+    description:
+    icon:
+    color:
+    featured: false
+    id: 428ab3dd-4f98-400a-8bb3-69780b8f5af0
+  - name: Kanban
+    level: 85
+    years: 8
+    description:
+    icon:
+    color:
+    featured: false
+    id: fe6fdfe9-97dd-4bbf-95fe-521cde928fcf
+  - name: OKR
+    level: 85
+    years: 5
+    description:
+    icon:
+    color:
+    featured: false
+    id: 2ff239af-b541-4c06-acdb-df5b5bca0958
+  - name: Deep search
+    level: 80
+    years: 5
+    description:
+    icon:
+    color:
+    featured: false
+    id: ea1e61e2-fd24-4e76-afe9-dc9756b4ed00
+  - name: Design Thinking
+    level: 80
+    years: 6
+    description:
+    icon:
+    color:
+    featured: false
+    id: 8f759342-9457-4024-aed5-ccfb91ba7833
+  - name: Discovery
+    level: 80
+    years: 6
+    description:
+    icon:
+    color:
+    featured: false
+    id: 27e93271-2dfb-80ad-b524-f2b78f15f0cf
+  - name: Product Management
+    level: 80
+    years: 6
+    description:
+    icon:
+    color:
+    featured: false
+    id: 21530973-a95e-41e4-9711-9b217febbe69
+  - name: Agent (IDE, Cli, Nocode n8n / Make) et orchestration
+    level: 70
+    years: 3
+    description:
+    icon:
+    color:
+    featured: false
+    id: fc8fa1a0-200a-489c-9b8d-30d6bce47de4
+  - name: Python et Node.js
+    level: 70
+    years: 3
+    description:
+    icon:
+    color:
+    featured: false
+    id: fc90797e-8caa-4435-8567-af388d4e2fcd

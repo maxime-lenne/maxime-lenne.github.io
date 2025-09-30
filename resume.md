@@ -138,35 +138,35 @@ lang: fr
         title_highlight="Skills" %}
     </div>
     <div class="section__grid section__grid--2-col">
-      {% assign sorted_skills = site.skills | sort: 'order' %}
-      {% for skill_category in sorted_skills %}
+      {% assign notion_skills = site.data.notion_skills %}
+      {% for skill_category in notion_skills %}
       <div class="figma-cv-skills__category">
         <h3 class="figma-cv-skills__category-title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            {% if skill_category.icon == "languages" %}
+            {% if skill_category[1].icon == "languages" %}
                 <polyline points="16,18 22,12 16,6"/>
                 <polyline points="8,6 2,12 8,18"/>
-            {% elsif skill_category.icon == "mobile" %}
+            {% elsif skill_category[1].icon == "mobile" %}
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                 <line x1="8" y1="21" x2="16" y2="21"/>
                 <line x1="12" y1="17" x2="12" y2="21"/>
-            {% elsif skill_category.icon == "cloud" %}
+            {% elsif skill_category[1].icon == "cloud" %}
                 <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" />
-            {% elsif skill_category.icon == "databases" %}
+            {% elsif skill_category[1].icon == "databases" %}
                 <ellipse cx="12" cy="5" rx="9" ry="3"/>
                 <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
                 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-            {% elsif skill_category.icon == "ai" %}
+            {% elsif skill_category[1].icon == "ai" %}
                 <ellipse cx="12" cy="5" rx="9" ry="3"/>
                 <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
                 <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
-            {% elsif skill_category.icon == "methodologies" %}
+            {% elsif skill_category[1].icon == "methodologies" %}
                 <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
-            {% elsif skill_category.icon == "tools" %}
+            {% elsif skill_category[1].icon == "tools" %}
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                 <line x1="8" y1="21" x2="16" y2="21"/>
                 <line x1="12" y1="17" x2="12" y2="21"/>
-            {% elsif skill_category.icon == "management" %}
+            {% elsif skill_category[1].icon == "management" %}
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -176,12 +176,15 @@ lang: fr
                 <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
             {% endif %}
           </svg>
-          {{ skill_category.title }}
+          {{ skill_category[1].title }}
         </h3>
         <div class="figma-cv-skills__list">
-          {% for skill in skill_category.skills %}
-          <span class="figma-cv-skills__item" data-level="{{ skill.level }}" title="{{ skill.name }} - {{ skill.years }} ans d'expérience">
-            {{ skill.name }}
+          {% for skill in skill_category[1].skills %}
+          <span class="figma-cv-skills__item" 
+                data-level="{{ skill.level }}" 
+                title="{{ skill.name }}{% if skill.years %} - {{ skill.years }} ans d'expérience{% endif %}{% if skill.description %} - {{ skill.description }}{% endif %}"
+                {% if skill.featured %}data-featured="true"{% endif %}>
+            {% if skill.icon %}{{ skill.icon }} {% endif %}{{ skill.name }}
           </span>
           {% endfor %}
         </div>
