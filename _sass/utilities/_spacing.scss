@@ -1,6 +1,6 @@
 // Spacing Utilities - Consistent spacing system
-@import '../variables';
-@import '../mixins';
+@use '../variables';
+@use '../mixins';
 
 // Margin Utilities
 .m {
@@ -186,7 +186,7 @@
 }
 
 // Responsive spacing utilities
-@include mobile-first(md) {
+@include mixins.mobile-first(md) {
   .md\\:m {
     &-0 { margin: 0 !important; }
     &-md { margin: var(--space-md) !important; }
@@ -202,7 +202,7 @@
   }
 }
 
-@include mobile-first(lg) {
+@include mixins.mobile-first(lg) {
   .lg\\:m {
     &-0 { margin: 0 !important; }
     &-lg { margin: var(--space-lg) !important; }

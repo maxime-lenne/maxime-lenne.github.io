@@ -1,6 +1,6 @@
 // Base Styles - Reset and Foundation
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
 
 // CSS Reset and Base
 *,
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: $font-sans;
+  font-family: variables.$font-sans;
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--color-neutral-700);
@@ -30,7 +30,7 @@ body {
 
 // Typography
 h1, h2, h3, h4, h5, h6 {
-  @include heading-1;
+  @include mixins.heading-1;
   margin-bottom: var(--space-md);
   
   &:first-child {
@@ -39,11 +39,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  @include heading-2;
+  @include mixins.heading-2;
 }
 
 h3 {
-  @include heading-3;
+  @include mixins.heading-3;
 }
 
 h4, h5, h6 {
@@ -54,7 +54,7 @@ h4, h5, h6 {
 }
 
 p {
-  @include body-text;
+  @include mixins.body-text;
   margin-bottom: var(--space-md);
   
   &:last-child {
@@ -72,13 +72,13 @@ a {
   }
   
   &:focus-visible {
-    @include focus-visible;
+    @include mixins.focus-visible;
   }
 }
 
 // Lists
 ul, ol {
-  @include body-text;
+  @include mixins.body-text;
   margin-bottom: var(--space-md);
   padding-left: var(--space-lg);
 }
@@ -89,7 +89,7 @@ li {
 
 // Code
 code {
-  font-family: $font-mono;
+  font-family: variables.$font-mono;
   font-size: 0.875em;
   background-color: var(--color-neutral-100);
   padding: var(--space-xs) var(--space-sm);
@@ -98,7 +98,7 @@ code {
 }
 
 pre {
-  font-family: $font-mono;
+  font-family: variables.$font-mono;
   background-color: var(--color-neutral-100);
   padding: var(--space-md);
   border-radius: var(--radius-md);
@@ -125,7 +125,7 @@ blockquote {
   }
   
   cite {
-    @include caption;
+    @include mixins.caption;
     font-style: normal;
     
     &::before {
@@ -182,13 +182,13 @@ button {
   cursor: pointer;
   
   &:focus-visible {
-    @include focus-visible;
+    @include mixins.focus-visible;
   }
 }
 
 // Accessibility
 .sr-only {
-  @include sr-only;
+  @include mixins.sr-only;
 }
 
 // Focus Management
@@ -199,7 +199,7 @@ button {
 
 // Skip Links
 .skip-link {
-  @include sr-only;
+  @include mixins.sr-only;
   
   &:focus {
     position: fixed;

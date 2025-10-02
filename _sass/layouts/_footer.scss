@@ -1,6 +1,6 @@
 // Footer Layout Component - BEM Methodology
-@import '../variables';
-@import '../mixins';
+@use '../variables';
+@use '../mixins';
 
 .footer {
   background-color: var(--color-neutral-900);
@@ -9,7 +9,7 @@
   margin-top: auto;
   
   &__container {
-    @include container;
+    @include mixins.container;
   }
   
   &__content {
@@ -32,14 +32,14 @@
       }
     }
 
-    @include mobile-first(md) {
+    @include mixins.mobile-first(md) {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
   &__section {
     &-title {
-      @include heading-3;
+      @include mixins.heading-3;
       color: white;
       margin-bottom: var(--space-md);
     }
@@ -51,7 +51,7 @@
     border-top: 1px solid var(--color-neutral-800);
     text-align: center;
     
-    @include mobile-first(md) {
+    @include mixins.mobile-first(md) {
       text-align: left;
     }
   }

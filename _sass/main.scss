@@ -2,49 +2,49 @@
 // Following BEM methodology and atomic design principles
 
 // 1. Foundation Layer
-@import 'variables';
-@import 'mixins';
-@import 'base';
+@use 'variables';
+@use 'mixins';
+@use 'base';
 
 // 2. Layout Layer
-@import 'layouts/header';
-@import 'layouts/footer';
-@import 'layouts/figma';
-@import 'layouts/sections';
+@use 'layouts/header';
+@use 'layouts/footer';
+@use 'layouts/figma';
+@use 'layouts/sections';
 
 // 3. Component Layer
-@import 'components/badge';
-@import 'components/cta-button';
-@import 'components/blog-preview';
-@import 'components/animated-terminal';
-@import 'components/image-circle';
-@import 'components/image';
-@import 'components/image-secondary';
-@import 'components/cta-info';
-@import 'components/list-checked';
-@import 'components/stat-number';
-@import 'components/list-footer-link';
-@import 'components/list-horizontal-icon';
-@import 'components/card-quote';
-@import 'components/section-header';
-@import 'components/card-highlight';
-@import 'components/card-experience';
-@import 'components/title-hero';
+@use 'components/badge';
+@use 'components/cta-button';
+@use 'components/blog-preview';
+@use 'components/animated-terminal';
+@use 'components/image-circle';
+@use 'components/image';
+@use 'components/image-secondary';
+@use 'components/cta-info';
+@use 'components/list-checked';
+@use 'components/stat-number';
+@use 'components/list-footer-link';
+@use 'components/list-horizontal-icon';
+@use 'components/card-quote';
+@use 'components/section-header';
+@use 'components/card-highlight';
+@use 'components/card-experience';
+@use 'components/title-hero';
 
 // 4. Page Layer
-@import 'pages/resume';
-@import 'pages/examples';
+@use 'pages/resume';
+@use 'pages/examples';
 
 // 5. Utility Layer
-@import 'utilities/spacing';
-@import 'utilities/typography';
-@import 'utilities/colors';
-@import 'utilities/animations';
-@import 'utilities/accessibility';
+@use 'utilities/spacing';
+@use 'utilities/typography';
+@use 'utilities/colors';
+@use 'utilities/animations';
+@use 'utilities/accessibility';
 
 // 6. Print and High Contrast
-@import 'utilities/print';
-@import 'utilities/high-contrast';
+@use 'utilities/print';
+@use 'utilities/high-contrast';
 
 // 7. Third-party Overrides
-@import 'utilities/third-party';
+@use 'utilities/third-party';

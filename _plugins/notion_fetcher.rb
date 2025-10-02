@@ -3,6 +3,7 @@
 require 'net/http'
 require 'json'
 require 'uri'
+require 'fileutils'
 
 module Jekyll
   class NotionDataGenerator < Generator
@@ -407,7 +408,71 @@ module Jekyll
     end
 
     def use_skills_collections_fallback(site)
-      use_collection_fallback(site, 'skills', :organize_skills_by_category)
+      Jekyll.logger.info "Notion:", "Using collections fallback for skills"
+      
+      skills_by_category = {}
+      
+      if site.collections['skills']
+        site.collections['skills'].docs.each do |doc|
+          data = doc.data
+          category_name = data['title'] || data['category'] || 'Other'
+          
+          # Initialiser la catégorie si elle n'existe pas
+          skills_by_category[category_name] = {
+            'title' => category_name,
+            'category' => data['category'] || category_name,
+            'subcategory' => nil,
+            'icon' => data['icon'],
+            'order' => data['order'] || 999,
+            'skills' => []
+          }
+          
+          # Ajouter les skills de cette catégorie
+          if data['skills'] && data['skills'].is_a?(Array)
+            data['skills'].each_with_index do |skill, index|
+              skills_by_category[category_name]['skills'] << {
+                'name' => skill['name'],
+                'level' => skill['level'],
+                'years' => skill['years'],
+                'description' => skill['description'],
+                'icon' => skill['icon'],
+                'color' => skill['color'],
+                'featured' => skill['featured'] || false,
+                'order' => skill['order'] || index,
+                'id' => "collection_#{doc.basename_without_ext}_#{index}"
+              }
+            end
+          end
+        end
+      end
+      
+      # Trier les catégories par order
+      skills_by_category = skills_by_category.sort_by { |_, data| data['order'] }.to_h
+      
+      # Trier les skills dans chaque catégorie par order
+      skills_by_category.each do |_, data|
+        data['skills'].sort_by! { |skill| skill['order'] }
+      end
+      
+      # Stocker dans site.data
+      site.data['notion_skills'] = skills_by_category
+      
+      # Créer le fichier de données (forcer la mise à jour pour le fallback)
+      data_dir = File.join(site.source, '_data')
+      FileUtils.mkdir_p(data_dir) unless Dir.exist?(data_dir)
+      
+      data_file = File.join(data_dir, 'notion_skills.yml')
+      
+      File.open(data_file, 'w') do |file|
+        file.puts "# Données des skills importées depuis Notion"
+        file.puts "# Généré automatiquement - Ne pas modifier manuellement"
+        file.puts "# Last updated: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
+        file.puts ""
+        file.puts skills_by_category.to_yaml
+      end
+      
+      data_count = skills_by_category.size
+      Jekyll.logger.info "Notion:", "Skills collections fallback applied (#{data_count} items)"
     end
 
     def use_experiences_collections_fallback(site)
