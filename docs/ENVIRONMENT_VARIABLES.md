@@ -50,6 +50,6 @@ Si les variables Notion ne sont pas définies ou si le token est invalide, le sy
 - `_collections/_experiences/` pour les expériences
 - `_collections/_awards/` pour les récompenses
 - `_collections/_contributions/` pour les contributions
-- `_collections/_education/` pour l'éducation
+- `_collections/_educations/` pour l'éducation
 - `_collections/_services/` pour les services
 - `_collections/_testimonials/` pour les témoignages

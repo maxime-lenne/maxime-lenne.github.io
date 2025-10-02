@@ -36,7 +36,7 @@ module Jekyll
         file_name: 'notion_contributions.yml',
         organizer: :organize_contributions
       },
-      'education' => {
+      'educations' => {
         env_var: 'NOTION_EDUCATIONS_DB',
         data_key: 'notion_educations',
         file_name: 'notion_educations.yml',
@@ -487,8 +487,8 @@ module Jekyll
       use_collection_fallback(site, 'contributions', :organize_contributions)
     end
 
-    def use_education_collections_fallback(site)
-      use_collection_fallback(site, 'education', :organize_educations)
+    def use_educations_collections_fallback(site)
+      use_collection_fallback(site, 'educations', :organize_educations)
     end
 
     def use_services_collections_fallback(site)

@@ -71,7 +71,7 @@ collections:
     permalink: /experiences/:slug/
   skills:
     output: false  # Collection de données seulement
-  education:
+  educations:
     output: false  # Collection de données seulement
   awards:
     output: false  # Collection de données seulement

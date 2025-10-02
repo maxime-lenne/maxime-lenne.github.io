@@ -264,7 +264,7 @@ lang: fr
             title_highlight="Certifications"
             subtitle="🇫🇷 Français (Natif) - 🇬🇧 Anglais (Professionnel)" %}
         <div class="figma-cv-education__grid">
-          {% assign sorted_education = site.education | sort: 'order' %}
+          {% assign sorted_education = site.educations | sort: 'order' %}
           {% for education in sorted_education %}
           <div class="figma-cv-education__item">
             <div class="figma-cv-education__icon">
