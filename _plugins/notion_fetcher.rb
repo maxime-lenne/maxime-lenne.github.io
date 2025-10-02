@@ -93,24 +93,30 @@ module Jekyll
         return
       end
       
-      database_id = ENV[env_var]
-      collection_data = query_notion_database(database_id)
-      
-      # Organiser les données selon la méthode spécifique
-      organized_data = send(organizer, collection_data)
-      
-      # Vérifier s'il y a des données
-      if organized_data && (organized_data.is_a?(Hash) ? organized_data.size > 0 : organized_data.length > 0)
-        # Stocker dans site.data
-        site.data[data_key] = organized_data
+      begin
+        database_id = ENV[env_var]
+        collection_data = query_notion_database(database_id)
         
-        # Créer aussi un fichier de données pour le développement
-        create_data_file(site, organized_data, file_name, collection_name)
+        # Organiser les données selon la méthode spécifique
+        organized_data = send(organizer, collection_data)
         
-        data_count = organized_data.is_a?(Hash) ? organized_data.size : organized_data.length
-        Jekyll.logger.info "Notion:", "#{collection_name.capitalize} data fetched successfully (#{data_count} items)"
-      else
-        Jekyll.logger.warn "Notion:", "No #{collection_name} data found, using fallback to collections"
+        # Vérifier s'il y a des données
+        if organized_data && (organized_data.is_a?(Hash) ? organized_data.size > 0 : organized_data.length > 0)
+          # Stocker dans site.data
+          site.data[data_key] = organized_data
+          
+          # Créer aussi un fichier de données pour le développement
+          create_data_file(site, organized_data, file_name, collection_name)
+          
+          data_count = organized_data.is_a?(Hash) ? organized_data.size : organized_data.length
+          Jekyll.logger.info "Notion:", "#{collection_name.capitalize} data fetched successfully (#{data_count} items)"
+        else
+          Jekyll.logger.warn "Notion:", "No #{collection_name} data found, using fallback to collections"
+          send("use_#{collection_name}_collections_fallback", site)
+        end
+      rescue => e
+        Jekyll.logger.error "Notion:", "Error fetching #{collection_name}: #{e.message}"
+        Jekyll.logger.info "Notion:", "Using collections fallback for #{collection_name}"
         send("use_#{collection_name}_collections_fallback", site)
       end
     end
@@ -123,15 +129,9 @@ module Jekyll
       request['Notion-Version'] = '2022-06-28'
       request['Content-Type'] = 'application/json'
       
-      # Requête pour récupérer toutes les pages
+      # Requête simple pour récupérer toutes les pages (sans tri pour éviter les erreurs)
       request.body = {
-        page_size: 100,
-        sorts: [
-          {
-            property: 'Order',
-            direction: 'ascending'
-          }
-        ]
+        page_size: 100
       }.to_json
       
       response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
@@ -139,7 +139,14 @@ module Jekyll
       end
       
       unless response.is_a?(Net::HTTPSuccess)
-        raise "Notion API error: #{response.code} #{response.message}"
+        error_body = response.body
+        begin
+          error_json = JSON.parse(error_body)
+          error_message = error_json['message'] || response.message
+        rescue
+          error_message = response.message
+        end
+        raise "Notion API error: #{response.code} #{error_message}"
       end
       
       JSON.parse(response.body)

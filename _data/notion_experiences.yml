@@ -1,59 +1,30 @@
 # Données des experiences importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2025-10-02 14:15:14
+# Last updated: 2025-10-02 14:18:03
 
 ---
-- title: CTO - Ippon
+- title: CTO - Ippons
   company: Ippon
   role: CTO agence lille
   start_date:
   end_date:
   current: true
   location: Lille, France
-  type: full-time
+  type: CDI / Full-time
   order: 1
   logo_url:
   description: Direction technique d'une agence de plus de 35 consultants réalisant
     des mission principalements en régis dans des grand groupe (Retail, banque...)
     et prestations de conseil pour l'INSEE et Décathlon
-  about: 'Ippon est un cabinet de conseil et d’expertises en technologie, international
-    et indépendant. Ippon accompagne la transformation numérique des entreprises,
-    en les aidant à concevoir leur stratégie et à déployer leur roadmap à l''échelle,
-    afin de délivrer rapidement la valeur attendue. Ippon évolue sur plusieurs métiers
-    à travers les practices suivantes : Software Engineering, Cloud & Devops, Data
-    & IA, Modern Architecture, Mobile, Produit Agilité & Design'
+  about:
   tags:
   - ESN
-  - Retail
-  skills:
-  - Leadership
-  - Management
-  - Craftmanship
-  - Craftmanship
-  - Python
-  - Flask
-  achievements:
-  - Direction d'une équipe de 5 managers et 35+ consultants
-  - Croissance de 20% du chiffre d'affaires malgrés un context économique tendu
-  - Assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie, codebase, architecture,
-    devops, communauté) dans 3 équipes lilloise de l'INSEE
-  missions:
-  - Accompagnement de l'équipe lilloise, recrutement, formation, coaching.
-  - Management des managers de l'équipe lilloise, entretiens individuels toutes les
-    deux semaines, ateliers d'équipe / co-construction, suivi des objectifs, entretiens
-    annuels
-  - 'Participer au développement de la visibilité et de la notoriété locale et nationale
-    d''Ippon : Stand au DevFest lille, animation d''une table ronde sur le craftmanship,
-    organisation et hébergement de meetup locaux, interview promotionnelle WeLoveDev'
-  - 'Missions clients à forte valeur ajoutée : Assessment Craft, audit, architecture,
-    tech lead'
-  - Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients,
-    rédaction et soutenance des offres
-  - Animation de l'agence, rituels, réunion all-hands mensuelle, présentations internes...
-  - Construction du budget 2025 de l'agence.
-  - Suivi des clients en cours et identification de nouvelles opportunités
+  - Product
+  skills: []
+  achievements: []
+  missions: []
   sub_roles: []
-  id: collection_0
+  id: 34ada855-7e8a-42f2-808e-288deb6f53c9
 - title: CTO - theTribe
   company: theTribe
   role: CTO agence Lille
@@ -61,55 +32,21 @@
   end_date:
   current: false
   location: Lille, France
-  type: full-time
+  type: CDI / Full-time
   order: 2
   logo_url:
   description: Management d'agence et stratégie produit. Développement d'équipe et
     direction technique. Leadership dans les partenariats technologiques et l'offre
     de services.
-  about: theTribe est un Tech&Product Studio qui accompagne les entrepreneurs et les
-    décideurs tech à innover et réussir leurs produits en ayant un impact fort sur
-    leurs utilisateurs finaux.
+  about:
   tags:
   - Startup
   - Product
-  - Studio
-  skills:
-  - Team Development
-  - Culture Produit
-  - Design Sprint
-  - No-code
-  - Strapi
-  - Ansible / terraform
-  achievements:
-  - Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients,
-    rédaction et soutenance des offres
-  - Participation à la refonte d'un "career framework" au niveau national, permettant
-    d'évaluer et d'accompagner la montée en compétences des équipes
-  - Création d'une offre de service no-code (embauche du 1er product builder), structuration
-    de l'offre de run
-  - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
-  missions:
-  - Management et accompagnement de l'équipe lilloise, recrutement, formation, coaching,
-    définition des objectifs.
-  - Co-construction avec l'équipe lilloise de la roadmap de l'agence en accord avec
-    la stratégie de l’entreprise.
-  - Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients,
-    rédaction et soutenance des offres
-  - Construction du prévisionnel financier.
-  - Participation à la refonte d'un "career framework" au niveau national, permettant
-    d'évaluer et d'accompagner la montée en compétences des équipes
-  - Animation de l'agence, rituels, weekly d'agence, séminaires, talks internes...
-  - Suivi des projets clients en cours, soutien technique, COPIL
-  - 'Construire ou faire évoluer l''offre de service : création d''une offre de solution
-    no-code (embauche d''un product builder), structuration d''une offre de run'
-  - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
-  - 'Participer au développement de la visibilité et de la notoriété locale et nationale
-    de the Tribe : participation à des salons, Meetup'
-  - 'Missions clients à forte valeur ajoutée : Audit, architecture'
-  - Directeur d'agence intérim 5 mois
+  skills: []
+  achievements: []
+  missions: []
   sub_roles: []
-  id: collection_1
+  id: 6ac2e6b7-6264-4acd-a789-3e1ce9d5b199
 - title: CPTO - Frizbiz
   company: Frizbiz / Homelife
   role: CPTO
@@ -117,64 +54,23 @@
   end_date:
   current: false
   location: Lille, France
-  type: full-time
+  type: CDI / Full-time
   order: 3
   logo_url:
   description: J'ai rejoint Frizbiz 6 ans après son lancement, lors de la création
     du poste de CTO. Je suis arrivé pour la conception d'un nouveau produit sur le
     modèle BtoB et BtoBtoC à destination des partenaires et avec pour objectif transverse
     une refonte technique de l'existant.
-  about: Connecter des personnes ayant besoin d’un coup de main pour aménager leur
-    habitat avec des personnes disponibles qui savent le faire. Frizbiz est LA plateforme
-    des services de l’aménagement et du bien-être chez soi.
+  about:
   tags:
   - Startup
-  - Scale-up
-  - B2B
-  - B2B2C
-  - C2C
-  - Market Place
-  skills:
-  - Product Leadership
-  - B2B Platform
-  - Innovation
-  achievements:
-  - Développement d'un nouveau produit B2B2C, qui devient le produit principal de
-    l'entreprise 2 an après.
-  - Organisation de la refonte technique complète en fil rouge de la marketplace d'origine
-    Frizbiz, qui sera ensuite revendu
-  - Mise en place d'un partenariat avec ManoMano
-  - Croissance de 200% des utilisateurs
-  - Mise en place d'une nouvelle stack avec architecture microservices (NestJs, TypeScript,
-    Docker, Kubernetes...) avec client web et mobile (Vue.js, Nuxt, Swift, Kotlin...)
-  missions:
-  - Management et accompagnement de l'équipe IT et produit, recrutement, formation,
-    coaching, définition des objectifs.
-  - Définition de la roadmap technique et fonctionnel en accord avec la stratégie
-    de l’entreprise.
-  - Pilotage des développements internes, externes, des fournisseurs et partenaires
-    clés.
-  - Gestion de projets en mode Agile Scrum / Kanban, priorisation et arbitrage des
-    besoins
-  - Gestion budget IT, immobilisation, charges salariales, externes, fournisseurs...
-  - mise en place de rapports, tableau de bord, analytiques, KPIs et outils de surveillance
-    de l'infrastructure et de l'applicatif.
-  - Définition de l’architecture technique et applicative, infrastructure, découpage,
-    conception générique et abstraite des micro-services jusqu’au modèle de données,
-    échanges entre les micro-services, choix des technologies utilisées.
-  - Gestion de la qualité et mise en place des outils et méthodes d’industrialisation,
-    Test Driven Development, tests coverage, code review, peer programming, intégration
-    et déploiement continus (Gitlab).
-  - Design des APIs publiques et privées. Gestion des partenaires qui intègrent l’API
-    et mise à disposition d’un environnement de test pour leurs intégrations.
-  - Choix des outils SaaS et APIs externes utilisés par l’entreprise (Stripe, zendesk
-    support et sell, slack, Aircall, twilio, sendgrid, google APIs, mapbox, firebase,
-    zapier...)
-  - Organisation de la veille concurrentielle, métier et technique, de l’innovation,
-    R&D, POC, contribution open source, ateliers et démo à destination de l'ensemble
-    des collaborateurs de l'entreprise
+  - Product
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
   sub_roles: []
-  id: collection_2
+  id: 0f2a4348-dbe1-48c3-8857-057ca7d6285f
 - title: Formateur - Le Wagon
   company: Le Wagon
   role: Formateur
@@ -182,25 +78,18 @@
   end_date:
   current: false
   location: Lille, France
-  type: freelance
+  type: Freelance
   order: 4
   logo_url:
   description: Formation intensive en développement web. Encadrement d'étudiants dans
     l'apprentissage du développement full-stack.
   about:
   tags: []
-  skills:
-  - Formation
-  - Full-Stack Development
-  - Mentoring
-  achievements:
-  - Formation de 100+ étudiants
-  - Développement de modules pédagogiques
-  - Mentorat technique et professionnel
-  - Taux de réussite de 95%
+  skills: []
+  achievements: []
   missions: []
   sub_roles: []
-  id: collection_3
+  id: d6fe15bb-01b7-4c35-b7b0-0a45847c4e0e
 - title: Product Owner - Norauto
   company: Norauto
   role: Product Owner
@@ -208,25 +97,18 @@
   end_date:
   current: false
   location: France
-  type: freelance
+  type: Freelance
   order: 5
   logo_url:
   description: Gestion produit et développement d'applications. Coordination entre
     équipes techniques et métier.
   about:
   tags: []
-  skills:
-  - Product Management
-  - Agile
-  - Stakeholder Management
-  achievements:
-  - Refonte de l'application mobile
-  - Mise en place de processus agiles
-  - Amélioration de 40% du taux de conversion
-  - Coordination de 3 équipes de développement
+  skills: []
+  achievements: []
   missions: []
   sub_roles: []
-  id: collection_4
+  id: 4bed8ee6-78c5-4266-9d38-fca30d59387e
 - title: Co-fondateur - EcoTa.co
   company: EcoTa.co
   role: Co-fondateur
@@ -234,23 +116,233 @@
   end_date:
   current: false
   location: Lille, France
-  type: startup
+  type:
   order: 7
   logo_url:
   description: Création et développement d'une startup. Leadership technique et produit,
     développement de l'équipe.
   about:
-  tags: []
-  skills:
-  - Entrepreneurship
+  tags:
   - Startup
-  - Co-founding
-  - Full-Stack Development
-  achievements:
-  - Levée de fonds de 500k€
-  - Développement d'une plateforme de covoiturage
-  - Équipe de 8 personnes
-  - Programme d'accélération Euratechnologies
+  - Product
+  skills: []
+  achievements: []
   missions: []
   sub_roles: []
-  id: collection_5
+  id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
+- title: Product Owner, Scrum Master - modern-blocks
+  company: modern-blocks
+  role: Product Owner, Scrum Master
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: Freelance
+  order: 8
+  logo_url:
+  description: Création d’une marketplace photo en Ruby on Rails. Rôle de Product
+    Owner et Scrum Master en mode Agile. Architecture API-first (Moltin), gestion
+    du backlog, rituels, coaching et mise en place d’outils (Zenhub).
+  about:
+  tags:
+  - Startup
+  - Product
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: 5ce475d7-d2f7-4d16-8f26-8c03bba67f1e
+- title: Développeur full stack - Freelance
+  company: Freelance
+  role: Développeur full stack
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: Freelance
+  order: 9
+  logo_url:
+  description: Missions full stack en freelance. E‑commerce Magento (lematelas.fr),
+    plugin Colisweb, conseil et développement web et mobile.
+  about:
+  tags:
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: a4d79834-dbfb-467c-ba4e-86b55acde904
+- title: Responsable d’applications Java / JEE - Cofidis
+  company: Cofidis
+  role: Responsable d’applications Java / JEE
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: Freelance
+  order: 10
+  logo_url:
+  description: Responsable d’applications pour Cofidis. Modélisation UML, conception
+    technique, suivi des développements, qualité et industrialisation (tests, CI),
+    évolutions Java/JEE et Cobol.
+  about:
+  tags:
+  - Grands Comptes
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: 7e6311e4-c94b-4ec7-be8c-ffd944ebd370
+- title: Ingénieur études et développement Java / JEE - Atos Origin Worldline (Massilia)
+  company: Atos Origin Worldline
+  role: Ingénieur études et développement Java / JEE
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: CDI / Full-time
+  order: 11
+  logo_url:
+  description: Projet Massilia (e‑commerce) chez Atos Origin Worldline. Conception
+    et dev Java/JEE, gestion d’équipes offshore, composants Tapestry, benchs de performance
+    et documentation.
+  about:
+  tags:
+  - Grands Comptes
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: 6a3d0190-d746-4eea-851e-d1ceab4ee369
+- title: Ingénieur études et développement Java / JEE - Atos Origin Worldline (SPoP)
+  company: Atos Origin Worldline
+  role: Ingénieur études et développement Java / JEE
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: CDI / Full-time
+  order: 12
+  logo_url:
+  description: Projet SPoP (plateforme de paiement internationale) chez Atos Origin
+    Worldline. Conception de composants SOA, gestion offshore, mise en place d’intégration
+    continue et tests.
+  about:
+  tags:
+  - Grands Comptes
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: ddded262-0459-4756-baa4-96d73ed8ee5c
+- title: Expert front-end Java / JEE - Natixis (Atos Origin Intégration)
+  company: Natixis (Atos Origin Intégration)
+  role: Expert front-end Java / JEE
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: CDI / Full-time
+  order: 13
+  logo_url:
+  description: Expertise front‑end pour Natixis (Line Bourse). Accessibilité, compatibilité
+    multi‑navigateurs, intégration HTML/CSS, corrections et qualité.
+  about:
+  tags:
+  - Grands Comptes
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: 305acf95-a4c7-41ad-ad4d-86d11298b7dc
+- title: Développeur full stack - Atos Origin Intégration
+  company: Atos Origin Intégration
+  role: Développeur full stack
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: CDI / Full-time
+  order: 14
+  logo_url:
+  description: Missions variées chez Atos Origin Intégration. Intégration SharePoint,
+    portails d’information, applications web Java/JEE pour des clients publics et
+    privés.
+  about:
+  tags:
+  - Grands Comptes
+  - Secteur Public
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: f11e2f07-c2c8-41f4-b780-56632c6de73f
+- title: Analyste programmeur TMA crédit - Caisse d'épargne (Atos Origin Intégration)
+  company: Caisse d'épargne (Atos Origin Intégration)
+  role: Analyste programmeur TMA crédit
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: CDI / Full-time
+  order: 15
+  logo_url:
+  description: TMA domaine crédit à la Caisse d’épargne. Gestion des incidents de
+    production, analyses, corrections, automatisations internes et suivi de production.
+  about:
+  tags:
+  - Grands Comptes
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: 208adcda-de97-443f-b8e8-613501314a28
+- title: Conduite de Changement et assistance MOA - Caisse d'épargne (Sylis)
+  company: Caisse d'épargne (Sylis)
+  role: Conduite de Changement et assistance MOA
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: CDI / Full-time
+  order: 16
+  logo_url:
+  description: Conduite du changement et assistance MOA domaine monétique à la Caisse
+    d’épargne. Formation, communication, plans de tests et déploiements GAB.
+  about:
+  tags:
+  - Grands Comptes
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: 179ba621-9b35-4d07-80d0-791d6f3a6cdb
+- title: Chargé d'affaires - Phenix netcom
+  company: Phenix netcom
+  role: Chargé d'affaires
+  start_date:
+  end_date:
+  current: false
+  location: Lille, France
+  type: CDI / Full-time
+  order: 17
+  logo_url:
+  description: Chargé d’affaires télécoms et vidéo IP. Détection et gestion de projets
+    PABX et caméras IP. Réalisation d’un intranet prospects‑clients.
+  about:
+  tags:
+  - PME
+  - Tech
+  skills: []
+  achievements: []
+  missions: []
+  sub_roles: []
+  id: 0373bc6d-2ca8-44b0-b547-8cc576f61827
