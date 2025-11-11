@@ -44,7 +44,7 @@ watch: ## Construire et surveiller les changements
 
 production: ## Construire pour la production avec optimisations
 	@echo "🚀 Construction pour la production..."
-	JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config_prod.yml
+	bundle exec jekyll build --config _config.yml,_config_prod.yml
 	@echo "✅ Build de production terminé!"
 
 deploy: ## Déployer sur GitHub Pages (après push)

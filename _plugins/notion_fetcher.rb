@@ -211,10 +211,11 @@ module Jekyll
     end
 
     def organize_experiences(notion_data)
+      Jekyll.logger.info "Notion:", "Organizing experiences #{notion_data}"
       organize_simple_collection(notion_data, [
-        'title', 'company', 'role', 'start_date', 'end_date', 'current', 
-        'location', 'type', 'order', 'logo_url', 'description', 'about',
-        'tags', 'skills', 'achievements', 'missions', 'sub_roles'
+        'Title', 'Company', 'Role', 'Start Date', 'End Date', 'Current', 
+        'Location', 'Type', 'Order', 'Logo URL', 'Description', 'About',
+        'Tags', 'Skills', 'Achievements', 'Missions'
       ])
     end
 
@@ -260,16 +261,24 @@ module Jekyll
         
         property_names.each do |prop_name|
           case prop_name
-          when 'current', 'completed'
-            item[prop_name] = extract_checkbox_property(properties, prop_name.capitalize)
-          when 'order', 'rating'
-            item[prop_name] = extract_number_property(properties, prop_name.capitalize)
-          when 'start_date', 'end_date', 'date'
-            item[prop_name] = extract_date_property(properties, prop_name.capitalize)
-          when 'tags', 'skills', 'achievements', 'missions', 'sub_roles', 'sub_roles', 'labels', 'features', 'keywords'
-            item[prop_name] = extract_multi_select_property(properties, prop_name.capitalize)
+          when 'Current', 'Completed'
+            item[prop_name.downcase] = extract_checkbox_property(properties, prop_name)
+          when 'Order', 'Rating'
+            item[prop_name.downcase] = extract_number_property(properties, prop_name)
+          when 'Start Date', 'End Date', 'Date'
+            item[prop_name.downcase.gsub(' ', '_')] = extract_date_property(properties, prop_name)
+          when 'Tags', 'Labels', 'Features', 'Keywords'
+            item[prop_name.downcase] = extract_multi_select_property(properties, prop_name)
+          when 'Skills'
+            item[prop_name.downcase] = extract_rollup_property(properties, prop_name)
+          when 'Achievements', 'Missions'
+            item[prop_name.downcase] = extract_rich_text_property(properties, prop_name)
+          when 'Logo URL'
+            item['logo_url'] = extract_url_property(properties, prop_name)
+          when 'About', 'Description', 'Role', 'Company', 'Location', 'Type'
+            item[prop_name.downcase.gsub(' ', '_')] = extract_rich_text_property(properties, prop_name)
           else
-            item[prop_name] = extract_text_property(properties, prop_name.capitalize)
+            item[prop_name.downcase] = extract_text_property(properties, prop_name)
           end
         end
         
@@ -371,6 +380,60 @@ module Jekyll
       else
         nil
       end
+    end
+
+    def extract_url_property(properties, property_name)
+      property = properties[property_name]
+      return nil unless property
+      
+      return nil unless property['type'] == 'url'
+      property['url']
+    end
+
+    def extract_rich_text_property(properties, property_name)
+      property = properties[property_name]
+      return nil unless property
+      
+      return nil unless property['type'] == 'rich_text'
+      return nil if property['rich_text'].nil? || property['rich_text'].empty?
+      
+      property['rich_text'].map { |text| text['plain_text'] }.join('')
+    end
+
+    def extract_relation_property(properties, property_name)
+      property = properties[property_name]
+      return [] unless property
+      
+      return [] unless property['type'] == 'relation'
+      return [] if property['relation'].nil? || property['relation'].empty?
+      
+      # Pour l'instant, on retourne les IDs des relations
+      # Dans un système plus avancé, on pourrait résoudre les noms des skills
+      property['relation'].map { |relation| relation['id'] }
+    end
+
+    def extract_rollup_property(properties, property_name)
+      property = properties[property_name]
+      return [] unless property
+      
+      return [] unless property['type'] == 'rollup'
+      return [] if property['rollup'].nil? || property['rollup']['array'].nil? || property['rollup']['array'].empty?
+      
+      Jekyll.logger.info "Notion:", "Extracting rollup property #{property_name}: #{property['rollup']['array'].length} items"
+      
+      # Extraire les titres des éléments dans le rollup
+      result = property['rollup']['array'].map do |item|
+        if item['type'] == 'title' && item['title'] && !item['title'].empty?
+          title_text = item['title'].map { |title| title['plain_text'] }.join('')
+          Jekyll.logger.info "Notion:", "Found skill: #{title_text}"
+          title_text
+        else
+          nil
+        end
+      end.compact
+      
+      Jekyll.logger.info "Notion:", "Extracted skills: #{result}"
+      result
     end
 
     # Méthode générique pour créer les fichiers de données
