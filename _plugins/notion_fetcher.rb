@@ -272,7 +272,7 @@ module Jekyll
           when 'Skills'
             item[prop_name.downcase] = extract_rollup_property(properties, prop_name)
           when 'Achievements', 'Missions'
-            item[prop_name.downcase] = extract_rich_text_property(properties, prop_name)
+            item[prop_name.downcase] = extract_formula_array_property(properties, prop_name)
           when 'Logo URL'
             item['logo_url'] = extract_url_property(properties, prop_name)
           when 'About', 'Description', 'Role', 'Company', 'Location', 'Type'
@@ -434,6 +434,53 @@ module Jekyll
       
       Jekyll.logger.info "Notion:", "Extracted skills: #{result}"
       result
+    end
+
+    def extract_formula_array_property(properties, property_name)
+      property = properties[property_name]
+      return [] unless property
+      
+      return [] unless property['type'] == 'formula'
+      return [] if property['formula'].nil?
+
+      formula = property['formula']
+      
+      # Vérifier si la formule retourne un array
+      if formula['type'] == 'array' && formula['array']
+        # Extraire les chaînes de texte de l'array
+        result = formula['array'].map do |item|
+          case item['type']
+          when 'string'
+            item['string']
+          when 'rich_text'
+            item['rich_text']&.map { |text| text['plain_text'] }&.join('')
+          else
+            nil
+          end
+        end.compact
+        
+        Jekyll.logger.info "Notion:", "Extracted formula array property #{property_name}: #{result.length} items"
+        result
+      elsif formula['type'] == 'string' && formula['string']
+        # Si la formule retourne une chaîne, la parser en array
+        # Les éléments sont séparés par des virgules (potentiellement suivies d'un point)
+        string_value = formula['string']
+        return [] if string_value.nil? || string_value.empty?
+        
+        # Diviser par les virgules et nettoyer chaque élément
+        result = string_value.split(/- /).map do |item|
+          # Nettoyer les espaces en début/fin et supprimer les points en fin
+          cleaned = item.strip.gsub(/^\.+|\.+$/, '')
+          cleaned.empty? ? nil : cleaned
+        end.compact
+        
+        Jekyll.logger.info "Notion:", "Extracted formula string property #{property_name}: #{result.length} items"
+        result
+      else
+        # Si le type n'est ni array ni string, retourner un tableau vide
+        Jekyll.logger.warn "Notion:", "Formula property #{property_name} has unsupported type: #{formula['type']}"
+        []
+      end
     end
 
     # Méthode générique pour créer les fichiers de données

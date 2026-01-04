@@ -3,7 +3,7 @@ title: "CTO - Ippon"
 slug: "cto-ippon"
 layout: experience
 company: "Ippon"
-role: "CTO agence lille 2"
+role: "CTO agence lille"
 start_date: "2024-01-01"
 end_date: ""
 current: true

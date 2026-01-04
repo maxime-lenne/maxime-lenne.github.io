@@ -1,14 +1,14 @@
 # Données des experiences importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2025-10-02 23:05:33
+# Last updated: 2026-01-05 00:44:13
 
 ---
-- title: CTO - Ippons
+- title: CTO - Ippon
   company: Ippon
   role: CTO agence lille
   start_date: '2024-01-01'
-  end_date:
-  current: true
+  end_date: '2024-11-15'
+  current: false
   location: Lille, France
   type:
   order: 1
@@ -31,19 +31,27 @@
   - Craftmanship
   - Python
   - Django / Flask / FastAPI
-  achievements: |-
-    - Direction d'une équipe de 5 managers et 35+ consultants
-    - Croissance de 20% du chiffre d'affaires malgrés un context économique tendu
-    - Assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie, codebase, architecture, devops, communauté) dans 3 équipes lilloise de l'INSEE
-  missions: |-
-    - Accompagnement de l'équipe lilloise, recrutement, formation, coaching.
-    - Management des managers de l'équipe lilloise, entretiens individuels toutes les deux semaines, ateliers d'équipe / co-construction, suivi des objectifs, entretiens annuels
-    - Participer au développement de la visibilité et de la notoriété locale et nationale d'Ippon : Stand au DevFest lille, animation d'une table ronde sur le craftmanship, organisation et hébergement de meetup locaux, interview promotionnelle WeLoveDev
-    - Missions clients à forte valeur ajoutée : Assessment Craft, audit, architecture, tech lead
-    - Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients, rédaction et soutenance des offres
-    - Animation de l'agence, rituels, réunion all-hands mensuelle, présentations internes...
-    - Construction du budget 2025 de l'agence.
-    - Suivi des clients en cours et identification de nouvelles opportunités
+  achievements:
+  - Direction de l’agence et management d'une équipe de 5 managers et 35+ consultants
+    pluridisciplinaires
+  - Croissance de 20% du chiffre d'affaires malgrés un context économique tendu
+  - Assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie, codebase, architecture,
+    devops, communauté) dans 3 équipes lilloise de l'INSEE
+  missions:
+  - Accompagnement de l'équipe lilloise, recrutement, formation, coaching
+  - Management des managers de l'équipe lilloise, entretiens individuels toutes les
+    deux semaines, ateliers d'équipe / co-construction, suivi des objectifs, entretiens
+    annuels
+  - 'Participer au développement de la visibilité et de la notoriété locale et nationale
+    d''Ippon : Stand au DevFest lille, animation d''une table ronde sur le craftmanship,
+    organisation et hébergement de meetup locaux, interview promotionnelle WeLoveDev'
+  - 'Missions clients à forte valeur ajoutée : Assessment Craft, audit, architecture,
+    tech lead'
+  - Participation aux phases d'avant-vente, compréhension des besoins et enjeux clients,
+    rédaction et soutenance des offres
+  - Animation de l'agence, rituels, réunion all-hands mensuelle, présentations internes
+  - Construction du budget 2025 de l'agence
+  - Suivi des clients en cours et identification de nouvelles opportunités
   id: 34ada855-7e8a-42f2-808e-288deb6f53c9
 - title: CTO - theTribe
   company: theTribe
@@ -77,24 +85,33 @@
   - Scaleway
   - Node.js, NestJs
   - Laravel
-  achievements: |-
-    - "Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients, rédaction et soutenance des offres"
-    - "Participation à la refonte d'un \"career framework\" au niveau national, permettant d'évaluer et d'accompagner la montée en compétences des équipes"
-    - "Création d'une offre de service no-code (embauche du 1er product builder), structuration de l'offre de run"
-    - "Lead et mise en place de partenariats technologiques : Scaleway, Strapi”
-  missions: |-
-    - "Management et accompagnement de l'équipe lilloise, recrutement, formation, coaching, définition des objectifs."
-    - "Co-construction avec l'équipe lilloise de la roadmap de l'agence en accord avec la stratégie de l’entreprise."
-    - "Participation aux phases d’avant-vente, compréhension des besoins et enjeux clients, rédaction et soutenance des offres"
-    - "Construction du prévisionnel financier."
-    - "Participation à la refonte d'un \"career framework\" au niveau national, permettant d'évaluer et d'accompagner la montée en compétences des équipes"
-    - "Animation de l'agence, rituels, weekly d'agence, séminaires, talks internes..."
-    - "Suivi des projets clients en cours, soutien technique, COPIL"
-    - "Construire ou faire évoluer l'offre de service : création d'une offre de solution no-code (embauche d'un product builder), structuration d'une offre de run"
-    - "Lead et mise en place de partenariats technologiques : Scaleway, Strapi"
-    - "Participer au développement de la visibilité et de la notoriété locale et nationale de the Tribe : participation à des salons, Meetup"
-    - "Missions clients à forte valeur ajoutée : Audit, architecture"
-    - "Directeur d'agence intérim 5 mois”
+  achievements:
+  - Avant-vente, compréhension des besoins et enjeux clients, rédaction et soutenance
+    des propals
+  - Participation à la refonte d'un "career framework" au niveau national, permettant
+    d'évaluer et d'accompagner la montée en compétences des équipes
+  - Création d'une offre de service no-code (embauche du 1er product builder), structuration
+    de l'offre de run
+  - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
+  missions:
+  - Management et accompagnement de l'équipe lilloise, recrutement, formation, coaching,
+    définition des objectifs
+  - Co-construction avec l'équipe lilloise de la roadmap de l'agence en accord avec
+    la stratégie de l'entreprise
+  - Participation aux phases d'avant-vente, compréhension des besoins et enjeux clients,
+    rédaction et soutenance des offres
+  - Construction du prévisionnel financier
+  - Participation à la refonte d'un "career framework" au niveau national, permettant
+    d'évaluer et d'accompagner la montée en compétences des équipes
+  - Animation de l'agence, rituels, weekly d'agence, séminaires, talks internes
+  - Suivi des projets clients en cours, soutien technique, COPIL
+  - 'Construire ou faire évoluer l''offre de service : création d''une offre de solution
+    no-code (embauche d''un product builder), structuration d''une offre de run'
+  - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
+  - 'Participer au développement de la visibilité et de la notoriété locale et nationale
+    de the Tribe : participation à des salons, Meetup'
+  - 'Missions clients à forte valeur ajoutée : Audit, architecture'
+  - Directeur d'agence intérim 5 mois
   id: 6ac2e6b7-6264-4acd-a789-3e1ce9d5b199
 - title: CPTO - Frizbiz
   company: Frizbiz / Homelife
@@ -117,27 +134,48 @@
   - Tech
   skills:
   - Design Sprint
+  - TypeScript
+  - VueJs
+  - Node.js, NestJs
+  - Microservices
+  - Ruby on Rails
+  - Ruby
   achievements:
+  - Développement d'un nouveau produit B2B2C, qui devient le produit principal de
+    l'entreprise 2 an après
+  - Organisation de la refonte technique complète en fil rouge de la marketplace d'origine
+    Frizbiz, qui sera ensuite revendu
+  - Mise en place d'un partenariat avec ManoMano
+  - Croissance de 200% des utilisateurs
+  - Mise en place d'une nouvelle stack avec architecture microservices (NestJs, TypeScript,
+    Docker, Kubernetes...) avec client web et mobile (Vue.js, Nuxt, Swift, Kotlin...)
   missions:
+  - Management et accompagnement de l'équipe IT et produit, recrutement, formation,
+    coaching, définition des objectifs
+  - Définition de la roadmap technique et fonctionnel en accord avec la stratégie
+    de l'entreprise
+  - Pilotage des développements internes, externes, des fournisseurs et partenaires
+    clés
+  - Gestion de projets en mode Agile Scrum / Kanban, priorisation et arbitrage des
+    besoins
+  - Gestion budget IT, immobilisation, charges salariales, externes, fournisseurs
+  - mise en place de rapports, tableau de bord, analytiques, KPIs et outils de surveillance
+    de l'infrastructure et de l'applicatif
+  - Définition de l'architecture technique et applicative, infrastructure, découpage,
+    conception générique et abstraite des micro-services jusqu'au modèle de données,
+    échanges entre les micro-services, choix des technologies utilisées
+  - Gestion de la qualité et mise en place des outils et méthodes d'industrialisation,
+    Test Driven Development, tests coverage, code review, peer programming, intégration
+    et déploiement continus (Gitlab)
+  - Design des APIs publiques et privées. Gestion des partenaires qui intègrent l'API
+    et mise à disposition d'un environnement de test pour leurs intégrations
+  - Choix des outils SaaS et APIs externes utilisés par l'entreprise (Stripe, zendesk
+    support et sell, slack, Aircall, twilio, sendgrid, google APIs, mapbox, firebase,
+    zapier...)
+  - Organisation de la veille concurrentielle, métier et technique, de l'innovation,
+    R&D, POC, contribution open source, ateliers et démo à destination de l'ensemble
+    des collaborateurs de l'entreprise
   id: 0f2a4348-dbe1-48c3-8857-057ca7d6285f
-- title: Formateur - Le Wagon
-  company: Le Wagon
-  role: Formateur
-  start_date: '2018-01-01'
-  end_date: '2019-01-01'
-  current: false
-  location: Lille, France
-  type:
-  order: 4
-  logo_url:
-  description: Formation intensive en développement web. Encadrement d'étudiants dans
-    l'apprentissage du développement full-stack.
-  about:
-  tags: []
-  skills: []
-  achievements:
-  missions:
-  id: d6fe15bb-01b7-4c35-b7b0-0a45847c4e0e
 - title: Product Owner - Norauto
   company: Norauto
   role: Product Owner
@@ -146,15 +184,16 @@
   current: false
   location: France
   type:
-  order: 5
-  logo_url:
-  description: Gestion produit et développement d'applications. Coordination entre
-    équipes techniques et métier.
+  order: 4
+  logo_url: "/assets/images/companies/norauto.png"
+  description: Conception de micro-services en mode API first dans le cadre du projet
+    BeAPI, point de départ de la transformation numérique chez Norauto à travers une
+    refonte technique bas niveau.
   about:
   tags: []
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 4bed8ee6-78c5-4266-9d38-fca30d59387e
 - title: Co-fondateur - EcoTa.co
   company: EcoTa.co
@@ -164,8 +203,8 @@
   current: false
   location: Lille, France
   type:
-  order: 7
-  logo_url:
+  order: 5
+  logo_url: "/assets/images/companies/ecotaco.png"
   description: Création et développement d'une startup. Leadership technique et produit,
     développement de l'équipe.
   about:
@@ -174,8 +213,43 @@
   - Product
   skills: []
   achievements:
-  missions:
+  - Une aventure qui a duré 5 ans, opérationnel dans 12 villes, +600 chauffeurs, +20K
+    utilisateurs, +500K€ de CA en 2015
+  - Une Levée de fonds de 300k€
+  - Développement d'un système d'information complexe à base de micro services, APIs
+    publiques et privées, applications web et mobile native
+  - partenariats stratégiques avec la SNCF, Keolis, Booking.com
+  - Programme d'incubation, puis d'accélération Euratechnologies, Lauréat de Lille
+    Métropole Innovation
+  missions: []
   id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
+- title: Formateur - Le Wagon
+  company: Le Wagon
+  role: Formateur
+  start_date: '2018-01-01'
+  end_date: '2019-01-01'
+  current: false
+  location: Lille, France
+  type:
+  order: 6
+  logo_url: "/assets/images/companies/lewagon.jpeg"
+  description: Encadrement d'étudiants dans l'apprentissage intensif du développement
+    full-stack sur les technologies Ruby et Rails
+  about: 'Le Wagon est une école de code en 9 semaines à temps plein qui apprend à
+    des entrepreneurs et à des profils créatifs à construire leur produit tech dans
+    toutes ses dimensions: design, prototypage, code, mise en production.'
+  tags: []
+  skills: []
+  achievements:
+  - Formation de 100+ étudiants
+  missions:
+  - Cours sur le langage Ruby, la programmation orientée objet, base de données SQL
+    et ActiveRecord, HTML et CSS, Bootstrap, JavaScript et ses outils, Middleman,
+    Rails et librairies d'authentification / authorisation
+  - Accompagnement des étudiants sur les exercices pratiques
+  - Animation de Livecode
+  - Accompagnement des étudiants sur les projets finaux
+  id: d6fe15bb-01b7-4c35-b7b0-0a45847c4e0e
 - title: Product Owner, Scrum Master - modern-blocks
   company: modern-blocks
   role: Product Owner, Scrum Master
@@ -195,8 +269,8 @@
   - Product
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 5ce475d7-d2f7-4d16-8f26-8c03bba67f1e
 - title: Développeur full stack - Freelance
   company: Freelance
@@ -214,8 +288,8 @@
   tags:
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: a4d79834-dbfb-467c-ba4e-86b55acde904
 - title: Responsable d’applications Java / JEE - Cofidis
   company: Cofidis
@@ -235,8 +309,8 @@
   - Grands Comptes
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 7e6311e4-c94b-4ec7-be8c-ffd944ebd370
 - title: Ingénieur études et développement Java / JEE - Atos Origin Worldline (Massilia)
   company: Atos Origin Worldline
@@ -256,8 +330,8 @@
   - Grands Comptes
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 6a3d0190-d746-4eea-851e-d1ceab4ee369
 - title: Ingénieur études et développement Java / JEE - Atos Origin Worldline (SPoP)
   company: Atos Origin Worldline
@@ -277,8 +351,8 @@
   - Grands Comptes
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: ddded262-0459-4756-baa4-96d73ed8ee5c
 - title: Expert front-end Java / JEE - Natixis (Atos Origin Intégration)
   company: Natixis (Atos Origin Intégration)
@@ -297,8 +371,8 @@
   - Grands Comptes
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 305acf95-a4c7-41ad-ad4d-86d11298b7dc
 - title: Développeur full stack - Atos Origin Intégration
   company: Atos Origin Intégration
@@ -319,8 +393,8 @@
   - Secteur Public
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: f11e2f07-c2c8-41f4-b780-56632c6de73f
 - title: Analyste programmeur TMA crédit - Caisse d'épargne (Atos Origin Intégration)
   company: Caisse d'épargne (Atos Origin Intégration)
@@ -339,8 +413,8 @@
   - Grands Comptes
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 208adcda-de97-443f-b8e8-613501314a28
 - title: Conduite de Changement et assistance MOA - Caisse d'épargne (Sylis)
   company: Caisse d'épargne (Sylis)
@@ -359,8 +433,8 @@
   - Grands Comptes
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 179ba621-9b35-4d07-80d0-791d6f3a6cdb
 - title: Chargé d'affaires - Phenix netcom
   company: Phenix netcom
@@ -379,6 +453,6 @@
   - PME
   - Tech
   skills: []
-  achievements:
-  missions:
+  achievements: []
+  missions: []
   id: 0373bc6d-2ca8-44b0-b547-8cc576f61827

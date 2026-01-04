@@ -12,10 +12,7 @@ skills:
   - "Formation"
   - "Full-Stack Development"
   - "Mentoring"
-description: "Formation intensive en développement web. Encadrement d'étudiants dans l'apprentissage du développement full-stack."
+description: "Encadrement d'étudiants dans l'apprentissage intensif du développement full-stack."
 achievements:
   - "Formation de 100+ étudiants"
-  - "Développement de modules pédagogiques"
-  - "Mentorat technique et professionnel"
-  - "Taux de réussite de 95%"
 ---

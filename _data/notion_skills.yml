@@ -1,6 +1,6 @@
 # Données des skills importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2025-10-02 22:35:02
+# Last updated: 2026-01-03 16:05:41
 
 ---
 Management & Leadership:
@@ -10,24 +10,6 @@ Management & Leadership:
   icon: management
   order: 1
   skills:
-  - name: Management
-    level: 70
-    years: 10
-    description:
-    icon:
-    color: Red
-    featured: false
-    order: 999
-    id: 28093271-2dfb-80e4-92b5-f98956e61606
-  - name: Leadership
-    level: 60
-    years: 5
-    description:
-    icon:
-    color: Red
-    featured: false
-    order: 999
-    id: 28093271-2dfb-80cc-b47d-efd349f5ab91
   - name: Strategic Planning
     level: 85
     years: 5
@@ -46,6 +28,24 @@ Management & Leadership:
     featured: false
     order: 999
     id: 207ae380-3eb5-4506-970f-db8ed8950193
+  - name: Leadership
+    level: 60
+    years: 5
+    description:
+    icon:
+    color: Red
+    featured: false
+    order: 999
+    id: 28093271-2dfb-80cc-b47d-efd349f5ab91
+  - name: Management
+    level: 70
+    years: 10
+    description:
+    icon:
+    color: Red
+    featured: false
+    order: 999
+    id: 28093271-2dfb-80e4-92b5-f98956e61606
   - name: Mentoring
     level: 90
     years: 8
@@ -168,51 +168,6 @@ Backend:
   icon: languages
   order: 3
   skills:
-  - name: Microservices
-    level: 75
-    years: 8
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 2de5e984-8cbe-4d06-8909-954c9b4fb992
-  - name: Laravel
-    level: 75
-    years: 12
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 60d2df2e-7d09-4303-9064-bebba639c0a8
-  - name: Spring
-    level: 75
-    years: 8
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 822bb077-d4fa-4756-820e-473bf14345c6
-  - name: Java
-    level: 75
-    years: 12
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: 8e321eb0-2119-4c48-bb05-30f95cc2f949
-  - name: PHP
-    level: 75
-    years: 12
-    description:
-    icon:
-    color: Purple
-    featured: false
-    order: 999
-    id: de1f3b0e-11cb-4dac-ab8d-568307a3c5ff
   - name: TypeScript
     level: 85
     years: 5
@@ -222,6 +177,15 @@ Backend:
     featured: false
     order: 999
     id: 23075efa-e4e8-4048-8875-acb9fcf60605
+  - name: Microservices
+    level: 75
+    years: 8
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 2de5e984-8cbe-4d06-8909-954c9b4fb992
   - name: Django / Flask / FastAPI
     level: 70
     years: 4
@@ -258,6 +222,33 @@ Backend:
     featured: false
     order: 999
     id: 5473372f-6e3f-4188-abd7-b4b0992a72dc
+  - name: Laravel
+    level: 75
+    years: 12
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 60d2df2e-7d09-4303-9064-bebba639c0a8
+  - name: Spring
+    level: 75
+    years: 8
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 822bb077-d4fa-4756-820e-473bf14345c6
+  - name: Java
+    level: 75
+    years: 12
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: 8e321eb0-2119-4c48-bb05-30f95cc2f949
   - name: Ruby on Rails
     level: 95
     years: 10
@@ -276,6 +267,15 @@ Backend:
     featured: false
     order: 999
     id: d62398db-da7b-4dc3-990d-84c5230579f9
+  - name: PHP
+    level: 75
+    years: 12
+    description:
+    icon:
+    color: Purple
+    featured: false
+    order: 999
+    id: de1f3b0e-11cb-4dac-ab8d-568307a3c5ff
 Frontend & mobile:
   title: Frontend & mobile
   category: Frontend & mobile
@@ -380,33 +380,6 @@ Infra, Cloud & DevOps:
     featured: false
     order: 999
     id: 238bbd5b-a448-49f8-871a-1c19bed7f4f7
-  - name: Kubernetes
-    level: 70
-    years: 3
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: 99536b79-e8a2-4da0-af34-0691ee381f63
-  - name: Terraform
-    level: 88
-    years: 7
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: cb755481-d5cb-4a4a-9f09-6b526c1667a4
-  - name: CI/CD
-    level: 88
-    years: 7
-    description:
-    icon:
-    color: Blue
-    featured: false
-    order: 999
-    id: d050f23c-78b3-484d-bfd8-06cb09fd705b
   - name: Docker
     level: 85
     years: 5
@@ -443,6 +416,15 @@ Infra, Cloud & DevOps:
     featured: false
     order: 999
     id: 84addaa6-1f4b-49de-902c-bb5bc974b2ca
+  - name: Kubernetes
+    level: 70
+    years: 3
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: 99536b79-e8a2-4da0-af34-0691ee381f63
   - name: Google Cloud
     level: 85
     years: 6
@@ -470,6 +452,24 @@ Infra, Cloud & DevOps:
     featured: false
     order: 999
     id: c7761dab-103e-4e2f-9334-1b05e259b3a5
+  - name: Terraform
+    level: 88
+    years: 7
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: cb755481-d5cb-4a4a-9f09-6b526c1667a4
+  - name: CI/CD
+    level: 88
+    years: 7
+    description:
+    icon:
+    color: Blue
+    featured: false
+    order: 999
+    id: d050f23c-78b3-484d-bfd8-06cb09fd705b
   - name: CaaS
     level: 90
     years: 8

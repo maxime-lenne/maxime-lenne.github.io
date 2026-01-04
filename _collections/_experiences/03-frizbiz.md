@@ -18,9 +18,9 @@ tags:
   - "B2B2C"
   - "C2C"
   - "Market Place"
+  - "B2B Platform"
 skills:
   - "Product Leadership"
-  - "B2B Platform"
   - "Innovation"
 description: "J'ai rejoint Frizbiz 6 ans après son lancement, lors de la création du poste de CTO. Je suis arrivé pour la conception d'un nouveau produit sur le modèle BtoB et BtoBtoC à destination des partenaires et avec pour objectif transverse une refonte technique de l'existant."
 about: "Connecter des personnes ayant besoin d’un coup de main pour aménager leur habitat avec des personnes disponibles qui savent le faire. Frizbiz est LA plateforme des services de l’aménagement et du bien-être chez soi."
