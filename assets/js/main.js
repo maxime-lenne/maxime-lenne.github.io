@@ -371,6 +371,69 @@
     }
   }
 
+  // ===== MODAL MANAGEMENT =====
+  class ModalManager {
+    constructor() {
+      this.modals = document.querySelectorAll('.card-experience__modal');
+      this.init();
+    }
+
+    init() {
+      this.bindEvents();
+    }
+
+    bindEvents() {
+      // Ouvrir la modal
+      document.addEventListener('click', (e) => {
+        const openButton = e.target.closest('.card-experience__open-modal');
+        if (openButton) {
+          e.preventDefault();
+          const modalId = openButton.getAttribute('data-modal-id');
+          this.openModal(modalId);
+        }
+      });
+
+      // Fermer la modal
+      document.addEventListener('click', (e) => {
+        const closeButton = e.target.closest('.card-experience__modal-close');
+        const overlay = e.target.closest('.card-experience__modal-overlay');
+        
+        if (closeButton || overlay) {
+          const modal = (closeButton || overlay).closest('.card-experience__modal');
+          if (modal) {
+            this.closeModal(modal.id);
+          }
+        }
+      });
+
+      // Fermer avec la touche Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const openModal = document.querySelector('.card-experience__modal.card-experience__modal--open');
+          if (openModal) {
+            this.closeModal(openModal.id);
+          }
+        }
+      });
+    }
+
+    openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('card-experience__modal--open');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('card-experience__modal--open');
+        document.body.style.overflow = '';
+      }
+    }
+  }
+
   // ===== INITIALIZATION =====
   class App {
     constructor() {
@@ -395,6 +458,7 @@
       new SmoothScroll();
       new FormEnhancer();
       new PerformanceOptimizer();
+      new ModalManager();
 
       // Add loaded class to body for CSS transitions
       document.body.classList.add('loaded');

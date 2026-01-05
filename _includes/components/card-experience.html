@@ -60,42 +60,99 @@
     {% endif %}
     
     <div class="card-experience__actions">
-      {% include components/cta-button.html style="secondary" text="En savoir plus" url=include.url %}
+      <button class="figma-btn figma-btn--secondary card-experience__open-modal" 
+              data-modal-id="experience-{{ include.id | default: forloop.index }}">
+        En savoir plus
+      </button>
     </div>
   </div>
 </div>
 
 <!-- Modal pour les détails supplémentaires -->
-<div class="card-experience__modal" id="experience-{{ include.id | default: forloop.index }}" style="display: none;">
+<div class="card-experience__modal" id="experience-{{ include.id | default: forloop.index }}">
+  <div class="card-experience__modal-overlay"></div>
   <div class="card-experience__modal-content">
     <div class="card-experience__modal-header">
-      <h3>{{ include.role }} - {{ include.company }}</h3>
-      <button class="card-experience__modal-close">&times;</button>
+      {% if include.logo_url %}
+        <div class="card-experience__logo card-experience__logo--img">
+          <img src="{{ include.logo_url }}" alt="{{ include.company }} logo" class="card-experience__logo-img">
+        </div>
+        {% else %}
+        <div class="card-experience__logo">
+          <div class="card-experience__logo-placeholder">
+            {{ include.company | slice: 0, 2 | upcase }}
+          </div>
+        </div>
+      {% endif %}
+      <div class="card-experience__header">
+        <div class="card-experience__title-section">
+          <h3 class="card-experience__role">{{ include.role }}</h3>
+          <span class="card-experience__company">{{ include.company }}</span>
+        </div>
+        <div class="card-experience__date">
+          <span class="card-experience__duration">{{ include.start_date | date: "%Y" }} - {{ include.end_date | date: "%Y" }}</span>
+          {% if include.current %}
+            <span class="card-experience__current">Présent</span>
+          {% endif %}
+        </div>
+      </div>
+      <button class="card-experience__modal-close" aria-label="Fermer la modal">&times;</button>
     </div>
     
     <div class="card-experience__modal-body">
-      {% if include.achievements.size > 3 %}
-      <div class="card-experience__modal-achievements">
-        <h4>Toutes les réalisations</h4>
-        {% for achievement in include.achievements %}
-          <div class="card-experience__modal-achievement">
-            <svg class="card-experience__achievement-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M9 12l2 2 4-4"/>
-              <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
-              <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
-            </svg>
-            <span>{{ achievement }}</span>
+      <!-- Reprendre exactement la même structure que la card -->
+      <div class="card-experience">
+        
+        
+        <div class="card-experience__content">
+          
+
+          <p class="card-experience__description">{{ include.description }}</p>
+          
+          {% if include.tags %}
+            <div class="card-experience__tags">
+              {% for tag in include.tags %}
+                {% include components/badge.html text=tag %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          
+          {% if include.achievements %}
+          <div class="card-experience__achievements">
+            {% for achievement in include.achievements %}
+              <div class="card-experience__achievement">
+                <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
+                </svg>
+                <span>{{ achievement }}</span>
+              </div>
+            {% endfor %}
           </div>
-        {% endfor %}
+          {% endif %}
+
+          {% if include.skills %}
+          <div class="card-experience__skills">
+            {% for skill in include.skills %}
+              {% include components/badge.html text=skill %}
+            {% endfor %}
+          </div>
+          {% endif %}
+          
+          {% if include.missions %}
+          <div class="card-experience__missions">
+            <h4 class="card-experience__missions-title">Missions</h4>
+            {% for mission in include.missions %}
+              <div class="card-experience__mission">
+                <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
+                </svg>
+                <span>{{ mission }}</span>
+              </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </div>
-      {% endif %}
-      
-      {% if include.details %}
-      <div class="card-experience__modal-details">
-        <h4>Détails supplémentaires</h4>
-        <p>{{ include.details }}</p>
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>

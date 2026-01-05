@@ -1,6 +1,6 @@
 # Données des experiences importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2026-01-05 00:44:13
+# Last updated: 2026-01-05 01:42:24
 
 ---
 - title: CTO - Ippon
@@ -24,7 +24,7 @@
     & IA, Modern Architecture, Mobile, Produit Agilité & Design'
   tags:
   - ESN
-  - Product
+  - Grands Comptes
   skills:
   - Leadership
   - Management
@@ -62,7 +62,7 @@
   location: Lille, France
   type:
   order: 2
-  logo_url: "/assets/images/companies/thetribe.png"
+  logo_url: "/assets/images/companies/thetribe.svg"
   description: Management d'agence et stratégie produit. Développement d'équipe et
     direction technique. Leadership dans les partenariats technologiques et l'offre
     de services.
@@ -72,19 +72,21 @@
   tags:
   - Startup
   - Product
+  - Scale-Up
+  - ESN
   skills:
+  - Management
   - Ansible
   - Terraform
-  - Strapi
   - No-code
   - Design Sprint
   - Culture Produit
-  - Team Leadership
-  - Management
   - TypeScript
+  - Strapi
   - Scaleway
   - Node.js, NestJs
   - Laravel
+  - Leadership
   achievements:
   - Avant-vente, compréhension des besoins et enjeux clients, rédaction et soutenance
     des propals
@@ -131,7 +133,8 @@
   tags:
   - Startup
   - Product
-  - Tech
+  - Scale-Up
+  - Refonte
   skills:
   - Design Sprint
   - TypeScript
@@ -190,7 +193,9 @@
     BeAPI, point de départ de la transformation numérique chez Norauto à travers une
     refonte technique bas niveau.
   about:
-  tags: []
+  tags:
+  - Grands Comptes
+  - Refonte
   skills: []
   achievements: []
   missions: []
@@ -205,8 +210,10 @@
   type:
   order: 5
   logo_url: "/assets/images/companies/ecotaco.png"
-  description: Création et développement d'une startup. Leadership technique et produit,
-    développement de l'équipe.
+  description: |-
+    FactorApp SAS développait et exploitait le service EcoTa.co qui est une plate-forme de mise en relation entre des clients BtoB ou BtoC et des chauffeurs VTC professionnels. Une startup qui participait à l'innovation dans le secteur de la mobilité et du transport.
+    Nous avons développé un système d'information complexe à base de micro services, APIs publiques et privées, applications web et mobile native.
+    Une aventure qui a duré 5 ans et m'a permis de me focaliser sur la conception globale d'un produit, le business model, la stratégie, les besoins clients et partenaires, le management...
   about:
   tags:
   - Startup
@@ -232,13 +239,14 @@
   location: Lille, France
   type:
   order: 6
-  logo_url: "/assets/images/companies/lewagon.jpeg"
+  logo_url: "/assets/images/companies/lewagon.png"
   description: Encadrement d'étudiants dans l'apprentissage intensif du développement
     full-stack sur les technologies Ruby et Rails
   about: 'Le Wagon est une école de code en 9 semaines à temps plein qui apprend à
     des entrepreneurs et à des profils créatifs à construire leur produit tech dans
     toutes ses dimensions: design, prototypage, code, mise en production.'
-  tags: []
+  tags:
+  - Startup
   skills: []
   achievements:
   - Formation de 100+ étudiants
@@ -267,7 +275,6 @@
   tags:
   - Startup
   - Product
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -285,8 +292,7 @@
   description: Missions full stack en freelance. E‑commerce Magento (lematelas.fr),
     plugin Colisweb, conseil et développement web et mobile.
   about:
-  tags:
-  - Tech
+  tags: []
   skills: []
   achievements: []
   missions: []
@@ -307,7 +313,6 @@
   about:
   tags:
   - Grands Comptes
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -328,7 +333,6 @@
   about:
   tags:
   - Grands Comptes
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -349,7 +353,6 @@
   about:
   tags:
   - Grands Comptes
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -369,7 +372,6 @@
   about:
   tags:
   - Grands Comptes
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -391,7 +393,6 @@
   tags:
   - Grands Comptes
   - Secteur Public
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -411,7 +412,6 @@
   about:
   tags:
   - Grands Comptes
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -431,7 +431,6 @@
   about:
   tags:
   - Grands Comptes
-  - Tech
   skills: []
   achievements: []
   missions: []
@@ -451,7 +450,6 @@
   about:
   tags:
   - PME
-  - Tech
   skills: []
   achievements: []
   missions: []
