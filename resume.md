@@ -725,23 +725,22 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="card-experience__modal-overlay"></div>
           <div class="card-experience__modal-content">
             <div class="card-experience__modal-header">
-              <h3>${escapeHtml(experience.role)} - ${escapeHtml(experience.company)}</h3>
+              <div class="card-experience__modal-header-content">
+                ${logoHtml}
+                <div class="card-experience__modal-title-section">
+                  <h3 class="card-experience__role">${escapeHtml(experience.role)}</h3>
+                  <span class="card-experience__company">${escapeHtml(experience.company)}</span>
+                  <div class="card-experience__date">
+                    <span class="card-experience__duration">${startYear} - ${endYear}</span>
+                    ${experience.current ? '<span class="card-experience__current">Présent</span>' : ''}
+                  </div>
+                </div>
+              </div>
               <button class="card-experience__modal-close" aria-label="Fermer la modal">&times;</button>
             </div>
             <div class="card-experience__modal-body">
               <div class="card-experience">
-                ${logoHtml}
                 <div class="card-experience__content">
-                  <div class="card-experience__header">
-                    <div class="card-experience__title-section">
-                      <h3 class="card-experience__role">${escapeHtml(experience.role)}</h3>
-                      <span class="card-experience__company">${escapeHtml(experience.company)}</span>
-                    </div>
-                    <div class="card-experience__date">
-                      <span class="card-experience__duration">${startYear} - ${endYear}</span>
-                      ${experience.current ? '<span class="card-experience__current">Présent</span>' : ''}
-                    </div>
-                  </div>
                   <p class="card-experience__description">${escapeHtml(experience.description)}</p>
                   ${modalTagsHtml}
                   ${modalAchievementsHtml}

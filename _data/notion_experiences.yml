@@ -1,6 +1,6 @@
 # Données des experiences importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2026-01-05 01:42:24
+# Last updated: 2026-01-05 14:47:59
 
 ---
 - title: CTO - Ippon
@@ -179,27 +179,6 @@
     R&D, POC, contribution open source, ateliers et démo à destination de l'ensemble
     des collaborateurs de l'entreprise
   id: 0f2a4348-dbe1-48c3-8857-057ca7d6285f
-- title: Product Owner - Norauto
-  company: Norauto
-  role: Product Owner
-  start_date: '2017-01-01'
-  end_date: '2018-01-01'
-  current: false
-  location: France
-  type:
-  order: 4
-  logo_url: "/assets/images/companies/norauto.png"
-  description: Conception de micro-services en mode API first dans le cadre du projet
-    BeAPI, point de départ de la transformation numérique chez Norauto à travers une
-    refonte technique bas niveau.
-  about:
-  tags:
-  - Grands Comptes
-  - Refonte
-  skills: []
-  achievements: []
-  missions: []
-  id: 4bed8ee6-78c5-4266-9d38-fca30d59387e
 - title: Co-fondateur - EcoTa.co
   company: EcoTa.co
   role: Co-fondateur
@@ -208,12 +187,16 @@
   current: false
   location: Lille, France
   type:
-  order: 5
+  order: 4
   logo_url: "/assets/images/companies/ecotaco.png"
-  description: |-
-    FactorApp SAS développait et exploitait le service EcoTa.co qui est une plate-forme de mise en relation entre des clients BtoB ou BtoC et des chauffeurs VTC professionnels. Une startup qui participait à l'innovation dans le secteur de la mobilité et du transport.
-    Nous avons développé un système d'information complexe à base de micro services, APIs publiques et privées, applications web et mobile native.
-    Une aventure qui a duré 5 ans et m'a permis de me focaliser sur la conception globale d'un produit, le business model, la stratégie, les besoins clients et partenaires, le management...
+  description: FactorApp SAS développait et exploitait le service EcoTaco qui est
+    une plate-forme de mise en relation entre des clients BtoB ou BtoC et des chauffeurs
+    VTC professionnels. Une startup qui participait à l'innovation dans le secteur
+    de la mobilité et du transport. Nous avons développé un système d'information
+    complexe à base de micro services, APIs publiques et privées, applications web
+    et mobile native. Une aventure qui a duré 5 ans et m'a permis de me focaliser
+    sur la conception globale d'un produit, le business model, la stratégie, les besoins
+    clients et partenaires, le management...
   about:
   tags:
   - Startup
@@ -230,6 +213,27 @@
     Métropole Innovation
   missions: []
   id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
+- title: Product Owner - Norauto
+  company: Norauto
+  role: Product Owner
+  start_date: '2017-01-01'
+  end_date: '2018-01-01'
+  current: false
+  location: France
+  type:
+  order: 5
+  logo_url: "/assets/images/companies/norauto.png"
+  description: Conception de micro-services en mode API first dans le cadre du projet
+    BeAPI, point de départ de la transformation numérique chez Norauto à travers une
+    refonte technique bas niveau.
+  about:
+  tags:
+  - Grands Comptes
+  - Refonte
+  skills: []
+  achievements: []
+  missions: []
+  id: 4bed8ee6-78c5-4266-9d38-fca30d59387e
 - title: Formateur - Le Wagon
   company: Le Wagon
   role: Formateur

@@ -211,7 +211,7 @@ module Jekyll
     end
 
     def organize_experiences(notion_data)
-      Jekyll.logger.info "Notion:", "Organizing experiences #{notion_data}"
+      Jekyll.logger.info "Notion:", "Organizing experiences"
       organize_simple_collection(notion_data, [
         'Title', 'Company', 'Role', 'Start Date', 'End Date', 'Current', 
         'Location', 'Type', 'Order', 'Logo URL', 'Description', 'About',
@@ -419,13 +419,10 @@ module Jekyll
       return [] unless property['type'] == 'rollup'
       return [] if property['rollup'].nil? || property['rollup']['array'].nil? || property['rollup']['array'].empty?
       
-      Jekyll.logger.info "Notion:", "Extracting rollup property #{property_name}: #{property['rollup']['array'].length} items"
-      
       # Extraire les titres des éléments dans le rollup
       result = property['rollup']['array'].map do |item|
         if item['type'] == 'title' && item['title'] && !item['title'].empty?
           title_text = item['title'].map { |title| title['plain_text'] }.join('')
-          Jekyll.logger.info "Notion:", "Found skill: #{title_text}"
           title_text
         else
           nil

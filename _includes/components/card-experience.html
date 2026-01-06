@@ -73,27 +73,27 @@
   <div class="card-experience__modal-overlay"></div>
   <div class="card-experience__modal-content">
     <div class="card-experience__modal-header">
-      {% if include.logo_url %}
-        <div class="card-experience__logo card-experience__logo--img">
-          <img src="{{ include.logo_url }}" alt="{{ include.company }} logo" class="card-experience__logo-img">
-        </div>
-        {% else %}
-        <div class="card-experience__logo">
-          <div class="card-experience__logo-placeholder">
-            {{ include.company | slice: 0, 2 | upcase }}
+      <div class="card-experience__modal-header-content">
+        {% if include.logo_url %}
+          <div class="card-experience__logo card-experience__logo--img">
+            <img src="{{ include.logo_url }}" alt="{{ include.company }} logo" class="card-experience__logo-img">
           </div>
-        </div>
-      {% endif %}
-      <div class="card-experience__header">
-        <div class="card-experience__title-section">
+        {% else %}
+          <div class="card-experience__logo">
+            <div class="card-experience__logo-placeholder">
+              {{ include.company | slice: 0, 2 | upcase }}
+            </div>
+          </div>
+        {% endif %}
+        <div class="card-experience__modal-title-section">
           <h3 class="card-experience__role">{{ include.role }}</h3>
           <span class="card-experience__company">{{ include.company }}</span>
-        </div>
-        <div class="card-experience__date">
-          <span class="card-experience__duration">{{ include.start_date | date: "%Y" }} - {{ include.end_date | date: "%Y" }}</span>
-          {% if include.current %}
-            <span class="card-experience__current">Présent</span>
-          {% endif %}
+          <div class="card-experience__date">
+            <span class="card-experience__duration">{{ include.start_date | date: "%Y" }} - {{ include.end_date | date: "%Y" }}</span>
+            {% if include.current %}
+              <span class="card-experience__current">Présent</span>
+            {% endif %}
+          </div>
         </div>
       </div>
       <button class="card-experience__modal-close" aria-label="Fermer la modal">&times;</button>

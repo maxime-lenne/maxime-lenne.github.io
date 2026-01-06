@@ -18,7 +18,6 @@ achievements:
   - "Une aventure qui a duré 5 ans, opérationnel dans 12 villes, +600 chauffeurs, +20K utilisateurs, +500K€ de CA en 2015"
   - "Une Levée de fonds de 300k€"
   - "Développement d'un système d'information complexe à base de micro services, APIs publiques et privées, applications web et mobile native."
-  - "partenariats stratégiques avec la SNCF, Keolis, Booking.com
+  - "Partenariats stratégiques avec la SNCF, Keolis, Booking.com"
   - "Programme d'incubation, puis d'accélération Euratechnologies, Lauréat de Lille Métropole Innovation"
-  
 ---

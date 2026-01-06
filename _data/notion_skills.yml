@@ -1,6 +1,6 @@
 # Données des skills importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
-# Last updated: 2026-01-03 16:05:41
+# Last updated: 2026-01-05 10:03:15
 
 ---
 Management & Leadership:
@@ -107,7 +107,7 @@ Methodologies:
     featured: false
     order: 2
     id: 66169755-e460-4527-a913-6c7b35ac3371
-  - name: Agileaa
+  - name: Agile
     level: 95
     years: 12
     description:
@@ -152,6 +152,15 @@ Methodologies:
     featured: false
     order: 999
     id: 28093271-2dfb-803f-9ab0-c3527c4e96ab
+  - name: Culture Produit
+    level: 70
+    years: 5
+    description:
+    icon:
+    color: Orange
+    featured: false
+    order: 999
+    id: 28093271-2dfb-8041-aac4-cd37049a1a84
   - name: Craftmanship
     level: 80
     years: 10
@@ -574,15 +583,6 @@ Other:
   icon:
   order: 999
   skills:
-  - name: Culture Produit
-    level:
-    years:
-    description:
-    icon:
-    color:
-    featured: false
-    order: 999
-    id: 28093271-2dfb-8041-aac4-cd37049a1a84
   - name: No-code
     level:
     years:
