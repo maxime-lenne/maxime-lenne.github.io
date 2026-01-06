@@ -58,7 +58,7 @@ lang: fr
       </p>
       <div class="grid-2-columns">
         {% include components/list-horizontal-icon.html 
-          item1_title="+ 10 ans sur des poste de C(P)TO"
+          item1_title="+ 10 ans sur des postes de C(P)TO"
           item1_text="Management de + 40 profils (devs, PM / PO, UX / UI)."
           item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
           item2_title="+ 20 ans d'expertise Tech"
@@ -67,7 +67,7 @@ lang: fr
             <path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>
           </svg>'
           item3_title="Culture de l'impact et engagement"
-          item3_text=" la tech au service de résultats concrets pour les utilisateurs, les équipes et le business" %}
+          item3_text="La tech au service de résultats concrets pour les utilisateurs, les équipes et le business" %}
         {% include components/list-horizontal-icon.html 
           item1_title="Partenaire du business"
           item1_text="Sparring partner ! Challenger, prioriser, anticiper les impacts techniques dans la stratégie de l'entreprise..."
@@ -195,7 +195,7 @@ lang: fr
   </div>
 </section>
 
-{% include sections/final-cta-section.html title="Pret à me partager la vision de votre entreprise ?" %}
+{% include sections/final-cta-section.html title="Prêt à me partager la vision de votre entreprise ?" %}
 <!-- , roadmaps, et stratégie  -->
 
 <!-- Contributions & Projects Section -->
@@ -205,7 +205,7 @@ lang: fr
       {% include components/section-header.html 
        badge_icon="🚀"
        badge_text="Mes side projects"
-       title="Contributions & Projects" 
+       title="Contributions & Projets" 
        subtitle="Je participe à la vie des communautés techniques et entrepreneuriales, soit en faisant partie de l'équipe organisatrice, en étant speaker ou simple participant (No-Code Summit, APIdays, dotRB, Startup Weekend, JPDS, TakeOff conf, ParisWeb...)." %}
     </div>
     
@@ -350,7 +350,7 @@ lang: fr
             Musique
         </h3>
         {% include components/cta-info.html 
-         item1_icon="🎧" item1_text="Ecoute, concerts"
+         item1_icon="🎧" item1_text="Écoute, concerts"
          item2_icon="🎹" item2_text="Piano & synthé" %}
         <h3 class="section__title">
             Sports

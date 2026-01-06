@@ -1,4 +1,4 @@
-# Données des experiences importées depuis Notion
+# Données des expériences importées depuis Notion
 # Généré automatiquement - Ne pas modifier manuellement
 # Last updated: 2026-01-05 14:47:59
 
@@ -14,7 +14,7 @@
   order: 1
   logo_url: "/assets/images/companies/ippon.jpg"
   description: Direction technique d'une agence de plus de 35 consultants réalisant
-    des mission principalements en régis dans des grand groupe (Retail, banque...)
+    des missions principalement en régie dans des grands groupes (Retail, banque...)
     et prestations de conseil pour l'INSEE et Décathlon
   about: 'Ippon est un cabinet de conseil et d’expertises en technologie, international
     et indépendant. Ippon accompagne la transformation numérique des entreprises,
@@ -34,9 +34,9 @@
   achievements:
   - Direction de l’agence et management d'une équipe de 5 managers et 35+ consultants
     pluridisciplinaires
-  - Croissance de 20% du chiffre d'affaires malgrés un context économique tendu
+  - Croissance de 20% du chiffre d'affaires malgré un contexte économique tendu
   - Assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie, codebase, architecture,
-    devops, communauté) dans 3 équipes lilloise de l'INSEE
+    devops, communauté) dans 3 équipes lilloises de l'INSEE
   missions:
   - Accompagnement de l'équipe lilloise, recrutement, formation, coaching
   - Management des managers de l'équipe lilloise, entretiens individuels toutes les
@@ -89,7 +89,7 @@
   - Leadership
   achievements:
   - Avant-vente, compréhension des besoins et enjeux clients, rédaction et soutenance
-    des propals
+    des propositions
   - Participation à la refonte d'un "career framework" au niveau national, permettant
     d'évaluer et d'accompagner la montée en compétences des équipes
   - Création d'une offre de service no-code (embauche du 1er product builder), structuration
@@ -145,7 +145,7 @@
   - Ruby
   achievements:
   - Développement d'un nouveau produit B2B2C, qui devient le produit principal de
-    l'entreprise 2 an après
+    l'entreprise 2 ans après
   - Organisation de la refonte technique complète en fil rouge de la marketplace d'origine
     Frizbiz, qui sera ensuite revendu
   - Mise en place d'un partenariat avec ManoMano

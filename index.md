@@ -121,7 +121,7 @@ lang: fr
     <div class="section__header">
       {% include components/section-header.html 
          badge_icon="💬"
-         badge_text="Mes recommendations"
+         badge_text="Mes recommandations"
          title="Ils me font"
          title_highlight="confiance"
          subtitle="Grâce à mon engagement et ma culture de l'impact, je suis un partenaire de confiance pour vos projets." %}
