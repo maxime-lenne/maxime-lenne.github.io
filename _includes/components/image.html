@@ -6,9 +6,15 @@
       <div class="image__decoration image__decoration--2"></div>
     </div>
     <div class="image__image-container">
-      <img src="{{ include.image_url | default: '/assets/images/desk.jpeg' }}" 
-           alt="{{ include.image_alt | default: 'Workspace développeur' }}" 
-           class="image__image">
+      {% assign img_url = include.image_url | default: '/assets/images/desk.jpeg' %}
+      {% assign webp_url = img_url | replace: '.jpeg', '.webp' | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
+      <picture>
+        <source srcset="{{ webp_url }}" type="image/webp">
+        <img src="{{ img_url }}"
+             alt="{{ include.image_alt | default: 'Workspace développeur' }}"
+             class="image__image"
+             loading="lazy">
+      </picture>
     </div>
     {% assign show_status = include.show_status | default: "true" %}
     {% if show_status == "true" %}
