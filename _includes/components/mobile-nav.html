@@ -1,4 +1,13 @@
 <!-- Mobile Navigation -->
+{% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign t = site.data.translations[lang] %}
+{% if lang == 'en' %}
+  {% assign home_url = '/en/' %}
+  {% assign resume_url = '/en/resume/' %}
+{% else %}
+  {% assign home_url = '/' %}
+  {% assign resume_url = '/resume/' %}
+{% endif %}
 <nav class="figma-mobile-nav" role="navigation" aria-label="Mobile navigation">
     <div class="figma-mobile-nav__content">
         <div class="figma-mobile-nav__header">
@@ -13,15 +22,15 @@
             </button>
         </div>
         <div class="figma-mobile-nav__links">
-            <a href="{{ '/' | relative_url }}" class="figma-mobile-nav__link">Accueil</a>
-            <a href="{{ '/resume/' | relative_url }}" class="figma-mobile-nav__link">À propos</a>
+            <a href="{{ home_url | relative_url }}" class="figma-mobile-nav__link">{{ t.nav.home }}</a>
+            <a href="{{ resume_url | relative_url }}" class="figma-mobile-nav__link">{{ t.nav.resume }}</a>
         </div>
         <div class="figma-mobile-nav__footer">
-            <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm" 
-               class="figma-cta-btn figma-cta-btn--mobile" 
-               target="_blank" 
+            <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
+               class="figma-cta-btn figma-cta-btn--mobile"
+               target="_blank"
                rel="noopener">
-                Faisons connaissance
+                {{ t.header.cta_button }}
                 <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>

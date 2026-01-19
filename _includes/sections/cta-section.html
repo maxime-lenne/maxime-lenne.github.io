@@ -1,15 +1,17 @@
 <!-- CTA Section -->
+{% assign cta_lang = include.lang | default: page.lang | default: 'fr' %}
+{% assign t = site.data.translations[cta_lang] %}
 <section class="section section--gradient-light">
   <div class="section__container section__container--small">
     <div class="section__content">
       <h2 class="section__title">
-        {{ include.title | default: "Vous avez un projet ?" }}
+        {{ include.title | default: t.cta_section.project_title }}
       </h2>
       <p class="section__description">
-        {{ include.description | default: "Discutons de votre projet et voyons comment je peux vous aider." }}
+        {{ include.description | default: t.cta_section.project_description }}
       </p>
       <div class="section__actions">
-        {% assign cta_text = include.cta_text | default: "Faisons connaissance" %}
+        {% assign cta_text = include.cta_text | default: t.header.cta_button %}
         {% include components/cta-button.html size="large" text=cta_text icon="arrow" %}
       </div>
     </div>

@@ -1,16 +1,18 @@
 <!-- Final CTA Section -->
+{% assign cta_lang = include.lang | default: page.lang | default: 'fr' %}
+{% assign t = site.data.translations[cta_lang] %}
 <section class="section section--gradient-dark">
   <div class="section__container section__container--small">
     <div class="section__content">
       <h2 class="section__title">
-        {{ include.title | default: "Prêt à découvrir votre projet ?" }}
+        {{ include.title | default: t.cta_section.final_title }}
       </h2>
       <p class="section__description">
-        {{ include.description | default: "Transformons ensemble votre vision en réalité digitale. Planifiez dès aujourd'hui un rendez-vous." }}
+        {{ include.description | default: t.cta_section.final_description }}
       </p>
       <div class="section__actions">
-        {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
-        {% include components/cta-button.html style="secondary" size="large" text="Voir mes réalisations" url="projects/" %}
+        {% include components/cta-button.html size="large" text=t.header.cta_button icon="arrow" %}
+        {% include components/cta-button.html style="secondary" size="large" text=t.cta_section.see_projects url="projects/" %}
       </div>
     </div>
   </div>
