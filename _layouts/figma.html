@@ -17,6 +17,14 @@
     <link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
     
+    <!-- Hreflang for multi-language SEO -->
+    {% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+    {% if page.alternate_url %}
+    <link rel="alternate" hreflang="{{ page.alternate_lang }}" href="{{ site.url }}{{ page.alternate_url }}" />
+    {% endif %}
+    <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="{{ site.title }}">

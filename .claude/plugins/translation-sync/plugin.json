@@ -1,0 +1,8 @@
+{
+  "name": "translation-sync",
+  "version": "1.0.0",
+  "description": "Automatically detect and sync translations when content is modified in a multilingual repository",
+  "author": "Maxime Lenne",
+  "commands": ["commands/*.md"],
+  "hooks": ["hooks/*.md"]
+}

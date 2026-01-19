@@ -1,7 +1,20 @@
 <!-- Header -->
+{% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign t = site.data.translations[lang] %}
+{% if lang == 'en' %}
+  {% assign home_url = '/en/' %}
+  {% assign resume_url = '/en/resume/' %}
+  {% assign alternate_home = '/' %}
+  {% assign alternate_resume = '/resume/' %}
+{% else %}
+  {% assign home_url = '/' %}
+  {% assign resume_url = '/resume/' %}
+  {% assign alternate_home = '/en/' %}
+  {% assign alternate_resume = '/en/resume/' %}
+{% endif %}
 <header class="header" role="banner">
     <div class="header__container">
-        <a href="{{ '/' | relative_url }}" class="header__logo" aria-label="{{ site.title }}">
+        <a href="{{ home_url | relative_url }}" class="header__logo" aria-label="{{ site.title }}">
             <svg width="24" height="24" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 18H20H10" stroke="url(#paint0_linear_19_16)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
@@ -18,16 +31,16 @@
                 </linearGradient>
                 </defs>
                 </svg>
-                
+
             <span class="header__logo-text">Maxime Lenne</span>
         </a>
-        
+
         <nav class="header__nav" role="navigation" aria-label="Main navigation">
-            <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} nav-link--active{% endif %}">
-                Accueil
+            <a href="{{ home_url | relative_url }}" class="nav-link{% if page.url == home_url or page.url == '/' and lang == 'fr' %} nav-link--active{% endif %}">
+                {{ t.nav.home }}
             </a>
-            <a href="{{ '/resume/' | relative_url }}" class="nav-link{% if page.url contains '/resume/' %} nav-link--active{% endif %}">
-                Mon CV
+            <a href="{{ resume_url | relative_url }}" class="nav-link{% if page.url contains '/resume/' %} nav-link--active{% endif %}">
+                {{ t.nav.resume }}
             </a>
             <!--a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url contains '/projects/' %} nav-link--active{% endif %}">
                 Projets
@@ -43,25 +56,38 @@
             <!-- Language Switcher -->
             <div class="figma-language-switcher">
                 <button class="figma-language-switcher__trigger" aria-label="Change language">
-                    <span class="figma-language-switcher__current">{{ page.lang | default: 'FR' | upcase }}</span>
+                    <span class="figma-language-switcher__current">{{ lang | upcase }}</span>
                     <svg class="figma-language-switcher__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path d="M6 9l6 6 6-6"/>
                     </svg>
                 </button>
                 <div class="figma-language-switcher__dropdown">
-                    <a href="{{ page.url | replace: '/en/', '/' | replace: page.lang, 'fr' }}" 
-                       class="figma-language-switcher__option{% if page.lang == 'fr' or page.lang == nil %} figma-language-switcher__option--active{% endif %}"
+                    {% if page.url contains '/resume/' %}
+                    <a href="{{ '/resume/' | relative_url }}"
+                       class="figma-language-switcher__option{% if lang == 'fr' %} figma-language-switcher__option--active{% endif %}"
                        hreflang="fr">
                         🇫🇷 Français
                     </a>
-                    <a href="{{ page.url | replace: page.lang, 'en' | prepend: '/en' }}" 
-                       class="figma-language-switcher__option{% if page.lang == 'en' %} figma-language-switcher__option--active{% endif %}"
+                    <a href="{{ '/en/resume/' | relative_url }}"
+                       class="figma-language-switcher__option{% if lang == 'en' %} figma-language-switcher__option--active{% endif %}"
                        hreflang="en">
                         🇬🇧 English
                     </a>
+                    {% else %}
+                    <a href="{{ '/' | relative_url }}"
+                       class="figma-language-switcher__option{% if lang == 'fr' %} figma-language-switcher__option--active{% endif %}"
+                       hreflang="fr">
+                        🇫🇷 Français
+                    </a>
+                    <a href="{{ '/en/' | relative_url }}"
+                       class="figma-language-switcher__option{% if lang == 'en' %} figma-language-switcher__option--active{% endif %}"
+                       hreflang="en">
+                        🇬🇧 English
+                    </a>
+                    {% endif %}
                 </div>
             </div>
-            
+
             <!-- Theme Toggle -->
             <button class="figma-theme-toggle" aria-label="Toggle theme" id="figma-theme-toggle">
                 <svg class="figma-theme-toggle__icon figma-theme-toggle__icon--light" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -79,13 +105,13 @@
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                 </svg>
             </button>
-            
+
             <!-- CTA Button -->
-            <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm" 
-               class="figma-cta-btn" 
-               target="_blank" 
+            <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
+               class="figma-cta-btn"
+               target="_blank"
                rel="noopener">
-                Faisons connaissance
+                {{ t.header.cta_button }}
                 <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>

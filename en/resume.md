@@ -1,0 +1,363 @@
+---
+layout: figma
+title: "Resume - Maxime Lenne | CTO, Tech advisor, sparring partner, Tech Product Leader, Product Builder"
+description: "Full resume of Maxime Lenne - CTO, Product Owner and Tech Lead with over 10 years of experience in development and technical leadership."
+lang: en
+permalink: /en/resume/
+alternate_lang: fr
+alternate_url: /resume/
+---
+
+{% assign t = site.data.translations.en %}
+
+<!-- CTA Section -->
+<section class="section section--gradient-light section--secondary">
+  <div class="section__container section__container--dark-background section__grid--2-col">
+    <div class="section__side">
+      {% include components/badge.html text="💼 Career profile" %}
+      
+      {% include components/image-circle.html 
+        image_url="/assets/images/avatar.jpeg" 
+        image_alt="My portrait"
+        show_status="false"
+        status_text="Available for consultation" %}
+      
+      {% include components/title-hero.html 
+        main_text="Maxime Lenne"
+        highlight_text=t.hero.role %}
+        
+      <div class="figma-cv-hero__contact">
+        <div class="figma-cv-hero__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>hello@maxime-lenne.fr</span>
+        </div>
+        
+        <div class="figma-cv-hero__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          <span>+33 6 29 45 38 14</span>
+        </div>
+        
+        <div class="figma-cv-hero__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Lille, France</span>
+        </div>
+      </div>
+    </div>
+    <div class="section__content">
+      <p class="section__description">
+        {{ t.about_section.description1 }}
+      </p>
+      <p class="section__description">
+        {{ t.about_section.description2 }}
+      </p>
+      <p class="section__description">
+        {{ t.about_section.description3 }}
+      </p>
+      <div class="grid-2-columns">
+        {% include components/list-horizontal-icon.html 
+          item1_title=t.resume_page.cto_title
+          item1_text=t.resume_page.cto_desc
+          item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
+          item2_title=t.resume_page.tech_title
+          item2_text=t.resume_page.tech_desc
+          item2_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>'
+          item3_title=t.resume_page.impact_title
+          item3_text=t.resume_page.impact_desc %}
+        {% include components/list-horizontal-icon.html 
+          item1_title=t.resume_page.business_title
+          item1_text=t.resume_page.business_desc
+          item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>'
+          item2_title=t.resume_page.product_title
+          item2_text=t.resume_page.product_desc %}
+      </div>
+      
+      {% include components/cta-button.html size="large" text=t.header.cta_button icon="arrow" %}
+      
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="experience">
+  <div class="section__container">
+    <div class="section__header">
+      {% include components/section-header.html 
+        badge_icon="💼"
+        badge_text=t.resume_page.experience_badge
+        title=t.resume_page.experience_title
+        title_highlight=t.resume_page.experience_highlight
+        subtitle=t.resume_page.experience_subtitle %}
+    </div>
+    
+    <div class="section__grid section__grid--2-col" id="experiences-grid">
+      {% assign sorted_experiences = site.data.notion_experiences %}
+      {% assign total_experiences = sorted_experiences.size %}
+      {% assign initial_display = 4 %}
+      
+      {% for experience in sorted_experiences limit: initial_display %}
+          {% include components/card-experience.html 
+             data-index=forloop.index0
+             id=forloop.index
+             role=experience.role
+             company=experience.company
+             start_date=experience.start_date
+             end_date=experience.end_date
+             current=experience.current
+             description=experience.description
+             skills=experience.skills
+             tags=experience.tags
+             achievements=experience.achievements
+             missions=experience.missions
+             logo_url=experience.logo_url
+             details=experience.details
+             url=experience.url %}
+      {% endfor %}
+    </div>
+    
+    {% if total_experiences > initial_display %}
+      <div class="section__actions" id="load-more-experiences-container">
+        <button class="figma-btn figma-btn--secondary" id="load-more-experiences-btn" data-initial="{{ initial_display }}" data-total="{{ total_experiences }}">
+          {{ t.resume_page.show_more }}
+        </button>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section section--dark" id="skills">
+  <div class="section__container">
+    <div class="section__header">
+      {% include components/section-header.html 
+        badge_icon="✅"
+        badge_text=t.resume_page.skills_badge
+        title=t.resume_page.skills_title
+        title_highlight=t.resume_page.skills_highlight %}
+    </div>
+    <div class="section__grid section__grid--2-col">
+      {% assign notion_skills = site.data.notion_skills %}
+      {% for skill_category in notion_skills %}
+      <div class="figma-cv-skills__category">
+        <h3 class="figma-cv-skills__category-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            {% if skill_category[1].icon == "languages" %}
+                <polyline points="16,18 22,12 16,6"/>
+                <polyline points="8,6 2,12 8,18"/>
+            {% elsif skill_category[1].icon == "mobile" %}
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+            {% elsif skill_category[1].icon == "cloud" %}
+                <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" />
+            {% elsif skill_category[1].icon == "databases" %}
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            {% elsif skill_category[1].icon == "ai" %}
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            {% elsif skill_category[1].icon == "methodologies" %}
+                <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+            {% elsif skill_category[1].icon == "tools" %}
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+            {% elsif skill_category[1].icon == "management" %}
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            {% else %}
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            {% endif %}
+          </svg>
+          {{ skill_category[1].title }}
+        </h3>
+        <div class="figma-cv-skills__list">
+          {% for skill in skill_category[1].skills %}
+          <span class="figma-cv-skills__item" 
+                data-level="{{ skill.level }}" 
+                title="{{ skill.name }}{% if skill.years %} - {{ skill.years }} years of experience{% endif %}{% if skill.description %} - {{ skill.description }}{% endif %}"
+                {% if skill.featured %}data-featured="true"{% endif %}>
+            {% if skill.icon %}{{ skill.icon }} {% endif %}{{ skill.name }}
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include sections/final-cta-section.html title=t.cta_section.final_title lang="en" %}
+
+<!-- Contributions & Projects Section -->
+<section class="section section--light">
+  <div class="section__container">
+    <div class="section__header">
+      {% include components/section-header.html 
+       badge_icon="🚀"
+       badge_text=t.resume_page.contributions_badge
+       title=t.resume_page.contributions_title 
+       subtitle=t.resume_page.contributions_subtitle %}
+    </div>
+    
+    <div class="section__grid section__grid--3-col" id="contributions-grid">
+      {% assign sorted_contributions = site.contributions | sort: 'order' %}
+      {% assign total_contributions = sorted_contributions.size %}
+      {% assign initial_display = 6 %}
+      
+      {% for contribution in sorted_contributions limit: initial_display %}
+        <div class="card-dark contribution-item" data-index="{{ forloop.index0 }}">
+          <div class="card-dark__header">
+            <h3 class="card-dark__title">{{ contribution.title }}</h3>
+            <span class="card-dark__type">{{ contribution.type }}</span>
+          </div>
+          <p class="card-dark__description">{{ contribution.description }}</p>
+
+          {% if contribution.achievements %}
+            <div class="card-dark__list">
+              <ul>
+                {% for achievement in contribution.achievements %}
+                <li>{{ achievement }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+
+          {% if contribution.labels %}
+            <div class="card-dark__labels">
+            {% for label in contribution.labels %}
+              {% include components/badge.html style="services" text=label %}
+            {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    
+    {% if total_contributions > initial_display %}
+      <div class="section__actions" id="load-more-container">
+        <button class="figma-btn figma-btn--secondary" id="load-more-btn" data-initial="{{ initial_display }}" data-total="{{ total_contributions }}">
+          {{ t.resume_page.show_more }}
+        </button>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- Education & Awards Section -->
+<section class="section section--dark" id="education-awards">
+  <div class="section__container">
+    <div class="section__grid section__grid--2-col">
+      <div class="section__content">
+        {% include components/section-header.html 
+            badge_icon="🎓"
+            badge_text=t.resume_page.education_badge
+            title=t.resume_page.education_title
+            title_highlight=t.resume_page.education_highlight
+            subtitle=t.resume_page.languages %}
+        <div class="figma-cv-education__grid">
+          {% assign sorted_education = site.educations | sort: 'order' %}
+          {% for education in sorted_education %}
+          <div class="figma-cv-education__item">
+            <div class="figma-cv-education__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                {% if education.degree_type == 'DUT' %}
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 9 0v-5"/>
+                {% else %}
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                  <polyline points="10 9 9 9 8 9"/>
+                {% endif %}
+              </svg>
+            </div>
+            <div class="figma-cv-education__content">
+              <h3 class="figma-cv-education__degree">{{ education.title }}</h3>
+              <p class="figma-cv-education__school">{{ education.institution }} - {{ education.start_date | date: "%Y" }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="section__content">
+        {% include components/section-header.html 
+              badge_icon="🏆"
+              badge_text=t.resume_page.awards_badge
+              title=t.resume_page.awards_title
+              title_highlight=t.resume_page.awards_highlight %}
+          
+        {% assign sorted_awards = site.awards | sort: 'order' %}
+        {% for award in sorted_awards %}
+          <div class="figma-cv-awards__item">
+              <div class="figma-cv-awards__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                    <path d="M4 22h16"/>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+                </svg>
+              </div>
+              <div class="figma-cv-awards__content">
+                <h3 class="figma-cv-awards__title-item">{{ award.title }}</h3>
+                <p class="figma-cv-awards__organization">{{ award.organization }} - {{ award.date | date: "%Y" }}</p>
+              </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--light" id="interests">
+  <div class="section__container">
+    <div class="section__header">
+      <div class="figma-cv-hero__languages">
+        
+        {% include components/section-header.html 
+                            badge_icon="🧗‍♂️"
+                            badge_text=t.resume_page.interests_badge
+                            show_badge="false"
+                            title=t.resume_page.interests_title
+                            title_highlight=t.resume_page.interests_highlight %}
+        {% include components/cta-info.html 
+         item1_icon="🚴" item1_text="Bike commuter"
+         item2_icon="🌱" item2_text="Eco-design and green IT"
+         item3_icon="🍎" item3_text="Apple" %}
+         
+        <h3 class="section__title">
+            {{ t.resume_page.interests_music }}
+        </h3>
+        {% include components/cta-info.html 
+         item1_icon="🎧" item1_text="Listening, concerts"
+         item2_icon="🎹" item2_text="Piano & synth" %}
+        <h3 class="section__title">
+            {{ t.resume_page.interests_sports }}
+        </h3>
+        {% include components/cta-info.html 
+         item1_icon="🧗‍♂️" item1_text="Climbing, especially bouldering"
+         item2_icon="🏂" item2_text="Snowboard & ski"
+         item3_icon="🏒" item3_text="Roller Hockey"
+         item4_icon="⛵️" item4_text="Sailing" %}
+      </div>
+    </div>
+  </div> 
+</section>
+
+<!-- Final CTA Section -->
+{% include sections/cta-section.html title=t.resume_page.final_title 
+description=t.resume_page.final_description cta_text=t.resume_page.final_button lang="en" %}
