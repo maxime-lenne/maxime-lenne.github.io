@@ -3,7 +3,11 @@
     "allow": [
       "Bash(make:*)",
       "WebFetch(domain:screen-said-15347397.figma.site)",
-      "Bash(open http://localhost:4001)"
+      "Bash(open http://localhost:4001)",
+      "Bash(git add:*)",
+      "Bash(bundle exec jekyll serve --port 4001 --detach)",
+      "Bash(pkill:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
