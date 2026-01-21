@@ -111,6 +111,154 @@ defaults:
       layout: "project"
       author: "Maxime Lenne"
 
+# =====================================================
+# NOTION CMS CONFIGURATION
+# =====================================================
+# Jekyll Notion CMS Plugin - Configuration des collections
+# Documentation: docs/NOTION_SETUP.md
+notion:
+  # Enabled: true pour utiliser Notion, false pour utiliser les collections Jekyll
+  enabled: true
+
+  # Configuration des collections Notion
+  collections:
+    skills:
+      database_env: NOTION_SKILLS_DB
+      data_file: notion_skills.yml
+      organizer: skills_by_category
+      properties:
+        - { name: Name, type: title }
+        - { name: Level, type: number }
+        - { name: Years, type: number }
+        - { name: Featured, type: checkbox }
+        - { name: Order, type: number }
+        - { name: Category, type: rollup }
+        - { name: Icon, type: rollup }
+        - { name: Color, type: rollup }
+        - { name: Category Order, type: rollup }
+
+    experiences:
+      database_env: NOTION_EXPERIENCES_DB
+      data_file: notion_experiences.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Title, type: title }
+        - { name: Company, type: rich_text }
+        - { name: Role, type: rich_text }
+        - { name: Start Date, type: date, key: start_date }
+        - { name: End Date, type: date, key: end_date }
+        - { name: Current, type: checkbox }
+        - { name: Location, type: rich_text }
+        - { name: Type, type: rich_text }
+        - { name: Order, type: number }
+        - { name: Logo URL, type: url, key: logo_url }
+        - { name: Description, type: rich_text }
+        - { name: About, type: rich_text }
+        - { name: Tags, type: multi_select }
+        - { name: Skills, type: rollup }
+        - { name: Achievements, type: formula_array }
+        - { name: Missions, type: formula_array }
+
+    awards:
+      database_env: NOTION_AWARDS_DB
+      data_file: notion_awards.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Title, type: title }
+        - { name: Organization, type: rich_text }
+        - { name: Date, type: date }
+        - { name: Order, type: number }
+        - { name: Project, type: rich_text }
+        - { name: Description, type: rich_text }
+        - { name: Achievements, type: multi_select }
+        - { name: Impact, type: rich_text }
+
+    contributions:
+      database_env: NOTION_CONTRIBUTIONS_DB
+      data_file: notion_contributions.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Title, type: title }
+        - { name: Description, type: rich_text }
+        - { name: Links, type: rich_text }
+        - { name: Order, type: number }
+        - { name: Achievements, type: multi_select }
+        - { name: Labels, type: multi_select }
+
+    educations:
+      database_env: NOTION_EDUCATIONS_DB
+      data_file: notion_educations.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Title, type: title }
+        - { name: Institution, type: rich_text }
+        - { name: Degree Type, type: rich_text, key: degree_type }
+        - { name: Location, type: rich_text }
+        - { name: Field, type: rich_text }
+        - { name: Start Date, type: date, key: start_date }
+        - { name: End Date, type: date, key: end_date }
+        - { name: Completed, type: checkbox }
+        - { name: Order, type: number }
+        - { name: Description, type: rich_text }
+        - { name: Skills, type: multi_select }
+
+    services:
+      database_env: NOTION_SERVICES_DB
+      data_file: notion_services.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Title, type: title }
+        - { name: Icon, type: rich_text }
+        - { name: Order, type: number }
+        - { name: Description, type: rich_text }
+        - { name: Features, type: multi_select }
+        - { name: Feature Type, type: rich_text, key: feature_type }
+        - { name: Keywords, type: multi_select }
+
+    testimonials:
+      database_env: NOTION_TESTIMONIALS_DB
+      data_file: notion_testimonials.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Name, type: title }
+        - { name: Role, type: rich_text }
+        - { name: Image, type: rich_text }
+        - { name: Order, type: number }
+        - { name: Quote, type: rich_text }
+        - { name: Rating, type: number }
+
+    # Articles de blog multilingues (nouveau)
+    blog_posts:
+      database_env: NOTION_BLOG_DB
+      data_file: notion_blog_posts.yml
+      organizer: simple_list
+      sort_by: published_at
+      sort_order: desc
+      multilingual: true
+      properties:
+        - { name: Title, type: title }
+        - { name: Slug, type: rich_text }
+        - { name: Language, type: select }  # fr, en
+        - { name: Published At, type: date, key: published_at }
+        - { name: Updated At, type: date, key: updated_at }
+        - { name: Status, type: select }  # draft, published, archived
+        - { name: Excerpt, type: rich_text }
+        - { name: Content, type: rich_text }
+        - { name: Featured Image, type: url, key: featured_image }
+        - { name: Categories, type: multi_select }
+        - { name: Tags, type: multi_select }
+        - { name: Author, type: rich_text }
+        - { name: Reading Time, type: number, key: reading_time }
+        - { name: Featured, type: checkbox }
+        - { name: SEO Title, type: rich_text, key: seo_title }
+        - { name: SEO Description, type: rich_text, key: seo_description }
+
 # Exclude from processing
 exclude:
   - Gemfile

@@ -18,6 +18,7 @@ NOTION_CONTRIBUTIONS_DB=xxx
 NOTION_EDUCATIONS_DB=xxx
 NOTION_SERVICES_DB=xxx
 NOTION_TESTIMONIALS_DB=xxx
+NOTION_BLOG_DB=xxx  # Articles de blog multilingues
 ```
 
 ### 2. Obtenir le token Notion
@@ -161,6 +162,29 @@ Votre base de données Testimonials doit contenir les propriétés suivantes :
 | **Quote** | Rich Text | Témoignage | "Un grand merci pour ton travail..." |
 | **Rating** | Number | Note (1-5) | 5 |
 
+### Base de Données Blog Posts (Multilingue)
+
+Votre base de données Blog Posts doit contenir les propriétés suivantes :
+
+| Propriété | Type | Description | Exemple |
+|-----------|------|-------------|---------|
+| **Title** | Title | Titre de l'article | "Comment devenir CTO" |
+| **Slug** | Text | URL slug de l'article | "comment-devenir-cto" |
+| **Language** | Select | Langue de l'article | "fr", "en" |
+| **Published At** | Date | Date de publication | "2024-01-15" |
+| **Updated At** | Date | Date de mise à jour | "2024-01-20" |
+| **Status** | Select | Statut de publication | "draft", "published", "archived" |
+| **Excerpt** | Rich Text | Extrait/résumé | "Un guide complet pour..." |
+| **Content** | Rich Text | Contenu de l'article | "Le métier de CTO..." |
+| **Featured Image** | URL | Image principale | "https://..." |
+| **Categories** | Multi-select | Catégories | "Tech", "Career", "Leadership" |
+| **Tags** | Multi-select | Tags | "CTO", "Management", "Startup" |
+| **Author** | Text | Auteur | "Maxime Lenne" |
+| **Reading Time** | Number | Temps de lecture (min) | 5, 10, 15 |
+| **Featured** | Checkbox | Article mis en avant | ✓ (coché si oui) |
+| **SEO Title** | Text | Titre SEO | "Comment devenir CTO - Guide 2024" |
+| **SEO Description** | Text | Description SEO | "Découvrez les étapes..." |
+
 ### Exemple de données
 
 #### Table Skills
@@ -184,6 +208,26 @@ Parent Categories: [Relation vers catégories parents]
 Icon: languages
 Color: red
 Order: 3
+```
+
+#### Table Blog Posts
+```
+Title: Comment devenir CTO en 2024
+Slug: comment-devenir-cto-2024
+Language: fr
+Published At: 2024-01-15
+Updated At: 2024-01-20
+Status: published
+Excerpt: Un guide complet pour comprendre le parcours vers le rôle de CTO...
+Content: Le métier de CTO (Chief Technology Officer) est devenu...
+Featured Image: https://example.com/images/cto-guide.jpg
+Categories: [Tech, Career]
+Tags: [CTO, Management, Startup, Leadership]
+Author: Maxime Lenne
+Reading Time: 10
+Featured: ✓
+SEO Title: Comment devenir CTO en 2024 - Guide complet
+SEO Description: Découvrez les étapes clés pour devenir CTO...
 ```
 
 #### Table Experiences
@@ -240,6 +284,7 @@ bundle exec jekyll serve
    - `NOTION_EDUCATIONS_DB` : L'ID de votre base de données Educations
    - `NOTION_SERVICES_DB` : L'ID de votre base de données Services
    - `NOTION_TESTIMONIALS_DB` : L'ID de votre base de données Testimonials
+   - `NOTION_BLOG_DB` : L'ID de votre base de données Blog Posts (multilingue)
 
 3. **Pour ajouter un secret** :
    - Cliquez sur **New repository secret**
@@ -282,6 +327,7 @@ Le plugin génère automatiquement :
 - **`_data/notion_educations.yml`** - Données des formations importées depuis Notion
 - **`_data/notion_services.yml`** - Données des services importées depuis Notion
 - **`_data/notion_testimonials.yml`** - Données des témoignages importées depuis Notion
+- **`_data/notion_blog_posts.yml`** - Données des articles de blog importées depuis Notion
 - **`site.data.notion_*`** - Données accessibles dans Jekyll pour chaque collection
 
 ### Structure des données générées
@@ -320,6 +366,27 @@ Frontend:
       featured: true
       order: 1
       id: "page_id_from_notion"
+```
+
+#### Blog Posts
+```yaml
+- title: "Comment devenir CTO en 2024"
+  slug: "comment-devenir-cto-2024"
+  language: "fr"
+  published_at: "2024-01-15"
+  updated_at: "2024-01-20"
+  status: "published"
+  excerpt: "Un guide complet pour comprendre le parcours vers le rôle de CTO..."
+  content: "Le métier de CTO (Chief Technology Officer) est devenu..."
+  featured_image: "https://example.com/images/cto-guide.jpg"
+  categories: ["Tech", "Career"]
+  tags: ["CTO", "Management", "Startup", "Leadership"]
+  author: "Maxime Lenne"
+  reading_time: 10
+  featured: true
+  seo_title: "Comment devenir CTO en 2024 - Guide complet"
+  seo_description: "Découvrez les étapes clés pour devenir CTO..."
+  id: "page_id_from_notion"
 ```
 
 #### Experiences
@@ -502,6 +569,66 @@ Frontend:
         {% endfor %}
       </div>
     {% endif %}
+  </div>
+{% endfor %}
+```
+
+### Dans blog.md - Blog Posts Multilingues
+
+```liquid
+{% assign notion_blog_posts = site.data.notion_blog_posts %}
+{% assign current_lang = page.lang | default: site.default_lang %}
+
+<!-- Filtrer les articles par langue et statut -->
+{% assign published_posts = notion_blog_posts | where: "language", current_lang | where: "status", "published" %}
+
+{% for post in published_posts %}
+  <article class="blog-post">
+    {% if post.featured_image %}
+      <img src="{{ post.featured_image }}" alt="{{ post.title }}" class="featured-image">
+    {% endif %}
+
+    <h2><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h2>
+
+    <div class="meta">
+      <span class="date">{{ post.published_at | date: "%d %B %Y" }}</span>
+      {% if post.reading_time %}
+        <span class="reading-time">{{ post.reading_time }} min de lecture</span>
+      {% endif %}
+      {% if post.author %}
+        <span class="author">Par {{ post.author }}</span>
+      {% endif %}
+    </div>
+
+    <p class="excerpt">{{ post.excerpt }}</p>
+
+    {% if post.categories %}
+      <div class="categories">
+        {% for category in post.categories %}
+          <span class="category">{{ category }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if post.tags %}
+      <div class="tags">
+        {% for tag in post.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </article>
+{% endfor %}
+```
+
+### Articles Mis en Avant
+
+```liquid
+{% assign featured_posts = site.data.notion_blog_posts | where: "featured", true | where: "status", "published" %}
+{% for post in featured_posts limit: 3 %}
+  <div class="featured-post">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.excerpt }}</p>
   </div>
 {% endfor %}
 ```
