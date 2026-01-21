@@ -84,6 +84,7 @@ jobs:
           NOTION_EDUCATIONS_DB: ${{ secrets.NOTION_EDUCATIONS_DB }}
           NOTION_SERVICES_DB: ${{ secrets.NOTION_SERVICES_DB }}
           NOTION_TESTIMONIALS_DB: ${{ secrets.NOTION_TESTIMONIALS_DB }}
+          NOTION_BLOG_DB: ${{ secrets.NOTION_BLOG_DB }}
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
