@@ -7,7 +7,17 @@
       "Bash(git add:*)",
       "Bash(bundle exec jekyll serve --port 4001 --detach)",
       "Bash(pkill:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git checkout:*)",
+      "Bash(bundle exec jekyll:*)",
+      "Bash(git status:*)",
+      "Bash(git commit:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle exec rspec:*)",
+      "Bash(gem build:*)",
+      "Bash(gem contents:*)",
+      "Bash(xargs:*)",
+      "Skill(commit-commands:commit)"
     ],
     "deny": [],
     "ask": []

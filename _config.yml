@@ -125,7 +125,7 @@ notion:
     skills:
       database_env: NOTION_SKILLS_DB
       data_file: notion_skills.yml
-      organizer: skills_by_category
+      organizer: items_by_category
       properties:
         - { name: Name, type: title }
         - { name: Level, type: number }

@@ -104,8 +104,8 @@ lang: fr
              id=forloop.index
              role=experience.role
              company=experience.company
-             start_date=experience.start_date
-             end_date=experience.end_date
+             start_date=experience.start_date.start
+             end_date=experience.end_date.start
              current=experience.current
              description=experience.description
              skills=experience.skills
@@ -180,7 +180,7 @@ lang: fr
           {{ skill_category[1].title }}
         </h3>
         <div class="figma-cv-skills__list">
-          {% for skill in skill_category[1].skills %}
+          {% for skill in skill_category[1].items %}
           <span class="figma-cv-skills__item" 
                 data-level="{{ skill.level }}" 
                 title="{{ skill.name }}{% if skill.years %} - {{ skill.years }} ans d'expérience{% endif %}{% if skill.description %} - {{ skill.description }}{% endif %}"
