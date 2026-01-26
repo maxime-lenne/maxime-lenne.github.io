@@ -33,3 +33,4 @@ Thumbs.db
 # They should be regenerated during build and not committed
 _data/notion_*.yml
 _data/notion_*.yaml
+/.playwright-mcp/
