@@ -7,7 +7,7 @@
   // ===== THEME MANAGEMENT =====
   class ThemeManager {
     constructor() {
-      this.themeToggle = document.getElementById('figma-theme-toggle');
+      this.themeToggle = document.getElementById('deep-stack-theme-toggle');
       this.currentTheme = this.getStoredTheme() || this.getPreferredTheme();
       
       this.init();
@@ -175,7 +175,7 @@
 
         // Observe elements with animation classes
         const animatedElements = document.querySelectorAll(
-          '.card-highlight, .blog-card, .stat, .hero__content, .hero__visual'
+          '.card-highlight, .stat-number'
         );
 
         animatedElements.forEach(el => {
@@ -225,148 +225,6 @@
             });
           }
         }
-      });
-    }
-  }
-
-  // ===== FORM ENHANCEMENTS =====
-  class FormEnhancer {
-    constructor() {
-      this.forms = document.querySelectorAll('form');
-      this.init();
-    }
-
-    init() {
-      this.forms.forEach(form => this.enhanceForm(form));
-    }
-
-    enhanceForm(form) {
-      // Add loading states and validation feedback
-      const submitButton = form.querySelector('button[type="submit"]');
-      
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        if (submitButton) {
-          const originalText = submitButton.textContent;
-          submitButton.textContent = 'Envoi en cours...';
-          submitButton.classList.add('loading');
-          submitButton.disabled = true;
-          
-          // Simulate form submission
-          setTimeout(() => {
-            this.showNotification('Message envoyé avec succès !', 'success');
-            form.reset();
-            submitButton.textContent = originalText;
-            submitButton.classList.remove('loading');
-            submitButton.disabled = false;
-          }, 2000);
-        }
-      });
-
-      // Input focus effects
-      const inputs = form.querySelectorAll('input, textarea, select');
-      inputs.forEach(input => {
-        input.addEventListener('focus', () => {
-          input.parentElement?.classList.add('focused');
-        });
-        
-        input.addEventListener('blur', () => {
-          input.parentElement?.classList.remove('focused');
-          if (input.value) {
-            input.parentElement?.classList.add('filled');
-          } else {
-            input.parentElement?.classList.remove('filled');
-          }
-        });
-      });
-    }
-
-    showNotification(message, type = 'info') {
-      const notification = document.createElement('div');
-      notification.className = `notification notification--${type}`;
-      notification.textContent = message;
-      
-      // Add styles inline for notifications
-      notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--color-surface);
-        color: var(--color-text-primary);
-        padding: var(--space-md) var(--space-lg);
-        border-radius: var(--radius-lg);
-        box-shadow: var(--shadow-xl);
-        z-index: var(--z-tooltip);
-        transform: translateX(400px);
-        transition: transform 0.3s ease-out;
-        border-left: 4px solid ${type === 'success' ? 'var(--color-success)' : 'var(--color-primary)'};
-      `;
-      
-      document.body.appendChild(notification);
-      
-      // Show notification
-      setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-      }, 100);
-      
-      // Remove after 5 seconds
-      setTimeout(() => {
-        notification.style.transform = 'translateX(400px)';
-        setTimeout(() => notification.remove(), 300);
-      }, 5000);
-    }
-  }
-
-  // ===== PERFORMANCE OPTIMIZATIONS =====
-  class PerformanceOptimizer {
-    constructor() {
-      this.init();
-    }
-
-    init() {
-      // Lazy load images
-      this.lazyLoadImages();
-      
-      // Preload critical resources
-      this.preloadCriticalResources();
-    }
-
-    lazyLoadImages() {
-      if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target;
-              if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-              }
-            }
-          });
-        });
-
-        document.querySelectorAll('img[data-src]').forEach(img => {
-          imageObserver.observe(img);
-        });
-      }
-    }
-
-    preloadCriticalResources() {
-      // Preload critical fonts if needed
-      const criticalFonts = [
-        // Add font URLs here if needed
-      ];
-
-      criticalFonts.forEach(fontUrl => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = fontUrl;
-        link.as = 'font';
-        link.type = 'font/woff2';
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
       });
     }
   }
@@ -456,12 +314,7 @@
       new ScrollEffects();
       new AnimationObserver();
       new SmoothScroll();
-      new FormEnhancer();
-      new PerformanceOptimizer();
       new ModalManager();
-
-      // Add loaded class to body for CSS transitions
-      document.body.classList.add('loaded');
 
       // Performance monitoring
       if ('performance' in window) {

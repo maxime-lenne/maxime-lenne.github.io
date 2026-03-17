@@ -1,7 +1,7 @@
-// Figma Layout Styles
-// Inspired by modern design systems and Figma's aesthetic
+// Deep Stack Layout Styles
+// Inspired by modern design systems
 
-.figma-layout {
+.deep-stack-layout {
   // Reset body padding for custom header
   padding-top: 0;
   
@@ -24,8 +24,8 @@
   }
 }
 
-// CTA Button (Figma Style)
-.figma-cta-btn {
+// CTA Button (Deep Stack Style)
+.deep-stack-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -72,7 +72,7 @@
     padding: 8px 12px;
     font-size: 12px;
     
-    .figma-cta-btn__icon {
+    .deep-stack-cta-btn__icon {
       width: 12px;
       height: 12px;
     }
@@ -80,7 +80,7 @@
 }
 
 // Main Content
-.figma-main {
+.deep-stack-main {
   padding-top: 64px;
   
   @media (max-width: 768px) {
@@ -132,7 +132,7 @@ body.nav-open {
   }
   &__labels {
     text-align: center;
-    .figma-services__badge {
+    .deep-stack-services__badge {
       margin-bottom: 10px;
     }
   }

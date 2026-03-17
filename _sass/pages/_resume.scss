@@ -3,9 +3,9 @@
 // ===========================
 
 // CV Hero Section
-.figma-cv-hero {
+.deep-stack-cv-hero {
   padding: 120px 0 80px;
-  background: var(--figma-bg-primary);
+  background: var(--deep-stack-bg-primary);
   position: relative;
   
   &__container {
@@ -39,7 +39,7 @@
     margin-bottom: 24px;
     
     &-text {
-      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      background: linear-gradient(135deg, var(--deep-stack-primary), var(--deep-stack-secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -53,7 +53,7 @@
       display: block;
       font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 800;
-      color: var(--figma-text-primary);
+      color: var(--deep-stack-text-primary);
       line-height: 1.1;
       letter-spacing: -0.02em;
       margin-bottom: 8px;
@@ -63,7 +63,7 @@
       display: block;
       font-size: clamp(1.2rem, 3vw, 1.5rem);
       font-weight: 600;
-      color: var(--figma-primary);
+      color: var(--deep-stack-primary);
       line-height: 1.3;
     }
   }
@@ -71,7 +71,7 @@
   &__description {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     line-height: 1.6;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     margin-bottom: 32px;
     max-width: 600px;
   }
@@ -90,12 +90,12 @@
       align-items: center;
       gap: 12px;
       font-size: 16px;
-      color: var(--figma-text-secondary);
+      color: var(--deep-stack-text-secondary);
       
       svg {
         width: 20px;
         height: 20px;
-        color: var(--figma-primary);
+        color: var(--deep-stack-primary);
       }
     }
   }
@@ -104,7 +104,7 @@
     h3 {
       font-size: 18px;
       font-weight: 600;
-      color: var(--figma-text-primary);
+      color: var(--deep-stack-text-primary);
       margin-bottom: 12px;
     }
     
@@ -116,7 +116,7 @@
     
     &-language {
       font-size: 15px;
-      color: var(--figma-text-secondary);
+      color: var(--deep-stack-text-secondary);
     }
   }
   
@@ -155,9 +155,9 @@
 }
 
 // CV Experience Section
-.figma-cv-experience {
+.deep-stack-cv-experience {
   padding: 80px 0;
-  background: var(--figma-bg-secondary);
+  background: var(--deep-stack-bg-secondary);
   
   &__container {
     max-width: 1200px;
@@ -182,9 +182,9 @@
 }
 
 // CV Skills Section
-.figma-cv-skills {
+.deep-stack-cv-skills {
   padding: 80px 0;
-  background: var(--figma-bg-primary);
+  background: var(--deep-stack-bg-primary);
   
   &__container {
     max-width: 1200px;
@@ -200,10 +200,10 @@
   &__title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     
     &-highlight {
-      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      background: linear-gradient(135deg, var(--deep-stack-primary), var(--deep-stack-secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -223,7 +223,7 @@
     
     [data-theme="light"] & {
       border-color: rgba(0, 0, 0, 0.1);
-      .figma-cv-skills__category-title, .figma-cv-skills__list {
+      .deep-stack-cv-skills__category-title, .deep-stack-cv-skills__list {
         color: white;
       }
     }
@@ -235,7 +235,7 @@
     gap: 12px;
     font-size: 20px;
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     margin-bottom: 20px;
     [data-theme="light"] & {
         color: var(white);
@@ -243,7 +243,7 @@
     svg {
       width: 24px;
       height: 24px;
-      color: var(--figma-primary);
+      color: var(--deep-stack-primary);
     }
   }
   
@@ -256,7 +256,7 @@
   &__item {
     padding: 8px 16px;
     background: rgba(59, 130, 246, 0.1);
-    color: var(--figma-primary);
+    color: var(--deep-stack-primary);
     font-size: 14px;
     font-weight: 600;
     border-radius: 20px;
@@ -264,9 +264,9 @@
 }
 
 // CV Education Section
-.figma-cv-education {
+.deep-stack-cv-education {
   padding: 80px 0;
-  background: var(--figma-bg-secondary);
+  background: var(--deep-stack-bg-secondary);
   
   &__container {
     max-width: 1200px;
@@ -282,10 +282,10 @@
   &__title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     
     &-highlight {
-      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      background: linear-gradient(135deg, var(--deep-stack-primary), var(--deep-stack-secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -306,7 +306,7 @@
   &__icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+    background: linear-gradient(135deg, var(--deep-stack-primary), var(--deep-stack-secondary));
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -327,21 +327,21 @@
   &__degree {
     font-size: 20px;
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     margin-bottom: 8px;
   }
   
   &__school {
     font-size: 16px;
     line-height: 1.5;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
   }
 }
 
 // CV Awards Section
-.figma-cv-awards {
+.deep-stack-cv-awards {
   padding: 80px 0;
-  background: var(--figma-bg-secondary);
+  background: var(--deep-stack-bg-secondary);
   
   &__container {
     max-width: 1200px;
@@ -357,10 +357,10 @@
   &__title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     
     &-highlight {
-      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      background: linear-gradient(135deg, var(--deep-stack-primary), var(--deep-stack-secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -398,13 +398,13 @@
   &__title-item {
     font-size: 20px;
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     margin-bottom: 8px;
   }
   
   &__organization {
     font-size: 16px;
-    color: var(--figma-primary);
+    color: var(--deep-stack-primary);
     font-weight: 600;
     margin-bottom: 12px;
   }
@@ -412,21 +412,21 @@
   &__description {
     font-size: 16px;
     line-height: 1.5;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     margin-bottom: 8px;
   }
   
   &__impact {
     font-size: 15px;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     font-style: italic;
   }
 }
 
 // CV Contributions Section
-.figma-cv-contributions {
+.deep-stack-cv-contributions {
   padding: 80px 0;
-  background: var(--figma-bg-primary);
+  background: var(--deep-stack-bg-primary);
   
   &__container {
     max-width: 1200px;
@@ -442,10 +442,10 @@
   &__title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     
     &-highlight {
-      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      background: linear-gradient(135deg, var(--deep-stack-primary), var(--deep-stack-secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -463,7 +463,7 @@
   }
   
   &__item {
-    background: var(--figma-bg-secondary);
+    background: var(--deep-stack-bg-secondary);
     border-radius: 16px;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -484,7 +484,7 @@
   &__title-item {
     font-size: 20px;
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     margin: 0;
   }
   
@@ -502,7 +502,7 @@
     
     &--product {
       background: rgba(59, 130, 246, 0.1);
-      color: var(--figma-primary);
+      color: var(--deep-stack-primary);
     }
     
     &--education {
@@ -513,7 +513,7 @@
   
   &__role {
     font-size: 16px;
-    color: var(--figma-primary);
+    color: var(--deep-stack-primary);
     font-weight: 600;
     margin-bottom: 12px;
   }
@@ -521,7 +521,7 @@
   &__description {
     font-size: 16px;
     line-height: 1.5;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     margin-bottom: 16px;
   }
   
@@ -535,7 +535,7 @@
   &__tech {
     padding: 4px 10px;
     background: rgba(59, 130, 246, 0.1);
-    color: var(--figma-primary);
+    color: var(--deep-stack-primary);
     font-size: 13px;
     font-weight: 600;
     border-radius: 12px;
@@ -547,7 +547,7 @@
     h4 {
       font-size: 16px;
       font-weight: 600;
-      color: var(--figma-text-primary);
+      color: var(--deep-stack-text-primary);
       margin-bottom: 8px;
     }
     
@@ -558,7 +558,7 @@
       
       li {
         font-size: 14px;
-        color: var(--figma-text-secondary);
+        color: var(--deep-stack-text-secondary);
         position: relative;
         padding-left: 16px;
         margin-bottom: 4px;
@@ -567,7 +567,7 @@
           content: '•';
           position: absolute;
           left: 0;
-          color: var(--figma-primary);
+          color: var(--deep-stack-primary);
           font-weight: 900;
         }
       }
@@ -576,15 +576,15 @@
   
   &__impact {
     font-size: 15px;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     font-style: italic;
   }
 }
 
 // CV Interests Section
-.figma-cv-interests {
+.deep-stack-cv-interests {
   padding: 80px 0;
-  background: var(--figma-bg-secondary);
+  background: var(--deep-stack-bg-secondary);
   
   &__container {
     max-width: 1200px;
@@ -600,10 +600,10 @@
   &__title {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     
     &-highlight {
-      background: linear-gradient(135deg, var(--figma-primary), var(--figma-secondary));
+      background: linear-gradient(135deg, var(--deep-stack-primary), var(--deep-stack-secondary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -617,7 +617,7 @@
   }
   
   &__category {
-    background: var(--figma-bg-primary);
+    background: var(--deep-stack-bg-primary);
     border-radius: 16px;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -630,13 +630,13 @@
   &__category-title {
     font-size: 20px;
     font-weight: 700;
-    color: var(--figma-text-primary);
+    color: var(--deep-stack-text-primary);
     margin-bottom: 16px;
   }
   
   &__category-description {
     font-size: 16px;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     line-height: 1.5;
   }
   
@@ -648,7 +648,7 @@
     span {
       padding: 6px 12px;
       background: rgba(59, 130, 246, 0.1);
-      color: var(--figma-primary);
+      color: var(--deep-stack-primary);
       font-size: 14px;
       font-weight: 600;
       border-radius: 20px;
@@ -657,7 +657,7 @@
 }
 
 // Additional styles for certifications in education
-.figma-cv-education {
+.deep-stack-cv-education {
   &__certifications {
     margin-top: 12px;
     padding-top: 12px;
@@ -670,17 +670,17 @@
   
   &__certification {
     font-size: 14px;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     margin-bottom: 6px;
     
     strong {
-      color: var(--figma-text-primary);
+      color: var(--deep-stack-text-primary);
     }
   }
 }
 
 // Additional styles for experience achievements
-.figma-cv-experience {
+.deep-stack-cv-experience {
   &__achievements {
     margin-bottom: 16px;
     
@@ -691,7 +691,7 @@
   
   &__achievement {
     font-size: 14px;
-    color: var(--figma-text-secondary);
+    color: var(--deep-stack-text-secondary);
     position: relative;
     padding-left: 16px;
     margin-bottom: 4px;
@@ -700,7 +700,7 @@
       content: '✓';
       position: absolute;
       left: 0;
-      color: var(--figma-secondary);
+      color: var(--deep-stack-secondary);
       font-weight: 900;
     }
   }

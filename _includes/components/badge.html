@@ -1,16 +1,16 @@
 <!-- Badge Component -->
 {% if include.style == "tag" %}
-  <div class="figma-about__badge-tag">
-    <span class="figma-about__badge-icon">{{ include.icon | default: "" }}</span>
-    <span class="figma-about__badge-label">{{ include.text | default: "À propos de moi" }}</span>
+  <div class="deep-stack-about__badge-tag">
+    <span class="deep-stack-about__badge-icon">{{ include.icon | default: "" }}</span>
+    <span class="deep-stack-about__badge-label">{{ include.text | default: "À propos de moi" }}</span>
   </div>
 {% elsif include.style == "services" %}
-  <div class="figma-services__badge">
-    <span class="figma-services__badge-icon">{{ include.icon | default: "" }}</span>
-    <span class="figma-services__badge-text">{{ include.text | default: "Mes services" }}</span>
+  <div class="deep-stack-services__badge">
+    <span class="deep-stack-services__badge-icon">{{ include.icon | default: "" }}</span>
+    <span class="deep-stack-services__badge-text">{{ include.text | default: "Mes services" }}</span>
   </div>
 {% else %}
-  <div class="figma-hero__badge">
-    <span class="figma-hero__badge-text">{{ include.text | default: "✨ Freelance" }}</span>
+  <div class="deep-stack-hero__badge">
+    <span class="deep-stack-hero__badge-text">{{ include.text | default: "✨ Freelance" }}</span>
   </div>
 {% endif %}

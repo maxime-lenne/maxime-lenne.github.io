@@ -1,6 +1,7 @@
 <!-- Header -->
 {% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
 {% assign t = site.data.translations[lang] %}
+{% assign theme = site.data.theme %}
 {% if lang == 'en' %}
   {% assign home_url = '/en/' %}
   {% assign resume_url = '/en/resume/' %}
@@ -32,7 +33,7 @@
                 </defs>
                 </svg>
 
-            <span class="header__logo-text">Maxime Lenne</span>
+            <span class="header__logo-text">{{ theme.site.logo_text | default: site.title | default: "Maxime Lenne" }}</span>
         </a>
 
         <nav class="header__nav" role="navigation" aria-label="Main navigation">
@@ -52,35 +53,35 @@
         
 
         <!-- Header Actions -->
-        <div class="figma-header__actions">
+        <div class="deep-stack-header__actions">
             <!-- Language Switcher -->
-            <div class="figma-language-switcher">
-                <button class="figma-language-switcher__trigger" aria-label="Change language">
-                    <span class="figma-language-switcher__current">{{ lang | upcase }}</span>
-                    <svg class="figma-language-switcher__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <div class="deep-stack-language-switcher">
+                <button class="deep-stack-language-switcher__trigger" aria-label="Change language">
+                    <span class="deep-stack-language-switcher__current">{{ lang | upcase }}</span>
+                    <svg class="deep-stack-language-switcher__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path d="M6 9l6 6 6-6"/>
                     </svg>
                 </button>
-                <div class="figma-language-switcher__dropdown">
+                <div class="deep-stack-language-switcher__dropdown">
                     {% if page.url contains '/resume/' %}
                     <a href="{{ '/resume/' | relative_url }}"
-                       class="figma-language-switcher__option{% if lang == 'fr' %} figma-language-switcher__option--active{% endif %}"
+                       class="deep-stack-language-switcher__option{% if lang == 'fr' %} deep-stack-language-switcher__option--active{% endif %}"
                        hreflang="fr">
                         🇫🇷 Français
                     </a>
                     <a href="{{ '/en/resume/' | relative_url }}"
-                       class="figma-language-switcher__option{% if lang == 'en' %} figma-language-switcher__option--active{% endif %}"
+                       class="deep-stack-language-switcher__option{% if lang == 'en' %} deep-stack-language-switcher__option--active{% endif %}"
                        hreflang="en">
                         🇬🇧 English
                     </a>
                     {% else %}
                     <a href="{{ '/' | relative_url }}"
-                       class="figma-language-switcher__option{% if lang == 'fr' %} figma-language-switcher__option--active{% endif %}"
+                       class="deep-stack-language-switcher__option{% if lang == 'fr' %} deep-stack-language-switcher__option--active{% endif %}"
                        hreflang="fr">
                         🇫🇷 Français
                     </a>
                     <a href="{{ '/en/' | relative_url }}"
-                       class="figma-language-switcher__option{% if lang == 'en' %} figma-language-switcher__option--active{% endif %}"
+                       class="deep-stack-language-switcher__option{% if lang == 'en' %} deep-stack-language-switcher__option--active{% endif %}"
                        hreflang="en">
                         🇬🇧 English
                     </a>
@@ -89,8 +90,8 @@
             </div>
 
             <!-- Theme Toggle -->
-            <button class="figma-theme-toggle" aria-label="Toggle theme" id="figma-theme-toggle">
-                <svg class="figma-theme-toggle__icon figma-theme-toggle__icon--light" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <button class="deep-stack-theme-toggle" aria-label="Toggle theme" id="deep-stack-theme-toggle">
+                <svg class="deep-stack-theme-toggle__icon deep-stack-theme-toggle__icon--light" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <circle cx="12" cy="12" r="5"/>
                     <line x1="12" y1="1" x2="12" y2="3"/>
                     <line x1="12" y1="21" x2="12" y2="23"/>
@@ -101,27 +102,26 @@
                     <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
                     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
                 </svg>
-                <svg class="figma-theme-toggle__icon figma-theme-toggle__icon--dark" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="deep-stack-theme-toggle__icon deep-stack-theme-toggle__icon--dark" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                 </svg>
             </button>
 
             <!-- CTA Button -->
-            <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
-               class="figma-cta-btn"
-               target="_blank"
-               rel="noopener">
+            <a href="{{ theme.site.cta_url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}"
+               class="deep-stack-cta-btn"
+               {% if theme.site.cta_new_tab != false %}target="_blank" rel="noopener"{% endif %}>
                 {{ t.header.cta_button }}
-                <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="deep-stack-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
             </a>
             
             <!-- Mobile Menu Toggle -->
-            <button class="figma-mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                <span class="figma-mobile-toggle__line"></span>
-                <span class="figma-mobile-toggle__line"></span>
-                <span class="figma-mobile-toggle__line"></span>
+            <button class="deep-stack-mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span class="deep-stack-mobile-toggle__line"></span>
+                <span class="deep-stack-mobile-toggle__line"></span>
+                <span class="deep-stack-mobile-toggle__line"></span>
             </button>
         </div>
     </div>

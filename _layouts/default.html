@@ -12,6 +12,9 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+    <!-- Theme Custom Properties -->
+    {% include theme/variables.html %}
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | relative_url }}">
@@ -49,7 +52,7 @@
     }
     </script>
 </head>
-<body class="figma-layout page-{{ page.layout }} lang-{{ page.lang | default: site.default_lang }}">
+<body class="deep-stack-layout page-{{ page.layout }} lang-{{ page.lang | default: site.default_lang }}">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
@@ -58,7 +61,7 @@
     {% include components/mobile-nav.html %}
     
     <!-- Main Content -->
-    <main id="main-content" class="figma-main" role="main">
+    <main id="main-content" class="deep-stack-main" role="main">
         {{ content }}
     </main>
     
@@ -67,19 +70,19 @@
     <!-- JavaScript -->
     <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
     
-    <!-- Figma Layout Specific JS -->
+    <!-- Deep Stack Layout Specific JS -->
     <script>
-        // Language switcher and mobile navigation for Figma layout
+        // Language switcher and mobile navigation for Deep Stack layout
         document.addEventListener('DOMContentLoaded', function() {
-            const languageSwitcher = document.querySelector('.figma-language-switcher');
-            const mobileToggle = document.querySelector('.figma-mobile-toggle');
-            const mobileNav = document.querySelector('.figma-mobile-nav');
-            const mobileClose = document.querySelector('.figma-mobile-nav__close');
+            const languageSwitcher = document.querySelector('.deep-stack-language-switcher');
+            const mobileToggle = document.querySelector('.deep-stack-mobile-toggle');
+            const mobileNav = document.querySelector('.deep-stack-mobile-nav');
+            const mobileClose = document.querySelector('.deep-stack-mobile-nav__close');
             
             // Language switcher dropdown
             if (languageSwitcher) {
-                const trigger = languageSwitcher.querySelector('.figma-language-switcher__trigger');
-                const dropdown = languageSwitcher.querySelector('.figma-language-switcher__dropdown');
+                const trigger = languageSwitcher.querySelector('.deep-stack-language-switcher__trigger');
+                const dropdown = languageSwitcher.querySelector('.deep-stack-language-switcher__dropdown');
                 
                 trigger.addEventListener('click', function(e) {
                     e.stopPropagation();
