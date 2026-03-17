@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require_relative "lib/jekyll-maxime-theme/version"
+require_relative "lib/jekyll-deep-stack/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-maxime-theme"
-  spec.version       = JekyllMaximeTheme::VERSION
+  spec.name          = "jekyll-deep-stack"
+  spec.version       = JekyllDeepStack::VERSION
   spec.authors       = ["Maxime Lenne"]
   spec.email         = ["contact@maxime-lenne.fr"]
 
-  spec.summary       = "A modern Jekyll theme for portfolio websites"
+  spec.summary       = "Deep Stack - A modern Jekyll theme for portfolio websites"
   spec.description   = <<~DESC
-    Jekyll Maxime Theme is a modern, responsive portfolio theme built with
+    Deep Stack is a modern, responsive portfolio theme built with
     Jekyll 4.x. Features include dark/light mode, multi-language support,
     configurable colors via CSS custom properties, BEM-structured components,
     and accessibility-first design.
   DESC
-  spec.homepage      = "https://github.com/maxime-lenne/jekyll-maxime-theme"
+  spec.homepage      = "https://github.com/maxime-lenne/jekyll-deep-stack"
   spec.license       = "MIT"
 
   spec.required_ruby_version = ">= 3.0.0"

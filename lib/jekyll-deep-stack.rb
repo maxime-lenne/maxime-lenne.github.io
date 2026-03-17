@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "jekyll-maxime-theme/version"
+require "jekyll-deep-stack/version"
 
-module JekyllMaximeTheme
+module JekyllDeepStack
   class Error < StandardError; end
 
-  # Jekyll theme module for the Maxime portfolio theme.
+  # Jekyll theme module for the Deep Stack portfolio theme.
   # This theme provides a modern, responsive design with:
   # - Dark/light mode support
   # - Multi-language support (FR/EN)
@@ -22,7 +22,7 @@ end
 
 # Register as a Jekyll theme
 Jekyll::Hooks.register :site, :after_init do |site|
-  gem_dir = JekyllMaximeTheme.gem_dir
+  gem_dir = JekyllDeepStack.gem_dir
 
   # Add theme directories to Jekyll's lookup paths
   site.theme.instance_variable_set(
