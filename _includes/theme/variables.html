@@ -1,0 +1,54 @@
+{% comment %}
+  Theme Variables Helper
+  ----------------------
+  This include generates CSS custom properties from _data/theme.yml
+  Include this in your layout's <head> section to enable theme customization.
+
+  Usage: {% include theme/variables.html %}
+{% endcomment %}
+
+{% assign theme = site.data.theme %}
+
+{% if theme.colors or theme.layout %}
+<style id="theme-custom-properties">
+:root {
+  {% if theme.colors %}
+  /* Custom Colors from theme.yml */
+  {% if theme.colors.primary %}--color-primary: {{ theme.colors.primary }};{% endif %}
+  {% if theme.colors.primary_light %}--color-primary-light: {{ theme.colors.primary_light }};{% endif %}
+  {% if theme.colors.primary_dark %}--color-primary-dark: {{ theme.colors.primary_dark }};{% endif %}
+  {% if theme.colors.secondary %}--color-secondary: {{ theme.colors.secondary }};{% endif %}
+  {% if theme.colors.secondary_light %}--color-secondary-light: {{ theme.colors.secondary_light }};{% endif %}
+  {% if theme.colors.secondary_dark %}--color-secondary-dark: {{ theme.colors.secondary_dark }};{% endif %}
+
+  /* RGB values for transparency */
+  {% if theme.colors.primary_rgb %}--color-primary-rgb: {{ theme.colors.primary_rgb }};{% endif %}
+  {% if theme.colors.secondary_rgb %}--color-secondary-rgb: {{ theme.colors.secondary_rgb }};{% endif %}
+
+  /* Gradients using custom colors */
+  {% if theme.colors.primary and theme.colors.secondary %}
+  --gradient-primary: linear-gradient(135deg, {{ theme.colors.primary }} 0%, {{ theme.colors.secondary }} 100%);
+  --gradient-text: linear-gradient(135deg, {{ theme.colors.primary }} 0%, {{ theme.colors.secondary }} 100%);
+  --gradient-border: linear-gradient(135deg, {{ theme.colors.primary }} 0%, {{ theme.colors.secondary }} 100%);
+  {% endif %}
+  {% endif %}
+
+  {% if theme.layout %}
+  /* Custom Layout from theme.yml */
+  {% if theme.layout.header_height %}--layout-header-height: {{ theme.layout.header_height }}px;{% endif %}
+  {% if theme.layout.container_max_width %}--layout-container-max-width: {{ theme.layout.container_max_width }}px;{% endif %}
+  {% if theme.layout.section_padding_desktop %}--section-padding-desktop: {{ theme.layout.section_padding_desktop }}px;{% endif %}
+  {% if theme.layout.section_padding_mobile %}--section-padding-mobile: {{ theme.layout.section_padding_mobile }}px;{% endif %}
+  {% endif %}
+}
+
+{% if theme.colors.primary_light and theme.colors.secondary_light %}
+:root[data-theme="dark"] {
+  /* Dark mode gradient adjustments */
+  --gradient-primary: linear-gradient(135deg, {{ theme.colors.primary_light }} 0%, {{ theme.colors.secondary_light }} 100%);
+  --gradient-text: linear-gradient(135deg, {{ theme.colors.primary_light | default: '#60a5fa' }} 0%, {{ theme.colors.secondary_light | default: '#4ade80' }} 100%);
+  --gradient-border: linear-gradient(135deg, {{ theme.colors.primary_light }} 0%, {{ theme.colors.secondary_light }} 100%);
+}
+{% endif %}
+</style>
+{% endif %}

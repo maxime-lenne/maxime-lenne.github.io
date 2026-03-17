@@ -1,5 +1,5 @@
 ---
-layout: figma
+layout: default
 title: "Maxime Lenne | CTO, Tech advisor, sparring partner, Tech Product Leader, Product Builder"
 description: "Full resume of Maxime Lenne - CTO, Product Owner and Tech Lead with over 10 years of experience in development and technical leadership."
 lang: en

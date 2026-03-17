@@ -3,19 +3,19 @@
 
 // 1. Foundation Layer
 @use 'variables';
+@use 'theme-config';
 @use 'mixins';
 @use 'base';
 
 // 2. Layout Layer
 @use 'layouts/header';
 @use 'layouts/footer';
-@use 'layouts/figma';
+@use 'layouts/deep-stack';
 @use 'layouts/sections';
 
 // 3. Component Layer
 @use 'components/badge';
 @use 'components/cta-button';
-@use 'components/blog-preview';
 @use 'components/animated-terminal';
 @use 'components/image-circle';
 @use 'components/image';
@@ -34,17 +34,3 @@
 // 4. Page Layer
 @use 'pages/resume';
 @use 'pages/examples';
-
-// 5. Utility Layer
-@use 'utilities/spacing';
-@use 'utilities/typography';
-@use 'utilities/colors';
-@use 'utilities/animations';
-@use 'utilities/accessibility';
-
-// 6. Print and High Contrast
-@use 'utilities/print';
-@use 'utilities/high-contrast';
-
-// 7. Third-party Overrides
-@use 'utilities/third-party';

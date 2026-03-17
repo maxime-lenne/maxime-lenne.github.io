@@ -1,0 +1,90 @@
+# ================================================
+# Jekyll Maxime Theme - Configuration
+# ================================================
+# This file allows users to customize the theme
+# without modifying the source SCSS files directly.
+
+# ------------------------------------------------
+# Site Branding
+# ------------------------------------------------
+site:
+  # Text displayed in the header logo
+  logo_text: "Maxime Lenne"
+
+  # CTA button URL (header and sections)
+  cta_url: "https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
+
+  # CTA button opens in new tab
+  cta_new_tab: true
+
+# ------------------------------------------------
+# Color Configuration
+# ------------------------------------------------
+# All colors can be customized. Use hex format (#RRGGBB)
+# RGB values are automatically generated for transparency support.
+
+colors:
+  # Primary brand color (buttons, links, accents)
+  primary: "#2563eb"
+  primary_light: "#3b82f6"
+  primary_dark: "#1d4ed8"
+
+  # Secondary brand color (gradients, highlights)
+  secondary: "#10b981"
+  secondary_light: "#34d399"
+  secondary_dark: "#059669"
+
+  # RGB versions (for rgba() usage)
+  # Format: "R, G, B" - these are auto-generated if not set
+  # primary_rgb: "37, 99, 235"
+  # secondary_rgb: "16, 185, 129"
+
+# ------------------------------------------------
+# Layout Configuration
+# ------------------------------------------------
+layout:
+  # Header height in pixels
+  header_height: 80
+
+  # Maximum container width in pixels
+  container_max_width: 1440
+
+  # Section padding (desktop/mobile)
+  section_padding_desktop: 120
+  section_padding_mobile: 80
+
+# ------------------------------------------------
+# Features
+# ------------------------------------------------
+features:
+  # Enable dark mode toggle
+  dark_mode: true
+
+  # Enable language switcher
+  language_switcher: true
+
+  # Enable animated terminal in hero section
+  animated_terminal: true
+
+# ------------------------------------------------
+# Navigation
+# ------------------------------------------------
+# Navigation links are configured in _data/translations.yml
+# This section is for additional nav customization
+
+navigation:
+  # Show CTA button in header
+  show_cta: true
+
+  # Show resume link
+  show_resume: true
+
+# ------------------------------------------------
+# Footer
+# ------------------------------------------------
+footer:
+  # Show social links
+  show_social: true
+
+  # Copyright text (use {year} for dynamic year)
+  copyright: "{year} Maxime Lenne. All rights reserved."

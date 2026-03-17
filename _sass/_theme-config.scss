@@ -1,0 +1,183 @@
+// ==============================================
+// Theme Configuration Layer
+// ==============================================
+// This file provides the foundation for theme customization
+// All values here can be overridden via CSS custom properties
+// injected from _data/theme.yml
+
+// ==============================================
+// Color RGB Values for Transparency Support
+// ==============================================
+// These are extracted from the main colors to allow rgba() usage
+// Usage: rgba(var(--color-primary-rgb), 0.1)
+
+:root {
+  // Primary color RGB components (default: #2563eb = 37, 99, 235)
+  --color-primary-rgb: 37, 99, 235;
+  --color-primary-light-rgb: 59, 130, 246;
+  --color-primary-dark-rgb: 29, 78, 216;
+
+  // Secondary color RGB components (default: #10b981 = 16, 185, 129)
+  --color-secondary-rgb: 16, 185, 129;
+  --color-secondary-light-rgb: 52, 211, 153;
+  --color-secondary-dark-rgb: 5, 150, 105;
+
+  // Neutral colors RGB for overlays
+  --color-neutral-900-rgb: 15, 23, 42;
+  --color-neutral-100-rgb: 241, 245, 249;
+
+  // Layout Configuration
+  --layout-header-height: 80px;
+  --layout-container-max-width: 1440px;
+  --layout-container-padding: clamp(24px, 5vw, 48px);
+
+  // Section spacing
+  --section-padding-desktop: 120px;
+  --section-padding-mobile: 80px;
+}
+
+// Dark theme RGB overrides
+:root[data-theme="dark"] {
+  // Slightly brighter variants for dark mode
+  --color-primary-rgb: 59, 130, 246;
+  --color-secondary-rgb: 34, 197, 94;
+}
+
+// ==============================================
+// Gradient Mixins
+// ==============================================
+
+// Primary gradient using CSS variables
+@mixin gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+@mixin gradient-primary-hover {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-secondary-dark));
+}
+
+// Gradient text effect
+@mixin gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Primary button gradient with shadow
+@mixin button-gradient-primary {
+  @include gradient-primary;
+  box-shadow: 0 4px 14px rgba(var(--color-primary-rgb), 0.25);
+
+  &:hover {
+    box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.35);
+  }
+}
+
+// ==============================================
+// Background Mixins
+// ==============================================
+
+// Semi-transparent primary background
+@mixin bg-primary-transparent($opacity: 0.1) {
+  background: rgba(var(--color-primary-rgb), $opacity);
+}
+
+// Semi-transparent secondary background
+@mixin bg-secondary-transparent($opacity: 0.1) {
+  background: rgba(var(--color-secondary-rgb), $opacity);
+}
+
+// Gradient transparent background (for badges, highlights)
+@mixin bg-gradient-transparent($opacity: 0.1) {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--color-primary-rgb), $opacity),
+    rgba(var(--color-secondary-rgb), $opacity)
+  );
+}
+
+// ==============================================
+// Hero Section Background
+// ==============================================
+
+@mixin hero-background-light {
+  background: linear-gradient(135deg,
+    rgba(var(--color-primary-rgb), 0.08) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(var(--color-secondary-rgb), 0.08) 100%
+  );
+}
+
+@mixin hero-background-dark {
+  background: linear-gradient(135deg,
+    rgba(var(--color-neutral-900-rgb), 1) 0%,
+    var(--color-background-alt) 50%,
+    rgba(var(--color-neutral-900-rgb), 1) 100%
+  );
+}
+
+// ==============================================
+// Decorative Elements
+// ==============================================
+
+// Floating blob effect for backgrounds
+@mixin decorative-blob($color-rgb, $size: 400px) {
+  content: '';
+  position: absolute;
+  width: $size;
+  height: $size;
+  background: radial-gradient(circle, rgba($color-rgb, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+// ==============================================
+// Header Mixins
+// ==============================================
+
+@mixin header-glass-light {
+  background: color-mix(in oklab, var(--color-background) 60%, transparent);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+
+@mixin header-glass-dark {
+  background: rgba(var(--color-neutral-900-rgb), 0.95);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+// ==============================================
+// Shadow Mixins with Theme Colors
+// ==============================================
+
+@mixin shadow-primary($blur: 14px, $opacity: 0.25) {
+  box-shadow: 0 4px $blur rgba(var(--color-primary-rgb), $opacity);
+}
+
+@mixin shadow-primary-hover($blur: 25px, $opacity: 0.35) {
+  box-shadow: 0 8px $blur rgba(var(--color-primary-rgb), $opacity);
+}
+
+// ==============================================
+// Animation Keyframes
+// ==============================================
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

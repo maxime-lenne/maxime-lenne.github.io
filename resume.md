@@ -1,5 +1,5 @@
 ---
-layout: figma
+layout: default
 title: "CV - Maxime Lenne | CTO, Tech advisor, sparing partner, Tech Product Leader, Product Builder"
 description: "CV complet de Maxime Lenne - CTO, Product Owner et Tech Lead avec plus de 10 ans d'expérience dans le développement et la direction technique."
 lang: fr
@@ -21,8 +21,8 @@ lang: fr
         main_text="Maxime Lenne"
         highlight_text="CTO, Tech advisor, sparing partner" %}
         
-      <div class="figma-cv-hero__contact">
-        <div class="figma-cv-hero__contact-item">
+      <div class="deep-stack-cv-hero__contact">
+        <div class="deep-stack-cv-hero__contact-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
@@ -30,14 +30,14 @@ lang: fr
           <span>hello@maxime-lenne.fr</span>
         </div>
         
-        <div class="figma-cv-hero__contact-item">
+        <div class="deep-stack-cv-hero__contact-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
           </svg>
           <span>+33 6 29 45 38 14</span>
         </div>
         
-        <div class="figma-cv-hero__contact-item">
+        <div class="deep-stack-cv-hero__contact-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
             <circle cx="12" cy="10" r="3"/>
@@ -120,7 +120,7 @@ lang: fr
     
     {% if total_experiences > initial_display %}
       <div class="section__actions" id="load-more-experiences-container">
-        <button class="figma-btn figma-btn--secondary" id="load-more-experiences-btn" data-initial="{{ initial_display }}" data-total="{{ total_experiences }}">
+        <button class="deep-stack-btn deep-stack-btn--secondary" id="load-more-experiences-btn" data-initial="{{ initial_display }}" data-total="{{ total_experiences }}">
           En voir plus
         </button>
       </div>
@@ -141,8 +141,8 @@ lang: fr
     <div class="section__grid section__grid--2-col">
       {% assign notion_skills = site.data.notion_skills %}
       {% for skill_category in notion_skills %}
-      <div class="figma-cv-skills__category">
-        <h3 class="figma-cv-skills__category-title">
+      <div class="deep-stack-cv-skills__category">
+        <h3 class="deep-stack-cv-skills__category-title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             {% if skill_category[1].icon == "languages" %}
                 <polyline points="16,18 22,12 16,6"/>
@@ -179,9 +179,9 @@ lang: fr
           </svg>
           {{ skill_category[1].title }}
         </h3>
-        <div class="figma-cv-skills__list">
+        <div class="deep-stack-cv-skills__list">
           {% for skill in skill_category[1].items %}
-          <span class="figma-cv-skills__item" 
+          <span class="deep-stack-cv-skills__item" 
                 data-level="{{ skill.level }}" 
                 title="{{ skill.name }}{% if skill.years %} - {{ skill.years }} ans d'expérience{% endif %}{% if skill.description %} - {{ skill.description }}{% endif %}"
                 {% if skill.featured %}data-featured="true"{% endif %}>
@@ -245,7 +245,7 @@ lang: fr
     
     {% if total_contributions > initial_display %}
       <div class="section__actions" id="load-more-container">
-        <button class="figma-btn figma-btn--secondary" id="load-more-btn" data-initial="{{ initial_display }}" data-total="{{ total_contributions }}">
+        <button class="deep-stack-btn deep-stack-btn--secondary" id="load-more-btn" data-initial="{{ initial_display }}" data-total="{{ total_contributions }}">
           En voir plus
         </button>
       </div>
@@ -264,11 +264,11 @@ lang: fr
             title="Formation & "
             title_highlight="Certifications"
             subtitle="🇫🇷 Français (Natif) - 🇬🇧 Anglais (Professionnel)" %}
-        <div class="figma-cv-education__grid">
+        <div class="deep-stack-cv-education__grid">
           {% assign sorted_education = site.educations | sort: 'order' %}
           {% for education in sorted_education %}
-          <div class="figma-cv-education__item">
-            <div class="figma-cv-education__icon">
+          <div class="deep-stack-cv-education__item">
+            <div class="deep-stack-cv-education__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 {% if education.degree_type == 'DUT' %}
                   <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
@@ -282,13 +282,13 @@ lang: fr
                 {% endif %}
               </svg>
             </div>
-            <div class="figma-cv-education__content">
-              <h3 class="figma-cv-education__degree">{{ education.title }}</h3>
-              <p class="figma-cv-education__school">{{ education.institution }} - {{ education.start_date | date: "%Y" }}</p>
+            <div class="deep-stack-cv-education__content">
+              <h3 class="deep-stack-cv-education__degree">{{ education.title }}</h3>
+              <p class="deep-stack-cv-education__school">{{ education.institution }} - {{ education.start_date | date: "%Y" }}</p>
               {% if education.certifications %}
-              <div class="figma-cv-education__certifications">
+              <div class="deep-stack-cv-education__certifications">
                   {% for cert in education.certifications %}
-                  <div class="figma-cv-education__certification">
+                  <div class="deep-stack-cv-education__certification">
                   <strong>{{ cert.name }}</strong> - {{ cert.issuer }} ({{ cert.date | date: "%Y" }})
                   </div>
                   {% endfor %}
@@ -308,8 +308,8 @@ lang: fr
           
         {% assign sorted_awards = site.awards | sort: 'order' %}
         {% for award in sorted_awards %}
-          <div class="figma-cv-awards__item">
-              <div class="figma-cv-awards__icon">
+          <div class="deep-stack-cv-awards__item">
+              <div class="deep-stack-cv-awards__icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
                     <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
@@ -319,9 +319,9 @@ lang: fr
                     <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
                 </svg>
               </div>
-              <div class="figma-cv-awards__content">
-                <h3 class="figma-cv-awards__title-item">{{ award.title }}</h3>
-                <p class="figma-cv-awards__organization">{{ award.organization }} - {{ award.date | date: "%Y" }}</p>
+              <div class="deep-stack-cv-awards__content">
+                <h3 class="deep-stack-cv-awards__title-item">{{ award.title }}</h3>
+                <p class="deep-stack-cv-awards__organization">{{ award.organization }} - {{ award.date | date: "%Y" }}</p>
               </div>
           </div>
         {% endfor %}
@@ -333,7 +333,7 @@ lang: fr
 <section class="section section--light" id="interests">
   <div class="section__container">
     <div class="section__header">
-      <div class="figma-cv-hero__languages">
+      <div class="deep-stack-cv-hero__languages">
         
         {% include components/section-header.html 
                                 badge_icon="🧗‍♂️"
@@ -450,9 +450,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (contribution.labels && contribution.labels.length > 0) {
         labelsHtml = `
           <div class="card-dark__labels">
-            ${contribution.labels.map(label => `<div class="figma-services__badge">
-                <span class="figma-services__badge-icon"></span>
-                <span class="figma-services__badge-text">${label}</span>
+            ${contribution.labels.map(label => `<div class="deep-stack-services__badge">
+                <span class="deep-stack-services__badge-icon"></span>
+                <span class="deep-stack-services__badge-text">${label}</span>
                 </div>`).join(' ')}
           </div>
         `;
@@ -567,7 +567,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function createBadge(text) {
-      return `<div class="figma-hero__badge"><span class="figma-hero__badge-text">${escapeHtml(text)}</span></div>`;
+      return `<div class="deep-stack-hero__badge"><span class="deep-stack-hero__badge-text">${escapeHtml(text)}</span></div>`;
     }
     
     function createExperienceElement(experience, index) {
@@ -655,7 +655,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ${achievementsHtml}
             ${skillsHtml}
             <div class="card-experience__actions">
-              <button class="figma-btn figma-btn--secondary card-experience__open-modal" 
+              <button class="deep-stack-btn deep-stack-btn--secondary card-experience__open-modal" 
                       data-modal-id="${modalId}">
                 En savoir plus
               </button>

@@ -1,7 +1,7 @@
 // CTA Button Component
 // Styles pour les boutons d'appel à l'action
 
-.figma-btn {
+.deep-stack-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -25,20 +25,20 @@
   
   &--primary {
     padding: 12px 24px;
-    background: linear-gradient(135deg, #2563eb, #10b981);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     color: white;
-    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
-    
+    box-shadow: 0 4px 14px rgba(var(--color-primary-rgb), 0.25);
+
     &:hover {
       transform: translateY(-2px);
       color: white;
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
-      background: linear-gradient(135deg, 
-        color-mix(in srgb, #2563eb 90%, white),
-        color-mix(in srgb, #10b981 90%, white)
+      box-shadow: 0 8px 25px rgba(var(--color-primary-rgb), 0.35);
+      background: linear-gradient(135deg,
+        color-mix(in srgb, var(--color-primary) 90%, white),
+        color-mix(in srgb, var(--color-secondary) 90%, white)
       );
     }
-    
+
     &:active {
       transform: translateY(-1px);
     }
@@ -71,13 +71,13 @@
 }
 
 // Icon spécifique pour les boutons CTA
-.figma-cta-btn__icon {
+.deep-stack-cta-btn__icon {
   width: 18px;
   height: 18px;
   stroke-width: 2.5;
 }
 
 // Style spécifique pour le bouton CV
-.figma-about__cv-btn {
+.deep-stack-about__cv-btn {
   margin-bottom: 32px;
 }

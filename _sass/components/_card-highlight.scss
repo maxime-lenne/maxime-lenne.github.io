@@ -141,7 +141,7 @@
         transform: scaleX(1);
       }
   
-      .figma-about__badge-tag, .figma-services__badge {
+      .deep-stack-about__badge-tag, .deep-stack-services__badge {
         filter: grayscale(0%);
       }
       
@@ -187,7 +187,7 @@
       
     }
   
-    .figma-about__badge-tag, .figma-services__badge {
+    .deep-stack-about__badge-tag, .deep-stack-services__badge {
       margin-bottom: 12px;
       filter: grayscale(100%);
     }

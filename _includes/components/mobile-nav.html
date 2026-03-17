@@ -8,30 +8,30 @@
   {% assign home_url = '/' %}
   {% assign resume_url = '/resume/' %}
 {% endif %}
-<nav class="figma-mobile-nav" role="navigation" aria-label="Mobile navigation">
-    <div class="figma-mobile-nav__content">
-        <div class="figma-mobile-nav__header">
-            <div class="figma-logo figma-logo--mobile">
-                <span class="figma-logo__text">Menu</span>
+<nav class="deep-stack-mobile-nav" role="navigation" aria-label="Mobile navigation">
+    <div class="deep-stack-mobile-nav__content">
+        <div class="deep-stack-mobile-nav__header">
+            <div class="deep-stack-logo deep-stack-logo--mobile">
+                <span class="deep-stack-logo__text">Menu</span>
             </div>
-            <button class="figma-mobile-nav__close" aria-label="Close mobile menu">
+            <button class="deep-stack-mobile-nav__close" aria-label="Close mobile menu">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <line x1="18" y1="6" x2="6" y2="18"/>
                     <line x1="6" y1="6" x2="18" y2="18"/>
                 </svg>
             </button>
         </div>
-        <div class="figma-mobile-nav__links">
-            <a href="{{ home_url | relative_url }}" class="figma-mobile-nav__link">{{ t.nav.home }}</a>
-            <a href="{{ resume_url | relative_url }}" class="figma-mobile-nav__link">{{ t.nav.resume }}</a>
+        <div class="deep-stack-mobile-nav__links">
+            <a href="{{ home_url | relative_url }}" class="deep-stack-mobile-nav__link">{{ t.nav.home }}</a>
+            <a href="{{ resume_url | relative_url }}" class="deep-stack-mobile-nav__link">{{ t.nav.resume }}</a>
         </div>
-        <div class="figma-mobile-nav__footer">
+        <div class="deep-stack-mobile-nav__footer">
             <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
-               class="figma-cta-btn figma-cta-btn--mobile"
+               class="deep-stack-cta-btn deep-stack-cta-btn--mobile"
                target="_blank"
                rel="noopener">
                 {{ t.header.cta_button }}
-                <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <svg class="deep-stack-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
             </a>

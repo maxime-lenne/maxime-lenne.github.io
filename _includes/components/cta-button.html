@@ -1,7 +1,9 @@
 <!-- CTA Button Component -->
 {% assign button_style = include.style | default: "primary" %}
-<a href="{{ include.url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' }}"
-  class="figma-btn{% if button_style == 'primary' %} figma-btn--primary{% endif %}{% if button_style == 'secondary' %} figma-btn--secondary{% endif %}{% if include.size == 'large' %} figma-btn--large{% endif %}{% if include.class %} {{ include.class }}{% endif %}"
+{% assign theme = site.data.theme %}
+{% assign default_url = theme.site.cta_url | default: 'https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm' %}
+<a href="{{ include.url | default: default_url }}"
+  class="deep-stack-btn{% if button_style == 'primary' %} deep-stack-btn--primary{% endif %}{% if button_style == 'secondary' %} deep-stack-btn--secondary{% endif %}{% if include.size == 'large' %} deep-stack-btn--large{% endif %}{% if include.class %} {{ include.class }}{% endif %}"
   {% if include.extern %}target="_blank" rel="noopener"{% endif %}>
   {% if include.icon == "download" %}
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -10,7 +12,7 @@
   {% endif %}
   {{ include.text | default: "Faisons connaissance" }}
   {% if include.icon == "arrow" %}
-    <svg class="figma-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <svg class="deep-stack-cta-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path d="M7 17L17 7M17 7H7M17 7V17"/>
     </svg>
   {% endif %}

@@ -16,13 +16,13 @@
   }
   
   &__container {
-    max-width: 1440px;
+    max-width: var(--layout-container-max-width);
     margin: 0 auto;
-    padding: 0 clamp(24px, 5vw, 48px);
+    padding: 0 var(--layout-container-padding);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 80px;
+    min-height: var(--layout-header-height);
   }
   
   &__logo {
@@ -37,9 +37,9 @@
     
     &:hover {
       transform: translateY(-1px);
-      
+
       .header__logo-text {
-        background: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
+        background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-secondary-light) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -80,8 +80,8 @@
   }
 }
 
-// Figma Header
-.figma-header {
+// Deep Stack Header
+.deep-stack-header {
   
   &__actions {
     display: flex;
@@ -145,7 +145,7 @@
 }
 
 // Language Switcher (Dropdown style)
-.figma-language-switcher {
+.deep-stack-language-switcher {
   position: relative;
   
   @media (max-width: 768px) {
@@ -183,7 +183,7 @@
     height: 14px;
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     
-    .figma-language-switcher.is-open & {
+    .deep-stack-language-switcher.is-open & {
       transform: rotate(180deg);
     }
   }
@@ -207,7 +207,7 @@
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
     
-    .figma-language-switcher.is-open & {
+    .deep-stack-language-switcher.is-open & {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
@@ -240,18 +240,18 @@
     
     &--active {
       color: var(--color-text-primary);
-      background: rgba(59, 130, 246, 0.08);
+      background: rgba(var(--color-primary-rgb), 0.08);
       font-weight: 600;
-      
+
       [data-theme="dark"] & {
-        background: rgba(59, 130, 246, 0.15);
+        background: rgba(var(--color-primary-rgb), 0.15);
       }
     }
   }
 }
 
-// Theme Toggle (Figma Style)
-.figma-theme-toggle {
+// Theme Toggle (Deep Stack Style)
+.deep-stack-theme-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,12 +299,12 @@
   }
   
   [data-theme="dark"] & {
-    .figma-theme-toggle__icon--light {
+    .deep-stack-theme-toggle__icon--light {
       opacity: 0;
       transform: scale(0.8) rotate(180deg);
     }
     
-    .figma-theme-toggle__icon--dark {
+    .deep-stack-theme-toggle__icon--dark {
       opacity: 1;
       transform: scale(1) rotate(0deg);
     }
@@ -312,7 +312,7 @@
 }
 
 // Mobile Navigation
-.figma-mobile-nav {
+.deep-stack-mobile-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -329,7 +329,7 @@
     opacity: 1;
     visibility: visible;
     
-    .figma-mobile-nav__content {
+    .deep-stack-mobile-nav__content {
       transform: translateX(0);
     }
   }
@@ -413,7 +413,7 @@
 }
 
 // Mobile Toggle
-.figma-mobile-toggle {
+.deep-stack-mobile-toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -439,7 +439,7 @@
   }
   
   &[aria-expanded="true"] {
-    .figma-mobile-toggle__line {
+    .deep-stack-mobile-toggle__line {
       &:nth-child(1) {
         transform: translateY(5px) rotate(45deg);
       }
@@ -478,5 +478,5 @@
 
 // Body padding for fixed header
 body {
-  padding-top: 80px;
+  padding-top: var(--layout-header-height);
 }
