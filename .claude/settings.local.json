@@ -17,7 +17,11 @@
       "Bash(gem build:*)",
       "Bash(gem contents:*)",
       "Bash(xargs:*)",
-      "Skill(commit-commands:commit)"
+      "Skill(commit-commands:commit)",
+      "Bash(for f:*)",
+      "Bash(cat:*)",
+      "Bash(bun install:*)",
+      "Bash(bun pm:*)"
     ],
     "deny": [],
     "ask": []
