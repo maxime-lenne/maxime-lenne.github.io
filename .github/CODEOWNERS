@@ -1,0 +1,8 @@
+# CODEOWNERS - Automatically request reviews from specific people/teams
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything
+* @maxime-lenne
+
+# Protect settings file (requires admin approval)
+/.github/settings.yml @maxime-lenne

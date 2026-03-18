@@ -19,7 +19,7 @@ install: ## Installer toutes les dépendances (Ruby + Node.js)
 	asdf install
 	asdf reshim
 	bundle install
-	npm install
+	bun install
 	@echo "✅ Dépendances installées avec succès!"
 
 build: ## Construire le site en mode développement
@@ -58,30 +58,30 @@ test: ## Exécuter tous les tests
 
 lint: ## Vérifier la qualité du code
 	@echo "🔍 Vérification de la qualité du code..."
-	npm run lint:css || echo "⚠️  Lint CSS non disponible"
-	npm run lint:js || echo "⚠️  Lint JS non disponible"
+	bun runlint:css || echo "⚠️  Lint CSS non disponible"
+	bun runlint:js || echo "⚠️  Lint JS non disponible"
 	@echo "✅ Vérifications terminées!"
 
 optimize: ## Optimiser les assets (images, CSS, JS)
 	@echo "⚡ Optimisation des assets..."
-	npm run optimize:images || echo "⚠️  Optimisation d'images non disponible"
-	npm run minify:assets || echo "⚠️  Minification non disponible"
+	bun runoptimize:images || echo "⚠️  Optimisation d'images non disponible"
+	bun runminify:assets || echo "⚠️  Minification non disponible"
 	@echo "✅ Optimisation terminée!"
 
 performance: ## Tester les performances avec Lighthouse
 	@echo "📊 Test des performances..."
-	npm run test:lighthouse || echo "⚠️  Lighthouse non disponible"
+	bun runtest:lighthouse || echo "⚠️  Lighthouse non disponible"
 	@echo "✅ Tests de performance terminés!"
 
 accessibility: ## Tester l'accessibilité
 	@echo "♿ Test de l'accessibilité..."
-	npm run test:accessibility || echo "⚠️  Tests d'accessibilité non disponibles"
+	bun runtest:accessibility || echo "⚠️  Tests d'accessibilité non disponibles"
 	@echo "✅ Tests d'accessibilité terminés!"
 
 security: ## Audit de sécurité des dépendances
 	@echo "🔒 Audit de sécurité..."
 	bundle audit check --update || echo "⚠️  Audit Ruby non disponible"
-	npm audit --audit-level=moderate || echo "⚠️  Audit Node.js non disponible"
+	bun audit --audit-level=moderate || echo "⚠️  Audit Node.js non disponible"
 	@echo "✅ Audit de sécurité terminé!"
 
 full-build: ## Build complet avec toutes les optimisations
@@ -107,13 +107,13 @@ notion-sync: ## Synchroniser le contenu depuis Notion
 update-deps: ## Mettre à jour toutes les dépendances
 	@echo "🔄 Mise à jour des dépendances..."
 	bundle update
-	npm update
+	bun update
 	@echo "✅ Dépendances mises à jour!"
 
 audit-deps: ## Audit complet des dépendances
 	@echo "🔍 Audit des dépendances..."
 	bundle audit check --update
-	npm audit
+	bun audit
 	@echo "✅ Audit terminé!"
 
 # Commandes de développement rapide
