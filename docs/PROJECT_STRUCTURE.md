@@ -1,129 +1,172 @@
-# Structure du Projet
+# Project Structure
 
-## 📁 Organisation des dossiers
+## Directory Organization
 
-```
+```text
 maxime-lenne-website/
-├── .github/                    # Configuration GitHub Actions
-│   └── workflows/             # Workflows CI/CD
-├── _data/                      # Données statiques
-│   ├── translations.yml        # Traductions FR/EN
-│   └── experiences.yml         # Données Notion
-├── _includes/                  # Composants réutilisables
-│   ├── components/            # Composants UI
-│   └── sections/              # Sections de page
-├── _layouts/                   # Templates de pages
-│   ├── default.html           # Layout de base
-│   ├── page.html              # Pages statiques
-│   └── post.html              # Articles de blog
-├── _sass/                      # Styles SCSS
-│   ├── _variables.scss         # Design tokens
-│   ├── _mixins.scss            # Utilitaires Sass
-│   ├── _base.scss              # Styles de base
-│   ├── components/             # Styles composants
-│   └── utilities/               # Classes utilitaires
-├── _plugins/                   # Plugins personnalisés
-│   ├── notion_fetcher.rb       # Intégration Notion API
-│   └── image_optimizer.rb      # Traitement d'images
-├── assets/                     # Assets statiques
-│   ├── css/                    # CSS compilé
-│   ├── js/                     # Fichiers JavaScript
-│   ├── images/                 # Images optimisées
-│   └── fonts/                  # Polices web
-├── _collections/               # Collections de contenu
-│   ├── _posts/                 # Articles de blog
-│   ├── _experiences/           # Expériences professionnelles
-│   ├── _skills/                # Compétences
-│   └── _testimonials/          # Témoignages
-├── pages/                      # Pages statiques
-├── docs/                       # Documentation
-│   ├── AGENTS.md          # Conventions de développement
-│   ├── PROJECT_STRUCTURE.md    # Ce fichier
-│   ├── TECHNICAL_GUIDE.md      # Guide technique avancé
-│   ├── DESIGN_SYSTEM.md        # Système de design
-│   └── CONFORMITY_REPORT.md    # Rapport de conformité
-├── _config.yml                 # Configuration Jekyll
-├── _config.dev.yml             # Configuration développement
-├── _config_prod.yml            # Configuration production
-├── Gemfile                     # Dépendances Ruby
-├── package.json                # Dépendances Node.js
-├── Makefile                    # Commandes automatisées
-├── CLAUDE.md                   # Guide pour assistants IA
-└── README.md                   # Documentation principale
+├── .claude/                        # Claude Code configuration
+├── .github/                        # GitHub configuration
+│   ├── workflows/                  # CI/CD workflows
+│   ├── ISSUE_TEMPLATE/             # Bug/feature issue templates
+│   ├── CODEOWNERS                  # Code ownership
+│   ├── dependabot.yml              # Dependency updates
+│   ├── pull_request_template.md    # PR template
+│   └── settings.yml                # Repository settings
+├── _collections/                   # Jekyll collections (Notion fallbacks)
+│   ├── _experiences/
+│   ├── _skills/
+│   ├── _testimonials/
+│   └── ...
+├── _data/                          # Static data files
+│   └── translations.yml            # FR/EN UI strings
+│   (notion_*.yml auto-generated)
+├── _includes/                      # Reusable components
+│   ├── components/                 # UI components (badge, card, cta-button, etc.)
+│   ├── sections/                   # Page sections
+│   └── theme/                      # Theme-level includes
+├── _layouts/                       # Page templates
+│   ├── default.html                # Base layout
+│   ├── page.html                   # Static pages
+│   ├── post.html                   # Blog posts
+│   └── experience.html             # Experience pages
+├── _plugins/                       # Custom Jekyll plugins
+├── _sass/                          # SCSS styles
+│   ├── main.scss                   # Entry point
+│   ├── _theme-config.scss          # Design tokens (CSS variables)
+│   ├── components/                 # Component styles
+│   ├── layouts/                    # Layout styles
+│   └── pages/                      # Page-specific styles
+├── assets/                         # Static assets
+│   ├── css/                        # Compiled CSS
+│   ├── js/                         # JavaScript
+│   └── images/                     # Images
+├── docs/                           # Documentation
+│   ├── AGENTS.md                   # AI assistant guide (this project)
+│   ├── CONVENTIONS.md              # Code style and git conventions
+│   ├── TECHNICAL_GUIDE.md          # Technical implementation
+│   ├── PROJECT_STRUCTURE.md        # This file
+│   ├── NOTION_SETUP.md             # Notion CMS setup and schemas
+│   ├── ENVIRONMENT_VARIABLES.md    # Environment variables
+│   ├── FEATURES.md                 # Epics and user stories
+│   ├── TASKS.md                    # Task tracking
+│   └── theme/                      # ⏳ Theme extraction docs (pending)
+│       ├── DESIGN_SYSTEM.md
+│       ├── COMPONENT_REFERENCE.md
+│       ├── CREATION_PLAN.md
+│       ├── SECTIONS.md
+│       └── design/                 # .pen design files
+├── en/                             # English pages
+│   ├── index.md
+│   └── resume.md
+├── lib/                            # jekyll-deep-stack theme (extraction WIP)
+├── linkedin/                       # LinkedIn carousel prototypes
+│   └── carousels/
+├── pages/                          # Additional static pages
+├── _config.yml                     # Jekyll main configuration
+├── _config.dev.yml                 # Development overrides
+├── _config_prod.yml                # Production overrides
+├── bun.lock                        # Bun lock file
+├── CLAUDE.md                       # AI assistant entry point
+├── CONTRIBUTING.md                 # Contribution guidelines
+├── Gemfile                         # Ruby dependencies
+├── Gemfile.lock                    # Ruby lock file
+├── index.md                        # Homepage (FR)
+├── jekyll-deep-stack.gemspec       # Theme gem spec (WIP)
+├── Makefile                        # Automation commands
+├── package.json                    # Node dependencies and scripts
+├── resume.md                       # Resume page (FR)
+└── README.md                       # Main documentation
 ```
 
-## 🔧 Fichiers de configuration
+---
 
-### Configuration Jekyll
-- **`_config.yml`** - Configuration principale
-- **`_config.dev.yml`** - Configuration développement
-- **`_config_prod.yml`** - Configuration production
+## Configuration Files
 
-### Dépendances
-- **`Gemfile`** - Dépendances Ruby (Jekyll, plugins)
-- **`package.json`** - Dépendances Node.js (assets)
-- **`.tool-versions`** - Versions asdf (Ruby, Node.js)
+### Jekyll
 
-## 🎨 Architecture
+| File | Purpose |
+|------|---------|
+| `_config.yml` | Site settings, plugins, collections |
+| `_config.dev.yml` | Port 4001, livereload, skip minification |
+| `_config_prod.yml` | Minification, production URL |
 
-### Layouts
-- **`_layouts/default.html`** - Template de base
-- **`_layouts/page.html`** - Pages statiques
-- **`_layouts/post.html`** - Articles de blog
+### Node / Bun
 
-### Composants
-- **`_includes/components/`** - Composants UI réutilisables
-- **`_includes/sections/`** - Sections de page
+| File | Purpose |
+|------|---------|
+| `package.json` | Scripts, devDependencies, lint-staged config |
+| `bun.lock` | Locked dependency versions |
+| `.gitmoji.json` | Gitmoji-cli configuration |
 
-### Styles
-- **`_sass/_variables.scss`** - Design tokens
-- **`_sass/components/`** - Styles composants
-- **`_sass/utilities/`** - Classes utilitaires
+### Code Quality
 
-## 📝 Contenu
+| File | Purpose |
+|------|---------|
+| `.markdownlint.json` | Markdown linting rules |
+| `.yamllint.yml` | YAML linting rules |
+| `.editorconfig` | Editor settings |
+| `commitlint.config.js` | Commit message validation |
+
+### CI/CD
+
+| File | Purpose |
+|------|---------|
+| `.github/workflows/` | GitHub Actions workflows |
+| `.github/dependabot.yml` | Automated dependency updates |
+| `renovate.json` | Renovate bot configuration (if used) |
+
+### Git Hooks
+
+| Directory | Purpose |
+|-----------|---------|
+| `.husky/` | Git hooks (pre-commit, commit-msg) |
+
+---
+
+## Content Structure
+
+### Multi-language Pages
+
+French pages at root level, English in `en/`:
+
+```text
+index.md          → /
+en/index.md       → /en/
+resume.md         → /resume/
+en/resume.md      → /en/resume/
+```
 
 ### Collections
-- **`_collections/_posts/`** - Articles de blog
-- **`_collections/_experiences/`** - Expériences professionnelles
-- **`_collections/_skills/`** - Compétences
-- **`_collections/_testimonials/`** - Témoignages
 
-### Pages statiques
-- **`pages/`** - Pages avec support multi-langue
-- **`index.md`** - Page d'accueil
-- **`resume.md`** - Page CV
+Jekyll collections in `_collections/` serve as fallback data when Notion is not available:
 
-## 🚀 Déploiement
-
-### GitHub Actions
-- **Build automatique** sur push vers main
-- **Sync Notion** quotidien via cron
-- **Déploiement** automatique sur GitHub Pages
-
-### Commandes utiles
-```bash
-# Développement
-make serve          # Serveur de développement
-make build          # Build de développement
-make test           # Tests de qualité
-
-# Production
-make production     # Build de production
-make clean          # Nettoyer les fichiers
+```text
+_collections/
+├── _experiences/     → site.data.notion_experiences (fallback)
+├── _skills/          → site.data.notion_skills (fallback)
+├── _testimonials/    → site.data.notion_testimonials (fallback)
+└── ...
 ```
 
-## 📚 Documentation
+---
 
-### Guides principaux
-- **`CLAUDE.md`** - Guide pour assistants IA
-- **`docs/AGENTS.md`** - Conventions de développement
-- **`docs/TECHNICAL_GUIDE.md`** - Guide technique avancé
-- **`docs/DESIGN_SYSTEM.md`** - Système de design
-- **`docs/CONFORMITY_REPORT.md`** - Rapport de conformité
+## GitHub Configuration (`.github/`)
 
-### Fonctionnalités clés
-- **Multi-langue** : Français (défaut) + Anglais
-- **CMS** : Intégration Notion API
-- **Performance** : < 3s chargement, Lighthouse 95+
-- **Accessibilité** : WCAG 2.1 AA
-- **Responsive** : Mobile-first design
+### Workflows
+
+- CI/CD for build and GitHub Pages deployment
+- Notion sync on schedule
+
+### Issue Templates
+
+- `bug_report.yml` — Bug report template
+- `feature_request.yml` — Feature request template
+- `config.yml` — Discussions link
+
+### Pull Request
+
+- `pull_request_template.md` — PR checklist (FR/EN test, Lighthouse)
+
+---
+
+*Last updated: 2026-03-18*

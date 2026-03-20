@@ -1,147 +1,148 @@
-# Site Personnel - Maxime Lenne
+# maxime-lenne.fr
 
-Site portfolio statique construit avec Jekyll SSG, backend Notion CMS, et architecture JAMstack.
+<!-- markdownlint-disable -->
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jekyll/jekyll-original.svg" alt="Jekyll" width="80" height="80" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby" width="80" height="80" />
+</p>
 
-## 🚀 Démarrage rapide
+<p align="center">
+  <strong>Personal portfolio site — Jekyll + Notion CMS + GitHub Pages</strong>
+</p>
 
-### Prérequis
-- Ruby 3.3.5 (géré par asdf)
-- Bundler
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+  </a>
+  <a href="https://bun.sh">
+    <img src="https://img.shields.io/badge/Package%20Manager-Bun-black" alt="Bun" />
+  </a>
+  <a href="https://gitmoji.dev">
+    <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg" alt="Gitmoji" />
+  </a>
+  <a href="https://jekyllrb.com">
+    <img src="https://img.shields.io/badge/Jekyll-4.x-CC0000?logo=jekyll" alt="Jekyll" />
+  </a>
+  <a href="https://pages.github.com">
+    <img src="https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222?logo=github" alt="GitHub Pages" />
+  </a>
+</p>
+<!-- markdownlint-restore -->
 
-### Installation des dépendances
+---
+
+Static portfolio website for [Maxime Lenne](https://maxime-lenne.fr) (CTO & Tech Product Leader), built with Jekyll SSG, Notion CMS as data source, and deployed on GitHub Pages.
+
+## Features
+
+- **Multi-language** — French (default) + English
+- **Notion CMS** — Content sourced from Notion databases (skills, experiences, testimonials, etc.)
+- **Performance** — Lighthouse 95+, Core Web Vitals green
+- **Accessibility** — WCAG 2.1 AA
+- **Mobile-first** — BEM + SCSS, responsive design
+
+## Stack
+
+| Category | Technology |
+|----------|------------|
+| Static site generator | Jekyll 4.x |
+| Runtime | Ruby 3.3.5 (asdf) |
+| CMS | Notion API |
+| Hosting | GitHub Pages |
+| CI/CD | GitHub Actions |
+| Node tooling | Bun 1.3.8 |
+| Version management | asdf (.tool-versions) |
+
+## Installation
+
 ```bash
-# Installer toutes les dépendances
+# Install all dependencies (Ruby + Node)
 make install
-
-# Configuration rapide de développement
-make dev-setup
 ```
 
-### Serveur de développement
+## Development
+
 ```bash
-# Démarrer le serveur (recommandé)
-make serve                    # http://localhost:4001 avec live reload
-
-# Alternative rapide
-make quick-serve             # Démarrage sans build initial
+make serve        # Start dev server at http://localhost:4001 (live reload)
+make quick-serve  # Start server without initial build
+make build        # Development build
+make clean        # Clean generated files
 ```
 
-### Build et déploiement
+## Build & Deploy
+
 ```bash
-make build                   # Build de développement
-make production             # Build de production avec optimisations
-make test                   # Tests de qualité
-make clean                  # Nettoyer les fichiers générés
+make production   # Production build
+make prod-build   # Production build with Notion sync
 ```
 
-## 📚 Documentation
+Deployments are automated via GitHub Actions on push to `main`.
 
-### Guides principaux
-- **`CLAUDE.md`** - Guide pour les assistants IA
-- **`docs/AGENTS.md`** - Conventions de développement complètes
-- **`docs/PROJECT_STRUCTURE.md`** - Structure détaillée du projet
-- **`docs/CONFORMITY_REPORT.md`** - Rapport de conformité actuel
+## Commits
 
-### Points clés du projet
-- **Multi-langue** : Français (défaut) + Anglais
-- **CMS** : Intégration Notion API pour le contenu
-- **Performance** : < 3s chargement, score Lighthouse 95+
-- **Architecture** : BEM + SCSS, mobile-first, accessibilité WCAG 2.1 AA
-
-## 🛠️ Stack Technique
-
-### Technologies principales
-- **Jekyll 4.3.x** - Générateur de site statique
-- **Ruby 3.3.5** - Runtime (géré par asdf)
-- **Node.js 22.11.0 LTS** - Pipeline d'assets
-- **Notion API** - Gestion de contenu
-- **GitHub Pages** - Hébergement
-- **GitHub Actions** - CI/CD
-
-### Plugins Jekyll
-- `jekyll-feed` - Flux RSS/Atom
-- `jekyll-sitemap` - Sitemap XML
-- `jekyll-seo-tag` - Optimisation SEO
-- `jekyll-compress-images` - Optimisation images
-- `jekyll-minifier` - Compression HTML/CSS/JS
-
-## 📝 Ajouter du contenu
-
-### Articles de blog
-Créez un fichier dans `_collections/_posts/` :
-```markdown
----
-layout: post
-title: "Titre de l'article"
-date: YYYY-MM-DD
-categories: blog
-lang: fr
----
-```
-
-### Pages statiques
-Créez un fichier Markdown avec le front matter :
-```markdown
----
-layout: page
-title: "Titre de la page"
-permalink: /url-de-la-page/
-lang: fr
----
-```
-
-### Support multi-langue
-- **Français** : `page.md` ou `page/index.md`
-- **Anglais** : `page.en.md` ou `page/index.en.md`
-- **Traductions** : Stockées dans `_data/translations.yml`
-
-## 🎨 Personnalisation
-
-### Styles CSS/SCSS
-- **Variables** : `_sass/_variables.scss`
-- **Composants** : `_sass/components/`
-- **Méthodologie** : BEM (`.block__element--modifier`)
-
-### Configuration
-- **Jekyll** : `_config.yml`
-- **Développement** : `_config.dev.yml`
-- **Production** : `_config_prod.yml`
-
-## 🔧 Commandes utiles
-
-### Développement
 ```bash
-make serve            # Serveur de développement
-make build            # Build de développement
-make production       # Build de production
-make test             # Tests de qualité
-make clean            # Nettoyer les fichiers
+bun run commit    # Interactive gitmoji commit
 ```
 
-### Optimisation
+Accepted formats:
+
+- **Gitmoji**: `✨ Add new feature`
+- **Conventional**: `feat(scope): Add new feature`
+
+## Linting
+
 ```bash
-npm run optimize:images      # Optimiser les images
-npm run minify:assets       # Minifier les assets
-npm run generate:favicons   # Générer les favicons
+bun run lint          # Lint all files
+bun run lint:md       # Lint Markdown only
+bun run lint:md:fix   # Auto-fix Markdown
+bun run lint:yaml     # Lint YAML files
 ```
 
-## 📋 Checklist de développement
+## Documentation
 
-- [ ] Code suit les guidelines BEM et SCSS
-- [ ] Les deux langues testées (FR/EN)
-- [ ] Aucun lien cassé
-- [ ] Images optimisées et responsives
-- [ ] Score Lighthouse > 95
-- [ ] Documentation mise à jour
-- [ ] Message de commit suit la convention
+| File | Description |
+|------|-------------|
+| [`docs/AGENTS.md`](docs/AGENTS.md) | AI assistant guide and conventions |
+| [`docs/CONVENTIONS.md`](docs/CONVENTIONS.md) | Code style and git conventions |
+| [`docs/TECHNICAL_GUIDE.md`](docs/TECHNICAL_GUIDE.md) | Technical implementation details |
+| [`docs/PROJECT_STRUCTURE.md`](docs/PROJECT_STRUCTURE.md) | Directory and file organization |
+| [`docs/NOTION_SETUP.md`](docs/NOTION_SETUP.md) | Notion CMS setup and database schemas |
+| [`docs/ENVIRONMENT_VARIABLES.md`](docs/ENVIRONMENT_VARIABLES.md) | Environment variables reference |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidelines |
 
-## 🔗 Ressources
+## Configuration Files
 
-- [Documentation Jekyll](https://jekyllrb.com/docs/)
-- [API Notion](https://developers.notion.com/reference)
-- [GitHub Actions](https://docs.github.com/en/actions)
-- [Web.dev Performance](https://web.dev/performance/)
+| File | Purpose |
+|------|---------|
+| `.gitmoji.json` | Gitmoji-cli settings |
+| `.markdownlint.json` | Markdown linting rules |
+| `.yamllint.yml` | YAML linting rules |
+| `.editorconfig` | Editor settings |
+| `commitlint.config.js` | Commit message validation |
+| `_config.yml` | Jekyll main config |
+| `_config.dev.yml` | Jekyll development overrides |
+| `_config_prod.yml` | Jekyll production overrides |
 
----
+## Notion Setup
 
-*Pour plus de détails, consultez la documentation dans le dossier `docs/`*
+Add a `.env` file at the project root:
+
+```bash
+NOTION_TOKEN=ntn_your_token
+NOTION_SKILLS_DB=your_db_id
+NOTION_EXPERIENCES_DB=your_db_id
+# ... see docs/ENVIRONMENT_VARIABLES.md for full list
+```
+
+The site falls back to Jekyll collections if Notion is not configured.
+
+## License
+
+MIT License — see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+**Maxime Lenne** — [maxime-lenne.fr](https://maxime-lenne.fr)
+
+- GitHub: [@maxime-lenne](https://github.com/maxime-lenne)
+- LinkedIn: [maximelenne](https://linkedin.com/in/maximelenne)

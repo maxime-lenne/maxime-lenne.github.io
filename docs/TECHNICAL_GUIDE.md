@@ -1,302 +1,292 @@
-# Guide Technique Avancé
+# Technical Guide
 
-Guide détaillé pour les aspects techniques avancés du projet.
+Detailed guide for technical implementation aspects.
 
-## 🔌 Intégration Notion CMS
+## Tech Stack
 
-### Configuration de l'API
+| Category | Technology | Version |
+|----------|------------|---------|
+| Static site generator | Jekyll | 4.x |
+| Runtime | Ruby | 3.3.5 |
+| Package manager | Bun | >= 1.3.8 |
+| Node | Node.js | >= 22.11.0 |
+| CMS | jekyll-notion-cms gem | — |
+| Hosting | GitHub Pages | — |
+| Git hooks | Husky | ^9.1.7 |
+| Staged files | lint-staged | ^16.2.7 |
+| Commit tool | gitmoji-cli | ^9.7.0 |
+| Commit lint | commitlint | ^20.4.1 |
+| Markdown lint | markdownlint-cli | ^0.48.0 |
+
+---
+
+## Jekyll Configuration
+
+### Config Files
+
+| File | Purpose |
+|------|---------|
+| `_config.yml` | Base configuration (production) |
+| `_config.dev.yml` | Development overrides (port 4001, livereload) |
+| `_config_prod.yml` | Production-only optimizations |
+
+### Plugins (Gemfile)
+
 ```ruby
-# _plugins/notion_fetcher.rb
-module Jekyll
-  class NotionDataGenerator < Generator
-    safe true
-    priority :highest
-
-    def generate(site)
-      return unless ENV['NOTION_TOKEN']
-      
-      fetch_experiences(site)
-      fetch_blog_posts(site) if ENV['NOTION_POSTS_DB']
-    end
-
-    private
-
-    def fetch_experiences(site)
-      # Récupération des expériences depuis Notion
-      # Stockage dans site.data['experiences']
-    end
-
-    def fetch_blog_posts(site)
-      # Récupération des articles depuis Notion
-      # Stockage dans site.data['posts']
-    end
-  end
-end
-```
-
-### Variables d'environnement
-```bash
-# .env (non commité)
-NOTION_TOKEN=secret_xxx
-NOTION_EXPERIENCES_DB=xxx
-NOTION_POSTS_DB=xxx
-```
-
-### Structure des données Notion
-```yaml
-# _data/experiences.yml (généré automatiquement)
-experiences:
-  - id: "exp-001"
-    company: "Nom de l'entreprise"
-    role: "CTO"
-    period: "2020-2024"
-    description: "Description de l'expérience"
-    technologies: ["Ruby", "Jekyll", "Notion API"]
-    status: "published"
-    lang: "fr"
-```
-
-## 🚀 GitHub Actions CI/CD
-
-### Workflow principal
-```yaml
-# .github/workflows/build-deploy.yml
-name: Build and Deploy
-on:
-  push:
-    branches: [main]
-  schedule:
-    - cron: '0 6 * * *'  # Sync Notion quotidien
-  workflow_dispatch:
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup asdf
-        uses: asdf-vm/actions/setup@v3
-        
-      - name: Install dependencies
-        run: |
-          asdf install
-          bundle install
-          npm install
-          
-      - name: Fetch Notion content
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-        run: bundle exec jekyll build --config _config.yml,_config_prod.yml
-        
-      - name: Optimize assets
-        run: |
-          npm run optimize:images
-          npm run minify:assets
-          
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-```
-
-### Workflows supplémentaires
-- **PR Checks** : Lighthouse CI, liens cassés, vérification orthographique
-- **Sécurité** : Dependabot, analyse CodeQL
-- **Performance** : Surveillance de la taille des bundles
-
-## 🔍 SEO et Performance
-
-### Configuration SEO
-```yaml
-# _config.yml
-plugins:
-  - jekyll-seo-tag
-
-# Valeurs SEO par défaut
-title: "Maxime Lenne - CTO & Tech Product Leader"
-description: "Expert en entrepreneuriat tech, innovation et développement produit"
-url: "https://maxime-lenne.github.io"
-author:
-  name: "Maxime Lenne"
-  twitter: "MaximeLenne"
-  
-social:
-  name: "Maxime Lenne"
-  links:
-    - "https://twitter.com/MaximeLenne"
-    - "https://linkedin.com/in/maximelenne"
-    - "https://github.com/maxime-lenne"
-```
-
-### Objectifs de performance
-- **Score Lighthouse** : 95+ (toutes catégories)
-- **Core Web Vitals** : Vert pour toutes les métriques
-- **First Contentful Paint** : < 1.5s
-- **Largest Contentful Paint** : < 2.5s
-- **Cumulative Layout Shift** : < 0.1
-
-### Optimisation des images
-```ruby
-# _plugins/image_optimizer.rb
-# Génération automatique WebP avec fallbacks
-# Images responsives avec srcset
-# Implémentation du lazy loading
-```
-
-## 🛡 Sécurité et Bonnes Pratiques
-
-### Headers de sécurité
-```yaml
-# _headers (Netlify) ou via plugin Jekyll
-/*
-  X-Frame-Options: DENY
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-```
-
-### Content Security Policy
-```html
-<!-- Dans _includes/head.html -->
-<meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               img-src 'self' data: https:; 
-               script-src 'self' 'unsafe-inline';
-               style-src 'self' 'unsafe-inline';">
-```
-
-### Gestion des environnements
-- **Développement** : Utiliser le fichier `.env` (non commité)
-- **Production** : GitHub Secrets pour les données sensibles
-- **Clés API** : Rotation régulière, accès au minimum requis
-
-## 🧪 Tests et Qualité
-
-### Outils de test
-```bash
-# Tests locaux
-bundle exec jekyll build --config _config.yml,_config_prod.yml
-bundle exec htmlproofer ./_site --disable-external
-lighthouse --output=html --output-path=./lighthouse-report.html http://localhost:4000
-```
-
-### Tests d'accessibilité
-- **Automatisé** : axe-core dans CI/CD
-- **Manuel** : Tests avec lecteur d'écran
-- **Contraste des couleurs** : Ratio minimum 4.5:1
-- **Navigation clavier** : Site entièrement accessible
-
-### Checklist de qualité
-- [ ] Code suit les guidelines de style
-- [ ] Toutes les langues testées (FR/EN)
-- [ ] Aucun lien cassé
-- [ ] Images optimisées et responsives
-- [ ] Score Lighthouse > 95
-- [ ] Documentation mise à jour
-- [ ] Message de commit suit la convention
-
-## 📋 Gestion des Issues GitHub
-
-### Templates d'issues
-
-#### Template Feature Request
-```markdown
-## Description de la fonctionnalité
-Description brève de la fonctionnalité
-
-## User Story
-En tant que [type d'utilisateur], je veux [fonctionnalité] afin que [bénéfice]
-
-## Critères d'acceptation
-- [ ] Critère 1
-- [ ] Critère 2
-
-## Considérations techniques
-- Intégration Notion requise : Oui/Non
-- Support multi-langue : Oui/Non
-- Impact performance : Faible/Moyen/Élevé
-
-## Labels
-enhancement, notion-sync, i18n, performance
-```
-
-#### Template Bug Report
-```markdown
-## Description du bug
-Description claire du problème
-
-## Étapes pour reproduire
-1. Aller à...
-2. Cliquer sur...
-3. Voir l'erreur
-
-## Comportement attendu
-Ce qui devrait se passer
-
-## Comportement actuel
-Ce qui se passe réellement
-
-## Environnement
-- Navigateur : [Chrome/Firefox/Safari]
-- Appareil : [Desktop/Mobile]
-- URL : [page spécifique]
-
-## Labels
-bug, needs-investigation
-```
-
-### Labels du projet
-- **Type** : `enhancement`, `bug`, `documentation`, `refactor`
-- **Priorité** : `critical`, `high`, `medium`, `low`
-- **Zone** : `notion-sync`, `i18n`, `performance`, `seo`, `design`
-- **Statut** : `needs-review`, `in-progress`, `blocked`, `ready-to-deploy`
-
-## 🔧 Commandes Avancées
-
-### Développement
-```bash
-# Serveur de développement avec configuration spécifique
-bundle exec jekyll serve --config _config.yml,_config.dev.yml --livereload
-
-# Build avec sync Notion
-NOTION_TOKEN=xxx bundle exec jekyll build --config _config.yml,_config_prod.yml
-
-# Tests de performance
-lighthouse --output=html --output-path=./report.html https://maxime-lenne.github.io
-```
-
-### Optimisation des assets
-```bash
-# Optimiser les images
-npm run optimize:images
-
-# Minifier les assets
-npm run minify:assets
-
-# Générer les favicons
-npm run generate:favicons
-
-# Audit de sécurité
-bundle audit
-npm audit
-```
-
-### Maintenance
-```bash
-# Mettre à jour les dépendances
-bundle update
-npm update
-
-# Audit de sécurité
-bundle audit
-npm audit
-
-# Audit de performance
-lighthouse --output=html --output-path=./report.html https://maxime-lenne.github.io
+gem "jekyll-feed"            # RSS/Atom feed
+gem "jekyll-sitemap"         # XML sitemap
+gem "jekyll-seo-tag"         # SEO meta tags
+gem "jekyll-compress-images" # Image optimization
+gem "jekyll-minifier"        # HTML/CSS/JS compression
+gem "jekyll-notion-cms"      # Notion CMS integration
 ```
 
 ---
 
-*Dernière mise à jour : Décembre 2024*
+## Notion CMS Integration
+
+The `jekyll-notion-cms` gem fetches data from Notion at build time and writes it to `_data/notion_*.yml` files.
+
+### Plugin Behavior
+
+- **With `NOTION_TOKEN`**: fetches live data from Notion databases
+- **Without `NOTION_TOKEN`**: falls back to Jekyll collections in `_collections/`
+- Generated files are in `.gitignore` and regenerated at each build
+
+### Available Data
+
+| Variable | Notion DB | Fallback |
+|----------|-----------|---------|
+| `site.data.notion_skills` | Skills DB | `_collections/_skills/` |
+| `site.data.notion_experiences` | Experiences DB | `_collections/_experiences/` |
+| `site.data.notion_awards` | Awards DB | `_collections/_awards/` |
+| `site.data.notion_contributions` | Contributions DB | `_collections/_contributions/` |
+| `site.data.notion_educations` | Educations DB | `_collections/_educations/` |
+| `site.data.notion_services` | Services DB | `_collections/_services/` |
+| `site.data.notion_testimonials` | Testimonials DB | `_collections/_testimonials/` |
+
+See [`NOTION_SETUP.md`](./NOTION_SETUP.md) for full database schemas and Liquid usage examples.
+
+---
+
+## CI/CD
+
+### GitHub Actions Workflows
+
+#### Build & Deploy
+
+The site builds and deploys automatically on push to `main`.
+
+Key steps:
+1. Setup Ruby (asdf) + Bun
+2. `bundle install` + `bun install`
+3. Fetch Notion content (via `NOTION_TOKEN` secret)
+4. `bundle exec jekyll build --config _config.yml,_config_prod.yml`
+5. Deploy to GitHub Pages
+
+#### Secrets Required
+
+Configure in GitHub → Settings → Secrets → Actions:
+
+- `NOTION_TOKEN` — required for Notion sync
+- `NOTION_SKILLS_DB`, `NOTION_EXPERIENCES_DB`, etc. — database IDs
+
+### Adding a Workflow
+
+Workflows live in `.github/workflows/`. Follow the existing patterns:
+- Use `actions/checkout@v4`
+- Use `oven-sh/setup-bun@v2` for Bun
+- Use `asdf-vm/actions/setup@v3` for Ruby
+
+---
+
+## Git Hooks
+
+### Pre-commit Hook
+
+Husky runs lint-staged automatically:
+
+```json
+// package.json
+{
+  "lint-staged": {
+    "*.md": "markdownlint --fix",
+    "*.{yml,yaml}": "yamllint"
+  }
+}
+```
+
+### Commit-msg Hook
+
+commitlint validates commit messages against gitmoji and conventional commit formats.
+
+Configuration in `commitlint.config.js`.
+
+### Setup
+
+Hooks are configured automatically via the `prepare` script:
+
+```bash
+bun install  # Runs "husky" automatically
+```
+
+---
+
+## Development Workflow
+
+### Feature development
+
+```bash
+git checkout develop
+git pull origin develop
+git checkout -b feature/description
+
+# ... make changes ...
+make serve          # Preview at http://localhost:4001
+bun run lint
+bun run commit
+
+# Before opening PR: rebase on latest develop
+git fetch origin
+git rebase origin/develop
+git push origin feature/description
+# → Open PR: feature/description → develop (rebase merge)
+```
+
+### Merge develop into main
+
+```bash
+# Once feature PRs are merged into develop:
+git fetch origin
+git checkout develop
+git pull origin develop
+# → Open PR: develop → main (rebase merge)
+```
+
+### Hotfix (urgent fix on main)
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b hotfix/description
+
+# ... fix ...
+bun run commit
+# → PR: hotfix/description → main (rebase merge)
+
+# Re-sync develop
+git checkout develop
+git fetch origin
+git rebase origin/main
+git push origin develop --force-with-lease
+```
+
+---
+
+## Performance Targets
+
+| Metric | Target |
+|--------|--------|
+| Lighthouse (all categories) | 95+ |
+| First Contentful Paint | < 1.5s |
+| Largest Contentful Paint | < 2.5s |
+| Cumulative Layout Shift | < 0.1 |
+
+### Image Optimization
+
+- Format: WebP with fallbacks
+- Responsive images with `srcset`
+- Lazy loading enabled
+- Automated via `jekyll-compress-images`
+
+---
+
+## SEO
+
+Configuration in `_config.yml`:
+
+```yaml
+plugins:
+  - jekyll-seo-tag
+
+title: "Maxime Lenne - CTO & Tech Product Leader"
+description: "Expert en entrepreneuriat tech, innovation et développement produit"
+url: "https://maxime-lenne.fr"
+author:
+  name: "Maxime Lenne"
+```
+
+The `jekyll-seo-tag` plugin generates all meta tags, Open Graph, and JSON-LD automatically from front matter + `_config.yml`.
+
+---
+
+## Dependency Management
+
+### Renovate
+
+Configured in `renovate.json`:
+
+- Groups minor and patch updates
+- Auto-merges patches for devDependencies
+- Runs Monday mornings (Europe/Paris)
+
+### Dependabot
+
+Configured in `.github/dependabot.yml`:
+
+- Monitors Bundler (Ruby gems)
+- Monitors npm (Bun packages)
+- Monitors GitHub Actions versions
+
+---
+
+## Available Scripts
+
+```bash
+# Install
+make install          # Ruby (bundle) + Node (bun)
+
+# Development
+make serve            # Dev server with live reload
+make quick-serve      # Server without initial build
+make build            # Dev build
+make clean            # Clean _site, .jekyll-cache, .sass-cache
+
+# Production
+make production       # Production build
+make prod-build       # Production build + Notion sync
+
+# Linting
+bun run lint          # All linters
+bun run lint:md       # Markdown only
+bun run lint:md:fix   # Auto-fix markdown
+bun run lint:yaml     # YAML files
+bun run lint:commit   # Validate last commit
+
+# Commits
+bun run commit        # Interactive gitmoji commit
+```
+
+---
+
+## Linting Rules
+
+### Markdownlint
+
+Configuration in `.markdownlint.json`:
+
+- Line length: 120 characters
+- `MD024` (duplicate headings): disabled
+- `MD033` (inline HTML): disabled
+- `MD041` (first heading H1): disabled
+
+### Yamllint
+
+Configuration in `.yamllint.yml`:
+
+- Ignores `_site/`, `vendor/`, `.git/`
+- Standard indentation and line length rules
+
+---
+
+*Last updated: 2026-03-18*

@@ -21,7 +21,12 @@
       "Bash(for f:*)",
       "Bash(cat:*)",
       "Bash(bun install:*)",
-      "Bash(bun pm:*)"
+      "Bash(bun pm:*)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(gh repo:*)",
+      "Bash(gh api:*)",
+      "Bash(for file:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []
