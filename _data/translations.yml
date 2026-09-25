@@ -48,8 +48,6 @@ fr:
     skills_title: "Mes compétences principales"
     experience_years: "20+"
     experience_text: "ans<br>d'expérience"
-    summary_label: "En bref"
-    summary: "Maxime Lenne est CTO freelance basé à Lille et fondateur de White Wood Tech. Avec plus de 20 ans d'expérience, dont des postes de CTO chez Ippon et theTribe et de CPTO chez Frizbiz, il accompagne startups et PME en stratégie produit, accélération tech et coaching d'équipe."
 
   faq_section:
     badge: "Questions fréquentes"
@@ -294,8 +292,6 @@ en:
     skills_title: "My main skills"
     experience_years: "20+"
     experience_text: "years<br>of experience"
-    summary_label: "In short"
-    summary: "Maxime Lenne is a freelance CTO based in Lille, France, and the founder of White Wood Tech. With 20+ years of experience, including CTO roles at Ippon and theTribe and CPTO at Frizbiz, he helps startups and SMEs with product strategy, tech acceleration and team coaching."
 
   faq_section:
     badge: "FAQ"

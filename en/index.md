@@ -65,7 +65,6 @@ faq: true
         </h2>
         
         <div class="section__description">
-          <p><strong>{{ t.about_section.summary_label }}:</strong> {{ t.about_section.summary }}</p>
           <p>{{ t.about_section.description1 }}</p>
           <p>{{ t.about_section.description2 }}</p>
           <p>{{ t.about_section.description3 }}</p>
@@ -150,6 +149,6 @@ faq: true
   </div>
 </section>
 
-{% include sections/faq-section.html %}
-
 {% include sections/final-cta-section.html lang="en" %}
+
+{% include sections/faq-section.html %}
