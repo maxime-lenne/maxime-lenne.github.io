@@ -13,7 +13,8 @@
         <img src="{{ img_url }}"
              alt="{{ include.image_alt | default: 'Mon portrait' }}"
              class="image-circle__image"
-             loading="lazy">
+             {% if include.image_url == nil or include.width %}width="{{ include.width | default: 600 }}" height="{{ include.height | default: 600 }}"{% endif %}
+             loading="{{ include.loading | default: 'lazy' }}"{% if include.loading == 'eager' %} fetchpriority="high"{% endif %}>
       </picture>
     </div>
     {% assign show_status = include.show_status | default: "true" %}
