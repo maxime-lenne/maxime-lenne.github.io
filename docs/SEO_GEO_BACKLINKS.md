@@ -55,8 +55,9 @@ par page, `lang` sur `<html>`.
    qui a une traduction. Une page sans traduction (les expériences) n'émet que sa propre langue et
    `x-default`.
 3. **Titres et descriptions (C3–C5).**
-   - Pour l'accueil, passer `title: "CTO freelance & à temps partagé"` et laisser jekyll-seo-tag ajouter
-     « | Maxime Lenne ». Pour cela, raccourcir `site.title` en « Maxime Lenne ».
+   - Accueil : `title: "CTO, tech advisor et product builder"`, et jekyll-seo-tag ajoute « | Maxime Lenne »
+     (`site.title` raccourci en « Maxime Lenne »). La description présente un site personnel, sans
+     discours commercial (corrigé au lot 2).
    - Viser 50–60 caractères par titre et 140–160 par description, avec une description propre à chaque
      page. L'accueil parle d'offre, le CV de parcours.
    - Corriger « sparing » en « sparring » partout.
