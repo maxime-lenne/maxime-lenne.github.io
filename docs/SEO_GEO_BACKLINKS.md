@@ -5,8 +5,13 @@ Date : 2026-09-25. Statut : lots 1 et 2 implémentés, lots 3 et 4 à faire.
 ## Objectif
 
 Rendre maxime-lenne.fr correctement indexé par les moteurs de recherche et **cité par les assistants IA**
-(ChatGPT, Perplexity, Claude, Gemini) sur les requêtes du type « CTO freelance Lille », « CTO à temps
-partagé », « Maxime Lenne ». Le site doit aussi renforcer, et être renforcé par, white-wood.tech.
+(ChatGPT, Perplexity, Claude, Gemini) sur les requêtes liées à la personne : « Maxime Lenne », son
+parcours, ses expertises et, à terme, ses articles.
+
+**Positionnement : site personnel et blog, pas site commercial.** Les offres (audits, formations,
+missions de CTO) et les sections commerciales vont progressivement passer sur white-wood.tech. Ici, on
+ne rajoute pas de discours commercial ; on renvoie vers White Wood Tech pour les offres. Les requêtes
+commerciales (« CTO freelance Lille »…) sont travaillées côté white-wood.tech.
 
 ## Contraintes
 
@@ -98,11 +103,12 @@ par page, `lang` sur `<html>`.
    - la ligne `Sitemap`.
 2. **`llms.txt` (C10).** Page Liquid (`permalink: /llms.txt`, `layout: null`) générée depuis les données
    déjà présentes : résumé FR/EN, pages, services (`site.services`), expériences
-   (`site.data.notion_experiences`), compétences (`site.data.notion_skills`), FAQ, contacts.
+   (`site.data.notion_experiences`), compétences (`site.data.notion_skills`), FAQ, contacts. Le résumé en
+   tête présente un site personnel et renvoie vers white-wood.tech pour les offres.
    - `robots.txt` et `llms.txt` sont exclus de jekyll-minifier, qui aplatissait les sauts de ligne.
    - `llms-full.txt` n'est pas fait : `llms.txt` contient déjà toutes les expériences.
 3. **Graphe JSON-LD (`_includes/components/json-ld.html`).**
-   - `Person` sur toutes les pages : `@id` `https://maxime-lenne.fr/#person`, description (le résumé),
+   - `Person` sur toutes les pages : `@id` `https://maxime-lenne.fr/#person`, description (texte « À propos »),
      adresse (Lille, FR), `worksFor` → White Wood Tech (`@id` `https://white-wood.tech/#organization`),
      `alumniOf` (diplômes de `notion_educations`, hors formations professionnelles), `knowsAbout`
      (catégories de `notion_skills` et compétences de niveau ≥ 80), `sameAs`.
@@ -110,9 +116,13 @@ par page, `lang` sur `<html>`.
    - `FAQPage` sur les pages qui déclarent `faq: true` (accueil FR/EN), depuis `translations.yml`.
    - Les pages d'expérience sont typées `WebPage` au lieu de `BlogPosting`.
 4. **Contenu citable.**
-   - Paragraphe « En bref » / « In short » en tête de la section « À propos » (`about_section.summary`).
-   - Section FAQ (`_includes/sections/faq-section.html`, accordéon `<details>` natif) avant l'appel à
-     l'action final, 5 questions. Pas de tarifs : aucune donnée publique fiable à citer.
+   - Pas de paragraphe de résumé : le texte « À propos » présente déjà la personne. Il sert aussi de
+     `description` à la `Person` et d'introduction à `llms.txt`, qui renvoie vers White Wood Tech pour
+     les offres professionnelles.
+   - Section FAQ (`_includes/sections/faq-section.html`, accordéon `<details>` natif) après l'appel à
+     l'action final, 5 questions, balisée `FAQPage`. Son contenu est à revoir quand les sections
+     commerciales passeront sur white-wood.tech.
+
 5. **Pages d'expérience (C14).** Les coquilles venaient de `_collections/_experiences/01-ippon.md`,
    corrigées avec le texte à jour de Notion.
 
