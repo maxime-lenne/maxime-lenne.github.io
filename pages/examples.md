@@ -3,6 +3,8 @@ layout: default
 title: "Design System - Exemples de Composants"
 description: "Documentation complète du design system et showcase de tous les composants disponibles"
 lang: fr
+sitemap: false
+noindex: true
 ---
 
 # Design System

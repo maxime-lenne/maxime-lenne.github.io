@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Page introuvable"
+description: "Cette page n'existe pas ou a été déplacée."
+lang: fr
+permalink: /404.html
+sitemap: false
+noindex: true
+---
+
+<section class="section section--gradient-dark">
+  <div class="section__container section__container--small">
+    <div class="section__content">
+      <h1 class="section__title">Page introuvable</h1>
+      <p class="section__description">
+        Cette page n'existe pas ou a été déplacée. <span lang="en">This page does not exist or has moved.</span>
+      </p>
+      <div class="section__actions">
+        {% include components/cta-button.html size="large" text="Retour à l'accueil" url="/" %}
+        {% include components/cta-button.html style="secondary" size="large" text="Voir le CV" url="/resume/" %}
+        {% include components/cta-button.html style="secondary" size="large" text="English version" url="/en/" %}
+      </div>
+    </div>
+  </div>
+</section>
