@@ -493,43 +493,19 @@ document.addEventListener('DOMContentLoaded', function() {
       {% for experience in sorted_experiences %}
       {
         id: {{ forloop.index }},
-        role: "{{ experience.role | escape }}",
-        company: "{{ experience.company | escape }}",
-        company_url: "{{ experience.company_url | escape }}",
-        start_date: "{{ experience.start_date | escape }}",
-        end_date: "{{ experience.end_date | escape }}",
+        role: {{ experience.role | jsonify }},
+        company: {{ experience.company | jsonify }},
+        company_url: {{ experience.company_url | jsonify }},
+        start_date: {{ experience.start_date.start | jsonify }},
+        end_date: {{ experience.end_date.start | jsonify }},
         current: {{ experience.current | default: false }},
-        description: "{{ experience.description | escape }}",
-        tags: [
-          {% if experience.tags %}
-            {% for tag in experience.tags %}
-              "{{ tag | escape }}"{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          {% endif %}
-        ],
-        skills: [
-          {% if experience.skills %}
-            {% for skill in experience.skills %}
-              "{{ skill | escape }}"{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          {% endif %}
-        ],
-        achievements: [
-          {% if experience.achievements %}
-            {% for achievement in experience.achievements %}
-              "{{ achievement | escape }}"{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          {% endif %}
-        ],
-        missions: [
-          {% if experience.missions %}
-            {% for mission in experience.missions %}
-              "{{ mission | escape }}"{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          {% endif %}
-        ],
-        logo_url: "{{ experience.logo_url | escape }}",
-        details: "{{ experience.details | escape }}"
+        description: {{ experience.description | jsonify }},
+        tags: {{ experience.tags | jsonify }} || [],
+        skills: {{ experience.skills | jsonify }} || [],
+        achievements: {{ experience.achievements | jsonify }} || [],
+        missions: {{ experience.missions | jsonify }} || [],
+        logo_url: {{ experience.logo_url | jsonify }},
+        details: {{ experience.details | jsonify }}
       }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ];
