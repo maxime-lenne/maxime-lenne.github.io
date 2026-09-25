@@ -48,6 +48,24 @@ fr:
     skills_title: "Mes compétences principales"
     experience_years: "20+"
     experience_text: "ans<br>d'expérience"
+    summary_label: "En bref"
+    summary: "Maxime Lenne est CTO freelance basé à Lille et fondateur de White Wood Tech. Avec plus de 20 ans d'expérience, dont des postes de CTO chez Ippon et theTribe et de CPTO chez Frizbiz, il accompagne startups et PME en stratégie produit, accélération tech et coaching d'équipe."
+
+  faq_section:
+    badge: "Questions fréquentes"
+    title: "Vos questions,"
+    title_highlight: "mes réponses"
+    items:
+      - question: "Qu'est-ce qu'un CTO à temps partagé ?"
+        answer: "Un CTO à temps partagé assure la direction technique d'une entreprise quelques jours par mois, sans recrutement à temps plein : choix d'architecture, feuille de route technique, recrutement et accompagnement de l'équipe, relation avec les prestataires."
+      - question: "Pour quels types d'entreprises intervenez-vous ?"
+        answer: "Startups, PME et directions produit de grands groupes. J'ai notamment accompagné l'Insee, Decathlon et Le Wagon, et dirigé la technique d'agences comme Ippon et theTribe."
+      - question: "Où intervenez-vous ?"
+        answer: "Je suis basé à Lille. Les modalités, sur site ou à distance, se définissent lors du premier échange."
+      - question: "Quelle est la différence avec White Wood Tech ?"
+        answer: "White Wood Tech est ma société. Elle porte mes missions de CTO et propose aussi des offres packagées, comme des audits de code et des formations, réalisées avec une équipe d'agents IA."
+      - question: "Comment démarrer ?"
+        answer: "Par un appel de 30 minutes pour comprendre votre contexte et voir si je peux vous aider."
 
   services_section:
     badge: "Mes services"
@@ -276,6 +294,24 @@ en:
     skills_title: "My main skills"
     experience_years: "20+"
     experience_text: "years<br>of experience"
+    summary_label: "In short"
+    summary: "Maxime Lenne is a freelance CTO based in Lille, France, and the founder of White Wood Tech. With 20+ years of experience, including CTO roles at Ippon and theTribe and CPTO at Frizbiz, he helps startups and SMEs with product strategy, tech acceleration and team coaching."
+
+  faq_section:
+    badge: "FAQ"
+    title: "Your questions,"
+    title_highlight: "my answers"
+    items:
+      - question: "What is a fractional CTO?"
+        answer: "A fractional CTO leads a company's technology a few days a month, without a full-time hire: architecture choices, technical roadmap, hiring and coaching the team, and managing vendors."
+      - question: "What kind of companies do you work with?"
+        answer: "Startups, SMEs and product teams in large companies. Clients include Insee, Decathlon and Le Wagon, and I led technology at agencies such as Ippon and theTribe."
+      - question: "Where do you work?"
+        answer: "I am based in Lille, France. On-site or remote work is agreed during our first call."
+      - question: "How is this different from White Wood Tech?"
+        answer: "White Wood Tech is my company. It carries my CTO engagements and also offers packaged services, such as code audits and training, delivered with a team of AI agents."
+      - question: "How do we start?"
+        answer: "With a 30-minute call to understand your context and see whether I can help."
 
   services_section:
     badge: "My services"

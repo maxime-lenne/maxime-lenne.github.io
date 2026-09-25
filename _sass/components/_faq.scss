@@ -1,0 +1,54 @@
+// FAQ Component - native <details> accordion
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 48rem;
+  margin: 0 auto;
+
+  &__item {
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem 1.25rem;
+
+    &[open] .faq__question::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '+';
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      line-height: 1;
+      color: var(--color-secondary, #10b981);
+      transition: transform 0.2s ease;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary, #2563eb);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+
+  &__answer {
+    margin: 0.75rem 0 0;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+}
