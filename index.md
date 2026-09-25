@@ -64,9 +64,6 @@ faq: true
         
         <div class="section__description">
           <p>
-            <strong>{{ site.data.translations.fr.about_section.summary_label }} :</strong> {{ site.data.translations.fr.about_section.summary }}
-          </p>
-          <p>
             Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques.
           </p>
           <p>
@@ -156,6 +153,6 @@ faq: true
   </div>
 </section>
 
-{% include sections/faq-section.html %}
-
 {% include sections/final-cta-section.html %}
+
+{% include sections/faq-section.html %}

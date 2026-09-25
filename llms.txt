@@ -7,9 +7,9 @@ sitemap: false
 {%- assign en = site.data.translations.en -%}
 # {{ site.author.name }}
 
-> {{ en.about_section.summary }}
+> Personal site of {{ site.author.name }}: CTO, tech advisor and product builder based in Lille, France. Background, skills and projects in product, tech, AI and entrepreneurship. Professional offers (audits, training, CTO engagements) are published by his company, White Wood Tech: https://white-wood.tech/
 
-{{ fr.about_section.summary }}
+{{ fr.about_section.description1 }} {{ fr.about_section.description2 }}
 
 ## Pages
 
@@ -18,7 +18,7 @@ sitemap: false
 - [CV (FR)]({{ '/resume/' | absolute_url }}): expériences, compétences, formations, distinctions
 - [Resume (EN)]({{ '/en/resume/' | absolute_url }}): experience, skills, education, awards
 
-## Services
+## Areas of work
 
 {% assign services = site.services | sort: 'order' -%}
 {% for service in services -%}

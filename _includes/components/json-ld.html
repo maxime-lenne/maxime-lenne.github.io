@@ -36,7 +36,7 @@
       "givenName": "Maxime",
       "familyName": "Lenne",
       "jobTitle": {{ site.author.bio | jsonify }},
-      "description": {{ ld_t.about_section.summary | jsonify }},
+      "description": {{ ld_t.about_section.description1 | append: ' ' | append: ld_t.about_section.description2 | jsonify }},
       "url": {{ home_url | jsonify }},
       "image": {{ '/assets/images/avatar.webp' | absolute_url | jsonify }},
       "email": {{ site.author.email | prepend: 'mailto:' | jsonify }},
