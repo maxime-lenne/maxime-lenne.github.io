@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "CTO freelance, tech advisor et product builder"
-description: "CTO freelance à Lille : direction technique à temps partagé, stratégie produit et accélération tech pour startups et PME. Plus de 20 ans d'expérience."
+title: "CTO, tech advisor et product builder"
+description: "Site personnel de Maxime Lenne, CTO et product builder à Lille : parcours, expertises produit, tech et IA, projets et réflexions sur l'entrepreneuriat."
 lang: fr
 alternate_lang: en
 alternate_url: /en/
