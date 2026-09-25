@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Freelance CTO, tech advisor and product builder"
-description: "Freelance CTO based in Lille, France: fractional technical leadership, product strategy and tech acceleration for startups and SMEs. 20+ years of experience."
+title: "CTO, tech advisor and product builder"
+description: "Personal site of Maxime Lenne, CTO and product builder in Lille, France: background, product, tech and AI expertise, projects and thoughts on entrepreneurship."
 lang: en
 permalink: /en/
 alternate_lang: fr
