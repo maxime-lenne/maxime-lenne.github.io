@@ -21,7 +21,7 @@ skills:
   - "Craftmanship"
   - "Python"
   - "Flask"
-description: "Direction technique d'une agence de plus de 35 consultants réalisant des mission principalements en régis dans des grand groupe (Retail, banque...) et prestations de conseil pour l'INSEE et Décathlon"
+description: "Direction technique d'une agence de plus de 35 consultants réalisant des missions principalement en régie dans des grands groupes (Retail, banque...) et prestations de conseil pour l'INSEE et Décathlon"
 about: "Ippon est un cabinet de conseil et d’expertises en technologie, international et indépendant. Ippon accompagne la transformation numérique des entreprises, en les aidant à concevoir leur stratégie et à déployer leur roadmap à l'échelle, afin de délivrer rapidement la valeur attendue. Ippon évolue sur plusieurs métiers à travers les practices suivantes : Software Engineering, Cloud & Devops, Data & IA, Modern Architecture, Mobile, Produit Agilité & Design"
 sub-roles:
   - "Auditeur : Réalisation et restitution d'un assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie des équipes, codebase trust, architecture design, pratiques devops, communauté) dans 3 équipes lilloise de l'INSEE"
