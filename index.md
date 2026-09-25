@@ -1,8 +1,10 @@
 ---
 layout: default
-title: "Maxime Lenne | CTO, Tech advisor, sparing partner, Tech Product Leader, Product Builder"
-description: "CV complet de Maxime Lenne - CTO, Product Owner et Tech Lead avec plus de 10 ans d'expérience dans le développement et la direction technique."
+title: "CTO freelance, tech advisor et product builder"
+description: "CTO freelance à Lille : direction technique à temps partagé, stratégie produit et accélération tech pour startups et PME. Plus de 20 ans d'expérience."
 lang: fr
+alternate_lang: en
+alternate_url: /en/
 ---
 
 <!-- Hero Section - Page Index -->
@@ -13,7 +15,7 @@ lang: fr
       
       {% include components/title-hero.html 
          main_text="Salut, moi c'est Maxime 👋"
-         highlight_text="CTO, Tech advisor, sparing partner" %}
+         highlight_text="CTO, Tech advisor, sparring partner" %}
       
       <p class="section__description">
         <strong>CTO passionné, engagé et créateur d'impact.</strong> Avec une appétence forte pour <strong>l'entrepreneuriat et les startups, le produit, l'innovation, le management et la tech</strong>.
@@ -36,7 +38,7 @@ lang: fr
       </div>
     </div>
     
-    {% include components/image.html %}
+    {% include components/image.html loading="eager" %}
   </div>
 </section>
 
@@ -46,6 +48,7 @@ lang: fr
     <div class="section__grid section__grid--2-col">
       {% include components/image-secondary.html 
          image_url="/assets/images/avatar.jpeg"
+         width="600" height="600"
          image_alt="Portrait développeur"
          show_badge="true"
          badge_number="20+"

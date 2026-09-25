@@ -47,7 +47,7 @@ Section d'accueil avec fond dégradé et éléments décoratifs.
       <!-- Titre principal -->
       {% include components/title-hero.html 
          main_text="Salut, moi c'est Maxime 👋"
-         highlight_text="CTO, Tech advisor, sparing partner" %}
+         highlight_text="CTO, Tech advisor, sparring partner" %}
       
       <!-- Description -->
       <p>Votre description ici...</p>

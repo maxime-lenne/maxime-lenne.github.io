@@ -1,8 +1,10 @@
 ---
 layout: default
-title: "CV - Maxime Lenne | CTO, Tech advisor, sparing partner, Tech Product Leader, Product Builder"
-description: "CV complet de Maxime Lenne - CTO, Product Owner et Tech Lead avec plus de 10 ans d'expérience dans le développement et la direction technique."
+title: "CV : CTO, tech advisor et product builder"
+description: "Parcours de Maxime Lenne : CTO chez Ippon et theTribe, CPTO, teacher au Wagon. Expériences, compétences, formations et distinctions."
 lang: fr
+alternate_lang: en
+alternate_url: /en/resume/
 ---
 
 <!-- CTA Section -->
@@ -12,14 +14,15 @@ lang: fr
       {% include components/badge.html text="💼 Profil de carrière" %}
       
       {% include components/image-circle.html 
-        image_url="/assets/images/avatar.jpeg" 
+        image_url="/assets/images/avatar.jpeg"
+        width="600" height="600" loading="eager" 
         image_alt="Mon portrait"
         show_status="false"
         status_text="Disponible pour consultation" %}
       
       {% include components/title-hero.html 
         main_text="Maxime Lenne"
-        highlight_text="CTO, Tech advisor, sparing partner" %}
+        highlight_text="CTO, Tech advisor, sparring partner" %}
         
       <div class="deep-stack-cv-hero__contact">
         <div class="deep-stack-cv-hero__contact-item">

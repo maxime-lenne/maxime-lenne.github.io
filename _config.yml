@@ -1,7 +1,8 @@
 # Site settings
-title: "Maxime Lenne - CTO & Tech Product Leader"
+title: "Maxime Lenne"
 email: "hello@maxime-lenne.fr"
-description: "Expert en entrepreneuriat tech, innovation et développement produit"
+description: "CTO freelance à Lille : direction technique à temps partagé, conseil produit et accélération tech pour startups et PME."
+locale: fr_FR
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://maxime-lenne.fr" # the base hostname & protocol for your site
 
@@ -13,7 +14,8 @@ exclude_from_localizations: ["javascript", "images", "css", "assets"]
 # Author information
 author:
   name: "Maxime Lenne"
-  bio: "CTO & Tech Product Leader"
+  url: "https://maxime-lenne.fr/"
+  bio: "CTO freelance & Tech Product Leader"
   location: "France"
   email: "hello@maxime-lenne.fr"
   twitter: "MaximeLenne"
@@ -49,15 +51,11 @@ plugins:
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-# SEO configuration
-seo:
-  title: "Maxime Lenne - CTO & Tech Product Leader"
-  description: "Expert en entrepreneuriat tech, innovation et développement produit"
-  image: "/assets/images/og-image.jpg"
-  type: "website"
-  twitter:
-    card: "summary_large_image"
-    creator: "@MaximeLenne"
+# SEO configuration (jekyll-seo-tag)
+# The Open Graph image is set per page through `defaults` below.
+twitter:
+  username: MaximeLenne
+  card: summary_large_image
 
 # Collections
 collections_dir: _collections
@@ -86,10 +84,30 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      image:
+        path: /assets/images/og-image.jpg
+        width: 1200
+        height: 630
+        alt: "Maxime Lenne, CTO freelance"
+  - scope:
+      path: "en"
+    values:
+      locale: en_GB
+  # Internal assets and LinkedIn carousel sources are not meant to be indexed.
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "linkedin"
+    values:
+      sitemap: false
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
-      author: "Maxime Lenne"
       comments: false
       share: true
   - scope:
@@ -97,19 +115,16 @@ defaults:
       type: "pages"
     values:
       layout: "page"
-      author: "Maxime Lenne"
   - scope:
       path: ""
       type: "experiences"
     values:
       layout: "experience"
-      author: "Maxime Lenne"
   - scope:
       path: ""
       type: "projects"
     values:
       layout: "project"
-      author: "Maxime Lenne"
 
 # =====================================================
 # NOTION CMS CONFIGURATION
@@ -277,3 +292,14 @@ exclude:
   - .env
   - .env.local
   - _compress_images_cache.yml
+  # Repository files that must not be published
+  - CLAUDE.md
+  - README.md
+  - Makefile
+  - start_server.sh
+  - "*.gemspec"
+  - lib/
+  - docs/
+  - .claude/
+  - .idea/
+  - .tool-versions

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Resume - Maxime Lenne | CTO, Tech advisor, sparring partner, Tech Product Leader, Product Builder"
-description: "Full resume of Maxime Lenne - CTO, Product Owner and Tech Lead with over 10 years of experience in development and technical leadership."
+title: "Resume: CTO, tech advisor and product builder"
+description: "Maxime Lenne's career: CTO at Ippon and theTribe, CPTO, Le Wagon teacher. Experience, skills, education and awards."
 lang: en
 permalink: /en/resume/
 alternate_lang: fr
@@ -17,7 +17,8 @@ alternate_url: /resume/
       {% include components/badge.html text="💼 Career profile" %}
       
       {% include components/image-circle.html 
-        image_url="/assets/images/avatar.jpeg" 
+        image_url="/assets/images/avatar.jpeg"
+        width="600" height="600" loading="eager" 
         image_alt="My portrait"
         show_status="false"
         status_text="Available for consultation" %}

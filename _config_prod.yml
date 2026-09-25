@@ -21,13 +21,6 @@ compress_images:
   webp: true
   progressive: true
 
-# SEO optimization
-seo:
-  image: "/assets/images/og-image.jpg"
-  twitter:
-    card: "summary_large_image"
-    creator: "@MaximeLenne"
-
 # Analytics and monitoring
 google_analytics: "G-0QGYCGR5J2" # Replace with your GA4 ID
 hotjar: "XXXXXXXXXX" # Replace with your Hotjar ID
