@@ -1,0 +1,23 @@
+<!-- FAQ Section: questions come from translations.yml (faq_section) and are also exposed as FAQPage JSON-LD -->
+{% assign faq_lang = include.lang | default: page.lang | default: 'fr' %}
+{% assign t = site.data.translations[faq_lang] %}
+<section class="section section--dark" id="faq">
+  <div class="section__container section__container--small">
+    <div class="section__header">
+      {% include components/section-header.html
+         badge_icon="❓"
+         badge_text=t.faq_section.badge
+         title=t.faq_section.title
+         title_highlight=t.faq_section.title_highlight %}
+    </div>
+
+    <div class="faq">
+      {% for item in t.faq_section.items %}
+        <details class="faq__item">
+          <summary class="faq__question">{{ item.question }}</summary>
+          <p class="faq__answer">{{ item.answer }}</p>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>

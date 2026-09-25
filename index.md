@@ -5,6 +5,7 @@ description: "CTO freelance à Lille : direction technique à temps partagé, st
 lang: fr
 alternate_lang: en
 alternate_url: /en/
+faq: true
 ---
 
 <!-- Hero Section - Page Index -->
@@ -62,6 +63,9 @@ alternate_url: /en/
         </h2>
         
         <div class="section__description">
+          <p>
+            <strong>{{ site.data.translations.fr.about_section.summary_label }} :</strong> {{ site.data.translations.fr.about_section.summary }}
+          </p>
           <p>
             Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques.
           </p>
@@ -151,5 +155,7 @@ alternate_url: /en/
     </div>
   </div>
 </section>
+
+{% include sections/faq-section.html %}
 
 {% include sections/final-cta-section.html %}

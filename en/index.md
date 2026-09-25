@@ -6,6 +6,7 @@ lang: en
 permalink: /en/
 alternate_lang: fr
 alternate_url: /
+faq: true
 ---
 
 {% assign t = site.data.translations.en %}
@@ -64,6 +65,7 @@ alternate_url: /
         </h2>
         
         <div class="section__description">
+          <p><strong>{{ t.about_section.summary_label }}:</strong> {{ t.about_section.summary }}</p>
           <p>{{ t.about_section.description1 }}</p>
           <p>{{ t.about_section.description2 }}</p>
           <p>{{ t.about_section.description3 }}</p>
@@ -147,5 +149,7 @@ alternate_url: /
     </div>
   </div>
 </section>
+
+{% include sections/faq-section.html %}
 
 {% include sections/final-cta-section.html lang="en" %}
