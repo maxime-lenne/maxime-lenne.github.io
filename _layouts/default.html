@@ -20,34 +20,34 @@
     <link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
     
-    <!-- Hreflang for multi-language SEO -->
+    <!-- Hreflang: only pages with a translation declare alternate_lang and alternate_url -->
     {% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
     {% if page.alternate_url %}
-    <link rel="alternate" hreflang="{{ page.alternate_lang }}" href="{{ site.url }}{{ page.alternate_url }}" />
+    {% if lang == 'fr' %}{% assign fr_url = page.url %}{% assign en_url = page.alternate_url %}{% else %}{% assign fr_url = page.alternate_url %}{% assign en_url = page.url %}{% endif %}
+    <link rel="alternate" hreflang="fr" href="{{ fr_url | absolute_url }}" />
+    <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ fr_url | absolute_url }}" />
+    <meta property="og:locale:alternate" content="{% if lang == 'fr' %}en_GB{% else %}fr_FR{% endif %}" />
     {% endif %}
-    <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}" />
-    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+    {% if page.noindex %}
+    <meta name="robots" content="noindex" />
+    {% endif %}
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{ site.title }}">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="{{ site.author.twitter }}">
-    
-    <!-- Structured Data -->
+    <!-- Structured Data: the Person this site is about (jekyll-seo-tag describes the WebSite) -->
+    {% capture person_url %}{{ '/' | absolute_url }}{% endcapture %}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "{{ site.author.name }}",
-        "jobTitle": "{{ site.author.bio }}",
-        "url": "{{ site.url }}",
+        "@id": {{ person_url | append: '#person' | jsonify }},
+        "name": {{ site.author.name | jsonify }},
+        "jobTitle": {{ site.author.bio | jsonify }},
+        "url": {{ person_url | jsonify }},
+        "image": {{ '/assets/images/avatar.webp' | absolute_url | jsonify }},
         "sameAs": [
-            "{{ site.author.twitter | prepend: 'https://twitter.com/' }}",
-            "{{ site.author.github | prepend: 'https://github.com/' }}",
-            "{{ site.author.linkedin | prepend: 'https://linkedin.com/in/' }}"
+            {{ site.author.linkedin | prepend: 'https://www.linkedin.com/in/' | jsonify }},
+            {{ site.author.github | prepend: 'https://github.com/' | jsonify }},
+            {{ site.author.twitter | prepend: 'https://x.com/' | jsonify }}
         ]
     }
     </script>

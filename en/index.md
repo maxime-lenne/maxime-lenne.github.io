@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Maxime Lenne | CTO, Tech advisor, sparring partner, Tech Product Leader, Product Builder"
-description: "Full resume of Maxime Lenne - CTO, Product Owner and Tech Lead with over 10 years of experience in development and technical leadership."
+title: "Freelance CTO, tech advisor and product builder"
+description: "Freelance CTO based in Lille, France: fractional technical leadership, product strategy and tech acceleration for startups and SMEs. 20+ years of experience."
 lang: en
 permalink: /en/
 alternate_lang: fr
@@ -40,7 +40,7 @@ alternate_url: /
       </div>
     </div>
     
-    {% include components/image.html status_text=t.hero.status %}
+    {% include components/image.html status_text=t.hero.status loading="eager" %}
   </div>
 </section>
 
@@ -50,6 +50,7 @@ alternate_url: /
     <div class="section__grid section__grid--2-col">
       {% include components/image-secondary.html 
          image_url="/assets/images/avatar.jpeg"
+         width="600" height="600"
          image_alt="Developer portrait"
          show_badge="true"
          badge_number=t.about_section.experience_years
