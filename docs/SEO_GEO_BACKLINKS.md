@@ -1,6 +1,6 @@
 # Spec — SEO, GEO et backlinks pour maxime-lenne.fr
 
-Date : 2026-09-25. Statut : à valider.
+Date : 2026-09-25. Statut : lot 1 implémenté (branche `feature/seo-lot-1`), lots 2 à 4 à faire.
 
 ## Objectif
 
@@ -36,6 +36,7 @@ partagé », « Maxime Lenne ». Le site doit aussi renforcer, et être renforc�
 | C13 | Aucun lien vers white-wood.tech, n8n-ninja.app ni houblons-nous.org | Pas de maillage entre vos sites |
 | C14 | Pages d'expérience en FR uniquement, avec des coquilles dans les descriptions Notion (« principalements », « régis », « grand groupe ») | Qualité perçue |
 | C15 | Google Analytics 4 est chargé sans bandeau de consentement | Non-conformité CNIL, hors SEO mais à traiter en même temps |
+| C16 | Des fichiers du dépôt sont publiés : `CLAUDE.md`, `README.md`, `Makefile`, `docs/` (y compris les `.pen`), `lib/`, `start_server.sh` | Exposition de documents internes, pages sans valeur |
 
 Déjà en place : HTTPS, redirection `www` → apex en 301, canonical, `sitemap.xml`, `feed.xml`, un seul `h1`
 par page, `lang` sur `<html>`.
@@ -54,22 +55,31 @@ par page, `lang` sur `<html>`.
    - Viser 50–60 caractères par titre et 140–160 par description, avec une description propre à chaque
      page. L'accueil parle d'offre, le CV de parcours.
    - Corriger « sparing » en « sparring » partout.
-4. **Un seul JSON-LD (C6).** Supprimer le bloc `Person` écrit à la main dans `default.html` et enrichir
-   celui de jekyll-seo-tag via `author`, `social.links` et `logo` dans `_config.yml`.
-   - Vérifier pendant l'implémentation si jekyll-seo-tag permet de désactiver son JSON-LD. Si oui,
-     garder plutôt un seul include `_includes/components/json-ld.html` maîtrisé (voir le lot 2).
+4. **Un seul JSON-LD `Person` (C6).** jekyll-seo-tag 2.8 ne permet pas de désactiver son JSON-LD. Il ne
+   décrit que le `WebSite`, avec l'auteur en simple `Person` imbriquée (nom et URL, grâce à `author.url`).
+   Le bloc `Person` de `default.html` devient donc la seule description complète de la personne :
+   - `@id` `https://maxime-lenne.fr/#person`, image, et `sameAs` vers LinkedIn, GitHub et x.com ;
+   - suppression des `author: "Maxime Lenne"` en texte dans les `defaults` : ils écrasaient `site.author`
+     et produisaient `twitter:creator` « @Maxime Lenne » ;
+   - suppression des balises `og:type`, `og:site_name` et `twitter:*` dupliquées avec jekyll-seo-tag.
 5. **Locale (C7).** Dans `_config.yml`, mettre `locale: fr_FR`, et `locale: en_GB` dans le front matter
    des pages EN.
-6. **Sitemap propre (C8).** Mettre `sitemap: false` sur `pages/examples.md` et `assets/signature.html`,
-   et, via `defaults`, sur le dossier `linkedin/`. Exclure `template.html` du build.
+6. **Sitemap propre (C8, C16).**
+   - `sitemap: false` et `noindex: true` sur `pages/examples.md` ; `sitemap: false`, via `defaults`,
+     sur les dossiers `assets/` et `linkedin/`. Les carrousels restent publiés pour être partagés.
+   - Fichiers du dépôt ajoutés à `exclude` dans `_config.yml`.
+   - Le layout émet `<meta name="robots" content="noindex">` quand une page déclare `noindex: true`.
 7. **Page 404 (C9).** Créer un `404.html` à la racine (FR avec lien EN, layout `default`,
    `sitemap: false`), avec des liens vers l'accueil, le CV et le contact. GitHub Pages le sert
    automatiquement.
 8. **Images (C11, C12).**
-   - Servir `avatar.webp` et `desk.webp`, avec `width` et `height` explicites.
-   - Ne pas mettre `loading="lazy"` sur l'image du hero.
-   - Rapatrier les photos des témoignages dans `assets/images/testimonials/`, puis mettre à jour le
-     champ `Image` dans Notion.
+   - Les composants servaient déjà le `.webp` via `<picture>`. Les JPEG de secours sont réduits
+     (1200 px et 600 px, de 2 Mo à moins de 150 Ko).
+   - `width` et `height` explicites. L'image du hero (accueil) et le portrait (CV) sont chargés en
+     `eager` avec `fetchpriority="high"`.
+   - Témoignages : une URL `media.licdn.com` (signée, donc expirée tôt ou tard) est remplacée par les
+     initiales. Pour remettre les photos, les déposer dans `assets/images/testimonials/` et mettre à
+     jour le champ `Image` dans Notion.
 
 **Critères d'acceptation :**
 - `curl` sur `og-image.jpg` répond 200.
