@@ -33,24 +33,8 @@
     <meta name="robots" content="noindex" />
     {% endif %}
 
-    <!-- Structured Data: the Person this site is about (jekyll-seo-tag describes the WebSite) -->
-    {% capture person_url %}{{ '/' | absolute_url }}{% endcapture %}
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": {{ person_url | append: '#person' | jsonify }},
-        "name": {{ site.author.name | jsonify }},
-        "jobTitle": {{ site.author.bio | jsonify }},
-        "url": {{ person_url | jsonify }},
-        "image": {{ '/assets/images/avatar.webp' | absolute_url | jsonify }},
-        "sameAs": [
-            {{ site.author.linkedin | prepend: 'https://www.linkedin.com/in/' | jsonify }},
-            {{ site.author.github | prepend: 'https://github.com/' | jsonify }},
-            {{ site.author.twitter | prepend: 'https://x.com/' | jsonify }}
-        ]
-    }
-    </script>
+    <!-- Structured Data -->
+    {% include components/json-ld.html %}
 </head>
 <body class="deep-stack-layout page-{{ page.layout }} lang-{{ page.lang | default: site.default_lang }}">
     <!-- Skip to main content for accessibility -->

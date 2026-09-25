@@ -6,6 +6,7 @@ lang: en
 permalink: /en/resume/
 alternate_lang: fr
 alternate_url: /resume/
+profile_page: true
 ---
 
 {% assign t = site.data.translations.en %}

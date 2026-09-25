@@ -5,6 +5,7 @@ description: "Parcours de Maxime Lenne : CTO chez Ippon et theTribe, CPTO, teach
 lang: fr
 alternate_lang: en
 alternate_url: /en/resume/
+profile_page: true
 ---
 
 <!-- CTA Section -->
