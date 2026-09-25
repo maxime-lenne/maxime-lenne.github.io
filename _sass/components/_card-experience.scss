@@ -129,6 +129,18 @@
   font-weight: 500;
 }
 
+.card-experience__company-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-underline-offset: 0.2em;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+  }
+}
+
 .card-experience__date {
   display: flex;
   flex-direction: column;

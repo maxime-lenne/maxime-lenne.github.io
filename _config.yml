@@ -169,6 +169,7 @@ notion:
       properties:
         - { name: Title, type: title }
         - { name: Company, type: rich_text }
+        - { name: Company URL, type: url, key: company_url }
         - { name: Role, type: rich_text }
         - { name: Start Date, type: date, key: start_date }
         - { name: End Date, type: date, key: end_date }

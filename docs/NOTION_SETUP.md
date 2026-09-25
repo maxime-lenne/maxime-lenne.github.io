@@ -81,6 +81,7 @@ Votre base de données Experiences doit contenir les propriétés suivantes :
 | **Type** | Select | Type de contrat | "full-time", "part-time", "freelance" |
 | **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
 | **Logo URL** | Text | URL du logo | "/assets/images/companies/ippon.jpg" |
+| **Company URL** | URL | Site de l'entreprise, affiché en lien sur le nom | "https://white-wood.tech/" |
 | **Description** | Rich Text | Description courte | "Direction technique d'une agence..." |
 | **About** | Rich Text | À propos de l'entreprise | "Ippon est un cabinet de conseil..." |
 | **Tags** | Multi-select | Tags | "ESN", "Startup", "Product" |
