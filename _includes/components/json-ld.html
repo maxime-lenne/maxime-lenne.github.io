@@ -1,0 +1,82 @@
+{% comment %}
+  JSON-LD graph for the person this site is about. jekyll-seo-tag describes the WebSite separately.
+  The Person @id is shared with white-wood.tech (founder), keep both in sync.
+  Pages opt in to extra nodes: `profile_page: true` (resume) and `faq: true` (FAQ section).
+{% endcomment %}
+{% assign ld_lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign ld_t = site.data.translations[ld_lang] %}
+{% assign home_url = '/' | absolute_url %}
+{% assign person_id = home_url | append: '#person' %}
+
+{% assign knows = '' %}
+{% for category in site.data.notion_skills %}
+  {% assign knows = knows | append: category[1].title | append: '|' %}
+  {% for skill in category[1].items %}
+    {% if skill.level >= 80 %}{% assign knows = knows | append: skill.name | append: '|' %}{% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign knows = knows | split: '|' | uniq %}
+
+{% assign schools = '' %}
+{% for education in site.data.notion_educations %}
+  {% if education.degree_type != 'Professional' and education.institution %}
+    {% assign schools = schools | append: education.institution | append: '|' %}
+  {% endif %}
+{% endfor %}
+{% assign schools = schools | split: '|' | uniq %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.author.name | jsonify }},
+      "givenName": "Maxime",
+      "familyName": "Lenne",
+      "jobTitle": {{ site.author.bio | jsonify }},
+      "description": {{ ld_t.about_section.summary | jsonify }},
+      "url": {{ home_url | jsonify }},
+      "image": {{ '/assets/images/avatar.webp' | absolute_url | jsonify }},
+      "email": {{ site.author.email | prepend: 'mailto:' | jsonify }},
+      "address": { "@type": "PostalAddress", "addressLocality": "Lille", "addressCountry": "FR" },
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://white-wood.tech/#organization",
+        "name": "White Wood Tech",
+        "url": "https://white-wood.tech/"
+      },
+      "alumniOf": [{% for school in schools %}{ "@type": "EducationalOrganization", "name": {{ school | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      "knowsAbout": {{ knows | jsonify }},
+      "knowsLanguage": ["fr", "en"],
+      "sameAs": [
+        {{ site.author.linkedin | prepend: 'https://www.linkedin.com/in/' | jsonify }},
+        {{ site.author.github | prepend: 'https://github.com/' | jsonify }},
+        {{ site.author.twitter | prepend: 'https://x.com/' | jsonify }}
+      ]
+    }{% if page.profile_page %},
+    {
+      "@type": "ProfilePage",
+      "@id": {{ page.url | absolute_url | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "inLanguage": {{ ld_lang | jsonify }},
+      "dateModified": {{ site.time | date_to_xmlschema | jsonify }},
+      "mainEntity": { "@id": {{ person_id | jsonify }} }
+    }{% endif %}{% if page.faq %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ page.url | absolute_url | append: '#faq' | jsonify }},
+      "inLanguage": {{ ld_lang | jsonify }},
+      "mainEntity": [{% for item in ld_t.faq_section.items %}
+        {
+          "@type": "Question",
+          "name": {{ item.question | jsonify }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} }
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    }{% endif %}
+  ]
+}
+</script>
