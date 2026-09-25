@@ -258,31 +258,33 @@ notion:
         - { name: Quote, type: rich_text }
         - { name: Rating, type: number }
 
-    # Articles de blog multilingues (nouveau)
-    blog_posts:
-      database_env: NOTION_BLOG_DB
-      data_file: notion_blog_posts.yml
-      organizer: simple_list
-      sort_by: published_at
-      sort_order: desc
-      multilingual: true
-      properties:
-        - { name: Title, type: title }
-        - { name: Slug, type: rich_text }
-        - { name: Language, type: select }  # fr, en
-        - { name: Published At, type: date, key: published_at }
-        - { name: Updated At, type: date, key: updated_at }
-        - { name: Status, type: select }  # draft, published, archived
-        - { name: Excerpt, type: rich_text }
-        - { name: Content, type: rich_text }
-        - { name: Featured Image, type: url, key: featured_image }
-        - { name: Categories, type: multi_select }
-        - { name: Tags, type: multi_select }
-        - { name: Author, type: rich_text }
-        - { name: Reading Time, type: number, key: reading_time }
-        - { name: Featured, type: checkbox }
-        - { name: SEO Title, type: rich_text, key: seo_title }
-        - { name: SEO Description, type: rich_text, key: seo_description }
+    # Articles de blog multilingues : désactivé tant que NOTION_BLOG_DB n'existe pas.
+    # Sans base, le plugin réécrit _data/notion_blog_posts.yml (vide) à chaque build,
+    # ce qui relance le watcher de `make serve` en boucle.
+    # blog_posts:
+    #   database_env: NOTION_BLOG_DB
+    #   data_file: notion_blog_posts.yml
+    #   organizer: simple_list
+    #   sort_by: published_at
+    #   sort_order: desc
+    #   multilingual: true
+    #   properties:
+    #     - { name: Title, type: title }
+    #     - { name: Slug, type: rich_text }
+    #     - { name: Language, type: select }  # fr, en
+    #     - { name: Published At, type: date, key: published_at }
+    #     - { name: Updated At, type: date, key: updated_at }
+    #     - { name: Status, type: select }  # draft, published, archived
+    #     - { name: Excerpt, type: rich_text }
+    #     - { name: Content, type: rich_text }
+    #     - { name: Featured Image, type: url, key: featured_image }
+    #     - { name: Categories, type: multi_select }
+    #     - { name: Tags, type: multi_select }
+    #     - { name: Author, type: rich_text }
+    #     - { name: Reading Time, type: number, key: reading_time }
+    #     - { name: Featured, type: checkbox }
+    #     - { name: SEO Title, type: rich_text, key: seo_title }
+    #     - { name: SEO Description, type: rich_text, key: seo_description }
 
 # Exclude from processing
 exclude:
