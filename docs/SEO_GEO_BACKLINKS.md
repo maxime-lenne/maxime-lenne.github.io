@@ -142,7 +142,7 @@ supplémentaire (`notion: { enabled: false }`), puis restaurer `_data/` si besoi
 
 | Source | Action |
 |--------|--------|
-| maxime-lenne.fr | Mettre un lien vers white-wood.tech dans le footer et dans l'expérience « Fondateur White Wood Tech » (Notion). Mettre des liens vers n8n-ninja.app et houblons-nous.org dans une section « Projets » ou dans les contributions (C13). |
+| maxime-lenne.fr | Fait : colonne « Projets » du footer (white-wood.tech, n8n-ninja.app, houblons-nous.org), et propriété Notion `Company URL` qui met un lien sur le nom de l'entreprise dans les cartes d'expérience (renseignée pour White Wood Tech). |
 | white-wood.tech | Déjà fait : lien vers maxime-lenne.fr dans `projects.json`, et `founder.url` dans le JSON-LD. À corriger dans `src/lib/seo.ts` : ajouter `@id: https://maxime-lenne.fr/#person` au `founder`, et retirer maxime-lenne.fr du `sameAs` de l'`Organization`, puisque ce site n'est pas l'entreprise. |
 | n8n-ninja.app, houblons-nous.org | Mettre un lien « Conçu par Maxime Lenne » en footer vers maxime-lenne.fr. |
 | GitHub | Renseigner le profil (Website = maxime-lenne.fr), le README du profil et le champ `homepage` des repos publics. |

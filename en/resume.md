@@ -109,6 +109,7 @@ profile_page: true
              id=forloop.index
              role=experience.role
              company=experience.company
+             company_url=experience.company_url
              start_date=experience.start_date.start
              end_date=experience.end_date.start
              current=experience.current

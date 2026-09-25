@@ -17,7 +17,7 @@
     <div class="card-experience__header">
       <div class="card-experience__title-section">
         <h3 class="card-experience__role">{{ include.role }}</h3>
-        <span class="card-experience__company">{{ include.company }}</span>
+        <span class="card-experience__company">{% if include.company_url %}<a href="{{ include.company_url }}" class="card-experience__company-link">{{ include.company }}</a>{% else %}{{ include.company }}{% endif %}</span>
       </div>
       <div class="card-experience__date">
         <span class="card-experience__duration">{{ include.start_date | date: "%Y" }} - {{ include.end_date | date: "%Y" }}</span>
@@ -87,7 +87,7 @@
         {% endif %}
         <div class="card-experience__modal-title-section">
           <h3 class="card-experience__role">{{ include.role }}</h3>
-          <span class="card-experience__company">{{ include.company }}</span>
+          <span class="card-experience__company">{% if include.company_url %}<a href="{{ include.company_url }}" class="card-experience__company-link">{{ include.company }}</a>{% else %}{{ include.company }}{% endif %}</span>
           <div class="card-experience__date">
             <span class="card-experience__duration">{{ include.start_date | date: "%Y" }} - {{ include.end_date | date: "%Y" }}</span>
             {% if include.current %}

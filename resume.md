@@ -108,6 +108,7 @@ profile_page: true
              id=forloop.index
              role=experience.role
              company=experience.company
+             company_url=experience.company_url
              start_date=experience.start_date.start
              end_date=experience.end_date.start
              current=experience.current
@@ -494,6 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
         id: {{ forloop.index }},
         role: "{{ experience.role | escape }}",
         company: "{{ experience.company | escape }}",
+        company_url: "{{ experience.company_url | escape }}",
         start_date: "{{ experience.start_date | escape }}",
         end_date: "{{ experience.end_date | escape }}",
         current: {{ experience.current | default: false }},
@@ -582,6 +584,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const startYear = formatYear(experience.start_date);
       const endYear = experience.current ? 'Présent' : formatYear(experience.end_date);
       
+      const companyHtml = experience.company_url
+        ? `<a href="${escapeHtml(experience.company_url)}" class="card-experience__company-link">${escapeHtml(experience.company)}</a>`
+        : escapeHtml(experience.company);
+      
       // Logo section
       let logoHtml = '';
       if (experience.logo_url) {
@@ -647,7 +653,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="card-experience__header">
               <div class="card-experience__title-section">
                 <h3 class="card-experience__role">${escapeHtml(experience.role)}</h3>
-                <span class="card-experience__company">${escapeHtml(experience.company)}</span>
+                <span class="card-experience__company">${companyHtml}</span>
               </div>
               <div class="card-experience__date">
                 <span class="card-experience__duration">${startYear} - ${endYear}</span>
@@ -733,7 +739,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ${logoHtml}
                 <div class="card-experience__modal-title-section">
                   <h3 class="card-experience__role">${escapeHtml(experience.role)}</h3>
-                  <span class="card-experience__company">${escapeHtml(experience.company)}</span>
+                  <span class="card-experience__company">${companyHtml}</span>
                   <div class="card-experience__date">
                     <span class="card-experience__duration">${startYear} - ${endYear}</span>
                     ${experience.current ? '<span class="card-experience__current">Présent</span>' : ''}
