@@ -1,6 +1,6 @@
 # Spec — SEO, GEO et backlinks pour maxime-lenne.fr
 
-Date : 2026-09-25. Statut : lot 1 implémenté (branche `feature/seo-lot-1`), lots 2 à 4 à faire.
+Date : 2026-09-25. Statut : lots 1 et 2 implémentés, lots 3 et 4 à faire.
 
 ## Objectif
 
@@ -89,45 +89,41 @@ par page, `lang` sur `<html>`.
 - Une URL inconnue affiche la 404 du site.
 - Lighthouse SEO = 100.
 
-## Lot 2 — GEO, référencement par les IA (P1, environ une demi-journée)
+## Lot 2 — GEO, référencement par les IA (P1, fait)
 
-1. **`robots.txt` explicite (C10).** Remplacer celui généré par jekyll-sitemap par un `robots.txt` statique :
-   - `Allow: /` pour tous ;
+1. **`robots.txt` explicite (C10).** Fichier Liquid à la racine, qui remplace celui de jekyll-sitemap :
+   - `Allow: /` pour tous, `Disallow` sur `/linkedin/` et `/pages/examples/` ;
    - autorisation explicite de `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-User`,
-     `Claude-SearchBot`, `PerplexityBot`, `Google-Extended` et `Applebot-Extended` ;
-   - `Disallow: /linkedin/` ;
+     `Claude-SearchBot`, `PerplexityBot`, `Perplexity-User`, `Google-Extended` et `Applebot-Extended` ;
    - la ligne `Sitemap`.
-2. **`llms.txt` (C10).** Générer une page Liquid avec `permalink: /llms.txt` et `layout: null`, à partir
-   des données Notion déjà présentes (`_data/notion_*.yml`). Même principe que white-wood.tech :
-   - un résumé en une phrase ;
-   - offres et services, compétences clés, parcours ;
-   - liens vers `/resume/`, `/en/resume/`, white-wood.tech et le contact.
+2. **`llms.txt` (C10).** Page Liquid (`permalink: /llms.txt`, `layout: null`) générée depuis les données
+   déjà présentes : résumé FR/EN, pages, services (`site.services`), expériences
+   (`site.data.notion_experiences`), compétences (`site.data.notion_skills`), FAQ, contacts.
+   - `robots.txt` et `llms.txt` sont exclus de jekyll-minifier, qui aplatissait les sauts de ligne.
+   - `llms-full.txt` n'est pas fait : `llms.txt` contient déjà toutes les expériences.
+3. **Graphe JSON-LD (`_includes/components/json-ld.html`).**
+   - `Person` sur toutes les pages : `@id` `https://maxime-lenne.fr/#person`, description (le résumé),
+     adresse (Lille, FR), `worksFor` → White Wood Tech (`@id` `https://white-wood.tech/#organization`),
+     `alumniOf` (diplômes de `notion_educations`, hors formations professionnelles), `knowsAbout`
+     (catégories de `notion_skills` et compétences de niveau ≥ 80), `sameAs`.
+   - `ProfilePage` sur les pages qui déclarent `profile_page: true` (CV FR/EN).
+   - `FAQPage` sur les pages qui déclarent `faq: true` (accueil FR/EN), depuis `translations.yml`.
+   - Les pages d'expérience sont typées `WebPage` au lieu de `BlogPosting`.
+4. **Contenu citable.**
+   - Paragraphe « En bref » / « In short » en tête de la section « À propos » (`about_section.summary`).
+   - Section FAQ (`_includes/sections/faq-section.html`, accordéon `<details>` natif) avant l'appel à
+     l'action final, 5 questions. Pas de tarifs : aucune donnée publique fiable à citer.
+5. **Pages d'expérience (C14).** Les coquilles venaient de `_collections/_experiences/01-ippon.md`,
+   corrigées avec le texte à jour de Notion.
 
-   Optionnel : un `llms-full.txt` qui contient le CV complet en texte brut, toujours généré depuis les
-   mêmes données.
-3. **Graphe JSON-LD enrichi.** Dans un include unique, n'émettre que sur l'accueil et le CV :
-   - `Person` avec `name`, `jobTitle`, `image`, `url`, `email`, `address` (Lille, FR),
-     `knowsAbout` (issu de `notion_skills`), `alumniOf` (issu de `notion_educations`),
-     `worksFor` → `Organization` White Wood Tech (`url: https://white-wood.tech`), et `sameAs`
-     (LinkedIn, GitHub, X, Malt si le profil existe) ;
-   - `ProfilePage` sur `/resume/` et `/en/resume/`, avec `mainEntity` → la même `Person` (`@id` commun) ;
-   - `WebSite` avec `inLanguage` fr/en.
-
-   Ce graphe doit correspondre à `founder` / `sameAs` dans `src/lib/seo.ts` côté white-wood.tech : même
-   `@id`, par exemple `https://maxime-lenne.fr/#person`.
-4. **Contenu citable.** Les IA reprennent des phrases factuelles et autonomes, d'où ces ajouts :
-   - un paragraphe « En bref » en haut de l'accueil (FR/EN), par exemple : « Maxime Lenne est CTO
-     freelance basé à Lille, fondateur de White Wood Tech. Il accompagne startups et PME… depuis
-     20 ans » ;
-   - une courte FAQ (4 à 6 questions : tarifs indicatifs, zone d'intervention, format « CTO à temps
-     partagé », différence avec White Wood Tech) dans `translations.yml`, balisée `FAQPage`.
-5. **Pages d'expérience (C14).** Corriger les coquilles dans Notion, et vérifier que chaque page a une
-   description unique et un lien vers l'entreprise concernée.
+**À savoir :** sans `NOTION_TOKEN`, le plugin Notion écrase `_data/notion_*.yml` avec des données de
+secours partielles. Pour un build local fidèle, désactiver Notion avec un fichier de config
+supplémentaire (`notion: { enabled: false }`), puis restaurer `_data/` si besoin.
 
 **Critères d'acceptation :**
-- `/llms.txt` et `/robots.txt` répondent 200 avec le contenu attendu.
+- `/llms.txt` et `/robots.txt` répondent 200, avec des sauts de ligne.
 - Le Rich Results Test valide `Person`, `ProfilePage` et `FAQPage` sans erreur.
-- Le `@id` de la `Person` est identique sur les deux sites.
+- Le `@id` de la `Person` est identique sur les deux sites (correction de `seo.ts` côté white-wood.tech).
 
 ## Lot 3 — Maillage et backlinks (P1, en continu, hors code en grande partie)
 
