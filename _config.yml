@@ -47,6 +47,12 @@ plugins:
   - jekyll-compress-images
   - jekyll-minifier
 
+# Plain-text files must keep their line breaks
+jekyll-minifier:
+  exclude:
+    - "robots.txt"
+    - "llms.txt"
+
 # Pagination
 paginate: 5
 paginate_path: "/blog/page:num/"
@@ -120,6 +126,9 @@ defaults:
       type: "experiences"
     values:
       layout: "experience"
+      # Resume entries, not articles: stop jekyll-seo-tag from emitting BlogPosting
+      seo:
+        type: WebPage
   - scope:
       path: ""
       type: "projects"

@@ -1,0 +1,48 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- assign fr = site.data.translations.fr -%}
+{%- assign en = site.data.translations.en -%}
+# {{ site.author.name }}
+
+> {{ en.about_section.summary }}
+
+{{ fr.about_section.summary }}
+
+## Pages
+
+- [Accueil (FR)]({{ '/' | absolute_url }}): services, parcours, témoignages et FAQ
+- [Home (EN)]({{ '/en/' | absolute_url }}): services, background, testimonials and FAQ
+- [CV (FR)]({{ '/resume/' | absolute_url }}): expériences, compétences, formations, distinctions
+- [Resume (EN)]({{ '/en/resume/' | absolute_url }}): experience, skills, education, awards
+
+## Services
+
+{% assign services = site.services | sort: 'order' -%}
+{% for service in services -%}
+- {{ service.title }}: {{ service.description | strip_newlines }}
+{% endfor %}
+## Experience
+
+{% for experience in site.data.notion_experiences -%}
+- {{ experience.title }}{% unless experience.title contains experience.company %}, {{ experience.company }}{% endunless %}{% if experience.current %} (current){% endif %}{% if experience.description %}: {{ experience.description | strip_newlines | truncate: 220 }}{% endif %}
+{% endfor %}
+## Skills
+
+{% for category in site.data.notion_skills -%}
+- {{ category[1].title }}: {% for skill in category[1].items %}{{ skill.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+{% endfor %}
+## FAQ
+
+{% for item in en.faq_section.items -%}
+- **{{ item.question }}** {{ item.answer }}
+{% endfor %}
+## Contact and links
+
+- Email: {{ site.author.email }}
+- Book a call: {{ site.data.theme.site.cta_url }}
+- Company: [White Wood Tech](https://white-wood.tech/)
+- LinkedIn: https://www.linkedin.com/in/{{ site.author.linkedin }}
+- GitHub: https://github.com/{{ site.author.github }}
