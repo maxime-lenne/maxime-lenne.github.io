@@ -70,7 +70,7 @@ faq: true
             J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon.
           </p>
           <p>
-            Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes.
+            Des compétences et expériences que je souhaite mettre à profit dans mes futures missions.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ faq: true
   </div>
 </section>
 
-{% include sections/cta-section.html title="Vous avez un projet ?" %}
+{% include sections/cta-section.html %}
 
 <!-- Testimonials Section -->
 <section class="section section--dark" id="testimonials">
