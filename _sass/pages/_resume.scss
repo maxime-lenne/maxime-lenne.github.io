@@ -291,6 +291,8 @@
   &__dialog {
     width: min(640px, calc(100vw - 32px));
     max-height: calc(100vh - 64px);
+    // The global reset sets margin: 0, which drops the native centering of modal dialogs
+    margin: auto;
     padding: 0;
     background: var(--color-surface);
     color: var(--color-text-primary);
