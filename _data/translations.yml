@@ -43,7 +43,7 @@ fr:
     title_highlight: "le produit, l'innovation et la technique"
     description1: "Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de l'entrepreneuriat, de l'innovation, du management et du produit, tout en continuant à perfectionner mes compétences techniques."
     description2: "J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon."
-    description3: "Des compétences et expériences que je souhaite mettre à profit dans mes futurs postes."
+    description3: "Des compétences et expériences que je souhaite mettre à profit dans mes futures missions."
     cv_button: "Mon CV"
     skills_title: "Mes compétences principales"
     experience_years: "20+"
@@ -59,11 +59,9 @@ fr:
       - question: "Pour quels types d'entreprises intervenez-vous ?"
         answer: "Startups, PME et directions produit de grands groupes. J'ai notamment accompagné l'Insee, Decathlon et Le Wagon, et dirigé la technique d'agences comme Ippon et theTribe."
       - question: "Où intervenez-vous ?"
-        answer: "Je suis basé à Lille. Les modalités, sur site ou à distance, se définissent lors du premier échange."
-      - question: "Quelle est la différence avec White Wood Tech ?"
-        answer: "White Wood Tech est ma société. Elle porte mes missions de CTO et propose aussi des offres packagées, comme des audits de code et des formations, réalisées avec une équipe d'agents IA."
+        answer: "Je suis basé à Lille et je travaille sur site ou à distance, avec des déplacements ponctuels pour des ateliers et des sessions de travail. J'ai par exemple travaillé avec des startups à Grenoble et même à Barcelone. Les modalités se définissent lors de nos premiers échanges."
       - question: "Comment démarrer ?"
-        answer: "Par un appel de 30 minutes pour comprendre votre contexte et voir si je peux vous aider."
+        answer: "Par un premier rendez-vous de 30 minutes pour comprendre votre contexte et voir si et comment je peux vous aider."
 
   services_section:
     badge: "Mes services"
@@ -82,9 +80,9 @@ fr:
     response_time: "Temps de réponse"
 
   cta_section:
-    project_title: "Vous avez un projet ?"
-    project_description: "Discutons de votre projet et voyons comment je peux vous aider."
-    final_title: "Prêt à découvrir votre projet ?"
+    project_title: "Besoin d'un regard tech à vos côtés ?"
+    project_description: "Parlons de vos enjeux et voyons comment je peux vous accompagner, vous et vos équipes."
+    final_title: "Prêt à me confier votre produit ?"
     final_description: "Transformons ensemble votre vision en réalité digitale. Planifiez dès aujourd'hui un rendez-vous."
     button: "Faisons connaissance"
     see_projects: "Voir mes réalisations"
@@ -288,7 +286,7 @@ en:
     title_highlight: "product, innovation and technology"
     description1: "After several years in CTO positions, I've gained solid experience in entrepreneurship, innovation, management and product, while continuing to hone my technical skills."
     description2: "I've worked as CTO in startups like Frizbiz and EcoTa.co (which I co-founded), as well as in service companies like theTribe and Ippon."
-    description3: "Skills and experiences I want to leverage in my future positions."
+    description3: "Skills and experiences I want to leverage in my future engagements."
     cv_button: "My Resume"
     skills_title: "My main skills"
     experience_years: "20+"
@@ -304,11 +302,9 @@ en:
       - question: "What kind of companies do you work with?"
         answer: "Startups, SMEs and product teams in large companies. Clients include Insee, Decathlon and Le Wagon, and I led technology at agencies such as Ippon and theTribe."
       - question: "Where do you work?"
-        answer: "I am based in Lille, France. On-site or remote work is agreed during our first call."
-      - question: "How is this different from White Wood Tech?"
-        answer: "White Wood Tech is my company. It carries my CTO engagements and also offers packaged services, such as code audits and training, delivered with a team of AI agents."
+        answer: "I am based in Lille, France, and work on-site or remotely, with occasional trips for workshops and working sessions. I have worked with startups in Grenoble and even Barcelona, for example. The arrangements are agreed during our first conversations."
       - question: "How do we start?"
-        answer: "With a 30-minute call to understand your context and see whether I can help."
+        answer: "With a first 30-minute meeting to understand your context and see whether and how I can help."
 
   services_section:
     badge: "My services"
@@ -327,9 +323,9 @@ en:
     response_time: "Response time"
 
   cta_section:
-    project_title: "Have a project?"
-    project_description: "Let's discuss your project and see how I can help you."
-    final_title: "Ready to discover your project?"
+    project_title: "Need a tech partner by your side?"
+    project_description: "Let's talk about your challenges and see how I can support you and your team."
+    final_title: "Ready to entrust me with your product?"
     final_description: "Let's transform your vision into digital reality together. Schedule a meeting today."
     button: "Let's connect"
     see_projects: "See my work"
