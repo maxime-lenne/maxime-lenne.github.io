@@ -488,6 +488,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentDisplay = initialDisplay;
     const loadStep = 2;
     
+    // Notion returns a single value instead of a one-item list
+    const asArray = (value) => (value == null ? [] : [].concat(value));
+
     // Store all experiences data
     const allExperiences = [
       {% for experience in sorted_experiences %}
@@ -500,10 +503,10 @@ document.addEventListener('DOMContentLoaded', function() {
         end_date: {{ experience.end_date.start | jsonify }},
         current: {{ experience.current | default: false }},
         description: {{ experience.description | jsonify }},
-        tags: {{ experience.tags | jsonify }} || [],
-        skills: {{ experience.skills | jsonify }} || [],
-        achievements: {{ experience.achievements | jsonify }} || [],
-        missions: {{ experience.missions | jsonify }} || [],
+        tags: asArray({{ experience.tags | jsonify }}),
+        skills: asArray({{ experience.skills | jsonify }}),
+        achievements: asArray({{ experience.achievements | jsonify }}),
+        missions: asArray({{ experience.missions | jsonify }}),
         logo_url: {{ experience.logo_url | jsonify }},
         details: {{ experience.details | jsonify }}
       }{% unless forloop.last %},{% endunless %}
