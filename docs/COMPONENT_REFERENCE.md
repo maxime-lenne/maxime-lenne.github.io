@@ -356,7 +356,13 @@ Typing animation terminal for hero sections.
 %}
 
 {% include sections/final-cta-section.html %}
+
+{% include sections/resume-skills-grid.html lang="fr" limit=10 %}
 ```
+
+`resume-skills-grid.html` renders one card per Notion skill category. Each card shows the first `limit`
+skills (default 10): `Featured` skills first, then the others, each group sorted by `Order`. When a
+category has more, a button opens a native `<dialog>` with all of them.
 
 ---
 

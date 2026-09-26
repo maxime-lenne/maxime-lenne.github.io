@@ -1,0 +1,73 @@
+<!-- Resume Skills Grid: top skills per category, all of them in a dialog -->
+{% assign skills_lang = include.lang | default: page.lang | default: 'fr' %}
+{% assign t = site.data.translations[skills_lang].resume_page %}
+{% assign skills_limit = include.limit | default: 10 %}
+
+<div class="section__grid section__grid--2-col">
+  {% for skill_category in site.data.notion_skills %}
+  {% assign category = skill_category[1] %}
+  {% assign featured_skills = category.items | where_exp: "item", "item.featured == true" | sort: "order", "last" %}
+  {% assign other_skills = category.items | where_exp: "item", "item.featured != true" | sort: "order", "last" %}
+  {% assign sorted_skills = featured_skills | concat: other_skills %}
+  {% capture dialog_id %}skills-dialog-{{ forloop.index }}{% endcapture %}
+
+  <div class="deep-stack-cv-skills__category">
+    <h3 class="deep-stack-cv-skills__category-title">
+      {% include components/skill-category-icon.html icon=category.icon %}
+      {{ category.title }}
+    </h3>
+    <ul class="deep-stack-cv-skills__list">
+      {% for skill in sorted_skills limit: skills_limit %}
+      <li class="deep-stack-cv-skills__item"
+          title="{{ skill.name }}{% if skill.years %} - {{ skill.years }} {{ t.skills_years }}{% endif %}{% if skill.description %} - {{ skill.description }}{% endif %}">
+        {% if skill.icon %}{{ skill.icon }} {% endif %}{{ skill.name }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if sorted_skills.size > skills_limit %}
+    <button type="button" class="deep-stack-cv-skills__more" data-skills-dialog="{{ dialog_id }}">
+      {{ t.skills_see_all | replace: "%count%", sorted_skills.size }}
+    </button>
+
+    <dialog class="deep-stack-cv-skills__dialog" id="{{ dialog_id }}" aria-labelledby="{{ dialog_id }}-title">
+      <div class="deep-stack-cv-skills__dialog-content">
+        <div class="deep-stack-cv-skills__dialog-header">
+          <h3 class="deep-stack-cv-skills__category-title" id="{{ dialog_id }}-title">
+            {% include components/skill-category-icon.html icon=category.icon %}
+            {{ category.title }}
+          </h3>
+          <form method="dialog">
+            <button type="submit" class="deep-stack-cv-skills__dialog-close" aria-label="{{ t.skills_close }}">×</button>
+          </form>
+        </div>
+        <ul class="deep-stack-cv-skills__list">
+          {% for skill in sorted_skills %}
+          <li class="deep-stack-cv-skills__item"
+              title="{{ skill.name }}{% if skill.years %} - {{ skill.years }} {{ t.skills_years }}{% endif %}{% if skill.description %} - {{ skill.description }}{% endif %}">
+            {% if skill.icon %}{{ skill.icon }} {% endif %}{{ skill.name }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </dialog>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+  document.querySelectorAll('[data-skills-dialog]').forEach(function (button) {
+    var dialog = document.getElementById(button.dataset.skillsDialog);
+    if (!dialog || typeof dialog.showModal !== 'function') return;
+
+    button.addEventListener('click', function () {
+      dialog.showModal();
+    });
+
+    // Close when clicking the backdrop, outside the dialog box
+    dialog.addEventListener('click', function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+</script>
