@@ -216,50 +216,128 @@
     gap: 2rem;
   }
   
+  // Plain card, same surface as .card-experience
   &__category {
-    background: linear-gradient(135deg, #1e40af 0%, #16a34a 100%);
-    border-radius: 16px;
-    padding: 2rem;
-    
-    [data-theme="light"] & {
-      border-color: rgba(0, 0, 0, 0.1);
-      .deep-stack-cv-skills__category-title, .deep-stack-cv-skills__list {
-        color: white;
-      }
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
   }
-  
+
   &__category-title {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin: 0;
     font-size: 20px;
     font-weight: 700;
-    color: var(--deep-stack-text-primary);
-    margin-bottom: 20px;
-    [data-theme="light"] & {
-        color: var(white);
-    }
+    color: var(--color-text-primary);
+
     svg {
+      flex-shrink: 0;
       width: 24px;
       height: 24px;
-      color: var(--deep-stack-primary);
+      color: var(--color-primary);
     }
   }
-  
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  
+
+  // Tags keep the brand gradient, darkened so white text passes WCAG AA
   &__item {
     padding: 8px 16px;
-    background: rgba(59, 130, 246, 0.1);
-    color: var(--deep-stack-primary);
+    background: linear-gradient(135deg, #1e40af 0%, #15803d 100%);
+    color: #ffffff;
     font-size: 14px;
     font-weight: 600;
     border-radius: 20px;
+  }
+
+  &__more {
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+
+  // Padding lives on the content so a click on the dialog itself means the backdrop
+  &__dialog {
+    width: min(640px, calc(100vw - 32px));
+    max-height: calc(100vh - 64px);
+    padding: 0;
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+    &::backdrop {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px;
+
+    @media (max-width: 480px) {
+      padding: 24px 16px;
+    }
+  }
+
+  &__dialog-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__dialog-close {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    color: var(--color-text-primary);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
   }
 }
 
