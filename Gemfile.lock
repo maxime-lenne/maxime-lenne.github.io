@@ -106,7 +106,7 @@ GEM
       jekyll (~> 4.0)
       json-minify (~> 0.0.3)
       terser (~> 1.2.3)
-    jekyll-notion-cms (1.0.2)
+    jekyll-notion-cms (1.0.3)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (3.1.0)
