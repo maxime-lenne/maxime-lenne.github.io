@@ -72,7 +72,7 @@
   },
   "lint-staged": {
     "*.md": "markdownlint --fix",
-    "*.{yml,yaml}": "yamllint"
+    "!(notion_*).{yml,yaml}": "yamllint"
   },
   "browserslist": [
     "> 1%",
