@@ -34,6 +34,7 @@ const conventionalRegex = new RegExp(`^(${conventionalTypes.join('|')})(\\(.+\\)
 export default {
   parserPreset: {
     parserOpts: {
+      // Match both gitmoji and conventional formats
       headerPattern: /^(?:(\p{Emoji_Presentation}|\p{Emoji}\uFE0F?)\s)?(?:(\w+)(?:\((.+)\))?:\s)?(.+)$/u,
       headerCorrespondence: ['emoji', 'type', 'scope', 'subject'],
     },

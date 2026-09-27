@@ -315,3 +315,11 @@ exclude:
   - .claude/
   - .idea/
   - .tool-versions
+  - bun.lock
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - commitlint.config.js
+  - release.config.js
+  - renovate.json
+  - scripts/

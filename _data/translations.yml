@@ -157,7 +157,7 @@ fr:
     main_navigation: "Navigation principale"
     toggle_theme: "Changer de thème"
     change_language: "Changer de langue"
-  
+
   common:
     read_more: "Lire la suite"
     view_project: "Voir le projet"
@@ -168,7 +168,7 @@ fr:
     loading: "Chargement..."
     error: "Erreur"
     success: "Succès"
-  
+
   home:
     hero_title: "Maxime Lenne"
     hero_subtitle: "CTO & Leader Produit Tech"
@@ -178,7 +178,7 @@ fr:
     latest_posts: "Derniers articles"
     featured_projects: "Projets en vedette"
     recent_experiences: "Expériences récentes"
-  
+
   about:
     title: "À propos de moi"
     subtitle: "Passionné par la technologie et l'innovation"
@@ -188,7 +188,7 @@ fr:
     education_title: "Formation"
     interests_title: "Centres d'intérêt"
     contact_title: "Contact"
-  
+
   projects:
     title: "Mes Projets"
     subtitle: "Découvrez mes réalisations technologiques"
@@ -203,7 +203,7 @@ fr:
     technologies: "Technologies"
     duration: "Durée"
     status: "Statut"
-  
+
   experiences:
     title: "Expériences Professionnelles"
     subtitle: "Mon parcours dans la tech"
@@ -215,7 +215,7 @@ fr:
     role: "Rôle"
     achievements: "Réalisations"
     technologies: "Technologies utilisées"
-  
+
   blog:
     title: "Blog"
     subtitle: "Partage de connaissances et d'expériences"
@@ -227,7 +227,7 @@ fr:
     related_posts: "Articles similaires"
     no_posts: "Aucun article trouvé"
     search_placeholder: "Rechercher un article..."
-  
+
   contact:
     title: "Contact"
     subtitle: "Discutons de vos projets"
@@ -403,7 +403,7 @@ en:
     main_navigation: "Main navigation"
     toggle_theme: "Toggle theme"
     change_language: "Change language"
-  
+
   common:
     read_more: "Read more"
     view_project: "View project"
@@ -414,7 +414,7 @@ en:
     loading: "Loading..."
     error: "Error"
     success: "Success"
-  
+
   home:
     hero_title: "Maxime Lenne"
     hero_subtitle: "CTO & Tech Product Leader"
@@ -424,7 +424,7 @@ en:
     latest_posts: "Latest posts"
     featured_projects: "Featured projects"
     recent_experiences: "Recent experiences"
-  
+
   about:
     title: "About Me"
     subtitle: "Passionate about technology and innovation"
@@ -434,7 +434,7 @@ en:
     education_title: "Education"
     interests_title: "Interests"
     contact_title: "Contact"
-  
+
   projects:
     title: "My Projects"
     subtitle: "Discover my technological achievements"
@@ -449,7 +449,7 @@ en:
     technologies: "Technologies"
     duration: "Duration"
     status: "Status"
-  
+
   experiences:
     title: "Professional Experience"
     subtitle: "My journey in tech"
@@ -461,7 +461,7 @@ en:
     role: "Role"
     achievements: "Achievements"
     technologies: "Technologies used"
-  
+
   blog:
     title: "Blog"
     subtitle: "Sharing knowledge and experiences"
@@ -473,7 +473,7 @@ en:
     related_posts: "Related posts"
     no_posts: "No posts found"
     search_placeholder: "Search for a post..."
-  
+
   contact:
     title: "Contact"
     subtitle: "Let's discuss your projects"
