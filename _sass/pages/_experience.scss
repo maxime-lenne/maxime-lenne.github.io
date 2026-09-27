@@ -1,0 +1,222 @@
+// Experience detail page (_layouts/experience.html) - BEM
+// Reuses title-hero, badge, list-checked, card-experience logo and resume skill tags.
+
+.experience-page {
+  // Hero -----------------------------------------------------------------
+  // Opaque panel on the gradient, like the resume hero: text keeps its theme colors
+  &__panel {
+    text-align: left;
+
+    @media (max-width: 480px) {
+      padding: 24px;
+    }
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+
+      svg {
+        transform: translateX(-3px);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+
+  &__heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: start;
+
+    @media (min-width: 768px) {
+      grid-template-columns: auto 1fr;
+    }
+
+    // Long roles: a notch smaller than the home and resume heroes
+    .title-hero__main {
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .title-hero__secondary {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+    }
+  }
+
+  &__logo {
+    background: var(--color-surface);
+  }
+
+  &__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+    margin: 0 0 var(--space-lg);
+    padding: 0;
+    list-style: none;
+    color: var(--color-text-secondary);
+    font-size: var(--text-base);
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: var(--color-primary);
+    }
+  }
+
+  &__company-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+
+    .deep-stack-hero__badge {
+      margin: 0;
+    }
+  }
+
+  // Details --------------------------------------------------------------
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    }
+  }
+
+  &__lead {
+    margin: 0 0 var(--space-xl);
+    color: var(--color-text-primary);
+    font-size: var(--text-lg);
+    line-height: 1.7;
+  }
+
+  &__block + &__block {
+    margin-top: var(--space-xl);
+  }
+
+  &__block-title {
+    margin: 0 0 var(--space-md);
+    color: var(--color-text-primary);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+  }
+
+  // list-checked items, one per line: achievements and roles are sentences
+  &__list {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+
+    .list-checked__item {
+      align-items: flex-start;
+      font-size: var(--text-base);
+      line-height: 1.6;
+    }
+
+    .list-checked__icon {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+    }
+  }
+
+  &__missions {
+    margin: 0;
+    padding-left: var(--space-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+
+    li + li {
+      margin-top: var(--space-sm);
+    }
+
+    li::marker {
+      color: var(--color-primary);
+    }
+  }
+
+  // Same surface as .card-experience and the resume skill cards
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+
+    @media (min-width: 1024px) {
+      position: sticky;
+      top: calc(var(--layout-header-height) + var(--space-lg));
+    }
+  }
+
+  &__card {
+    padding: 32px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+
+    @media (max-width: 480px) {
+      padding: 24px;
+    }
+  }
+
+  &__card-title {
+    margin: 0 0 var(--space-md);
+    color: var(--color-text-primary);
+    font-size: var(--text-xl);
+    font-weight: 700;
+  }
+
+  &__about {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+}
