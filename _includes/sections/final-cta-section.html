@@ -12,7 +12,8 @@
       </p>
       <div class="section__actions">
         {% include components/cta-button.html size="large" text=t.header.cta_button icon="arrow" %}
-        {% include components/cta-button.html style="secondary" size="large" text=t.cta_section.see_projects url="projects/" %}
+        {% if cta_lang == 'en' %}{% assign work_url = '/en/resume/#experience' | relative_url %}{% else %}{% assign work_url = '/resume/#experience' | relative_url %}{% endif %}
+        {% include components/cta-button.html style="secondary" size="large" text=t.cta_section.see_projects url=work_url %}
       </div>
     </div>
   </div>
