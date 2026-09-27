@@ -353,4 +353,4 @@ layout:
   container_max_width: 1440
 ```
 
-Voir la [documentation complète des composants](/docs/COMPONENT_REFERENCE.md) pour plus de détails.
+Voir la [documentation complète des composants](https://github.com/maxime-lenne/maxime-lenne.github.io/blob/main/docs/theme/COMPONENT_REFERENCE.md) pour plus de détails.

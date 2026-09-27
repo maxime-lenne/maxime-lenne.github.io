@@ -88,6 +88,7 @@ par page, `lang` sur `<html>`.
      jour le champ `Image` dans Notion.
 
 **Critères d'acceptation :**
+
 - `curl` sur `og-image.jpg` répond 200.
 - Chaque page FR et EN liste `hreflang` fr, en et x-default.
 - Un seul `"@type":"Person"` par page.
@@ -132,6 +133,7 @@ secours partielles. Pour un build local fidèle, désactiver Notion avec un fich
 supplémentaire (`notion: { enabled: false }`), puis restaurer `_data/` si besoin.
 
 **Critères d'acceptation :**
+
 - `/llms.txt` et `/robots.txt` répondent 200, avec des sauts de ligne.
 - Le Rich Results Test valide `Person`, `ProfilePage` et `FAQPage` sans erreur.
 - Le `@id` de la `Person` est identique sur les deux sites (correction de `seo.ts` côté white-wood.tech).
@@ -162,6 +164,7 @@ supplémentaire (`notion: { enabled: false }`), puis restaurer `_data/` si besoi
   de liens payants.
 
 **Indicateurs :**
+
 - nombre de domaines référents (Search Console → Liens) ;
 - présence dans les réponses de ChatGPT, Perplexity et Gemini sur 5 requêtes témoins, testées chaque
   mois.
@@ -177,8 +180,8 @@ supplémentaire (`notion: { enabled: false }`), puis restaurer `_data/` si besoi
 
    Recommandation : Cloudflare, comme pour white-wood.tech. Supprimer aussi la clé `hotjar: "XXXXXXXXXX"`
    inutilisée.
-3. **Suivi.** Lancer Lighthouse sur `/` et `/resume/` après chaque lot, et garder les scores dans
-   `docs/CONFORMITY_REPORT.md`.
+3. **Suivi.** Lancer Lighthouse sur `/` et `/resume/` après chaque lot, et noter les scores dans
+   `docs/TASKS.md`.
 
 ## Hors périmètre
 

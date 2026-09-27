@@ -31,7 +31,8 @@
 
 ---
 
-Static portfolio website for [Maxime Lenne](https://maxime-lenne.fr) (CTO & Tech Product Leader), built with Jekyll SSG, Notion CMS as data source, and deployed on GitHub Pages.
+Static portfolio website for [Maxime Lenne](https://maxime-lenne.fr) (CTO & Tech Product Leader), built with
+Jekyll SSG, Notion CMS as data source, and deployed on GitHub Pages.
 
 ## Features
 
