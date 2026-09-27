@@ -20,7 +20,7 @@ sitemap: false
 
 ## Areas of work
 
-{% assign services = site.services | sort: 'order' -%}
+{% assign services = site.data.notion_services | sort: 'order' -%}
 {% for service in services -%}
 - {{ service.title }}: {{ service.description | strip_newlines }}
 {% endfor %}
