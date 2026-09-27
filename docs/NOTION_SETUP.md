@@ -331,6 +331,23 @@ Le plugin génère automatiquement :
 - **`_data/notion_blog_posts.yml`** - Données des articles de blog importées depuis Notion
 - **`site.data.notion_*`** - Données accessibles dans Jekyll pour chaque collection
 
+### Fallback et pages d'expérience
+
+Commitez les fichiers `_data/notion_*.yml` après chaque mise à jour dans Notion : depuis
+jekyll-notion-cms 1.0.3, ce sont eux qui servent quand Notion est inaccessible (pas de token, base
+introuvable). Le plugin ne les écrase plus avec les données de secours.
+
+`_collections/_experiences/` sert à la fois de fallback et de source aux pages publiques
+`/experiences/:slug/`. Seules les expériences qui ont un fichier ont une page. Pour les remettre à jour :
+
+```bash
+make sync-experiences   # récupère Notion puis lance scripts/sync_experiences.rb
+```
+
+Le script remplace les champs par ceux de Notion et garde `slug`, `layout` et `sub-roles`, donc les
+URL ne changent pas. Pour publier une autre expérience, créez un fichier avec son `notion_id` (le champ
+`id` de `_data/notion_experiences.yml`), un `slug` et `layout: experience`, puis relancez la commande.
+
 ### Structure des données générées
 
 #### Skills
