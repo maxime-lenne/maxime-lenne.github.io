@@ -175,7 +175,7 @@ notion:
         - { name: End Date, type: date, key: end_date }
         - { name: Current, type: checkbox }
         - { name: Location, type: rich_text }
-        - { name: Type, type: rich_text }
+        - { name: Type, type: select }
         - { name: Order, type: number }
         - { name: Logo URL, type: url, key: logo_url }
         - { name: Description, type: rich_text }
