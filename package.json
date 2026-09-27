@@ -1,6 +1,6 @@
 {
   "name": "maxime-lenne-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Static portfolio website for Maxime Lenne built with Jekyll SSG and JAMstack architecture",
   "type": "module",
   "main": "index.js",
