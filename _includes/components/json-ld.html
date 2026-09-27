@@ -19,7 +19,7 @@
 
 {% assign schools = '' %}
 {% for education in site.data.notion_educations %}
-  {% if education.degree_type != 'Professional' and education.institution %}
+  {% if education.degree_type != 'Professional' and education.degree_type != 'Certification' and education.institution %}
     {% assign schools = schools | append: education.institution | append: '|' %}
   {% endif %}
 {% endfor %}

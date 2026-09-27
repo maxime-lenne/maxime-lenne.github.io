@@ -111,7 +111,7 @@ par page, `lang` sur `<html>`.
 3. **Graphe JSON-LD (`_includes/components/json-ld.html`).**
    - `Person` sur toutes les pages : `@id` `https://maxime-lenne.fr/#person`, description (texte « À propos »),
      adresse (Lille, FR), `worksFor` → White Wood Tech (`@id` `https://white-wood.tech/#organization`),
-     `alumniOf` (diplômes de `notion_educations`, hors formations professionnelles), `knowsAbout`
+     `alumniOf` (diplômes de `notion_educations`, hors formations professionnelles et certifications), `knowsAbout`
      (catégories de `notion_skills` et compétences de niveau ≥ 80), `sameAs`.
    - `ProfilePage` sur les pages qui déclarent `profile_page: true` (CV FR/EN).
    - `FAQPage` sur les pages qui déclarent `faq: true` (accueil FR/EN), depuis `translations.yml`.
