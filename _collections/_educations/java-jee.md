@@ -7,7 +7,7 @@ field: "Java et Architectures JEE complexes : Spring Hibernate JSF"
 start_date: "2009-01-01"
 end_date: ""
 completed: false  # Formations continues
-order: 2
+order: 3
 description: "Java et Architectures JEE complexes : Spring Hibernate JSF"
 skills:
   - "Java"
