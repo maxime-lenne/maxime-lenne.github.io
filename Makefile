@@ -123,7 +123,7 @@ quick-serve: ## Démarrer rapidement le serveur (sans build)
 
 dev-build: ## Build rapide pour le développement
 	@echo "🔨 Build rapide..."
-	$(ENV_VARS) bundle exec jekyll build --config _config.yml,_config.dev.yml --incremental
+	$(ENV_VARS) bundle exec jekyll build --config _config.yml,_config.dev.yml --no-watch
 
 # Commandes de déploiement
 pre-deploy: ## Préparer le déploiement
