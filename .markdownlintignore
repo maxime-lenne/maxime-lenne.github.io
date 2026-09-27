@@ -1,0 +1,12 @@
+# Dependencies and build output
+node_modules/
+vendor/
+_site/
+
+# Jekyll pages: HTML and Liquid templates with a .md extension, not Markdown documents
+index.md
+resume.md
+en/
+pages/
+_collections/
+_posts/
