@@ -92,17 +92,23 @@ Votre base de données Experiences doit contenir les propriétés suivantes :
 
 ### Base de Données Awards
 
+Les réalisations des prix et des contributions sont des pages de la table **Items** (comme les missions
+et réalisations des expériences) : une réalisation par page, ce qui évite les limites du multi-select
+(pas de virgule, 100 caractères) et garde l'ordre d'affichage.
+
 Votre base de données Awards doit contenir les propriétés suivantes :
 
 | Propriété | Type | Description | Exemple |
 |-----------|------|-------------|---------|
 | **Title** | Title | Titre de la récompense | "Programme d'accélération Euratechnologies" |
 | **Organization** | Text | Organisation | "Euratechnologies" |
+| **Award Type** | Select | Type de prix | "Recognition", "Competition" |
 | **Date** | Date | Date de la récompense | "2015-06-01" |
 | **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
 | **Project** | Text | Projet associé | "EcoTa.co" |
 | **Description** | Rich Text | Description | "Sélection pour le programme d'accélération..." |
-| **Achievements** | Multi-select | Réalisations | "Sélection parmi 200+ candidatures", "Accompagnement business" |
+| **Items** | Relation | Réalisations dans la table Items (Type = Achievement) | « Sélection parmi 200+ candidatures » |
+| **Achievements** | Rollup | Noms des Items liés (`show_original`), dans l'ordre de la relation | — |
 | **Impact** | Rich Text | Impact | "Développement accéléré de la startup..." |
 
 ### Base de Données Contributions
@@ -115,7 +121,8 @@ Votre base de données Contributions doit contenir les propriétés suivantes :
 | **Description** | Rich Text | Description | "Accompagnement de l'association..." |
 | **Links** | Text | Liens | "<https://example.com>" |
 | **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
-| **Achievements** | Multi-select | Réalisations | "Choix et migration nouvel hébergeur", "Mise en place Google workspace" |
+| **Items** | Relation | Réalisations dans la table Items (Type = Achievement) | « Mise en place Google workspace » |
+| **Achievements** | Rollup | Noms des Items liés (`show_original`), dans l'ordre de la relation | — |
 | **Labels** | Multi-select | Labels | "Cloud", "Scaleway", "Google workspace" |
 
 ### Base de Données Educations
@@ -126,7 +133,7 @@ Votre base de données Educations doit contenir les propriétés suivantes :
 |-----------|------|-------------|---------|
 | **Title** | Title | Titre de la formation | "DUT Génie Électrique et Informatique Industrielle" |
 | **Institution** | Text | Établissement | "IUTA Lille 1" |
-| **Degree Type** | Text | Type de diplôme | "DUT" |
+| **Degree Type** | Select | Type de diplôme (icône distincte pour Certification) | "DUT", "Professional", "Certification" |
 | **Location** | Text | Localisation | "Lille" |
 | **Field** | Text | Domaine d'étude | "Génie Électrique et Informatique Industrielle" |
 | **Start Date** | Date | Date de début | "2001-09-01" |
@@ -147,7 +154,7 @@ Votre base de données Services doit contenir les propriétés suivantes :
 | **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
 | **Description** | Rich Text | Description | "Définissez une roadmap produit claire..." |
 | **Features** | Multi-select | Fonctionnalités | "Tech advisor", "Tech Product Leader", "Product Builder" |
-| **Feature Type** | Text | Type de fonctionnalité | "tags" |
+| **Feature Type** | Select | Type de fonctionnalité | "tags" |
 | **Keywords** | Multi-select | Mots-clés | "Go-to-market", "MVP", "Nocode / IA" |
 
 ### Base de Données Testimonials

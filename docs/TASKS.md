@@ -10,7 +10,7 @@ Project task tracking.
 - [ ] Topics list (Notion), see <https://coderon-jekyll.netlify.app/>
 - [ ] Featured posts section, see <https://coderon-jekyll.netlify.app/>
 - [ ] Add blog posts (Notion), then re-enable the `blog_posts` collection in `_config.yml`
-- [ ] Move all content to Notion
+- [ ] Move the remaining content to Notion (skills categories, blog posts)
 - [ ] Add contact page
 - [ ] Claude Code skill carousel component
 - [ ] LinkedIn carousel — make accessible (embed in a page)
@@ -22,7 +22,6 @@ Project task tracking.
 - [ ] Mark the main skills as `Featured` and set their `Order`: the resume shows the top 10 per category
 - [ ] Sort out the « Langages & Frameworks » and « Other » skill categories
 - [ ] Fix the EcoTa.co experience type (`Funder` → `Founder`)
-- [ ] Replace the `your_…` placeholders in `.env` with the real database IDs, or remove them
 
 ### SEO — see [`SEO_GEO_BACKLINKS.md`](./SEO_GEO_BACKLINKS.md)
 
@@ -57,6 +56,7 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [x] Footer « Projets » column and company links on experience cards
 - [x] Limit the skills shown per category (top 10, all in a dialog)
 - [x] Experience pages synced from Notion (`make sync-experiences`)
+- [x] Awards, contributions, educations, services and testimonials moved to Notion (achievements in Items)
 - [x] Align with the [GitHub repository template](https://github.com/maxime-lenne/github-repository-template):
   `develop` → `main` workflow, semantic-release, Renovate, lint CI, husky hooks, `setup:github`
 
