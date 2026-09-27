@@ -56,6 +56,7 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [x] Footer « Projets » column and company links on experience cards
 - [x] Limit the skills shown per category (top 10, all in a dialog)
 - [x] Experience pages synced from Notion (`make sync-experiences`)
+- [x] Experience pages redesigned with the theme components (hero panel, details, company card, final CTA)
 - [x] Awards, contributions, educations, services and testimonials moved to Notion (achievements in Items)
 - [x] Align with the [GitHub repository template](https://github.com/maxime-lenne/github-repository-template):
   `develop` → `main` workflow, semantic-release, Renovate, lint CI, husky hooks, `setup:github`

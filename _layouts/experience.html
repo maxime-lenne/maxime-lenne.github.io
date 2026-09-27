@@ -1,170 +1,157 @@
 ---
 layout: default
 ---
-<section class="section section--light" id="experience">
-    <div class="section__container">
-      <div class="section__header">
-        <div class="card-experience">
-            
-            {% if page.logo_url %}
-                <div class="card-experience__logo card-experience__logo--img">
-                    <img src="{{ page.logo_url }}" alt="{{ page.company }} logo" class="card-experience__logo-img">
-                </div>
-            {% else %}
-                <div class="card-experience__logo">
-                    <div class="card-experience__logo-placeholder">
-                    {{ page.company | slice: 0, 2 | upcase }}
-                    </div>
-                </div>
-            {% endif %}
-            
-            <div class="card-experience__content">
-                <div class="card-experience__header">
-                <div class="card-experience__title-section">
-                    <h3 class="card-experience__role">{{ page.role }}</h3>
-                    <span class="card-experience__company">{{ page.company }}</span>
-                </div>
-                <div class="card-experience__date">
-                    <span class="card-experience__duration">{{ page.start_date | date: "%Y" }} - {{ page.end_date | date: "%Y" }}</span>
-                    {% if page.current %}
-                    <span class="card-experience__current">Présent</span>
-                    {% endif %}
-                </div>
-                </div>
+{% comment %} Experience detail page, generated from _collections/_experiences (synced from Notion) {% endcomment %}
+{% assign start_year = page.start_date | date: "%Y" %}
+{% if page.current %}
+  {% assign end_year = "Aujourd'hui" %}
+{% else %}
+  {% assign end_year = page.end_date | date: "%Y" %}
+{% endif %}
 
-                <p class="card-experience__description">{{ page.description }}</p>
-                
-                
-                {% if page.tags %}
-                    <div class="card-experience__tags">
-                        {% for tag in page.tags %}
-                        {% include components/badge.html text=tag %}
-                        {% endfor %}
-                    </div>
-                {% endif %}
-                
-                {% if page.achievements %}
-                    <div class="card-experience__achievements">
-                    {% for achievement in page.achievements %}
-                        <div class="card-experience__achievement">
-                        <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
-                        </svg>
-                        <span>{{ achievement }}</span>
-                        </div>
-                    {% endfor %}
-                    </div>
-                {% endif %}
+<!-- Hero -->
+<section class="section section--gradient-light experience-page__hero">
+  <div class="section__container section__container--dark-background experience-page__panel">
+    <a href="{{ '/resume/#experience' | relative_url }}" class="experience-page__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Retour au parcours
+    </a>
 
-                {% if page.skills %}
-                    <div class="card-experience__skills">
-                    {% for skill in page.skills %}
-                        {% include components/badge.html text=skill %}
-                    {% endfor %}
-                    </div>
-                {% endif %}
-                
-                <div class="card-experience__actions">
-                {% include components/cta-button.html style="secondary" text="En savoir plus" url=page.url %}
-                </div>
-            </div>
+    <div class="experience-page__heading">
+      {% if page.logo_url %}
+        <div class="card-experience__logo card-experience__logo--img experience-page__logo">
+          <img src="{{ page.logo_url | relative_url }}" alt="Logo {{ page.company }}" class="card-experience__logo-img" width="80" height="80">
         </div>
+      {% else %}
+        <div class="card-experience__logo experience-page__logo" aria-hidden="true">
+          <div class="card-experience__logo-placeholder">{{ page.company | slice: 0, 2 | upcase }}</div>
+        </div>
+      {% endif %}
 
-        <article class="experience-detail">
+      <div>
+        {% include components/title-hero.html main_text=page.role highlight_text=page.company %}
 
-            <header class="experience-detail__header">
-                <h1 class="experience-detail__title">{{ page.role }}</h1>
-                <p class="experience-detail__period">
-                {{ page.start_date }} - {{ page.current | default: page.end_date }}
-                </p>
-            </header>
+        <ul class="experience-page__facts">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+            </svg>
+            {{ start_year }}{% if end_year != start_year %} – {{ end_year }}{% endif %}
+          </li>
+          {% if page.location %}
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            {{ page.location }}
+          </li>
+          {% endif %}
+          {% if page.type %}
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
+            </svg>
+            {{ page.type }}
+          </li>
+          {% endif %}
+          {% if page.company_url %}
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+            </svg>
+            <a href="{{ page.company_url }}" class="experience-page__company-link">{{ page.company_url | remove: "https://" | remove: "http://" | split: "/" | first }}</a>
+          </li>
+          {% endif %}
+        </ul>
 
-            <aside class="experience-detail__aside">
-                {% if page.logo_url %}
-                    <div class="card-experience__logo card-experience__logo--img">
-                        <img src="{{ page.logo_url }}" alt="{{ page.company }} logo" class="card-experience__logo-img">
-                    </div>
-                {% else %}
-                    <div class="card-experience__logo">
-                        <div class="card-experience__logo-placeholder">
-                        {{ page.company | slice: 0, 2 | upcase }}
-                        </div>
-                    </div>
-                {% endif %}
-                <h2 class="experience-detail__company">{{ page.company }}</h2>
-                <p class="experience-detail__location">{{ page.location }}</p>
-                <p class="experience-detail__type">{{ page.type }}</p>
-                <p class="experience-detail__about">{{ page.about }}</p>
-            </aside>
-
-            <div class="experience-detail__content">
-                <p class="experience-detail__description">{{ page.description }}</p>
-                
-                {% if page.sub-roles %}
-                <section class="experience-detail__sub-roles">
-                    <h3>Sub-roles</h3>
-                    {% if page.sub-roles %}
-                        <div class="card-experience__sub-roles">
-                            {% for sub-role in page.sub-roles %}
-                                <div class="card-experience__sub-role">
-                                    <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                        <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
-                                    </svg>
-                                    <span>{{ sub-role }}</span>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                </section>
-                {% endif %}
-                
-                {% if page.achievements %}
-                <section class="experience-detail__achievements">
-                    <h3>Principales réalisations</h3>
-                    {% if page.achievements %}
-                        <div class="card-experience__achievements">
-                        {% for achievement in page.achievements %}
-                            <div class="card-experience__achievement">
-                            <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
-                            </svg>
-                            <span>{{ achievement }}</span>
-                            </div>
-                        {% endfor %}
-                        </div>
-                    {% endif %}
-
-                </section>
-                {% endif %}
-
-                {% if page.missions %}
-                <section class="experience-detail__missions">
-                    <h3>Principales missions</h3>
-                    {% if page.missions %}
-                        <div class="card-experience__missions">
-                            <ul>
-                        {% for mission in page.missions %}
-                            <li>{{ mission }}</li>
-                        {% endfor %}
-                            </ul>
-                        </div>
-                    {% endif %}
-
-                </section>
-                {% endif %}
-                
-                {% if page.skills %}
-                <section class="experience-detail__skills">
-                    <h3>Compétences utilisées</h3>
-                    <div class="skills-list">
-                    {% for skill in page.skills %}
-                        <span class="skill-tag">{{ skill }}</span>
-                    {% endfor %}
-                    </div>
-                </section>
-                {% endif %}
-            </div>
-        </article>
+        {% if page.tags.size > 0 %}
+        <div class="experience-page__tags">
+          {% for tag in page.tags %}
+            {% include components/badge.html text=tag %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Details -->
+<section class="section section--light">
+  <div class="section__container experience-page__layout">
+    <div class="experience-page__main">
+      {% if page.description %}
+        <p class="experience-page__lead">{{ page.description }}</p>
+      {% endif %}
+
+      {% if page.sub-roles.size > 0 %}
+      <section class="experience-page__block" aria-labelledby="experience-roles">
+        <h2 class="experience-page__block-title" id="experience-roles">Rôles</h2>
+        <ul class="list-checked__grid experience-page__list">
+          {% for sub_role in page.sub-roles %}
+          <li class="list-checked__item">
+            <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
+            </svg>
+            <span>{{ sub_role }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if page.achievements.size > 0 %}
+      <section class="experience-page__block" aria-labelledby="experience-achievements">
+        <h2 class="experience-page__block-title" id="experience-achievements">Principales réalisations</h2>
+        <ul class="list-checked__grid experience-page__list">
+          {% for achievement in page.achievements %}
+          <li class="list-checked__item">
+            <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
+            </svg>
+            <span>{{ achievement }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if page.missions.size > 0 %}
+      <section class="experience-page__block" aria-labelledby="experience-missions">
+        <h2 class="experience-page__block-title" id="experience-missions">Missions</h2>
+        <ul class="experience-page__missions">
+          {% for mission in page.missions %}
+          <li>{{ mission }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    </div>
+
+    {% if page.about or page.skills.size > 0 %}
+    <aside class="experience-page__aside">
+      {% if page.about %}
+      <section class="experience-page__card" aria-labelledby="experience-company">
+        <h2 class="experience-page__card-title" id="experience-company">À propos de {{ page.company }}</h2>
+        <p class="experience-page__about">{{ page.about }}</p>
+      </section>
+      {% endif %}
+
+      {% if page.skills.size > 0 %}
+      <section class="experience-page__card" aria-labelledby="experience-skills">
+        <h2 class="experience-page__card-title" id="experience-skills">Compétences mobilisées</h2>
+        <ul class="deep-stack-cv-skills__list">
+          {% for skill in page.skills %}
+          <li class="deep-stack-cv-skills__item">{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    </aside>
+    {% endif %}
+  </div>
+</section>
+
+{% include sections/final-cta-section.html %}
