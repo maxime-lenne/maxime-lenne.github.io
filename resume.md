@@ -162,7 +162,7 @@ profile_page: true
     </div>
     
     <div class="section__grid section__grid--3-col" id="contributions-grid">
-      {% assign sorted_contributions = site.contributions | sort: 'order' %}
+      {% assign sorted_contributions = site.data.notion_contributions | sort: 'order' %}
       {% assign total_contributions = sorted_contributions.size %}
       {% assign initial_display = 6 %}
       
@@ -217,7 +217,7 @@ profile_page: true
             title_highlight="Certifications"
             subtitle="🇫🇷 Français (Natif) - 🇬🇧 Anglais (Professionnel)" %}
         <div class="deep-stack-cv-education__grid">
-          {% assign sorted_education = site.educations | sort: 'order' %}
+          {% assign sorted_education = site.data.notion_educations | sort: 'order' %}
           {% for education in sorted_education %}
           <div class="deep-stack-cv-education__item">
             <div class="deep-stack-cv-education__icon">
@@ -239,7 +239,7 @@ profile_page: true
             </div>
             <div class="deep-stack-cv-education__content">
               <h3 class="deep-stack-cv-education__degree">{{ education.title }}</h3>
-              <p class="deep-stack-cv-education__school">{{ education.institution }} - {{ education.start_date | date: "%Y" }}</p>
+              <p class="deep-stack-cv-education__school">{{ education.institution }} - {{ education.start_date.start | default: education.start_date | date: "%Y" }}</p>
               {% if education.certifications %}
               <div class="deep-stack-cv-education__certifications">
                   {% for cert in education.certifications %}
@@ -261,7 +261,7 @@ profile_page: true
               title="Prix &"
               title_highlight="distinctions" %}
           
-        {% assign sorted_awards = site.awards | sort: 'order' %}
+        {% assign sorted_awards = site.data.notion_awards | sort: 'order' %}
         {% for award in sorted_awards %}
           <div class="deep-stack-cv-awards__item">
               <div class="deep-stack-cv-awards__icon">
@@ -276,7 +276,7 @@ profile_page: true
               </div>
               <div class="deep-stack-cv-awards__content">
                 <h3 class="deep-stack-cv-awards__title-item">{{ award.title }}</h3>
-                <p class="deep-stack-cv-awards__organization">{{ award.organization }} - {{ award.date | date: "%Y" }}</p>
+                <p class="deep-stack-cv-awards__organization">{{ award.organization }} - {{ award.date.start | default: award.date | date: "%Y" }}</p>
               </div>
           </div>
         {% endfor %}

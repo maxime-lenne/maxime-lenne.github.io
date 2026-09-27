@@ -193,11 +193,12 @@ notion:
       properties:
         - { name: Title, type: title }
         - { name: Organization, type: rich_text }
+        - { name: Award Type, type: select, key: award_type }
         - { name: Date, type: date }
         - { name: Order, type: number }
         - { name: Project, type: rich_text }
         - { name: Description, type: rich_text }
-        - { name: Achievements, type: multi_select }
+        - { name: Achievements, type: rollup }  # names of the related Items
         - { name: Impact, type: rich_text }
 
     contributions:
@@ -210,7 +211,7 @@ notion:
         - { name: Description, type: rich_text }
         - { name: Links, type: rich_text }
         - { name: Order, type: number }
-        - { name: Achievements, type: multi_select }
+        - { name: Achievements, type: rollup }  # names of the related Items
         - { name: Labels, type: multi_select }
 
     educations:
@@ -221,7 +222,7 @@ notion:
       properties:
         - { name: Title, type: title }
         - { name: Institution, type: rich_text }
-        - { name: Degree Type, type: rich_text, key: degree_type }
+        - { name: Degree Type, type: select, key: degree_type }
         - { name: Location, type: rich_text }
         - { name: Field, type: rich_text }
         - { name: Start Date, type: date, key: start_date }
@@ -242,7 +243,7 @@ notion:
         - { name: Order, type: number }
         - { name: Description, type: rich_text }
         - { name: Features, type: multi_select }
-        - { name: Feature Type, type: rich_text, key: feature_type }
+        - { name: Feature Type, type: select, key: feature_type }
         - { name: Keywords, type: multi_select }
 
     testimonials:
