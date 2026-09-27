@@ -103,6 +103,12 @@ notion-sync: ## Synchroniser le contenu depuis Notion
 	$(ENV_VARS) bundle exec jekyll build --config _config.yml,_config_prod.yml
 	@echo "✅ Synchronisation terminée!"
 
+sync-experiences: ## Mettre à jour les pages d'expérience depuis Notion
+	@echo "🔄 Synchronisation des expériences depuis Notion..."
+	$(ENV_VARS) bundle exec jekyll build --config _config.yml,_config_prod.yml
+	bundle exec ruby scripts/sync_experiences.rb
+	@echo "✅ Expériences synchronisées!"
+
 # Commandes de maintenance
 update-deps: ## Mettre à jour toutes les dépendances
 	@echo "🔄 Mise à jour des dépendances..."
