@@ -4,7 +4,9 @@ Ce document décrit l'utilisation des classes CSS réutilisables pour créer des
 
 ## Vue d'ensemble
 
-Le système de sections réutilisables permet de créer des layouts de page en utilisant des classes CSS standardisées plutôt que des composants Jekyll spécifiques. Cette approche offre plus de flexibilité pour le contenu et facilite la maintenance.
+Le système de sections réutilisables permet de créer des layouts de page en utilisant des classes CSS
+standardisées plutôt que des composants Jekyll spécifiques. Cette approche offre plus de flexibilité pour le
+contenu et facilite la maintenance.
 
 ## Structure de base
 
@@ -65,6 +67,7 @@ Section d'accueil avec fond dégradé et éléments décoratifs.
 ```
 
 **Caractéristiques :**
+
 - Hauteur minimale de 100vh
 - Fond dégradé avec éléments décoratifs animés
 - Layout en 2 colonnes sur desktop
@@ -141,6 +144,7 @@ Section CTA avec dégradé coloré.
 ```
 
 **Caractéristiques :**
+
 - Fond dégradé bleu-vert
 - Texte blanc
 - Effets de lumière décoratifs
@@ -168,6 +172,7 @@ Section CTA finale avec dégradé subtil.
 ```
 
 **Caractéristiques :**
+
 - Fond neutre en mode clair
 - Dégradé subtil en mode sombre
 - Texte adaptatif selon le thème
@@ -218,6 +223,7 @@ Section à propos avec layout en 2 colonnes.
 ```
 
 **Caractéristiques :**
+
 - Layout en 2 colonnes sur desktop
 - Image à gauche, texte à droite
 - Titre avec texte en dégradé
@@ -304,13 +310,15 @@ Toutes les sections supportent automatiquement le thème sombre via les variable
 1. **Toujours utiliser la structure de base** : `.section` > `.section__container` > `.section__content`
 
 2. **Combiner les variantes** : Utiliser plusieurs classes pour créer des sections personnalisées
+
    ```html
    <section class="section section--light section--about">
    ```
 
 3. **Utiliser les composants existants** : Intégrer les composants Jekyll dans la structure des sections
 
-4. **Respecter la hiérarchie** : Utiliser les classes d'éléments appropriées (`.section__title`, `.section__description`, etc.)
+4. **Respecter la hiérarchie** : Utiliser les classes d'éléments appropriées (`.section__title`,
+   `.section__description`, etc.)
 
 5. **Optimiser pour le contenu** : Choisir la variante de grille appropriée selon le nombre d'éléments
 

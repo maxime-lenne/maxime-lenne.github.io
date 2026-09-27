@@ -81,7 +81,7 @@ Votre base de données Experiences doit contenir les propriétés suivantes :
 | **Type** | Select | Type de contrat | "full-time", "part-time", "freelance" |
 | **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
 | **Logo URL** | Text | URL du logo | "/assets/images/companies/ippon.jpg" |
-| **Company URL** | URL | Site de l'entreprise, affiché en lien sur le nom | "https://white-wood.tech/" |
+| **Company URL** | URL | Site de l'entreprise, affiché en lien sur le nom | "<https://white-wood.tech/>" |
 | **Description** | Rich Text | Description courte | "Direction technique d'une agence..." |
 | **About** | Rich Text | À propos de l'entreprise | "Ippon est un cabinet de conseil..." |
 | **Tags** | Multi-select | Tags | "ESN", "Startup", "Product" |
@@ -113,7 +113,7 @@ Votre base de données Contributions doit contenir les propriétés suivantes :
 |-----------|------|-------------|---------|
 | **Title** | Title | Titre de la contribution | "CTO bénévole en 2025 pour la Fédération National des Samu Sociaux" |
 | **Description** | Rich Text | Description | "Accompagnement de l'association..." |
-| **Links** | Text | Liens | "https://example.com" |
+| **Links** | Text | Liens | "<https://example.com>" |
 | **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
 | **Achievements** | Multi-select | Réalisations | "Choix et migration nouvel hébergeur", "Mise en place Google workspace" |
 | **Labels** | Multi-select | Labels | "Cloud", "Scaleway", "Google workspace" |
@@ -158,7 +158,7 @@ Votre base de données Testimonials doit contenir les propriétés suivantes :
 |-----------|------|-------------|---------|
 | **Name** | Title | Nom du client | "David Prilliez" |
 | **Role** | Text | Rôle du client | "Chef du SNDIL, Insee" |
-| **Image** | Text | URL de l'image | "https://media.licdn.com/..." |
+| **Image** | Text | URL de l'image | "<https://media.licdn.com/>..." |
 | **Order** | Number | Ordre d'affichage | 1, 2, 3, 4, 5, 6 |
 | **Quote** | Rich Text | Témoignage | "Un grand merci pour ton travail..." |
 | **Rating** | Number | Note (1-5) | 5 |
@@ -189,6 +189,7 @@ Votre base de données Blog Posts doit contenir les propriétés suivantes :
 ### Exemple de données
 
 #### Table Skills
+
 ```
 Name: Ruby on Rails
 Level: 95
@@ -202,6 +203,7 @@ Color: red (rollup)
 ```
 
 #### Table Categories
+
 ```
 Name: Backend
 Child Categories: [Relation vers catégories enfants]
@@ -212,6 +214,7 @@ Order: 3
 ```
 
 #### Table Blog Posts
+
 ```
 Title: Comment devenir CTO en 2024
 Slug: comment-devenir-cto-2024
@@ -232,6 +235,7 @@ SEO Description: Découvrez les étapes clés pour devenir CTO...
 ```
 
 #### Table Experiences
+
 ```
 Title: CTO - Ippon
 Company: Ippon
@@ -310,11 +314,13 @@ Après avoir configuré les secrets, vous pouvez vérifier que tout fonctionne :
 
 2. **Vérifiez les logs** :
    - Dans les logs du build, vous devriez voir :
+
      ```
      Notion: Fetching data from Notion API...
      Notion: Skills data fetched successfully (X categories)
      Notion: Experiences data fetched successfully (X experiences)
      ```
+
    - Si vous voyez `Notion: No NOTION_TOKEN found, using collections fallback`, cela signifie que le secret n'est pas configuré
 
 ## 📁 Fichiers Générés
@@ -351,6 +357,7 @@ URL ne changent pas. Pour publier une autre expérience, créez un fichier avec 
 ### Structure des données générées
 
 #### Skills
+
 ```yaml
 Backend:
   title: "Backend"
@@ -387,6 +394,7 @@ Frontend:
 ```
 
 #### Blog Posts
+
 ```yaml
 - title: "Comment devenir CTO en 2024"
   slug: "comment-devenir-cto-2024"
@@ -408,6 +416,7 @@ Frontend:
 ```
 
 #### Experiences
+
 ```yaml
 - title: "CTO - Ippon"
   company: "Ippon"
@@ -833,6 +842,7 @@ Le plugin est configuré pour se synchroniser automatiquement :
 ### Optimisation des performances
 
 Le plugin évite les boucles infinies en :
+
 - Vérifiant si le contenu a changé avant d'écrire les fichiers
 - Utilisant des logs pour indiquer quand les données sont inchangées
 - Évitant les régénérations inutiles

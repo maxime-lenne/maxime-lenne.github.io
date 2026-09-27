@@ -178,10 +178,11 @@ feature/xxx                F──G───────────────
 
 **Golden rules:**
 
-1. **Never commit directly to `main`** — only via PR from `develop`
-2. **Never commit directly to `develop`** — always via feature/fix branch
-3. **Always rebase** on `develop` before opening a PR
-4. **Never `git merge main` into `develop`** — use `git rebase origin/main`
+1. **Never commit directly to `main`** — only receives changes via PR from `develop`
+2. **Never commit directly to `develop`** — always go through a feature/fix branch
+3. **Never `git merge main` into `develop`** — `develop` is rebased onto `main`
+   automatically after each release (`release.yml`), or with `bun run sync:develop`
+4. **Always rebase your branch on `develop`** before opening a PR
 
 ### Branch Naming
 

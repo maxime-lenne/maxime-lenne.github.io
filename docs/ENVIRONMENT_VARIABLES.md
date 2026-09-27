@@ -4,7 +4,9 @@ Ce document décrit les variables d'environnement nécessaires pour le fonctionn
 
 ## Variables Notion (optionnelles)
 
-Le site peut fonctionner avec ou sans les variables Notion. Si elles ne sont pas définies, le système utilisera automatiquement les collections Jekyll comme fallback.
+Le site peut fonctionner avec ou sans les variables Notion. Sans elles, il utilise les fichiers
+`_data/notion_*.yml` commités (jekyll-notion-cms 1.0.3 ne les écrase plus), et les collections Jekyll
+seulement si ces fichiers n'existent pas.
 
 ### Variables requises pour la synchronisation Notion
 
@@ -31,12 +33,14 @@ NOTION_TESTIMONIALS_DB=your_testimonials_database_id
 ## Commandes Make
 
 ### Mode local (sans Notion)
+
 ```bash
 make local          # Démarrer le serveur avec les collections Jekyll
 make env-check      # Vérifier les variables d'environnement
 ```
 
 ### Mode production (avec Notion)
+
 ```bash
 make serve          # Démarrer avec toutes les variables Notion
 make prod-build     # Build de production avec synchronisation Notion
@@ -46,6 +50,7 @@ make notion-sync    # Synchroniser depuis Notion
 ## Fallback automatique
 
 Si les variables Notion ne sont pas définies ou si le token est invalide, le système utilisera automatiquement :
+
 - `_collections/_skills/` pour les compétences
 - `_collections/_experiences/` pour les expériences
 - `_collections/_awards/` pour les récompenses
