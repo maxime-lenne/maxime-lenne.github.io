@@ -75,3 +75,6 @@ _data/notion_*.yaml
 
 # Tools
 /.playwright-mcp/
+
+# Claude Code local settings (personal permissions)
+.claude/settings.local.json

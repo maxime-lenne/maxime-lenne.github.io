@@ -58,24 +58,24 @@ test: ## Exécuter tous les tests
 
 lint: ## Vérifier la qualité du code
 	@echo "🔍 Vérification de la qualité du code..."
-	bun runlint:css || echo "⚠️  Lint CSS non disponible"
-	bun runlint:js || echo "⚠️  Lint JS non disponible"
+	bun run lint:css || echo "⚠️  Lint CSS non disponible"
+	bun run lint:js || echo "⚠️  Lint JS non disponible"
 	@echo "✅ Vérifications terminées!"
 
 optimize: ## Optimiser les assets (images, CSS, JS)
 	@echo "⚡ Optimisation des assets..."
-	bun runoptimize:images || echo "⚠️  Optimisation d'images non disponible"
-	bun runminify:assets || echo "⚠️  Minification non disponible"
+	bun run optimize:images || echo "⚠️  Optimisation d'images non disponible"
+	bun run minify:assets || echo "⚠️  Minification non disponible"
 	@echo "✅ Optimisation terminée!"
 
 performance: ## Tester les performances avec Lighthouse
 	@echo "📊 Test des performances..."
-	bun runtest:lighthouse || echo "⚠️  Lighthouse non disponible"
+	bun run test:lighthouse || echo "⚠️  Lighthouse non disponible"
 	@echo "✅ Tests de performance terminés!"
 
 accessibility: ## Tester l'accessibilité
 	@echo "♿ Test de l'accessibilité..."
-	bun runtest:accessibility || echo "⚠️  Tests d'accessibilité non disponibles"
+	bun run test:accessibility || echo "⚠️  Tests d'accessibilité non disponibles"
 	@echo "✅ Tests d'accessibilité terminés!"
 
 security: ## Audit de sécurité des dépendances
