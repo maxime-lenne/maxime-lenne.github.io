@@ -103,7 +103,7 @@ faq: true
     </div>
     
     <div class="section__grid section__grid--3-col">
-      {% assign services = site.services | sort: 'order' %}
+      {% assign services = site.data.notion_services | sort: 'order' %}
       {% for service in services %}
         {% include components/card-highlight.html 
            icon=service.icon
@@ -132,7 +132,7 @@ faq: true
     </div>
     
     <div class="section__grid section__grid--3-col">
-      {% assign testimonials = site.testimonials | sort: 'order' %}
+      {% assign testimonials = site.data.notion_testimonials | sort: 'order' %}
       {% for testimonial in testimonials %}
         {% include components/card-quote.html 
            quote=testimonial.quote
