@@ -5,7 +5,9 @@
 port: 4001
 host: 0.0.0.0
 livereload: true
-incremental: true
+# Pas de build incrémental : Jekyll ne suit pas les dépendances vers _data,
+# donc les pages qui lisent les données Notion (CV, accueil) ne seraient jamais régénérées.
+incremental: false
 watch: true
 
 # Désactiver certaines optimisations en développement
