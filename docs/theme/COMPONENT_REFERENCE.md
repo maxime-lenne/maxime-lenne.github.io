@@ -23,6 +23,7 @@ Complete technical reference for all components in the Jekyll Maxime Theme.
 ## Overview
 
 The theme uses a component-based architecture following BEM methodology:
+
 - **Block**: The component name (`.deep-stack-btn`)
 - **Element**: A child of the block (`.deep-stack-btn__icon`)
 - **Modifier**: A variation of the block (`.deep-stack-btn--primary`)

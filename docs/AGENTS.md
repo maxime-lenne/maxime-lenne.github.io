@@ -121,6 +121,19 @@ Current sprint, backlog, and completed tasks.
 
 ## AI Agent Specific Rules
 
+### Language Rule
+
+Write in **English**, regardless of the prompt language:
+
+- Documentation (markdown files, comments)
+- Commit messages
+- Tasks, epics and user stories
+- Code comments, variable and function names
+
+Site content is bilingual: French and English copy lives in `_data/translations.yml` and in the
+FR / `en/` pages. Some older docs (`NOTION_SETUP.md`, `SEO_GEO_BACKLINKS.md`,
+`ENVIRONMENT_VARIABLES.md`, `docs/theme/`) are still in French: translate them when you rework them.
+
 ### Commit Convention
 
 This project accepts **Gitmoji** or **Conventional Commits**:
@@ -198,7 +211,9 @@ Scopes: `notion`, `i18n`, `seo`, `perf`, `ci`, `content`, `theme`
 
 ### Theme Extraction Note
 
-Parts of the codebase are being extracted into the `jekyll-deep-stack` theme (`lib/`, `jekyll-deep-stack.gemspec`). Files in `docs/theme/` are scoped to that effort and should not be modified during regular site work.
+Parts of the codebase are being extracted into the `jekyll-deep-stack` theme (`lib/`,
+`jekyll-deep-stack.gemspec`). Files in `docs/theme/` are scoped to that effort and should not be modified
+during regular site work.
 
 ---
 

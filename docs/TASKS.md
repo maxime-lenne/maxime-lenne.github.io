@@ -7,15 +7,27 @@ Project task tracking.
 ### Site — maxime-lenne.fr
 
 - [ ] Add projects section (Notion)
-- liste des sujets (Notion) https://coderon-jekyll.netlify.app/
-- [ ] Featured posts section https://coderon-jekyll.netlify.app/
-- [ ] Add a limit number to displayed skills
-- [ ] Add blog posts (Notion)
+- [ ] Topics list (Notion), see <https://coderon-jekyll.netlify.app/>
+- [ ] Featured posts section, see <https://coderon-jekyll.netlify.app/>
+- [ ] Add blog posts (Notion), then re-enable the `blog_posts` collection in `_config.yml`
 - [ ] Move all content to Notion
 - [ ] Add contact page
-- [ ] claude code Skill carousel component
+- [ ] Claude Code skill carousel component
 - [ ] LinkedIn carousel — make accessible (embed in a page)
 - [ ] LinkedIn carousel — Jekyll plugin using the theme
+- [ ] Translate the experience pages (`/experiences/:slug/`) to English
+
+### Content — Notion
+
+- [ ] Mark the main skills as `Featured` and set their `Order`: the resume shows the top 10 per category
+- [ ] Sort out the « Langages & Frameworks » and « Other » skill categories
+- [ ] Fix the EcoTa.co experience type (`Funder` → `Founder`)
+- [ ] Replace the `your_…` placeholders in `.env` with the real database IDs, or remove them
+
+### SEO — see [`SEO_GEO_BACKLINKS.md`](./SEO_GEO_BACKLINKS.md)
+
+- [ ] Lot 3: website field on GitHub and LinkedIn, « Conçu par » link on n8n-ninja.app and houblons-nous.org
+- [ ] Lot 4: Search Console domain property and sitemap, analytics without cookies, Lighthouse scores
 
 ### Theme — jekyll-deep-stack (pending extraction)
 
@@ -24,11 +36,12 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [ ] Fix animated-terminal (scan bar animation + background)
 - [ ] Add carousel component (Splide.js)
 - [ ] Add video support
-- [ ] table
-- revoir modal (pas de bouton pour ouvrir xp, seulement icone qui change)
-- revoir quote : https://coderon-jekyll.netlify.app/elements/
+- [ ] Add table styles
+- [ ] Review the experience modal (icon only, no button to open it)
+- [ ] Review the quote component, see <https://coderon-jekyll.netlify.app/elements/>
 - [ ] Add image simple and gallery component
-- [ ] Audit missing typography elements (headings, simple lists) - liste des éléments, certain manquants (typo h, liste simple) -> https://coderon-jekyll.netlify.app/elements/
+- [ ] Audit missing typography elements (headings, simple lists), see
+  <https://coderon-jekyll.netlify.app/elements/>
 - [ ] Add Nerd Font / JetBrains Mono support
 - [ ] Add social + tech icon sets
 
@@ -38,12 +51,15 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [x] Fix footer link hover color
 - [x] Migrate to `jekyll-notion-cms` gem
 - [x] Add blog support in Notion plugin
-- [x] Apply template repo best practices (editorconfig, CODEOWNERS, issue templates, dependabot, settings.yml, PR template)
 - [x] Migrate all command runners to Bun
-- [x] Create `develop` branch
-- [x] Update `.gitignore` with missing rules
 - [x] Restructure docs following template conventions
+- [x] SEO lots 1 and 2: technical fixes, structured data, `llms.txt`, FAQ
+- [x] Footer « Projets » column and company links on experience cards
+- [x] Limit the skills shown per category (top 10, all in a dialog)
+- [x] Experience pages synced from Notion (`make sync-experiences`)
+- [x] Align with the [GitHub repository template](https://github.com/maxime-lenne/github-repository-template):
+  `develop` → `main` workflow, semantic-release, Renovate, lint CI, husky hooks, `setup:github`
 
 ---
 
-*Last updated: 2026-03-18*
+*Last updated: 2026-09-27*

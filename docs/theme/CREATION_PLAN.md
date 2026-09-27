@@ -1,6 +1,7 @@
 # Plan de Création d'un Thème Jekyll Open Source
 
 ## 🎯 Objectif
+
 Créer un thème Jekyll moderne et réutilisable basé sur le design actuel du site, puis le proposer en open source sur GitHub.
 
 ---
@@ -8,11 +9,13 @@ Créer un thème Jekyll moderne et réutilisable basé sur le design actuel du s
 ## ✅ Étapes Complétées
 
 ### 1. **Structure et Configuration** ✓
+
 - [x] Initialiser la structure de base d'un thème Jekyll (lib/, gemspec)
 - [x] Créer les fichiers de configuration (`_data/theme.yml`, gem structure)
 - [x] Structure de dossiers standard pour un thème Jekyll
 
 ### 2. **Extraction et Refactoring des Composants** ✓
+
 - [x] Extraire les variables CSS en custom properties configurables
 - [x] Créer `_sass/_theme-config.scss` avec RGB variables et mixins
 - [x] Adapter les composants pour qu'ils soient configurables via `_data/theme.yml`
@@ -25,16 +28,19 @@ Créer un thème Jekyll moderne et réutilisable basé sur le design actuel du s
 - [x] Rendre header et CTA configurables
 
 ### 3. **Documentation** ✓
-- [x] Créer `docs/COMPONENT_REFERENCE.md` - référence technique complète
+
+- [x] Créer `docs/theme/COMPONENT_REFERENCE.md` - référence technique complète
 - [x] Améliorer `pages/examples.md` - showcase du design system
 - [x] Mettre à jour `README.md` avec documentation du thème
 
 ### 4. **Gem Structure** ✓
+
 - [x] Créer `lib/jekyll-maxime-theme.rb`
 - [x] Créer `lib/jekyll-maxime-theme/version.rb` (v1.0.0)
 - [x] Créer `jekyll-maxime-theme.gemspec`
 
 ### 5. **Fonctionnalités Existantes** ✓
+
 - [x] Mode sombre avec toggle et persistance
 - [x] Support multi-langues (FR/EN)
 - [x] CSS variables personnalisables
@@ -46,18 +52,21 @@ Créer un thème Jekyll moderne et réutilisable basé sur le design actuel du s
 ## 📋 Étapes Restantes (Post-Release)
 
 ### 1. **Publication**
+
 - [ ] Créer un repository GitHub séparé pour le thème
 - [ ] Publier le thème sur RubyGems
 - [ ] Créer une page de démonstration sur GitHub Pages
 - [ ] Créer des templates de démarrage rapide
 
 ### 2. **Tests et Qualité**
+
 - [ ] Créer des tests automatisés (CI/CD)
 - [ ] Valider l'accessibilité WCAG complète
 - [ ] Tester la compatibilité avec différentes versions de Jekyll
 - [ ] Vérifier la compatibilité cross-browser
 
 ### 3. **Fonctionnalités Avancées (Optionnel)**
+
 - [ ] Support PWA (Progressive Web App)
 - [ ] Système de recherche intégré
 - [ ] Système de commentaires
@@ -101,6 +110,7 @@ jekyll-maxime-theme/
 ## ⚙️ Configuration du Thème
 
 ### _data/theme.yml
+
 ```yaml
 site:
   logo_text: "Your Name"
