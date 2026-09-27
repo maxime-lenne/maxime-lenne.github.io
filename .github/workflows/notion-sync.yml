@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Process Notion update
         env:
           NOTION_EVENT: ${{ inputs.notion_event }}
@@ -44,14 +44,14 @@ jobs:
           echo "🆔 Page ID: $PAGE_ID"
           echo "🗄️  Database ID: $DATABASE_ID"
           echo "⏰ Updated at: $UPDATED_AT"
-          
+
           # Ajoutez votre logique ici
           # Exemples:
           # - Regénérer un site statique
           # - Déployer du contenu
           # - Synchroniser avec un autre service
           # - Envoyer des notifications
-      
+
       - name: Your custom action
         run: |
           echo "🚀 Executing your custom logic..."

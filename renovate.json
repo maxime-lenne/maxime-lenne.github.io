@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>maxime-lenne/renovate-config"],
+  "packageRules": [
+    {
+      "description": "v10 requires conventional-changelog-writer@9, not yet used by @semantic-release/release-notes-generator@14",
+      "matchPackageNames": ["conventional-changelog-conventionalcommits"],
+      "allowedVersions": "<10"
+    }
+  ]
+}
