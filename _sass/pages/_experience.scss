@@ -123,6 +123,17 @@
     @media (min-width: 1024px) {
       grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
     }
+
+    // No company card nor skills: keep a readable line length on one column
+    &--single {
+      @media (min-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-page__main {
+        max-width: 820px;
+      }
+    }
   }
 
   &__lead {
