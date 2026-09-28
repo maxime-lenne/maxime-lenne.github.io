@@ -351,15 +351,15 @@ jekyll-notion-cms 1.0.3, ce sont eux qui servent quand Notion est inaccessible (
 introuvable). Le plugin ne les écrase plus avec les données de secours.
 
 `_collections/_experiences/` sert à la fois de fallback et de source aux pages publiques
-`/experiences/:slug/`. Seules les expériences qui ont un fichier ont une page. Pour les remettre à jour :
+`/experiences/:slug/`. Chaque expérience Notion a sa page. Pour les mettre à jour :
 
 ```bash
 make sync-experiences   # récupère Notion puis lance scripts/sync_experiences.rb
 ```
 
 Le script remplace les champs par ceux de Notion et garde `slug`, `layout` et `sub-roles`, donc les
-URL ne changent pas. Pour publier une autre expérience, créez un fichier avec son `notion_id` (le champ
-`id` de `_data/notion_experiences.yml`), un `slug` et `layout: experience`, puis relancez la commande.
+URL ne changent pas. Il crée aussi un fichier pour chaque nouvelle expérience Notion, avec un slug tiré
+du titre (sans accents), et le CV relie chaque carte à sa page grâce au `notion_id`.
 
 ### Structure des données générées
 

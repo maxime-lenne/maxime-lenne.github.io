@@ -3,6 +3,7 @@ layout: default
 ---
 {% comment %} Experience detail page, generated from _collections/_experiences (synced from Notion) {% endcomment %}
 {% assign start_year = page.start_date | date: "%Y" %}
+{% if page.about or page.skills.size > 0 %}{% assign has_aside = true %}{% else %}{% assign has_aside = false %}{% endif %}
 {% if page.current %}
   {% assign end_year = "Aujourd'hui" %}
 {% else %}
@@ -80,7 +81,7 @@ layout: default
 
 <!-- Details -->
 <section class="section section--light">
-  <div class="section__container experience-page__layout">
+  <div class="section__container experience-page__layout{% unless has_aside %} experience-page__layout--single{% endunless %}">
     <div class="experience-page__main">
       {% if page.description %}
         <p class="experience-page__lead">{{ page.description }}</p>
@@ -130,7 +131,7 @@ layout: default
       {% endif %}
     </div>
 
-    {% if page.about or page.skills.size > 0 %}
+    {% if has_aside %}
     <aside class="experience-page__aside">
       {% if page.about %}
       <section class="experience-page__card" aria-labelledby="experience-company">
