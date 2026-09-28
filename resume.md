@@ -103,9 +103,8 @@ profile_page: true
       {% assign initial_display = 4 %}
       
       {% for experience in sorted_experiences limit: initial_display %}
+          {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
           {% include components/card-experience.html 
-             data-index=forloop.index0
-             id=forloop.index
              role=experience.role
              company=experience.company
              company_url=experience.company_url
@@ -116,10 +115,8 @@ profile_page: true
              skills=experience.skills
              tags=experience.tags
              achievements=experience.achievements
-             missions=experience.missions
              logo_url=experience.logo_url
-             details=experience.details
-             url=experience.url %}
+             url=experience_page.url %}
       {% endfor %}
     </div>
     
@@ -444,8 +441,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Store all experiences data
     const allExperiences = [
       {% for experience in sorted_experiences %}
+      {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
       {
-        id: {{ forloop.index }},
         role: {{ experience.role | jsonify }},
         company: {{ experience.company | jsonify }},
         company_url: {{ experience.company_url | jsonify }},
@@ -456,9 +453,8 @@ document.addEventListener('DOMContentLoaded', function() {
         tags: asArray({{ experience.tags | jsonify }}),
         skills: asArray({{ experience.skills | jsonify }}),
         achievements: asArray({{ experience.achievements | jsonify }}),
-        missions: asArray({{ experience.missions | jsonify }}),
         logo_url: {{ experience.logo_url | jsonify }},
-        details: {{ experience.details | jsonify }}
+        url: {{ experience_page.url | jsonify }}
       }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ];
@@ -470,11 +466,7 @@ document.addEventListener('DOMContentLoaded', function() {
       for (let i = currentDisplay; i < nextDisplay; i++) {
         if (i < allExperiences.length) {
           const experience = allExperiences[i];
-          const wrapper = createExperienceElement(experience, i);
-          // Add card and modal directly to grid (as the component does)
-          while (wrapper.firstChild) {
-            experiencesGrid.appendChild(wrapper.firstChild);
-          }
+          experiencesGrid.appendChild(createExperienceElement(experience));
         }
       }
       
@@ -505,10 +497,9 @@ document.addEventListener('DOMContentLoaded', function() {
       return `<div class="deep-stack-hero__badge"><span class="deep-stack-hero__badge-text">${escapeHtml(text)}</span></div>`;
     }
     
-    function createExperienceElement(experience, index) {
+    function createExperienceElement(experience) {
       const wrapper = document.createElement('div');
-      const modalId = `experience-${experience.id || (index + 1)}`;
-      
+
       // Format dates to show only year
       const startYear = formatYear(experience.start_date);
       const endYear = experience.current ? 'Présent' : formatYear(experience.end_date);
@@ -593,107 +584,16 @@ document.addEventListener('DOMContentLoaded', function() {
             ${tagsHtml}
             ${achievementsHtml}
             ${skillsHtml}
+            ${experience.url ? `
             <div class="card-experience__actions">
-              <button class="deep-stack-btn deep-stack-btn--secondary card-experience__open-modal" 
-                      data-modal-id="${modalId}">
-                En savoir plus
-              </button>
-            </div>
+              <a href="${escapeHtml(experience.url)}" class="deep-stack-btn deep-stack-btn--secondary">En savoir plus</a>
+            </div>` : ''}
           </div>
         </div>
       `;
       
-      // Modal HTML - Reprendre exactement la même structure que la card
-      // Tags section (sans limite)
-      let modalTagsHtml = '';
-      if (experience.tags && experience.tags.length > 0) {
-        modalTagsHtml = `
-          <div class="card-experience__tags">
-            ${experience.tags.map(tag => createBadge(tag)).join('')}
-          </div>
-        `;
-      }
-      
-      // Achievements section (sans limite)
-      let modalAchievementsHtml = '';
-      if (experience.achievements && experience.achievements.length > 0) {
-        modalAchievementsHtml = `
-          <div class="card-experience__achievements">
-            ${experience.achievements.map(achievement => `
-              <div class="card-experience__achievement">
-                <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
-                </svg>
-                <span>${escapeHtml(achievement)}</span>
-              </div>
-            `).join('')}
-          </div>
-        `;
-      }
-      
-      // Skills section (sans limite)
-      let modalSkillsHtml = '';
-      if (experience.skills && experience.skills.length > 0) {
-        modalSkillsHtml = `
-          <div class="card-experience__skills">
-            ${experience.skills.map(skill => createBadge(skill)).join('')}
-          </div>
-        `;
-      }
-      
-      // Missions section
-      let modalMissionsHtml = '';
-      if (experience.missions && experience.missions.length > 0) {
-        modalMissionsHtml = `
-          <div class="card-experience__missions">
-            <h4 class="card-experience__missions-title">Missions</h4>
-            ${experience.missions.map(mission => `
-              <div class="card-experience__mission">
-                <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
-                </svg>
-                <span>${escapeHtml(mission)}</span>
-              </div>
-            `).join('')}
-          </div>
-        `;
-      }
-      
-      const modalHtml = `
-        <div class="card-experience__modal" id="${modalId}">
-          <div class="card-experience__modal-overlay"></div>
-          <div class="card-experience__modal-content">
-            <div class="card-experience__modal-header">
-              <div class="card-experience__modal-header-content">
-                ${logoHtml}
-                <div class="card-experience__modal-title-section">
-                  <h3 class="card-experience__role">${escapeHtml(experience.role)}</h3>
-                  <span class="card-experience__company">${companyHtml}</span>
-                  <div class="card-experience__date">
-                    <span class="card-experience__duration">${startYear} - ${endYear}</span>
-                    ${experience.current ? '<span class="card-experience__current">Présent</span>' : ''}
-                  </div>
-                </div>
-              </div>
-              <button class="card-experience__modal-close" aria-label="Fermer la modal">&times;</button>
-            </div>
-            <div class="card-experience__modal-body">
-              <div class="card-experience">
-                <div class="card-experience__content">
-                  <p class="card-experience__description">${escapeHtml(experience.description)}</p>
-                  ${modalTagsHtml}
-                  ${modalAchievementsHtml}
-                  ${modalSkillsHtml}
-                  ${modalMissionsHtml}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-      
-      wrapper.innerHTML = cardHtml + modalHtml;
-      return wrapper;
+      wrapper.innerHTML = cardHtml.trim();
+      return wrapper.firstElementChild;
     }
   }
 });

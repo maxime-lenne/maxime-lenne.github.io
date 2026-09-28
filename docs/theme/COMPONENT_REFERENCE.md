@@ -259,7 +259,8 @@ Feature/service highlight cards.
 
 #### Card Experience
 
-Resume/CV experience cards.
+Resume/CV experience cards. When `url` is set (the page of the experience in `_collections/_experiences/`),
+the card shows a « En savoir plus » / « Read more » link to it; otherwise no action is shown.
 
 | File | Path |
 |------|------|
