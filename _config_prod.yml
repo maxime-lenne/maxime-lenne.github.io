@@ -22,8 +22,8 @@ compress_images:
   progressive: true
 
 # Analytics and monitoring
-google_analytics: "G-0QGYCGR5J2" # Replace with your GA4 ID
-hotjar: "XXXXXXXXXX" # Replace with your Hotjar ID
+# Cloudflare Web Analytics site token (public, it ends up in the page): dash.cloudflare.com → Web Analytics
+cloudflare_analytics_token: ""
 
 # Security headers
 security:
