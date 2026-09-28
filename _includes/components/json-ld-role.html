@@ -1,0 +1,21 @@
+{% comment %}
+  One position as a schema.org EmployeeRole (role pattern: Person.worksFor -> EmployeeRole.worksFor -> Organization).
+  Parameters: experience (Notion data item or experience page), url (the experience page, optional).
+  Notion dates are { start: ... }, page dates are strings. A current job has no endDate.
+{% endcomment %}
+{%- assign role_experience = include.experience -%}
+{%- assign role_start = role_experience.start_date.start | default: role_experience.start_date -%}
+{%- assign role_end = role_experience.end_date.start | default: role_experience.end_date -%}
+{
+  "@type": "EmployeeRole",
+  "roleName": {{ role_experience.role | jsonify }},
+  "startDate": {{ role_start | jsonify }}{% if role_end and role_experience.current != true %},
+  "endDate": {{ role_end | jsonify }}{% endif %}{% if include.url %},
+  "url": {{ include.url | absolute_url | jsonify }}{% endif %}{% if role_experience.company != 'Freelance' %},
+  "worksFor": {
+    "@type": "Organization",{% if role_experience.company_url contains 'white-wood.tech' %}
+    "@id": "https://white-wood.tech/#organization",{% endif %}
+    "name": {{ role_experience.company | jsonify }}{% if role_experience.company_url %},
+    "url": {{ role_experience.company_url | jsonify }}{% endif %}
+  }{% endif %}
+}

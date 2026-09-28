@@ -153,6 +153,29 @@ layout: default
     </aside>
     {% endif %}
   </div>
+
+  {% comment %} Previous (older) and next (more recent) positions, by start date {% endcomment %}
+  {% assign experiences_by_date = site.experiences | sort: "start_date" | reverse %}
+  {% for experience in experiences_by_date %}
+    {% if experience.url == page.url %}
+      {% if forloop.first == false %}{% assign newer_index = forloop.index0 | minus: 1 %}{% assign newer_experience = experiences_by_date[newer_index] %}{% endif %}
+      {% unless forloop.last %}{% assign older_experience = experiences_by_date[forloop.index] %}{% endunless %}
+    {% endif %}
+  {% endfor %}
+  <nav class="section__container experience-page__pager" aria-label="Autres expériences">
+    {% if older_experience %}
+    <a href="{{ older_experience.url | relative_url }}" class="experience-page__pager-link experience-page__pager-link--older">
+      <span class="experience-page__pager-label">Poste précédent</span>
+      <span class="experience-page__pager-title">{{ older_experience.role }} · {{ older_experience.company }}</span>
+    </a>
+    {% endif %}
+    {% if newer_experience %}
+    <a href="{{ newer_experience.url | relative_url }}" class="experience-page__pager-link experience-page__pager-link--newer">
+      <span class="experience-page__pager-label">Poste suivant</span>
+      <span class="experience-page__pager-title">{{ newer_experience.role }} · {{ newer_experience.company }}</span>
+    </a>
+    {% endif %}
+  </nav>
 </section>
 
 {% include sections/final-cta-section.html %}

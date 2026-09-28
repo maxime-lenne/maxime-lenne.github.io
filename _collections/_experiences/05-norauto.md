@@ -1,6 +1,6 @@
 ---
 notion_id: 4bed8ee6-78c5-4266-9d38-fca30d59387e
-title: Product Owner - Norauto
+title: Product Owner chez Norauto (2017-2018)
 company: Norauto
 company_url: https://www.norauto.fr/
 role: Product Owner

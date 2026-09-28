@@ -1,8 +1,8 @@
 ---
 notion_id: 6ac2e6b7-6264-4acd-a789-3e1ce9d5b199
+title: CTO agence Lille chez theTribe (2022-2024)
 slug: cto-thetribe
 layout: experience
-title: CTO - theTribe
 company: theTribe
 company_url:
 role: CTO agence Lille
