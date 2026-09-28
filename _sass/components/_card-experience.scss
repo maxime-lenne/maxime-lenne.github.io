@@ -67,7 +67,10 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+// Transparent logos stay readable in dark mode
 .card-experience__logo--img {
+  padding: 6px;
+  background: #ffffff;
   border: none;
 }
 
