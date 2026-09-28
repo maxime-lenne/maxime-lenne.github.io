@@ -1,6 +1,7 @@
 # Spec — SEO, GEO et backlinks pour maxime-lenne.fr
 
-Date : 2026-09-25. Statut : lots 1 et 2 implémentés, lots 3 et 4 à faire.
+Date : 2026-09-25. Statut : lots 1, 2 et 5 implémentés ; lot 3 en cours ; lot 4, analytics fait
+(token Cloudflare à renseigner), Search Console et Lighthouse à faire.
 
 ## Objectif
 
@@ -178,10 +179,25 @@ supplémentaire (`notion: { enabled: false }`), puis restaurer `_data/` si besoi
      `default.html`, rien d'autre ne bouge ;
    - soit ajouter un bandeau de consentement.
 
-   Recommandation : Cloudflare, comme pour white-wood.tech. Supprimer aussi la clé `hotjar: "XXXXXXXXXX"`
-   inutilisée.
+   Fait : GA4 et la clé `hotjar` inutilisée sont retirés de `_config_prod.yml`. `default.html` charge
+   le beacon Cloudflare en production dès que `cloudflare_analytics_token` est renseigné dans
+   `_config_prod.yml`. Le domaine est chez Scaleway, sans proxy Cloudflare : il faut créer le site dans
+   Cloudflare → Web Analytics (option « snippet JS ») et copier son token, qui est public.
 3. **Suivi.** Lancer Lighthouse sur `/` et `/resume/` après chaque lot, et noter les scores dans
    `docs/TASKS.md`.
+
+## Lot 5 — Pages d'expérience (P1, fait)
+
+Les 17 pages `/experiences/:slug/` sont arrivées après les lots 1 et 2.
+
+1. **`llms.txt`** : chaque expérience renvoie vers sa page, pour que les IA citent la source.
+2. **JSON-LD des pages d'expérience** : `WebPage` avec `about` → `#person`, `mainEntity` = le poste
+   (`EmployeeRole` : rôle, dates, entreprise), et `BreadcrumbList` Accueil › CV › poste. Le poste est
+   rendu par `_includes/components/json-ld-role.html`.
+3. **Parcours dans la `Person` du CV** : sur les pages `profile_page`, `worksFor` liste tous les postes
+   en `EmployeeRole`, avec l'URL de leur page. White Wood Tech garde son `@id`.
+4. **Titres** : `scripts/sync_experiences.rb` écrit « rôle chez entreprise (années) » dans `title`.
+5. **Maillage** : liens « Poste précédent / suivant » (par date de début) en bas de chaque page.
 
 ## Hors périmètre
 

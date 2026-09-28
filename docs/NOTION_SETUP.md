@@ -361,6 +361,10 @@ Le script remplace les champs par ceux de Notion et garde `slug`, `layout` et `s
 URL ne changent pas. Il crée aussi un fichier pour chaque nouvelle expérience Notion, avec un slug tiré
 du titre (sans accents), et le CV relie chaque carte à sa page grâce au `notion_id`.
 
+Le `title` de la page n'est pas le titre Notion : le script le construit pour le `<title>` et les
+moteurs, à partir du rôle, de l'entreprise et des années (« CTO agence Lille chez Ippon (2024) »,
+« CTO as a Service chez White Wood Tech (depuis 2024) »). Soignez donc la casse du `Role` dans Notion.
+
 ### Structure des données générées
 
 #### Skills

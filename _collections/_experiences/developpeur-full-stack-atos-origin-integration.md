@@ -1,8 +1,8 @@
 ---
 notion_id: f11e2f07-c2c8-41f4-b780-56632c6de73f
+title: Développeur full stack chez Atos Origin Intégration (2009-2010)
 slug: developpeur-full-stack-atos-origin-integration
 layout: experience
-title: Développeur full stack - Atos Origin Intégration
 company: Atos Origin Intégration
 company_url: https://atos.net/
 role: Développeur full stack

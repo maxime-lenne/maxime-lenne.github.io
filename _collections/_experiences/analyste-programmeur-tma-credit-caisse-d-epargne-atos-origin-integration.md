@@ -1,8 +1,9 @@
 ---
 notion_id: 208adcda-de97-443f-b8e8-613501314a28
+title: Analyste programmeur TMA crédit chez Caisse d'épargne (Atos Origin Intégration)
+  (2007-2009)
 slug: analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration
 layout: experience
-title: Analyste programmeur TMA crédit - Caisse d'épargne (Atos Origin Intégration)
 company: Caisse d'épargne (Atos Origin Intégration)
 company_url: https://www.caisse-epargne.fr/
 role: Analyste programmeur TMA crédit
