@@ -23,7 +23,7 @@ compress_images:
 
 # Analytics and monitoring
 # Cloudflare Web Analytics site token (public, it ends up in the page): dash.cloudflare.com → Web Analytics
-cloudflare_analytics_token: ""
+cloudflare_analytics_token: "492ee525717445b9b56c7ea496ebc994"
 
 # Security headers
 security:
