@@ -15,10 +15,16 @@ order: 17
 logo_url:
 tags:
 - PME
-skills: []
-description: Chargé d’affaires télécoms et vidéo IP. Détection et gestion de projets
-  PABX et caméras IP. Réalisation d’un intranet prospects‑clients.
+skills: PHP
+description: 'Chargé d''affaires : détection et gestion des projets d''installation
+  de standards téléphoniques (PABX) et de caméras de surveillance IP, supervision
+  des installations.'
 about:
-achievements: []
-missions: []
+achievements:
+- Développement d'un intranet prospects-clients (PHP / MySQL, intégration HTML 4 /
+  CSS)
+missions:
+- Détection et gestion des projets d'installation de PABX et de caméras de surveillance
+  IP
+- Supervision des installations en tant que chargé d'affaires
 ---

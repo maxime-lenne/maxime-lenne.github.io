@@ -4,7 +4,7 @@ slug: responsable-d-applications-java-jee-cofidis
 layout: experience
 title: Responsable d’applications Java / JEE - Cofidis
 company: Cofidis
-company_url:
+company_url: https://www.cofidis.fr/
 role: Responsable d’applications Java / JEE
 start_date: '2010-01-01'
 end_date: '2012-12-31'
@@ -12,14 +12,26 @@ current: false
 location: Lille, France
 type: Freelance
 order: 9
-logo_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Logo_Cofidis.png
+logo_url: "/assets/images/companies/cofidis.png"
 tags:
 - Grands Comptes
-skills: []
-description: Responsable d’applications pour Cofidis. Modélisation UML, conception
-  technique, suivi des développements, qualité et industrialisation (tests, CI), évolutions
-  Java/JEE et Cobol.
-about:
-achievements: []
-missions: []
+skills:
+- Java
+- CI/CD
+description: Responsable d'applications Java / JEE en indépendant, au sein du service
+  internet de Cofidis.
+about: Cofidis est un établissement français de crédit à la consommation, spécialiste
+  de la vente de crédit à distance, né à Villeneuve-d'Ascq.
+achievements:
+- Audit de l'application espace client du site cofidis.fr
+- Mise en place d'une bibliothèque générique commune aux projets Java / JEE, pour
+  les couches modèle, métier et front
+missions:
+- Modélisation UML (cas d'utilisation, diagrammes de classes, de séquence et d'activité)
+  et rédaction des documents de conception technique
+- Suivi des développements avec le centre de développement et revue de code
+- 'Qualité et industrialisation : tests unitaires, couverture de tests, revue automatique,
+  intégration continue (Hudson, Sonar, JUnit, DBUnit, PMD, Checkstyle, Cobertura)'
+- Réalisation d'évolutions et correction d'anomalies (Java / JEE et Cobol), livraison
+  des applications
 ---
