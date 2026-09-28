@@ -311,3 +311,5 @@ profile_page: true
 <!-- Final CTA Section -->
 {% include sections/cta-section.html title=t.resume_page.final_title 
 description=t.resume_page.final_description cta_text=t.resume_page.final_button lang="en" %}
+
+{% include sections/resume-load-more.html %}
