@@ -1,8 +1,8 @@
 ---
 notion_id: ddded262-0459-4756-baa4-96d73ed8ee5c
+title: Ingénieur études et développement Java / JEE chez Atos Origin Worldline (2009-2010)
 slug: ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-spop
 layout: experience
-title: Ingénieur études et développement Java / JEE - Atos Origin Worldline (SPoP)
 company: Atos Origin Worldline
 company_url: https://worldline.com/
 role: Ingénieur études et développement Java / JEE

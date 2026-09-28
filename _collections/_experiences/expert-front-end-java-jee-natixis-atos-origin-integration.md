@@ -1,8 +1,8 @@
 ---
 notion_id: 305acf95-a4c7-41ad-ad4d-86d11298b7dc
+title: Expert front-end Java / JEE chez Natixis (Atos Origin Intégration) (2009)
 slug: expert-front-end-java-jee-natixis-atos-origin-integration
 layout: experience
-title: Expert front-end Java / JEE - Natixis (Atos Origin Intégration)
 company: Natixis (Atos Origin Intégration)
 company_url: https://www.natixis.com/
 role: Expert front-end Java / JEE
@@ -18,6 +18,8 @@ tags:
 skills:
 - Java
 - JavaScript
+- CSS3, SAAS, PostCSS
+- HTML5
 description: 'Projet Line Bourse : site de bourse en ligne pour les trois entités
   du groupe, Natixis, Banque Populaire et Caisse d''Épargne.'
 about: Natixis est la banque de financement, de gestion d'actifs et de services financiers

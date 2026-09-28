@@ -22,11 +22,13 @@ Project task tracking.
 - [ ] Mark the main skills as `Featured` and set their `Order`: the resume shows the top 10 per category
 - [ ] Sort out the « Langages & Frameworks » and « Other » skill categories
 - [ ] Fix the EcoTa.co experience type (`Funder` → `Founder`)
+- [ ] Capitalise the Ippon role (« CTO agence lille » → « CTO agence Lille »), it is used in the page title
 
 ### SEO — see [`SEO_GEO_BACKLINKS.md`](./SEO_GEO_BACKLINKS.md)
 
 - [ ] Lot 3: website field on GitHub and LinkedIn, « Conçu par » link on n8n-ninja.app and houblons-nous.org
-- [ ] Lot 4: Search Console domain property and sitemap, analytics without cookies, Lighthouse scores
+- [ ] Lot 4: Search Console domain property and sitemap, Lighthouse scores
+- [ ] Lot 4: set `cloudflare_analytics_token` in `_config_prod.yml` (Cloudflare → Web Analytics)
 
 ### Theme — jekyll-deep-stack (pending extraction)
 
@@ -52,6 +54,8 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [x] Migrate all command runners to Bun
 - [x] Restructure docs following template conventions
 - [x] SEO lots 1 and 2: technical fixes, structured data, `llms.txt`, FAQ
+- [x] SEO lot 5: experience pages in `llms.txt`, JSON-LD roles and breadcrumb, titles, previous / next links
+- [x] Google Analytics replaced by Cloudflare Web Analytics (no cookie)
 - [x] Footer « Projets » column and company links on experience cards
 - [x] Limit the skills shown per category (top 10, all in a dialog)
 - [x] Experience pages synced from Notion (`make sync-experiences`)

@@ -1,8 +1,8 @@
 ---
 notion_id: 5ce475d7-d2f7-4d16-8f26-8c03bba67f1e
+title: Product Owner, Scrum Master chez modern-blocks (2017)
 slug: product-owner-scrum-master-modern-blocks
 layout: experience
-title: Product Owner, Scrum Master - modern-blocks
 company: modern-blocks
 company_url:
 role: Product Owner, Scrum Master
