@@ -1,7 +1,7 @@
 # Spec — SEO, GEO et backlinks pour maxime-lenne.fr
 
-Date : 2026-09-25. Statut : lots 1, 2 et 5 implémentés ; lot 3 en cours ; lot 4, analytics fait
-(token Cloudflare à renseigner), Search Console et Lighthouse à faire.
+Date : 2026-09-25. Statut : lots 1, 2 et 5 implémentés ; lot 3 en cours ; lot 4, analytics fait ;
+Search Console et Lighthouse à faire.
 
 ## Objectif
 
