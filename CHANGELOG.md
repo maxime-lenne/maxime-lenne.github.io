@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.2.0...v1.2.1) (2026-09-28)
+
+### 🐛 Bug Fixes
+
+* Make the show more buttons work on the English resume ([a3563c6](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/a3563c6dd54a7a1856ee3bb941ebb52050c3d39e))
+
+### 🔒 Security
+
+* Replace Google Analytics with Cloudflare Web Analytics ([480378a](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/480378a04d72c871a3f7b3d18d83906e5b59e3ef))
+
 ## [1.2.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.1.0...v1.2.0) (2026-09-28)
 
 ### ✨ Features
