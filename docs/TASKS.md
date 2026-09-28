@@ -36,7 +36,6 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [ ] Add carousel component (Splide.js)
 - [ ] Add video support
 - [ ] Add table styles
-- [ ] Review the experience modal (icon only, no button to open it)
 - [ ] Review the quote component, see <https://coderon-jekyll.netlify.app/elements/>
 - [ ] Add image simple and gallery component
 - [ ] Audit missing typography elements (headings, simple lists), see
@@ -57,6 +56,7 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [x] Limit the skills shown per category (top 10, all in a dialog)
 - [x] Experience pages synced from Notion (`make sync-experiences`)
 - [x] Experience pages redesigned with the theme components (hero panel, details, company card, final CTA)
+- [x] Resume experience cards link to the experience pages (modal removed)
 - [x] Awards, contributions, educations, services and testimonials moved to Notion (achievements in Items)
 - [x] Align with the [GitHub repository template](https://github.com/maxime-lenne/github-repository-template):
   `develop` → `main` workflow, semantic-release, Renovate, lint CI, husky hooks, `setup:github`

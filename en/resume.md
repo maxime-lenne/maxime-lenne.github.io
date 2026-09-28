@@ -104,9 +104,8 @@ profile_page: true
       {% assign initial_display = 4 %}
       
       {% for experience in sorted_experiences limit: initial_display %}
+          {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
           {% include components/card-experience.html 
-             data-index=forloop.index0
-             id=forloop.index
              role=experience.role
              company=experience.company
              company_url=experience.company_url
@@ -117,10 +116,8 @@ profile_page: true
              skills=experience.skills
              tags=experience.tags
              achievements=experience.achievements
-             missions=experience.missions
              logo_url=experience.logo_url
-             details=experience.details
-             url=experience.url %}
+             url=experience_page.url %}
       {% endfor %}
     </div>
     
