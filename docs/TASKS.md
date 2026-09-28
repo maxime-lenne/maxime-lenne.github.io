@@ -28,7 +28,6 @@ Project task tracking.
 
 - [ ] Lot 3: website field on GitHub and LinkedIn, « Conçu par » link on n8n-ninja.app and houblons-nous.org
 - [ ] Lot 4: Search Console domain property and sitemap, Lighthouse scores
-- [ ] Lot 4: set `cloudflare_analytics_token` in `_config_prod.yml` (Cloudflare → Web Analytics)
 
 ### Theme — jekyll-deep-stack (pending extraction)
 
