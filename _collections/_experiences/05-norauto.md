@@ -2,7 +2,7 @@
 notion_id: 4bed8ee6-78c5-4266-9d38-fca30d59387e
 title: Product Owner - Norauto
 company: Norauto
-company_url:
+company_url: https://www.norauto.fr/
 role: Product Owner
 start_date: '2017-01-01'
 end_date: '2018-01-01'
@@ -18,10 +18,14 @@ skills:
 - Agile
 - Kanban
 - Microservices
+- Scrum
+- Product Management
+- Vision, Roadmap et Stratégie
 description: Conception de micro-services en mode API first dans le cadre du projet
   BeAPI, point de départ de la transformation numérique chez Norauto à travers une
   refonte technique bas niveau.
-about:
+about: Norauto est une enseigne française d'entretien, de réparation et d'équipement
+  automobile, membre du groupe Mobivia.
 achievements: []
 missions:
 - Animation avec un Tech Lead d'une équipe de 6 développeurs

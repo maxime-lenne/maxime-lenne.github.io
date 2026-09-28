@@ -14,10 +14,13 @@ type: Freelance
 order: 10
 logo_url:
 tags: []
-skills: []
-description: Missions full stack en freelance. E‑commerce Magento (lematelas.fr),
-  plugin Colisweb, conseil et développement web et mobile.
+skills: PHP
+description: 'Missions de développement full stack en freelance, en parallèle de mes
+  autres activités : e-commerce Magento et intégrations d''API.'
 about:
 achievements: []
-missions: []
+missions:
+- Consultant solution e-commerce Magento pour lematelas.fr
+- 'Développeur Magento chez Colisweb : réalisation du plugin de livraison connecté
+  à l''API Colisweb'
 ---
