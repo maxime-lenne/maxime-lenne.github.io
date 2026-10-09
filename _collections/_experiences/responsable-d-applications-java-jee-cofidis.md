@@ -1,8 +1,8 @@
 ---
 notion_id: 7e6311e4-c94b-4ec7-be8c-ffd944ebd370
+title: Responsable d’applications Java / JEE chez Cofidis (2010-2012)
 slug: responsable-d-applications-java-jee-cofidis
 layout: experience
-title: Responsable d’applications Java / JEE - Cofidis
 company: Cofidis
 company_url: https://www.cofidis.fr/
 role: Responsable d’applications Java / JEE

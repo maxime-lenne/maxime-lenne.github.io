@@ -15,9 +15,10 @@ ROOT = File.expand_path('..', __dir__)
 DATA_FILE = File.join(ROOT, '_data', 'notion_experiences.yml')
 COLLECTION_DIR = File.join(ROOT, '_collections', '_experiences')
 
-# Front matter keys taken from Notion, in the order they are written
+# Front matter keys taken from Notion, in the order they are written. `title` is not copied: it is the
+# page <title>, built from the role, the company and the years (see seo_title)
 NOTION_KEYS = %w[
-  title company company_url role start_date end_date current location type order logo_url
+  company company_url role start_date end_date current location type order logo_url
   tags skills description about achievements missions
 ].freeze
 
@@ -48,8 +49,21 @@ def slugify(text)
   text.unicode_normalize(:nfd).gsub(/\p{Mn}/, '').downcase.gsub(/[^a-z0-9]+/, '-').gsub(/\A-|-\z/, '')
 end
 
+# "CTO agence Lille chez Ippon (2024)", "CTO as a Service chez White Wood Tech (depuis 2024)".
+# A current job keeps the end date Notion computes, only `current` counts.
+def seo_title(experience)
+  start_year = notion_value(experience, 'start_date').to_s[0, 4]
+  end_year = notion_value(experience, 'end_date').to_s[0, 4]
+  years = if experience['current'] then "depuis #{start_year}"
+          elsif end_year.empty? || end_year == start_year then start_year
+          else "#{start_year}-#{end_year}"
+          end
+  employer = experience['company'] == 'Freelance' ? 'en freelance' : "chez #{experience['company']}"
+  "#{experience['role']} #{employer} (#{years})"
+end
+
 def synced_front_matter(front_matter, experience)
-  synced = { 'notion_id' => experience['id'] }
+  synced = { 'notion_id' => experience['id'], 'title' => seo_title(experience) }
   (LOCAL_KEYS - ['notion_id']).each { |key| synced[key] = front_matter[key] if front_matter.key?(key) }
   # Notion is the source of truth, an empty value there (no end date for a current job) is kept empty
   NOTION_KEYS.each { |key| synced[key] = notion_value(experience, key) }
@@ -60,12 +74,11 @@ end
 
 experiences = YAML.load_file(DATA_FILE, aliases: true)
 by_id = experiences.to_h { |experience| [experience['id'], experience] }
-by_title = experiences.to_h { |experience| [experience['title'], experience] }
 synced_ids = []
 
 Dir[File.join(COLLECTION_DIR, '*.md')].sort.each do |path|
   front_matter, body = read_document(path)
-  experience = by_id[front_matter['notion_id']] || by_title[front_matter['title']]
+  experience = by_id[front_matter['notion_id']]
 
   unless experience
     warn "#{File.basename(path)}: no matching Notion experience, left unchanged"

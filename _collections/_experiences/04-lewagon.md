@@ -1,6 +1,6 @@
 ---
 notion_id: d6fe15bb-01b7-4c35-b7b0-0a45847c4e0e
-title: Formateur - Le Wagon
+title: Formateur chez Le Wagon (2018-2019)
 company: Le Wagon
 company_url: https://www.lewagon.com/
 role: Formateur

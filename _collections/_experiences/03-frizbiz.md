@@ -1,8 +1,8 @@
 ---
 notion_id: 0f2a4348-dbe1-48c3-8857-057ca7d6285f
+title: CPTO chez Frizbiz / Homelife (2019-2022)
 slug: cpto-frizbiz-Homelife
 layout: experience
-title: CPTO - Frizbiz
 company: Frizbiz / Homelife
 company_url:
 role: CPTO

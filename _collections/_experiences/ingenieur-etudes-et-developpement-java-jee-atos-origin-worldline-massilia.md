@@ -1,8 +1,8 @@
 ---
 notion_id: 6a3d0190-d746-4eea-851e-d1ceab4ee369
+title: Ingénieur études et développement Java / JEE chez Atos Origin Worldline (2010)
 slug: ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-massilia
 layout: experience
-title: Ingénieur études et développement Java / JEE - Atos Origin Worldline (Massilia)
 company: Atos Origin Worldline
 company_url: https://worldline.com/
 role: Ingénieur études et développement Java / JEE

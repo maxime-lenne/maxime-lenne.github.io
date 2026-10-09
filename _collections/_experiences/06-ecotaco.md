@@ -1,6 +1,6 @@
 ---
 notion_id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
-title: Co-fondateur - EcoTa.co
+title: Co-fondateur chez EcoTa.co (2012-2017)
 company: EcoTa.co
 company_url:
 role: Co-fondateur

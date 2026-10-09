@@ -1,13 +1,13 @@
 ---
 notion_id: 2f493271-2dfb-8003-b0e9-c49f62faaebf
+title: CTO as a Service chez White Wood Tech (depuis 2024)
 slug: cto-white-wood-tech
 layout: experience
-title: CTO as a Service
 company: White Wood Tech
 company_url: https://white-wood.tech/
 role: CTO as a Service
 start_date: '2024-11-15'
-end_date:
+end_date: '2027-09-28'
 current: true
 location: Lille, France
 type: Freelance

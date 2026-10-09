@@ -1,8 +1,8 @@
 ---
 notion_id: a4d79834-dbfb-467c-ba4e-86b55acde904
+title: Développeur full stack chez Freelance (2010-2019)
 slug: developpeur-full-stack-freelance
 layout: experience
-title: Développeur full stack - Freelance
 company: Freelance
 company_url:
 role: Développeur full stack
