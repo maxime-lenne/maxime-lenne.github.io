@@ -2,10 +2,13 @@
 layout: default
 ---
 {% comment %} Experience detail page, generated from _collections/_experiences (synced from Notion) {% endcomment %}
+{% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign t = site.data.translations[lang].experiences %}
+{% if lang == 'en' %}{% assign resume_url = '/en/resume/' %}{% else %}{% assign resume_url = '/resume/' %}{% endif %}
 {% assign start_year = page.start_date | date: "%Y" %}
 {% if page.about or page.skills.size > 0 %}{% assign has_aside = true %}{% else %}{% assign has_aside = false %}{% endif %}
 {% if page.current %}
-  {% assign end_year = "Aujourd'hui" %}
+  {% assign end_year = t.present %}
 {% else %}
   {% assign end_year = page.end_date | date: "%Y" %}
 {% endif %}
@@ -13,17 +16,17 @@ layout: default
 <!-- Hero -->
 <section class="section section--gradient-light experience-page__hero">
   <div class="section__container section__container--dark-background experience-page__panel">
-    <a href="{{ '/resume/#experience' | relative_url }}" class="experience-page__back">
+    <a href="{{ resume_url | append: '#experience' | relative_url }}" class="experience-page__back">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
-      Retour au parcours
+      {{ t.back_to_resume }}
     </a>
 
     <div class="experience-page__heading">
       {% if page.logo_url %}
         <div class="card-experience__logo card-experience__logo--img experience-page__logo">
-          <img src="{{ page.logo_url | relative_url }}" alt="Logo {{ page.company }}" class="card-experience__logo-img" width="80" height="80">
+          <img src="{{ page.logo_url | relative_url }}" alt="{{ t.logo_alt }} {{ page.company }}" class="card-experience__logo-img" width="80" height="80">
         </div>
       {% else %}
         <div class="card-experience__logo experience-page__logo" aria-hidden="true">
@@ -89,7 +92,7 @@ layout: default
 
       {% if page.sub-roles.size > 0 %}
       <section class="experience-page__block" aria-labelledby="experience-roles">
-        <h2 class="experience-page__block-title" id="experience-roles">Rôles</h2>
+        <h2 class="experience-page__block-title" id="experience-roles">{{ t.roles }}</h2>
         <ul class="list-checked__grid experience-page__list">
           {% for sub_role in page.sub-roles %}
           <li class="list-checked__item">
@@ -105,7 +108,7 @@ layout: default
 
       {% if page.achievements.size > 0 %}
       <section class="experience-page__block" aria-labelledby="experience-achievements">
-        <h2 class="experience-page__block-title" id="experience-achievements">Principales réalisations</h2>
+        <h2 class="experience-page__block-title" id="experience-achievements">{{ t.main_achievements }}</h2>
         <ul class="list-checked__grid experience-page__list">
           {% for achievement in page.achievements %}
           <li class="list-checked__item">
@@ -121,7 +124,7 @@ layout: default
 
       {% if page.missions.size > 0 %}
       <section class="experience-page__block" aria-labelledby="experience-missions">
-        <h2 class="experience-page__block-title" id="experience-missions">Missions</h2>
+        <h2 class="experience-page__block-title" id="experience-missions">{{ t.missions }}</h2>
         <ul class="experience-page__missions">
           {% for mission in page.missions %}
           <li>{{ mission }}</li>
@@ -135,14 +138,14 @@ layout: default
     <aside class="experience-page__aside">
       {% if page.about %}
       <section class="experience-page__card" aria-labelledby="experience-company">
-        <h2 class="experience-page__card-title" id="experience-company">À propos de {{ page.company }}</h2>
+        <h2 class="experience-page__card-title" id="experience-company">{{ t.about_company }} {{ page.company }}</h2>
         <p class="experience-page__about">{{ page.about }}</p>
       </section>
       {% endif %}
 
       {% if page.skills.size > 0 %}
       <section class="experience-page__card" aria-labelledby="experience-skills">
-        <h2 class="experience-page__card-title" id="experience-skills">Compétences mobilisées</h2>
+        <h2 class="experience-page__card-title" id="experience-skills">{{ t.skills_used }}</h2>
         <ul class="deep-stack-cv-skills__list">
           {% for skill in page.skills %}
           <li class="deep-stack-cv-skills__item">{{ skill }}</li>
@@ -162,16 +165,16 @@ layout: default
       {% unless forloop.last %}{% assign older_experience = experiences_by_date[forloop.index] %}{% endunless %}
     {% endif %}
   {% endfor %}
-  <nav class="section__container experience-page__pager" aria-label="Autres expériences">
+  <nav class="section__container experience-page__pager" aria-label="{{ t.pager_label }}">
     {% if older_experience %}
     <a href="{{ older_experience.url | relative_url }}" class="experience-page__pager-link experience-page__pager-link--older">
-      <span class="experience-page__pager-label">Poste précédent</span>
+      <span class="experience-page__pager-label">{{ t.previous_role }}</span>
       <span class="experience-page__pager-title">{{ older_experience.role }} · {{ older_experience.company }}</span>
     </a>
     {% endif %}
     {% if newer_experience %}
     <a href="{{ newer_experience.url | relative_url }}" class="experience-page__pager-link experience-page__pager-link--newer">
-      <span class="experience-page__pager-label">Poste suivant</span>
+      <span class="experience-page__pager-label">{{ t.next_role }}</span>
       <span class="experience-page__pager-title">{{ newer_experience.role }} · {{ newer_experience.company }}</span>
     </a>
     {% endif %}
