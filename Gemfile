@@ -15,7 +15,7 @@ group :jekyll_plugins do
   gem "jekyll-notion-cms", "~> 1.0.2"     # Notion CMS integration
 end
 
-# System gems for Ruby 3.3.5 compatibility
+# System gems for Ruby 3.3.12 compatibility
 gem "logger"
 gem "csv"
 gem "ostruct"
