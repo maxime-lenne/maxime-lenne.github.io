@@ -67,10 +67,9 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-// Transparent logos stay readable in dark mode
+// Image logos fill the frame without a background
 .card-experience__logo--img {
-  padding: 6px;
-  background: #ffffff;
+  background: none;
   border: none;
 }
 
@@ -135,12 +134,13 @@
 .card-experience__company-link {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: var(--color-primary);
+  text-decoration-color: var(--color-text-secondary);
   text-underline-offset: 0.2em;
 
   &:hover,
   &:focus-visible {
-    color: var(--color-primary);
+    color: var(--color-text-primary);
+    text-decoration-color: currentColor;
   }
 }
 
