@@ -7,7 +7,7 @@ Detailed guide for technical implementation aspects.
 | Category | Technology | Version |
 |----------|------------|---------|
 | Static site generator | Jekyll | 4.x |
-| Runtime | Ruby | 3.3.5 |
+| Runtime | Ruby | 3.3.12 |
 | Package manager | Bun | >= 1.3.8 |
 | Node | Node.js | >= 22.11.0 |
 | CMS | jekyll-notion-cms gem | — |

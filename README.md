@@ -47,7 +47,7 @@ Jekyll SSG, Notion CMS as data source, and deployed on GitHub Pages.
 | Category | Technology |
 |----------|------------|
 | Static site generator | Jekyll 4.x |
-| Runtime | Ruby 3.3.5 (asdf) |
+| Runtime | Ruby 3.3.12 (asdf) |
 | CMS | Notion API |
 | Hosting | GitHub Pages |
 | CI/CD | GitHub Actions |
