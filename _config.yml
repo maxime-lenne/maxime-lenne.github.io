@@ -65,6 +65,9 @@ twitter:
 
 # Collections
 collections_dir: _collections
+# Jekyll skips underscore folders when it looks for posts: without this, _collections/_posts is never read
+include:
+  - _collections
 
 collections:
   projects:
