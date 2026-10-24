@@ -9,6 +9,7 @@ Project task tracking.
 - [ ] Add projects section (Notion)
 - [ ] Topics list (Notion), see <https://coderon-jekyll.netlify.app/>
 - [ ] Featured posts section, see <https://coderon-jekyll.netlify.app/>
+- [ ] Blog index page listing the posts of `_collections/_posts` (FR at `/blog/`, EN at `/en/blog/`)
 - [ ] Add blog posts (Notion), then re-enable the `blog_posts` collection in `_config.yml`
 - [ ] Move the remaining content to Notion (skills categories, blog posts)
 - [ ] Add contact page

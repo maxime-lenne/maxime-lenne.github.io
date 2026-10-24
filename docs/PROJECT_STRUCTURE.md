@@ -153,8 +153,14 @@ _collections/
 ├── _experiences/     → site.data.notion_experiences (fallback)
 ├── _skills/          → site.data.notion_skills (fallback)
 ├── _testimonials/    → site.data.notion_testimonials (fallback)
+├── _posts/           → blog posts, written in Markdown
 └── ...
 ```
+
+Blog posts live in `_collections/_posts/`, one file per language, named `YYYY-MM-DD-<slug>-<lang>.md`. Each sets
+`lang`, a `permalink` (`/blog/<slug>/` in French, `/en/blog/<slug>/` in English) and `alternate_lang` /
+`alternate_url` for hreflang. Their images go in `assets/images/posts/<slug>/`. `_config.yml` lists `_collections`
+under `include`: Jekyll skips underscore folders when it looks for posts, so without it no post is built.
 
 ---
 

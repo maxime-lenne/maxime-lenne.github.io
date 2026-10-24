@@ -3,6 +3,8 @@ layout: post
 title: "Mon premier article avec Jekyll"
 date: 2024-01-01
 categories: blog
+# Jekyll sample post, kept out of the site
+published: false
 ---
 
 # Mon premier article avec Jekyll
