@@ -4,9 +4,11 @@
 {% if lang == 'en' %}
   {% assign home_url = '/en/' %}
   {% assign resume_url = '/en/resume/' %}
+  {% assign blog_url = '/en/blog/' %}
 {% else %}
   {% assign home_url = '/' %}
   {% assign resume_url = '/resume/' %}
+  {% assign blog_url = '/blog/' %}
 {% endif %}
 <nav class="deep-stack-mobile-nav" role="navigation" aria-label="Mobile navigation">
     <div class="deep-stack-mobile-nav__content">
@@ -24,6 +26,7 @@
         <div class="deep-stack-mobile-nav__links">
             <a href="{{ home_url | relative_url }}" class="deep-stack-mobile-nav__link">{{ t.nav.home }}</a>
             <a href="{{ resume_url | relative_url }}" class="deep-stack-mobile-nav__link">{{ t.nav.resume }}</a>
+            <a href="{{ blog_url | relative_url }}" class="deep-stack-mobile-nav__link">{{ t.nav.blog }}</a>
         </div>
         <div class="deep-stack-mobile-nav__footer">
             <a href="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"

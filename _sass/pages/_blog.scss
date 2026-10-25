@@ -1,0 +1,114 @@
+// Blog index (_includes/sections/blog-list.html) - BEM
+// One column of post cards, newest first, like the n8n-ninja.app blog.
+
+.blog-page {
+  // Opaque panel on the gradient, like the experience hero
+  &__panel {
+    text-align: left;
+
+    @media (max-width: 480px) {
+      padding: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+  }
+
+  &__lead {
+    margin: var(--space-md) 0 0;
+    max-width: 640px;
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  &__container {
+    max-width: 768px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__empty {
+    color: var(--color-text-secondary);
+  }
+}
+
+.blog-card {
+  // The title link covers the whole card
+  position: relative;
+
+  &__cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  &__body {
+    margin-top: var(--space-lg);
+  }
+
+  &__date {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+
+  &__title {
+    margin: var(--space-sm) 0 0;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+  }
+
+  &:hover &__title {
+    color: var(--color-primary);
+  }
+
+  &__description {
+    margin: var(--space-md) 0 0;
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  &__more {
+    margin: var(--space-md) 0 0;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+}

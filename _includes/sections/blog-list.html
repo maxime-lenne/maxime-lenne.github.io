@@ -1,0 +1,44 @@
+<!-- Blog index: posts of the page language, newest first -->
+{% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign t = site.data.translations[lang].blog %}
+{% assign posts = site.posts | where: "lang", lang %}
+<section class="section section--gradient-light blog-page__hero">
+  <div class="section__container section__container--dark-background blog-page__panel">
+    <h1 class="blog-page__title">{{ t.title }}</h1>
+    <p class="blog-page__lead">{{ t.lead }}</p>
+  </div>
+</section>
+
+<section class="section section--light">
+  <div class="section__container blog-page__container">
+    {% if posts.size > 0 %}
+    <ol class="blog-page__list">
+      {% for post in posts %}
+      {% assign month_index = post.date | date: "%-m" | minus: 1 %}
+      <li>
+        <article class="blog-card" aria-labelledby="post-{{ forloop.index }}">
+          {% if post.image.path %}
+          <img src="{{ post.image.path | relative_url }}" alt="" class="blog-card__cover"
+               {% unless forloop.first %}loading="lazy"{% endunless %}>
+          {% endif %}
+          <div class="blog-card__body">
+            <p class="blog-card__date">
+              <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+                {% if lang == 'en' %}{{ t.months[month_index] }} {{ post.date | date: "%-d, %Y" }}{% else %}{{ post.date | date: "%-d" }} {{ t.months[month_index] }} {{ post.date | date: "%Y" }}{% endif %}
+              </time>
+            </p>
+            <h2 class="blog-card__title" id="post-{{ forloop.index }}">
+              <a href="{{ post.url | relative_url }}" class="blog-card__link">{{ post.title }}</a>
+            </h2>
+            <p class="blog-card__description">{{ post.description }}</p>
+            <p class="blog-card__more" aria-hidden="true">{{ t.read_article }} →</p>
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="blog-page__empty">{{ t.no_posts }}</p>
+    {% endif %}
+  </div>
+</section>
