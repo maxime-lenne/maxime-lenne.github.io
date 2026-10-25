@@ -111,7 +111,7 @@ Le sujet est arrivé par hasard, dans un couloir : la collecte de vêtements d'o
 en magasin et sur l'app (quatre fois plus de volume que sur le web), devait évoluer vers un envoi depuis chez soi. La
 réponse habituelle tombe : « on n'a pas le temps ». Ils se lancent le défi d'y répondre en moins de 48 heures.
 
-![Slide « 6 phases. 16 heures. » : comprendre, modéliser, prototyper, questionner, tester, synthétiser](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-6-phases-16-hours.jpeg)
+![Slide « 6 phases. 16 heures. » : comprendre, modéliser, prototyper, questionner, tester, synthétiser]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-6-phases-16-hours.jpeg' | absolute_url }})
 
 _Le Double Diamant compressé : six phases, seize heures de travail sur 48 heures._
 
@@ -123,14 +123,14 @@ _Le Double Diamant compressé : six phases, seize heures de travail sur 48 heure
 - **Synthétiser (2 h)** : 57 verbatims codés par l'IA (hypothèse, question de recherche, signal) dans une base Notion,
   puis réinjectés dans les maquettes Figma.
 
-![Slide « 80 % l'IA, 20 % nous » : l'IA fait le gros du travail, l'équipe les détails qui font la différence](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-80-20.jpeg)
+![Slide « 80 % l'IA, 20 % nous » : l'IA fait le gros du travail, l'équipe les détails qui font la différence]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-80-20.jpeg' | absolute_url }})
 
 _80 % pour l'IA (écrans, questionnaire, synthèse), 20 % pour l'équipe : les détails qui font la différence._
 
 Le plus intéressant, c'est ce que l'IA n'a pas compressé. Trois fois, le chrono a ralenti : **choisir** la direction,
 **trancher** entre les options, **aller voir** les gens. Un quart du temps, et l'essentiel de ce qu'ils ont appris.
 
-![Slide « Trois fois, le chrono a ralenti » : choisir, trancher, aller voir](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-clock-slowed-down.jpeg)
+![Slide « Trois fois, le chrono a ralenti » : choisir, trancher, aller voir]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-clock-slowed-down.jpeg' | absolute_url }})
 
 > « On a tous déjà utilisé cette excuse, mais aujourd'hui, avec l'IA, "on n'a pas le temps" n'est plus forcément
 > valable. »
@@ -185,7 +185,7 @@ plus le problème, trouver et garder des utilisateurs, si.
 
 Côté modèle économique : un abonnement à 40 € par an et par famille, que des communes peuvent prendre en charge.
 
-![Anicet Bart devant la slide « On ne retient pas un utilisateur. On le fait réussir. »](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/solfy-retention.jpeg)
+![Anicet Bart devant la slide « On ne retient pas un utilisateur. On le fait réussir. »]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/solfy-retention.jpeg' | absolute_url }})
 
 > « On ne retient pas un utilisateur. On le fait réussir. »
 
@@ -195,12 +195,12 @@ Stéphane pratique le Design Sprint depuis 2015, aux côtés de Jake Knapp, son 
 100 entreprises accompagnées en dix ans, de la start-up au grand groupe. Il a aussi publié
 [une courte vidéo](https://lnkd.in/p/eFRqN2wP) sur le sujet.
 
-![Les cinq jours du Design Sprint : stratégie (comprendre, sketcher, décider), prototype et tests](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-diamonds.jpeg)
+![Les cinq jours du Design Sprint : stratégie (comprendre, sketcher, décider), prototype et tests]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-diamonds.jpeg' | absolute_url }})
 
 Sa question : pourquoi bloquer encore cinq jours quand l'IA génère un prototype en quelques minutes ? Parce qu'un
 projet nouveau noyé dans les agendas meurt, et parce que les décisions sont prises par des humains, pas par des agents.
 
-![Slide « Où l'IA apporte de la valeur » : jours 1 à 3 sans IA, jour 4 vibecoding à fond, jour 5 de vrais humains, analyse avec l'IA après](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-where-ai-helps.jpeg)
+![Slide « Où l'IA apporte de la valeur » : jours 1 à 3 sans IA, jour 4 vibecoding à fond, jour 5 de vrais humains, analyse avec l'IA après]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-where-ai-helps.jpeg' | absolute_url }})
 
 - **Jours 1 à 3, la stratégie** : friction humaine, l'IA dehors. Chacun sketche sa solution sur papier. Ceux qui
   utilisent l'IA arrivent souvent avec des usines à gaz et perdent face à trois post-its clairs.
@@ -209,7 +209,7 @@ projet nouveau noyé dans les agendas meurt, et parce que les décisions sont pr
 - **Jour 5, les tests** : de vrais humains, non négociable.
 - **Après le sprint** : l'IA transcrit et analyse, en complément des grilles remplies par l'équipe.
 
-![Slide « Les jours 1 à 3, c'est du context engineering. Fait par des humains. »](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-context-engineering.jpeg)
+![Slide « Les jours 1 à 3, c'est du context engineering. Fait par des humains. »]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-context-engineering.jpeg' | absolute_url }})
 
 > « Il faut moins d'une minute pour faire un truc, mais il faut au moins cinq jours pour prendre une vraie décision
 > business. »
@@ -225,7 +225,7 @@ processus compte : les gens défendent ce qu'ils ont construit ensemble.
 
 ### Roger Ingouacka (Petit Bambou) : la vie d'un Product Builder
 
-![Roger Ingouacka sur scène pour « REX : La vie d'un véritable Product Builder ! »](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/petit-bambou-product-builder.jpeg)
+![Roger Ingouacka sur scène pour « REX : La vie d'un véritable Product Builder ! »]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/petit-bambou-product-builder.jpeg' | absolute_url }})
 
 Roger, développeur devenu Product Builder, travaille depuis deux ans sur la nouvelle verticale de Petit Bambou :
 **Mouvement**, sortie en septembre. Le constat : des personnes de 50 ans qui ont mal partout, sans pathologie, juste
@@ -271,7 +271,7 @@ et des coussins floqués Nord Star Product pour l'occasion.
 **Le tote bag d'accueil contenait des bières triples en bouteille.** Moi, c'est mon grand kiff ; ce n'est peut-être
 pas le cas de tout le monde.
 
-![Le food truck Barkette devant les briques de la Plaine Images](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/barkette-food-truck.jpeg)
+![Le food truck Barkette devant les briques de la Plaine Images]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/barkette-food-truck.jpeg' | absolute_url }})
 
 _Le déjeuner, signé Barkette._
 
@@ -282,7 +282,7 @@ d'organisation.
 **De très bons speakers et de très bons talks**, et de vraies discussions avec certains d'entre eux, notamment Anicet
 Bart et Roger Ingouacka.
 
-![Le DJ set de Tremolo pour l'after party de l'édition Aurora](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/after-party-tremolo.jpeg)
+![Le DJ set de Tremolo pour l'after party de l'édition Aurora]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/after-party-tremolo.jpeg' | absolute_url }})
 
 _L'after party, avec Tremolo aux platines._
 

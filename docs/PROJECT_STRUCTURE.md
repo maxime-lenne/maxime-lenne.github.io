@@ -162,6 +162,12 @@ Blog posts live in `_collections/_posts/`, one file per language, named `YYYY-MM
 `alternate_url` for hreflang. Their images go in `assets/images/posts/<slug>/`. `_config.yml` lists `_collections`
 under `include`: Jekyll skips underscore folders when it looks for posts, so without it no post is built.
 
+Posts use `_layouts/post.html` (styles in `_sass/pages/_post.scss`): a hero panel like the experience pages (back
+link, tags, title, description, date, reading time), then the cover and the Markdown body in a 768px column. Write
+image URLs as `{{ '/assets/images/posts/<slug>/<file>' | absolute_url }}`: the page shows them in development, and
+the production build gives the absolute URLs that Medium and dev.to need. An italic line right after an image is
+styled as its caption.
+
 `blog.html` (`/blog/`) and `en/blog.html` (`/en/blog/`) list the posts of their language, newest first, through
 `_includes/sections/blog-list.html` (styles in `_sass/pages/_blog.scss`). The header, the mobile menu and the footer
 link to the blog index of the page language.
