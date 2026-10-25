@@ -4,6 +4,7 @@
 .blog-page {
   // Opaque panel on the gradient, like the experience hero
   &__panel {
+    max-width: 768px;
     text-align: left;
 
     @media (max-width: 480px) {
@@ -96,7 +97,9 @@
   }
 
   &:hover &__title {
-    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.15em;
   }
 
   &__description {
@@ -109,6 +112,15 @@
     margin: var(--space-md) 0 0;
     font-size: var(--text-sm);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-text-secondary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-text-secondary);
+    text-underline-offset: 0.2em;
+  }
+
+  &:hover &__more {
+    color: var(--color-text-primary);
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
   }
 }
