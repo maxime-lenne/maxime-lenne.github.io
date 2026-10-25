@@ -29,7 +29,7 @@
     }
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-text-primary);
 
       svg {
         transform: translateX(-3px);
@@ -173,14 +173,18 @@
     margin-top: var(--space-lg);
   }
 
+  // Same treatment as the resume company link: grey underline, primary text color on hover
   a {
-    color: var(--color-primary);
+    color: inherit;
     text-decoration: underline;
+    text-decoration-color: var(--color-text-secondary);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.2em;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: var(--color-text-primary);
+      text-decoration-color: currentColor;
       text-decoration-thickness: 2px;
     }
   }
