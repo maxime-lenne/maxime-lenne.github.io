@@ -1,6 +1,7 @@
 <!-- Deep Stack Footer -->
 {% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
 {% assign t = site.data.translations[lang] %}
+{% if lang == 'en' %}{% assign blog_url = '/en/blog/' %}{% else %}{% assign blog_url = '/blog/' %}{% endif %}
 <footer class="deep-stack-footer">
     <div class="deep-stack-footer__container">
         <div class="footer__content">
@@ -47,8 +48,9 @@
                    item1_text=t.footer.nav_about item1_url="#about"
                    item2_text=t.footer.nav_services item2_url="#services"
                    item3_text=t.footer.nav_testimonials item3_url="#testimonials"
-                   item4_text=t.footer.nav_book item4_url="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
-                   item5_text=t.footer.nav_email item5_url="mailto:hello@maxime-lenne.fr" %}
+                   item4_text=t.nav.blog item4_url=blog_url
+                   item5_text=t.footer.nav_book item5_url="https://calendar.notion.so/meet/maxime-lenne/1h1wbg4ojm"
+                   item6_text=t.footer.nav_email item6_url="mailto:hello@maxime-lenne.fr" %}
 
                 {% include components/list-footer-link.html
                    title=t.footer.services_title
