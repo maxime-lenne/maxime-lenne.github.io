@@ -1,19 +1,75 @@
 ---
 layout: default
 ---
+{% comment %} Blog post: hero panel like the experience pages, then one readable column {% endcomment %}
+{% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign t = site.data.translations[lang].blog %}
+{% if lang == 'en' %}{% assign blog_url = '/en/blog/' %}{% else %}{% assign blog_url = '/blog/' %}{% endif %}
+{% assign month_index = page.date | date: "%-m" | minus: 1 %}
+{% assign words = content | strip_html | number_of_words %}
+{% assign read_minutes = words | divided_by: 200 | at_least: 1 %}
 
-<article class="post">
-    <header class="post-header">
-        <h1 class="post-title">{{ page.title }}</h1>
-        <p class="post-meta">
-            {{ page.date | date: "%d/%m/%Y" }}
-            {% if page.categories %}
-            • Catégories: {{ page.categories | join: ", " }}
-            {% endif %}
-        </p>
-    </header>
+<article class="post-page">
+  <header class="section section--gradient-light post-page__hero">
+    <div class="section__container section__container--dark-background post-page__panel">
+      <a href="{{ blog_url | relative_url }}" class="post-page__back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        {{ t.back_to_blog }}
+      </a>
 
-    <div class="post-content">
-        {{ content }}
+      {% if page.tags.size > 0 %}
+      <div class="post-page__tags">
+        {% for tag in page.tags %}
+          {% include components/badge.html text=tag %}
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <h1 class="post-page__title">{{ page.title }}</h1>
+
+      {% if page.description %}
+      <p class="post-page__lead">{{ page.description }}</p>
+      {% endif %}
+
+      <ul class="post-page__meta">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+            {% if lang == 'en' %}{{ t.months[month_index] }} {{ page.date | date: "%-d, %Y" }}{% else %}{{ page.date | date: "%-d" }} {{ t.months[month_index] }} {{ page.date | date: "%Y" }}{% endif %}
+          </time>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          {{ read_minutes }} {{ t.read_time }}
+        </li>
+      </ul>
     </div>
+  </header>
+
+  <div class="section section--light post-page__body">
+    <div class="section__container post-page__container">
+      {% if page.image.path %}
+      <img src="{{ page.image.path | relative_url }}" alt="{{ page.image.alt }}" class="post-page__cover">
+      {% endif %}
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      <footer class="post-page__footer">
+        <a href="{{ blog_url | relative_url }}" class="post-page__back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          {{ t.back_to_blog }}
+        </a>
+      </footer>
+    </div>
+  </div>
 </article>

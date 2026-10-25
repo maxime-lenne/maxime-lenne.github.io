@@ -245,6 +245,7 @@ fr:
     description: "Les articles de Maxime Lenne, CTO et product builder à Lille : retours de conférences, produit, tech, IA et entrepreneuriat."
     lead: "Retours de conférences, produit, tech, IA et entrepreneuriat : ce que j'apprends, je le partage ici."
     read_article: "Lire l'article"
+    back_to_blog: "Tous les articles"
     months: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 
   contact:
@@ -510,6 +511,7 @@ en:
     description: "Posts by Maxime Lenne, CTO and product builder in Lille, France: conference recaps, product, tech, AI and entrepreneurship."
     lead: "Conference recaps, product, tech, AI and entrepreneurship: what I learn, I share here."
     read_article: "Read the post"
+    back_to_blog: "All posts"
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
   contact:
