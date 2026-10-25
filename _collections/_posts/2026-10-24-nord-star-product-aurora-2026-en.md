@@ -107,7 +107,7 @@ The topic came up by chance, in a corridor: Kiabi's second-hand clothing collect
 in the app (four times the web volume), had to evolve so customers could send their clothes from home. The usual answer
 came: "we don't have time". They set themselves the challenge of answering it in less than 48 hours.
 
-![Slide "6 phases. 16 hours.": understand, model, prototype, ask, test, synthesise](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-6-phases-16-hours.jpeg)
+![Slide "6 phases. 16 hours.": understand, model, prototype, ask, test, synthesise]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-6-phases-16-hours.jpeg' | absolute_url }})
 
 _The compressed Double Diamond: six phases, sixteen hours of work over 48 hours._
 
@@ -119,14 +119,14 @@ _The compressed Double Diamond: six phases, sixteen hours of work over 48 hours.
 - **Synthesise (2 h)**: 57 verbatims coded by AI (hypothesis, research question, signal) in a Notion database, then fed
   back into the Figma mock-ups.
 
-![Slide "80% AI, 20% us": AI does the bulk of the work, the team the details that make the difference](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-80-20.jpeg)
+![Slide "80% AI, 20% us": AI does the bulk of the work, the team the details that make the difference]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-80-20.jpeg' | absolute_url }})
 
 _80% for AI (screens, questionnaire, synthesis), 20% for the team: the details that make the difference._
 
 The most interesting part is what AI did not compress. Three times, the clock slowed down: **choosing** the direction,
 **deciding** between options, **going to see** people. A quarter of the time, and most of what they learned.
 
-![Slide "Three times, the clock slowed down": choose, decide, go and see](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-clock-slowed-down.jpeg)
+![Slide "Three times, the clock slowed down": choose, decide, go and see]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-clock-slowed-down.jpeg' | absolute_url }})
 
 > "We've all used that excuse, but today, with AI, 'we don't have time' doesn't necessarily hold any more."
 >
@@ -177,7 +177,7 @@ problem, finding and keeping users is.
 
 On the business model: a €40 yearly subscription per family, which local councils can pay for.
 
-![Anicet Bart in front of the slide "You don't retain a user. You make them succeed."](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/solfy-retention.jpeg)
+![Anicet Bart in front of the slide "You don't retain a user. You make them succeed."]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/solfy-retention.jpeg' | absolute_url }})
 
 > "You don't retain a user. You make them succeed."
 
@@ -187,12 +187,12 @@ Stéphane has run Design Sprints since 2015, alongside Jake Knapp, who invented 
 100 companies coached in ten years, from start-ups to large groups. He also posted
 [a short video](https://lnkd.in/p/eFRqN2wP) on the topic.
 
-![The five days of the Design Sprint: strategy (understand, sketch, decide), prototype and tests](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-diamonds.jpeg)
+![The five days of the Design Sprint: strategy (understand, sketch, decide), prototype and tests]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-diamonds.jpeg' | absolute_url }})
 
 His question: why still block five days when AI generates a prototype in a few minutes? Because a new project drowned in
 calendars dies, and because decisions are made by humans, not by agents.
 
-![Slide "Where AI adds value": days 1 to 3 without AI, day 4 full vibecoding, day 5 real humans, analysis with AI afterwards](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-where-ai-helps.jpeg)
+![Slide "Where AI adds value": days 1 to 3 without AI, day 4 full vibecoding, day 5 real humans, analysis with AI afterwards]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-where-ai-helps.jpeg' | absolute_url }})
 
 - **Days 1 to 3, strategy**: human friction, AI stays out. Everyone sketches their solution on paper. Those who use AI
   often come up with overloaded concepts and lose to three clear sticky notes.
@@ -201,7 +201,7 @@ calendars dies, and because decisions are made by humans, not by agents.
 - **Day 5, tests**: real humans, non-negotiable.
 - **After the sprint**: AI transcribes and analyses, alongside the scorecards filled in by the team.
 
-![Slide "Days 1 to 3 are context engineering. Done by humans."](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-context-engineering.jpeg)
+![Slide "Days 1 to 3 are context engineering. Done by humans."]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-context-engineering.jpeg' | absolute_url }})
 
 > "It takes less than a minute to make something, but it takes at least five days to make a real business decision."
 >
@@ -216,7 +216,7 @@ defend what they built together.
 
 ### Roger Ingouacka (Petit Bambou): the life of a Product Builder
 
-![Roger Ingouacka on stage for "Lessons learned: the life of a real Product Builder!"](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/petit-bambou-product-builder.jpeg)
+![Roger Ingouacka on stage for "Lessons learned: the life of a real Product Builder!"]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/petit-bambou-product-builder.jpeg' | absolute_url }})
 
 Roger, a developer turned Product Builder, has spent two years on Petit Bambou's new vertical: **Mouvement**, released
 in September. The observation: people in their fifties in pain everywhere, with no condition, just after 15 to 20 years
@@ -259,7 +259,7 @@ Star Product logo for the occasion.
 
 **The welcome tote bag held bottles of tripel beer.** That's my kind of thing; maybe not everyone's.
 
-![The Barkette food truck in front of the Plaine Images brick buildings](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/barkette-food-truck.jpeg)
+![The Barkette food truck in front of the Plaine Images brick buildings]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/barkette-food-truck.jpeg' | absolute_url }})
 
 _Lunch, by Barkette._
 
@@ -269,7 +269,7 @@ Koma and Teddy Lecaillon, whom I was glad to see again, and to the whole organis
 **Very good speakers and very good talks**, and real conversations with some of them, especially Anicet Bart and Roger
 Ingouacka.
 
-![Tremolo's DJ set at the Aurora edition after party](https://maxime-lenne.fr/assets/images/posts/nord-star-product-edition-aurora-2026/after-party-tremolo.jpeg)
+![Tremolo's DJ set at the Aurora edition after party]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/after-party-tremolo.jpeg' | absolute_url }})
 
 _The after party, with Tremolo on the decks._
 
