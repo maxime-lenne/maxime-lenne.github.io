@@ -5,11 +5,13 @@
 {% if lang == 'en' %}
   {% assign home_url = '/en/' %}
   {% assign resume_url = '/en/resume/' %}
+  {% assign blog_url = '/en/blog/' %}
   {% assign alternate_home = '/' %}
   {% assign alternate_resume = '/resume/' %}
 {% else %}
   {% assign home_url = '/' %}
   {% assign resume_url = '/resume/' %}
+  {% assign blog_url = '/blog/' %}
   {% assign alternate_home = '/en/' %}
   {% assign alternate_resume = '/en/resume/' %}
 {% endif %}
@@ -43,11 +45,11 @@
             <a href="{{ resume_url | relative_url }}" class="nav-link{% if page.url contains '/resume/' %} nav-link--active{% endif %}">
                 {{ t.nav.resume }}
             </a>
+            <a href="{{ blog_url | relative_url }}" class="nav-link{% if page.url contains '/blog/' %} nav-link--active{% endif %}">
+                {{ t.nav.blog }}
+            </a>
             <!--a href="{{ '/projects/' | relative_url }}" class="nav-link{% if page.url contains '/projects/' %} nav-link--active{% endif %}">
                 Projets
-            </a>
-            <a href="{{ '/blog/' | relative_url }}" class="nav-link{% if page.url contains '/blog/' %} nav-link--active{% endif %}">
-                Blog
             </a-->
         </nav>
         
@@ -70,6 +72,18 @@
                         🇫🇷 Français
                     </a>
                     <a href="{{ '/en/resume/' | relative_url }}"
+                       class="deep-stack-language-switcher__option{% if lang == 'en' %} deep-stack-language-switcher__option--active{% endif %}"
+                       hreflang="en">
+                        🇬🇧 English
+                    </a>
+                    {% elsif page.alternate_url %}
+                    {% if lang == 'fr' %}{% assign fr_switch = page.url %}{% assign en_switch = page.alternate_url %}{% else %}{% assign fr_switch = page.alternate_url %}{% assign en_switch = page.url %}{% endif %}
+                    <a href="{{ fr_switch | relative_url }}"
+                       class="deep-stack-language-switcher__option{% if lang == 'fr' %} deep-stack-language-switcher__option--active{% endif %}"
+                       hreflang="fr">
+                        🇫🇷 Français
+                    </a>
+                    <a href="{{ en_switch | relative_url }}"
                        class="deep-stack-language-switcher__option{% if lang == 'en' %} deep-stack-language-switcher__option--active{% endif %}"
                        hreflang="en">
                         🇬🇧 English

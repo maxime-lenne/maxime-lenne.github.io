@@ -241,6 +241,11 @@ fr:
     related_posts: "Articles similaires"
     no_posts: "Aucun article trouvé"
     search_placeholder: "Rechercher un article..."
+    page_title: "Blog : produit, tech et IA"
+    description: "Les articles de Maxime Lenne, CTO et product builder à Lille : retours de conférences, produit, tech, IA et entrepreneuriat."
+    lead: "Retours de conférences, produit, tech, IA et entrepreneuriat : ce que j'apprends, je le partage ici."
+    read_article: "Lire l'article"
+    months: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 
   contact:
     title: "Contact"
@@ -501,6 +506,11 @@ en:
     related_posts: "Related posts"
     no_posts: "No posts found"
     search_placeholder: "Search for a post..."
+    page_title: "Blog: product, tech and AI"
+    description: "Posts by Maxime Lenne, CTO and product builder in Lille, France: conference recaps, product, tech, AI and entrepreneurship."
+    lead: "Conference recaps, product, tech, AI and entrepreneurship: what I learn, I share here."
+    read_article: "Read the post"
+    months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
   contact:
     title: "Contact"
