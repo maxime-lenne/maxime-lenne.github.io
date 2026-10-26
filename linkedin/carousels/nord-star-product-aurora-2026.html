@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nord Star Product Aurora 2026 – Maxime Lenne</title>
+  <style>
+    /* ============================================
+       RESET & BASE
+    ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* Dark theme – maxime-lenne.fr */
+      --bg:          #0f172a;
+      --bg-alt:      #1e293b;
+      --surface:     #1e293b;
+      --surface-2:   #334155;
+      --text-primary:   #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted:     #94a3b8;
+      --primary:     #3b82f6;
+      --secondary:   #22c55e;
+      --code-bg:     #000000;
+      --code-text:   #00ff41;
+      --code-accent: #00d4ff;
+      --border:      #334155;
+
+      --gradient: linear-gradient(135deg, #3b82f6 0%, #22c55e 100%);
+      --gradient-text: linear-gradient(135deg, #60a5fa 0%, #4ade80 100%);
+
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+
+      --slide-size: 1080px;
+      --pad: 90px;
+    }
+
+    html, body {
+      background: #0a0f1e;
+      font-family: var(--font-sans);
+    }
+
+    /* ============================================
+       PRINT / EXPORT PDF
+    ============================================ */
+    @media print {
+      @page { size: 1080px 1080px; margin: 0; }
+
+      html, body { background: none; margin: 0; padding: 0; }
+
+      .controls, .instructions, .slide-label, .bottom-spacer { display: none !important; visibility: hidden !important; }
+
+      .slide-wrapper { margin: 0; padding: 0; }
+
+      .slide {
+        page-break-after: always;
+        break-after: page;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      /* Pas de page vide après le dernier slide */
+      .slide-wrapper:last-child .slide {
+        page-break-after: avoid;
+        break-after: avoid;
+      }
+    }
+
+    /* ============================================
+       CONTROLS
+    ============================================ */
+    .controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .btn-pdf {
+      background: var(--gradient);
+      color: white;
+    }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+
+    .instructions {
+      max-width: 1080px;
+      margin: 32px auto 24px;
+      padding: 16px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .instructions strong { color: var(--text-primary); }
+    .instructions kbd {
+      display: inline-block;
+      padding: 2px 8px;
+      background: var(--surface-2);
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--primary);
+    }
+
+    /* ============================================
+       SLIDE BASE
+    ============================================ */
+    .slide-wrapper {
+      max-width: var(--slide-size);
+      margin: 0 auto 32px;
+    }
+    .slide-label {
+      color: var(--text-muted);
+      font-size: 12px;
+      font-family: var(--font-mono);
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .slide {
+      width: var(--slide-size);
+      height: var(--slide-size);
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Decorative background blobs */
+    .slide::before,
+    .slide::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Slide number badge */
+    .slide-num {
+      position: absolute;
+      bottom: var(--pad);
+      right: var(--pad);
+      font-family: var(--font-mono);
+      font-size: 22px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .slide-footer {
+      position: absolute; bottom: var(--pad); left: var(--pad); right: var(--pad);
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--font-mono); font-size: 22px; font-weight: 600; color: var(--text-muted);
+    }
+    .slide-footer .sf-brand .at { color: var(--primary); }
+
+    /* Progress bar */
+    .progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      background: var(--gradient);
+    }
+
+    /* Brand tag */
+    .brand-tag {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .brand-tag .at { color: var(--primary); }
+
+    /* Gradient text utility */
+    .grad {
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================
+       SLIDE 1 – COVER
+    ============================================ */
+    .slide-cover {
+      background: var(--bg);
+      justify-content: center;
+      align-items: flex-start;
+      padding: var(--pad);
+    }
+    .slide-cover::before {
+      width: 600px; height: 600px;
+      top: -200px; right: -200px;
+      background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+    }
+    .slide-cover::after {
+      width: 400px; height: 400px;
+      bottom: -100px; left: -100px;
+      background: radial-gradient(circle, rgba(34,197,94,0.12) 0%, transparent 70%);
+    }
+
+    .cover-tag {
+      display: inline-block;
+      padding: 8px 20px;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.3);
+      border-radius: 100px;
+      color: var(--primary);
+      font-size: 26px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      margin-bottom: 40px;
+    }
+    .cover-title {
+      font-size: 90px;
+      font-weight: 800;
+      line-height: 1.05;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+      max-width: 820px;
+    }
+    .cover-subtitle {
+      font-size: 38px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      max-width: 700px;
+      margin-bottom: 64px;
+    }
+    .cover-footer {
+      position: absolute;
+      bottom: var(--pad);
+      right: var(--pad);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .cover-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      overflow: hidden; flex-shrink: 0;
+      border: 2px solid rgba(59,130,246,0.4);
+    }
+    .cover-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .cover-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cover-meta-name {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .cover-meta-role {
+      font-size: 22px;
+      color: var(--text-secondary);
+    }
+
+    /* ============================================
+       SLIDE 2 – BULLET POINTS
+    ============================================ */
+    .slide-bullets {
+      padding: var(--pad);
+      justify-content: flex-start;
+      background: var(--bg);
+    }
+    .slide-bullets::before {
+      width: 500px; height: 500px;
+      top: -150px; right: -150px;
+      background: radial-gradient(circle, rgba(34,197,94,0.1) 0%, transparent 70%);
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 22px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+    .slide-title {
+      font-size: 66px;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 56px;
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .bullet-item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .bullet-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 22px;
+    }
+    .bullet-text {
+      flex: 1;
+    }
+    .bullet-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .bullet-desc {
+      font-size: 28px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ============================================
+       SLIDE 3 – CODE EXAMPLE
+    ============================================ */
+    .slide-code {
+      padding: var(--pad) var(--pad) calc(var(--pad) + 56px);
+      background: var(--bg);
+      justify-content: flex-start;
+    }
+    .slide-code::after {
+      width: 600px; height: 400px;
+      bottom: -200px; right: -150px;
+      background: radial-gradient(circle, rgba(0,212,255,0.08) 0%, transparent 70%);
+    }
+
+    .terminal {
+      background: var(--code-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      flex: 1;
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 20px;
+      background: #0d0d0d;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .dot { width: 14px; height: 14px; border-radius: 50%; }
+    .dot-red   { background: #ff5f57; }
+    .dot-yellow{ background: #ffbd2e; }
+    .dot-green { background: #28ca41; }
+    .terminal-title {
+      margin-left: 8px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      color: #666;
+    }
+    .terminal-body {
+      padding: 32px;
+      font-family: var(--font-mono);
+      font-size: 26px;
+      line-height: 1.8;
+      color: #334155;
+    }
+    .code-comment { color: #555; }
+    .code-keyword { color: var(--primary); }
+    .code-string  { color: #f97316; }
+    .code-method  { color: var(--code-accent); }
+    .code-var     { color: var(--text-primary); }
+    .code-output  { color: var(--code-text); }
+    .code-prompt  { color: #555; user-select: none; }
+
+    .code-annotation {
+      margin-top: 32px;
+      padding: 20px 24px;
+      background: rgba(59,130,246,0.08);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      font-size: 28px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+    .code-annotation strong { color: var(--primary); }
+    .code-pills {
+      display: flex; gap: 16px; margin-top: 28px; flex-wrap: wrap;
+    }
+    .code-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 20px; border-radius: 10px;
+      background: rgba(248,250,252,0.04); border: 1px solid var(--border);
+      font-size: 28px; color: var(--text-secondary);
+    }
+
+    /* ============================================
+       SLIDE 4 – QUICK TUTORIAL (STEPS)
+    ============================================ */
+    .slide-steps {
+      padding: var(--pad) var(--pad) calc(var(--pad) + 56px);
+      background: var(--bg);
+      justify-content: flex-start;
+    }
+    .slide-steps::before {
+      width: 500px; height: 500px;
+      top: -200px; left: -200px;
+      background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%);
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .step-item {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      padding: 18px 24px;
+      background: var(--surface);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .step-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--gradient);
+    }
+    .step-num {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+    .step-content { flex: 1; }
+    .step-title {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+    .step-desc {
+      font-size: 24px;
+      color: var(--text-secondary);
+      line-height: 1.3;
+    }
+    .step-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .step-badge-blue {
+      background: rgba(59,130,246,0.15);
+      color: var(--primary);
+    }
+    .step-badge-green {
+      background: rgba(34,197,94,0.15);
+      color: var(--secondary);
+    }
+
+    /* ============================================
+       SLIDE 5 – KEY TAKEAWAY / QUOTE
+    ============================================ */
+    .slide-quote {
+      padding: var(--pad);
+      background: var(--bg);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .slide-quote::before {
+      width: 700px; height: 700px;
+      top: -250px; left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(34,197,94,0.08) 50%, transparent 70%);
+    }
+
+    .quote-mark {
+      font-size: 122px;
+      line-height: 0.5;
+      margin-bottom: 40px;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .quote-text {
+      font-size: 54px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+      max-width: 880px;
+      margin-bottom: 40px;
+    }
+    .quote-attr {
+      font-size: 28px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* ============================================
+       SLIDE 6 – CLOSING / CTA
+    ============================================ */
+    .slide-closing {
+      padding: var(--pad);
+      background: var(--bg);
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .slide-closing::before {
+      width: 600px; height: 600px;
+      bottom: -200px; right: -150px;
+      background: radial-gradient(circle, rgba(34,197,94,0.12) 0%, transparent 70%);
+    }
+    .slide-closing::after {
+      width: 400px; height: 400px;
+      top: -100px; left: -100px;
+      background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+    }
+
+    .closing-tag {
+      font-family: var(--font-mono);
+      font-size: 24px;
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 28px;
+      letter-spacing: 0.05em;
+    }
+    .closing-title {
+      font-size: 82px;
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 32px;
+    }
+    .closing-sub {
+      font-size: 36px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      max-width: 750px;
+      margin-bottom: 64px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 0;
+      width: 100%;
+      align-items: stretch;
+    }
+    .cta-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+    }
+    .cta-col:first-child {
+      flex: 0 0 60%;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--border);
+      padding-right: 56px;
+    }
+    .cta-col:last-child {
+      flex: 0 0 40%;
+      padding-left: 56px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 40px;
+      background: var(--gradient);
+      border-radius: 12px;
+      font-size: 30px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+    .cta-social {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cta-social-label {
+      font-size: 20px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .cta-social-handle {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* ============================================
+       SLIDE 7 – TABLE
+    ============================================ */
+    .slide-table { padding: var(--pad); background: var(--bg); justify-content: flex-start; }
+    .slide-table::before { width: 500px; height: 500px; top: -150px; right: -150px; background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%); }
+    .slide-table::after  { width: 400px; height: 400px; bottom: -150px; left: -100px; background: radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%); }
+
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .data-table tr { border-bottom: 1px solid var(--border); }
+    .data-table tr:last-child { border-bottom: none; }
+    .data-table td { padding: 22px 24px; vertical-align: middle; }
+    .data-cell-key {
+      font-family: var(--font-mono); font-size: 32px; font-weight: 700;
+      color: var(--code-accent); white-space: nowrap; width: 1%;
+    }
+    .data-cell-sep { color: var(--border); font-size: 26px; padding: 0 8px; width: 1%; }
+    .data-cell-desc { font-size: 30px; color: var(--text-secondary); line-height: 1.3; }
+    .data-cell-badge {
+      display: inline-block; padding: 6px 16px; border-radius: 100px;
+      background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.2);
+      font-family: var(--font-mono); font-size: 20px; color: var(--primary); white-space: nowrap;
+    }
+    .data-row-highlight td { background: rgba(34,197,94,0.06); }
+    .data-row-highlight .data-cell-key { color: var(--secondary); }
+
+    /* ============================================
+       SLIDE 8 – BLANK TEMPLATE
+    ============================================ */
+    .slide-blank {
+      padding: var(--pad);
+      background: var(--bg);
+      justify-content: center;
+      align-items: center;
+    }
+    .blank-center {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 28px;
+    }
+    .blank-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.3;
+    }
+
+    /* ============================================
+       NORD STAR PRODUCT – EXTRA COMPONENTS
+       (cover-teaser and insight-box come from hooks-carousel.html)
+    ============================================ */
+    .cover-teaser {
+      display: inline-block;
+      padding: 16px 28px; background: rgba(248,250,252,0.04);
+      border: 1px solid var(--border); border-radius: 12px;
+      font-size: 32px; color: var(--text-secondary); margin-bottom: 56px;
+    }
+    .cover-teaser strong { color: var(--text-primary); font-weight: 700; }
+
+    .insight-box {
+      margin-top: 44px; padding: 22px 28px;
+      background: rgba(59,130,246,0.08); border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      font-size: 32px; font-weight: 700; color: var(--text-primary); line-height: 1.3;
+    }
+    .insight-box span { color: var(--primary); }
+
+    /* Compact table: stats + annotation on one slide */
+    .data-table--compact td { padding: 14px 24px; }
+    .data-table--compact + .code-annotation { margin-top: 24px; }
+
+    /* Compact steps: 6 phases on one slide */
+    .steps-list--compact { gap: 12px; }
+    .steps-list--compact .step-item { padding: 14px 24px; }
+    .steps-list--compact .step-title { font-size: 32px; }
+    .steps-list--compact .step-badge { font-size: 24px; padding: 6px 16px; }
+
+    /* Quote slide: second, smaller quote */
+    .quote-sub {
+      font-size: 34px; color: var(--text-secondary); line-height: 1.4;
+      max-width: 820px; margin-bottom: 40px;
+    }
+
+    /* Photo slide: event photo + quote */
+    .slide-photo {
+      padding: var(--pad) var(--pad) calc(var(--pad) + 56px);
+      background: var(--bg);
+      justify-content: flex-start;
+    }
+    .slide-photo::before {
+      width: 500px; height: 500px; top: -150px; right: -150px;
+      background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);
+    }
+    .photo-frame {
+      flex: 1; min-height: 0; margin-bottom: 32px;
+      border-radius: 20px; overflow: hidden; border: 1px solid var(--border);
+    }
+    .photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .photo-quote {
+      font-size: 46px; font-weight: 800; line-height: 1.2;
+      color: var(--text-primary); margin-bottom: 16px;
+    }
+    .photo-attr { font-size: 26px; color: var(--text-muted); font-family: var(--font-mono); line-height: 1.4; }
+  </style>
+</head>
+<body>
+
+<!-- Controls -->
+<div class="controls">
+  <button class="btn btn-secondary" onclick="window.print()">⬇ Export PDF</button>
+</div>
+
+<!-- Instructions -->
+<div class="instructions">
+  <strong>Export PDF :</strong> <kbd>Cmd + P</kbd> → "Enregistrer en PDF" → taille personnalisée <kbd>1080 × 1080 px</kbd> · Sans marges · Graphiques en arrière-plan activés.
+  Carrousel de l'article <strong>Nord Star Product 2026, édition Aurora</strong> (13 slides).<br>
+  <strong>Sans liseré autour des dégradés :</strong> <kbd>linkedin/carousels/export-pdf.sh linkedin/carousels/nord-star-product-aurora-2026.html</kbd> exporte une image par slide.
+</div>
+
+
+<!-- ============================================================
+     SLIDE 1 — COVER
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">01 / COVER</div>
+  <div class="slide slide-cover">
+    <div class="cover-tag"># Nord Star Product · Aurora 2026</div>
+
+    <div class="cover-title">
+      7 talks.<br><span class="grad">1 fil rouge.</span>
+    </div>
+
+    <div class="cover-subtitle">
+      L'IA accélère tout. L'humain garde le choix, la décision et le terrain.
+    </div>
+
+    <div class="cover-teaser">
+      👉 Mon retour sur la journée <strong>design &amp; produit</strong> des Hauts-de-France
+    </div>
+
+    <div class="cover-footer">
+      <div class="cover-avatar"><img src="../../assets/images/avatar.webp" alt="Maxime Lenne"></div>
+      <div class="cover-meta">
+        <div class="cover-meta-name">Maxime Lenne</div>
+        <div class="cover-meta-role">CTO &amp; Leader Produit Tech</div>
+      </div>
+    </div>
+
+    <div class="progress-bar" style="width: calc(1/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 2 — HOOK QUOTE
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">02 / QUOTE — La phrase de la journée</div>
+  <div class="slide slide-quote">
+    <div class="quote-mark">"</div>
+    <div class="quote-text">
+      Nous n'avons pas gagné du temps pour aller plus vite, mais pour passer plus de temps
+      sur <span class="grad">ce qui compte vraiment</span>.
+    </div>
+    <div class="quote-attr">— Anthony Lefebvre &amp; Mathéo Evrard, Kiabi</div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>02 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(2/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 3 — LOVABLE
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">03 / BULLETS — Arthur Hilhorst, Lovable</div>
+  <div class="slide slide-bullets">
+    <div class="section-label">→ Arthur Hilhorst · Lovable</div>
+    <div class="slide-title" style="margin-bottom: 48px;">Trop rapide<br>pour <span class="grad">réfléchir</span></div>
+
+    <ul class="bullet-list">
+      <li class="bullet-item">
+        <div class="bullet-icon">⚡</div>
+        <div class="bullet-text">
+          <div class="bullet-title">Vitesse</div>
+          <div class="bullet-desc">Réflexion ou vitesse ? À peine 20 à 30 % des mains côté réflexion</div>
+        </div>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon">🧠</div>
+        <div class="bullet-text">
+          <div class="bullet-title">Contexte</div>
+          <div class="bullet-desc">10 à 30 agents en parallèle : un « deuxième cerveau » garde la mémoire</div>
+        </div>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon">🎯</div>
+        <div class="bullet-text">
+          <div class="bullet-title">Intention</div>
+          <div class="bullet-desc">Sans elle, l'IA saute l'exploration et les produits se ressemblent</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="insight-box">« Vous avez juste <span>un cerveau</span>, donc vous ne pouvez pas tout faire. »</div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>03 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(3/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 4 — ÉNO
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">04 / TABLE — Noé Chagué &amp; Maxime Podgorski, Éno</div>
+  <div class="slide slide-table">
+    <div class="section-label">→ Noé Chagué &amp; Maxime Podgorski · Éno</div>
+    <div class="slide-title" style="font-size: 60px; margin-bottom: 28px;">
+      Un design system<br><span class="grad">« AI ready »</span>
+    </div>
+
+    <table class="data-table data-table--compact">
+      <tr>
+        <td class="data-cell-key">143</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">écrans générés en une semaine de lancement</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="data-cell-key">150</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">pull requests par jour, vérifiées par la CI</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="data-cell-key">80 %</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">des écrans shippés après review</td>
+        <td></td>
+      </tr>
+      <tr class="data-row-highlight">
+        <td class="data-cell-key">20 %</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">ont révélé les trous du système</td>
+        <td style="text-align:right"><span class="data-cell-badge">le plus de valeur</span></td>
+      </tr>
+    </table>
+
+    <div class="code-annotation">
+      <strong>« </strong>À partir du moment où c'est clair pour un agent, ça l'est forcément pour un humain.<strong> »</strong>
+    </div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>04 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(4/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 5 — KIABI STEPS
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">05 / STEPS — Anthony Lefebvre &amp; Mathéo Evrard, Kiabi</div>
+  <div class="slide slide-steps">
+    <div class="section-label">→ Kiabi · On a pété le Double Diamant</div>
+    <div class="slide-title" style="font-size: 60px; margin-bottom: 28px;">
+      6 phases. <span class="grad">16 heures.</span>
+    </div>
+
+    <div class="steps-list steps-list--compact">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content"><div class="step-title">Comprendre</div></div>
+        <span class="step-badge step-badge-blue">1 h</span>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content"><div class="step-title">Modéliser</div></div>
+        <span class="step-badge step-badge-blue">1 h</span>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Prototyper</div>
+          <div class="step-desc">Claude branché sur Figma et le design system</div>
+        </div>
+        <span class="step-badge step-badge-green">7 h</span>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content"><div class="step-title">Questionner</div></div>
+        <span class="step-badge step-badge-blue">1 h</span>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <div class="step-title">Tester</div>
+          <div class="step-desc">En magasin : 5 clients, 3 collaborateurs</div>
+        </div>
+        <span class="step-badge step-badge-green">4 h</span>
+      </div>
+      <div class="step-item">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <div class="step-title">Synthétiser</div>
+          <div class="step-desc">57 verbatims codés par l'IA</div>
+        </div>
+        <span class="step-badge step-badge-blue">2 h</span>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>05 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(5/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 6 — KIABI PHOTO
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">06 / PHOTO — Kiabi, le chrono ralentit</div>
+  <div class="slide slide-photo">
+    <div class="section-label">→ Ce que l'IA n'a pas compressé</div>
+    <div class="photo-frame">
+      <img src="../../assets/images/posts/nord-star-product-edition-aurora-2026/kiabi-clock-slowed-down.jpeg" alt="Slide « Trois fois, le chrono a ralenti » : choisir, trancher, aller voir">
+    </div>
+    <div class="photo-quote">« L'IA ne compresse que ce qui est <span class="grad">déjà solide</span>. »</div>
+    <div class="photo-attr">Choisir. Trancher. Aller voir les gens.</div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>06 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(6/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 7 — CPO PANEL
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">07 / QUOTE — Table ronde CPO</div>
+  <div class="slide slide-quote">
+    <div class="section-label">→ Les 60 premiers jours d'un CPO</div>
+    <div class="quote-mark">"</div>
+    <div class="quote-text">
+      Le métier, ça va être <span class="grad">votre BFF</span>.
+    </div>
+    <div class="quote-sub">
+      « On ne pousse pas des maquettes, on pousse des expériences. »
+    </div>
+    <div class="quote-attr">— Karine Dusart &amp; Renaud Dorizon (La Redoute)</div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>07 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(7/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 8 — SOLFY PHOTO
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">08 / PHOTO — Anicet Bart, Solfy</div>
+  <div class="slide slide-photo">
+    <div class="section-label">→ Anicet Bart · Solfy</div>
+    <div class="photo-frame">
+      <img src="../../assets/images/posts/nord-star-product-edition-aurora-2026/solfy-retention.jpeg" alt="Anicet Bart devant la slide « On ne retient pas un utilisateur. On le fait réussir. »">
+    </div>
+    <div class="photo-quote">« On ne retient pas un utilisateur. <span class="grad">On le fait réussir.</span> »</div>
+    <div class="photo-attr">Builder ne suffit plus : il faut faire réussir.</div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>08 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(8/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 9 — DESIGN SPRINT
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">09 / TABLE — Stéphane Cruchon, Design Sprint</div>
+  <div class="slide slide-table">
+    <div class="section-label">→ Stéphane Cruchon · Design Sprint</div>
+    <div class="slide-title" style="font-size: 60px; margin-bottom: 28px;">
+      Où l'IA apporte<br><span class="grad">de la valeur</span>
+    </div>
+
+    <table class="data-table">
+      <tr>
+        <td class="data-cell-key">J1–3</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">Stratégie : friction humaine, l'IA dehors</td>
+        <td style="text-align:right">❌</td>
+      </tr>
+      <tr class="data-row-highlight">
+        <td class="data-cell-key">J4</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">Prototype : vibecoding à fond</td>
+        <td style="text-align:right">✅</td>
+      </tr>
+      <tr>
+        <td class="data-cell-key">J5</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">Tests : de vrais humains, non négociable</td>
+        <td style="text-align:right">❌</td>
+      </tr>
+      <tr class="data-row-highlight">
+        <td class="data-cell-key">Après</td>
+        <td class="data-cell-sep">│</td>
+        <td class="data-cell-desc">Analyse des tests avec l'IA</td>
+        <td style="text-align:right">✅</td>
+      </tr>
+    </table>
+
+    <div class="code-annotation">
+      « Il faut moins d'une minute pour faire un truc, mais au moins <strong>cinq jours</strong> pour prendre une vraie décision business. »
+    </div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>09 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(9/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 10 — PETIT BAMBOU
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">10 / BULLETS — Roger Ingouacka, Petit Bambou</div>
+  <div class="slide slide-bullets">
+    <div class="section-label">→ Roger Ingouacka · Petit Bambou</div>
+    <div class="slide-title" style="margin-bottom: 48px;">La vie d'un<br><span class="grad">Product Builder</span></div>
+
+    <ul class="bullet-list">
+      <li class="bullet-item">
+        <div class="bullet-icon">🧘</div>
+        <div class="bullet-text">
+          <div class="bullet-title">Mouvement, la nouvelle verticale</div>
+          <div class="bullet-desc">Bouger chaque jour, sans injonction à la performance</div>
+        </div>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon">🎥</div>
+        <div class="bullet-text">
+          <div class="bullet-title">De la 2D à la motion capture</div>
+          <div class="bullet-desc">Un ostéopathe en combinaison, environ 250 mouvements</div>
+        </div>
+      </li>
+      <li class="bullet-item">
+        <div class="bullet-icon">🧍</div>
+        <div class="bullet-text">
+          <div class="bullet-title">Un avatar plutôt que de la vidéo IA</div>
+          <div class="bullet-desc">Le même personnage d'une séance à l'autre</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="insight-box">🎯 La vision : <span>« J'ai mal au dos, génère-moi une séance de 3 minutes. »</span></div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>10 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(10/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 11 — FILS ROUGES
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">11 / STEPS — Les fils rouges de la journée</div>
+  <div class="slide slide-steps">
+    <div class="section-label">→ Ce que les 7 talks ont en commun</div>
+    <div class="slide-title" style="font-size: 60px; margin-bottom: 36px;">
+      Les <span class="grad">fils rouges</span>
+    </div>
+
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">L'humain garde l'incompressible</div>
+          <div class="step-desc">Choisir, trancher, aller voir les gens. L'IA prend le reste.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Le contexte devient un produit</div>
+          <div class="step-desc">La source de vérité, c'est le code. Le design system parle aux agents.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">La vitesse sans intention uniformise</div>
+          <div class="step-desc">Le craft, le goût et la décision refont la différence.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Builder ne suffit plus</div>
+          <div class="step-desc">L'enjeu : acquérir et faire réussir ses utilisateurs.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>11 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(11/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 12 — MON RESSENTI
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">12 / TAG — Mon ressenti</div>
+  <div class="slide slide-code">
+    <div class="section-label">→ Mon ressenti</div>
+    <div class="slide-title" style="font-size: 60px; margin-bottom: 36px;">
+      Plus une <span class="grad">expérience</span><br>qu'une conférence
+    </div>
+
+    <div class="code-annotation">
+      <strong>Très peu de tech dans la salle.</strong> Avec l'IA qui élargit nos compétences, ces sujets nous concernent directement : élargissons notre veille.
+    </div>
+
+    <div class="code-pills" style="margin-top: 36px;">
+      <div class="code-pill">🪑 des chaises… et des coussins floqués</div>
+      <div class="code-pill">🍺 des triples dans le tote bag</div>
+      <div class="code-pill">🚚 Rémi et son food truck Barkette</div>
+      <div class="code-pill">🎤 de très bons speakers</div>
+      <div class="code-pill">🎧 l'after party avec Tremolo</div>
+    </div>
+
+    <div class="code-annotation" style="margin-top: 36px; border-color: var(--secondary); background: rgba(34,197,94,0.08);">
+      <strong style="color: var(--secondary);">Merci</strong> à Xavier Koma, Teddy Lecaillon et toute l'orga 🙏
+    </div>
+
+    <div class="slide-footer">
+      <span class="sf-brand"><span class="at">@</span>maxime-lenne</span>
+      <span>12 / 13</span>
+    </div>
+    <div class="progress-bar" style="width: calc(12/13 * 100%)"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE 13 — CLOSING
+============================================================ -->
+<div class="slide-wrapper">
+  <div class="slide-label">13 / CLOSING — Lien vers l'article</div>
+  <div class="slide slide-closing">
+    <div class="closing-tag">// L'article complet</div>
+
+    <div class="closing-title">
+      <span class="grad">Toutes les citations</span><br>
+      <span style="color: var(--text-primary)">sur le blog →</span>
+    </div>
+
+    <div class="closing-sub">
+      Les 7 talks en détail, les photos de la journée.<br>
+      Et vous, quel talk vous a le plus marqué ?
+    </div>
+
+    <div class="cta-row">
+      <div class="cta-col">
+        <a href="https://maxime-lenne.fr/blog/nord-star-product-aurora-2026/" class="cta-btn">
+          📖 Lire l'article
+        </a>
+      </div>
+      <div class="cta-col">
+        <div class="cta-social">
+          <div class="cta-social-label">// Blog</div>
+          <div class="cta-social-handle brand-tag" style="color: var(--secondary)">maxime-lenne.fr</div>
+        </div>
+        <div class="cta-social">
+          <div class="cta-social-label">// LinkedIn</div>
+          <div class="cta-social-handle brand-tag"><span class="at">/in/</span>maximelenne</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-num">13 / 13</div>
+    <div class="progress-bar" style="width: 100%"></div>
+  </div>
+</div>
+
+<!-- Bottom padding -->
+<div class="bottom-spacer" style="height: 64px;"></div>
+
+</body>
+</html>
