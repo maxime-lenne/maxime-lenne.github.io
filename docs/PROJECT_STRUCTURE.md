@@ -63,7 +63,7 @@ maxime-lenne-website/
 │   └── resume.md
 ├── lib/                            # jekyll-deep-stack theme (extraction WIP)
 ├── linkedin/                       # LinkedIn carousel prototypes
-│   └── carousels/
+│   └── carousels/                  # One HTML per carousel (from template.html), export-pdf.sh
 ├── pages/                          # Additional static pages
 ├── scripts/                        # setup-github, clean-branches, sync-develop, sync_experiences
 ├── _config.yml                     # Jekyll main configuration
@@ -143,6 +143,13 @@ en/index.md       → /en/
 resume.md         → /resume/
 en/resume.md      → /en/resume/
 ```
+
+### LinkedIn carousels
+
+Each carousel in `linkedin/carousels/` is a standalone HTML page built from `template.html`, with 1080×1080 slides.
+Export it with `linkedin/carousels/export-pdf.sh linkedin/carousels/<carousel>.html`: the script captures each slide
+as a PNG with headless Chrome and builds the PDF from those images. The browser's own print to PDF draws a hairline
+frame around the gradient text. The folder is excluded from the sitemap.
 
 ### Collections
 
