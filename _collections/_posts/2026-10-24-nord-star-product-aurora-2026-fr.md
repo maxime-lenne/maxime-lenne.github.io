@@ -60,6 +60,14 @@ générées. Son talk tenait en trois mots : **vitesse, contexte, intention**.
 Côté organisation : les designers shippent directement dans la codebase, 70 à 90 % des pull requests sont générées par
 l'IA, et il n'y a plus de design system dans Figma. La source de vérité, c'est le code.
 
+Le passage qui m'a le plus parlé porte sur la charge cognitive. Avant, on jonglait entre Jira, Miro et Figma.
+Aujourd'hui, on jongle avec 10 onglets, 10 agents et 10 contextes à garder en tête. Arthur l'a testé : on peut piloter
+20 ou 30 agents, mais pas mener en même temps une réflexion de fond sur plusieurs jours. Les agents génèrent tellement,
+et si vite, que le cerveau ne retient plus tout et décroche. Et c'est quand on perd le contrôle qu'on brûle les
+détails. D'où le « deuxième cerveau » : une mémoire externe qui garde le contexte pour nous. Avec une limite, donnée en
+réponse à une question de la salle : trop de contexte donne des réponses génériques, il vaut mieux partir d'une source
+et l'équilibrer ensuite.
+
 > « Vous avez juste un cerveau, donc vous ne pouvez pas tout faire. »
 >
 > « Si tout le monde part du même niveau, sans intention, les choses commencent vraiment à se ressembler. »
@@ -157,7 +165,7 @@ La Redoute, où le produit est rattaché au marketing ; Karine est rattachée à
 - **L'IA.** Les contraintes de sécurité, de licences et de budget empêchent d'aller aussi vite que dans les démos du
   matin. À La Redoute, un PM est désormais builder IA à plein temps, avec des ambassadeurs dans chaque équipe.
 
-> « Le métier, ça va être votre BFF. »
+> « Le métier, ça va être votre BFF » (votre meilleur allié).
 >
 > « La culture, ça ne se fait pas en un mois, ni même peut-être en un an. C'est ce qui reste une fois qu'on part
 > d'une entreprise. »
@@ -192,8 +200,7 @@ Côté modèle économique : un abonnement à 40 € par an et par famille, que 
 ### Stéphane Cruchon : le Design Sprint à l'ère de l'IA
 
 Stéphane pratique le Design Sprint depuis 2015, aux côtés de Jake Knapp, son inventeur chez Google Ventures. Plus de
-100 entreprises accompagnées en dix ans, de la start-up au grand groupe. Il a aussi publié
-[une courte vidéo](https://lnkd.in/p/eFRqN2wP) sur le sujet.
+100 entreprises accompagnées en dix ans, de la start-up au grand groupe.
 
 ![Les cinq jours du Design Sprint : stratégie (comprendre, sketcher, décider), prototype et tests]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/design-sprint-diamonds.jpeg' | absolute_url }})
 
@@ -286,6 +293,9 @@ Bart et Roger Ingouacka.
 
 _L'after party, avec Tremolo aux platines._
 
+**En vidéo**, pour vous faire une idée de l'ambiance : [le retour de Stéphane Cruchon sur
+l'événement](https://lnkd.in/p/eFRqN2wP), et [une autre vidéo sympa de la journée](https://lnkd.in/p/eV7VPs9S).
+
 ## En résumé
 
 Nord Star Product Aurora a montré des équipes qui utilisent vraiment l'IA, dans des contextes très différents : une
@@ -296,7 +306,8 @@ laisse le choix, la décision et le terrain.
 Pour aller plus loin :
 
 - Le [programme complet de l'édition Aurora](https://nordstarproduct.com/lineup).
-- [La vidéo de Stéphane Cruchon](https://lnkd.in/p/eFRqN2wP) sur le Design Sprint.
+- Le [retour en vidéo de Stéphane Cruchon](https://lnkd.in/p/eFRqN2wP) sur l'événement, et
+  [une autre vidéo de la journée](https://lnkd.in/p/eV7VPs9S).
 - Le livre _Sprint_ de Jake Knapp, et _Transformed_ de Marty Cagan, cité pendant la table ronde.
 
 Et vous, vous y étiez ? Quel talk vous a le plus marqué ?
