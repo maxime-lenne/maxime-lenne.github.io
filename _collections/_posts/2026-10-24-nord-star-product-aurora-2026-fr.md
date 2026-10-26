@@ -266,35 +266,32 @@ est d'acquérir et de faire réussir ses utilisateurs.
 
 ## Mon ressenti
 
-**Très peu de tech dans la salle.** Je l'ai regretté. À l'heure où l'IA augmente nos compétences et élargit notre champ
-d'action, les sujets de cette journée (design system piloté par des agents, CI comme garde-fou, builders qui shippent
-dans la codebase) nous concernent directement. Je pense qu'on gagnerait tous à ratisser plus large dans nos veilles
-respectives.
+**Très peu de tech dans la salle.** Et pourtant, à l'heure où l'IA augmente nos compétences et élargit notre champ
+d'action, ces sujets nous concernent de plus en plus : design system piloté par des agents, CI comme garde-fou,
+builders qui shippent dans la codebase.
 
-**Une organisation au top, pensée comme une expérience** plutôt qu'une simple conférence. Beaucoup d'humour, d'humain,
-de légèreté et de simplicité. Exemple parfait : des chaises pas très confortables, mais très bien amenées avec humour,
-et des coussins floqués Nord Star Product pour l'occasion.
-
-**Le tote bag d'accueil contenait des bières triples en bouteille.** Moi, c'est mon grand kiff ; ce n'est peut-être
-pas le cas de tout le monde.
+**Une organisation au top, et une conférence pensée comme une expérience.** Beaucoup d'humour, d'humain, de légèreté
+et de simplicité. Exemple parfait : des chaises pas très confortables, mais très bien amenées avec humour, et des
+coussins floqués Nord Star Product pour l'occasion. Mon grand kiff : le tote bag d'accueil contenait une bière triple
+en bouteille floquée Nord Star Product.
 
 ![Le food truck Barkette devant les briques de la Plaine Images]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/barkette-food-truck.jpeg' | absolute_url }})
 
 _Le déjeuner, signé Barkette._
 
-**Des retrouvailles.** Content d'avoir retrouvé Rémi, que je n'avais pas vu depuis un bail, derrière son nouveau food
-truck, Barkette. Merci à Xavier Koma et Teddy Lecaillon, que j'ai apprécié revoir pour l'occasion, et à toute l'équipe
-d'organisation.
+Content d'avoir revu Rémi, que je n'avais pas vu depuis un bail, derrière son food truck, Barkette. Merci à Xavier
+Koma et Teddy Lecaillon, que j'ai apprécié de revoir pour l'occasion, et à toute l'équipe d'organisation.
 
-**De très bons speakers et de très bons talks**, et de vraies discussions avec certains d'entre eux, notamment Anicet
-Bart et Roger Ingouacka.
+**De très bons speakers et talks**, et de vraies discussions avec certains d'entre eux, notamment Anicet Bart et Roger
+Ingouacka.
 
 ![Le DJ set de Tremolo pour l'after party de l'édition Aurora]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/after-party-tremolo.jpeg' | absolute_url }})
 
 _L'after party, avec Tremolo aux platines._
 
 **En vidéo**, pour vous faire une idée de l'ambiance : [le retour de Stéphane Cruchon sur
-l'événement](https://lnkd.in/p/eFRqN2wP), et [une autre vidéo sympa de la journée](https://lnkd.in/p/eV7VPs9S).
+l'événement](https://lnkd.in/p/eFRqN2wP), et [une autre vidéo sympa de la journée, par Romain Dao de The Cacatoès
+Theory](https://lnkd.in/p/eV7VPs9S).
 
 ## En résumé
 
@@ -307,7 +304,7 @@ Pour aller plus loin :
 
 - Le [programme complet de l'édition Aurora](https://nordstarproduct.com/lineup).
 - Le [retour en vidéo de Stéphane Cruchon](https://lnkd.in/p/eFRqN2wP) sur l'événement, et
-  [une autre vidéo de la journée](https://lnkd.in/p/eV7VPs9S).
+  [une autre vidéo de la journée, par Romain Dao](https://lnkd.in/p/eV7VPs9S).
 - Le livre _Sprint_ de Jake Knapp, et _Transformed_ de Marty Cagan, cité pendant la table ronde.
 
 Et vous, vous y étiez ? Quel talk vous a le plus marqué ?
