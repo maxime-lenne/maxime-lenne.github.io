@@ -22,7 +22,7 @@ it, on the tech side and the human side. The talks were in French; the quotes be
 
 ## Nord Star Product, Aurora edition
 
-[Nord Star Product](https://nordstarproduct.com/lineup) is the design and product day of northern France. It is
+[Nord Star Product](https://nordstarproduct.com/lineup) is the design and product day in Lille. It is
 organised by the Nord Star Product community and EuraCreative, which supports cultural and creative companies on the
 Plaine Images campus.
 

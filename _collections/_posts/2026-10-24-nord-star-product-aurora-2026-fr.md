@@ -22,7 +22,7 @@ garde, côté tech comme côté humain.
 
 ## Nord Star Product, édition Aurora
 
-[Nord Star Product](https://nordstarproduct.com/lineup) est la journée design et produit des Hauts-de-France. Elle est
+[Nord Star Product](https://nordstarproduct.com/lineup) est la journée design et produit à Lille. Elle est
 organisée par la communauté Nord Star Product et EuraCreative, la structure qui
 accompagne les entreprises culturelles et créatives sur le site de la Plaine Images.
 
