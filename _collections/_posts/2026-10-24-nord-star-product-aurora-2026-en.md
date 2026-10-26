@@ -255,24 +255,23 @@ users and make them succeed.
 
 ## How I felt about it
 
-**Very few tech people in the room.** I regretted it. At a time when AI augments our skills and widens what we can do,
-the topics of this day (agent-driven design systems, CI as a safety net, builders shipping into the codebase) concern
-us directly. I think we would all gain from casting a wider net in what we keep up with.
+**Very few tech people in the room.** And yet, at a time when AI augments our skills and widens what we can do,
+these topics concern us more and more: agent-driven design systems, CI as a safety net, builders shipping into the
+codebase.
 
-**Great organisation, designed as an experience** rather than just a conference. Lots of humour, humanity, lightness
-and simplicity. A perfect example: not-so-comfortable chairs, introduced with humour, and cushions printed with the Nord
-Star Product logo for the occasion.
-
-**The welcome tote bag held bottles of tripel beer.** That's my kind of thing; maybe not everyone's.
+**Great organisation, and a conference designed as an experience.** Lots of humour, humanity, lightness and
+simplicity. A perfect example: not-so-comfortable chairs, introduced with humour, and cushions printed with the Nord
+Star Product logo for the occasion. My favourite part: the welcome tote bag held a bottle of tripel beer with the Nord
+Star Product logo.
 
 ![The Barkette food truck in front of the Plaine Images brick buildings]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/barkette-food-truck.jpeg' | absolute_url }})
 
 _Lunch, by Barkette._
 
-**Reunions.** Happy to see Rémi again, whom I hadn't seen in ages, behind his new food truck, Barkette. Thanks to Xavier
-Koma and Teddy Lecaillon, whom I was glad to see again, and to the whole organising team.
+Happy to see Rémi again, whom I hadn't seen in ages, behind his food truck, Barkette. Thanks to Xavier Koma and Teddy
+Lecaillon, whom I was glad to see again, and to the whole organising team.
 
-**Very good speakers and very good talks**, and real conversations with some of them, especially Anicet Bart and Roger
+**Very good speakers and talks**, and real conversations with some of them, especially Anicet Bart and Roger
 Ingouacka.
 
 ![Tremolo's DJ set at the Aurora edition after party]({{ '/assets/images/posts/nord-star-product-edition-aurora-2026/after-party-tremolo.jpeg' | absolute_url }})
@@ -280,7 +279,7 @@ Ingouacka.
 _The after party, with Tremolo on the decks._
 
 **On video**, to get a feel for the atmosphere: [Stéphane Cruchon's recap of the event](https://lnkd.in/p/eFRqN2wP),
-and [another nice video of the day](https://lnkd.in/p/eV7VPs9S).
+and [another nice video of the day, by Romain Dao from The Cacatoès Theory](https://lnkd.in/p/eV7VPs9S).
 
 ## In short
 
@@ -293,7 +292,7 @@ To go further:
 
 - The [full Aurora edition programme](https://nordstarproduct.com/lineup).
 - [Stéphane Cruchon's video recap](https://lnkd.in/p/eFRqN2wP) of the event, and
-  [another video of the day](https://lnkd.in/p/eV7VPs9S).
+  [another video of the day, by Romain Dao](https://lnkd.in/p/eV7VPs9S).
 - Jake Knapp's book _Sprint_, and Marty Cagan's _Transformed_, quoted during the panel.
 
 Were you there? Which talk stayed with you the most?
