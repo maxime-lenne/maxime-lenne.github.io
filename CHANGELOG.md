@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.2.1...v1.3.0) (2026-10-26)
+
+### ✨ Features
+
+* Add the blog index and its menu entries ([9c10f56](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/9c10f563901a5e04b0d967cf6544f05f30fb387f))
+* Add the Nord Star Product Aurora LinkedIn carousel ([1e3ffe9](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/1e3ffe9e6bccad9b3e6574a5f605605e53d17fe1))
+
 ## [1.2.1](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.2.0...v1.2.1) (2026-09-28)
 
 ### 🐛 Bug Fixes
