@@ -152,7 +152,13 @@
 
     <section class="cv-block">
       <h2 class="cv-block__title">{{ t.contact }}</h2>
-      <ul class="cv-contact">{{ cv_contact_items }}</ul>
+      <ul class="cv-contact">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:hello@maxime-lenne.fr">hello@maxime-lenne.fr</a></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+33 6 29 45 38 14</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>{{ t.location }}</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><a href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><a href="https://www.linkedin.com/in/maximelenne">in/maximelenne</a></li>
+      </ul>
     </section>
 
     <section class="cv-block">
@@ -163,7 +169,7 @@
         {% if cv_pills.size > 0 %}
         <div class="cv-block__group">
           <h3 class="cv-block__subtitle">{{ group.title }}</h3>
-          <p class="cv-block__pills">{{ cv_pills }}</p>
+          <div class="cv-block__pills">{{ cv_pills }}</div>
         </div>
         {% endif %}
       {% endfor %}
@@ -189,7 +195,7 @@
     {% if cv_pills.size > 0 %}
     <section class="cv-block">
       <h2 class="cv-block__title">{{ t.tools }}</h2>
-      <p class="cv-block__pills">{{ cv_pills }}</p>
+      <div class="cv-block__pills">{{ cv_pills }}</div>
     </section>
     {% endif %}
 
@@ -201,9 +207,12 @@
 
   <main class="cv__main">
     <h1 class="cv__name">Maxime Lenne</h1>
-    <p class="cv__headline">{{ t.headline }}</p>
+    <p class="cv__headline">{{ t.headline_main }} <span>{{ t.headline_highlight }}</span></p>
     <div class="cv__bar"></div>
-    <div class="cv__intro">{{ cv_intro }}</div>
+    <div class="cv__intro">{% for paragraph in t.intro %}<p>{{ paragraph }}</p>{% endfor %}</div>
+    <div class="cv-cards">
+      {% for highlight in t.highlights %}<div class="cv-cards__item"><strong>{{ highlight.title }}</strong><span>{{ highlight.card }}</span></div>{% endfor %}
+    </div>
 
     <h2 class="cv-section-title">{{ t.experience }} <em>{{ t.experience_highlight }}</em></h2>
     {{ cv_jobs }}

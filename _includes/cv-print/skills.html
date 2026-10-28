@@ -17,4 +17,4 @@
     {% endunless %}
   {% endif %}
 {% endfor %}
-{% if include.style == 'text' %}{{ cv_group | join: ', ' }}{% else %}{% for name in cv_group %}<span class="cv-pill">{{ name }}</span>{% unless forloop.last %}<span class="cv-sep">, </span>{% endunless %}{% endfor %}{% endif %}
+{% if include.style == 'text' %}{{ cv_group | join: ', ' }}{% else %}{% for name in cv_group %}<span class="cv-pill">{{ name }}</span>{% endfor %}{% endif %}
