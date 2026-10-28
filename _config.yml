@@ -187,6 +187,37 @@ notion:
         - { name: Skills, type: rollup }
         - { name: Achievements, type: formula_array }
         - { name: Missions, type: formula_array }
+        # CV PDF (/cv/print/): Print = detailed block, otherwise one line from Description print
+        - { name: Items, type: relation, key: item_ids }
+        - { name: Print, type: checkbox }
+        - { name: Role en, type: rich_text }
+        - { name: Description en, type: rich_text }
+        - { name: Description print, type: rich_text }
+        - { name: Description print en, type: rich_text }
+
+    # Achievements and missions one page each, read by the CV PDF through experiences.item_ids
+    items:
+      database_env: NOTION_ITEMS_DB
+      data_file: notion_items.yml
+      organizer: simple_list
+      properties:
+        - { name: Name, type: title }
+        - { name: Name en, type: rich_text }
+        - { name: Type, type: select }
+        - { name: Print, type: checkbox }
+
+    # Same database as skills, as a flat list: the items_by_category organizer drops custom properties
+    skills_print:
+      database_env: NOTION_SKILLS_DB
+      data_file: notion_skills_print.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Name, type: title }
+        - { name: Name en, type: rich_text }
+        - { name: Print, type: checkbox }
+        - { name: Order, type: number }
+        - { name: Category, type: rollup }
 
     awards:
       database_env: NOTION_AWARDS_DB
@@ -203,6 +234,8 @@ notion:
         - { name: Description, type: rich_text }
         - { name: Achievements, type: rollup }  # names of the related Items
         - { name: Impact, type: rich_text }
+        - { name: Print, type: checkbox }
+        - { name: Title en, type: rich_text }
 
     contributions:
       database_env: NOTION_CONTRIBUTIONS_DB
@@ -216,6 +249,13 @@ notion:
         - { name: Order, type: number }
         - { name: Achievements, type: rollup }  # names of the related Items
         - { name: Labels, type: multi_select }
+        - { name: Print, type: checkbox }
+        - { name: Title en, type: rich_text }
+        - { name: Title print, type: rich_text }
+        - { name: Title print en, type: rich_text }
+        - { name: Description print, type: rich_text }
+        - { name: Description print en, type: rich_text }
+        - { name: Period print, type: rich_text }
 
     educations:
       database_env: NOTION_EDUCATIONS_DB
@@ -234,6 +274,9 @@ notion:
         - { name: Order, type: number }
         - { name: Description, type: rich_text }
         - { name: Skills, type: multi_select }
+        - { name: Print, type: checkbox }
+        - { name: Title en, type: rich_text }
+        - { name: Institution en, type: rich_text }
 
     services:
       database_env: NOTION_SERVICES_DB
