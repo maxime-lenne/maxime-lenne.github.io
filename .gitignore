@@ -78,3 +78,6 @@ _data/notion_*.yaml
 
 # Claude Code local settings (personal permissions)
 .claude/settings.local.json
+
+# CV PDFs: built by scripts/export-cv.sh (make cv locally, the deploy workflow in production)
+assets/cv/

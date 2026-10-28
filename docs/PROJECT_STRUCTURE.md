@@ -65,7 +65,7 @@ maxime-lenne-website/
 ├── linkedin/                       # LinkedIn carousel prototypes
 │   └── carousels/                  # One HTML per carousel (from template.html), export-pdf.sh
 ├── pages/                          # Additional static pages
-├── scripts/                        # setup-github, clean-branches, sync-develop, sync_experiences
+├── scripts/                        # setup-github, clean-branches, sync-develop, sync_experiences, export-cv
 ├── _config.yml                     # Jekyll main configuration
 ├── _config.dev.yml                 # Development overrides
 ├── _config_prod.yml                # Production overrides
@@ -151,6 +151,20 @@ Export it with `linkedin/carousels/export-pdf.sh linkedin/carousels/<carousel>.h
 as a PNG with headless Chrome and builds the PDF from those images. The browser's own print to PDF draws a hairline
 frame around the gradient text. The folder is excluded from the sitemap.
 
+### CV PDF
+
+`_layouts/cv-print.html` builds an A4 CV from the Notion data (rows with the Print box, see
+[`NOTION_SETUP.md`](NOTION_SETUP.md)), in two variants: `visual` (dark sidebar, site colors) and `ats` (one column,
+standard headings, period and contract on one line). The pages are `cv-print.html`, `cv-print-ats.html` and their
+`en/` copies (`/cv/print/`, `/cv/print/ats/`, `/en/cv/print/`, `/en/cv/print/ats/`), out of the sitemap and noindex.
+Page texts live in `cv_print` in `_data/translations.yml`, styles in `_sass/pages/_cv-print.scss`
+(`assets/css/cv-print.scss`). The PDFs use the static Inter files in `assets/fonts/inter/`: Chrome embeds them as
+TrueType, which ATS parsers read, whereas a variable or system font becomes Type 3.
+
+`scripts/export-cv.sh` serves a built site and prints the four pages with headless Chrome to `assets/cv/`
+(`make cv`) or `_site/assets/cv/` (deploy workflow). The resume pages link to them through
+`_includes/components/cv-download.html`.
+
 ### Collections
 
 Jekyll collections in `_collections/` serve as fallback data when Notion is not available:
@@ -200,4 +214,4 @@ link to the blog index of the page language.
 
 ---
 
-*Last updated: 2026-03-18*
+*Last updated: 2026-10-28*

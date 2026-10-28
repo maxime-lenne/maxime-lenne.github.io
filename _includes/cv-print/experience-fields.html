@@ -1,0 +1,35 @@
+{% comment %}
+  Sets cv_role, cv_period, cv_meta, cv_desc and cv_items for include.exp, in the page language
+{% endcomment %}
+{% assign exp = include.exp %}
+{% if lang == 'en' and exp.role_en.size > 0 %}{% assign cv_role = exp.role_en %}{% else %}{% assign cv_role = exp.role %}{% endif %}
+
+{% if lang == 'en' and exp.description_print_en.size > 0 %}
+  {% assign cv_desc = exp.description_print_en %}
+{% elsif lang == 'en' and exp.description_en.size > 0 %}
+  {% assign cv_desc = exp.description_en %}
+{% elsif exp.description_print.size > 0 %}
+  {% assign cv_desc = exp.description_print %}
+{% else %}
+  {% assign cv_desc = exp.description %}
+{% endif %}
+
+{% assign cv_y1 = exp.start_date.start | date: '%Y' %}
+{% assign cv_y2 = exp.end_date.start | date: '%Y' %}
+{% capture cv_period %}{% if exp.current %}{{ t.since }} {{ cv_y1 }}{% elsif cv_y2.size > 0 and cv_y2 != cv_y1 %}{{ cv_y1 }} – {{ cv_y2 }}{% else %}{{ cv_y1 }}{% endif %}{% endcapture %}
+
+{% assign cv_type = t.types[exp.type] | default: exp.type %}
+{% assign cv_city = exp.location | split: ',' | first %}
+{% capture cv_meta %}{% if cv_type %}{{ cv_type }}{% endif %}{% if cv_type and cv_city %} · {% endif %}{{ cv_city }}{% endcapture %}
+
+{% assign cv_items = cv_empty %}
+{% for item_id in exp.item_ids %}
+  {% assign cv_item = site.data.notion_items | where: 'id', item_id | first %}
+  {% if cv_item.print %}
+    {% if lang == 'en' and cv_item.name_en.size > 0 %}
+      {% assign cv_items = cv_items | push: cv_item.name_en %}
+    {% else %}
+      {% assign cv_items = cv_items | push: cv_item.name %}
+    {% endif %}
+  {% endif %}
+{% endfor %}

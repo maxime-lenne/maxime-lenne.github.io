@@ -267,6 +267,81 @@ fr:
       availability: "Disponibilité"
       response_time: "Temps de réponse"
 
+  # CV PDF (/cv/print/, /cv/print/ats/): page texts, the content comes from Notion (Print boxes)
+  cv_print:
+    title: "CV Maxime Lenne"
+    title_ats: "CV Maxime Lenne (version ATS)"
+    headline: "CTO, Tech advisor, sparring partner"
+    intro:
+      - "Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de <strong>l'entrepreneuriat</strong>, de <strong>l'innovation</strong>, du <strong>management</strong> et du <strong>produit</strong>, tout en continuant à perfectionner mes compétences techniques."
+      - "J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon."
+    highlights:
+      - title: "+ 10 ans de C(P)TO"
+        text: "management de + 40 profils (devs, PM / PO, UX / UI)"
+      - title: "+ 20 ans de tech"
+        text: "web, mobile, cloud, devops, IA, no-code..."
+      - title: "Partenaire du business"
+        text: "challenger, prioriser, anticiper les impacts techniques dans la stratégie de l'entreprise"
+    contact: "Contact"
+    location: "Lille, France"
+    profile: "Profil"
+    skills: "Compétences"
+    tools: "Outils"
+    languages: "Langues"
+    languages_list:
+      - name: "Français"
+        level: "Natif"
+      - name: "Anglais"
+        level: "Professionnel"
+    education: "Formation"
+    certification: "Certification"
+    awards: "Prix & distinctions"
+    interests: "Centres d'intérêt"
+    interests_list:
+      - name: "Éco-conception et green IT"
+      - name: "Vélotaf"
+        detail: "Et l'univers Apple"
+      - name: "Musique"
+        detail: "Écoute, concerts, piano & synthé"
+      - name: "Sports"
+        detail: "Escalade (surtout bloc), snowboard & ski, roller hockey, voile"
+    experience: "Expérience"
+    experience_highlight: "professionnelle"
+    early_career: "Débuts"
+    early_career_highlight: "de carrière"
+    contributions: "Contributions"
+    contributions_highlight: "& communautés"
+    since: "Depuis"
+    footer: "Parcours complet et détail des missions :"
+    resume_url: "/resume/"
+    types:
+      "CDI / Full-time": "CDI"
+      "CDD / Fixed-term": "CDD"
+      "Part-time": "Temps partiel"
+      "Freelance": "Freelance"
+      "Volunteer": "Bénévole"
+      "Funder": "Fondateur"
+    skill_groups:
+      - title: "Management & entrepreneuriat"
+        categories: ["Management & Entrepreneurship", "Soft Skills"]
+      - title: "Méthodologies"
+        categories: ["Methodologies"]
+      - title: "Backend"
+        categories: ["Backend"]
+      - title: "Frontend & mobile"
+        categories: ["Frontend & mobile"]
+      - title: "IA"
+        categories: ["AI / ML / Data Science"]
+      - title: "Cloud, DevOps & data"
+        categories: ["Infra, Cloud & DevOps", "Databases"]
+      - title: "No-code / low-code"
+        categories: ["No-code / low-code"]
+    tool_categories: ["Tools", "SaaS, Open Source & software"]
+    download: "Télécharger mon CV"
+    download_ats: "Version ATS (texte simple)"
+    pdf: "/assets/cv/maxime-lenne-cv.pdf"
+    pdf_ats: "/assets/cv/maxime-lenne-cv-ats.pdf"
+
 en:
   site:
     title: "Maxime Lenne"
@@ -532,3 +607,78 @@ en:
       location: "Location"
       availability: "Availability"
       response_time: "Response time"
+
+  # Resume PDF (/en/cv/print/, /en/cv/print/ats/): page texts, the content comes from Notion (Print boxes)
+  cv_print:
+    title: "Maxime Lenne resume"
+    title_ats: "Maxime Lenne resume (ATS version)"
+    headline: "CTO, Tech advisor, sparring partner"
+    intro:
+      - "After several years in CTO positions, I've gained solid experience in <strong>entrepreneurship</strong>, <strong>innovation</strong>, <strong>management</strong> and <strong>product</strong>, while continuing to hone my technical skills."
+      - "I've worked as CTO in startups like Frizbiz and EcoTa.co (which I co-founded), as well as in service companies like theTribe and Ippon."
+    highlights:
+      - title: "10+ years as C(P)TO"
+        text: "managed 40+ people (devs, PM / PO, UX / UI)"
+      - title: "20+ years in tech"
+        text: "web, mobile, cloud, DevOps, AI, no-code..."
+      - title: "Business partner"
+        text: "challenge, prioritize, anticipate the technical impacts of company strategy"
+    contact: "Contact"
+    location: "Lille, France"
+    profile: "Profile"
+    skills: "Skills"
+    tools: "Tools"
+    languages: "Languages"
+    languages_list:
+      - name: "French"
+        level: "Native"
+      - name: "English"
+        level: "Professional"
+    education: "Education"
+    certification: "Certification"
+    awards: "Awards"
+    interests: "Interests"
+    interests_list:
+      - name: "Eco-design and green IT"
+      - name: "Bike commuting"
+        detail: "And the Apple world"
+      - name: "Music"
+        detail: "Listening, concerts, piano & synth"
+      - name: "Sports"
+        detail: "Climbing (mostly bouldering), snowboard & ski, roller hockey, sailing"
+    experience: "Professional"
+    experience_highlight: "experience"
+    early_career: "Early"
+    early_career_highlight: "career"
+    contributions: "Contributions"
+    contributions_highlight: "& communities"
+    since: "Since"
+    footer: "Full background and mission details:"
+    resume_url: "/en/resume/"
+    types:
+      "CDI / Full-time": "Full-time"
+      "CDD / Fixed-term": "Fixed-term"
+      "Part-time": "Part-time"
+      "Freelance": "Freelance"
+      "Volunteer": "Volunteer"
+      "Funder": "Founder"
+    skill_groups:
+      - title: "Management & entrepreneurship"
+        categories: ["Management & Entrepreneurship", "Soft Skills"]
+      - title: "Methodologies"
+        categories: ["Methodologies"]
+      - title: "Backend"
+        categories: ["Backend"]
+      - title: "Frontend & mobile"
+        categories: ["Frontend & mobile"]
+      - title: "AI"
+        categories: ["AI / ML / Data Science"]
+      - title: "Cloud, DevOps & data"
+        categories: ["Infra, Cloud & DevOps", "Databases"]
+      - title: "No-code / low-code"
+        categories: ["No-code / low-code"]
+    tool_categories: ["Tools", "SaaS, Open Source & software"]
+    download: "Download my resume"
+    download_ats: "ATS version (plain text)"
+    pdf: "/assets/cv/maxime-lenne-resume.pdf"
+    pdf_ats: "/assets/cv/maxime-lenne-resume-ats.pdf"

@@ -80,7 +80,7 @@ profile_page: true
           item2_text="Fan de tests, de discovery, d’itérations rapides et d’équipes autonomes" %}
       </div>
       
-      {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
+      {% include components/cv-download.html lang="fr" cta_text="Faisons connaissance" %}
       
     </div>
   </div>

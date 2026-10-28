@@ -81,7 +81,7 @@ profile_page: true
           item2_text=t.resume_page.product_desc %}
       </div>
       
-      {% include components/cta-button.html size="large" text=t.header.cta_button icon="arrow" %}
+      {% include components/cv-download.html lang="en" cta_text=t.header.cta_button %}
       
     </div>
   </div>
