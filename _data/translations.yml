@@ -272,16 +272,21 @@ fr:
     title: "CV Maxime Lenne"
     title_ats: "CV Maxime Lenne (version ATS)"
     headline: "CTO, Tech advisor, sparring partner"
+    headline_main: "CTO, Tech advisor,"
+    headline_highlight: "sparring partner"
     intro:
       - "Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de <strong>l'entrepreneuriat</strong>, de <strong>l'innovation</strong>, du <strong>management</strong> et du <strong>produit</strong>, tout en continuant à perfectionner mes compétences techniques."
       - "J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon."
     highlights:
       - title: "+ 10 ans de C(P)TO"
         text: "management de + 40 profils (devs, PM / PO, UX / UI)"
+        card: "Management de + 40 profils (devs, PM / PO, UX / UI)"
       - title: "+ 20 ans de tech"
         text: "web, mobile, cloud, devops, IA, no-code..."
+        card: "Web, mobile, cloud, devops, IA, no-code..."
       - title: "Partenaire du business"
         text: "challenger, prioriser, anticiper les impacts techniques dans la stratégie de l'entreprise"
+        card: "Challenger, prioriser, anticiper les impacts techniques"
     contact: "Contact"
     location: "Lille, France"
     profile: "Profil"
@@ -338,9 +343,7 @@ fr:
         categories: ["No-code / low-code"]
     tool_categories: ["Tools", "SaaS, Open Source & software"]
     download: "Télécharger mon CV"
-    download_ats: "Version ATS (texte simple)"
     pdf: "/assets/cv/maxime-lenne-cv.pdf"
-    pdf_ats: "/assets/cv/maxime-lenne-cv-ats.pdf"
 
 en:
   site:
@@ -613,16 +616,21 @@ en:
     title: "Maxime Lenne resume"
     title_ats: "Maxime Lenne resume (ATS version)"
     headline: "CTO, Tech advisor, sparring partner"
+    headline_main: "CTO, Tech advisor,"
+    headline_highlight: "sparring partner"
     intro:
       - "After several years in CTO positions, I've gained solid experience in <strong>entrepreneurship</strong>, <strong>innovation</strong>, <strong>management</strong> and <strong>product</strong>, while continuing to hone my technical skills."
       - "I've worked as CTO in startups like Frizbiz and EcoTa.co (which I co-founded), as well as in service companies like theTribe and Ippon."
     highlights:
       - title: "10+ years as C(P)TO"
         text: "managed 40+ people (devs, PM / PO, UX / UI)"
+        card: "Managed 40+ people (devs, PM / PO, UX / UI)"
       - title: "20+ years in tech"
         text: "web, mobile, cloud, DevOps, AI, no-code..."
+        card: "Web, mobile, cloud, DevOps, AI, no-code..."
       - title: "Business partner"
         text: "challenge, prioritize, anticipate the technical impacts of company strategy"
+        card: "Challenge, prioritize, anticipate technical impacts"
     contact: "Contact"
     location: "Lille, France"
     profile: "Profile"
@@ -679,6 +687,4 @@ en:
         categories: ["No-code / low-code"]
     tool_categories: ["Tools", "SaaS, Open Source & software"]
     download: "Download my resume"
-    download_ats: "ATS version (plain text)"
     pdf: "/assets/cv/maxime-lenne-resume.pdf"
-    pdf_ats: "/assets/cv/maxime-lenne-resume-ats.pdf"
