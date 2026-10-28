@@ -56,6 +56,10 @@ jobs:
           NOTION_EDUCATIONS_DB: ${{ secrets.NOTION_EDUCATIONS_DB }}
           NOTION_SERVICES_DB: ${{ secrets.NOTION_SERVICES_DB }}
           NOTION_TESTIMONIALS_DB: ${{ secrets.NOTION_TESTIMONIALS_DB }}
+          NOTION_ITEMS_DB: ${{ secrets.NOTION_ITEMS_DB }}
+      - name: Export CV PDFs
+        # Prints /cv/print/ pages (FR/EN, visual and ATS) to _site/assets/cv/ with the runner's Chrome
+        run: scripts/export-cv.sh _site
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
