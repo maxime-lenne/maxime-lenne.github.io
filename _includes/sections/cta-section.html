@@ -13,6 +13,7 @@
       <div class="section__actions">
         {% assign cta_text = include.cta_text | default: t.header.cta_button %}
         {% include components/cta-button.html size="large" text=cta_text icon="arrow" %}
+        {% if include.cv_download %}{% include components/cv-download.html lang=cta_lang %}{% endif %}
       </div>
     </div>
   </div>
