@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+{% comment %}
+  CV PDF, exported by scripts/export-cv.sh. page.variant: "visual" (two columns, site colors)
+  or "ats" (one column, plain structure for applicant tracking systems).
+{% endcomment %}
+{% include cv-print/prepare.html %}
+{% assign ats = false %}{% if page.variant == 'ats' %}{% assign ats = true %}{% endif %}
+{% assign cv_skills_shown = '' %}
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>{% if ats %}{{ t.title_ats }}{% else %}{{ t.title }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/cv-print.css' | relative_url }}">
+</head>
+<body class="cv{% if ats %} cv--ats{% endif %}">
+{% capture cv_contact_items %}
+  <li><a href="mailto:hello@maxime-lenne.fr">hello@maxime-lenne.fr</a></li>
+  <li>+33 6 29 45 38 14</li>
+  <li>{{ t.location }}</li>
+  <li><a href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a></li>
+  <li><a href="https://www.linkedin.com/in/maximelenne">linkedin.com/in/maximelenne</a></li>
+{% endcapture %}
+
+{% capture cv_intro %}
+  {% for paragraph in t.intro %}<p>{{ paragraph }}</p>{% endfor %}
+  <ul class="cv-highlights">
+    {% for highlight in t.highlights %}<li><strong>{{ highlight.title }}</strong> : {{ highlight.text }}</li>{% endfor %}
+  </ul>
+{% endcapture %}
+
+{% capture cv_jobs %}
+  {% for exp in cv_detailed %}
+    {% include cv-print/experience-fields.html exp=exp %}
+    <article class="cv-job">
+      <div class="cv-job__head">
+        <h3 class="cv-job__role">{{ cv_role }} · <span class="cv-job__company">{{ exp.company }}</span></h3>
+        <span class="cv-job__date">{% if ats %}{{ cv_meta }} · {% endif %}{{ cv_period }}</span>
+      </div>
+      {% unless ats %}<p class="cv-job__meta">{{ cv_meta }}</p>{% endunless %}
+      {% if cv_desc.size > 0 %}<p class="cv-job__desc">{{ cv_desc }}</p>{% endif %}
+      {% if cv_items.size > 0 %}
+      <ul class="cv-job__items">{% for item in cv_items %}<li>{{ item }}</li>{% endfor %}</ul>
+      {% endif %}
+    </article>
+  {% endfor %}
+{% endcapture %}
+
+{% capture cv_early_lines %}
+  {% for exp in cv_early %}
+    {% include cv-print/experience-fields.html exp=exp %}
+    <li class="cv-lines__item"><span class="cv-lines__period">{{ cv_period }}</span><span class="cv-lines__text"><strong>{{ cv_role }} · {{ exp.company }}</strong> · {{ cv_desc }}</span></li>
+  {% endfor %}
+{% endcapture %}
+
+{% capture cv_contribution_lines %}
+  {% for contribution in cv_contributions %}
+    {% if lang == 'en' and contribution.title_print_en.size > 0 %}{% assign cv_title = contribution.title_print_en %}{% else %}{% assign cv_title = contribution.title_print | default: contribution.title %}{% endif %}
+    {% if lang == 'en' and contribution.description_print_en.size > 0 %}{% assign cv_text = contribution.description_print_en %}{% else %}{% assign cv_text = contribution.description_print | default: contribution.description %}{% endif %}
+    <li class="cv-lines__item"><span class="cv-lines__period">{{ contribution.period_print }}</span><span class="cv-lines__text"><strong>{{ cv_title }}</strong> · {{ cv_text }}</span></li>
+  {% endfor %}
+{% endcapture %}
+
+{% capture cv_education_items %}
+  {% for education in cv_educations %}
+    {% if lang == 'en' and education.title_en.size > 0 %}{% assign cv_title = education.title_en %}{% else %}{% assign cv_title = education.title %}{% endif %}
+    {% if lang == 'en' and education.institution_en.size > 0 %}{% assign cv_school = education.institution_en %}{% else %}{% assign cv_school = education.institution %}{% endif %}
+    {% assign cv_y1 = education.start_date.start | date: '%Y' %}
+    {% assign cv_y2 = education.end_date.start | date: '%Y' %}
+    <li><strong>{{ cv_title }}</strong><span>{{ cv_school }}{% if education.degree_type == 'Certification' %} · {{ t.certification }}{% endif %} · {{ cv_y1 }}{% if cv_y2.size > 0 and cv_y2 != cv_y1 %} – {{ cv_y2 }}{% endif %}</span></li>
+  {% endfor %}
+{% endcapture %}
+
+{% capture cv_award_items %}
+  {% for award in cv_awards %}
+    {% if lang == 'en' and award.title_en.size > 0 %}{% assign cv_title = award.title_en %}{% else %}{% assign cv_title = award.title %}{% endif %}
+    <li><strong>{{ cv_title }}</strong><span>{% if award.project.size > 0 %}{{ award.project }} · {% endif %}{{ award.date.start | date: '%Y' }}</span></li>
+  {% endfor %}
+{% endcapture %}
+
+{% capture cv_language_items %}
+  {% for language in t.languages_list %}<li><strong>{{ language.name }}</strong><span>{{ language.level }}</span></li>{% endfor %}
+{% endcapture %}
+
+{% capture cv_interest_items %}
+  {% for interest in t.interests_list %}<li><strong>{{ interest.name }}</strong>{% if interest.detail %}<span>{{ interest.detail }}</span>{% endif %}</li>{% endfor %}
+{% endcapture %}
+
+{% capture cv_footer %}
+  <p class="cv-footer">{{ t.footer }} <a href="{{ t.resume_url | absolute_url }}">{{ t.resume_url | absolute_url | remove: 'https://' }}</a></p>
+{% endcapture %}
+
+{% if ats %}
+<main class="cv-ats">
+  <header class="cv-ats__header">
+    <h1 class="cv-ats__name">Maxime Lenne</h1>
+    <p class="cv-ats__headline">{{ t.headline }}</p>
+    <ul class="cv-ats__contact">{{ cv_contact_items }}</ul>
+  </header>
+
+  <section class="cv-ats__section">
+    <h2 class="cv-ats__title">{{ t.profile }}</h2>
+    <div class="cv-ats__intro">{{ cv_intro }}</div>
+    <p class="cv-ats__languages"><strong>{{ t.languages }} :</strong> {% for language in t.languages_list %}{{ language.name }} ({{ language.level | downcase }}){% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+  </section>
+
+  <section class="cv-ats__section">
+    <h2 class="cv-ats__title">{{ t.experience }} {{ t.experience_highlight }}</h2>
+    {{ cv_jobs }}
+    <ul class="cv-lines">{{ cv_early_lines }}</ul>
+  </section>
+
+  <section class="cv-ats__section">
+    <h2 class="cv-ats__title">{{ t.skills }}</h2>
+    <ul class="cv-ats__skills">
+      {% for group in t.skill_groups %}
+        {% capture cv_line %}{% include cv-print/skills.html categories=group.categories style="text" %}{% endcapture %}
+        {% assign cv_line = cv_line | strip %}
+        {% if cv_line.size > 0 %}<li><strong>{{ group.title }} :</strong> {{ cv_line }}</li>{% endif %}
+      {% endfor %}
+      {% capture cv_line %}{% include cv-print/skills.html categories=t.tool_categories style="text" %}{% endcapture %}
+      {% assign cv_line = cv_line | strip %}
+      {% if cv_line.size > 0 %}<li><strong>{{ t.tools }} :</strong> {{ cv_line }}</li>{% endif %}
+    </ul>
+  </section>
+
+  <section class="cv-ats__section">
+    <h2 class="cv-ats__title">{{ t.education }}</h2>
+    <ul class="cv-ats__list">{{ cv_education_items }}</ul>
+  </section>
+
+  <section class="cv-ats__section">
+    <h2 class="cv-ats__title">{{ t.awards }}</h2>
+    <ul class="cv-ats__list">{{ cv_award_items }}</ul>
+  </section>
+
+  <section class="cv-ats__section">
+    <h2 class="cv-ats__title">{{ t.contributions }} {{ t.contributions_highlight }}</h2>
+    <ul class="cv-lines">{{ cv_contribution_lines }}</ul>
+  </section>
+
+  <section class="cv-ats__section">
+    <h2 class="cv-ats__title">{{ t.interests }}</h2>
+    <ul class="cv-ats__list cv-ats__list--inline">{{ cv_interest_items }}</ul>
+  </section>
+</main>
+{% else %}
+<div class="cv__grid">
+  <aside class="cv__side">
+    <img class="cv__avatar" src="{{ '/assets/images/avatar.jpeg' | relative_url }}" alt="Maxime Lenne">
+
+    <section class="cv-block">
+      <h2 class="cv-block__title">{{ t.contact }}</h2>
+      <ul class="cv-contact">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:hello@maxime-lenne.fr">hello@maxime-lenne.fr</a></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>+33 6 29 45 38 14</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>{{ t.location }}</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><a href="{{ site.url }}">{{ site.url | remove: 'https://' }}</a></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><a href="https://www.linkedin.com/in/maximelenne">in/maximelenne</a></li>
+      </ul>
+    </section>
+
+    <section class="cv-block">
+      <h2 class="cv-block__title">{{ t.skills }}</h2>
+      {% for group in t.skill_groups %}
+        {% capture cv_pills %}{% include cv-print/skills.html categories=group.categories %}{% endcapture %}
+        {% assign cv_pills = cv_pills | strip %}
+        {% if cv_pills.size > 0 %}
+        <div class="cv-block__group">
+          <h3 class="cv-block__subtitle">{{ group.title }}</h3>
+          <div class="cv-block__pills">{{ cv_pills }}</div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+
+    <section class="cv-block">
+      <h2 class="cv-block__title">{{ t.languages }}</h2>
+      <ul class="cv-block__list">{{ cv_language_items }}</ul>
+    </section>
+
+    <section class="cv-block">
+      <h2 class="cv-block__title">{{ t.education }}</h2>
+      <ul class="cv-block__list">{{ cv_education_items }}</ul>
+    </section>
+
+    <section class="cv-block">
+      <h2 class="cv-block__title">{{ t.awards }}</h2>
+      <ul class="cv-block__list">{{ cv_award_items }}</ul>
+    </section>
+
+    {% capture cv_pills %}{% include cv-print/skills.html categories=t.tool_categories %}{% endcapture %}
+    {% assign cv_pills = cv_pills | strip %}
+    {% if cv_pills.size > 0 %}
+    <section class="cv-block">
+      <h2 class="cv-block__title">{{ t.tools }}</h2>
+      <div class="cv-block__pills">{{ cv_pills }}</div>
+    </section>
+    {% endif %}
+
+    <section class="cv-block">
+      <h2 class="cv-block__title">{{ t.interests }}</h2>
+      <ul class="cv-block__list">{{ cv_interest_items }}</ul>
+    </section>
+  </aside>
+
+  <main class="cv__main">
+    <h1 class="cv__name">Maxime Lenne</h1>
+    <p class="cv__headline">{{ t.headline_main }} <span>{{ t.headline_highlight }}</span></p>
+    <div class="cv__bar"></div>
+    <div class="cv__intro">{% for paragraph in t.intro %}<p>{{ paragraph }}</p>{% endfor %}</div>
+    <div class="cv-cards">
+      {% for highlight in t.highlights %}<div class="cv-cards__item"><strong>{{ highlight.title }}</strong><span>{{ highlight.card }}</span></div>{% endfor %}
+    </div>
+
+    <h2 class="cv-section-title">{{ t.experience }} <em>{{ t.experience_highlight }}</em></h2>
+    {{ cv_jobs }}
+
+    {% if cv_early.size > 0 %}
+    <h2 class="cv-section-title">{{ t.early_career }} <em>{{ t.early_career_highlight }}</em></h2>
+    <ul class="cv-lines">{{ cv_early_lines }}</ul>
+    {% endif %}
+
+    {% if cv_contributions.size > 0 %}
+    <h2 class="cv-section-title">{{ t.contributions }} <em>{{ t.contributions_highlight }}</em></h2>
+    <ul class="cv-lines">{{ cv_contribution_lines }}</ul>
+    {% endif %}
+
+    {{ cv_footer }}
+  </main>
+</div>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,3 @@
+{% comment %} "Download my CV" button, to the visual PDF of the language (scripts/export-cv.sh) {% endcomment %}
+{% assign cv_t = site.data.translations[include.lang].cv_print %}
+{% include components/cta-button.html size="large" style="secondary" text=cv_t.download icon="download" url=cv_t.pdf download=true %}

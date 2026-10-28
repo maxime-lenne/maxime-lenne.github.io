@@ -1,0 +1,20 @@
+{% comment %}
+  Print skills of include.categories, each name once per page (a skill can sit in several categories).
+  style "pills" for the visual CV, "text" for a comma-separated line (ATS).
+{% endcomment %}
+{% assign cv_group = cv_empty %}
+{% for skill in cv_skills %}
+  {% assign cv_in_group = false %}
+  {% for category in include.categories %}
+    {% if skill.category contains category %}{% assign cv_in_group = true %}{% endif %}
+  {% endfor %}
+  {% if cv_in_group %}
+    {% if lang == 'en' and skill.name_en.size > 0 %}{% assign cv_skill = skill.name_en %}{% else %}{% assign cv_skill = skill.name %}{% endif %}
+    {% capture cv_key %}|{{ cv_skill }}|{% endcapture %}
+    {% unless cv_skills_shown contains cv_key %}
+      {% assign cv_group = cv_group | push: cv_skill %}
+      {% assign cv_skills_shown = cv_skills_shown | append: cv_key %}
+    {% endunless %}
+  {% endif %}
+{% endfor %}
+{% if include.style == 'text' %}{{ cv_group | join: ', ' }}{% else %}{% for name in cv_group %}<span class="cv-pill">{{ name }}</span>{% endfor %}{% endif %}

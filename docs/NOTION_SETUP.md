@@ -18,6 +18,7 @@ NOTION_CONTRIBUTIONS_DB=xxx
 NOTION_EDUCATIONS_DB=xxx
 NOTION_SERVICES_DB=xxx
 NOTION_TESTIMONIALS_DB=xxx
+NOTION_ITEMS_DB=xxx
 NOTION_BLOG_DB=xxx  # Articles de blog multilingues
 ```
 
@@ -263,6 +264,32 @@ Missions: [Accompagnement de l'équipe lilloise, recrutement, formation...]
 Sub Roles: [Auditeur : Réalisation et restitution d'un assessment craft...]
 ```
 
+## 📄 CV PDF (colonnes « Print » et « en »)
+
+Le CV PDF (`/cv/print/`, `/en/cv/print/` et leurs versions `ats/`) ne reprend que ce qui est coché dans Notion.
+Une colonne suffixée `print` porte la version courte pour le PDF, une colonne suffixée `en` la version anglaise.
+Sans valeur anglaise, le PDF anglais reprend le texte français.
+
+| Base | Propriétés |
+|------|------------|
+| **Items** | **Print** (case : la réalisation ou mission figure sous son expérience), **Name en** |
+| **Expériences** | **Print** (case : bloc détaillé), **Role en**, **Description en**, **Description print**, **Description print en** |
+| **Skills** | **Print** (case), **Name en** (si le nom change en anglais) |
+| **Educations** | **Print**, **Title en**, **Institution en** |
+| **Awards** | **Print**, **Title en** |
+| **Contributions** | **Print**, **Title en**, **Title print**, **Title print en**, **Description print**, **Description print en**, **Period print** (année ou libellé à gauche) |
+
+Une expérience sans **Print** mais avec une **Description print** passe en une ligne dans « Débuts de carrière ».
+Les réalisations s'affichent dans l'ordre de la relation **Items** de l'expérience. Le site lit la base Items
+directement (`NOTION_ITEMS_DB`, `_data/notion_items.yml`) : les formules Notion ne peuvent pas filtrer sur la case
+Print à travers l'API. Les compétences sont lues une deuxième fois à plat (`_data/notion_skills_print.yml`), car
+l'organiseur par catégorie ne garde pas les propriétés ajoutées. Leur regroupement dans le PDF est défini par
+`cv_print.skill_groups` dans `_data/translations.yml`.
+
+`make cv` régénère les quatre PDF dans `assets/cv/` et signale ceux qui dépassent deux pages. En production, le
+workflow de déploiement les régénère à chaque build (`scripts/export-cv.sh`). Ajoutez le secret GitHub
+`NOTION_ITEMS_DB` pour que la CI lise les Items à jour, sinon elle reprend `_data/notion_items.yml`.
+
 ## 🚀 Utilisation
 
 ### Développement local
@@ -296,6 +323,7 @@ bundle exec jekyll serve
    - `NOTION_EDUCATIONS_DB` : L'ID de votre base de données Educations
    - `NOTION_SERVICES_DB` : L'ID de votre base de données Services
    - `NOTION_TESTIMONIALS_DB` : L'ID de votre base de données Testimonials
+   - `NOTION_ITEMS_DB` : L'ID de la base Items (réalisations et missions, lue pour le CV PDF)
    - `NOTION_BLOG_DB` : L'ID de votre base de données Blog Posts (multilingue)
 
 3. **Pour ajouter un secret** :

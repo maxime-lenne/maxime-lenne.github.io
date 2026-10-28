@@ -80,7 +80,10 @@ profile_page: true
           item2_text="Fan de tests, de discovery, d’itérations rapides et d’équipes autonomes" %}
       </div>
       
-      {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
+      <div class="cv-download-actions">
+        {% include components/cta-button.html size="large" text="Faisons connaissance" icon="arrow" %}
+        {% include components/cv-download.html lang="fr" %}
+      </div>
       
     </div>
   </div>
@@ -144,7 +147,7 @@ profile_page: true
   </div>
 </section>
 
-{% include sections/final-cta-section.html title="Prêt à me partager la vision de votre entreprise ?" %}
+{% include sections/final-cta-section.html cv_download=true title="Prêt à me partager la vision de votre entreprise ?" %}
 <!-- , roadmaps, et stratégie  -->
 
 <!-- Contributions & Projects Section -->
@@ -318,7 +321,7 @@ profile_page: true
 </section>
 
 <!-- Final CTA Section -->
-{% include sections/cta-section.html title="Intéressé par mon profil ?" 
+{% include sections/cta-section.html cv_download=true title="Intéressé par mon profil ?" 
 description="Présentez moi vos projets, problématiques, objectifs et discutons ensemble de la façon dont je peux contribuer à leur succès." cta_text="Planifier un entretien" %}
 
 {% include sections/resume-load-more.html %}

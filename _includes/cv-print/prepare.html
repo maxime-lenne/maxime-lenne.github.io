@@ -1,0 +1,24 @@
+{% comment %}
+  CV PDF data, shared by both variants. Tests use `.size > 0`: without ActiveSupport, Liquid
+  treats `nil != blank` as true. Everything comes from Notion: rows with the Print box
+  checked, texts suffixed "print" for the short versions and "en" for English (French as fallback).
+{% endcomment %}
+{% assign lang = page.lang | default: 'fr' %}
+{% assign t = site.data.translations[lang].cv_print %}
+{% assign cv_empty = '' | split: '' %}
+
+{% assign cv_sorted = site.data.notion_experiences | sort: 'start_date.start' | reverse %}
+{% assign cv_detailed = cv_empty %}
+{% assign cv_early = cv_empty %}
+{% for exp in cv_sorted %}
+  {% if exp.print %}
+    {% assign cv_detailed = cv_detailed | push: exp %}
+  {% elsif exp.description_print.size > 0 %}
+    {% assign cv_early = cv_early | push: exp %}
+  {% endif %}
+{% endfor %}
+
+{% assign cv_educations = site.data.notion_educations | where: 'print', true | sort: 'order' %}
+{% assign cv_awards = site.data.notion_awards | where: 'print', true | sort: 'order' %}
+{% assign cv_contributions = site.data.notion_contributions | where: 'print', true | sort: 'order' %}
+{% assign cv_skills = site.data.notion_skills_print | where: 'print', true %}
