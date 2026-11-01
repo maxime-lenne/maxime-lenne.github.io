@@ -81,7 +81,10 @@ profile_page: true
           item2_text=t.resume_page.product_desc %}
       </div>
       
-      {% include components/cta-button.html size="large" text=t.header.cta_button icon="arrow" %}
+      <div class="cv-download-actions">
+        {% include components/cta-button.html size="large" text=t.header.cta_button icon="arrow" %}
+        {% include components/cv-download.html lang="en" %}
+      </div>
       
     </div>
   </div>
@@ -145,7 +148,7 @@ profile_page: true
   </div>
 </section>
 
-{% include sections/final-cta-section.html title=t.cta_section.final_title lang="en" %}
+{% include sections/final-cta-section.html cv_download=true title=t.cta_section.final_title lang="en" %}
 
 <!-- Contributions & Projects Section -->
 <section class="section section--light">
@@ -309,7 +312,7 @@ profile_page: true
 </section>
 
 <!-- Final CTA Section -->
-{% include sections/cta-section.html title=t.resume_page.final_title 
+{% include sections/cta-section.html cv_download=true title=t.resume_page.final_title 
 description=t.resume_page.final_description cta_text=t.resume_page.final_button lang="en" %}
 
 {% include sections/resume-load-more.html %}

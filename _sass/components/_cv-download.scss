@@ -1,0 +1,7 @@
+// Resume hero actions: contact button and CV download side by side
+
+.cv-download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}

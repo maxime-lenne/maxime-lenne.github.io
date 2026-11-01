@@ -1,4 +1,4 @@
-.PHONY: help install build serve clean watch production deploy test lint optimize
+.PHONY: help install build serve clean watch production deploy test lint optimize cv
 
 # Variables d'environnement Notion
 ENV_VARS = NOTION_TOKEN=$(shell cat .env 2>/dev/null | grep NOTION_TOKEN | cut -d '=' -f2) \
@@ -8,7 +8,8 @@ ENV_VARS = NOTION_TOKEN=$(shell cat .env 2>/dev/null | grep NOTION_TOKEN | cut -
 	NOTION_CONTRIBUTIONS_DB=$(shell cat .env 2>/dev/null | grep NOTION_CONTRIBUTIONS_DB | cut -d '=' -f2) \
 	NOTION_EDUCATIONS_DB=$(shell cat .env 2>/dev/null | grep NOTION_EDUCATIONS_DB | cut -d '=' -f2) \
 	NOTION_SERVICES_DB=$(shell cat .env 2>/dev/null | grep NOTION_SERVICES_DB | cut -d '=' -f2) \
-	NOTION_TESTIMONIALS_DB=$(shell cat .env 2>/dev/null | grep NOTION_TESTIMONIALS_DB | cut -d '=' -f2)
+	NOTION_TESTIMONIALS_DB=$(shell cat .env 2>/dev/null | grep NOTION_TESTIMONIALS_DB | cut -d '=' -f2) \
+	NOTION_ITEMS_DB=$(shell cat .env 2>/dev/null | grep NOTION_ITEMS_DB | cut -d '=' -f2)
 
 help: ## Afficher cette aide
 	@echo "🚀 Commandes disponibles pour le site portfolio Jekyll:"
@@ -41,6 +42,12 @@ clean: ## Nettoyer tous les fichiers générés
 watch: ## Construire et surveiller les changements
 	@echo "👀 Surveillance des changements..."
 	bundle exec jekyll build --watch
+
+cv: ## Exporter le CV en PDF (FR/EN, visuel et ATS) depuis Notion vers assets/cv/
+	@echo "📄 Export du CV..."
+	$(ENV_VARS) bundle exec jekyll build --config _config.yml,_config_prod.yml
+	scripts/export-cv.sh _site assets/cv
+	@echo "✅ CV exporté dans assets/cv/"
 
 production: ## Construire pour la production avec optimisations
 	@echo "🚀 Construction pour la production..."
@@ -152,6 +159,7 @@ env-check: ## Vérifier les variables d'environnement Notion
 	@echo "NOTION_EDUCATIONS_DB: $(shell cat .env 2>/dev/null | grep NOTION_EDUCATIONS_DB | cut -d '=' -f2)"
 	@echo "NOTION_SERVICES_DB: $(shell cat .env 2>/dev/null | grep NOTION_SERVICES_DB | cut -d '=' -f2)"
 	@echo "NOTION_TESTIMONIALS_DB: $(shell cat .env 2>/dev/null | grep NOTION_TESTIMONIALS_DB | cut -d '=' -f2)"
+	@echo "NOTION_ITEMS_DB: $(shell cat .env 2>/dev/null | grep NOTION_ITEMS_DB | cut -d '=' -f2)"
 
 local: ## Démarrer en mode local (avec fallback collections)
 	@echo "🏠 Mode local - Utilisation des collections Jekyll"
