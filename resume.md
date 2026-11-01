@@ -117,7 +117,7 @@ profile_page: true
              current=experience.current
              description=res_desc
              skills=res_skills
-             tags=experience.tags
+             tags=res_tags
              achievements=res_achievements
              logo_url=experience.logo_url
              url=experience_page.url %}

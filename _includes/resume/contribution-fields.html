@@ -1,7 +1,8 @@
 {% comment %}
-  Sets res_title, res_desc and res_achievements for include.contribution, in the page language.
+  Sets res_title, res_desc, res_achievements and res_labels for include.contribution, in the page language.
   English reads the "en" columns of Notion, the print ones as fallback, and French when neither is set.
-  Achievements have no English column yet: they are left out in English rather than shown in French.
+  Achievements come from the Items database: one without English name is left out rather than shown in French.
+  Labels go through resume_page.tags in _data/translations.yml.
 {% endcomment %}
 {% assign res_lang = page.lang | default: site.default_lang | default: 'fr' %}
 {% assign contribution = include.contribution %}
@@ -26,8 +27,21 @@
   {% endif %}
 
   {% assign res_achievements = '' | split: '' %}
+  {% for item_id in contribution.item_ids %}
+    {% assign res_item = site.data.notion_items | where: 'id', item_id | first %}
+    {% if res_item.name_en.size > 0 %}
+      {% assign res_achievements = res_achievements | push: res_item.name_en %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign res_labels = '' | split: '' %}
+  {% for label in contribution.labels %}
+    {% assign res_label = site.data.translations.en.resume_page.tags[label] | default: label %}
+    {% assign res_labels = res_labels | push: res_label %}
+  {% endfor %}
 {% else %}
   {% assign res_title = contribution.title %}
   {% assign res_desc = contribution.description %}
   {% assign res_achievements = contribution.achievements %}
+  {% assign res_labels = contribution.labels %}
 {% endif %}
