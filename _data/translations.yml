@@ -462,6 +462,14 @@ en:
     skills_years: "years of experience"
     skills_close: "Close"
     experience_current: "Present"
+    # Notion tags and labels shown in English; a value missing here is shown as is
+    tags:
+      "Grands Comptes": "Large accounts"
+      "Refonte": "Overhaul"
+      "Secteur Public": "Public sector"
+      "PME": "SMEs"
+      "ESN": "IT services"
+      "Communautés": "Communities"
     experience_details: "Read more"
     contributions_badge: "Side projects"
     contributions_title: "Contributions & Projects"

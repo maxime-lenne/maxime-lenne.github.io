@@ -118,7 +118,7 @@ profile_page: true
              current=experience.current
              description=res_desc
              skills=res_skills
-             tags=experience.tags
+             tags=res_tags
              achievements=res_achievements
              logo_url=experience.logo_url
              url=experience_page.url %}
@@ -186,9 +186,9 @@ profile_page: true
             </div>
           {% endif %}
 
-          {% if contribution.labels %}
+          {% if res_labels.size > 0 %}
             <div class="card-dark__labels">
-            {% for label in contribution.labels %}
+            {% for label in res_labels %}
               {% include components/badge.html style="services" text=label %}
             {% endfor %}
             </div>

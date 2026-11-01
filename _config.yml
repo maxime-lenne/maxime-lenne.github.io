@@ -248,9 +248,11 @@ notion:
         - { name: Links, type: rich_text }
         - { name: Order, type: number }
         - { name: Achievements, type: rollup }  # names of the related Items
+        - { name: Items, type: relation, key: item_ids }  # read for the English names of the achievements
         - { name: Labels, type: multi_select }
         - { name: Print, type: checkbox }
         - { name: Title en, type: rich_text }
+        - { name: Description en, type: rich_text }
         - { name: Title print, type: rich_text }
         - { name: Title print en, type: rich_text }
         - { name: Description print, type: rich_text }

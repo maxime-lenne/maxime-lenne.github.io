@@ -277,7 +277,7 @@ Sans valeur anglaise, le PDF anglais reprend le texte français.
 | **Skills** | **Print** (case), **Name en** (si le nom change en anglais) |
 | **Educations** | **Print**, **Title en**, **Institution en** |
 | **Awards** | **Print**, **Title en** |
-| **Contributions** | **Print**, **Title en**, **Title print**, **Title print en**, **Description print**, **Description print en**, **Period print** (année ou libellé à gauche) |
+| **Contributions** | **Print**, **Title en**, **Description en**, **Title print**, **Title print en**, **Description print**, **Description print en**, **Period print** (année ou libellé à gauche) |
 
 Une expérience sans **Print** mais avec une **Description print** passe en une ligne dans « Débuts de carrière ».
 Les réalisations s'affichent dans l'ordre de la relation **Items** de l'expérience. Le site lit la base Items
@@ -300,7 +300,8 @@ La page CV anglaise lit les mêmes colonnes `en`, avec un repli différent selon
 | Description d'expérience | **Description en**, puis **Description print en** | Texte français |
 | Réalisations d'une expérience | Items de type `Achievement` avec un **Name en** | Réalisation masquée |
 | Compétences | **Name en** | Nom français |
-| Contributions | **Title en** / **Description en**, puis leurs versions print | Texte français ; les réalisations sont masquées (pas encore de colonne `en`) |
+| Contributions | **Title en** / **Description en**, puis leurs versions print ; réalisations : **Name en** des Items liés | Texte français ; réalisation masquée |
+| Tags d'expérience, labels de contribution | `resume_page.tags` dans `_data/translations.yml` (pas de colonne Notion : options de sélection) | Valeur telle quelle |
 
 Une réalisation non traduite est masquée plutôt qu'affichée en français : un texte français sur une page déclarée
 en anglais (`hreflang="en"`) brouille l'association des deux versions par Google. Les champs sont choisis dans
