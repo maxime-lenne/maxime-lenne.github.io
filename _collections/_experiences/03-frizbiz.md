@@ -22,7 +22,7 @@ skills:
 - Design Sprint
 - TypeScript
 - VueJs
-- Node.js, NestJs
+- Node.js
 - Microservices
 - Ruby on Rails
 - Ruby
@@ -44,7 +44,7 @@ achievements:
 - Mise en place d'une nouvelle stack avec architecture microservices (NestJs, TypeScript,
   Docker, Kubernetes...) avec client web et mobile (Vue.js, Nuxt, Swift, Kotlin...)
 missions:
-- Management et accompagnement de l'équipe IT et produit, recrutement, formation,
+- Structuration et Management de l'équipe tech & produit, recrutement, formation,
   coaching, définition des objectifs
 - Définition de la roadmap technique et fonctionnel en accord avec la stratégie de
   l'entreprise
@@ -68,4 +68,7 @@ missions:
 - Organisation de la veille concurrentielle, métier et technique, de l'innovation,
   R&D, POC, contribution open source, ateliers et démo à destination de l'ensemble
   des collaborateurs de l'entreprise
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/cpto-frizbiz-Homelife/"
 ---

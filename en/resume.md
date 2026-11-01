@@ -107,7 +107,7 @@ profile_page: true
       {% assign initial_display = 4 %}
       
       {% for experience in sorted_experiences limit: initial_display %}
-          {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
+          {% assign experience_page = site.experiences_en | where: "notion_id", experience.id | first %}
           {% include resume/experience-fields.html exp=experience %}
           {% include components/card-experience.html 
              role=res_role

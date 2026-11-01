@@ -158,7 +158,8 @@ layout: default
   </div>
 
   {% comment %} Previous (older) and next (more recent) positions, by start date {% endcomment %}
-  {% assign experiences_by_date = site.experiences | sort: "start_date" | reverse %}
+  {% comment %} Same language only: the page collection, experiences or experiences_en {% endcomment %}
+  {% assign experiences_by_date = site[page.collection] | sort: "start_date" | reverse %}
   {% for experience in experiences_by_date %}
     {% if experience.url == page.url %}
       {% if forloop.first == false %}{% assign newer_index = forloop.index0 | minus: 1 %}{% assign newer_experience = experiences_by_date[newer_index] %}{% endif %}

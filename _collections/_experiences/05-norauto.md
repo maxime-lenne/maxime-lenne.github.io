@@ -36,4 +36,7 @@ missions:
 - Découpage en lots cohérents et planification
 - Gestion du product backlog et écriture des Users Stories
 - Interviews du métier et des potentiels consommateurs
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/05-norauto/"
 ---

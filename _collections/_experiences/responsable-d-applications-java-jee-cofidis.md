@@ -6,7 +6,7 @@ layout: experience
 company: Cofidis
 company_url: https://www.cofidis.fr/
 role: Responsable d’applications Java / JEE
-start_date: '2010-01-01'
+start_date: '2010-05-01'
 end_date: '2012-12-31'
 current: false
 location: Lille, France
@@ -34,4 +34,7 @@ missions:
   intégration continue (Hudson, Sonar, JUnit, DBUnit, PMD, Checkstyle, Cobertura)'
 - Réalisation d'évolutions et correction d'anomalies (Java / JEE et Cobol), livraison
   des applications
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/responsable-d-applications-java-jee-cofidis/"
 ---

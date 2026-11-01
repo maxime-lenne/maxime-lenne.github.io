@@ -14,6 +14,7 @@ maxime-lenne-website/
 ├── .husky/                         # Git hooks (pre-commit, commit-msg, post-checkout)
 ├── _collections/                   # Jekyll collections (Notion fallbacks)
 │   ├── _experiences/
+│   ├── _experiences_en/            # English copies, written by scripts/sync_experiences.rb
 │   ├── _skills/
 │   ├── _testimonials/
 │   └── ...
@@ -180,7 +181,8 @@ Jekyll collections in `_collections/` serve as fallback data when Notion is not 
 
 ```text
 _collections/
-├── _experiences/     → site.data.notion_experiences (fallback)
+├── _experiences/     → site.data.notion_experiences (fallback), pages /experiences/:slug/
+├── _experiences_en/  → English copies, pages /en/experiences/:slug/ (scripts/sync_experiences.rb)
 ├── _skills/          → site.data.notion_skills (fallback)
 ├── _testimonials/    → site.data.notion_testimonials (fallback)
 ├── _posts/           → blog posts, written in Markdown

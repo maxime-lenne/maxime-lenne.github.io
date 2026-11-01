@@ -34,4 +34,7 @@ missions:
 - Pilotage des développements offshore (Atos Origin India), revue de code et recette
 - 'Documentation et communication en anglais : revues de code, release notes, guides
   utilisateur et d''installation'
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-spop/"
 ---

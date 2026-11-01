@@ -1,13 +1,13 @@
 ---
 notion_id: 6a3d0190-d746-4eea-851e-d1ceab4ee369
-title: Ingénieur études et développement Java / JEE chez Atos Origin Worldline (2010)
+title: Ingénieur études et développement Java / JEE chez Atos Origin Worldline (2009-2010)
 slug: ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-massilia
 layout: experience
 company: Atos Origin Worldline
 company_url: https://worldline.com/
 role: Ingénieur études et développement Java / JEE
-start_date: '2010-01-01'
-end_date: '2010-12-31'
+start_date: '2009-11-01'
+end_date: '2010-04-30'
 current: false
 location: Lille, France
 type: CDI / Full-time
@@ -35,4 +35,7 @@ missions:
   de bench et livraison
 - 'Documentation et communication en anglais : revues de code, release notes, guides
   utilisateur et d''installation'
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-massilia/"
 ---
