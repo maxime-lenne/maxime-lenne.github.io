@@ -1,0 +1,33 @@
+{% comment %}
+  Sets res_title, res_desc and res_achievements for include.contribution, in the page language.
+  English reads the "en" columns of Notion, the print ones as fallback, and French when neither is set.
+  Achievements have no English column yet: they are left out in English rather than shown in French.
+{% endcomment %}
+{% assign res_lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign contribution = include.contribution %}
+{% if res_lang == 'en' %}
+  {% if contribution.title_en.size > 0 %}
+    {% assign res_title = contribution.title_en %}
+  {% elsif contribution.title_print_en.size > 0 %}
+    {% assign res_title = contribution.title_print_en %}
+  {% else %}
+    {% assign res_title = contribution.title %}
+  {% endif %}
+
+  {% if contribution.description_en.size > 0 %}
+    {% assign res_desc = contribution.description_en %}
+  {% elsif contribution.description_print_en.size > 0 %}
+    {% comment %} The print text starts lowercase, after a " · " {% endcomment %}
+    {% assign res_first = contribution.description_print_en | slice: 0 | upcase %}
+    {% assign res_rest = contribution.description_print_en | slice: 1, 10000 %}
+    {% assign res_desc = res_first | append: res_rest %}
+  {% else %}
+    {% assign res_desc = contribution.description %}
+  {% endif %}
+
+  {% assign res_achievements = '' | split: '' %}
+{% else %}
+  {% assign res_title = contribution.title %}
+  {% assign res_desc = contribution.description %}
+  {% assign res_achievements = contribution.achievements %}
+{% endif %}

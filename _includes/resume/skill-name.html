@@ -1,0 +1,13 @@
+{% comment %}
+  Sets res_skill_name and res_skill_desc for include.skill (an item of notion_skills), in the page language.
+  English takes the "Name en" column (read through notion_skills_print, the skills grouping drops it),
+  the French name as fallback, and no description: it only exists in French.
+{% endcomment %}
+{% assign res_lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign res_skill_name = include.skill.name %}
+{% assign res_skill_desc = include.skill.description %}
+{% if res_lang == 'en' %}
+  {% assign res_skill_desc = nil %}
+  {% assign res_skill = site.data.notion_skills_print | where: 'id', include.skill.id | first %}
+  {% if res_skill.name_en.size > 0 %}{% assign res_skill_name = res_skill.name_en %}{% endif %}
+{% endif %}

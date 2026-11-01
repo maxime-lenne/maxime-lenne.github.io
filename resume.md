@@ -107,17 +107,18 @@ profile_page: true
       
       {% for experience in sorted_experiences limit: initial_display %}
           {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
+          {% include resume/experience-fields.html exp=experience %}
           {% include components/card-experience.html 
-             role=experience.role
+             role=res_role
              company=experience.company
              company_url=experience.company_url
              start_date=experience.start_date.start
              end_date=experience.end_date.start
              current=experience.current
-             description=experience.description
-             skills=experience.skills
+             description=res_desc
+             skills=res_skills
              tags=experience.tags
-             achievements=experience.achievements
+             achievements=res_achievements
              logo_url=experience.logo_url
              url=experience_page.url %}
       {% endfor %}

@@ -1,0 +1,46 @@
+{% comment %}
+  Sets res_role, res_desc, res_achievements and res_skills for include.exp, in the page language.
+  English reads the "en" columns of Notion: role, description (the print one as fallback), achievements
+  from the Items database and skill names. An achievement without English name is left out rather than
+  shown in French; a description or skill without English version falls back to French.
+  Tests use `.size > 0`: without ActiveSupport, Liquid treats `nil != blank` as true.
+{% endcomment %}
+{% assign res_lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign exp = include.exp %}
+{% if res_lang == 'en' %}
+  {% if exp.role_en.size > 0 %}{% assign res_role = exp.role_en %}{% else %}{% assign res_role = exp.role %}{% endif %}
+
+  {% if exp.description_en.size > 0 %}
+    {% assign res_desc = exp.description_en %}
+  {% elsif exp.description_print_en.size > 0 %}
+    {% comment %} Early-career print texts start lowercase, after a " · " {% endcomment %}
+    {% assign res_first = exp.description_print_en | slice: 0 | upcase %}
+    {% assign res_rest = exp.description_print_en | slice: 1, 10000 %}
+    {% assign res_desc = res_first | append: res_rest %}
+  {% else %}
+    {% assign res_desc = exp.description %}
+  {% endif %}
+
+  {% assign res_achievements = '' | split: '' %}
+  {% for item_id in exp.item_ids %}
+    {% assign res_item = site.data.notion_items | where: 'id', item_id | first %}
+    {% if res_item.type == 'Achievement' and res_item.name_en.size > 0 %}
+      {% assign res_achievements = res_achievements | push: res_item.name_en %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign res_skills = '' | split: '' %}
+  {% for skill_name in exp.skills %}
+    {% assign res_skill = site.data.notion_skills_print | where: 'name', skill_name | first %}
+    {% if res_skill.name_en.size > 0 %}
+      {% assign res_skills = res_skills | push: res_skill.name_en %}
+    {% else %}
+      {% assign res_skills = res_skills | push: skill_name %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign res_role = exp.role %}
+  {% assign res_desc = exp.description %}
+  {% assign res_achievements = exp.achievements %}
+  {% assign res_skills = exp.skills %}
+{% endif %}
