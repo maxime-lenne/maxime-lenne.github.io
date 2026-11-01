@@ -8,7 +8,7 @@ start_date: '2012-01-01'
 end_date: '2017-01-01'
 current: false
 location: Lille, France
-type: Funder
+type: Founder
 order: 5
 logo_url: "/assets/images/companies/ecotaco.png"
 tags:
@@ -24,27 +24,27 @@ skills:
 - Scrum
 - Product Management
 - Vision, Roadmap et Stratégie
-- Recruitment
-- Leadership
+- Recrutement
 - Prévisionnel financiers
 - Tableaux de bord, KPIs
 - Gestion des partenariats
 - Veille concurrentielle, métier et technique
-description: Développement d’un système d'information complexe à base de micro services,
-  APIs publiques et privées, applications web et mobile native. Une aventure qui a
-  duré 5 ans et m'a permis de me focaliser sur la conception globale d'un produit,
-  le business model, la stratégie, les besoins clients et partenaires, le management...
-about: FactorApp SAS développait et exploitait le service EcoTaco qui est une plate-forme
-  de mise en relation entre des clients BtoB ou BtoC et des chauffeurs VTC professionnels.
-  Une startup qui participait à l'innovation dans le secteur de la mobilité et du
-  transport.
+description: 'Cinq ans d''aventure entrepreneuriale, de l''idée au passage à l''échelle
+  : 12 villes, plus de 600 chauffeurs et 20 000 utilisateurs. Avec mon associé Alexis,
+  nous avons piloté la stratégie, le business model, les partenariats (SNCF, Keolis)
+  et l''équipe. J''ai structuré et managé l''équipe tech pour concevoir une plateforme
+  reposant sur une architecture en microservices, des APIs publiques et privées, des
+  plateformes web et des applications mobiles natives.'
+about: Startup qui développait et exploitait le service EcoTaco qui est une plate-forme
+  de mise en relation entre des clients et des chauffeurs VTC professionnels (en BtoB
+  ou BtoC ). Une startup innovante dans la mobilité partagée, le transport et l’éco-mobilité
 achievements:
-- Une aventure qui a duré 5 ans, opérationnel dans 12 villes, +600 chauffeurs, +20K
-  utilisateurs, +500K€ de CA en 2015
-- Une Levée de fonds de 300k€
-- Développement d'un système d'information complexe à base de micro services, APIs
-  publiques et privées, applications web et mobile native
-- partenariats stratégiques avec la SNCF, Keolis, Booking.com
+- En 5 ans, nous étions opérationnels dans 12 villes, avec +600 chauffeurs, +20K utilisateurs,
+  +500K€ de CA en 2015
+- Levée de fonds de 300k€
+- Conception de l'ensemble du SI à base de micro services, APIs publiques et privées,
+  de plateformes web et application mobile native
+- Partenariats stratégiques avec la SNCF, Keolis, Booking.com
 - Programme d'incubation, puis d'accélération Euratechnologies, Lauréat de Lille Métropole
   Innovation
 missions:
@@ -69,4 +69,7 @@ missions:
 - Design, documentation et tests des APIs (Apiary, Postman), accompagnement commercial
   et technique des partenaires qui intègrent l'API, environnement sandbox dédié
 - Veille concurrentielle, métier et technique
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/06-ecotaco/"
 ---

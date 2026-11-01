@@ -31,4 +31,7 @@ missions:
   Régional
 - Développeur full stack Java / JEE sur quatre applications web du Conseil Régional
 - Développeur full stack Java / JEE sur le projet Datafluides de Cema Froid
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/developpeur-full-stack-atos-origin-integration/"
 ---

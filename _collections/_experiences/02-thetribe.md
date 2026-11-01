@@ -28,9 +28,8 @@ skills:
 - TypeScript
 - Strapi
 - Scaleway
-- Node.js, NestJs
+- Node.js
 - Laravel
-- Leadership
 - Pilotage prestataires
 description: Management d'agence et stratégie produit. Développement d'équipe et direction
   technique. Leadership dans les partenariats technologiques et l'offre de services.
@@ -63,5 +62,8 @@ missions:
 - 'Participer au développement de la visibilité et de la notoriété locale et nationale
   de the Tribe : participation à des salons, Meetup'
 - 'Missions clients à forte valeur ajoutée : Audit, architecture'
-- Directeur d'agence intérim 5 mois
+- Directeur d'agence par intérim pendant 5 mois
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/cto-thetribe/"
 ---

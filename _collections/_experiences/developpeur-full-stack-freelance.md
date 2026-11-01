@@ -1,12 +1,12 @@
 ---
 notion_id: a4d79834-dbfb-467c-ba4e-86b55acde904
-title: Développeur full stack chez Freelance (2010-2019)
+title: Développeur full stack en freelance (2010-2019)
 slug: developpeur-full-stack-freelance
 layout: experience
 company: Freelance
 company_url:
 role: Développeur full stack
-start_date: '2010-01-01'
+start_date: '2010-04-30'
 end_date: '2019-01-01'
 current: false
 location: Lille, France
@@ -23,4 +23,7 @@ missions:
 - Consultant solution e-commerce Magento pour lematelas.fr
 - 'Développeur Magento chez Colisweb : réalisation du plugin de livraison connecté
   à l''API Colisweb'
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/developpeur-full-stack-freelance/"
 ---

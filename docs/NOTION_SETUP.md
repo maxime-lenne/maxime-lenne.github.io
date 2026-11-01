@@ -273,7 +273,7 @@ Sans valeur anglaise, le PDF anglais reprend le texte français.
 | Base | Propriétés |
 |------|------------|
 | **Items** | **Print** (case : la réalisation ou mission figure sous son expérience), **Name en** |
-| **Expériences** | **Print** (case : bloc détaillé), **Role en**, **Description en**, **Description print**, **Description print en** |
+| **Expériences** | **Print** (case : bloc détaillé), **Role en**, **Description en**, **About en** (pages expérience anglaises), **Description print**, **Description print en** |
 | **Skills** | **Print** (case), **Name en** (si le nom change en anglais) |
 | **Educations** | **Print**, **Title en**, **Institution en** |
 | **Awards** | **Print**, **Title en** |
@@ -409,6 +409,14 @@ du titre (sans accents), et le CV relie chaque carte à sa page grâce au `notio
 Le `title` de la page n'est pas le titre Notion : le script le construit pour le `<title>` et les
 moteurs, à partir du rôle, de l'entreprise et des années (« CTO agence Lille chez Ippon (2024) »,
 « CTO as a Service chez White Wood Tech (depuis 2024) »). Soignez donc la casse du `Role` dans Notion.
+
+Le script écrit aussi la copie anglaise de chaque page dans `_collections/_experiences_en/` (même nom
+de fichier, publiée sous `/en/experiences/:slug/`), à partir des colonnes `en` : **Role en**,
+**Description en**, **About en**, le **Name en** des Items (réalisations et missions) et des compétences,
+et les traductions de `resume_page.tags` et `cv_print.types` dans `_data/translations.yml`. Sans valeur
+anglaise, le texte français est repris. Les deux copies se pointent l'une l'autre (`alternate_url`) pour
+le hreflang et le sélecteur de langue. Les `sub-roles` s'écrivent à la main dans chaque langue et sont
+conservés.
 
 ### Structure des données générées
 
