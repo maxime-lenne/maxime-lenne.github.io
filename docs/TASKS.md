@@ -9,21 +9,24 @@ Project task tracking.
 - [ ] Add projects section (Notion)
 - [ ] Topics list (Notion), see <https://coderon-jekyll.netlify.app/>
 - [ ] Featured posts section, see <https://coderon-jekyll.netlify.app/>
-- [x] Blog index page listing the posts of `_collections/_posts` (FR at `/blog/`, EN at `/en/blog/`)
 - [ ] Add blog posts (Notion), then re-enable the `blog_posts` collection in `_config.yml`
 - [ ] Move the remaining content to Notion (skills categories, blog posts)
 - [ ] Add contact page
 - [ ] Claude Code skill carousel component
 - [ ] LinkedIn carousel — make accessible (embed in a page)
 - [ ] LinkedIn carousel — Jekyll plugin using the theme
-- [ ] Translate the experience pages (`/experiences/:slug/`) to English
+- [ ] Translate the experience pages (`/experiences/:slug/`) to English: generate `/en/experiences/:slug/` from the
+  Notion `en` columns, with reciprocal hreflang, and link the English resume cards to them
+- [ ] Nest missions under an experience (ESN or freelance clients): Notion sub-items (`parent_ids` relation), shown
+  inside the parent card, experience page and CV PDF
 
 ### Content — Notion
 
 - [ ] Mark the main skills as `Featured` and set their `Order`: the resume shows the top 10 per category
 - [ ] Sort out the « Langages & Frameworks » and « Other » skill categories
-- [ ] Fix the EcoTa.co experience type (`Funder` → `Founder`)
-- [ ] Capitalise the Ippon role (« CTO agence lille » → « CTO agence Lille »), it is used in the page title
+- [ ] Review the English translations written in Notion (`Name en`, `Description en`)
+- [ ] Shorten or untick some `Print` rows to bring the visual CV PDF back to 2 pages (3 today)
+- [ ] Add the `NOTION_ITEMS_DB` GitHub secret, so the deploy reads the Items database
 
 ### SEO — see [`SEO_GEO_BACKLINKS.md`](./SEO_GEO_BACKLINKS.md)
 
@@ -64,7 +67,14 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
 - [x] Awards, contributions, educations, services and testimonials moved to Notion (achievements in Items)
 - [x] Align with the [GitHub repository template](https://github.com/maxime-lenne/github-repository-template):
   `develop` → `main` workflow, semantic-release, Renovate, lint CI, husky hooks, `setup:github`
+- [x] Blog index page listing the posts of `_collections/_posts` (FR at `/blog/`, EN at `/en/blog/`)
+- [x] Fix the EcoTa.co experience type (`Funder` → `Founder`)
+- [x] Capitalise the Ippon role (« CTO agence lille » → « CTO agence Lille »), it is used in the page title
+- [x] CV PDF generated from Notion (`make cv`): FR / EN, visual and ATS, « Télécharger mon CV » buttons on the resume
+- [x] English resume fully translated from the Notion `en` columns (items, descriptions, skills, contributions, tags)
+- [x] Privacy policy and legal notice pages (FR / EN), linked from the footer
+- [x] Gem updates for the Dependabot alerts (addressable, concurrent-ruby, json)
 
 ---
 
-*Last updated: 2026-09-27*
+*Last updated: 2026-11-02*
