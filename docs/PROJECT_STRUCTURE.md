@@ -179,6 +179,13 @@ styled as its caption.
 `_includes/sections/blog-list.html` (styles in `_sass/pages/_blog.scss`). The header, the mobile menu and the footer
 link to the blog index of the page language.
 
+### Legal pages
+
+`legal/privacy.md` (`/confidentialite/`), `legal/legal-notice.md` (`/mentions-legales/`) and their `en/legal/` copies
+(`/en/privacy/`, `/en/legal-notice/`) use `_layouts/legal.html`, which reuses the blog post hero and reading column.
+The footer links to them through `footer.privacy_url` and `footer.legal_url` in `_data/translations.yml`. Update the
+privacy policy, and its `updated` date, when the site adds a third-party service or a form.
+
 ---
 
 ## GitHub Configuration (`.github/`)

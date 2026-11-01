@@ -152,7 +152,9 @@ fr:
     made_with: "Fait avec ❤️, un peu d'IA, Jekyll, Notion, et Github Pages à Lille, France"
     in_location: "à Lille, France"
     privacy: "Politique de confidentialité"
-    terms: "Conditions d'utilisation"
+    privacy_url: "/confidentialite/"
+    legal: "Mentions légales"
+    legal_url: "/mentions-legales/"
     book_meeting: "Réserver un rendez-vous"
 
   a11y:
@@ -229,6 +231,9 @@ fr:
     pager_label: "Autres expériences"
     previous_role: "Poste précédent"
     next_role: "Poste suivant"
+
+  legal:
+    updated: "Dernière mise à jour :"
 
   blog:
     title: "Blog"
@@ -418,7 +423,9 @@ en:
     made_with: "Made with ❤️, a bit of AI, Jekyll, Notion, and Github Pages in Lille, France"
     in_location: "in Lille, France"
     privacy: "Privacy Policy"
-    terms: "Terms of Use"
+    privacy_url: "/en/privacy/"
+    legal: "Legal notice"
+    legal_url: "/en/legal-notice/"
     book_meeting: "Book a meeting"
 
   a11y:
@@ -495,6 +502,9 @@ en:
     pager_label: "Other experiences"
     previous_role: "Previous position"
     next_role: "Next position"
+
+  legal:
+    updated: "Last updated:"
 
   blog:
     title: "Blog"
