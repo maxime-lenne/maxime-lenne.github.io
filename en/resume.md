@@ -108,17 +108,18 @@ profile_page: true
       
       {% for experience in sorted_experiences limit: initial_display %}
           {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
+          {% include resume/experience-fields.html exp=experience %}
           {% include components/card-experience.html 
-             role=experience.role
+             role=res_role
              company=experience.company
              company_url=experience.company_url
              start_date=experience.start_date.start
              end_date=experience.end_date.start
              current=experience.current
-             description=experience.description
-             skills=experience.skills
+             description=res_desc
+             skills=res_skills
              tags=experience.tags
-             achievements=experience.achievements
+             achievements=res_achievements
              logo_url=experience.logo_url
              url=experience_page.url %}
       {% endfor %}
@@ -167,17 +168,18 @@ profile_page: true
       {% assign initial_display = 6 %}
       
       {% for contribution in sorted_contributions limit: initial_display %}
+        {% include resume/contribution-fields.html contribution=contribution %}
         <div class="card-dark contribution-item" data-index="{{ forloop.index0 }}">
           <div class="card-dark__header">
-            <h3 class="card-dark__title">{{ contribution.title }}</h3>
+            <h3 class="card-dark__title">{{ res_title }}</h3>
             <span class="card-dark__type">{{ contribution.type }}</span>
           </div>
-          <p class="card-dark__description">{{ contribution.description }}</p>
+          <p class="card-dark__description">{{ res_desc }}</p>
 
-          {% if contribution.achievements %}
+          {% if res_achievements.size > 0 %}
             <div class="card-dark__list">
               <ul>
-                {% for achievement in contribution.achievements %}
+                {% for achievement in res_achievements %}
                 <li>{{ achievement }}</li>
                 {% endfor %}
               </ul>
@@ -238,8 +240,8 @@ profile_page: true
               </svg>
             </div>
             <div class="deep-stack-cv-education__content">
-              <h3 class="deep-stack-cv-education__degree">{{ education.title }}</h3>
-              <p class="deep-stack-cv-education__school">{{ education.institution }} - {{ education.start_date.start | default: education.start_date | date: "%Y" }}</p>
+              <h3 class="deep-stack-cv-education__degree">{{ education.title_en | default: education.title }}</h3>
+              <p class="deep-stack-cv-education__school">{{ education.institution_en | default: education.institution }} - {{ education.start_date.start | default: education.start_date | date: "%Y" }}</p>
             </div>
           </div>
           {% endfor %}
@@ -266,7 +268,7 @@ profile_page: true
                 </svg>
               </div>
               <div class="deep-stack-cv-awards__content">
-                <h3 class="deep-stack-cv-awards__title-item">{{ award.title }}</h3>
+                <h3 class="deep-stack-cv-awards__title-item">{{ award.title_en | default: award.title }}</h3>
                 <p class="deep-stack-cv-awards__organization">{{ award.organization }} - {{ award.date.start | default: award.date | date: "%Y" }}</p>
               </div>
           </div>

@@ -167,6 +167,13 @@ system font becomes Type 3.
 `_includes/components/cv-download.html` (hero, "Prêt à me partager…" and "Intéressé par mon profil ?" sections, through
 `cv_download=true`).
 
+### Resume pages
+
+`resume.md` and `en/resume.md` render the Notion experiences, skills, contributions, education and awards. The fields
+of each row are chosen per language by the includes in `_includes/resume/`, also used by the "show more" script
+(`_includes/sections/resume-load-more.html`) and the skills grid: French fields on `/resume/`, the Notion `en` columns
+on `/en/resume/` (rules in [`NOTION_SETUP.md`](NOTION_SETUP.md)).
+
 ### Collections
 
 Jekyll collections in `_collections/` serve as fallback data when Notion is not available:

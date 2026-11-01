@@ -290,6 +290,22 @@ l'organiseur par catégorie ne garde pas les propriétés ajoutées. Leur regrou
 workflow de déploiement les régénère à chaque build (`scripts/export-cv.sh`). Ajoutez le secret GitHub
 `NOTION_ITEMS_DB` pour que la CI lise les Items à jour, sinon elle reprend `_data/notion_items.yml`.
 
+### Page CV anglaise (`/en/resume/`)
+
+La page CV anglaise lit les mêmes colonnes `en`, avec un repli différent selon le champ :
+
+| Champ | Source en anglais | Sans valeur anglaise |
+|-------|-------------------|----------------------|
+| Rôle, formation, établissement, distinction | **Role en**, **Title en**, **Institution en** | Texte français |
+| Description d'expérience | **Description en**, puis **Description print en** | Texte français |
+| Réalisations d'une expérience | Items de type `Achievement` avec un **Name en** | Réalisation masquée |
+| Compétences | **Name en** | Nom français |
+| Contributions | **Title en** / **Description en**, puis leurs versions print | Texte français ; les réalisations sont masquées (pas encore de colonne `en`) |
+
+Une réalisation non traduite est masquée plutôt qu'affichée en français : un texte français sur une page déclarée
+en anglais (`hreflang="en"`) brouille l'association des deux versions par Google. Les champs sont choisis dans
+`_includes/resume/` (`experience-fields.html`, `contribution-fields.html`, `skill-name.html`).
+
 ## 🚀 Utilisation
 
 ### Développement local
