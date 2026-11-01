@@ -25,13 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Store all contributions data
     const allContributions = [
       {% for contribution in sorted_contributions %}
+      {% include resume/contribution-fields.html contribution=contribution %}
       {
-        title: "{{ contribution.title | escape }}",
+        title: "{{ res_title | escape }}",
         type: "{{ contribution.type | escape }}",
-        description: "{{ contribution.description | escape }}",
+        description: "{{ res_desc | escape }}",
         achievements: [
-          {% if contribution.achievements %}
-            {% for achievement in contribution.achievements %}
+          {% if res_achievements.size > 0 %}
+            {% for achievement in res_achievements %}
               "{{ achievement | escape }}"{% unless forloop.last %},{% endunless %}
             {% endfor %}
           {% endif %}
@@ -130,17 +131,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const allExperiences = [
       {% for experience in sorted_experiences %}
       {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
+      {% include resume/experience-fields.html exp=experience %}
       {
-        role: {{ experience.role | jsonify }},
+        role: {{ res_role | jsonify }},
         company: {{ experience.company | jsonify }},
         company_url: {{ experience.company_url | jsonify }},
         start_date: {{ experience.start_date.start | jsonify }},
         end_date: {{ experience.end_date.start | jsonify }},
         current: {{ experience.current | default: false }},
-        description: {{ experience.description | jsonify }},
+        description: {{ res_desc | jsonify }},
         tags: asArray({{ experience.tags | jsonify }}),
-        skills: asArray({{ experience.skills | jsonify }}),
-        achievements: asArray({{ experience.achievements | jsonify }}),
+        skills: asArray({{ res_skills | jsonify }}),
+        achievements: asArray({{ res_achievements | jsonify }}),
         logo_url: {{ experience.logo_url | jsonify }},
         url: {{ experience_page.url | jsonify }}
       }{% unless forloop.last %},{% endunless %}
