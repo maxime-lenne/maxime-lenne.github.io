@@ -1,8 +1,9 @@
 {% comment %}
-  Sets res_role, res_desc, res_achievements and res_skills for include.exp, in the page language.
+  Sets res_role, res_desc, res_achievements, res_skills and res_tags for include.exp, in the page language.
   English reads the "en" columns of Notion: role, description (the print one as fallback), achievements
   from the Items database and skill names. An achievement without English name is left out rather than
-  shown in French; a description or skill without English version falls back to French.
+  shown in French; a description or skill without English version falls back to French. Tags go through
+  resume_page.tags in _data/translations.yml.
   Tests use `.size > 0`: without ActiveSupport, Liquid treats `nil != blank` as true.
 {% endcomment %}
 {% assign res_lang = page.lang | default: site.default_lang | default: 'fr' %}
@@ -38,9 +39,16 @@
       {% assign res_skills = res_skills | push: skill_name %}
     {% endif %}
   {% endfor %}
+
+  {% assign res_tags = '' | split: '' %}
+  {% for tag in exp.tags %}
+    {% assign res_tag = site.data.translations.en.resume_page.tags[tag] | default: tag %}
+    {% assign res_tags = res_tags | push: res_tag %}
+  {% endfor %}
 {% else %}
   {% assign res_role = exp.role %}
   {% assign res_desc = exp.description %}
   {% assign res_achievements = exp.achievements %}
   {% assign res_skills = exp.skills %}
+  {% assign res_tags = exp.tags %}
 {% endif %}
