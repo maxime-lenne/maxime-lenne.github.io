@@ -84,8 +84,8 @@
                     {{ t.footer.made_with }}
                 </p>
                 <div class="deep-stack-footer__legal">
-                    <a href="/legal/privacy">{{ t.footer.privacy }}</a>
-                    <a href="/legal/terms">{{ t.footer.terms }}</a>
+                    <a href="{{ t.footer.privacy_url | relative_url }}">{{ t.footer.privacy }}</a>
+                    <a href="{{ t.footer.legal_url | relative_url }}">{{ t.footer.legal }}</a>
                 </div>
             </div>
         </div>
