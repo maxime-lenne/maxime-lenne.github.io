@@ -175,6 +175,10 @@ of each row are chosen per language by the includes in `_includes/resume/`, also
 (`_includes/sections/resume-load-more.html`) and the skills grid: French fields on `/resume/`, the Notion `en` columns
 on `/en/resume/` (rules in [`NOTION_SETUP.md`](NOTION_SETUP.md)).
 
+Missions nested under an experience (Notion « Parent item », `parent_id` on the experience pages) are left out of
+the resume grid and listed in their parent card and page by `_includes/components/experience-children.html`
+(styles in `_sass/components/_experience-children.scss`).
+
 ### Collections
 
 Jekyll collections in `_collections/` serve as fallback data when Notion is not available:

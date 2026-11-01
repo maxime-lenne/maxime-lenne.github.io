@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
       {% for experience in sorted_experiences %}
       {% assign experience_page = site[resume_collection] | where: "notion_id", experience.id | first %}
       {% include resume/experience-fields.html exp=experience %}
+      {% capture experience_children %}{% include components/experience-children.html parent_id=experience.id %}{% endcapture %}
       {
         role: {{ res_role | jsonify }},
         company: {{ experience.company | jsonify }},
@@ -145,7 +146,9 @@ document.addEventListener('DOMContentLoaded', function() {
         skills: asArray({{ res_skills | jsonify }}),
         achievements: asArray({{ res_achievements | jsonify }}),
         logo_url: {{ experience.logo_url | jsonify }},
-        url: {{ experience_page.url | jsonify }}
+        url: {{ experience_page.url | jsonify }},
+        // Missions list, the same markup as the card include (built here, not from user input)
+        children_html: {{ experience_children | strip | jsonify }}
       }{% unless forloop.last %},{% endunless %}
       {% endfor %}
     ];
@@ -272,6 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
               </div>
             </div>
             <p class="card-experience__description">${escapeHtml(experience.description)}</p>
+            ${experience.children_html}
             ${tagsHtml}
             ${achievementsHtml}
             ${skillsHtml}

@@ -33,6 +33,7 @@ missions:
 - Coached students on the practical exercises
 - Ran live coding sessions
 - Coached students on their final projects
+parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: en
 alternate_lang: fr
 alternate_url: "/experiences/04-lewagon/"

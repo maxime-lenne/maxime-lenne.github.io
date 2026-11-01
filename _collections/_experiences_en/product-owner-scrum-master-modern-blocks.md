@@ -37,6 +37,7 @@ missions:
   from personas (users, photographers), product backlog, trade-offs'
 - Set up ZenHub with GitHub, with tracking reports and charts
 - Sprint planning, daily stand-up, sprint review and client reporting
+parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: en
 alternate_lang: fr
 alternate_url: "/experiences/product-owner-scrum-master-modern-blocks/"

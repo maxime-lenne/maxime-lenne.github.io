@@ -34,6 +34,7 @@ missions:
   intégration continue (Hudson, Sonar, JUnit, DBUnit, PMD, Checkstyle, Cobertura)'
 - Réalisation d'évolutions et correction d'anomalies (Java / JEE et Cobol), livraison
   des applications
+parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: fr
 alternate_lang: en
 alternate_url: "/en/experiences/responsable-d-applications-java-jee-cofidis/"

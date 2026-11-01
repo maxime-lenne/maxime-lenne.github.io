@@ -60,6 +60,17 @@ layout: default
             {{ page.type }}
           </li>
           {% endif %}
+          {% if page.parent_id %}
+          {% assign parent_page = site[page.collection] | where: "notion_id", page.parent_id | first %}
+          {% if parent_page %}
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/>
+            </svg>
+            {{ t.part_of }}&nbsp;<a href="{{ parent_page.url | relative_url }}" class="experience-page__company-link">{{ parent_page.role }} · {{ parent_page.company }}</a>
+          </li>
+          {% endif %}
+          {% endif %}
           {% if page.company_url %}
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -122,6 +133,8 @@ layout: default
       </section>
       {% endif %}
 
+      {% include components/experience-children.html parent_id=page.notion_id modifier="page" %}
+
       {% if page.missions.size > 0 %}
       <section class="experience-page__block" aria-labelledby="experience-missions">
         <h2 class="experience-page__block-title" id="experience-missions">{{ t.missions }}</h2>
@@ -159,7 +172,8 @@ layout: default
 
   {% comment %} Previous (older) and next (more recent) positions, by start date {% endcomment %}
   {% comment %} Same language only: the page collection, experiences or experiences_en {% endcomment %}
-  {% assign experiences_by_date = site[page.collection] | sort: "start_date" | reverse %}
+  {% comment %} Missions (parent_id set) are listed on their parent page, not in the pager {% endcomment %}
+  {% assign experiences_by_date = site[page.collection] | where_exp: "e", "e.parent_id == nil" | sort: "start_date" | reverse %}
   {% for experience in experiences_by_date %}
     {% if experience.url == page.url %}
       {% if forloop.first == false %}{% assign newer_index = forloop.index0 | minus: 1 %}{% assign newer_experience = experiences_by_date[newer_index] %}{% endif %}
