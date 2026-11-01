@@ -13,6 +13,9 @@
 # _data/translations.yml. A field without English version keeps the French text. Both copies point to
 # each other through alternate_url, for hreflang and the language switcher.
 #
+# A mission (Notion "Parent item" set, e.g. a client of a freelance period) gets the parent Notion id as
+# parent_id: the resume and the parent page list it, and the pager skips it.
+#
 # Usage: ruby scripts/sync_experiences.rb   (or: make sync-experiences, which fetches Notion first)
 
 require 'yaml'
@@ -132,6 +135,8 @@ def synced_front_matter(front_matter, experience, url_slug, english_values: nil)
   # Notion is the source of truth, an empty value there (no end date for a current job) is kept empty
   NOTION_KEYS.each { |key| synced[key] = notion_value(experience, key) }
   english_values&.each { |key, value| synced[key] = value }
+  parent_id = Array(experience['parent_ids']).first
+  parent_id ? synced['parent_id'] = parent_id : front_matter.delete('parent_id')
   # Each copy points to the other one
   slug = url_slug
   synced['lang'] = english_values ? 'en' : 'fr'

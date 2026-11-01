@@ -1,0 +1,75 @@
+// Missions of an experience (_includes/components/experience-children.html) - BEM
+// Compact list on the resume card, larger on the parent experience page.
+
+.experience-children {
+  text-align: left;
+
+  &__title {
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text-primary);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0 var(--space-md);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--color-primary);
+  }
+
+  &__link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-text-primary);
+
+      .experience-children__role {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+      }
+    }
+  }
+
+  &__role {
+    color: var(--color-text-primary);
+    font-weight: 600;
+  }
+
+  &__company::before {
+    content: " · ";
+  }
+
+  &__years {
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  // Experience page: one block among roles, achievements and responsibilities
+  &--page {
+    .experience-children__list {
+      gap: var(--space-md);
+    }
+
+    .experience-children__item {
+      font-size: var(--text-lg);
+    }
+  }
+}

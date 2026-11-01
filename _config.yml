@@ -203,6 +203,8 @@ notion:
         - { name: Missions, type: formula_array }
         # CV PDF (/cv/print/): Print = detailed block, otherwise one line from Description print
         - { name: Items, type: relation, key: item_ids }
+        # Missions of a freelance or IT services employer: shown inside their parent experience
+        - { name: Parent item, type: relation, key: parent_ids }
         - { name: Print, type: checkbox }
         - { name: Role en, type: rich_text }
         - { name: Description en, type: rich_text }

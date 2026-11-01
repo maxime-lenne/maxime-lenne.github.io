@@ -39,10 +39,31 @@
         <span class="cv-job__date">{% if ats %}{{ cv_meta }} · {% endif %}{{ cv_period }}</span>
       </div>
       {% unless ats %}<p class="cv-job__meta">{{ cv_meta }}</p>{% endunless %}
+      {% comment %} A Description print starts lowercase, written to follow a " · " in the early career lines {% endcomment %}
+      {% assign cv_desc_first = cv_desc | slice: 0 | upcase %}
+      {% assign cv_desc = cv_desc | slice: 1, 10000 | prepend: cv_desc_first %}
       {% if cv_desc.size > 0 %}<p class="cv-job__desc">{{ cv_desc }}</p>{% endif %}
       {% if cv_items.size > 0 %}
       <ul class="cv-job__items">{% for item in cv_items %}<li>{{ item }}</li>{% endfor %}</ul>
       {% endif %}
+      {% comment %} Missions: detailed when printed, one line from Description print otherwise {% endcomment %}
+      {% assign cv_kids = cv_sorted | where_exp: "e", "e.parent_ids contains exp.id" %}
+      {% for kid in cv_kids %}
+        {% unless kid.print or kid.description_print.size > 0 %}{% continue %}{% endunless %}
+        {% include cv-print/experience-fields.html exp=kid %}
+        <section class="cv-mission">
+          <div class="cv-mission__head">
+            <h4 class="cv-mission__role">{{ cv_role }} · <span class="cv-job__company">{{ kid.company }}</span></h4>
+            <span class="cv-mission__date">{{ cv_period }}</span>
+          </div>
+          {% assign cv_desc_first = cv_desc | slice: 0 | upcase %}
+          {% assign cv_desc = cv_desc | slice: 1, 10000 | prepend: cv_desc_first %}
+          {% if cv_desc.size > 0 %}<p class="cv-mission__desc">{{ cv_desc }}</p>{% endif %}
+          {% if kid.print and cv_items.size > 0 %}
+          <ul class="cv-job__items">{% for item in cv_items %}<li>{{ item }}</li>{% endfor %}</ul>
+          {% endif %}
+        </section>
+      {% endfor %}
     </article>
   {% endfor %}
 {% endcapture %}
@@ -51,6 +72,12 @@
   {% for exp in cv_early %}
     {% include cv-print/experience-fields.html exp=exp %}
     <li class="cv-lines__item"><span class="cv-lines__period">{{ cv_period }}</span><span class="cv-lines__text"><strong>{{ cv_role }} · {{ exp.company }}</strong> · {{ cv_desc }}</span></li>
+    {% assign cv_kids = cv_sorted | where_exp: "e", "e.parent_ids contains exp.id" %}
+    {% for kid in cv_kids %}
+      {% unless kid.description_print.size > 0 %}{% continue %}{% endunless %}
+      {% include cv-print/experience-fields.html exp=kid %}
+      <li class="cv-lines__item cv-lines__item--mission"><span class="cv-lines__period">{{ cv_period }}</span><span class="cv-lines__text"><strong>{{ cv_role }} · {{ kid.company }}</strong> · {{ cv_desc }}</span></li>
+    {% endfor %}
   {% endfor %}
 {% endcapture %}
 
