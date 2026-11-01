@@ -35,6 +35,7 @@ missions:
 - Split the work into consistent batches and planned them
 - Managed the product backlog and wrote user stories
 - Interviewed business teams and potential customers
+parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: en
 alternate_lang: fr
 alternate_url: "/experiences/05-norauto/"

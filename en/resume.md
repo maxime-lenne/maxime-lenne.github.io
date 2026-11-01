@@ -102,7 +102,8 @@ profile_page: true
     </div>
     
     <div class="section__grid section__grid--2-col" id="experiences-grid">
-      {% assign sorted_experiences = site.data.notion_experiences %}
+      {% comment %} Missions (Notion "Parent item") are listed inside their parent card {% endcomment %}
+      {% assign sorted_experiences = site.data.notion_experiences | where_exp: "e", "e.parent_ids == empty or e.parent_ids == nil" %}
       {% assign total_experiences = sorted_experiences.size %}
       {% assign initial_display = 4 %}
       
@@ -121,6 +122,7 @@ profile_page: true
              tags=res_tags
              achievements=res_achievements
              logo_url=experience.logo_url
+             children_of=experience.id
              url=experience_page.url %}
       {% endfor %}
     </div>

@@ -273,13 +273,16 @@ Sans valeur anglaise, le PDF anglais reprend le texte français.
 | Base | Propriétés |
 |------|------------|
 | **Items** | **Print** (case : la réalisation ou mission figure sous son expérience), **Name en** |
-| **Expériences** | **Print** (case : bloc détaillé), **Role en**, **Description en**, **About en** (pages expérience anglaises), **Description print**, **Description print en** |
+| **Expériences** | **Print** (case : bloc détaillé), **Parent item** (mission imbriquée), **Role en**, **Description en**, **About en** (pages expérience anglaises), **Description print**, **Description print en** |
 | **Skills** | **Print** (case), **Name en** (si le nom change en anglais) |
 | **Educations** | **Print**, **Title en**, **Institution en** |
 | **Awards** | **Print**, **Title en** |
 | **Contributions** | **Print**, **Title en**, **Description en**, **Title print**, **Title print en**, **Description print**, **Description print en**, **Period print** (année ou libellé à gauche) |
 
 Une expérience sans **Print** mais avec une **Description print** passe en une ligne dans « Débuts de carrière ».
+Une mission rattachée à une expérience parente (**Parent item**, voir plus bas) s'affiche dans le bloc de son
+parent : détaillée si elle a **Print**, en une ligne si elle n'a qu'une **Description print**. Le parent devient
+un bloc détaillé dès que lui ou une de ses missions a **Print**.
 Les réalisations s'affichent dans l'ordre de la relation **Items** de l'expérience. Le site lit la base Items
 directement (`NOTION_ITEMS_DB`, `_data/notion_items.yml`) : les formules Notion ne peuvent pas filtrer sur la case
 Print à travers l'API. Les compétences sont lues une deuxième fois à plat (`_data/notion_skills_print.yml`), car
@@ -405,6 +408,20 @@ make sync-experiences   # récupère Notion puis lance scripts/sync_experiences.
 Le script remplace les champs par ceux de Notion et garde `slug`, `layout` et `sub-roles`, donc les
 URL ne changent pas. Il crée aussi un fichier pour chaque nouvelle expérience Notion, avec un slug tiré
 du titre (sans accents), et le CV relie chaque carte à sa page grâce au `notion_id`.
+
+### Missions imbriquées (sous-éléments)
+
+Pour regrouper des missions sous une même période (clients d'une période freelance ou d'une ESN), activez les
+sous-éléments de la base Expériences et rattachez chaque mission à son parent (**Parent item**, lu dans
+`parent_ids`). Chaque mission garde sa page, ses dates et ses Items. Le parent la liste :
+
+- sur le CV en ligne : la page CV n'affiche que les expériences sans parent, et la carte du parent liste ses
+  missions (« Missions clients ») avec un lien vers chacune ;
+- sur la page du parent : un bloc « Missions clients » ; la page de la mission affiche « Mission de » avec un lien
+  vers le parent, et la navigation précédent / suivant ne passe que par les expériences sans parent ;
+- sur le CV PDF : dans le bloc du parent (voir plus haut).
+
+`make sync-experiences` écrit le `parent_id` dans le front matter des deux copies de chaque page de mission.
 
 Le `title` de la page n'est pas le titre Notion : le script le construit pour le `<title>` et les
 moteurs, à partir du rôle, de l'entreprise et des années (« CTO agence Lille chez Ippon (2024) »,

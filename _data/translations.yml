@@ -231,6 +231,8 @@ fr:
     pager_label: "Autres expériences"
     previous_role: "Poste précédent"
     next_role: "Poste suivant"
+    assignments: "Missions clients"
+    part_of: "Mission de"
 
   legal:
     updated: "Dernière mise à jour :"
@@ -588,6 +590,8 @@ en:
     pager_label: "Other experiences"
     previous_role: "Previous position"
     next_role: "Next position"
+    assignments: "Client assignments"
+    part_of: "Assignment of"
 
   legal:
     updated: "Last updated:"
