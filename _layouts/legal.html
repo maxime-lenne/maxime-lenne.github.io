@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% comment %} Legal pages (privacy, legal notice): blog post hero and reading column {% endcomment %}
+{% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign t = site.data.translations[lang].legal %}
+
+<article class="post-page">
+  <header class="section section--gradient-light post-page__hero">
+    <div class="section__container section__container--dark-background post-page__panel">
+      <h1 class="post-page__title">{{ page.heading | default: page.title }}</h1>
+      {% if page.description %}
+      <p class="post-page__lead">{{ page.description }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="section section--light post-page__body">
+    <div class="section__container post-page__container">
+      <div class="post-content">
+        {{ content }}
+        <p><em>{{ t.updated }} {{ page.updated }}</em></p>
+      </div>
+    </div>
+  </div>
+</article>
