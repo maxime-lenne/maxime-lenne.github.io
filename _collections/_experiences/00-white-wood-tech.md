@@ -14,9 +14,9 @@ type: Freelance
 order: 1
 logo_url: "/assets/images/companies/white-wood-tech.png"
 tags:
-- Product
 - Startup
 - ESN
+- Product
 skills:
 - Agentic coding
 - MCP
@@ -25,16 +25,19 @@ skills:
 - Prévisionnel financiers
 - Conception Agent / RAG
 - suivi de trésorerie
-description: Fondateur de White Wood Tech est un studio Tech & Produit AI-native,
-  épaulée par une team d'agents IA, qui aide les dirigeants à concevoir, construire
-  et piloter leurs produits numériques.
+description: Fondateur de White Wood Tech, un studio Tech & Produit AI-native, épaulé
+  par une team d'agents IA, qui aide les dirigeants à concevoir, construire et piloter
+  leurs produits numériques.
 about: White Wood Tech est un studio Tech & Produit AI-native, épaulée par une team
   d'agents IA, qui aide les dirigeants à concevoir, construire et piloter leurs produits
   numériques.
 achievements:
-- Audit 360 d'une startup de l'industrie 4.0
-- Formateur de développeur Dev IA au Simplon
-- Création de +10 Agents IA, RAG (Code et no-code)
-- CTO as a service en Part Time d'une startup de l'industrie 4.0
-missions: []
+- Création de +10 agents IA et RAG (code et no-code)
+- 'Formation IA : +30 personnes et 4 entreprises'
+missions:
+- Audit IT 360 et CTO à temps partagé d'une startup de l'industrie 4.0
+- Formateur de développeurs IA chez Simplon
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/cto-white-wood-tech/"
 ---

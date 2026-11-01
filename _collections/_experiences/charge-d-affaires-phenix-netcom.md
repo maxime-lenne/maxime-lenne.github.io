@@ -27,4 +27,7 @@ missions:
 - Détection et gestion des projets d'installation de PABX et de caméras de surveillance
   IP
 - Supervision des installations en tant que chargé d'affaires
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/charge-d-affaires-phenix-netcom/"
 ---

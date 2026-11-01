@@ -7,7 +7,7 @@ company: Natixis (Atos Origin Intégration)
 company_url: https://www.natixis.com/
 role: Expert front-end Java / JEE
 start_date: '2009-01-01'
-end_date: '2009-12-31'
+end_date: '2009-05-31'
 current: false
 location: Lille, France
 type: CDI / Full-time
@@ -18,7 +18,7 @@ tags:
 skills:
 - Java
 - JavaScript
-- CSS3, SAAS, PostCSS
+- CSS3
 - HTML5
 description: 'Projet Line Bourse : site de bourse en ligne pour les trois entités
   du groupe, Natixis, Banque Populaire et Caisse d''Épargne.'
@@ -34,4 +34,7 @@ missions:
 - Encadrement de deux développeurs supplémentaires pour corriger les anomalies front
 - Correction des anomalies de recette interne et client (Java, JSP, Tiles, JavaScript,
   HTML / CSS)
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/expert-front-end-java-jee-natixis-atos-origin-integration/"
 ---

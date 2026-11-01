@@ -76,6 +76,10 @@ collections:
   experiences:
     output: true  # ✅ Active les pages individuelles
     permalink: /experiences/:slug/
+  # English copies of the experience pages, written by scripts/sync_experiences.rb
+  experiences_en:
+    output: true
+    permalink: /en/experiences/:slug/
   skills:
     output: false  # Collection de données seulement
   educations:
@@ -134,6 +138,15 @@ defaults:
         type: WebPage
   - scope:
       path: ""
+      type: "experiences_en"
+    values:
+      layout: "experience"
+      lang: en
+      locale: en_GB
+      seo:
+        type: WebPage
+  - scope:
+      path: ""
       type: "projects"
     values:
       layout: "project"
@@ -183,6 +196,7 @@ notion:
         - { name: Logo URL, type: url, key: logo_url }
         - { name: Description, type: rich_text }
         - { name: About, type: rich_text }
+        - { name: About en, type: rich_text }
         - { name: Tags, type: multi_select }
         - { name: Skills, type: rollup }
         - { name: Achievements, type: formula_array }

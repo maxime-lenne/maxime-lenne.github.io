@@ -37,4 +37,7 @@ missions:
 - Déploiement de versions de guichets automatiques et d'écrans publicitaires
 - Rédaction des plans de tests pour l'homologation des versions logicielles des guichets
   automatiques
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/conduite-de-changement-et-assistance-moa-caisse-d-epargne-sylis/"
 ---

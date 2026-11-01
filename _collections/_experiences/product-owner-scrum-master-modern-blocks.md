@@ -38,4 +38,7 @@ missions:
   des besoins des personas (utilisateurs, photographes), Product Backlog, arbitrages'
 - Mise en place de ZenHub avec GitHub, de rapports et de graphiques de suivi
 - Planification des sprints, mêlée quotidienne, revue de sprint et reporting au client
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/product-owner-scrum-master-modern-blocks/"
 ---

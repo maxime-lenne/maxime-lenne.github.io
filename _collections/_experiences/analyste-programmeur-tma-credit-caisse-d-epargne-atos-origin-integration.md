@@ -32,4 +32,7 @@ missions:
 - Suivi des indicateurs et recadrage de l'activité de l'équipe, participation aux
   points mensuels de la TMA et aux réunions des référents fonctionnels
 - Suivi de production des traitements batch et mise en production de correctifs
+lang: fr
+alternate_lang: en
+alternate_url: "/en/experiences/analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration/"
 ---

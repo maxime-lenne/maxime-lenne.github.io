@@ -26,11 +26,13 @@ sitemap: false
 {% endfor %}
 ## Experience
 
-Each position has a detailed page (in French): missions, achievements, skills.
+Each position has a detailed page, in English and French: missions, achievements, skills.
 
 {% for experience in site.data.notion_experiences -%}
-{%- assign experience_page = site.experiences | where: "notion_id", experience.id | first -%}
-- {% if experience_page %}[{{ experience.title }}]({{ experience_page.url | absolute_url }}){% else %}{{ experience.title }}{% endif %}{% unless experience.title contains experience.company %}, {{ experience.company }}{% endunless %}{% if experience.current %} (current){% endif %}{% if experience.description %}: {{ experience.description | strip_newlines | truncate: 220 }}{% endif %}
+{%- assign experience_page = site.experiences_en | where: "notion_id", experience.id | first -%}
+{%- assign experience_role = experience.role_en | default: experience.role -%}
+{%- assign experience_text = experience.description_en | default: experience.description -%}
+- {% if experience_page %}[{{ experience_role }}]({{ experience_page.url | absolute_url }}){% else %}{{ experience_role }}{% endif %}, {{ experience.company }}{% if experience.current %} (current){% endif %}{% if experience_text %}: {{ experience_text | strip_newlines | truncate: 220 }}{% endif %}
 {% endfor %}
 ## Skills
 

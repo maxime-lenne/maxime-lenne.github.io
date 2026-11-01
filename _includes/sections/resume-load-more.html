@@ -2,6 +2,7 @@
 {% comment %} Uses sorted_contributions and sorted_experiences assigned by the resume page {% endcomment %}
 {% assign resume_lang = page.lang | default: site.default_lang | default: 'fr' %}
 {% assign resume_t = site.data.translations[resume_lang].resume_page %}
+{% if resume_lang == 'en' %}{% assign resume_collection = 'experiences_en' %}{% else %}{% assign resume_collection = 'experiences' %}{% endif %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const labels = {
@@ -130,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Store all experiences data
     const allExperiences = [
       {% for experience in sorted_experiences %}
-      {% assign experience_page = site.experiences | where: "notion_id", experience.id | first %}
+      {% assign experience_page = site[resume_collection] | where: "notion_id", experience.id | first %}
       {% include resume/experience-fields.html exp=experience %}
       {
         role: {{ res_role | jsonify }},
