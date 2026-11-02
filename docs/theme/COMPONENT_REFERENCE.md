@@ -143,8 +143,12 @@ Call-to-action buttons with primary and secondary styles.
   icon="arrow"              # arrow | download | none
   extern=true               # Open in new tab
   class="custom-class"      # Additional CSS classes
+  aria_label="..."          # Accessible name, when the text alone is not enough
 %}
 ```
+
+The experience page pager uses it with `experience-page__pager-link--older` / `--newer`, which add the left and
+right arrows (`_sass/pages/_experience.scss`).
 
 ---
 

@@ -193,17 +193,16 @@ layout: default
     {% endif %}
   {% endfor %}
   <nav class="section__container experience-page__pager" aria-label="{{ t.pager_label }}">
+    {% comment %} Buttons, the arrow comes from the --older / --newer class {% endcomment %}
     {% if older_experience %}
-    <a href="{{ older_experience.url | relative_url }}" class="experience-page__pager-link experience-page__pager-link--older">
-      <span class="experience-page__pager-label">{{ t.previous_role }}</span>
-      <span class="experience-page__pager-title">{{ older_experience.role }} · {{ older_experience.company }}</span>
-    </a>
+    {% capture pager_text %}{{ older_experience.role }} · {{ older_experience.company }}{% endcapture %}
+    {% capture pager_aria %}{{ t.previous_role }} : {{ pager_text }}{% endcapture %}
+    {% include components/cta-button.html style="secondary" url=older_experience.url text=pager_text aria_label=pager_aria class="experience-page__pager-link experience-page__pager-link--older" %}
     {% endif %}
     {% if newer_experience %}
-    <a href="{{ newer_experience.url | relative_url }}" class="experience-page__pager-link experience-page__pager-link--newer">
-      <span class="experience-page__pager-label">{{ t.next_role }}</span>
-      <span class="experience-page__pager-title">{{ newer_experience.role }} · {{ newer_experience.company }}</span>
-    </a>
+    {% capture pager_text %}{{ newer_experience.role }} · {{ newer_experience.company }}{% endcapture %}
+    {% capture pager_aria %}{{ t.next_role }} : {{ pager_text }}{% endcapture %}
+    {% include components/cta-button.html style="secondary" url=newer_experience.url text=pager_text aria_label=pager_aria class="experience-page__pager-link experience-page__pager-link--newer" %}
     {% endif %}
   </nav>
 </section>
