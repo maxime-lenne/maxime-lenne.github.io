@@ -63,6 +63,8 @@
     height: 100%;
     object-fit: contain;
     border-radius: 4px;
+    // White behind transparent logos, as on the cards
+    background: #fff;
     filter: grayscale(100%);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
