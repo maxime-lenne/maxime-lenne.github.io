@@ -24,11 +24,22 @@
     {% assign child_start = child.start_date | date: "%Y" %}
     {% if child.current %}{% assign child_end = children_t.present %}{% else %}{% assign child_end = child.end_date | date: "%Y" %}{% endif %}
     <li class="experience-children__item">
-      <a href="{{ child.url | relative_url }}" class="experience-children__link">
-        <span class="experience-children__role">{{ child.role }}</span>
-        <span class="experience-children__company">{{ child.company }}</span>
-      </a>
-      <span class="experience-children__years">{{ child_start }}{% if child_end != child_start %} – {{ child_end }}{% endif %}</span>
+      {% if child.logo_url %}
+      <span class="experience-children__logo experience-children__logo--img" aria-hidden="true">
+        <img src="{{ child.logo_url | relative_url }}" alt="" class="experience-children__logo-img" loading="lazy">
+      </span>
+      {% else %}
+      <span class="experience-children__logo" aria-hidden="true">
+        <span class="experience-children__logo-placeholder">{{ child.company | slice: 0, 2 | upcase }}</span>
+      </span>
+      {% endif %}
+      <div class="experience-children__body">
+        <a href="{{ child.url | relative_url }}" class="experience-children__link">
+          <span class="experience-children__role">{{ child.role }}</span>
+          <span class="experience-children__company">{{ child.company }}</span>
+        </a>
+        <span class="experience-children__years">{{ child_start }}{% if child_end != child_start %} – {{ child_end }}{% endif %}</span>
+      </div>
     </li>
     {% endfor %}
   </ul>

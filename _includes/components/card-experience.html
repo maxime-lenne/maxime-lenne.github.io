@@ -34,13 +34,6 @@
     {% if include.children_of %}{% include components/experience-children.html parent_id=include.children_of %}{% endif %}
     
     
-    {% if include.tags %}
-      <div class="card-experience__tags">
-        {% for tag in include.tags limit: 3 %}
-          {% include components/badge.html text=tag %}
-        {% endfor %}
-      </div>
-    {% endif %}
     
     {% if include.achievements %}
     <div class="card-experience__achievements">
