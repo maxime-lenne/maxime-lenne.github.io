@@ -23,11 +23,10 @@
         <span class="card-experience__company">{% if include.company_url %}<a href="{{ include.company_url }}" class="card-experience__company-link">{{ include.company }}</a>{% else %}{{ include.company }}{% endif %}</span>
       </div>
       <div class="card-experience__date">
-        {% assign card_start = include.start_date | date: "%Y" %}{% assign card_end = include.end_date | date: "%Y" %}
+        {% comment %} A current position ends at « Présent » / « Present », not at a year {% endcomment %}
+        {% assign card_start = include.start_date | date: "%Y" %}
+        {% if include.current %}{% assign card_end = card_t.experience_current %}{% else %}{% assign card_end = include.end_date | date: "%Y" %}{% endif %}
         <span class="card-experience__duration">{{ card_start }}{% if card_end != card_start %} - {{ card_end }}{% endif %}</span>
-        {% if include.current %}
-          <span class="card-experience__current">{{ card_t.experience_current }}</span>
-        {% endif %}
       </div>
     </div>
 
