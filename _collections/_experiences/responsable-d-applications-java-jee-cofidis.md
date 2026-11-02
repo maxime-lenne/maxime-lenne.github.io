@@ -6,8 +6,8 @@ layout: experience
 company: Cofidis
 company_url: https://www.cofidis.fr/
 role: Responsable d’applications Java / JEE
-start_date: '2010-05-01'
-end_date: '2012-12-31'
+start_date: '2010-11-01'
+end_date: '2012-02-29'
 current: false
 location: Lille, France
 type: Freelance

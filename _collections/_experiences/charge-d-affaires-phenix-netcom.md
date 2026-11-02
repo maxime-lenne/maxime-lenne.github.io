@@ -11,7 +11,7 @@ end_date: '2004-12-31'
 current: false
 location: Lille, France
 type: CDI / Full-time
-order: 17
+order: 9
 logo_url:
 tags:
 - PME

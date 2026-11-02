@@ -1,17 +1,17 @@
 ---
 notion_id: a4d79834-dbfb-467c-ba4e-86b55acde904
-title: Full-stack developer freelance (2010-2019)
+title: Full-stack developer at Devoriginal (2010-2019)
 slug: developpeur-full-stack-freelance
 layout: experience
-company: Freelance
+company: Devoriginal
 company_url:
 role: Full-stack developer
-start_date: '2010-04-30'
-end_date: '2019-01-01'
+start_date: '2010-01-01'
+end_date: '2019-05-31'
 current: false
 location: Lille, France
 type: Freelance
-order: 10
+order: 6
 logo_url:
 tags: []
 skills:

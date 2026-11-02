@@ -1,13 +1,13 @@
 ---
 notion_id: 305acf95-a4c7-41ad-ad4d-86d11298b7dc
-title: Java / JEE front-end expert at Natixis (Atos Origin Intégration) (2009)
+title: Java / JEE front-end expert at Natixis (2009)
 slug: expert-front-end-java-jee-natixis-atos-origin-integration
 layout: experience
-company: Natixis (Atos Origin Intégration)
+company: Natixis
 company_url: https://www.natixis.com/
 role: Java / JEE front-end expert
-start_date: '2009-01-01'
-end_date: '2009-05-31'
+start_date: '2009-09-01'
+end_date: '2009-11-30'
 current: false
 location: Lille, France
 type: Full-time
@@ -34,6 +34,7 @@ missions:
 - Supervised two extra developers to fix front-end bugs
 - Fixed bugs from internal and client acceptance testing (Java, JSP, Tiles, JavaScript,
   HTML / CSS)
+parent_id: 40c93271-2dfb-8157-ab62-f1baceb6a7ba
 lang: en
 alternate_lang: fr
 alternate_url: "/experiences/expert-front-end-java-jee-natixis-atos-origin-integration/"

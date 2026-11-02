@@ -1,12 +1,14 @@
 ---
 layout: default
-title: "CV : CTO, tech advisor et product builder"
+title: "CV : CTO, Head of Engineering, Engineering Manager"
 description: "Parcours de Maxime Lenne : CTO chez Ippon et theTribe, CPTO, teacher au Wagon. Expériences, compétences, formations et distinctions."
 lang: fr
 alternate_lang: en
 alternate_url: /en/resume/
 profile_page: true
 ---
+
+{% assign t = site.data.translations.fr %}
 
 <!-- CTA Section -->
 <section class="section section--gradient-light section--secondary">
@@ -23,7 +25,7 @@ profile_page: true
       
       {% include components/title-hero.html 
         main_text="Maxime Lenne"
-        highlight_text="CTO, Tech advisor, sparring partner" %}
+        highlight_text=t.cv_print.headline %}
         
       <div class="deep-stack-cv-hero__contact">
         <div class="deep-stack-cv-hero__contact-item">

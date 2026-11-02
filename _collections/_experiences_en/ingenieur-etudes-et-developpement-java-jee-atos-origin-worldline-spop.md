@@ -6,8 +6,8 @@ layout: experience
 company: Atos Origin Worldline
 company_url: https://worldline.com/
 role: Java / JEE software engineer
-start_date: '2009-01-01'
-end_date: '2010-01-01'
+start_date: '2009-10-01'
+end_date: '2010-02-28'
 current: false
 location: Lille, France
 type: Full-time
@@ -34,6 +34,7 @@ missions:
 - Managed offshore development (Atos Origin India), code review and acceptance testing
 - 'Documentation and communication in English: code reviews, release notes, user and
   installation guides'
+parent_id: 40c93271-2dfb-8157-ab62-f1baceb6a7ba
 lang: en
 alternate_lang: fr
 alternate_url: "/experiences/ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-spop/"
