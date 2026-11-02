@@ -201,7 +201,7 @@ notion:
         - { name: Skills, type: rollup }
         - { name: Achievements, type: formula_array }
         - { name: Missions, type: formula_array }
-        # CV PDF (/cv/print/): Print = detailed block, otherwise one line from Description print
+        # CV PDF (/cv/print/): only the rows with Print checked
         - { name: Items, type: relation, key: item_ids }
         # Missions of a freelance or IT services employer: shown inside their parent experience
         - { name: Parent item, type: relation, key: parent_ids }
