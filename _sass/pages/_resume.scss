@@ -254,14 +254,9 @@
     list-style: none;
   }
 
-  // Tags keep the brand gradient, darkened so white text passes WCAG AA
-  &__item {
-    padding: 8px 16px;
-    background: linear-gradient(135deg, #1e40af 0%, #15803d 100%);
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 20px;
+  // Skills use the services badge, laid out by the list gap
+  &__list .deep-stack-services__badge {
+    margin: 0;
   }
 
   &__more {

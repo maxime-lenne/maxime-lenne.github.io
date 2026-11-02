@@ -1,0 +1,5 @@
+{% comment %}
+  One skill as a list item with the services badge look (components/badge.html style="services").
+  Params: text, icon (optional), title (optional tooltip). Use it inside <ul class="deep-stack-cv-skills__list">.
+{% endcomment %}
+<li class="deep-stack-services__badge"{% if include.title %} title="{{ include.title | escape }}"{% endif %}><span class="deep-stack-services__badge-icon">{{ include.icon }}</span><span class="deep-stack-services__badge-text">{{ include.text }}</span></li>

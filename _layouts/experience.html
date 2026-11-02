@@ -6,7 +6,14 @@ layout: default
 {% assign t = site.data.translations[lang].experiences %}
 {% if lang == 'en' %}{% assign resume_url = '/en/resume/' %}{% else %}{% assign resume_url = '/resume/' %}{% endif %}
 {% assign start_year = page.start_date | date: "%Y" %}
-{% if page.about or page.skills.size > 0 %}{% assign has_aside = true %}{% else %}{% assign has_aside = false %}{% endif %}
+{% comment %} Skills of the experience, then those of its missions, each once {% endcomment %}
+{% comment %} push, not concat: a single skill can come as a string {% endcomment %}
+{% assign page_skills = '' | split: '' %}
+{% for skill in page.skills %}{% assign page_skills = page_skills | push: skill %}{% endfor %}
+{% assign page_children = site[page.collection] | where: "parent_id", page.notion_id | sort: "start_date" | reverse %}
+{% for child in page_children %}{% for skill in child.skills %}{% assign page_skills = page_skills | push: skill %}{% endfor %}{% endfor %}
+{% assign page_skills = page_skills | compact | uniq %}
+{% if page.about or page_skills.size > 0 %}{% assign has_aside = true %}{% else %}{% assign has_aside = false %}{% endif %}
 {% if page.current %}
   {% assign end_year = t.present %}
 {% else %}
@@ -84,7 +91,7 @@ layout: default
         {% if page.tags.size > 0 %}
         <div class="experience-page__tags">
           {% for tag in page.tags %}
-            {% include components/badge.html style="services" text=tag %}
+            {% include components/badge.html text=tag %}
           {% endfor %}
         </div>
         {% endif %}
@@ -156,12 +163,12 @@ layout: default
       </section>
       {% endif %}
 
-      {% if page.skills.size > 0 %}
+      {% if page_skills.size > 0 %}
       <section class="experience-page__card" aria-labelledby="experience-skills">
         <h2 class="experience-page__card-title" id="experience-skills">{{ t.skills_used }}</h2>
         <ul class="deep-stack-cv-skills__list">
-          {% for skill in page.skills %}
-          <li class="deep-stack-cv-skills__item">{{ skill }}</li>
+          {% for skill in page_skills %}
+          {% include components/skill-badge.html text=skill %}
           {% endfor %}
         </ul>
       </section>
