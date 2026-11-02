@@ -4,8 +4,8 @@
 #
 # _collections/_experiences/ is both the fallback of jekyll-notion-cms and the source of the public
 # /experiences/:slug/ pages. Every Notion experience gets a page: existing files are updated, and a
-# file is created for each experience that has none, with a slug derived from its title. `slug`,
-# `layout` and `sub-roles` are kept, so published URLs never change.
+# file is created for each experience that has none, with a slug derived from its title. `slug`
+# and `layout` are kept, so published URLs never change.
 #
 # _collections/_experiences_en/ holds the English copy of each page (/en/experiences/:slug/, same file
 # name and slug), built from the Notion "en" columns: Role en, Description en, About en, the English
@@ -35,9 +35,8 @@ NOTION_KEYS = %w[
   tags skills description about achievements missions
 ].freeze
 
-# Keys that only exist in the collection and must survive a sync. sub-roles is written by hand, in
-# each language
-LOCAL_KEYS = %w[notion_id slug layout sub-roles].freeze
+# Keys that only exist in the collection and must survive a sync
+LOCAL_KEYS = %w[notion_id slug layout].freeze
 
 def read_document(path)
   content = File.read(path)
