@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Format dates to show only year
       const startYear = formatYear(experience.start_date);
-      const endYear = experience.current ? '' : formatYear(experience.end_date);
+      const endYear = experience.current ? labels.current : formatYear(experience.end_date);
       
       const companyHtml = experience.company_url
         ? `<a href="${escapeHtml(experience.company_url)}" class="card-experience__company-link">${escapeHtml(experience.company)}</a>`
@@ -261,8 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="card-experience__company">${companyHtml}</span>
               </div>
               <div class="card-experience__date">
-                <span class="card-experience__duration">${startYear}${endYear !== startYear ? ` - ${endYear}` : ''}</span>
-                ${experience.current ? `<span class="card-experience__current">${escapeHtml(labels.current)}</span>` : ''}
+                <span class="card-experience__duration">${startYear}${endYear !== startYear ? ` - ${escapeHtml(endYear)}` : ''}</span>
               </div>
             </div>
             ${experience.description ? `<p class="card-experience__description">${escapeHtml(experience.description)}</p>` : ''}
