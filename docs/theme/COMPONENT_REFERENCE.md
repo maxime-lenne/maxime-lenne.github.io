@@ -65,13 +65,13 @@ Labels and tags used in section headers.
 
 | Class | Description |
 |-------|-------------|
-| `.deep-stack-hero__badge` | Hero section badge |
+| `.deep-stack-hero__badge` | Hero section badge, also used for the skills (resume grid, experience pages) |
 | `.deep-stack-hero__badge-text` | Badge text with gradient |
 | `.deep-stack-about__badge-tag` | About section badge |
-| `.deep-stack-services__badge` | Services section badge, also used for the skills (resume grid, experience pages) |
+| `.deep-stack-services__badge` | Services section badge |
 
 An empty `.deep-stack-services__badge-icon` is hidden, so a badge without icon keeps its text centred.
-`_includes/components/skill-badge.html` renders the services badge as a `<li>` for skill lists
+`_includes/components/skill-badge.html` renders the hero badge as a `<li>` for skill lists
 (`text`, `icon`, `title` parameters).
 
 #### Liquid Parameters
