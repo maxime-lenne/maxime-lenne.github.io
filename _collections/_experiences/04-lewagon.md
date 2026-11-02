@@ -23,7 +23,7 @@ description: Encadrement d'étudiants dans l'apprentissage intensif du développ
   full-stack sur les technologies Ruby et Rails
 about: 'Le Wagon est une école de code en 9 semaines à temps plein qui apprend à des
   entrepreneurs et à des profils créatifs à construire leur produit tech dans toutes
-  ses dimensions: design, prototypage, code, mise en production.'
+  ses dimensions : design, prototypage, code, mise en production.'
 achievements:
 - Formation de +100 étudiants
 missions:

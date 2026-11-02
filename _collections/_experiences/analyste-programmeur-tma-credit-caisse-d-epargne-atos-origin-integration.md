@@ -1,9 +1,9 @@
 ---
 notion_id: 208adcda-de97-443f-b8e8-613501314a28
-title: Analyste programmeur TMA crédit chez Caisse d'épargne (2007-2008)
+title: Analyste programmeur TMA crédit chez Caisse d'Épargne (2007-2008)
 slug: analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration
 layout: experience
-company: Caisse d'épargne
+company: Caisse d'Épargne
 company_url: https://www.caisse-epargne.fr/
 role: Analyste programmeur TMA crédit
 start_date: '2007-11-01'
@@ -12,7 +12,7 @@ current: false
 location: Lille, France
 type: CDI / Full-time
 order: 15
-logo_url:
+logo_url: "/assets/images/companies/caisse-epargne.png"
 tags:
 - Grands Comptes
 skills: PHP

@@ -7,7 +7,7 @@ company: White Wood Tech
 company_url: https://white-wood.tech
 role: CTO as a Service
 start_date: '2024-11-15'
-end_date: '2027-09-28'
+end_date:
 current: true
 location: Lille, France
 type: Founder
@@ -23,9 +23,12 @@ skills:
 - Vision, roadmap and strategy
 - Financial forecasting
 - Cash flow monitoring
-- Agent / RAG design
+- AI Agent
 - MCP
 - n8n
+- Supabase
+- Baserow
+- RAG
 description: Founder of White Wood Tech, an AI-native tech and product studio backed
   by a team of AI agents, helping leaders design, build and run their digital products.
 about: White Wood Tech is an AI-native tech and product studio, backed by a team of

@@ -9,7 +9,7 @@ role: Expert front-end Java / JEE
 start_date: '2009-09-01'
 end_date: '2009-11-30'
 current: false
-location: Lille, France
+location: Paris, France
 type: CDI / Full-time
 order: 13
 logo_url: "/assets/images/companies/natixis.png"
@@ -20,6 +20,7 @@ skills:
 - JavaScript
 - CSS3
 - HTML5
+- JEE, Hibernate
 description: 'Projet Line Bourse : site de bourse en ligne pour les trois entités
   du groupe, Natixis, Banque Populaire et Caisse d''Épargne.'
 about: Natixis est la banque de financement, de gestion d'actifs et de services financiers

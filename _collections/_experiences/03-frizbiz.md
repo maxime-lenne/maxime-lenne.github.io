@@ -33,7 +33,11 @@ description: J'ai rejoint Frizbiz 6 ans après son lancement, lors de la créati
   poste de CTO. Je suis arrivé pour la conception d'un nouveau produit sur le modèle
   BtoB et BtoBtoC à destination des partenaires et avec pour objectif transverse une
   refonte technique de l'existant.
-about:
+about: Frizbiz est une plateforme française de mise en relation entre particuliers
+  et « jobbers » pour les petits travaux à domicile (bricolage, montage de meubles,
+  jardinage, ménage), fondée à Lille en 2013 et soutenue par Leroy Merlin ; reprise
+  en 2020 par le groupe Résilians via sa filiale Home Life, elle a été cédée à Ring
+  Twice en 2024.
 achievements:
 - Développement d'un nouveau produit B2B2C, qui devient le produit principal de l'entreprise
   2 ans après

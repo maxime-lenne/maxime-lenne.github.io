@@ -1,9 +1,9 @@
 ---
 notion_id: 5ce475d7-d2f7-4d16-8f26-8c03bba67f1e
-title: Product Owner, Scrum Master at modern-blocks (2017)
+title: Product Owner, Scrum Master at Modern Blocks (2017)
 slug: product-owner-scrum-master-modern-blocks
 layout: experience
-company: modern-blocks
+company: Modern Blocks
 company_url:
 role: Product Owner, Scrum Master
 start_date: '2017-01-01'
@@ -12,7 +12,7 @@ current: false
 location: Lille, France
 type: Freelance
 order: 8
-logo_url:
+logo_url: "/assets/images/companies/modern-blocks.png"
 tags:
 - Startup
 - Product
@@ -25,7 +25,8 @@ skills:
 - Mentoring
 description: Built, with an agile team of 3 developers, a Ruby on Rails marketplace
   for modern-blocks photographers.
-about:
+about: Modern Blocks was a Brussels-based startup, launched in 2016, selling contemporary
+  photography prints online in larger editions to make them more affordable.
 achievements:
 - Built a photo marketplace in Ruby on Rails with a team of 3 developers
 - Grew a developer into the Product Owner role

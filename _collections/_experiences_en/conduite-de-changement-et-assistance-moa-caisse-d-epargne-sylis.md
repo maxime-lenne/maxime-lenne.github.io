@@ -1,10 +1,10 @@
 ---
 notion_id: 179ba621-9b35-4d07-80d0-791d6f3a6cdb
-title: Change management and business analyst support at Caisse d'épargne (Sylis)
+title: Change management and business analyst support at Caisse d'Épargne (Sylis)
   (2005-2007)
 slug: conduite-de-changement-et-assistance-moa-caisse-d-epargne-sylis
 layout: experience
-company: Caisse d'épargne (Sylis)
+company: Caisse d'Épargne (Sylis)
 company_url: https://www.caisse-epargne.fr
 role: Change management and business analyst support
 start_date: '2005-01-01'
@@ -13,7 +13,7 @@ current: false
 location: Lille, France
 type: Full-time
 order: 8
-logo_url:
+logo_url: "/assets/images/companies/caisse-epargne.png"
 tags:
 - Large accounts
 skills:
