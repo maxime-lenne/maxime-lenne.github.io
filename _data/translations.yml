@@ -333,7 +333,9 @@ fr:
       "Funder": "Fondateur"
     skill_groups:
       - title: "Management & entrepreneuriat"
-        categories: ["Management & Entrepreneurship", "Soft Skills"]
+        categories: ["Management & Entrepreneurship"]
+      - title: "Soft skills"
+        categories: ["Soft Skills"]
       - title: "Méthodologies"
         categories: ["Methodologies"]
       - title: "Backend"
@@ -690,7 +692,9 @@ en:
       "Funder": "Founder"
     skill_groups:
       - title: "Management & entrepreneurship"
-        categories: ["Management & Entrepreneurship", "Soft Skills"]
+        categories: ["Management & Entrepreneurship"]
+      - title: "Soft skills"
+        categories: ["Soft Skills"]
       - title: "Methodologies"
         categories: ["Methodologies"]
       - title: "Backend"
