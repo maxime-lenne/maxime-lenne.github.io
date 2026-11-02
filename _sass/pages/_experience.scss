@@ -265,53 +265,38 @@
     }
   }
 
+  // Previous / next buttons (cta-button, secondary): arrow on the outer side, long roles wrap
   &__pager-link {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xs);
-    padding: 20px 24px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
-    text-decoration: none;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    white-space: normal;
+    text-align: left;
 
-    &:hover {
-      border-color: var(--color-primary);
-      transform: translateY(-2px);
+    &::before,
+    &::after {
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      background: var(--color-primary);
+      mask: no-repeat center / contain;
     }
 
-    &:focus-visible {
-      outline: 2px solid var(--color-primary);
-      outline-offset: 4px;
-    }
+    &--older {
+      justify-self: start;
 
-    &--older::before {
-      content: '←';
-      color: var(--color-primary);
+      &::before {
+        content: '';
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 12H5M12 19l-7-7 7-7'/%3E%3C/svg%3E");
+      }
     }
 
     &--newer {
       grid-column: -2;
+      justify-self: end;
       text-align: right;
 
-      &::before {
-        content: '→';
-        color: var(--color-primary);
+      &::after {
+        content: '';
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
       }
     }
-  }
-
-  &__pager-label {
-    color: var(--color-text-tertiary);
-    font-size: var(--text-sm);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  &__pager-title {
-    color: var(--color-text-primary);
-    font-weight: 600;
   }
 }
