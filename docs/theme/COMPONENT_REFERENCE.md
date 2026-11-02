@@ -263,8 +263,12 @@ Feature/service highlight cards.
 
 #### Card Experience
 
-Resume/CV experience cards. When `url` is set (the page of the experience in `_collections/_experiences/`),
-the card shows a « En savoir plus » / « Read more » link to it; otherwise no action is shown.
+Resume/CV experience cards, also used for the missions on an experience page. The header holds the logo, the
+role, the company and the dates. When `url` is set (the page of the experience in `_collections/_experiences/`),
+the whole header links to it (the role link is stretched over it, the company link stays clickable) and the card
+shows a « En savoir plus » / « Read more » button; otherwise neither is shown. Transparent logos get the
+`card-experience__logo--padded` modifier (white tile with a margin). Empty description, achievements and skills
+are left out.
 
 | File | Path |
 |------|------|

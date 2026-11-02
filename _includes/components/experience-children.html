@@ -1,31 +1,24 @@
 {% comment %}
-  Missions of an experience (Notion "Parent item"): the experience pages whose parent_id is include.parent_id,
-  in the page language, most recent first, each linked to its page.
-  Parameters: parent_id (Notion id of the parent), modifier (optional): "page" on the experience page, where the
-  list is a section among roles, achievements and responsibilities.
+  Missions of an experience (Notion "Parent item") inside a resume card: the experience pages whose parent_id is
+  include.parent_id, in the page language, most recent first, each linked to its page. The experience page shows
+  them as experience cards instead (_layouts/experience.html).
+  Parameters: parent_id (Notion id of the parent).
 {% endcomment %}
 {% assign children_lang = page.lang | default: site.default_lang | default: 'fr' %}
 {% assign children_t = site.data.translations[children_lang].experiences %}
 {% if children_lang == 'en' %}{% assign children_collection = 'experiences_en' %}{% else %}{% assign children_collection = 'experiences' %}{% endif %}
 {% assign children = site[children_collection] | where: "parent_id", include.parent_id | sort: "start_date" | reverse %}
 {% if children.size > 0 %}
-{% if include.modifier == 'page' %}
-<section class="experience-children experience-children--page experience-page__block" aria-labelledby="experience-assignments">
-{% else %}
 <div class="experience-children">
-{% endif %}
-  {% if include.modifier == 'page' %}
-  <h2 class="experience-page__block-title" id="experience-assignments">{{ children_t.assignments }}</h2>
-  {% else %}
   <p class="experience-children__title">{{ children_t.assignments }}</p>
-  {% endif %}
   <ul class="experience-children__list">
     {% for child in children %}
     {% assign child_start = child.start_date | date: "%Y" %}
     {% if child.current %}{% assign child_end = children_t.present %}{% else %}{% assign child_end = child.end_date | date: "%Y" %}{% endif %}
     <li class="experience-children__item">
       {% if child.logo_url %}
-      <span class="experience-children__logo experience-children__logo--img" aria-hidden="true">
+      {% assign child_logo_padded = child.logo_url | transparent_image %}
+      <span class="experience-children__logo experience-children__logo--img{% if child_logo_padded %} experience-children__logo--padded{% endif %}" aria-hidden="true">
         <img src="{{ child.logo_url | relative_url }}" alt="" class="experience-children__logo-img" loading="lazy">
       </span>
       {% else %}
@@ -43,5 +36,5 @@
     </li>
     {% endfor %}
   </ul>
-{% if include.modifier == 'page' %}</section>{% else %}</div>{% endif %}
+</div>
 {% endif %}
