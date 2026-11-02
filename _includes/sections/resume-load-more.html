@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
         end_date: {{ experience.end_date.start | jsonify }},
         current: {{ experience.current | default: false }},
         description: {{ res_desc | jsonify }},
-        tags: asArray({{ res_tags | jsonify }}),
         skills: asArray({{ res_skills | jsonify }}),
         achievements: asArray({{ res_achievements | jsonify }}),
         logo_url: {{ experience.logo_url | jsonify }},
@@ -219,17 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
       }
       
-      // Tags section (limit 3)
-      let tagsHtml = '';
-      if (experience.tags && experience.tags.length > 0) {
-        const limitedTags = experience.tags.slice(0, 3);
-        tagsHtml = `
-          <div class="card-experience__tags">
-            ${limitedTags.map(tag => createBadge(tag)).join('')}
-          </div>
-        `;
-      }
-      
       // Achievements section (limit 3)
       let achievementsHtml = '';
       if (experience.achievements && experience.achievements.length > 0) {
@@ -276,7 +264,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <p class="card-experience__description">${escapeHtml(experience.description)}</p>
             ${experience.children_html}
-            ${tagsHtml}
             ${achievementsHtml}
             ${skillsHtml}
             ${experience.url ? `
