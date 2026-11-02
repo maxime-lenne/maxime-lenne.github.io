@@ -65,7 +65,8 @@ layout: default
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
             </svg>
-            {{ page.type }}
+            {% comment %} French pages hold the Notion value ("CDI / Full-time"), English pages the translated one {% endcomment %}
+            {{ site.data.translations[lang].cv_print.types[page.type] | default: page.type }}
           </li>
           {% endif %}
           {% if page.parent_id %}
