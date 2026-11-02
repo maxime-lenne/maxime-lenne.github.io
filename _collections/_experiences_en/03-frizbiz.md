@@ -32,7 +32,10 @@ skills:
 description: I joined Frizbiz six years after its launch, when the CTO role was created,
   to design a new B2B and B2B2C product for partners, with the technical overhaul
   of the existing platform as a common thread.
-about:
+about: Frizbiz is a French marketplace connecting households with freelance "jobbers"
+  for small home jobs (DIY, furniture assembly, gardening, cleaning), founded in Lille
+  in 2013 and backed by Leroy Merlin; taken over in 2020 by the Résilians group through
+  its Home Life subsidiary, it was sold to Ring Twice in 2024.
 achievements:
 - Built a new B2B2C product that became the company's main product 2 years later
 - Ran the full technical overhaul of the original Frizbiz marketplace as a common

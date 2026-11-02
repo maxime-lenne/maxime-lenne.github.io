@@ -14,10 +14,32 @@ type: Freelance
 order: 6
 logo_url:
 tags: []
-skills: PHP
+skills:
+- PHP
+- TypeScript
+- Node.js
+- Création et gestion d'entreprise
+- CSS3
+- Ruby
+- Git, GitHub, GitLab
+- Gestion de projets
+- Flexibilité et adaptabilité
+- Esprit d'entreprendre
+- Autonomie
+- Créativité
+- CI/CD
+- Elixir, Phoenix
+- API REST, JSON, GeoJSON
+- Sketch
+- Postman
+- Ruby on Rails
+- Photoshop, Illustrator, InDesign
+- JavaScript
+- HTML5
 description: 'Missions de développement full stack en freelance, en parallèle de mes
   autres activités : e-commerce Magento et intégrations d''API.'
-about:
+about: Devoriginal était l'activité freelance de Maxime Lenne à Lille (2010–2019),
+  spécialisée dans le développement web et e-commerce.
 achievements: []
 missions:
 - Consultant solution e-commerce Magento pour lematelas.fr

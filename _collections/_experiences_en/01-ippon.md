@@ -31,8 +31,6 @@ about: 'Ippon is an international, independent technology consulting and experti
 achievements:
 - Led the agency and managed a team of 5 managers and 35+ multidisciplinary consultants
 - 20% revenue growth despite a tough economic climate
-- 10-day craft assessment on 6 pillars (agility, autonomy, codebase, architecture,
-  DevOps, community) in 3 INSEE teams in Lille
 missions:
 - 'Supported the Lille team: hiring, training, coaching'
 - 'Managed the managers of the Lille team: fortnightly one-to-ones, team workshops

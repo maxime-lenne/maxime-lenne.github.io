@@ -1,9 +1,9 @@
 ---
 notion_id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
-title: CPTO - Co-founder at EcoTa.co (2012-2017)
+title: CTO - Co-founder at EcoTa.co (2012-2017)
 company: EcoTa.co
 company_url:
-role: CPTO - Co-founder
+role: CTO - Co-founder
 start_date: '2012-12-01'
 end_date: '2017-07-31'
 current: false

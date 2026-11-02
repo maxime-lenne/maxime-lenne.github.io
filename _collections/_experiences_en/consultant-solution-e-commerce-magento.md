@@ -4,19 +4,21 @@ title: Tech Lead at lematelas.fr (2010)
 slug: consultant-solution-e-commerce-magento
 layout: experience
 company: lematelas.fr
-company_url:
+company_url: https://www.lematelas.fr/
 role: Tech Lead
 start_date: '2010-01-01'
 end_date: '2010-06-30'
 current: false
-location:
-type:
+location: Lille, France
+type: Freelance
 order: 0
 logo_url:
 tags: []
-skills: []
-description:
-about:
+skills:
+- PHP
+description: Tech lead on the Magento e-commerce solution.
+about: Lematelas.fr is a French online bedding retailer (mattresses, bed bases, bed
+  linen), run by DTLM in Wattrelos, near Lille.
 achievements: []
 missions: []
 parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904

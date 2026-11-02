@@ -1,11 +1,11 @@
 ---
 notion_id: ddded262-0459-4756-baa4-96d73ed8ee5c
-title: Ingénieur études et développement Java / JEE chez Atos Origin Worldline (2009-2010)
+title: Développeur full stack chez Atos Origin Worldline (2009-2010)
 slug: ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-spop
 layout: experience
 company: Atos Origin Worldline
 company_url: https://worldline.com/
-role: Ingénieur études et développement Java / JEE
+role: Développeur full stack
 start_date: '2009-10-01'
 end_date: '2010-02-28'
 current: false
@@ -20,6 +20,7 @@ skills:
 - Java
 - CI/CD
 - Pilotage prestataires
+- JEE, Hibernate
 description: 'Projet SPoP : solution et plateforme de paiement internationale, réalisée
   en offshore.'
 about: Atos Origin Worldline était la filiale d'Atos Origin spécialisée dans les paiements

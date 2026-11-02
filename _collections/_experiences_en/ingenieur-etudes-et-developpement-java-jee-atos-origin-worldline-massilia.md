@@ -18,6 +18,9 @@ tags:
 skills:
 - Java
 - Supplier management
+- JEE, Hibernate
+- HTML5
+- CSS3
 description: 'Massilia project: a generic e-commerce solution built in Java / JEE,
   partly developed offshore.'
 about: Atos Origin Worldline was the Atos Origin subsidiary specialising in payments

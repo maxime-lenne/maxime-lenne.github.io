@@ -4,7 +4,7 @@ title: CTO agence Lille chez theTribe (2022-2024)
 slug: cto-thetribe
 layout: experience
 company: theTribe
-company_url:
+company_url: https://thetribe.io/
 role: CTO agence Lille
 start_date: '2022-06-01'
 end_date: '2024-02-29'
