@@ -4,8 +4,8 @@ title: Product Owner at Norauto (2017-2018)
 company: Norauto
 company_url: https://www.norauto.fr/
 role: Product Owner
-start_date: '2017-01-01'
-end_date: '2018-01-01'
+start_date: '2017-10-01'
+end_date: '2018-05-31'
 current: false
 location: France
 type: Freelance

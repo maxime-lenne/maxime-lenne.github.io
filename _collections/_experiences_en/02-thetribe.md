@@ -6,8 +6,8 @@ layout: experience
 company: theTribe
 company_url:
 role: Agency CTO, Lille
-start_date: '2022-01-01'
-end_date: '2024-01-01'
+start_date: '2022-06-01'
+end_date: '2024-02-29'
 current: false
 location: Lille, France
 type: Full-time

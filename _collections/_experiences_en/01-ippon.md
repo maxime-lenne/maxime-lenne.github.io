@@ -12,7 +12,7 @@ sub-roles:
 company: Ippon
 company_url:
 role: Agency CTO, Lille
-start_date: '2024-01-01'
+start_date: '2024-04-01'
 end_date: '2024-11-15'
 current: false
 location: Lille, France
@@ -28,7 +28,7 @@ skills:
 - Python
 - 'Django / Flask '
 description: Technical lead of an agency of 35+ consultants, mostly on long-term assignments
-  in large groups (retail, banking...), plus consulting for INSEE and Decathlon.
+  in large groups (retail, banking...), plus consulting.
 about: 'Ippon is an international, independent technology consulting and expertise
   firm. Ippon supports companies'' digital transformation, helping them design their
   strategy and roll out their roadmap at scale to deliver the expected value quickly.

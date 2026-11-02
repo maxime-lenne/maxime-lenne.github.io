@@ -12,7 +12,7 @@ sub-roles:
 company: Ippon
 company_url:
 role: CTO agence Lille
-start_date: '2024-01-01'
+start_date: '2024-04-01'
 end_date: '2024-11-15'
 current: false
 location: Lille, France
@@ -29,7 +29,7 @@ skills:
 - 'Django / Flask '
 description: Direction technique d'une agence de plus de 35 consultants réalisant
   des missions principalement en régie dans des grands groupes (Retail, banque...)
-  et prestations de conseil pour l'INSEE et Décathlon
+  et prestations de conseil.
 about: 'Ippon est un cabinet de conseil et d’expertises en technologie, international
   et indépendant. Ippon accompagne la transformation numérique des entreprises, en
   les aidant à concevoir leur stratégie et à déployer leur roadmap à l''échelle, afin

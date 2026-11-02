@@ -6,8 +6,8 @@ layout: experience
 company: Frizbiz / Homelife
 company_url:
 role: CPTO
-start_date: '2019-01-01'
-end_date: '2022-01-01'
+start_date: '2019-05-01'
+end_date: '2022-07-31'
 current: false
 location: Lille, France
 type: CDI / Full-time
