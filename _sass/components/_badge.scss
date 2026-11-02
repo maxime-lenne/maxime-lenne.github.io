@@ -66,6 +66,11 @@
   
   &-icon {
     font-size: 16px;
+
+    // No icon: drop the span so the gap does not push the text off-centre
+    &:empty {
+      display: none;
+    }
   }
   
   &-text {
