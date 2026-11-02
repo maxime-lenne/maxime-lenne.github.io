@@ -187,9 +187,8 @@ document.addEventListener('DOMContentLoaded', function() {
       return div.innerHTML;
     }
     
-    // Same markup as components/badge.html style="services"
     function createBadge(text) {
-      return `<div class="deep-stack-services__badge"><span class="deep-stack-services__badge-icon"></span><span class="deep-stack-services__badge-text">${escapeHtml(text)}</span></div>`;
+      return `<div class="deep-stack-hero__badge"><span class="deep-stack-hero__badge-text">${escapeHtml(text)}</span></div>`;
     }
     
     function createExperienceElement(experience) {
