@@ -2,8 +2,8 @@
   CV PDF data, shared by both variants. Tests use `.size > 0`: without ActiveSupport, Liquid
   treats `nil != blank` as true. Everything comes from Notion: rows with the Print box
   checked, texts suffixed "print" for the short versions and "en" for English (French as fallback).
-  A mission (Notion "Parent item") is shown inside its parent: the parent becomes a detailed block as
-  soon as it or one of its missions has the Print box checked.
+  Only experiences with the Print box checked are shown. A printed mission (Notion "Parent item") is shown
+  inside its parent when the parent is printed too, as its own block otherwise.
 {% endcomment %}
 {% assign lang = page.lang | default: 'fr' %}
 {% assign t = site.data.translations[lang].cv_print %}
@@ -11,18 +11,13 @@
 
 {% assign cv_sorted = site.data.notion_experiences | sort: 'start_date.start' | reverse %}
 {% assign cv_detailed = cv_empty %}
-{% assign cv_early = cv_empty %}
 {% for exp in cv_sorted %}
+  {% unless exp.print %}{% continue %}{% endunless %}
   {% if exp.parent_ids.size > 0 %}
     {% assign cv_parent = cv_sorted | where: "id", exp.parent_ids[0] | first %}
-    {% if cv_parent %}{% continue %}{% endif %}
+    {% if cv_parent.print %}{% continue %}{% endif %}
   {% endif %}
-  {% assign cv_kids_print = cv_sorted | where_exp: "e", "e.parent_ids contains exp.id" | where: "print", true %}
-  {% if exp.print or cv_kids_print.size > 0 %}
-    {% assign cv_detailed = cv_detailed | push: exp %}
-  {% elsif exp.description_print.size > 0 %}
-    {% assign cv_early = cv_early | push: exp %}
-  {% endif %}
+  {% assign cv_detailed = cv_detailed | push: exp %}
 {% endfor %}
 
 {% assign cv_educations = site.data.notion_educations | where: 'print', true | sort: 'order' %}
