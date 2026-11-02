@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         skills: asArray({{ res_skills | jsonify }}),
         achievements: asArray({{ res_achievements | jsonify }}),
         logo_url: {{ experience.logo_url | jsonify }},
+        logo_padded: {{ experience.logo_url | transparent_image }},
         url: {{ experience_page.url | jsonify }},
         // Missions list, the same markup as the card include (built here, not from user input)
         children_html: {{ experience_children | strip | jsonify }}
@@ -205,14 +206,14 @@ document.addEventListener('DOMContentLoaded', function() {
       let logoHtml = '';
       if (experience.logo_url) {
         logoHtml = `
-          <div class="card-experience__logo card-experience__logo--img">
-            <img src="${escapeHtml(experience.logo_url)}" alt="${escapeHtml(experience.company)} logo" class="card-experience__logo-img">
+          <div class="card-experience__logo card-experience__logo--img${experience.logo_padded ? ' card-experience__logo--padded' : ''}">
+            <img src="${escapeHtml(experience.logo_url)}" alt="${escapeHtml(experience.company)} logo" class="card-experience__logo-img" loading="lazy">
           </div>
         `;
       } else {
         const companyInitials = experience.company ? experience.company.substring(0, 2).toUpperCase() : '';
         logoHtml = `
-          <div class="card-experience__logo">
+          <div class="card-experience__logo" aria-hidden="true">
             <div class="card-experience__logo-placeholder">${escapeHtml(companyInitials)}</div>
           </div>
         `;
@@ -250,19 +251,21 @@ document.addEventListener('DOMContentLoaded', function() {
       // Card HTML
       const cardHtml = `
         <div class="card-experience">
-          ${logoHtml}
           <div class="card-experience__content">
-            <div class="card-experience__header">
+            <div class="card-experience__header${experience.url ? ' card-experience__header--link' : ''}">
+              ${logoHtml}
               <div class="card-experience__title-section">
-                <h3 class="card-experience__role">${escapeHtml(experience.role)}</h3>
+                <h3 class="card-experience__role">${experience.url
+                  ? `<a href="${escapeHtml(experience.url)}" class="card-experience__header-link">${escapeHtml(experience.role)}</a>`
+                  : escapeHtml(experience.role)}</h3>
                 <span class="card-experience__company">${companyHtml}</span>
               </div>
               <div class="card-experience__date">
-                <span class="card-experience__duration">${startYear} - ${endYear}</span>
+                <span class="card-experience__duration">${startYear}${endYear !== startYear ? ` - ${endYear}` : ''}</span>
                 ${experience.current ? `<span class="card-experience__current">${escapeHtml(labels.current)}</span>` : ''}
               </div>
             </div>
-            <p class="card-experience__description">${escapeHtml(experience.description)}</p>
+            ${experience.description ? `<p class="card-experience__description">${escapeHtml(experience.description)}</p>` : ''}
             ${achievementsHtml}
             ${experience.children_html}
             ${skillsHtml}

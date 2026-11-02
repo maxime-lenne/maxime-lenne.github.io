@@ -1,37 +1,39 @@
 <!-- Card Experience Component -->
 {% assign card_lang = page.lang | default: site.default_lang | default: 'fr' %}
 {% assign card_t = site.data.translations[card_lang].resume_page %}
+{% comment %}
+  The header (logo, role, company, dates) links to include.url, through the role link stretched over it.
+  Transparent logos get a white padded background (transparent_image filter, _plugins/transparent_image.rb).
+{% endcomment %}
 <div class="card-experience">
-  
-  {% if include.logo_url %}
-  <div class="card-experience__logo card-experience__logo--img">
-    <img src="{{ include.logo_url }}" alt="{{ include.company }} logo" class="card-experience__logo-img">
-  </div>
-  {% else %}
-  <div class="card-experience__logo">
-    <div class="card-experience__logo-placeholder">
-      {{ include.company | slice: 0, 2 | upcase }}
-    </div>
-  </div>
-  {% endif %}
-  
   <div class="card-experience__content">
-    <div class="card-experience__header">
+    <div class="card-experience__header{% if include.url %} card-experience__header--link{% endif %}">
+      {% if include.logo_url %}
+      {% assign card_logo_padded = include.logo_url | transparent_image %}
+      <div class="card-experience__logo card-experience__logo--img{% if card_logo_padded %} card-experience__logo--padded{% endif %}">
+        <img src="{{ include.logo_url | relative_url }}" alt="{{ include.company }} logo" class="card-experience__logo-img" loading="lazy">
+      </div>
+      {% else %}
+      <div class="card-experience__logo" aria-hidden="true">
+        <div class="card-experience__logo-placeholder">{{ include.company | slice: 0, 2 | upcase }}</div>
+      </div>
+      {% endif %}
       <div class="card-experience__title-section">
-        <h3 class="card-experience__role">{{ include.role }}</h3>
+        <h3 class="card-experience__role">{% if include.url %}<a href="{{ include.url | relative_url }}" class="card-experience__header-link">{{ include.role }}</a>{% else %}{{ include.role }}{% endif %}</h3>
         <span class="card-experience__company">{% if include.company_url %}<a href="{{ include.company_url }}" class="card-experience__company-link">{{ include.company }}</a>{% else %}{{ include.company }}{% endif %}</span>
       </div>
       <div class="card-experience__date">
-        <span class="card-experience__duration">{{ include.start_date | date: "%Y" }} - {{ include.end_date | date: "%Y" }}</span>
+        {% assign card_start = include.start_date | date: "%Y" %}{% assign card_end = include.end_date | date: "%Y" %}
+        <span class="card-experience__duration">{{ card_start }}{% if card_end != card_start %} - {{ card_end }}{% endif %}</span>
         {% if include.current %}
           <span class="card-experience__current">{{ card_t.experience_current }}</span>
         {% endif %}
       </div>
     </div>
 
-    <p class="card-experience__description">{{ include.description }}</p>
+    {% if include.description %}<p class="card-experience__description">{{ include.description }}</p>{% endif %}
 
-    {% if include.achievements %}
+    {% if include.achievements.size > 0 %}
     <div class="card-experience__achievements">
       {% for achievement in include.achievements limit: 3 %}
         <div class="card-experience__achievement">
@@ -46,7 +48,7 @@
 
     {% if include.children_of %}{% include components/experience-children.html parent_id=include.children_of %}{% endif %}
 
-    {% if include.skills %}
+    {% if include.skills.size > 0 %}
     <div class="card-experience__skills">
       {% for skill in include.skills limit: 6 %}
         {% include components/badge.html text=skill %}
