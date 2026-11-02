@@ -177,8 +177,9 @@ on `/en/resume/` (rules in [`NOTION_SETUP.md`](NOTION_SETUP.md)).
 
 Missions nested under an experience (Notion « Parent item », `parent_id` on the experience pages) are left out of
 the resume grid and listed in their parent card and page by `_includes/components/experience-children.html`
-(styles in `_sass/components/_experience-children.scss`). The « Compétences mobilisées » card of an experience page
-lists its skills, then those of its missions, each once.
+(styles in `_sass/components/_experience-children.scss`), each with its company logo as a thumbnail (initials
+when Notion has no « Logo URL »). Experience cards no longer show the tags. The « Compétences mobilisées » card of
+an experience page lists its skills, then those of its missions, each once.
 
 ### Collections
 
