@@ -405,7 +405,7 @@ introuvable). Le plugin ne les écrase plus avec les données de secours.
 make sync-experiences   # récupère Notion puis lance scripts/sync_experiences.rb
 ```
 
-Le script remplace les champs par ceux de Notion et garde `slug`, `layout` et `sub-roles`, donc les
+Le script remplace les champs par ceux de Notion et garde `slug` et `layout`, donc les
 URL ne changent pas. Il crée aussi un fichier pour chaque nouvelle expérience Notion, avec un slug tiré
 du titre (sans accents), et le CV relie chaque carte à sa page grâce au `notion_id`.
 
@@ -432,8 +432,7 @@ de fichier, publiée sous `/en/experiences/:slug/`), à partir des colonnes `en`
 **Description en**, **About en**, le **Name en** des Items (réalisations et missions) et des compétences,
 et les traductions de `resume_page.tags` et `cv_print.types` dans `_data/translations.yml`. Sans valeur
 anglaise, le texte français est repris. Les deux copies se pointent l'une l'autre (`alternate_url`) pour
-le hreflang et le sélecteur de langue. Les `sub-roles` s'écrivent à la main dans chaque langue et sont
-conservés.
+le hreflang et le sélecteur de langue.
 
 ### Structure des données générées
 
@@ -515,7 +514,6 @@ Frontend:
   skills: ["Leadership", "Management", "Craftmanship", "Python", "Flask"]
   achievements: ["Direction d'une équipe de 5 managers et 35+ consultants..."]
   missions: ["Accompagnement de l'équipe lilloise, recrutement, formation..."]
-  sub_roles: ["Auditeur : Réalisation et restitution d'un assessment craft..."]
   id: "page_id_from_notion"
 ```
 

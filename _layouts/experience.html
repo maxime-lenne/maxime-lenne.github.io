@@ -108,22 +108,6 @@ layout: default
         <p class="experience-page__lead">{{ page.description }}</p>
       {% endif %}
 
-      {% if page.sub-roles.size > 0 %}
-      <section class="experience-page__block" aria-labelledby="experience-roles">
-        <h2 class="experience-page__block-title" id="experience-roles">{{ t.roles }}</h2>
-        <ul class="list-checked__grid experience-page__list">
-          {% for sub_role in page.sub-roles %}
-          <li class="list-checked__item">
-            <svg class="list-checked__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-              <path d="M21.801 10A10 10 0 1117 3.335M9 11l3 3L22 4"/>
-            </svg>
-            <span>{{ sub_role }}</span>
-          </li>
-          {% endfor %}
-        </ul>
-      </section>
-      {% endif %}
-
       {% if page.achievements.size > 0 %}
       <section class="experience-page__block" aria-labelledby="experience-achievements">
         <h2 class="experience-page__block-title" id="experience-achievements">{{ t.main_achievements }}</h2>
