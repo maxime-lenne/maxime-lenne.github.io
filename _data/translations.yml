@@ -329,7 +329,10 @@ fr:
       "Part-time": "Temps partiel"
       "Freelance": "Freelance"
       "Volunteer": "Bénévole"
-      "Funder": "Fondateur"
+      "Founder": "Fondateur"
+      "Prestation": "Prestation"
+      "Internship": "Stage"
+      "Apprenticeship": "Alternance"
     skill_groups:
       - title: "Management & entrepreneuriat"
         categories: ["Management & Entrepreneurship"]
@@ -687,7 +690,10 @@ en:
       "Part-time": "Part-time"
       "Freelance": "Freelance"
       "Volunteer": "Volunteer"
-      "Funder": "Founder"
+      "Founder": "Founder"
+      "Prestation": "Client assignment"
+      "Internship": "Internship"
+      "Apprenticeship": "Apprenticeship"
     skill_groups:
       - title: "Management & entrepreneurship"
         categories: ["Management & Entrepreneurship"]
