@@ -32,7 +32,8 @@ layout: default
 
     <div class="experience-page__heading">
       {% if page.logo_url %}
-        <div class="card-experience__logo card-experience__logo--img experience-page__logo">
+        {% assign logo_padded = page.logo_url | transparent_image %}
+        <div class="card-experience__logo card-experience__logo--img{% if logo_padded %} card-experience__logo--padded{% endif %} experience-page__logo">
           <img src="{{ page.logo_url | relative_url }}" alt="{{ t.logo_alt }} {{ page.company }}" class="card-experience__logo-img" width="80" height="80">
         </div>
       {% else %}
@@ -124,7 +125,27 @@ layout: default
       </section>
       {% endif %}
 
-      {% include components/experience-children.html parent_id=page.notion_id modifier="page" %}
+      {% if page_children.size > 0 %}
+      <section class="experience-page__block" aria-labelledby="experience-assignments">
+        <h2 class="experience-page__block-title" id="experience-assignments">{{ t.assignments }}</h2>
+        <div class="experience-page__children">
+          {% for child in page_children %}
+          {% include components/card-experience.html
+             role=child.role
+             company=child.company
+             company_url=child.company_url
+             start_date=child.start_date
+             end_date=child.end_date
+             current=child.current
+             description=child.description
+             skills=child.skills
+             achievements=child.achievements
+             logo_url=child.logo_url
+             url=child.url %}
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
 
       {% if page.missions.size > 0 %}
       <section class="experience-page__block" aria-labelledby="experience-missions">

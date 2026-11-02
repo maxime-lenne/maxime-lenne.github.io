@@ -31,6 +31,7 @@ maxime-lenne-website/
 │   ├── post.html                   # Blog posts
 │   └── experience.html             # Experience pages
 ├── _plugins/                       # Custom Jekyll plugins
+│   └── transparent_image.rb        # Filter: does a logo have a transparent background
 ├── _sass/                          # SCSS styles
 │   ├── main.scss                   # Entry point
 │   ├── _theme-config.scss          # Design tokens (CSS variables)
@@ -176,10 +177,15 @@ of each row are chosen per language by the includes in `_includes/resume/`, also
 on `/en/resume/` (rules in [`NOTION_SETUP.md`](NOTION_SETUP.md)).
 
 Missions nested under an experience (Notion « Parent item », `parent_id` on the experience pages) are left out of
-the resume grid and listed in their parent card and page by `_includes/components/experience-children.html`
+the resume grid. Their parent resume card lists them with `_includes/components/experience-children.html`
 (styles in `_sass/components/_experience-children.scss`), each with its company logo as a thumbnail (initials
-when Notion has no « Logo URL »). Experience cards no longer show the tags. The « Compétences mobilisées » card of
-an experience page lists its skills, then those of its missions, each once.
+when Notion has no « Logo URL »). The parent experience page shows them as experience cards. Experience cards no
+longer show the tags.
+
+Company logos sit on a white tile. Logos with a transparent background (`transparent_image` filter of
+`_plugins/transparent_image.rb`) get a margin inside it; logos that bring their own background fill it.
+
+The « Compétences mobilisées » card of an experience page lists its skills, then those of its missions, each once.
 
 ### Collections
 
