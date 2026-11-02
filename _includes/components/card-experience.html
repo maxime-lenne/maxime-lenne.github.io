@@ -31,10 +31,6 @@
 
     <p class="card-experience__description">{{ include.description }}</p>
 
-    {% if include.children_of %}{% include components/experience-children.html parent_id=include.children_of %}{% endif %}
-    
-    
-    
     {% if include.achievements %}
     <div class="card-experience__achievements">
       {% for achievement in include.achievements limit: 3 %}
@@ -47,6 +43,8 @@
       {% endfor %}
     </div>
     {% endif %}
+
+    {% if include.children_of %}{% include components/experience-children.html parent_id=include.children_of %}{% endif %}
 
     {% if include.skills %}
     <div class="card-experience__skills">
