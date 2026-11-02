@@ -179,8 +179,8 @@ on `/en/resume/` (rules in [`NOTION_SETUP.md`](NOTION_SETUP.md)).
 Missions nested under an experience (Notion « Parent item », `parent_id` on the experience pages) are left out of
 the resume grid. Their parent resume card lists them with `_includes/components/experience-children.html`
 (styles in `_sass/components/_experience-children.scss`), each with its company logo as a thumbnail (initials
-when Notion has no « Logo URL »). The parent experience page shows them as experience cards. Experience cards no
-longer show the tags.
+when Notion has no « Logo URL »). The parent experience page shows them as experience cards, two per row on
+desktop. Experience cards no longer show the tags.
 
 Company logos sit on a white tile. Logos with a transparent background (`transparent_image` filter of
 `_plugins/transparent_image.rb`) get a margin inside it; logos that bring their own background fill it.

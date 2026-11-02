@@ -69,11 +69,24 @@
     height: 80px;
   }
 
-  // Missions, as experience cards
+  // Missions, as experience cards: one column on mobile, two on desktop
   &__children {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--space-lg);
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-experience {
+      padding: 24px;
+    }
+
+    // Buttons of side by side cards on the same line
+    .card-experience__actions {
+      margin-top: auto;
+    }
   }
 
   &__facts {
