@@ -73,10 +73,14 @@ See [`docs/theme/CREATION_PLAN.md`](./theme/CREATION_PLAN.md) for full theme ext
   CV PDF
 - [x] Atos Origin missions grouped under a parent experience, client missions added under White Wood Tech, Ippon and
   Freelance
-- [x] Soft skills in their own group on the CV PDF, services badges for the experience tags and skills
+- [x] Soft skills in their own group on the CV PDF, hero badges for the skills
+- [x] Experience cards reworked: logo in the header, clickable header, client missions with logos, missions as cards
+  on the experience pages
+- [x] CV PDF: only the experiences with Print checked, missions nested in their parent, GitHub in the contact details
+- [x] Notion content review (spelling, English translations) for experiences, items and skills
 - [x] Privacy policy and legal notice pages (FR / EN), linked from the footer
 - [x] Gem updates for the Dependabot alerts (addressable, concurrent-ruby, json)
 
 ---
 
-*Last updated: 2026-11-02*
+*Last updated: 2026-11-03*
