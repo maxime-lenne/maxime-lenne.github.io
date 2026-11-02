@@ -3,12 +3,6 @@ notion_id: 34ada855-7e8a-42f2-808e-288deb6f53c9
 title: Agency CTO, Lille at Ippon (2024)
 slug: cto-ippon
 layout: experience
-sub-roles:
-- 'Auditor: ran and presented a 10-day craft assessment on 6 pillars (agility, team
-  autonomy, codebase trust, architecture design, DevOps practices, community) in 3
-  INSEE teams in Lille'
-- Tech leader / engineering manager in the digital chain team (3D digital twins of
-  the products) at Decathlon
 company: Ippon
 company_url:
 role: Agency CTO, Lille

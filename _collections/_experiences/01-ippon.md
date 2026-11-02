@@ -3,12 +3,6 @@ notion_id: 34ada855-7e8a-42f2-808e-288deb6f53c9
 title: CTO agence Lille chez Ippon (2024)
 slug: cto-ippon
 layout: experience
-sub-roles:
-- 'Auditeur : Réalisation et restitution d''un assessment craft de 10 jours, sur 6
-  piliers (Agilité, Autonomie des équipes, codebase trust, architecture design, pratiques
-  devops, communauté) dans 3 équipes lilloise de l''INSEE'
-- 'Tech leader / enginering manager : au sein de l''équipe digital chain (Jumeaux
-  numérique 3d des produits) chez Décathlon'
 company: Ippon
 company_url:
 role: CTO agence Lille
