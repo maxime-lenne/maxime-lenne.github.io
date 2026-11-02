@@ -593,8 +593,10 @@ html {
   &__contact {
     margin-top: 1.6mm;
 
+    // Lines break between items, never inside a link like github.com/maxime-lenne
     li {
       display: inline;
+      white-space: nowrap;
 
       &:not(:last-child)::after {
         content: " | ";
