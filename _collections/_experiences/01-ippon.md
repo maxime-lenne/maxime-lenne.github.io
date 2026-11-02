@@ -24,17 +24,15 @@ skills:
 description: Direction technique d'une agence de plus de 35 consultants réalisant
   des missions principalement en régie dans des grands groupes (Retail, banque...)
   et prestations de conseil.
-about: 'Ippon est un cabinet de conseil et d’expertises en technologie, international
+about: 'Ippon est un cabinet de conseil et d''expertise en technologie, international
   et indépendant. Ippon accompagne la transformation numérique des entreprises, en
   les aidant à concevoir leur stratégie et à déployer leur roadmap à l''échelle, afin
   de délivrer rapidement la valeur attendue. Ippon évolue sur plusieurs métiers à
-  travers les practices suivantes : Software Engineering, Cloud & Devops, Data & IA,
-  Modern Architecture, Mobile, Produit Agilité & Design'
+  travers les practices suivantes : Software Engineering, Cloud & DevOps, Data & IA,
+  Modern Architecture, Mobile, Produit, Agilité & Design.'
 achievements:
 - Direction de l'agence et management de 5 managers et 35+ consultants pluridisciplinaires
 - Croissance de 20% du chiffre d'affaires malgré un contexte économique tendu
-- Assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie, codebase, architecture,
-  devops, communauté) dans 3 équipes lilloises de l'INSEE
 missions:
 - Accompagnement de l'équipe lilloise, recrutement, formation, coaching
 - Management des managers de l'équipe lilloise, entretiens individuels toutes les

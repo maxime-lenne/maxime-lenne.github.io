@@ -1,18 +1,18 @@
 ---
 notion_id: 179ba621-9b35-4d07-80d0-791d6f3a6cdb
-title: Conduite de Changement et assistance MOA chez Caisse d'épargne (Sylis) (2005-2007)
+title: Conduite du changement et assistance MOA chez Caisse d'Épargne (Sylis) (2005-2007)
 slug: conduite-de-changement-et-assistance-moa-caisse-d-epargne-sylis
 layout: experience
-company: Caisse d'épargne (Sylis)
+company: Caisse d'Épargne (Sylis)
 company_url: https://www.caisse-epargne.fr
-role: Conduite de Changement et assistance MOA
+role: Conduite du changement et assistance MOA
 start_date: '2005-01-01'
 end_date: '2007-10-31'
 current: false
 location: Lille, France
 type: CDI / Full-time
 order: 8
-logo_url:
+logo_url: "/assets/images/companies/caisse-epargne.png"
 tags:
 - Grands Comptes
 skills: PHP

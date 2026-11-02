@@ -1,9 +1,9 @@
 ---
 notion_id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
-title: CPTO - Co-fondateur chez EcoTa.co (2012-2017)
+title: CTO - Co-fondateur chez EcoTa.co (2012-2017)
 company: EcoTa.co
 company_url:
-role: CPTO - Co-fondateur
+role: CTO - Co-fondateur
 start_date: '2012-12-01'
 end_date: '2017-07-31'
 current: false
@@ -35,12 +35,12 @@ description: 'Cinq ans d''aventure entrepreneuriale, de l''idée au passage à l
   et l''équipe. J''ai structuré et managé l''équipe tech pour concevoir une plateforme
   reposant sur une architecture en microservices, des APIs publiques et privées, des
   plateformes web et des applications mobiles natives.'
-about: Startup qui développait et exploitait le service EcoTaco qui est une plate-forme
-  de mise en relation entre des clients et des chauffeurs VTC professionnels (en BtoB
-  ou BtoC ). Une startup innovante dans la mobilité partagée, le transport et l’éco-mobilité
+about: Startup qui développait et exploitait EcoTaco, une plateforme de mise en relation
+  entre des clients et des chauffeurs VTC professionnels (en BtoB ou BtoC). Une startup
+  innovante dans la mobilité partagée, le transport et l'éco-mobilité.
 achievements:
-- En 5 ans, nous étions opérationnels dans 12 villes, avec +600 chauffeurs, +20K utilisateurs,
-  +500K€ de CA en 2015
+- Opérationnels dans 12 villes, avec +600 chauffeurs, +20K utilisateurs, +500K€ de
+  CA en 2015
 - Levée de fonds de 300k€
 - Conception de l'ensemble du SI à base de micro services, APIs publiques et privées,
   de plateformes web et application mobile native

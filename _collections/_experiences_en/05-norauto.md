@@ -7,7 +7,7 @@ role: Product Owner
 start_date: '2017-10-01'
 end_date: '2018-05-31'
 current: false
-location: France
+location: Lille, France
 type: Freelance
 order: 6
 logo_url: "/assets/images/companies/norauto.png"
@@ -21,6 +21,9 @@ skills:
 - Scrum
 - Product Management
 - Vision, roadmap and strategy
+- Vision, visualisation
+- Prioritisation and trade-offs
+- Dashboards, KPIs
 description: Designed API-first microservices for the BeAPI project, the starting
   point of Norauto's digital transformation through a low-level technical overhaul.
 about: Norauto is a French car maintenance, repair and equipment retailer, part of

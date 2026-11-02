@@ -20,6 +20,7 @@ skills:
 - Java
 - CI/CD
 - Supplier management
+- JEE, Hibernate
 description: 'SPoP project: an international payment solution and platform, developed
   offshore.'
 about: Atos Origin Worldline was the Atos Origin subsidiary specialising in payments
