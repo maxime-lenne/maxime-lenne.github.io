@@ -1,13 +1,13 @@
 ---
 notion_id: 6a3d0190-d746-4eea-851e-d1ceab4ee369
-title: Java / JEE software engineer at Atos Origin Worldline (2009-2010)
+title: Java / JEE software engineer at Atos Origin Worldline (2010)
 slug: ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-massilia
 layout: experience
 company: Atos Origin Worldline
 company_url: https://worldline.com/
 role: Java / JEE software engineer
-start_date: '2009-11-01'
-end_date: '2010-04-30'
+start_date: '2010-03-01'
+end_date: '2010-10-31'
 current: false
 location: Lille, France
 type: Full-time
@@ -34,6 +34,7 @@ missions:
   and delivery
 - 'Documentation and communication in English: code reviews, release notes, user and
   installation guides'
+parent_id: 40c93271-2dfb-8157-ab62-f1baceb6a7ba
 lang: en
 alternate_lang: fr
 alternate_url: "/experiences/ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-massilia/"

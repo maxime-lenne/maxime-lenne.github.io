@@ -4,8 +4,8 @@ title: Teacher at Le Wagon (2018-2019)
 company: Le Wagon
 company_url: https://www.lewagon.com/
 role: Teacher
-start_date: '2018-01-01'
-end_date: '2019-01-01'
+start_date: '2018-09-01'
+end_date: '2019-05-31'
 current: false
 location: Lille, France
 type: Freelance

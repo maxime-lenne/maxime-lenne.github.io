@@ -6,8 +6,8 @@ layout: experience
 company: Atos Origin Worldline
 company_url: https://worldline.com/
 role: Ingénieur études et développement Java / JEE
-start_date: '2009-01-01'
-end_date: '2010-01-01'
+start_date: '2009-10-01'
+end_date: '2010-02-28'
 current: false
 location: Lille, France
 type: CDI / Full-time
@@ -34,6 +34,7 @@ missions:
 - Pilotage des développements offshore (Atos Origin India), revue de code et recette
 - 'Documentation et communication en anglais : revues de code, release notes, guides
   utilisateur et d''installation'
+parent_id: 40c93271-2dfb-8157-ab62-f1baceb6a7ba
 lang: fr
 alternate_lang: en
 alternate_url: "/en/experiences/ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-spop/"

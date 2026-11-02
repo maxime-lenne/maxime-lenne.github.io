@@ -278,9 +278,9 @@ fr:
   cv_print:
     title: "CV Maxime Lenne"
     title_ats: "CV Maxime Lenne (version ATS)"
-    headline: "CTO, Tech advisor, sparring partner"
-    headline_main: "CTO, Tech advisor,"
-    headline_highlight: "sparring partner"
+    headline: "CTO, Head of Engineering, Engineering Manager"
+    headline_main: "CTO, Head of Engineering,"
+    headline_highlight: "Engineering Manager"
     intro:
       - "Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de <strong>l'entrepreneuriat</strong>, de <strong>l'innovation</strong>, du <strong>management</strong> et du <strong>produit</strong>, tout en continuant à perfectionner mes compétences techniques."
       - "J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon."
@@ -639,9 +639,9 @@ en:
   cv_print:
     title: "Maxime Lenne resume"
     title_ats: "Maxime Lenne resume (ATS version)"
-    headline: "CTO, Tech advisor, sparring partner"
-    headline_main: "CTO, Tech advisor,"
-    headline_highlight: "sparring partner"
+    headline: "CTO, Head of Engineering, Engineering Manager"
+    headline_main: "CTO, Head of Engineering,"
+    headline_highlight: "Engineering Manager"
     intro:
       - "After several years in CTO positions, I've gained solid experience in <strong>entrepreneurship</strong>, <strong>innovation</strong>, <strong>management</strong> and <strong>product</strong>, while continuing to hone my technical skills."
       - "I've worked as CTO in startups like Frizbiz and EcoTa.co (which I co-founded), as well as in service companies like theTribe and Ippon."

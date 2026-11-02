@@ -1,14 +1,13 @@
 ---
 notion_id: 208adcda-de97-443f-b8e8-613501314a28
-title: Analyste programmeur TMA crédit chez Caisse d'épargne (Atos Origin Intégration)
-  (2007-2009)
+title: Analyste programmeur TMA crédit chez Caisse d'épargne (2007-2008)
 slug: analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration
 layout: experience
-company: Caisse d'épargne (Atos Origin Intégration)
+company: Caisse d'épargne
 company_url: https://www.caisse-epargne.fr/
 role: Analyste programmeur TMA crédit
-start_date: '2007-01-01'
-end_date: '2009-12-31'
+start_date: '2007-11-01'
+end_date: '2008-12-31'
 current: false
 location: Lille, France
 type: CDI / Full-time
@@ -32,6 +31,7 @@ missions:
 - Suivi des indicateurs et recadrage de l'activité de l'équipe, participation aux
   points mensuels de la TMA et aux réunions des référents fonctionnels
 - Suivi de production des traitements batch et mise en production de correctifs
+parent_id: 40c93271-2dfb-8157-ab62-f1baceb6a7ba
 lang: fr
 alternate_lang: en
 alternate_url: "/en/experiences/analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration/"

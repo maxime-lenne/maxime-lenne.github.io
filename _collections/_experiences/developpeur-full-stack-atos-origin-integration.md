@@ -1,13 +1,13 @@
 ---
 notion_id: f11e2f07-c2c8-41f4-b780-56632c6de73f
-title: Développeur full stack chez Atos Origin Intégration (2009-2010)
+title: Développeur full stack chez Conseil Régional du Nord-Pas-de-Calais (2009)
 slug: developpeur-full-stack-atos-origin-integration
 layout: experience
-company: Atos Origin Intégration
+company: Conseil Régional du Nord-Pas-de-Calais
 company_url: https://atos.net/
 role: Développeur full stack
 start_date: '2009-01-01'
-end_date: '2010-12-31'
+end_date: '2009-09-30'
 current: false
 location: Lille, France
 type: CDI / Full-time
@@ -31,6 +31,7 @@ missions:
   Régional
 - Développeur full stack Java / JEE sur quatre applications web du Conseil Régional
 - Développeur full stack Java / JEE sur le projet Datafluides de Cema Froid
+parent_id: 40c93271-2dfb-8157-ab62-f1baceb6a7ba
 lang: fr
 alternate_lang: en
 alternate_url: "/en/experiences/developpeur-full-stack-atos-origin-integration/"

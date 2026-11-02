@@ -1,11 +1,11 @@
 ---
 notion_id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
-title: Co-fondateur chez EcoTa.co (2012-2017)
+title: CPTO - Co-fondateur chez EcoTa.co (2012-2017)
 company: EcoTa.co
 company_url:
-role: Co-fondateur
-start_date: '2012-01-01'
-end_date: '2017-01-01'
+role: CPTO - Co-fondateur
+start_date: '2012-12-01'
+end_date: '2017-07-31'
 current: false
 location: Lille, France
 type: Founder

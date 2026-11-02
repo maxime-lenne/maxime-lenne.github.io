@@ -1,14 +1,13 @@
 ---
 notion_id: 208adcda-de97-443f-b8e8-613501314a28
-title: Credit application maintenance analyst programmer at Caisse d'épargne (Atos
-  Origin Intégration) (2007-2009)
+title: Credit application maintenance analyst programmer at Caisse d'épargne (2007-2008)
 slug: analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration
 layout: experience
-company: Caisse d'épargne (Atos Origin Intégration)
+company: Caisse d'épargne
 company_url: https://www.caisse-epargne.fr/
 role: Credit application maintenance analyst programmer
-start_date: '2007-01-01'
-end_date: '2009-12-31'
+start_date: '2007-11-01'
+end_date: '2008-12-31'
 current: false
 location: Lille, France
 type: Full-time
@@ -32,6 +31,7 @@ missions:
 - Tracked indicators and steered the team's activity, took part in monthly application
   maintenance reviews and business referent meetings
 - Monitored production batch jobs and deployed fixes
+parent_id: 40c93271-2dfb-8157-ab62-f1baceb6a7ba
 lang: en
 alternate_lang: fr
 alternate_url: "/experiences/analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration/"

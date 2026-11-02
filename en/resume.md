@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Resume: CTO, tech advisor and product builder"
+title: "Resume: CTO, Head of Engineering, Engineering Manager"
 description: "Maxime Lenne's career: CTO at Ippon and theTribe, CPTO, Le Wagon teacher. Experience, skills, education and awards."
 lang: en
 permalink: /en/resume/
@@ -26,7 +26,7 @@ profile_page: true
       
       {% include components/title-hero.html 
         main_text="Maxime Lenne"
-        highlight_text=t.hero.role %}
+        highlight_text=t.cv_print.headline %}
         
       <div class="deep-stack-cv-hero__contact">
         <div class="deep-stack-cv-hero__contact-item">
