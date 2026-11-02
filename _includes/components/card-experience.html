@@ -37,7 +37,7 @@
     {% if include.tags %}
       <div class="card-experience__tags">
         {% for tag in include.tags limit: 3 %}
-          {% include components/badge.html style="services" text=tag %}
+          {% include components/badge.html text=tag %}
         {% endfor %}
       </div>
     {% endif %}
@@ -58,7 +58,7 @@
     {% if include.skills %}
     <div class="card-experience__skills">
       {% for skill in include.skills limit: 6 %}
-        {% include components/badge.html style="services" text=skill %}
+        {% include components/badge.html text=skill %}
       {% endfor %}
     </div>
     {% endif %}

@@ -19,10 +19,8 @@
     <ul class="deep-stack-cv-skills__list">
       {% for skill in sorted_skills limit: skills_limit %}
 {% include resume/skill-name.html skill=skill %}
-      <li class="deep-stack-cv-skills__item"
-          title="{{ res_skill_name }}{% if skill.years %} - {{ skill.years }} {{ t.skills_years }}{% endif %}{% if res_skill_desc %} - {{ res_skill_desc }}{% endif %}">
-        {% if skill.icon %}{{ skill.icon }} {% endif %}{{ res_skill_name }}
-      </li>
+      {% capture skill_title %}{{ res_skill_name }}{% if skill.years %} - {{ skill.years }} {{ t.skills_years }}{% endif %}{% if res_skill_desc %} - {{ res_skill_desc }}{% endif %}{% endcapture %}
+      {% include components/skill-badge.html text=res_skill_name icon=skill.icon title=skill_title %}
       {% endfor %}
     </ul>
 
@@ -45,10 +43,8 @@
         <ul class="deep-stack-cv-skills__list">
           {% for skill in sorted_skills %}
           {% include resume/skill-name.html skill=skill %}
-          <li class="deep-stack-cv-skills__item"
-              title="{{ res_skill_name }}{% if skill.years %} - {{ skill.years }} {{ t.skills_years }}{% endif %}{% if res_skill_desc %} - {{ res_skill_desc }}{% endif %}">
-            {% if skill.icon %}{{ skill.icon }} {% endif %}{{ res_skill_name }}
-          </li>
+          {% capture skill_title %}{{ res_skill_name }}{% if skill.years %} - {{ skill.years }} {{ t.skills_years }}{% endif %}{% if res_skill_desc %} - {{ res_skill_desc }}{% endif %}{% endcapture %}
+          {% include components/skill-badge.html text=res_skill_name icon=skill.icon title=skill_title %}
           {% endfor %}
         </ul>
       </div>
