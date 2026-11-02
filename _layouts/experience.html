@@ -84,7 +84,7 @@ layout: default
         {% if page.tags.size > 0 %}
         <div class="experience-page__tags">
           {% for tag in page.tags %}
-            {% include components/badge.html text=tag %}
+            {% include components/badge.html style="services" text=tag %}
           {% endfor %}
         </div>
         {% endif %}
