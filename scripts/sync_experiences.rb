@@ -64,6 +64,7 @@ def slugify(text)
 end
 
 # "CTO agence Lille chez Ippon (2024)", "CTO as a Service chez White Wood Tech (depuis 2024)".
+# Without a start date in Notion the years are left out.
 # A current job keeps the end date Notion computes, only `current` counts.
 def seo_title(experience)
   start_year = notion_value(experience, 'start_date').to_s[0, 4]
@@ -73,7 +74,8 @@ def seo_title(experience)
           else "#{start_year}-#{end_year}"
           end
   employer = experience['company'] == 'Freelance' ? 'en freelance' : "chez #{experience['company']}"
-  "#{experience['role']} #{employer} (#{years})"
+  title = "#{experience['role']} #{employer}"
+  years.empty? ? title : "#{title} (#{years})"
 end
 
 # "Agency CTO, Lille at Ippon (2024)", "CTO as a Service at White Wood Tech (since 2024)"
@@ -85,7 +87,8 @@ def seo_title_en(experience)
           else "#{start_year}-#{end_year}"
           end
   employer = experience['company'] == 'Freelance' ? 'freelance' : "at #{experience['company']}"
-  "#{english(experience, 'role')} #{employer} (#{years})"
+  title = "#{english(experience, 'role')} #{employer}"
+  years.empty? ? title : "#{title} (#{years})"
 end
 
 def present?(value)
