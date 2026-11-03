@@ -13,6 +13,28 @@ layout: default
 {% assign page_children = site[page.collection] | where: "parent_id", page.notion_id | sort: "start_date" | reverse %}
 {% for child in page_children %}{% for skill in child.skills %}{% assign page_skills = page_skills | push: skill %}{% endfor %}{% endfor %}
 {% assign page_skills = page_skills | compact | uniq %}
+{% comment %} Tech skills: a category with Tech? checked in Notion. French and English names, English pages hold the latter {% endcomment %}
+{% assign tech_categories = site.data.notion_skill_categories | where: "tech", true | map: "name" %}
+{% assign tech_skill_names = '' | split: '' %}
+{% for skill in site.data.notion_skills_print %}
+  {% comment %} One category comes as a string, several as an array: for loops over both {% endcomment %}
+  {% for category in skill.category %}
+    {% if tech_categories contains category %}
+      {% assign tech_skill_names = tech_skill_names | push: skill.name %}
+      {% if skill.name_en %}{% assign tech_skill_names = tech_skill_names | push: skill.name_en %}{% endif %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+{% assign page_soft_skills = '' | split: '' %}
+{% assign page_tech_skills = '' | split: '' %}
+{% for skill in page_skills %}
+  {% if tech_skill_names contains skill %}
+    {% assign page_tech_skills = page_tech_skills | push: skill %}
+  {% else %}
+    {% assign page_soft_skills = page_soft_skills | push: skill %}
+  {% endif %}
+{% endfor %}
 {% if page.about or page_skills.size > 0 %}{% assign has_aside = true %}{% else %}{% assign has_aside = false %}{% endif %}
 {% if page.current %}
   {% assign end_year = t.present %}
@@ -172,11 +194,24 @@ layout: default
       {% if page_skills.size > 0 %}
       <section class="experience-page__card" aria-labelledby="experience-skills">
         <h2 class="experience-page__card-title" id="experience-skills">{{ t.skills_used }}</h2>
+        {% comment %} Non-tech skills first, then the tech ones under a separator {% endcomment %}
+        {% if page_soft_skills.size > 0 %}
         <ul class="deep-stack-cv-skills__list">
-          {% for skill in page_skills %}
+          {% for skill in page_soft_skills %}
           {% include components/skill-badge.html text=skill %}
           {% endfor %}
         </ul>
+        {% endif %}
+        {% if page_soft_skills.size > 0 and page_tech_skills.size > 0 %}
+        <hr class="experience-page__skills-separator">
+        {% endif %}
+        {% if page_tech_skills.size > 0 %}
+        <ul class="deep-stack-cv-skills__list">
+          {% for skill in page_tech_skills %}
+          {% include components/skill-badge.html text=skill %}
+          {% endfor %}
+        </ul>
+        {% endif %}
       </section>
       {% endif %}
     </aside>
