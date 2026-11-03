@@ -246,6 +246,25 @@
     font-weight: 700;
   }
 
+  // Skills as an inline list, separated by a middle dot
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+
+  &__skill:not(:last-child)::after {
+    content: '·';
+    margin: 0 8px;
+    color: var(--color-text-tertiary);
+  }
+
   // Between the non-tech and the tech skills
   &__skills-separator {
     margin: var(--space-md) 0;
