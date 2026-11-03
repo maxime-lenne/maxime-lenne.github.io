@@ -25,7 +25,7 @@ skills:
 - Git, GitHub, GitLab
 - Lovable
 - Notion
-- 'GCP : Google Cloud Plateform'
+- 'GCP : Google Cloud Platform'
 - Python
 - TypeScript
 - React
@@ -36,7 +36,7 @@ skills:
 - Refonte technique
 - Vision, visualisation
 - Pensée stratégique
-- Résolution de problème
+- Résolution de problèmes
 - Redis
 description: Suite à l'audit IT 360 de cette startup de l'industrie 4.0, je l'ai accompagnée
   en tant que CTO à temps partagé pour fiabiliser le MVP et définir la vision et la

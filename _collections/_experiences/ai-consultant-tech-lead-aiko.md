@@ -1,14 +1,14 @@
 ---
 notion_id: 40c93271-2dfb-808a-9b3c-dd72c8522504
-title: Consultant - Tech Lead chez Aiko (2026)
+title: Consultant - Tech Lead chez Aiko (depuis 2026)
 slug: ai-consultant-tech-lead-aiko
 layout: experience
 company: Aiko
 company_url:
 role: Consultant - Tech Lead
 start_date: '2026-04-01'
-end_date: '2026-11-30'
-current: false
+end_date:
+current: true
 location: Lille / Paris / Grenoble, France
 type: Freelance
 order: 0
@@ -45,8 +45,8 @@ missions:
 - 'Formation d''une équipe tech, QA et PO à l''agentic coding : bases des agents et
   Claude Code d''Anthropic'
 - Création d’un agent IA conversationnel avec RAG pour le support utilisateur
-- Création d'un agent IA avec RAG pour l’archivage, la classification d’email et pièce
-  jointe
+- Création d'un agent IA avec RAG pour l'archivage et la classification d'e-mails
+  et de pièces jointes
 - 'Atelier pour un cabinet de conseil : génération de présentations PowerPoint avec
   un agent IA'
 parent_id: 2f493271-2dfb-8003-b0e9-c49f62faaebf

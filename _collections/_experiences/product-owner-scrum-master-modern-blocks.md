@@ -31,7 +31,7 @@ about: Modern Blocks était une start-up bruxelloise, lancée en 2016, qui venda
 achievements:
 - Création d'une marketplace photo en Ruby on Rails avec une équipe de 3 développeurs
 - Montée en compétence d'un développeur au rôle de Product Owner
-- Contribution à la librairie open source Moltin
+- Contribution à la bibliothèque open source Moltin
 missions:
 - Définition de l'architecture sur l'API e-commerce Moltin, alternative à PrestaShop
   ou Magento, pour se concentrer sur les fonctionnalités à forte valeur (marketplace,

@@ -24,7 +24,7 @@ skills:
 - Vision, visualisation
 - Arbitrage et Priorisation
 - Tableaux de bord, KPIs
-description: Conception de micro-services en mode API first dans le cadre du projet
+description: Conception de microservices en mode API first dans le cadre du projet
   BeAPI, point de départ de la transformation numérique chez Norauto à travers une
   refonte technique bas niveau.
 about: Norauto est une enseigne française d'entretien, de réparation et d'équipement
@@ -37,7 +37,7 @@ missions:
 - Définition de la vision et de la stratégie d'intégration des produits au sein de
   l'existant
 - Découpage en lots cohérents et planification
-- Gestion du product backlog et écriture des Users Stories
+- Gestion du product backlog et écriture des user stories
 - Interviews du métier et des potentiels consommateurs
 parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: fr

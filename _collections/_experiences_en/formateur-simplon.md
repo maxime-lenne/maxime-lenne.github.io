@@ -4,7 +4,7 @@ title: Teacher at Simplon (2025-2026)
 slug: formateur-simplon
 layout: experience
 company: Simplon
-company_url: https://www.simplon.co
+company_url:
 role: Teacher
 start_date: '2025-10-01'
 end_date: '2026-06-01'
@@ -28,7 +28,7 @@ skills:
 - Jupyter Notebook
 - Streamlit
 - Langfuse
-- 'GCP : Google Cloud Plateform'
+- 'GCP: Google Cloud Platform'
 - RAG
 description: 'Seven-month certified “AI developer” course for a cohort: from Python
   and TypeScript programming basics to the cloud, CI/CD, databases and ETL, then from

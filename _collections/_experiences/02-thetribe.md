@@ -4,7 +4,7 @@ title: CTO agence Lille chez theTribe (2022-2024)
 slug: cto-thetribe
 layout: experience
 company: theTribe
-company_url: https://thetribe.io/
+company_url:
 role: CTO agence Lille
 start_date: '2022-06-01'
 end_date: '2024-02-29'
@@ -31,6 +31,7 @@ skills:
 - Node.js
 - Laravel
 - Pilotage prestataires
+- Craftsmanship
 description: Management d'agence et stratégie produit. Développement d'équipe et direction
   technique. Leadership dans les partenariats technologiques et l'offre de services.
 about: theTribe est un Tech&Product Studio qui accompagne les entrepreneurs et les
@@ -60,7 +61,7 @@ missions:
   no-code (embauche d''un product builder), structuration d''une offre de run'
 - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
 - 'Participer au développement de la visibilité et de la notoriété locale et nationale
-  de the Tribe : participation à des salons, Meetup'
+  de theTribe : participation à des salons, meetups'
 - 'Missions clients à forte valeur ajoutée : Audit, architecture'
 - Directeur d'agence par intérim pendant 5 mois
 lang: fr

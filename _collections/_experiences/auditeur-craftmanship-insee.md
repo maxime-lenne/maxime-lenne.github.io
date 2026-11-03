@@ -13,8 +13,24 @@ location: Lille, France
 type: Prestation
 order: 0
 logo_url: "/assets/images/companies/insee.png"
-tags: []
-skills: Audit
+tags:
+- Secteur Public
+skills:
+- Audit
+- JavaScript
+- React
+- TypeScript
+- Craftsmanship
+- Feedback
+- Arbitrage et Priorisation
+- Flexibilité et adaptabilité
+- Autonomie
+- Compétence analytique
+- Esprit critique
+- Assertivité
+- 'Monitoring : New Relic, Elastic Cloud'
+- Java
+- CI/CD
 description: Réalisation et restitution d'un assessment craft de 10 jours, sur 6 piliers
   (agilité, autonomie des équipes, codebase trust, architecture design, pratiques
   DevOps, communauté), dans 3 équipes lilloises de l'INSEE.
@@ -22,13 +38,12 @@ about: L'Insee (Institut national de la statistique et des études économiques)
   l'organisme public français chargé de collecter, produire, analyser et diffuser
   des informations sur l'économie et la société françaises.
 achievements:
-- Assessment craft de 10 jours, sur 6 piliers (Agilité, Autonomie, codebase, architecture,
-  devops, communauté) dans 3 équipes lilloises de l'INSEE
+- Assessment craft de 10 jours, sur 6 piliers (agilité, autonomie, codebase, architecture,
+  DevOps, communauté) dans 3 équipes lilloises de l'INSEE
 missions:
 - Audit des assets techniques
-- Interviews développeur, tech lead, PO
+- Entretiens avec les développeurs, tech leads et PO
 - Rédaction du rapport
-- Construction du budget 2025 de l'agence
 - Soutenance de l'assessment devant la direction technique nationale
 parent_id: 34ada855-7e8a-42f2-808e-288deb6f53c9
 lang: fr

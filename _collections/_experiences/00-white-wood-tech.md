@@ -21,8 +21,8 @@ skills:
 - Agentic coding
 - Gen IA & LLM
 - Vision, Roadmap et Stratégie
-- Prévisionnel financiers
-- suivi de trésorerie
+- Prévisionnels financiers
+- Suivi de trésorerie
 - Agent IA
 - MCP
 - n8n

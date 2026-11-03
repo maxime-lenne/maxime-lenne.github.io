@@ -1,11 +1,11 @@
 ---
 notion_id: ddded262-0459-4756-baa4-96d73ed8ee5c
-title: Développeur full stack chez Atos Origin Worldline (2009-2010)
+title: Ingénieur études et développement Java / JEE chez Atos Origin Worldline (2009-2010)
 slug: ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-spop
 layout: experience
 company: Atos Origin Worldline
 company_url: https://worldline.com/
-role: Développeur full stack
+role: Ingénieur études et développement Java / JEE
 start_date: '2009-10-01'
 end_date: '2010-02-28'
 current: false
