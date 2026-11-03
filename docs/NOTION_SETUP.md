@@ -12,6 +12,7 @@ Créez un fichier `.env` à la racine du projet (non commité) :
 # .env
 NOTION_TOKEN=secret_xxx
 NOTION_SKILLS_DB=xxx
+NOTION_SKILL_CATEGORIES_DB=xxx
 NOTION_EXPERIENCES_DB=xxx
 NOTION_AWARDS_DB=xxx
 NOTION_CONTRIBUTIONS_DB=xxx
@@ -287,6 +288,9 @@ directement (`NOTION_ITEMS_DB`, `_data/notion_items.yml`) : les formules Notion 
 Print à travers l'API. Les compétences sont lues une deuxième fois à plat (`_data/notion_skills_print.yml`), car
 l'organiseur par catégorie ne garde pas les propriétés ajoutées. Leur regroupement dans le PDF est défini par
 `cv_print.skill_groups` dans `_data/translations.yml`.
+La base **Skills Categories** est lue aussi (`NOTION_SKILL_CATEGORIES_DB`, `_data/notion_skill_categories.yml`)
+pour sa case **Tech?** : la page d'une expérience affiche ses compétences non techniques, puis, sous un séparateur,
+celles dont une catégorie est cochée Tech?.
 
 `make cv` régénère les quatre PDF dans `assets/cv/` et signale ceux qui dépassent deux pages. En production, le
 workflow de déploiement les régénère à chaque build (`scripts/export-cv.sh`). Ajoutez le secret GitHub
@@ -336,6 +340,7 @@ bundle exec jekyll serve
 2. **Ajoutez les secrets suivants** :
    - `NOTION_TOKEN` : Votre token Notion (obligatoire)
    - `NOTION_SKILLS_DB` : L'ID de votre base de données Skills
+   - `NOTION_SKILL_CATEGORIES_DB` : L'ID de la base Skills Categories (case Tech?, lue par la page expérience)
    - `NOTION_EXPERIENCES_DB` : L'ID de votre base de données Experiences
    - `NOTION_AWARDS_DB` : L'ID de votre base de données Awards
    - `NOTION_CONTRIBUTIONS_DB` : L'ID de votre base de données Contributions
@@ -894,6 +899,7 @@ Le plugin est configuré pour se synchroniser automatiquement :
   env:
     NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
     NOTION_SKILLS_DB: ${{ secrets.NOTION_SKILLS_DB }}
+    NOTION_SKILL_CATEGORIES_DB: ${{ secrets.NOTION_SKILL_CATEGORIES_DB }}
     NOTION_EXPERIENCES_DB: ${{ secrets.NOTION_EXPERIENCES_DB }}
     NOTION_AWARDS_DB: ${{ secrets.NOTION_AWARDS_DB }}
     NOTION_CONTRIBUTIONS_DB: ${{ secrets.NOTION_CONTRIBUTIONS_DB }}

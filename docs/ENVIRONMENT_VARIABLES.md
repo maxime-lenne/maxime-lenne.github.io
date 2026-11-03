@@ -16,6 +16,7 @@ NOTION_TOKEN=ntn_your_notion_token_here
 
 # IDs des bases de données Notion (optionnels)
 NOTION_SKILLS_DB=your_skills_database_id
+NOTION_SKILL_CATEGORIES_DB=your_skill_categories_database_id
 NOTION_EXPERIENCES_DB=your_experiences_database_id
 NOTION_AWARDS_DB=your_awards_database_id
 NOTION_CONTRIBUTIONS_DB=your_contributions_database_id

@@ -235,6 +235,17 @@ notion:
         - { name: Order, type: number }
         - { name: Category, type: rollup }
 
+    # Skill categories, for their Tech? box: the experience page splits its skills on it
+    skill_categories:
+      database_env: NOTION_SKILL_CATEGORIES_DB
+      data_file: notion_skill_categories.yml
+      organizer: simple_list
+      sort_by: order
+      properties:
+        - { name: Name, type: title }
+        - { name: "Tech?", type: checkbox, key: tech }
+        - { name: Order, type: number }
+
     awards:
       database_env: NOTION_AWARDS_DB
       data_file: notion_awards.yml
