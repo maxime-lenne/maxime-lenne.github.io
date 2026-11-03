@@ -27,7 +27,7 @@ skills:
 - Gen IA & LLM
 - Vision, Roadmap et Stratégie
 - Mentoring
-- Animation d’équipes / communautés
+- Animation d'équipes / communautés
 - Arbitrage et Priorisation
 - Autonomie
 - Flexibilité et adaptabilité

@@ -115,6 +115,7 @@ def english_values(experience, items_by_id, skills_by_name, translations)
     'description' => english(experience, 'description'),
     'about' => english(experience, 'about'),
     'type' => translations.dig('cv_print', 'types', experience['type']) || experience['type'],
+    'location' => translations.dig('resume_page', 'locations', experience['location']) || experience['location'],
     'tags' => Array(experience['tags']).map { |tag| translations.dig('resume_page', 'tags', tag) || tag },
     'skills' => Array(experience['skills']).map do |name|
       skill = skills_by_name[name]

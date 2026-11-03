@@ -57,11 +57,11 @@ missions:
   d'évaluer et d'accompagner la montée en compétences des équipes
 - Animation de l'agence, rituels, weekly d'agence, séminaires, talks internes
 - Suivi des projets clients en cours, soutien technique, COPIL
-- 'Construire ou faire évoluer l''offre de service : création d''une offre de solution
+- 'Construction et évolution de l''offre de service : création d''une offre de solution
   no-code (embauche d''un product builder), structuration d''une offre de run'
 - 'Lead et mise en place de partenariats technologiques : Scaleway, Strapi'
-- 'Participer au développement de la visibilité et de la notoriété locale et nationale
-  de theTribe : participation à des salons, meetups'
+- 'Développement de la visibilité et de la notoriété locale et nationale de theTribe
+  : participation à des salons, meetups'
 - 'Missions clients à forte valeur ajoutée : Audit, architecture'
 - Directeur d'agence par intérim pendant 5 mois
 lang: fr

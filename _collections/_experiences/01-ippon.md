@@ -30,16 +30,16 @@ about: 'Ippon est un cabinet de conseil et d''expertise en technologie, internat
   travers les practices suivantes : Software Engineering, Cloud & DevOps, Data & IA,
   Modern Architecture, Mobile, Produit, Agilité & Design.'
 achievements:
-- Direction de l'agence et management de 5 managers et 35+ consultants pluridisciplinaires
+- Direction de l'agence et management de 5 managers et +35 consultants pluridisciplinaires
 - Croissance de 20% du chiffre d'affaires malgré un contexte économique tendu
 missions:
 - Accompagnement de l'équipe lilloise, recrutement, formation, coaching
 - Management des managers de l'équipe lilloise, entretiens individuels toutes les
   deux semaines, ateliers d'équipe / co-construction, suivi des objectifs, entretiens
   annuels
-- 'Participer au développement de la visibilité et de la notoriété locale et nationale
-  d''Ippon : stand au DevFest Lille, animation d''une table ronde sur le craftsmanship,
-  organisation et hébergement de meetups locaux, interview promotionnelle WeLoveDev'
+- 'Développement de la visibilité et de la notoriété locale et nationale d''Ippon
+  : stand au DevFest Lille, animation d''une table ronde sur le craftsmanship, organisation
+  et hébergement de meetups locaux, interview promotionnelle WeLoveDev'
 - 'Missions clients à forte valeur ajoutée : Assessment Craft, audit, architecture,
   tech lead'
 - Participation aux phases d'avant-vente, compréhension des besoins et enjeux clients,

@@ -31,7 +31,7 @@ skills:
 - Astro
 description: J'ai rejoint Frizbiz 6 ans après son lancement, lors de la création du
   poste de CTO. Je suis arrivé pour la conception d'un nouveau produit sur le modèle
-  BtoB et BtoBtoC à destination des partenaires et avec pour objectif transverse une
+  B2B et B2B2C à destination des partenaires et avec pour objectif transverse une
   refonte technique de l'existant.
 about: Frizbiz est une plateforme française de mise en relation entre particuliers
   et « jobbers » pour les petits travaux à domicile (bricolage, montage de meubles,
