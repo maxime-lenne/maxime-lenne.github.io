@@ -697,6 +697,9 @@ en:
       "Prestation": "Client assignment"
       "Internship": "Internship"
       "Apprenticeship": "Apprenticeship"
+    # Notion « Project » of the awards; a value missing here is shown as is
+    projects:
+      "Projet innovation": "Innovation project"
     skill_groups:
       - title: "Management & entrepreneurship"
         categories: ["Management & Entrepreneurship"]

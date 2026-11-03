@@ -1,11 +1,11 @@
 ---
 notion_id: 208adcda-de97-443f-b8e8-613501314a28
-title: Credit application maintenance analyst programmer at Caisse d'Épargne (2007-2008)
+title: Analyst programmer, credit application maintenance at Caisse d'Épargne (2007-2008)
 slug: analyste-programmeur-tma-credit-caisse-d-epargne-atos-origin-integration
 layout: experience
 company: Caisse d'Épargne
 company_url: https://www.caisse-epargne.fr/
-role: Credit application maintenance analyst programmer
+role: Analyst programmer, credit application maintenance
 start_date: '2007-11-01'
 end_date: '2008-12-31'
 current: false
