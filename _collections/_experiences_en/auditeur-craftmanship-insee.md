@@ -28,7 +28,7 @@ skills:
 - Analytical skills
 - Critical thinking
 - Assertiveness
-- 'Monitoring : New Relic, Elastic Cloud'
+- 'Monitoring: New Relic, Elastic Cloud'
 - Java
 - CI/CD
 description: Ran and presented a 10-day craft assessment on 6 pillars (agility, team

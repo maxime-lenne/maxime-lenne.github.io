@@ -89,7 +89,8 @@
 {% capture cv_award_items %}
   {% for award in cv_awards %}
     {% if lang == 'en' and award.title_en.size > 0 %}{% assign cv_title = award.title_en %}{% else %}{% assign cv_title = award.title %}{% endif %}
-    <li><strong>{{ cv_title }}</strong><span>{% if award.project.size > 0 %}{{ award.project }} · {% endif %}{{ award.date.start | date: '%Y' }}</span></li>
+    {% assign cv_project = t.projects[award.project] | default: award.project %}
+    <li><strong>{{ cv_title }}</strong><span>{% if cv_project.size > 0 %}{{ cv_project }} · {% endif %}{{ award.date.start | date: '%Y' }}</span></li>
   {% endfor %}
 {% endcapture %}
 
