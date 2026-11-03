@@ -1,6 +1,7 @@
 ---
 notion_id: d6fe15bb-01b7-4c35-b7b0-0a45847c4e0e
 title: Formateur chez Le Wagon (2018-2019)
+slug: formateur-le-wagon
 company: Le Wagon
 company_url: https://www.lewagon.com/
 role: Formateur
@@ -36,5 +37,7 @@ missions:
 parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: fr
 alternate_lang: en
-alternate_url: "/en/experiences/04-lewagon/"
+alternate_url: "/en/experiences/formateur-le-wagon/"
+redirect_from:
+- "/experiences/04-lewagon/"
 ---

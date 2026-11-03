@@ -244,7 +244,7 @@ profile_page: true
               <h3 class="deep-stack-cv-education__degree">{{ education.title_en | default: education.title }}</h3>
               {% assign education_start = education.start_date.start | default: education.start_date | date: "%Y" %}
               {% assign education_end = education.end_date.start | default: education.end_date | date: "%Y" %}
-              <p class="deep-stack-cv-education__school">{{ education.institution_en | default: education.institution }} - {{ education_start }}{% if education_end != "" and education_end != education_start %} – {{ education_end }}{% endif %}</p>
+              <p class="deep-stack-cv-education__school">{{ education.institution_en | default: education.institution }} · {{ education_start }}{% comment %} A missing end date comes as an empty Notion date, not a year {% endcomment %}{% if education_end.size == 4 and education_end != education_start %} – {{ education_end }}{% endif %}</p>
             </div>
           </div>
           {% endfor %}
@@ -272,7 +272,7 @@ profile_page: true
               </div>
               <div class="deep-stack-cv-awards__content">
                 <h3 class="deep-stack-cv-awards__title-item">{{ award.title_en | default: award.title }}</h3>
-                <p class="deep-stack-cv-awards__organization">{{ award.organization }} - {{ award.date.start | default: award.date | date: "%Y" }}</p>
+                <p class="deep-stack-cv-awards__organization">{{ award.organization }} · {{ award.date.start | default: award.date | date: "%Y" }}</p>
               </div>
           </div>
         {% endfor %}
@@ -309,7 +309,7 @@ profile_page: true
         {% include components/cta-info.html 
          item1_icon="🧗‍♂️" item1_text="Climbing, especially bouldering"
          item2_icon="🏂" item2_text="Snowboard & ski"
-         item3_icon="🏒" item3_text="Roller Hockey"
+         item3_icon="🏒" item3_text="Roller hockey"
          item4_icon="⛵️" item4_text="Sailing" %}
       </div>
     </div>

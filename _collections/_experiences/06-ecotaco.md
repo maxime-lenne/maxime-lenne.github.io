@@ -1,6 +1,7 @@
 ---
 notion_id: 112d39b2-7a45-4aa1-8829-5ee1121297ec
 title: CTO - Co-fondateur chez EcoTa.co (2012-2017)
+slug: cto-cofondateur-ecotaco
 company: EcoTa.co
 company_url:
 role: CTO - Co-fondateur
@@ -71,5 +72,7 @@ missions:
 - Veille concurrentielle, métier et technique
 lang: fr
 alternate_lang: en
-alternate_url: "/en/experiences/06-ecotaco/"
+alternate_url: "/en/experiences/cto-cofondateur-ecotaco/"
+redirect_from:
+- "/experiences/06-ecotaco/"
 ---

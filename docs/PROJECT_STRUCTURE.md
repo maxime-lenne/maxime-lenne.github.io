@@ -190,6 +190,10 @@ Non-tech skills come first, then a separator and the tech skills: those with a c
 checked in Notion (`_data/notion_skill_categories.yml`, matched through `_data/notion_skills_print.yml`).
 The skills are a plain inline list in the secondary text color, separated by middle dots, not badges.
 
+An experience page URL comes from the `slug` front matter key (role-company), or the file name when there is none.
+When a slug changes, list the old URL under `redirect_from` (jekyll-redirect-from) in both the French and English
+files: `scripts/sync_experiences.rb` keeps it.
+
 ### Collections
 
 Jekyll collections in `_collections/` serve as fallback data when Notion is not available:
