@@ -46,6 +46,7 @@ plugins:
   - jekyll-paginate
   - jekyll-compress-images
   - jekyll-minifier
+  - jekyll-redirect-from
 
 # Plain-text files must keep their line breaks
 jekyll-minifier:

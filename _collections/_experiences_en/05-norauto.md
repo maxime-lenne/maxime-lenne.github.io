@@ -1,6 +1,7 @@
 ---
 notion_id: 4bed8ee6-78c5-4266-9d38-fca30d59387e
 title: Product Owner at Norauto (2017-2018)
+slug: product-owner-norauto
 company: Norauto
 company_url: https://www.norauto.fr/
 role: Product Owner
@@ -41,5 +42,7 @@ missions:
 parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: en
 alternate_lang: fr
-alternate_url: "/experiences/05-norauto/"
+alternate_url: "/experiences/product-owner-norauto/"
+redirect_from:
+- "/en/experiences/05-norauto/"
 ---

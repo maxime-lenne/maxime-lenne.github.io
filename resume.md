@@ -245,7 +245,7 @@ profile_page: true
               <h3 class="deep-stack-cv-education__degree">{{ education.title }}</h3>
               {% assign education_start = education.start_date.start | default: education.start_date | date: "%Y" %}
               {% assign education_end = education.end_date.start | default: education.end_date | date: "%Y" %}
-              <p class="deep-stack-cv-education__school">{{ education.institution }} - {{ education_start }}{% if education_end != "" and education_end != education_start %} – {{ education_end }}{% endif %}</p>
+              <p class="deep-stack-cv-education__school">{{ education.institution }} · {{ education_start }}{% comment %} A missing end date comes as an empty Notion date, not a year {% endcomment %}{% if education_end.size == 4 and education_end != education_start %} – {{ education_end }}{% endif %}</p>
               {% if education.certifications %}
               <div class="deep-stack-cv-education__certifications">
                   {% for cert in education.certifications %}
@@ -282,7 +282,7 @@ profile_page: true
               </div>
               <div class="deep-stack-cv-awards__content">
                 <h3 class="deep-stack-cv-awards__title-item">{{ award.title }}</h3>
-                <p class="deep-stack-cv-awards__organization">{{ award.organization }} - {{ award.date.start | default: award.date | date: "%Y" }}</p>
+                <p class="deep-stack-cv-awards__organization">{{ award.organization }} · {{ award.date.start | default: award.date | date: "%Y" }}</p>
               </div>
           </div>
         {% endfor %}
@@ -300,11 +300,11 @@ profile_page: true
                                 badge_icon="🧗‍♂️"
                                 badge_text="Hobbies"
                                 show_badge="false"
-                                title="Centres d'"
-                                title_highlight="Intérêts" %}
+                                title="Centres"
+                                title_highlight="d'intérêt" %}
         {% include components/cta-info.html 
          item1_icon="🚴" item1_text="vélotafeur"
-         item2_icon="🌱" item2_text="Ecoconception et green IT"
+         item2_icon="🌱" item2_text="Écoconception et green IT"
          item3_icon="🍎" item3_text="Apple" %}
          
         <h3 class="section__title">
@@ -319,7 +319,7 @@ profile_page: true
         {% include components/cta-info.html 
          item1_icon="🧗‍♂️" item1_text="Escalade, surtout bloc"
          item2_icon="🏂" item2_text="Snowboard & ski"
-         item3_icon="🏒" item3_text="Roller Hockey"
+         item3_icon="🏒" item3_text="Roller hockey"
          item4_icon="⛵️" item4_text="Voile" %}
       </div>
     </div>
@@ -328,6 +328,6 @@ profile_page: true
 
 <!-- Final CTA Section -->
 {% include sections/cta-section.html cv_download=true title="Intéressé par mon profil ?" 
-description="Présentez moi vos projets, problématiques, objectifs et discutons ensemble de la façon dont je peux contribuer à leur succès." cta_text="Planifier un entretien" %}
+description="Présentez-moi vos projets, problématiques, objectifs et discutons ensemble de la façon dont je peux contribuer à leur succès." cta_text="Planifier un entretien" %}
 
 {% include sections/resume-load-more.html %}

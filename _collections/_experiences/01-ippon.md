@@ -1,7 +1,7 @@
 ---
 notion_id: 34ada855-7e8a-42f2-808e-288deb6f53c9
 title: CTO agence Lille chez Ippon (2024)
-slug: cto-ippon
+slug: cto-agence-lille-ippon
 layout: experience
 company: Ippon
 company_url:
@@ -49,5 +49,7 @@ missions:
 - Suivi des clients en cours et identification de nouvelles opportunités
 lang: fr
 alternate_lang: en
-alternate_url: "/en/experiences/cto-ippon/"
+alternate_url: "/en/experiences/cto-agence-lille-ippon/"
+redirect_from:
+- "/experiences/cto-ippon/"
 ---

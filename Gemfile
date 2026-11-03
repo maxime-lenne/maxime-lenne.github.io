@@ -13,6 +13,7 @@ group :jekyll_plugins do
   gem "jekyll-compress-images", "~> 1.1" # Image optimization
   gem "jekyll-minifier", "~> 0.1"       # HTML/CSS/JS compression
   gem "jekyll-notion-cms", "~> 1.0.2"     # Notion CMS integration
+  gem "jekyll-redirect-from", "~> 0.16"   # Old URLs of renamed pages
 end
 
 # System gems for Ruby 3.3.12 compatibility
