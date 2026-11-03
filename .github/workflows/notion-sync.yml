@@ -26,6 +26,11 @@ permissions:
   pages: write
   id-token: write
 
+# Same group as the Jekyll deploy: one deployment at a time, a burst of Notion edits keeps only the latest run queued
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -86,6 +91,9 @@ jobs:
           NOTION_TESTIMONIALS_DB: ${{ secrets.NOTION_TESTIMONIALS_DB }}
           NOTION_ITEMS_DB: ${{ secrets.NOTION_ITEMS_DB }}
           NOTION_BLOG_DB: ${{ secrets.NOTION_BLOG_DB }}
+      - name: Export CV PDFs
+        # Same step as jekyll.yml: without it this deploy removes the « Télécharger mon CV » PDFs
+        run: scripts/export-cv.sh _site
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
