@@ -27,11 +27,11 @@ about: 'Le Wagon est une école de code en 9 semaines à temps plein qui apprend
 achievements:
 - Formation de +100 étudiants
 missions:
-- Cours sur le langage Ruby, la programmation orientée objet, base de données SQL
-  et ActiveRecord, HTML et CSS, Bootstrap, JavaScript et ses outils, Middleman, Rails
-  et librairies d'authentification / authorisation
+- Cours sur le langage Ruby, la programmation orientée objet, les bases de données
+  SQL et ActiveRecord, HTML et CSS, Bootstrap, JavaScript et ses outils, Middleman,
+  Rails et les bibliothèques d'authentification / autorisation
 - Accompagnement des étudiants sur les exercices pratiques
-- Animation de Livecode
+- Animation de live codes
 - Accompagnement des étudiants sur les projets finaux
 parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: fr

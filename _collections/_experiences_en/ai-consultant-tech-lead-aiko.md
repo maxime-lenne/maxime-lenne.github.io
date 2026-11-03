@@ -1,14 +1,14 @@
 ---
 notion_id: 40c93271-2dfb-808a-9b3c-dd72c8522504
-title: Consultant - Tech Lead at Aiko (2026)
+title: Consultant - Tech Lead at Aiko (since 2026)
 slug: ai-consultant-tech-lead-aiko
 layout: experience
 company: Aiko
 company_url:
 role: Consultant - Tech Lead
 start_date: '2026-04-01'
-end_date: '2026-11-30'
-current: false
+end_date:
+current: true
 location: Lille / Paris / Grenoble, France
 type: Freelance
 order: 0

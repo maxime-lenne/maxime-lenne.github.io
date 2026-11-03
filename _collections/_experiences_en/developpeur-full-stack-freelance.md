@@ -36,8 +36,8 @@ skills:
 - Photoshop, Illustrator, InDesign
 - JavaScript
 - HTML5
-description: 'Freelance full-stack development missions alongside my other activities:
-  Magento e-commerce and API integrations.'
+description: 'Freelance missions alongside my other roles: product ownership, full-stack
+  development, Magento e-commerce and training.'
 about: Devoriginal was Maxime Lenne's freelance business in Lille (2010–2019), focused
   on web and e-commerce development.
 achievements: []

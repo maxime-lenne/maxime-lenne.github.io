@@ -15,14 +15,13 @@ order: 2
 logo_url: "/assets/images/companies/ippon.jpg"
 tags:
 - ESN
-- Grands Comptes
 skills:
 - Management 3.0
-- Craftmanship
+- Craftsmanship
 - Python
 - 'Django / Flask '
 description: Direction technique d'une agence de plus de 35 consultants réalisant
-  des missions principalement en régie dans des grands groupes (Retail, banque...)
+  des missions principalement en régie dans des grands groupes (retail, banque...)
   et prestations de conseil.
 about: 'Ippon est un cabinet de conseil et d''expertise en technologie, international
   et indépendant. Ippon accompagne la transformation numérique des entreprises, en
@@ -39,8 +38,8 @@ missions:
   deux semaines, ateliers d'équipe / co-construction, suivi des objectifs, entretiens
   annuels
 - 'Participer au développement de la visibilité et de la notoriété locale et nationale
-  d''Ippon : Stand au DevFest lille, animation d''une table ronde sur le craftmanship,
-  organisation et hébergement de meetup locaux, interview promotionnelle WeLoveDev'
+  d''Ippon : stand au DevFest Lille, animation d''une table ronde sur le craftsmanship,
+  organisation et hébergement de meetups locaux, interview promotionnelle WeLoveDev'
 - 'Missions clients à forte valeur ajoutée : Assessment Craft, audit, architecture,
   tech lead'
 - Participation aux phases d'avant-vente, compréhension des besoins et enjeux clients,

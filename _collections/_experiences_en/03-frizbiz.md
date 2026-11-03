@@ -21,7 +21,7 @@ tags:
 skills:
 - Design Sprint
 - TypeScript
-- VueJs
+- Vue.js
 - Node.js
 - Microservices
 - Ruby on Rails

@@ -1,11 +1,11 @@
 ---
 notion_id: 6a3d0190-d746-4eea-851e-d1ceab4ee369
-title: Développeur full stack chez Atos Origin Worldline (2010)
+title: Ingénieur études et développement Java / JEE chez Atos Origin Worldline (2010)
 slug: ingenieur-etudes-et-developpement-java-jee-atos-origin-worldline-massilia
 layout: experience
 company: Atos Origin Worldline
 company_url: https://worldline.com/
-role: Développeur full stack
+role: Ingénieur études et développement Java / JEE
 start_date: '2010-03-01'
 end_date: '2010-10-31'
 current: false
@@ -26,7 +26,7 @@ description: 'Projet Massilia : solution e-commerce générique réalisée en Ja
 about: Atos Origin Worldline était la filiale d'Atos Origin spécialisée dans les paiements
   et les services transactionnels, aujourd'hui Worldline.
 achievements:
-- 'Leader sur l''interface d''administration : création d''une librairie de composants
+- 'Référent sur l''interface d''administration : création d''une bibliothèque de composants
   Tapestry communs et extensibles'
 missions:
 - 'Pilotage des développements offshore (Atos Origin India) : support à la conception

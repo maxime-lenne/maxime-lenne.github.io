@@ -4,7 +4,7 @@ title: Formateur chez Simplon (2025-2026)
 slug: formateur-simplon
 layout: experience
 company: Simplon
-company_url: https://www.simplon.co
+company_url:
 role: Formateur
 start_date: '2025-10-01'
 end_date: '2026-06-01'
@@ -28,7 +28,7 @@ skills:
 - Jupyter Notebook
 - Streamlit
 - Langfuse
-- 'GCP : Google Cloud Plateform'
+- 'GCP : Google Cloud Platform'
 - RAG
 description: 'Formation certifiante « Développeur en intelligence artificielle » d''une
   promotion sur 7 mois : des bases de la programmation en Python et TypeScript au

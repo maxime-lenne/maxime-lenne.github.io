@@ -15,10 +15,9 @@ order: 2
 logo_url: "/assets/images/companies/ippon.jpg"
 tags:
 - IT services
-- Large accounts
 skills:
 - Management 3.0
-- Craftmanship
+- Craftsmanship
 - Python
 - 'Django / Flask '
 description: Technical lead of an agency of 35+ consultants, mostly on long-term assignments
