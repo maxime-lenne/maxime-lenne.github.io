@@ -25,7 +25,7 @@ skills:
 - Product Management
 - Vision, Roadmap et Stratégie
 - Recrutement
-- Prévisionnel financiers
+- Prévisionnels financiers
 - Tableaux de bord, KPIs
 - Gestion des partenariats
 - Veille concurrentielle, métier et technique
@@ -42,7 +42,7 @@ achievements:
 - Opérationnels dans 12 villes, avec +600 chauffeurs, +20K utilisateurs, +500K€ de
   CA en 2015
 - Levée de fonds de 300k€
-- Conception de l'ensemble du SI à base de micro services, APIs publiques et privées,
+- Conception de l'ensemble du SI à base de microservices, APIs publiques et privées,
   de plateformes web et application mobile native
 - Partenariats stratégiques avec la SNCF, Keolis, Booking.com
 - Programme d'incubation, puis d'accélération Euratechnologies, Lauréat de Lille Métropole
@@ -61,7 +61,7 @@ missions:
   de l'infrastructure et de l'applicatif
 - 'Gestion de projets en Agile Scrum, rôle de Product Owner et Scrum Master : recueil
   des besoins des personas, Product Backlog et arbitrages'
-- 'Définition de l''architecture applicative : découpage et conception des micro-services
+- 'Définition de l''architecture applicative : découpage et conception des microservices
   jusqu''au modèle de données, échanges entre services, choix des technologies'
 - 'Qualité et industrialisation : TDD, couverture de tests, revue automatique, pair
   programming, intégration et déploiement continus (Codeship, Code Climate, Jenkins,

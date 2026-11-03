@@ -242,7 +242,9 @@ profile_page: true
             </div>
             <div class="deep-stack-cv-education__content">
               <h3 class="deep-stack-cv-education__degree">{{ education.title_en | default: education.title }}</h3>
-              <p class="deep-stack-cv-education__school">{{ education.institution_en | default: education.institution }} - {{ education.start_date.start | default: education.start_date | date: "%Y" }}</p>
+              {% assign education_start = education.start_date.start | default: education.start_date | date: "%Y" %}
+              {% assign education_end = education.end_date.start | default: education.end_date | date: "%Y" %}
+              <p class="deep-stack-cv-education__school">{{ education.institution_en | default: education.institution }} - {{ education_start }}{% if education_end != "" and education_end != education_start %} – {{ education_end }}{% endif %}</p>
             </div>
           </div>
           {% endfor %}

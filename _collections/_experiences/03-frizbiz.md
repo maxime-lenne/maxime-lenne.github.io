@@ -21,7 +21,7 @@ tags:
 skills:
 - Design Sprint
 - TypeScript
-- VueJs
+- Vue.js
 - Node.js
 - Microservices
 - Ruby on Rails
@@ -42,35 +42,35 @@ achievements:
 - Développement d'un nouveau produit B2B2C, qui devient le produit principal de l'entreprise
   2 ans après
 - Organisation de la refonte technique complète en fil rouge de la marketplace d'origine
-  Frizbiz, qui sera ensuite revendu
+  Frizbiz, qui sera ensuite revendue
 - Mise en place d'un partenariat avec ManoMano
 - Croissance de 200% des utilisateurs
-- Mise en place d'une nouvelle stack avec architecture microservices (NestJs, TypeScript,
+- Mise en place d'une nouvelle stack avec architecture microservices (NestJS, TypeScript,
   Docker, Kubernetes...) avec client web et mobile (Vue.js, Nuxt, Swift, Kotlin...)
 missions:
-- Structuration et Management de l'équipe tech & produit, recrutement, formation,
+- Structuration et management de l'équipe tech & produit, recrutement, formation,
   coaching, définition des objectifs
-- Définition de la roadmap technique et fonctionnel en accord avec la stratégie de
-  l'entreprise
+- Définition de la roadmap technique et fonctionnelle en accord avec la stratégie
+  de l'entreprise
 - Pilotage des développements internes, externes, des fournisseurs et partenaires
   clés
 - Gestion de projets en mode Agile Scrum / Kanban, priorisation et arbitrage des besoins
 - Gestion budget IT, immobilisation, charges salariales, externes, fournisseurs
-- mise en place de rapports, tableau de bord, analytiques, KPIs et outils de surveillance
+- Mise en place de rapports, tableaux de bord, analytiques, KPIs et outils de surveillance
   de l'infrastructure et de l'applicatif
 - Définition de l'architecture technique et applicative, infrastructure, découpage,
-  conception générique et abstraite des micro-services jusqu'au modèle de données,
-  échanges entre les micro-services, choix des technologies utilisées
-- Gestion de la qualité et mise en place des outils et méthodes d'industrialisation,
-  Test Driven Development, tests coverage, code review, peer programming, intégration
-  et déploiement continus (Gitlab)
+  conception générique et abstraite des microservices jusqu'au modèle de données,
+  échanges entre les microservices, choix des technologies utilisées
+- 'Gestion de la qualité et mise en place des outils et méthodes d''industrialisation
+  : Test Driven Development, couverture de tests, revue de code, pair programming,
+  intégration et déploiement continus (GitLab)'
 - Design des APIs publiques et privées. Gestion des partenaires qui intègrent l'API
   et mise à disposition d'un environnement de test pour leurs intégrations
-- Choix des outils SaaS et APIs externes utilisés par l'entreprise (Stripe, zendesk
-  support et sell, slack, Aircall, twilio, sendgrid, google APIs, mapbox, firebase,
-  zapier...)
+- Choix des outils SaaS et APIs externes utilisés par l'entreprise (Stripe, Zendesk
+  Support et Sell, Slack, Aircall, Twilio, SendGrid, Google APIs, Mapbox, Firebase,
+  Zapier...)
 - Organisation de la veille concurrentielle, métier et technique, de l'innovation,
-  R&D, POC, contribution open source, ateliers et démo à destination de l'ensemble
+  R&D, POC, contribution open source, ateliers et démos à destination de l'ensemble
   des collaborateurs de l'entreprise
 lang: fr
 alternate_lang: en

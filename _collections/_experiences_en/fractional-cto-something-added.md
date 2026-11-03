@@ -25,7 +25,7 @@ skills:
 - Git, GitHub, GitLab
 - Lovable
 - Notion
-- 'GCP : Google Cloud Plateform'
+- 'GCP: Google Cloud Platform'
 - Python
 - TypeScript
 - React

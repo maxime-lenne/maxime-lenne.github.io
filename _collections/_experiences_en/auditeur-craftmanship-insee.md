@@ -13,9 +13,24 @@ location: Lille, France
 type: Client assignment
 order: 0
 logo_url: "/assets/images/companies/insee.png"
-tags: []
+tags:
+- Public sector
 skills:
 - Audit
+- JavaScript
+- React
+- TypeScript
+- Craftsmanship
+- Feedback
+- Prioritisation and trade-offs
+- Flexibility and adaptability
+- Autonomy
+- Analytical skills
+- Critical thinking
+- Assertiveness
+- 'Monitoring : New Relic, Elastic Cloud'
+- Java
+- CI/CD
 description: Ran and presented a 10-day craft assessment on 6 pillars (agility, team
   autonomy, codebase trust, architecture design, DevOps practices, community) in 3
   INSEE teams in Lille.
@@ -29,7 +44,6 @@ missions:
 - Audit of the technical assets
 - Interviews with developers, tech leads and POs
 - Wrote the report
-- Built the agency's 2025 budget
 - Presented the assessment to the national technical management
 parent_id: 34ada855-7e8a-42f2-808e-288deb6f53c9
 lang: en
