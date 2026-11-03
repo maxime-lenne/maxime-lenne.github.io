@@ -186,6 +186,8 @@ Company logos sit on a white tile. Logos with a transparent background (`transpa
 `_plugins/transparent_image.rb`) get a margin inside it; logos that bring their own background fill it.
 
 The « Compétences mobilisées » card of an experience page lists its skills, then those of its missions, each once.
+Non-tech skills come first, then a separator and the tech skills: those with a category whose « Tech? » box is
+checked in Notion (`_data/notion_skill_categories.yml`, matched through `_data/notion_skills_print.yml`).
 
 ### Collections
 

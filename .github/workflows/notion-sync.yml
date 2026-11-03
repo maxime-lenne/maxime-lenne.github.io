@@ -78,6 +78,7 @@ jobs:
           JEKYLL_ENV: production
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_SKILLS_DB: ${{ secrets.NOTION_SKILLS_DB }}
+          NOTION_SKILL_CATEGORIES_DB: ${{ secrets.NOTION_SKILL_CATEGORIES_DB }}
           NOTION_EXPERIENCES_DB: ${{ secrets.NOTION_EXPERIENCES_DB }}
           NOTION_AWARDS_DB: ${{ secrets.NOTION_AWARDS_DB }}
           NOTION_CONTRIBUTIONS_DB: ${{ secrets.NOTION_CONTRIBUTIONS_DB }}
