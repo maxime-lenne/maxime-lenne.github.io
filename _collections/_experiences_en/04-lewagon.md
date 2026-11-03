@@ -1,6 +1,7 @@
 ---
 notion_id: d6fe15bb-01b7-4c35-b7b0-0a45847c4e0e
 title: Teacher at Le Wagon (2018-2019)
+slug: formateur-le-wagon
 company: Le Wagon
 company_url: https://www.lewagon.com/
 role: Teacher
@@ -36,5 +37,7 @@ missions:
 parent_id: a4d79834-dbfb-467c-ba4e-86b55acde904
 lang: en
 alternate_lang: fr
-alternate_url: "/experiences/04-lewagon/"
+alternate_url: "/experiences/formateur-le-wagon/"
+redirect_from:
+- "/en/experiences/04-lewagon/"
 ---

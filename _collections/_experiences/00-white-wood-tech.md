@@ -1,7 +1,7 @@
 ---
 notion_id: 2f493271-2dfb-8003-b0e9-c49f62faaebf
 title: CTO as a Service chez White Wood Tech (depuis 2024)
-slug: cto-white-wood-tech
+slug: cto-as-a-service-white-wood-tech
 layout: experience
 company: White Wood Tech
 company_url: https://white-wood.tech
@@ -41,5 +41,7 @@ achievements:
 missions: []
 lang: fr
 alternate_lang: en
-alternate_url: "/en/experiences/cto-white-wood-tech/"
+alternate_url: "/en/experiences/cto-as-a-service-white-wood-tech/"
+redirect_from:
+- "/experiences/cto-white-wood-tech/"
 ---

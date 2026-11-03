@@ -1,7 +1,7 @@
 ---
 notion_id: 6ac2e6b7-6264-4acd-a789-3e1ce9d5b199
 title: Agency CTO, Lille at theTribe (2022-2024)
-slug: cto-thetribe
+slug: cto-agence-lille-thetribe
 layout: experience
 company: theTribe
 company_url:
@@ -61,5 +61,7 @@ missions:
 - Interim agency director for 5 months
 lang: en
 alternate_lang: fr
-alternate_url: "/experiences/cto-thetribe/"
+alternate_url: "/experiences/cto-agence-lille-thetribe/"
+redirect_from:
+- "/en/experiences/cto-thetribe/"
 ---

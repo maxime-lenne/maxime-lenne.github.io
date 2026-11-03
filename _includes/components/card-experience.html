@@ -26,7 +26,7 @@
         {% comment %} A current position ends at « Présent » / « Present », not at a year {% endcomment %}
         {% assign card_start = include.start_date | date: "%Y" %}
         {% if include.current %}{% assign card_end = card_t.experience_current %}{% else %}{% assign card_end = include.end_date | date: "%Y" %}{% endif %}
-        <span class="card-experience__duration">{{ card_start }}{% if card_end != card_start %} - {{ card_end }}{% endif %}</span>
+        <span class="card-experience__duration">{{ card_start }}{% if card_end != card_start %} – {{ card_end }}{% endif %}</span>
       </div>
     </div>
 

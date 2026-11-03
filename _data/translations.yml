@@ -113,6 +113,17 @@ fr:
     skills_years: "ans d'expérience"
     skills_close: "Fermer"
     experience_current: "Présent"
+    # Notion skill categories shown in French; a value missing here is shown as is
+    skill_categories:
+      "Soft Skills": "Soft skills"
+      "Management & Entrepreneurship": "Management & entrepreneuriat"
+      "Methodologies": "Méthodologies"
+      "AI / ML / Data Science": "IA, ML & data science"
+      "Infra, Cloud & DevOps": "Infra, cloud & DevOps"
+      "Data, Databases": "Data & bases de données"
+      "SaaS, Open Source & software": "SaaS, open source & logiciels"
+      "Langages & Frameworks": "Langages & frameworks"
+      "Tools": "Outils"
     experience_details: "En savoir plus"
     contributions_badge: "Mes side projects"
     contributions_title: "Contributions & Projets"
@@ -125,12 +136,12 @@ fr:
     awards_title: "Prix &"
     awards_highlight: "distinctions"
     interests_badge: "Hobbies"
-    interests_title: "Centres d'"
-    interests_highlight: "Intérêts"
+    interests_title: "Centres"
+    interests_highlight: "d'intérêt"
     interests_music: "Musique"
     interests_sports: "Sports"
     final_title: "Intéressé par mon profil ?"
-    final_description: "Présentez moi vos projets, problématiques, objectifs et discutons ensemble de la façon dont je peux contribuer à leur succès."
+    final_description: "Présentez-moi vos projets, problématiques, objectifs et discutons ensemble de la façon dont je peux contribuer à leur succès."
     final_button: "Planifier un entretien"
 
   footer:
@@ -212,7 +223,7 @@ fr:
   experiences:
     title: "Expériences Professionnelles"
     subtitle: "Mon parcours dans la tech"
-    current: "Actuel"
+    current: "Présent"
     previous: "Précédent"
     duration: "Durée"
     location: "Lieu"
@@ -221,7 +232,7 @@ fr:
     achievements: "Réalisations"
     technologies: "Technologies utilisées"
     back_to_resume: "Retour au parcours"
-    present: "Aujourd'hui"
+    present: "Présent"
     logo_alt: "Logo"
     main_achievements: "Principales réalisations"
     missions: "Missions"
@@ -443,7 +454,7 @@ en:
   resume_page:
     badge: "Career profile"
     cto_title: "10+ years in C(P)TO positions"
-    cto_desc: "Management of 40+ profiles (devs, PM/PO, UX/UI)."
+    cto_desc: "Managed 40+ people (devs, PM/PO, UX/UI)."
     tech_title: "20+ years of Tech expertise"
     tech_desc: "360° tech expertise: web, mobile, cloud, devops, AI, no-code..."
     impact_title: "Impact-driven culture and commitment"
@@ -494,7 +505,7 @@ en:
     interests_music: "Music"
     interests_sports: "Sports"
     final_title: "Interested in my profile?"
-    final_description: "Present your projects, challenges, objectives and let's discuss together how I can contribute to their success."
+    final_description: "Tell me about your projects, challenges and goals, and let's discuss how I can help them succeed."
     final_button: "Schedule a meeting"
 
   footer:
@@ -576,7 +587,7 @@ en:
   experiences:
     title: "Professional Experience"
     subtitle: "My journey in tech"
-    current: "Current"
+    current: "Present"
     previous: "Previous"
     duration: "Duration"
     location: "Location"
