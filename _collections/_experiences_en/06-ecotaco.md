@@ -38,7 +38,7 @@ about: Startup that built and ran EcoTaco, a platform connecting customers with 
   private-hire drivers (B2B or B2C). An innovative startup in shared mobility, transport
   and eco-mobility.
 achievements:
-- 'In 5 years: live in 12 cities, 600+ drivers, 20K+ users, €500K+ revenue in 2015'
+- Operating in 12 cities, with 600+ drivers, 20K+ users and €500K+ revenue in 2015
 - Raised €300K
 - Designed the whole system on microservices, public and private APIs, web platforms
   and a native mobile app

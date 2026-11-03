@@ -32,7 +32,7 @@ skills:
 - Creativity
 - CI/CD
 - Elixir, Phoenix
-- API REST, JSON, GeoJSON
+- REST API, JSON, GeoJSON
 - Sketch
 - Postman
 - Ruby on Rails

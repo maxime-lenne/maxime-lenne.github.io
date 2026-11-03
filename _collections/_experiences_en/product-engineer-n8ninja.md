@@ -18,7 +18,7 @@ tags:
 - Product
 skills:
 - n8n
-- 'iOS : Swift'
+- 'iOS: Swift'
 - Figma
 - Claude Code by Anthropic
 description: Created N8Ninja, a cross-platform app for the Apple ecosystem. Handled
