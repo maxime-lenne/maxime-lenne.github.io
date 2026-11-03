@@ -44,7 +44,7 @@ missions:
 - Atelier et formation au développement d'un serveur MCP avec FastMCP
 - 'Formation d''une équipe tech, QA et PO à l''agentic coding : bases des agents et
   Claude Code d''Anthropic'
-- Création d’un agent IA conversationnel avec RAG pour le support utilisateur
+- Création d'un agent IA conversationnel avec RAG pour le support utilisateur
 - Création d'un agent IA avec RAG pour l'archivage et la classification d'e-mails
   et de pièces jointes
 - 'Atelier pour un cabinet de conseil : génération de présentations PowerPoint avec

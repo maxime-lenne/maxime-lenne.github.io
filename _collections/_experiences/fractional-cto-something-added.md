@@ -9,7 +9,7 @@ role: CTO à temps partagé
 start_date: '2025-10-01'
 end_date: '2026-07-31'
 current: false
-location: Barcelona, Spain
+location: Barcelone, Espagne
 type: Freelance
 order: 0
 logo_url: "/assets/images/companies/something-added.png"

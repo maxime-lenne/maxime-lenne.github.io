@@ -12,8 +12,9 @@ current: false
 location: Lille, France
 type: Freelance
 order: 0
-logo_url:
-tags: []
+logo_url: "/assets/images/companies/lematelas.png"
+tags:
+- SMEs
 skills:
 - PHP
 description: Tech lead on the Magento e-commerce solution.

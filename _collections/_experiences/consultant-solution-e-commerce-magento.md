@@ -12,8 +12,9 @@ current: false
 location: Lille, France
 type: Freelance
 order: 0
-logo_url:
-tags: []
+logo_url: "/assets/images/companies/lematelas.png"
+tags:
+- PME
 skills: PHP
 description: Tech lead de la solution e-commerce Magento.
 about: Lematelas.fr est un site français de vente en ligne de literie (matelas, sommiers,

@@ -4,7 +4,7 @@ title: Product Engineer at N8Ninja (since 2024)
 slug: product-engineer-n8ninja
 layout: experience
 company: N8Ninja
-company_url: n8n-ninja.app
+company_url: https://n8n-ninja.app/
 role: Product Engineer
 start_date: '2024-11-30'
 end_date:
@@ -12,7 +12,7 @@ current: true
 location: Lille, France
 type: Founder
 order: 0
-logo_url:
+logo_url: "/assets/images/companies/n8ninja.png"
 tags:
 - Startup
 - Product

@@ -89,9 +89,9 @@ fr:
 
   resume_page:
     badge: "Profil de carrière"
-    cto_title: "+ 10 ans sur des postes de C(P)TO"
-    cto_desc: "Management de + 40 profils (devs, PM / PO, UX / UI)."
-    tech_title: "+ 20 ans d'expertise Tech"
+    cto_title: "+10 ans sur des postes de C(P)TO"
+    cto_desc: "Management de +40 profils (devs, PM / PO, UX / UI)."
+    tech_title: "+20 ans d'expertise Tech"
     tech_desc: "Une expertise tech 360° : web, mobile, cloud, devops, IA, no-code..."
     impact_title: "Culture de l'impact et engagement"
     impact_desc: "La tech au service de résultats concrets pour les utilisateurs, les équipes et le business"
@@ -284,10 +284,10 @@ fr:
       - "Après plusieurs années passées sur des postes de CTO, j'ai acquis une solide expérience dans les domaines de <strong>l'entrepreneuriat</strong>, de <strong>l'innovation</strong>, du <strong>management</strong> et du <strong>produit</strong>, tout en continuant à perfectionner mes compétences techniques."
       - "J'ai évolué en tant que CTO dans des startups comme Frizbiz et EcoTa.co (que j'ai cofondée), ainsi que dans des sociétés de services telles que theTribe et Ippon."
     highlights:
-      - title: "+ 10 ans de C(P)TO"
-        text: "management de + 40 profils (devs, PM / PO, UX / UI)"
-        card: "Management de + 40 profils (devs, PM / PO, UX / UI)"
-      - title: "+ 20 ans de tech"
+      - title: "+10 ans de C(P)TO"
+        text: "management de +40 profils (devs, PM / PO, UX / UI)"
+        card: "Management de +40 profils (devs, PM / PO, UX / UI)"
+      - title: "+20 ans de tech"
         text: "web, mobile, cloud, devops, IA, no-code..."
         card: "Web, mobile, cloud, devops, IA, no-code..."
       - title: "Partenaire du business"
@@ -474,6 +474,9 @@ en:
       "PME": "SMEs"
       "ESN": "IT services"
       "Communautés": "Communities"
+    # Notion locations shown in English; a value missing here is shown as is
+    locations:
+      "Barcelone, Espagne": "Barcelona, Spain"
     experience_details: "Read more"
     contributions_badge: "Side projects"
     contributions_title: "Contributions & Projects"
