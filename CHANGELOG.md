@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.4.0...v1.5.0) (2026-11-03)
+
+### ✨ Features
+
+* Split the experience page skills into non-tech and tech, from the Notion Tech? box ([5ba0a5b](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/5ba0a5bbe8e4c01510b726eb18afc6aff81d4ac8))
+
+### 🐛 Bug Fixes
+
+* Export the CV PDFs in the Notion sync deploy ([775c5a9](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/775c5a9fcb11ae426da23d167076abc6aa447953))
+
 ## [1.4.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.3.0...v1.4.0) (2026-11-02)
 
 ### ✨ Features
