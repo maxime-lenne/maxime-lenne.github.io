@@ -196,9 +196,9 @@ layout: default
         <h2 class="experience-page__card-title" id="experience-skills">{{ t.skills_used }}</h2>
         {% comment %} Non-tech skills first, then the tech ones under a separator {% endcomment %}
         {% if page_soft_skills.size > 0 %}
-        <ul class="deep-stack-cv-skills__list">
+        <ul class="experience-page__skills">
           {% for skill in page_soft_skills %}
-          {% include components/skill-badge.html text=skill %}
+          <li class="experience-page__skill">{{ skill | strip }}</li>
           {% endfor %}
         </ul>
         {% endif %}
@@ -206,9 +206,9 @@ layout: default
         <hr class="experience-page__skills-separator">
         {% endif %}
         {% if page_tech_skills.size > 0 %}
-        <ul class="deep-stack-cv-skills__list">
+        <ul class="experience-page__skills">
           {% for skill in page_tech_skills %}
-          {% include components/skill-badge.html text=skill %}
+          <li class="experience-page__skill">{{ skill | strip }}</li>
           {% endfor %}
         </ul>
         {% endif %}
