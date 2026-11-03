@@ -13,7 +13,10 @@ location: Lille, France
 type: Freelance
 order: 6
 logo_url:
-tags: []
+tags:
+- Startup
+- SMEs
+- Large accounts
 skills:
 - PHP
 - TypeScript

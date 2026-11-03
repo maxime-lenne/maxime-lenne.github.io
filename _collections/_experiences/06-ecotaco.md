@@ -36,12 +36,12 @@ description: 'Cinq ans d''aventure entrepreneuriale, de l''idée au passage à l
   reposant sur une architecture en microservices, des APIs publiques et privées, des
   plateformes web et des applications mobiles natives.'
 about: Startup qui développait et exploitait EcoTaco, une plateforme de mise en relation
-  entre des clients et des chauffeurs VTC professionnels (en BtoB ou BtoC). Une startup
+  entre des clients et des chauffeurs VTC professionnels (en B2B ou B2C). Une startup
   innovante dans la mobilité partagée, le transport et l'éco-mobilité.
 achievements:
 - Opérationnels dans 12 villes, avec +600 chauffeurs, +20K utilisateurs, +500K€ de
   CA en 2015
-- Levée de fonds de 300k€
+- Levée de fonds de 300K€
 - Conception de l'ensemble du SI à base de microservices, APIs publiques et privées,
   de plateformes web et application mobile native
 - Partenariats stratégiques avec la SNCF, Keolis, Booking.com

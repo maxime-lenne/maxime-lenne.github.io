@@ -64,10 +64,10 @@ profile_page: true
       </p>
       <div class="grid-2-columns">
         {% include components/list-horizontal-icon.html 
-          item1_title="+ 10 ans sur des postes de C(P)TO"
-          item1_text="Management de + 40 profils (devs, PM / PO, UX / UI)."
+          item1_title="+10 ans sur des postes de C(P)TO"
+          item1_text="Management de +40 profils (devs, PM / PO, UX / UI)."
           item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>'
-          item2_title="+ 20 ans d'expertise Tech"
+          item2_title="+20 ans d'expertise Tech"
           item2_text="Une expertise tech 360° : web, mobile, cloud, devops, IA, no-code..."
           item2_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>
@@ -79,7 +79,7 @@ profile_page: true
           item1_text="Sparring partner ! Challenger, prioriser, anticiper les impacts techniques dans la stratégie de l'entreprise..."
           item1_icon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>'
           item2_title="Mindset et culture produit"
-          item2_text="Fan de tests, de discovery, d’itérations rapides et d’équipes autonomes" %}
+          item2_text="Fan de tests, de discovery, d'itérations rapides et d'équipes autonomes" %}
       </div>
       
       <div class="cv-download-actions">

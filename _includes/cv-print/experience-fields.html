@@ -20,7 +20,8 @@
 {% capture cv_period %}{% if cv_exp.current %}{{ t.since }} {{ cv_y1 }}{% elsif cv_y2.size > 0 and cv_y2 != cv_y1 %}{{ cv_y1 }} – {{ cv_y2 }}{% else %}{{ cv_y1 }}{% endif %}{% endcapture %}
 
 {% assign cv_type = t.types[cv_exp.type] | default: cv_exp.type %}
-{% assign cv_city = cv_exp.location | split: ',' | first %}
+{% if lang == 'en' %}{% assign cv_location = site.data.translations.en.resume_page.locations[cv_exp.location] | default: cv_exp.location %}{% else %}{% assign cv_location = cv_exp.location %}{% endif %}
+{% assign cv_city = cv_location | split: ',' | first %}
 {% capture cv_meta %}{% if cv_type %}{{ cv_type }}{% endif %}{% if cv_type and cv_city %} · {% endif %}{{ cv_city }}{% endcapture %}
 
 {% assign cv_items = cv_empty %}
