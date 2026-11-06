@@ -120,15 +120,43 @@
       transition: all 0.3s ease;
       text-decoration: none;
       
-      &:hover {
-        background: var(--color-primary);
-        color: white;
+      // Brand colors on hover, set by the network modifiers below
+      &:hover,
+      &:focus-visible {
+        background: var(--social-brand-bg, var(--color-primary));
+        color: var(--social-brand-color, white);
         transform: translateY(-2px);
       }
-      
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover,
+        &:focus-visible {
+          transform: none;
+        }
+      }
+
       svg {
         width: 18px;
         height: 18px;
+      }
+
+      &--linkedin {
+        --social-brand-bg: #0a66c2;
+        --social-brand-color: #fff;
+      }
+
+      // GitHub, X and Medium brand marks are black: a white tile keeps them visible on the dark footer
+      &--github {
+        --social-brand-bg: #fff;
+        --social-brand-color: #181717;
+      }
+
+      &--x,
+      &--medium {
+        --social-brand-bg: #fff;
+        --social-brand-color: #000;
       }
     }
   }

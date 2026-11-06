@@ -226,7 +226,9 @@ index of the page language. The index opens with the home page hero background
 (`section--hero section--hero-compact`).
 
 The header and the mobile menu hold three links: home, resume and articles. The footer navigation holds home, resume,
-articles, tools, the booking link and email.
+articles, tools, the booking link and email. Its social buttons (LinkedIn, GitHub, X, Medium) take the network's brand
+color on hover through a `deep-stack-footer__social-link--<network>` modifier; the usernames come from `site.author`
+in `_config.yml`.
 
 ### Tools page
 

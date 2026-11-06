@@ -21,6 +21,7 @@ author:
   twitter: "MaximeLenne"
   github: "maxime-lenne"
   linkedin: "maximelenne"
+  medium: "MaximeLenne"
 
 # Social media
 social:
@@ -29,6 +30,7 @@ social:
     - "https://x.com/MaximeLenne"
     - "https://linkedin.com/in/maximelenne"
     - "https://github.com/maxime-lenne"
+    - "https://medium.com/@MaximeLenne"
 
 # Build settings
 markdown: kramdown
