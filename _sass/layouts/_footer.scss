@@ -106,6 +106,7 @@
   
   &__social {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     
     &-link {
@@ -144,6 +145,11 @@
 
       &--linkedin {
         --social-brand-bg: #0a66c2;
+        --social-brand-color: #fff;
+      }
+
+      &--youtube {
+        --social-brand-bg: #ff0000;
         --social-brand-color: #fff;
       }
 
