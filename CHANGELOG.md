@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.5.0...v1.6.0) (2026-11-06)
+
+### ✨ Features
+
+* Add the tools page with referral links ([fdba7cd](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/fdba7cdcbb902d53919d8934edbba4a3a2a19d82))
+
 ## [1.5.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.4.0...v1.5.0) (2026-11-03)
 
 ### ✨ Features
