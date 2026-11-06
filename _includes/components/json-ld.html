@@ -59,7 +59,8 @@
         {{ site.author.linkedin | prepend: 'https://www.linkedin.com/in/' | jsonify }},
         {{ site.author.github | prepend: 'https://github.com/' | jsonify }},
         {{ site.author.twitter | prepend: 'https://x.com/' | jsonify }},
-        {{ site.author.medium | prepend: 'https://medium.com/@' | jsonify }}
+        {{ site.author.medium | prepend: 'https://medium.com/@' | jsonify }},
+        {{ site.author.youtube | prepend: 'https://www.youtube.com/@' | jsonify }}
       ]
     }{% if page.profile_page %},
     {
