@@ -384,3 +384,24 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+// Compact hero: the home page hero background on an inner page (tools, articles),
+// centered, one column and without the full-screen height
+.section--hero-compact.section--hero {
+  min-height: auto;
+  padding-top: calc(var(--layout-header-height) + 60px);
+
+  .section__container {
+    grid-template-columns: 1fr;
+    max-width: 960px;
+  }
+
+  .section__content {
+    text-align: center;
+  }
+
+  .section__description {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

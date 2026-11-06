@@ -1,0 +1,87 @@
+# Tools and stack shown on /outils/ and /en/tools/
+# Grouped by how often I use them (frequency keys are translated in translations.yml, tools.frequencies).
+# url: the official site. referral_url: my referral link, used instead of url when set,
+# and the card then shows the referral badge and offer.
+# featured: true also shows the tool on the home page (_includes/sections/tools-featured-section.html).
+
+- frequency: daily
+  tools:
+    - name: "Claude Code"
+      featured: true
+      logo: "/assets/images/tools/claude.svg"
+      category: "IA"
+      url: "https://claude.com/product/claude-code"
+      referral_url: "https://claude.ai/referral/lQ34oAmxUg"
+      offer_fr: "1 semaine offerte"
+      offer_en: "1 free week"
+      description_fr: "Mon binôme de dev au quotidien : il code, relit, documente et pilote mes outils (GitHub, Notion, n8n) depuis le terminal."
+      description_en: "My everyday dev pair: it codes, reviews, documents and drives my tools (GitHub, Notion, n8n) from the terminal."
+    - name: "Notion"
+      logo: "/assets/images/tools/notion.svg"
+      category: "Productivité"
+      category_en: "Productivity"
+      url: "https://www.notion.com"
+      referral_url: ""
+      description_fr: "Mon second cerveau et le CMS de ce site : CV, expériences, compétences et missions vivent dans des bases Notion."
+      description_en: "My second brain and the CMS of this site: resume, experiences, skills and missions live in Notion databases."
+    - name: "Notion Calendar"
+      logo: "/assets/images/tools/notion.svg"
+      category: "Productivité"
+      category_en: "Productivity"
+      url: "https://www.notion.com/product/calendar"
+      referral_url: ""
+      description_fr: "Agenda et prise de rendez-vous : c'est lui qui gère le lien « Réserver un créneau » du site."
+      description_en: "Calendar and booking: it runs the « Book a call » link of this site."
+    - name: "GitHub"
+      logo: "/assets/images/tools/github.svg"
+      category: "Dev"
+      url: "https://github.com"
+      referral_url: ""
+      description_fr: "Code, revues, CI/CD avec GitHub Actions et hébergement de ce site avec GitHub Pages."
+      description_en: "Code, reviews, CI/CD with GitHub Actions, and hosting for this site with GitHub Pages."
+
+- frequency: weekly
+  tools:
+    - name: "Qonto"
+      featured: true
+      logo: "/assets/images/tools/qonto.png"
+      category: "Business"
+      url: "https://qonto.com"
+      referral_url: "https://qonto.com/r/fw7gpm"
+      offer_fr: "Jusqu'à 160 € offerts"
+      offer_en: "Up to €160 bonus"
+      description_fr: "La banque pro de White Wood Tech : comptes, cartes, factures et justificatifs, sans paperasse."
+      description_en: "The business bank of White Wood Tech: accounts, cards, invoices and receipts, without the paperwork."
+    - name: "n8n"
+      logo: "/assets/images/tools/n8n.svg"
+      category: "Automatisation"
+      category_en: "Automation"
+      url: "https://n8n.io"
+      referral_url: ""
+      description_fr: "Mes automatisations et agents IA : synchronisations, veille, relances, tout ce qui se répète."
+      description_en: "My automations and AI agents: syncs, monitoring, follow-ups, anything that repeats."
+    - name: "Figma"
+      logo: "/assets/images/tools/figma.svg"
+      category: "Design"
+      url: "https://www.figma.com"
+      referral_url: ""
+      description_fr: "Maquettes, ateliers produit et diagrammes FigJam avec les équipes."
+      description_en: "Mockups, product workshops and FigJam diagrams with the teams."
+
+- frequency: regularly
+  tools:
+    - name: "Cloudflare"
+      logo: "/assets/images/tools/cloudflare.svg"
+      category: "Dev"
+      url: "https://www.cloudflare.com"
+      referral_url: ""
+      description_fr: "DNS, CDN et Workers pour mettre en ligne vite et sans serveur à gérer."
+      description_en: "DNS, CDN and Workers to ship fast with no server to manage."
+    - name: "Brevo"
+      featured: true
+      logo: "/assets/images/tools/brevo.svg"
+      category: "Marketing"
+      url: "https://www.brevo.com"
+      referral_url: "https://get.brevo.com/4mywn31n7kag"
+      description_fr: "Emails transactionnels et newsletters pour mes projets."
+      description_en: "Transactional emails and newsletters for my projects."
