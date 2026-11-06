@@ -1,0 +1,30 @@
+<!-- Home page: the featured tools of _data/tools.yml (featured: true), with a link to the tools page -->
+{% assign tools_lang = include.lang | default: page.lang | default: 'fr' %}
+{% assign tt = site.data.translations[tools_lang].tools %}
+{% if tools_lang == 'en' %}{% assign tools_url = '/en/tools/' %}{% else %}{% assign tools_url = '/outils/' %}{% endif %}
+<section class="section section--light tools-featured" id="tools">
+  <div class="section__container">
+    <div class="section__header">
+      {% include components/section-header.html
+         badge_icon="🧰"
+         badge_text=tt.featured_badge
+         title=tt.featured_title
+         title_highlight=tt.featured_title_highlight
+         subtitle=tt.featured_subtitle %}
+    </div>
+
+    <ul class="tools-page__grid">
+      {% for group in site.data.tools %}
+        {% for tool in group.tools %}
+          {% if tool.featured %}
+            {% include components/card-tool.html tool=tool lang=tools_lang %}
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </ul>
+
+    <div class="tools-featured__actions">
+      {% include components/cta-button.html style="secondary" text=tt.see_all url=tools_url icon="arrow" %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+<!-- Tools page: my stack from _data/tools.yml, one section per usage frequency -->
+{% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
+{% assign t = site.data.translations[lang].tools %}
+{% assign tool_count = 0 %}
+{% for group in site.data.tools %}{% assign tool_count = tool_count | plus: group.tools.size %}{% endfor %}
+<!-- Hero, same background as the home page hero -->
+<section class="section section--hero section--hero-compact tools-page__hero">
+  <div class="section__container">
+    <div class="section__content">
+      {% include components/badge.html text=t.hero_badge %}
+      {% include components/title-hero.html main_text=t.title highlight_text=t.title_highlight %}
+      <p class="section__description">{{ t.lead }}</p>
+      <p class="tools-page__meta">{{ tool_count }} {{ t.tools_count }}</p>
+      <p class="tools-page__disclosure">{{ t.disclosure }}</p>
+    </div>
+  </div>
+</section>
+
+{% comment %} Alternate backgrounds, like the home page sections {% endcomment %}
+{% for group in site.data.tools %}
+{% assign group_parity = forloop.index0 | modulo: 2 %}
+{% if group_parity == 0 %}{% assign group_background = 'section--dark' %}{% else %}{% assign group_background = 'section--light' %}{% endif %}
+<section class="section {{ group_background }} tools-page__group" aria-labelledby="tools-{{ group.frequency }}">
+  <div class="section__container tools-page__container">
+    <div class="section__header">
+      <div class="section-header">
+        {% comment %} include params cannot hold brackets: resolve the keys first {% endcomment %}
+        {% assign group_icon = t.frequency_icons[group.frequency] %}
+        {% assign group_badge = t.frequency_badges[group.frequency] %}
+        {% include components/badge.html style="tag" icon=group_icon text=group_badge %}
+        <h2 class="section-header__title" id="tools-{{ group.frequency }}">
+          {{ t.frequencies[group.frequency] }}
+          <span class="section-header__title-highlight">· {{ group.tools.size }} {{ t.tools_count }}</span>
+        </h2>
+      </div>
+    </div>
+    <ul class="tools-page__grid">
+      {% for tool in group.tools %}
+        {% include components/card-tool.html tool=tool lang=lang %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endfor %}
+
+{% include sections/final-cta-section.html %}

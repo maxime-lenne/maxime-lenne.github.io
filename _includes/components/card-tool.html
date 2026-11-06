@@ -1,0 +1,42 @@
+<!-- Tool card: one entry of _data/tools.yml, used on the tools page and the home page -->
+{% assign tool = include.tool %}
+{% assign card_lang = include.lang | default: 'fr' %}
+{% assign tt = site.data.translations[card_lang].tools %}
+{% if card_lang == 'en' %}
+  {% assign tool_description = tool.description_en | default: tool.description_fr %}
+  {% assign tool_category = tool.category_en | default: tool.category %}
+  {% assign tool_offer = tool.offer_en %}
+{% else %}
+  {% assign tool_description = tool.description_fr %}
+  {% assign tool_category = tool.category %}
+  {% assign tool_offer = tool.offer_fr %}
+{% endif %}
+{% assign tool_link = tool.referral_url | default: tool.url %}
+{% comment %} default skips nil and "": an empty referral_url keeps the official url {% endcomment %}
+{% if tool_link == tool.url %}{% assign has_referral = false %}{% else %}{% assign has_referral = true %}{% endif %}
+{% assign tool_offer = tool_offer | strip %}
+<li class="tool-card">
+  <div class="tool-card__header">
+    {% if tool.logo %}
+    <img src="{{ tool.logo | relative_url }}" alt="" class="tool-card__logo" width="48" height="48" loading="lazy">
+    {% else %}
+    <span class="tool-card__logo tool-card__logo--placeholder" aria-hidden="true">{{ tool.name | slice: 0, 2 }}</span>
+    {% endif %}
+    <div>
+      <h3 class="tool-card__name">
+        {% comment %} sponsored: referral links must not pass SEO weight {% endcomment %}
+        <a href="{{ tool_link }}" class="tool-card__link" target="_blank"
+           rel="noopener{% if has_referral %} sponsored{% endif %}">{{ tool.name }}<span class="sr-only"> ({{ tt.new_tab }})</span></a>
+      </h3>
+      <p class="tool-card__category">{{ tool_category }}</p>
+    </div>
+  </div>
+  <p class="tool-card__description">{{ tool_description }}</p>
+  {% if has_referral %}
+  <p class="tool-card__referral">
+    <span class="tool-card__badge">{{ tt.referral_badge }}</span>
+    {% if tool_offer != '' %}<span class="tool-card__offer">{{ tool_offer }}</span>{% endif %}
+  </p>
+  {% endif %}
+  <p class="tool-card__more" aria-hidden="true">{% if has_referral %}{{ tt.try_referral }}{% else %}{{ tt.visit }}{% endif %} {{ tool.name }} →</p>
+</li>

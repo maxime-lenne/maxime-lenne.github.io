@@ -149,6 +149,8 @@ faq: true
   </div>
 </section>
 
+{% include sections/tools-featured-section.html lang="en" %}
+
 {% include sections/final-cta-section.html lang="en" %}
 
 {% include sections/faq-section.html %}

@@ -1,0 +1,178 @@
+// Tools page (_includes/sections/tools-list.html) - BEM
+// One section per usage frequency, alternating backgrounds, with a grid of tool cards.
+// The cards (_includes/components/card-tool.html) are also used on the home page.
+
+.tools-page {
+  &__meta {
+    margin: var(--space-md) 0 0;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__disclosure {
+    max-width: 600px;
+    margin: var(--space-sm) auto 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  &__container {
+    max-width: 1200px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.tool-card {
+  // The name link covers the whole card
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    object-fit: contain;
+    // Light tile in both themes: black brand marks (Notion, GitHub, Qonto) stay visible in dark mode
+    padding: 10px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+
+    &--placeholder {
+      padding: 0;
+      border: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-text-primary);
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: var(--radius-md);
+    }
+
+    &:focus-visible {
+      outline: none;
+
+      &::after {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  &__category {
+    margin: 2px 0 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+
+  &__description {
+    flex-grow: 1;
+    margin: var(--space-md) 0 0;
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+  }
+
+  &__referral {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0 0;
+    font-size: var(--text-sm);
+  }
+
+  &__badge {
+    padding: 2px 10px;
+    font-weight: 600;
+    color: var(--color-secondary-dark, var(--color-secondary));
+    background: rgba(var(--color-secondary-rgb), 0.12);
+    border-radius: 999px;
+  }
+
+  &__offer {
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+
+  &__more {
+    margin: var(--space-md) 0 0;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+  }
+
+  &:hover &__more {
+    color: var(--color-text-primary);
+  }
+}
+
+// Home page section (_includes/sections/tools-featured-section.html)
+.tools-featured {
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  }
+}
