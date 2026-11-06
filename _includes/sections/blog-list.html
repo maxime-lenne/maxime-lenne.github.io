@@ -2,10 +2,14 @@
 {% assign lang = page.lang | default: site.default_lang | default: 'fr' %}
 {% assign t = site.data.translations[lang].blog %}
 {% assign posts = site.posts | where: "lang", lang %}
-<section class="section section--gradient-light blog-page__hero">
-  <div class="section__container section__container--dark-background blog-page__panel">
-    <h1 class="blog-page__title">{{ t.title }}</h1>
-    <p class="blog-page__lead">{{ t.lead }}</p>
+<!-- Hero, same background as the home page hero -->
+<section class="section section--hero section--hero-compact blog-page__hero">
+  <div class="section__container">
+    <div class="section__content">
+      {% include components/badge.html text=t.hero_badge %}
+      {% include components/title-hero.html main_text=t.title highlight_text=t.title_highlight %}
+      <p class="section__description">{{ t.lead }}</p>
+    </div>
   </div>
 </section>
 

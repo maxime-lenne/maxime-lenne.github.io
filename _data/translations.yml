@@ -14,7 +14,8 @@ fr:
     experience: "Expérience"
     experiences: "Expériences"
     projects: "Projets"
-    blog: "Blog"
+    blog: "Articles"
+    tools: "Outils"
     contact: "Contact"
 
   header:
@@ -248,7 +249,9 @@ fr:
     updated: "Dernière mise à jour :"
 
   blog:
-    title: "Blog"
+    title: "Articles"
+    title_highlight: "produit, tech et IA"
+    hero_badge: "✍️ Partage d'expérience"
     subtitle: "Partage de connaissances et d'expériences"
     read_time: "min de lecture"
     published_on: "Publié le"
@@ -258,12 +261,44 @@ fr:
     related_posts: "Articles similaires"
     no_posts: "Aucun article trouvé"
     search_placeholder: "Rechercher un article..."
-    page_title: "Blog : produit, tech et IA"
+    page_title: "Articles : produit, tech et IA"
     description: "Les articles de Maxime Lenne, CTO et product builder à Lille : retours de conférences, produit, tech, IA et entrepreneuriat."
     lead: "Retours de conférences, produit, tech, IA et entrepreneuriat : ce que j'apprends, je le partage ici."
     read_article: "Lire l'article"
     back_to_blog: "Tous les articles"
     months: ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
+
+  tools:
+    hero_badge: "🧰 Ma stack"
+    title: "Mes outils"
+    title_highlight: "pour coder, automatiser et entreprendre"
+    featured_badge: "Ma stack"
+    featured_title: "Les outils que"
+    featured_title_highlight: "j'utilise au quotidien"
+    featured_subtitle: "Ceux sans lesquels je ne travaillerais plus. Certains liens sont des liens de parrainage qui m'aident à rembourser mes abonnements."
+    see_all: "Voir tous mes outils"
+    frequency_icons:
+      daily: "☀️"
+      weekly: "📅"
+      regularly: "🔁"
+      occasionally: "🧩"
+    frequency_badges:
+      daily: "Mes indispensables"
+      weekly: "Dans ma routine"
+      regularly: "Selon les projets"
+      occasionally: "Pour un besoin précis"
+    lead: "Ma stack pour coder, automatiser et faire tourner mon activité de CTO freelance, classée par fréquence d'utilisation."
+    tools_count: "outils"
+    disclosure: "Certains liens sont des liens de parrainage : ils ne te coûtent rien de plus et m'aident à rembourser mes abonnements. Je ne recommande que ce que j'utilise vraiment."
+    referral_badge: "Lien de parrainage"
+    try_referral: "Essayer"
+    visit: "Découvrir"
+    new_tab: "ouvre un nouvel onglet"
+    frequencies:
+      daily: "Tous les jours"
+      weekly: "Chaque semaine"
+      regularly: "Régulièrement"
+      occasionally: "Ponctuellement"
 
   contact:
     title: "Contact"
@@ -378,7 +413,8 @@ en:
     experience: "Experience"
     experiences: "Experiences"
     projects: "Projects"
-    blog: "Blog"
+    blog: "Articles"
+    tools: "Tools"
     contact: "Contact"
 
   header:
@@ -612,7 +648,9 @@ en:
     updated: "Last updated:"
 
   blog:
-    title: "Blog"
+    title: "Articles"
+    title_highlight: "product, tech and AI"
+    hero_badge: "✍️ Lessons learned"
     subtitle: "Sharing knowledge and experiences"
     read_time: "min read"
     published_on: "Published on"
@@ -622,12 +660,44 @@ en:
     related_posts: "Related posts"
     no_posts: "No posts found"
     search_placeholder: "Search for a post..."
-    page_title: "Blog: product, tech and AI"
+    page_title: "Articles: product, tech and AI"
     description: "Posts by Maxime Lenne, CTO and product builder in Lille, France: conference recaps, product, tech, AI and entrepreneurship."
     lead: "Conference recaps, product, tech, AI and entrepreneurship: what I learn, I share here."
     read_article: "Read the post"
     back_to_blog: "All posts"
     months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+  tools:
+    hero_badge: "🧰 My stack"
+    title: "My tools"
+    title_highlight: "to code, automate and build businesses"
+    featured_badge: "My stack"
+    featured_title: "The tools"
+    featured_title_highlight: "I use every day"
+    featured_subtitle: "The ones I would not work without. Some links are referral links that help me pay for my subscriptions."
+    see_all: "See all my tools"
+    frequency_icons:
+      daily: "☀️"
+      weekly: "📅"
+      regularly: "🔁"
+      occasionally: "🧩"
+    frequency_badges:
+      daily: "My essentials"
+      weekly: "In my routine"
+      regularly: "Project by project"
+      occasionally: "For a specific need"
+    lead: "My stack to code, automate and run my freelance CTO business, sorted by how often I use it."
+    tools_count: "tools"
+    disclosure: "Some links are referral links: they cost you nothing extra and help me pay for my subscriptions. I only recommend what I actually use."
+    referral_badge: "Referral link"
+    try_referral: "Try"
+    visit: "Discover"
+    new_tab: "opens in a new tab"
+    frequencies:
+      daily: "Every day"
+      weekly: "Every week"
+      regularly: "Regularly"
+      occasionally: "Occasionally"
 
   contact:
     title: "Contact"

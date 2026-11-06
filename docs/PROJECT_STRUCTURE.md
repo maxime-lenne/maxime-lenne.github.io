@@ -220,8 +220,26 @@ the production build gives the absolute URLs that Medium and dev.to need. An ita
 styled as its caption.
 
 `blog.html` (`/blog/`) and `en/blog.html` (`/en/blog/`) list the posts of their language, newest first, through
-`_includes/sections/blog-list.html` (styles in `_sass/pages/_blog.scss`). The header, the mobile menu and the footer
-link to the blog index of the page language.
+`_includes/sections/blog-list.html` (styles in `_sass/pages/_blog.scss`). The section is labelled "Articles" on the
+site (`nav.blog` and `blog.title`), while its URLs stay `/blog/`. The header, the mobile menu and the footer link to the
+index of the page language. The index opens with the home page hero background
+(`section--hero section--hero-compact`).
+
+The header and the mobile menu hold three links: home, resume and articles. The footer navigation holds home, resume,
+articles, tools, the booking link and email.
+
+### Tools page
+
+`outils.html` (`/outils/`) and `en/tools.html` (`/en/tools/`) list the tools I use, grouped by usage frequency,
+through `_includes/sections/tools-list.html` (styles in `_sass/pages/_tools.scss`). The tools live in
+`_data/tools.yml`: each has an official `url` and an optional `referral_url`. When `referral_url` is set, the card
+links to it with `rel="sponsored"` and shows the referral badge and the `offer_fr` / `offer_en` text. An optional
+`logo` path (files in `assets/images/tools/`) replaces the initials placeholder. Each card is rendered by
+`_includes/components/card-tool.html`. The page opens with the home page hero background
+(`section--hero section--hero-compact`, defined in `_sass/layouts/_sections.scss`), then gives each frequency its own
+section, alternating `section--dark` and `section--light`. Tools with `featured: true` also appear on the home
+page through `_includes/sections/tools-featured-section.html`, with a link to the tools page. The footer navigation
+links to the page of the page language; the header and the mobile menu do not.
 
 ### Legal pages
 

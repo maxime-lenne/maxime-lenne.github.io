@@ -2,33 +2,6 @@
 // One column of post cards, newest first, like the n8n-ninja.app blog.
 
 .blog-page {
-  // Opaque panel on the gradient, like the experience hero
-  &__panel {
-    max-width: 768px;
-    text-align: left;
-
-    @media (max-width: 480px) {
-      padding: 24px;
-    }
-  }
-
-  &__title {
-    margin: 0;
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--color-text-primary);
-  }
-
-  &__lead {
-    margin: var(--space-md) 0 0;
-    max-width: 640px;
-    font-size: var(--text-lg);
-    line-height: var(--leading-relaxed);
-    color: var(--color-text-secondary);
-  }
-
   &__container {
     max-width: 768px;
   }

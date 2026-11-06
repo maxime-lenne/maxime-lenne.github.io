@@ -23,6 +23,7 @@ Application features organized by epics and user stories.
 | As a visitor, I can view testimonials from clients and collaborators | ✅ Done |
 | As a visitor, I can view Maxime's education and awards | ✅ Done |
 | As a visitor, I can read blog posts in my language | ✅ Done |
+| As a visitor, I can see the tools Maxime uses, with his referral links | ✅ Done |
 | As a visitor, I can view Maxime's projects | 🔲 Planned |
 | As a visitor, I can contact Maxime via a contact form | 🔲 Planned |
 

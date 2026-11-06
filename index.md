@@ -153,6 +153,8 @@ faq: true
   </div>
 </section>
 
+{% include sections/tools-featured-section.html %}
+
 {% include sections/final-cta-section.html %}
 
 {% include sections/faq-section.html %}
