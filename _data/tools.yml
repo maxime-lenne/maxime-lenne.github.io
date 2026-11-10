@@ -39,6 +39,16 @@
       referral_url: ""
       description_fr: "Code, revues, CI/CD avec GitHub Actions et hébergement de ce site avec GitHub Pages."
       description_en: "Code, reviews, CI/CD with GitHub Actions, and hosting for this site with GitHub Pages."
+    - name: "Google Workspace"
+      logo: "/assets/images/tools/google-workspace.svg"
+      category: "Productivité"
+      category_en: "Productivity"
+      url: "https://workspace.google.com"
+      referral_url: "https://sharegoogleworkspace.advocate.impact.com/mzZoVRs"
+      offer_fr: "10 % la 1re année (code promo sur demande)"
+      offer_en: "10% off the first year (promo code on request)"
+      description_fr: "Mon email pro sur mon nom de domaine, 30 Go de stockage accessibles hors ligne, une sécurité et une administration avancées, avec 99 % de disponibilité garantie."
+      description_en: "My business email on my own domain, 30 GB of storage available offline, advanced security and admin controls, with 99% guaranteed uptime."
 
 - frequency: weekly
   tools:
