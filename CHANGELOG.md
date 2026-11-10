@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.6.0...v1.7.0) (2026-11-10)
+
+### ✨ Features
+
+* Add Google Workspace to the tools page with a referral link ([1a23c1a](https://github.com/maxime-lenne/maxime-lenne.github.io/commit/1a23c1a9bfd1d8e6a24ed8650771d8c8cf7a4e89))
+
 ## [1.6.0](https://github.com/maxime-lenne/maxime-lenne.github.io/compare/v1.5.0...v1.6.0) (2026-11-06)
 
 ### ✨ Features
