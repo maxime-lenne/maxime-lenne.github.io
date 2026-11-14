@@ -130,6 +130,21 @@
   }
 }
 
+// Theme variants: light image by default, dark image under [data-theme="dark"]
+.image-circle__image--dark {
+  display: none;
+}
+
+[data-theme="dark"] {
+  .image-circle__image--light {
+    display: none;
+  }
+
+  .image-circle__image--dark {
+    display: block;
+  }
+}
+
 .image-circle__status {
   position: absolute;
   bottom: -20px;
