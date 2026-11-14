@@ -180,9 +180,12 @@ Image components with various styles.
 
 ```liquid
 {% include components/image-circle.html
-  src="/assets/images/avatar.jpg"
-  alt="Profile photo"
-  size="large"              # small | medium | large
+  image_url="/assets/images/avatar.jpeg"
+  image_dark_url="/assets/images/avatar-dark.jpeg"  # optional, shown under [data-theme="dark"]
+  image_alt="Profile photo"
+  width="600" height="600"
+  loading="eager"           # lazy (default) | eager
+  show_status="false"
 %}
 ```
 
@@ -192,6 +195,13 @@ Image components with various styles.
 |------|------|
 | HTML | `_includes/components/image-secondary.html` |
 | SCSS | `_sass/components/_image-secondary.scss` |
+
+Takes the same `image_url`, `image_dark_url`, `image_alt`, `width`, `height` and `loading` parameters as Image Circle.
+
+When `image_dark_url` is set, the component renders both images and CSS shows the one matching the theme toggle
+(`.{component}__image--light` / `.{component}__image--dark`). A `.webp` sibling is picked up automatically for each.
+The profile photo exists in both versions: `avatar.*` (light gradient `#F8FAFC → #E2E8F0`) and `avatar-dark.*`
+(dark gradient `#0F172A → #1E293B`).
 
 ---
 
