@@ -49,6 +49,7 @@ faq: true
     <div class="section__grid section__grid--2-col">
       {% include components/image-secondary.html 
          image_url="/assets/images/avatar.jpeg"
+         image_dark_url="/assets/images/avatar-dark.jpeg"
          width="600" height="600"
          image_alt="Portrait développeur"
          show_badge="true"

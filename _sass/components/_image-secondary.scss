@@ -39,6 +39,21 @@
   aspect-ratio: 3/4;
 }
 
+// Theme variants: light image by default, dark image under [data-theme="dark"]
+.image-secondary__image--dark {
+  display: none;
+}
+
+[data-theme="dark"] {
+  .image-secondary__image--light {
+    display: none;
+  }
+
+  .image-secondary__image--dark {
+    display: block;
+  }
+}
+
 .image-secondary__badge {
   position: absolute;
   top: -20px;

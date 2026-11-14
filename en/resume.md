@@ -19,6 +19,7 @@ profile_page: true
       
       {% include components/image-circle.html 
         image_url="/assets/images/avatar.jpeg"
+        image_dark_url="/assets/images/avatar-dark.jpeg"
         width="600" height="600" loading="eager" 
         image_alt="My portrait"
         show_status="false"
